@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1, 
+        "title": "The line graph compares the percentage of people in three countries who used the Internet between 1999 and 2009.",
+        "segments": ["The line graph", " ", "compares", " ", "the percentage of", " ", "people in three countries who used the Internet", " ", "between 1999 and 2009", "."],
+        "highlight": ["compares", "the percentage of", "people in three countries who used the Internet", "between 1999 and 2009"],
+        "description": "ðə laɪn ɡræf kəmˈpɛrz ðə pərˈsɛntəʤ ʌv ˈpipəl ɪn θri ˈkʌntriz hu juzd ði ˈɪntərˌnɛt bɪˈtwin 1999 ænd 2009.<br>→This sentence introduces the task by stating what the line graph shows.", 
+        "audioSrc": "https://storage.googleapis.com/script60s/SOUND/TASK-1/BAI-1/1-1.mp3"
+    }
+    
+]

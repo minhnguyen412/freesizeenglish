@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      background-color: #f4f4f4;
+    }
+
+    /* Header */
+    header {
+      background-color: #ea3324;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Hide menu in responsive mode */
+    nav {
+      display: flex;
+    }
+
+    /* Responsive cho màn hình nhỏ hơn 768px */
+    @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ea3324;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      nav ul li a {
+        font-size: 1rem;
+      }
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      background-image: url('');
+      background-size: cover; /* Phủ kín khung */
+      background-position: center; /* Căn giữa ảnh */
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+
+    .main-content img {
+      width: 80px;
+      height: auto;
+    }
+
+    .logos-and-title {
+      
+      display: flex;
+      justify-content: center; /* Phân tách khoảng cách giữa các phần tử */
+      align-items: center;/* Căn giữa theo chiều dọc */
+      width: 100%;
+      
+      
+    }
+
+    .logos-and-title .logo {
+      width: 100%;
+      height: auto;
+      max-height: 800px;
+      object-fit: contain;
+    }
+    
+
+    .thumbnail-section {
+      margin-top: 30px;
+      text-align: left;
+      
+      
+    }
+
+    .thumbnail-section h2 {
+      display: inline-block;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      
+      margin-left: 90px; /* Cách lề trái */
+      
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+
+    }
+    .thumbnail-section h3 {
+      font-size: 1 rem;
+      margin-bottom: 10px;
+      color: #333;
+      padding-left: 100px;
+    }
+    
+    .thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .thumbnail {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      background-color: #ffffff;
+      
+    }
+
+    .thumbnail:hover {
+      transform: translateY(-5px);
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: auto;
+    }
+
+    .thumbnail .info {
+      padding: 10px;
+      background: #FFFFFF;
+    }
+
+    .thumbnail .info h4 {
+      margin-bottom: 5px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .thumbnail .info p {
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    /* Tag New Words */
+    .new-words {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      background-color: #ffeb3b;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ea3324;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    footer .social-icons {
+      margin-top: 10px;
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+    }
+    .thumbnail a,
+    .new-words a {
+      text-decoration: none; /* Loại bỏ gạch chân */
+      color: inherit; /* Sử dụng màu chữ hiện tại */
+    }
+
+    .thumbnail a:hover,
+    .new-words a:hover {
+      text-decoration: none; /* Không gạch chân khi hover */
+      color: #ff5722; /* Đổi màu chữ khi hover (chọn màu tùy ý) */
+    }
+    
+/* Responsive cho màn hình nhỏ hơn 768px */
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Logos and Title */
+    .logos-and-title {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logos-and-title .logo {
+    
+        max-height: 200px;
+        margin: 10px 0;
+        
+    }
+
+    /* Thumbnails */
+    
+    .thumbnails {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thumbnail {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .thumbnail-section h2 {
+        font-size: 1.2rem;
+        margin-left: 15px;
+    }
+
+    .thumbnail-section h3 {
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+
+    .thumbnail .info h4 {
+        font-size: 0.9rem;
+    }
+
+    .thumbnail .info p {
+        font-size: 0.8rem;
+    }
+
+    /* New Words Tag */
+    .new-words {
+         
+        right: 10px;
+        padding: 8px;
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .logos-and-title .logo {
+    
+        
+        max-height: 150px;
+    }
+
+    .thumbnail-section h2 {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .thumbnail-section h3 {
+        font-size: 0.8rem;
+        padding-left: 15px;
+    }
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>SCRIPT 60s</h1>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      &#9776; <!-- Biểu tượng ba gạch -->
+    </button>
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Logos and Title Section -->
+  <div class="logos-and-title">
+      <img src="assets/homepage.png" alt="Logo" class="logo">
+      
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    
+
+    <div class="thumbnail-section">
+      
+      
+      <h2 style="background-color: #feefdb; color: #fa9f33;">Everyday Activities 📚</h2>
+      
+      <div class="thumbnails" id="thumbnails-container-3">
+      </div>
+      
+      <h2 style="background-color: #d8ebff; color: #1e86fb;">Ielts Writing ✍️</h2>
+      <h3>TASK 1</h3>
+      <div class="thumbnails" id="thumbnails-container-4">
+      </div>
+      <h3>TASK 2</h3>
+      <div class="thumbnails" id="thumbnails-container-5">
+      </div>
+    </div>
+  </div>
+  
+  <!-- New Words Tag -->
+  <div class="new-words">
+    <a href="newword.html">New Words</a>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <p>Script60s</p>
+    <p>Learn English through images and videos</p>
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+      <a href="#">TikTok</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+  <script>
+    // JavaScript để điều khiển nút hamburger menu
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+
+      menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('show');
+
+        // Chuyển đổi biểu tượng giữa ba gạch và dấu X
+        if (nav.classList.contains('show')) {
+          menuToggle.innerHTML = '&#10005;'; // Biểu tượng X
+        } else {
+          menuToggle.innerHTML = '&#9776;'; // Biểu tượng ba gạch
+        }
+      });
+    });
+  </script>
+  <script>
+    async function loadThumbnails(containerId, jsonPath, startId, endId) {
+      const container = document.getElementById(containerId);
+      try {
+        const response = await fetch(jsonPath);
+        const data = await response.json();
+        // Lọc dữ liệu theo ID từ startId đến endId
+        const filteredData = data.filter(item => item.id >= startId && item.id <= endId);
+        filteredData.forEach(item => {
+          // Tạo thẻ div cho mỗi thumbnail
+          const thumbnail = document.createElement('div');
+          thumbnail.className = 'thumbnail';
+          // Nội dung HTML của thumbnail
+          thumbnail.innerHTML = `
+              <a href="${item.htmlLink}">
+                  <img src="${item.thumbnail}" alt="${item.title} Thumbnail">
+                  <div class="info">
+                      <h4>${item.title}</h4>
+                      <p>${item.description}</p>
+                  </div>
+             </a>
+          `;
+          // Thêm thumbnail vào container
+          container.appendChild(thumbnail);
+        });
+      } catch (error) {
+        console.error('Error fetching JSON data:', error);
+        container.innerHTML = '<p>Failed to load thumbnails.</p>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Gọi hàm loadThumbnails với các tham số khác nhau cho mỗi container
+     
+      loadThumbnails('thumbnails-container-3', 'data/thumb-book.json', 1, 3);
+      loadThumbnails('thumbnails-container-4', 'data/thumb-writing.json', 1, 3);
+      loadThumbnails('thumbnails-container-5', 'data/thumb-writing-2.json', 1, 3);
+    });
+  </script>
+</body>
+</html>

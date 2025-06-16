@@ -1,0 +1,784 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "audio": "",
+            "sentence": "What word do you use to write about graphs or charts that present contrasting data? ___.",
+            "blanks": [
+                { "answer": "compare" }
+                
+            ],
+            "words": ["increase", "experience", "compare", "use"]
+        },
+        {
+            "id": 2,
+            "audio": "",
+            "sentence": "How else can \"the percentage of\" be written? The ___ ___ ___ of",
+            "blanks": [
+                { "answer": "pro" },
+                { "answer": "por" },
+                { "answer": "tion" }
+            ],
+            "words": ["tion", "por", "pro"]
+        },
+        {
+            "id": 3,
+            "audio": "",
+            "sentence": "How else can \"the percentage of\" be written? The ___ ___ ___ ___ of",
+            "blanks": [
+                { "answer": "sh" },
+                { "answer": "a" },
+                { "answer": "r" },
+                { "answer": "e" }
+            ],
+            "words": ["e", "sh", "r", "a"]
+        },
+        {
+            "id": 4,
+            "audio": "",
+            "sentence": "How else can \"the percentage of\" be written? The ___ ___ ___ ___ of",
+            "blanks": [
+                { "answer": "r" },
+                { "answer": "a" },
+                { "answer": "t" },
+                { "answer": "e" }
+            ],
+            "words": ["e", "t", "a", "r"]
+        },
+        {
+            "id": 5,
+            "audio": "",
+            "sentence": "How else can \"people who used the internet\" be written?<br> ___ ___;",
+            "blanks": [
+                { "answer": "internet" },
+                { "answer": "users" }
+                
+            ],
+            "words": ["internet", "people", "users", "people"]
+        },
+        {
+            "id": 6,
+            "audio": "",
+            "sentence": "How else can \"between 1999 and 2009\" be written?<br> ___ ___ ___ ___ ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "Over" },
+                { "answer": "the" },
+                { "answer": "ten-year" },
+                { "answer": "period" },
+                { "answer": "from" },
+                { "answer": "1999" },
+                { "answer": "to" },
+                { "answer": "2009" }
+            ],
+            "words": ["1999", "Over", "from", "the", "period", "to", "ten-year", "2009"]
+        },
+        {
+            "id": 7,
+            "audio": "",
+            "sentence": "How else can \"the proportion of the population\" be written? ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "the" },
+                { "answer": "percentage" },
+                { "answer": "of" },
+                { "answer": "people" }
+            ],
+            "words": ["people", "of", "percentage", "the"]
+        },
+        {
+            "id": 8,
+            "audio": "",
+            "sentence": "How else can \"the proportion of the population\" be written? ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "the" },
+                { "answer": "share" },
+                { "answer": "of" },
+                { "answer": "indivisuals" }
+            ],
+            "words": ["indivisuals", "share", "of", "the"]
+        },
+        {
+            "id": 9,
+            "audio": "",
+            "sentence": "How else can \"the proportion of the population\" be written? ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "the" },
+                { "answer": "number" },
+                { "answer": "of" },
+                { "answer": "people" }
+            ],
+            "words": ["people", "the", "of", "number"]
+        },
+        {
+            "id": 10,
+            "audio": "",
+            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "g" },
+                { "answer": "r" },
+                { "answer": "e" },
+                { "answer": "w" }
+            ],
+            "words": ["w", "e", "r", "g"]
+        },
+        {
+            "id": 11,
+            "audio": "",
+            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "r" },
+                { "answer": "o" },
+                { "answer": "s" },
+                { "answer": "e" }
+            ],
+            "words": ["e", "r", "o", "s"]
+        },
+        {
+            "id": 12,
+            "audio": "",
+            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "w" },
+                { "answer": "e" },
+                { "answer": "n" },
+                { "answer": "t" },
+                { "answer": "u" },
+                { "answer": "p" }
+            ],
+            "words": ["e", "u", "t", "p", "w", "n"]
+        },
+        {
+            "id": 13,
+            "audio": "",
+            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "ex" },
+                { "answer": "pe" },
+                { "answer": "ri" },
+                { "answer": "enced" },
+                { "answer": "gr" },
+                { "answer": "ow" },
+                { "answer": "th" }
+            ],
+            "words": ["th", "ex", "ri", "ow", "pe", "gr", "enced"]
+        },
+        {
+            "id": 14,
+            "audio": "",
+            "sentence": "Alternatives for \"over the period shown\": ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "throughout" },
+                { "answer": "the" },
+                { "answer": "given" },
+                { "answer": "period" }
+                
+            ],
+            "words": ["throughout", "period", "the", "given"]
+        },
+        {
+            "id": 15,
+            "audio": "",
+            "sentence": "In this sentence, \"a much larger percentage of Canadians and Americans had access to the Internet in comparison with Mexicans\", which one is the noun phrase?___<br>A. had access to the Internet<br>B. a much larger percentage<br>C. in comparison with Mexicans",
+            "blanks": [
+                { "answer": "B" }
+            ],
+            "words": ["A", "B", "C"]
+        },
+        {
+            "id": 16,
+            "audio": "",
+            "sentence": "In this sentence, \"a much larger percentage of Canadians and Americans had access to the Internet in comparison with Mexicans\", which one is the main verb phrase?___<br>A. had access to the Internet<br>B. a much larger percentage<br>C. in comparison with Mexicans",
+            "blanks": [
+                { "answer": "A" }
+            ],
+            "words": ["A", "B", "C"]
+        },
+        {
+            "id": 17,
+            "audio": "",
+            "sentence": "In this sentence, \"a much larger percentage of Canadians and Americans had access to the Internet in comparison with Mexicans\", which one is the prepositional phrase showing contrast?___<br>A. had access to the Internet<br>B. a much larger percentage<br>C. in comparison with Mexicans",
+            "blanks": [
+                { "answer": "C" }
+            ],
+            "words": ["A", "B", "C"]
+        },
+        {
+            "id": 18,
+            "audio": "",
+            "sentence": "Alternatives for \"experienced\": ___ ___ ___",
+            "blanks": [
+                { "answer": "s" },
+                { "answer": "a" },
+                { "answer": "w" }
+                
+                
+            ],
+            "words": [ "s", "w", "a"]
+        },
+        {
+            "id": 19,
+            "audio": "",
+            "sentence": "Alternatives for \"the fastest growth\": ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "the" },
+                { "answer": "most" },
+                { "answer": "rapid" },
+                { "answer": "increase" }
+                
+            ],
+            "words": ["most", "rapid", "the", "increase"]
+        },
+        {
+            "id": 20,
+            "audio": "",
+            "sentence": "Alternatives for \"the proportion of people\": ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "the" },
+                { "answer": "percentage" },
+                { "answer": "of" },
+                { "answer": "individuals" }
+                
+            ],
+            "words": ["of", "the", "individuals", "percentage"]
+        },
+        {
+            "id": 21,
+            "audio": "",
+            "sentence": "Alternatives for \"the proportion of people\": ___ ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "the" },
+                { "answer": "share" },
+                { "answer": "of" },
+                { "answer": "the" },
+                { "answer": "population" }
+            ],
+            "words": ["the", "the", "population", "of", "share"]
+        },
+        {
+            "id": 22,
+            "audio": "",
+            "sentence": "Alternatives for \"figures\": ___ ___ ___",
+            "blanks": [
+                
+                { "answer": "sta" },
+                { "answer": "tis" },
+                { "answer": "tics" }
+                
+            ],
+            "words": ["tis", "sta", "tics"]
+        },
+        {
+            "id": 23,
+            "audio": "",
+            "sentence": "Alternatives for \"respectively\": ___ ___ ___ ___ ___",
+            "blanks": [
+                
+                { "answer": "cor" },
+                { "answer": "re" },
+                { "answer": "spon" },
+                { "answer": "ding" },
+                { "answer": "ly" }
+                
+            ],
+            "words": ["spon", "ly", "ding", "cor", "re"]
+        },
+        {
+            "id": 24,
+            "audio": "",
+            "sentence": "Alternatives for \"almost\": ___ ___ ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "n" },
+                { "answer": "e" },
+                { "answer": "a" },
+                { "answer": "r" },
+                { "answer": "l" },
+                { "answer": "y" }
+            ],
+            "words": ["y", "n", "l", "e", "r", "a"]
+        },
+        {
+            "id": 25,
+            "audio": "",
+            "sentence": "Alternatives for \"almost\": ___ ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "ap" },
+                { "answer": "pro" },
+                { "answer": "xi" },
+                { "answer": "mate" },
+                { "answer": "ly" }
+               
+            ],
+            "words": ["ly", "pro", "mate", "xi", "ap"]
+        },
+        {
+            "id": 26,
+            "audio": "",
+            "sentence": "Alternatives for \"almost\": ___ ___ ___ ___ ___ ___ ___",
+            "blanks": [
+                { "answer": "r" },
+                { "answer": "o" },
+                { "answer": "u" },
+                { "answer": "g" },
+                { "answer": "h" },
+                { "answer": "l" },
+                { "answer": "y" }
+            ],
+            "words": ["y", "r", "l", "u", "g", "o", "h"]
+        },
+        {
+            "id": 27,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673134/%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E4%B9%A6_zl0i7l.mp3",
+            "sentence": "___ ___ ___ ___?",
+            "blanks": [
+                { "answer": "这" },
+                { "answer": "是" },
+                { "answer": "什么" },
+                { "answer": "书" }
+                
+            ],
+            "words": ["什么", "书", "是", "这"]
+        },
+        {
+            "id": 28,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673161/%E4%B8%AD%E6%96%87_vbkj3r.mp3",
+            "sentence": "中文 : ___",
+            "blanks": [
+                { "answer": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672808/%E4%B8%AD%E6%96%87_ceposq.png" }
+            ],
+            "words": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672833/%E9%9F%A9%E6%96%87_ipmlxt.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672821/%E6%97%A5%E6%96%87_lnpilr.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672808/%E4%B8%AD%E6%96%87_ceposq.png"]
+        },
+        {
+            "id": 29,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673140/%E8%BF%99%E6%98%AF%E8%B0%81%E7%9A%84%E4%B9%A6_l4mna3.mp3",
+            "sentence": "Whose book is this? <br> ___ ___ ___ ___ ___?",
+            "blanks": [
+                { "answer": "这" },
+                { "answer": "是" },
+                { "answer": "谁" },
+                { "answer": "的" },
+                { "answer": "书" }
+            ],
+            "words": ["谁", "这", "是", "书", "的"]
+        },
+        {
+            "id": 30,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673345/%E8%B0%81_ueab1g.mp3",
+            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672830/%E8%B0%81_o4ejhr.gif", ": ___"],
+            "blanks": [
+                { "answer": "谁" }
+            ],
+            "words": ["那", "在", "谁"]
+        },
+        {
+            "id": 31,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673139/%E8%BF%99%E6%98%AF%E8%80%81%E5%B8%88%E7%9A%84%E4%B9%A6_ry6pfu.mp3",
+            "sentence": "___ ___ ___ ___ ___.",
+            "blanks": [
+                { "answer": "这" },
+                { "answer": "是" },
+                { "answer": "老师" },
+                { "answer": "的" },
+                { "answer": "书" }
+            ],
+            "words": ["是", "老师", "书", "这", "的"]
+        },
+        {
+            "id": 32,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673142/%E9%82%A3%E6%98%AF%E4%BB%80%E4%B9%88_vhyyi4.mp3",
+            "sentence": "What is that? <br> ___ ___ ___?",
+            "blanks": [
+                { "answer": "那" },
+                { "answer": "是" },
+                { "answer": "什么" }
+            ],
+            "words": ["什么", "那", "是"]
+        },
+        {
+            "id": 33,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673311/%E6%9D%82%E5%BF%97_axn4uh.mp3",
+            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672824/%E6%9D%82%E5%BF%97_adnplb.png", ": ___"],
+            "blanks": [
+                { "answer": "杂志" }
+            ],
+            "words": ["杂志", "学校", "身体"]
+        },
+        {
+            "id": 34,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673144/%E9%82%A3%E6%98%AF%E4%BB%80%E4%B9%88%E6%9D%82%E5%BF%97_cj6lqe.mp3",
+            "sentence": "___ ___ ___ ___?",
+            "blanks": [
+                { "answer": "那" },
+                { "answer": "是" },
+                { "answer": "什么" },
+                { "answer": "杂志" }
+            ],
+            "words": ["是", "什么", "杂志", "那"]
+        },
+        {
+            "id": 35,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673333/%E8%8B%B1%E6%96%87_kjsarw.mp3",
+            "sentence": "英文 : ___",
+            "blanks": [
+                { "answer": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672827/%E8%8B%B1%E6%96%87_vr4hh3.png" }
+            ],
+            "words": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672827/%E8%8B%B1%E6%96%87_vr4hh3.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672832/%E9%98%BF%E6%8B%89%E4%BC%AF%E6%96%87_zso60r.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672819/%E5%BE%B7%E6%96%87_raeko0.png"]
+        },
+        {
+            "id": 36,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673148/%E9%82%A3%E6%98%AF%E8%B0%81%E7%9A%84%E6%9D%82%E5%BF%97_pq9pbq.mp3",
+            "sentence": "___ ___ ___ ___ ___？",
+            "blanks": [
+                { "answer": "那" },
+                { "answer": "是" },
+                { "answer": "谁" },
+                { "answer": "的" },
+                { "answer": "杂志" }
+            ],
+            "words": ["是", "谁", "杂志", "那", "的"]
+        },
+        {
+            "id": 37,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673145/%E9%82%A3%E6%98%AF%E6%88%91%E6%9C%8B%E5%8F%8B%E7%9A%84%E6%9D%82%E5%BF%97_va0ugf.mp3",
+            "sentence": "That's my friend's magazine. <br> ___ ___ ___ ___ ___ ___.",
+            "blanks": [
+                { "answer": "那" },
+                { "answer": "是" },
+                { "answer": "我" },
+                { "answer": "朋友" },
+                { "answer": "的" },
+                { "answer": "杂志" }
+            ],
+            "words": ["那", "我", "的", "朋友", "是", "杂志"]
+        },
+        {
+            "id": 38,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673310/%E6%9C%8B%E5%8F%8B_r32byy.mp3",
+            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672823/%E6%9C%8B%E5%8F%8B_pwkkse.png", ": ___"],
+            "blanks": [
+                { "answer": "朋友" }
+            ],
+            "words": ["老师", "父母", "朋友"]
+        },
+        {
+            "id": 39,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673150/%E4%B8%80_ccdydi.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "yī" }
+            ],
+            "words": ["yī", "yí", "yǐ", "yì"]
+        },
+        {
+            "id": 40,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673165/%E4%BA%94_durk7r.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "wǔ" }
+            ],
+            "words": ["wū", "wú", "wǔ", "wù"]
+        },
+        {
+            "id": 41,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/yu2_cvh99x.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "yú" }
+            ],
+            "words": ["yū", "yú", "yǔ", "yù"]
+        },
+        {
+            "id": 42,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673233/%E5%85%AB_jwszsy.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "bā" }
+            ],
+            "words": ["bā", "bá", "bǎ", "bà"]
+        },
+        {
+            "id": 43,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673261/%E5%A4%A7_ni23pu.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "dà" }
+            ],
+            "words": ["dā", "dá", "dǎ", "dà"]
+        },
+        {
+            "id": 44,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673155/%E4%B8%8D_p3kqjq.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "bù" }
+            ],
+            "words": ["bū", "bú", "bǔ", "bù"]
+        },
+        {
+            "id": 45,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673265/%E5%A5%B3_kxwjg4.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "nǚ" }
+            ],
+            "words": ["nǖ", "nǘ", "nǚ", "nǜ"]
+        },
+        {
+            "id": 46,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673245/%E5%8F%A3_dxcuqi.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "kǒu" }
+            ],
+            "words": ["kōu", "kóu", "kǒu", "kòu"]
+        },
+        {
+            "id": 47,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673324/%E7%99%BD_kbwum2.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "bái" }
+            ],
+            "words": ["bāi", "bái", "bǎi", "bài"]
+        },
+        {
+            "id": 48,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/hei1_hd4jw1.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "hēi" }
+            ],
+            "words": ["hēi", "héi", "hěi", "hèi"]
+        },
+        {
+            "id": 49,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673375/%E9%A9%AC_zbvgtx.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "mǎ" }
+            ],
+            "words": ["mā", "má", "mǎ", "mà"]
+        },
+        {
+            "id": 50,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673172/%E4%BD%A0_ll3o9t.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "nǐ" }
+            ],
+            "words": ["nī", "ní", "nǐ", "nì"]
+        },
+        {
+            "id": 51,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673266/%E5%A5%BD_lge2io.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "hǎo" }
+            ],
+            "words": ["hāo", "háo", "hǎo", "hào"]
+        },
+        {
+            "id": 52,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/pa_l4o4im.mp3",
+            "sentence": "Which sound do you hear? ___",
+            "blanks": [
+                { "answer": "pa" }
+            ],
+            "words": ["ba", "pa"]
+        },
+        {
+            "id": 53,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/da_gsewdl.mp3",
+            "sentence": "Which sound do you hear? ___",
+            "blanks": [
+                { "answer": "da" }
+            ],
+            "words": ["da", "ta"]
+        },
+        {
+            "id": 54,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/hei_wd8bah.mp3",
+            "sentence": "Which sound do you hear? ___",
+            "blanks": [
+                { "answer": "hei" }
+            ],
+            "words": ["hai", "hei"]
+        },
+        {
+            "id": 55,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/po_gplthh.mp3",
+            "sentence": "Which sound do you hear? ___",
+            "blanks": [
+                { "answer": "po" }
+            ],
+            "words": ["pa", "po"]
+        },
+        {
+            "id": 56,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/gou_g3k7r3.mp3",
+            "sentence": "Which sound do you hear? ___",
+            "blanks": [
+                { "answer": "gou" }
+            ],
+            "words": ["gao", "gou"]
+        },
+        {
+            "id": 57,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/ka_hcewtw.mp3",
+            "sentence": "Which sound do you hear? ___",
+            "blanks": [
+                { "answer": "ka" }
+            ],
+            "words": ["ga", "ka"]
+        },
+        {
+            "id": 58,
+            "audio": "",
+            "sentence": "你: ___",
+            "blanks": [
+                { "answer": "nǐ" }
+            ],
+            "words": ["nǐ", "wǔ", "yǔ", "mǎ"]
+        },
+        {
+            "id": 59,
+            "audio": "",
+            "sentence": "好: ___",
+            "blanks": [
+                { "answer": "hǎo" }
+            ],
+            "words": ["nǚ", "wǔ", "hǎo", "bǎi"]
+        },
+        {
+            "id":60,
+            "audio": "",
+            "sentence": "Are you busy?: ___ ___ ___?",
+            "blanks": [
+                { "answer": "你" },
+                { "answer": "忙" },
+                { "answer": "吗" }
+            ],
+            "words": ["忙", "你", "吗"]
+        },
+        {
+            "id":61,
+            "audio": "",
+            "sentence": "Very busy: ___ ___。",
+            "blanks": [
+                { "answer": "很" },
+                { "answer": "忙" }
+            ],
+            "words": ["忙", "很"]
+        },
+        {
+            "id":62,
+            "audio": "",
+            "sentence": "Is Chinese difficult?: ___ ___ ___?",
+            "blanks": [
+                { "answer": "汉语" },
+                { "answer": "难" },
+                { "answer": "吗" }
+            ],
+            "words": ["难", "吗", "汉语"]
+        },
+        {
+            "id":63,
+            "audio": "",
+            "sentence": "Not too difficult: ___ ___ ___。",
+            "blanks": [
+                { "answer": "不" },
+                { "answer": "太" },
+                { "answer": "难" }
+            ],
+            "words": ["太", "不", "难"]
+        },
+        {
+            "id":64,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673171/%E4%BB%96%E5%A5%B9_ajweaf.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "tā" }
+            ],
+            "words": ["tā", "tá", "tǎ", "tà"]
+        },
+        {
+            "id":65,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673287/%E5%BF%99_ez8ywo.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "máng" }
+            ],
+            "words": ["māng", "máng", "mǎng", "màng"]
+        },
+        {
+            "id":66,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673282/%E5%BE%88_h1omcw.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "hěn" }
+            ],
+            "words": ["hēn", "hén", "hěn", "hèn"]
+        },
+        {
+            "id":67,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673364/%E9%9A%BE_soiuxw.mp3",
+            "sentence": "Listen and choose the correct pinyin: ___",
+            "blanks": [
+                { "answer": "nán" }
+            ],
+            "words": ["nān", "nán", "nǎn", "nàn"]
+        },
+        {
+            "id":68,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673313/%E6%B1%89%E8%AF%AD_n6ho4r.mp3",
+            "sentence": "汉语: ___",
+            "blanks": [
+                { "answer": "hànyǔ" }
+            ],
+            "words": ["hānyú", "hànyǔ", "hanyǔ", "hányu"]
+        },
+        {
+            "id":69,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673320/%E7%88%B8%E7%88%B8_ktwtw6.mp3",
+            "sentence": "爸爸: ___",
+            "blanks": [
+                { "answer": "bàba" }
+            ],
+            "words": ["baba", "pàpa", "papa", "bàba"]
+        },
+        {
+            "id":70,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673268/%E5%A6%88%E5%A6%88_cyj7nk.mp3",
+            "sentence": "妈妈: ___",
+            "blanks": [
+                { "answer": "māma" }
+            ],
+            "words": ["māma", "mama", "máma", "mǎma"]
+        },
+        {
+            "id":71,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673250/%E5%93%A5%E5%93%A5_t3w2af.mp3",
+            "sentence": "哥哥: ___",
+            "blanks": [
+                { "answer": "gēge" }
+            ],
+            "words": ["gege", "gège", "gége", "gēge"]
+        },
+        {
+            "id":72,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673269/%E5%A6%B9%E5%A6%B9_fm9pax.mp3",
+            "sentence": "mèimei: ___",
+            "blanks": [
+                { "answer": "妹妹" }
+            ],
+            "words": ["妈妈", "妹妹", "弟弟", "哥哥"]
+        },
+        {
+            "id":73,
+            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673281/%E5%BC%9F%E5%BC%9F_taqkox.mp3",
+            "sentence": "dìdi: ___",
+            "blanks": [
+                { "answer": "弟弟" }
+            ],
+            "words": ["爸爸", "妹妹", "弟弟", "哥哥"]
+        }
+    ]
+}

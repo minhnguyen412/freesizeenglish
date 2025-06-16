@@ -1,0 +1,12 @@
+{
+  "questions": [
+    {
+      "sentence": "An increasing number of students ——— computers to study.",
+      "answers": ["rely on"]
+    },
+    {
+      "sentence": "——— ——— computers for studying.",
+      "answers": ["Many students", "use"]
+    }
+  ]
+}

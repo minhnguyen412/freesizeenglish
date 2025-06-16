@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Page</title>
+  <link rel="stylesheet" href="css/post-styles.css">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      
+    }
+
+    /* Header */
+    header {
+      background-color: #8bc34a;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .homepage-link {
+      text-decoration: none;
+      color: inherit; /* Giữ nguyên màu sắc của text gốc */
+    }
+
+    
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    nav {
+      display: flex;
+    }
+    #post-container {
+      max-width: 1005px;
+      margin: 20px auto;
+      text-align: justify;
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    #post-container img {
+      display: block; /* Đảm bảo hình ảnh là block-level element */
+      margin: 0 auto; /* Căn giữa hình ảnh */
+      max-width: 100%; /* Đặt chiều rộng tối đa của hình ảnh bằng 100% của container */
+      height: auto; /* Giữ tỷ lệ khung hình của hình ảnh */
+      border-radius: 8px; /* Thêm góc bo cho hình ảnh */
+    }
+    /* Responsive cho màn hình nhỏ hơn 768px */
+    @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        
+        right: 20px;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #8bc34a;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      nav ul li a {
+        font-size: 1rem;
+      }
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-bottom: 100px;
+    }
+    
+    .video-section {
+      flex: 2;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      height: 540px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .thumbnails-section {
+      flex: 1;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+    }
+
+    .thumbnails-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .thumbnail {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .thumbnail img {
+      width: 100px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .thumbnail h4 {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .thumbnail p {
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .thumbnail a {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .thumbnails-section {
+        margin-top: 20px;
+      }
+      .video-section iframe {
+        width: 100%;
+        height: 315px;
+      }
+    }
+    
+
+    .logos-and-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logos-and-title .logo {
+      width: 100%;
+      height: auto;
+      max-height: 800px;
+      object-fit: contain;
+    }
+
+    /* Tag New Words */
+    .buy-coffee, .new-words {
+      position: fixed;
+      right: 20px;
+      background-color: #ffffcc;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .buy-coffee {
+      top: calc(50% - 80px); /* Đặt ở trên tag New Words */
+    }
+
+    .new-words {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    /* Footer */
+    footer {
+      background-color: #8bc34a;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    footer .social-icons {
+      margin-top: 10px;
+    }
+
+    footer .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+    }
+    
+    .buy-coffee a, .new-words a {
+      text-decoration: none; /* Loại bỏ gạch chân */
+      color: inherit; /* Sử dụng màu chữ hiện tại */
+    }
+
+    
+    .buy-coffee:hover, .new-words:hover {
+      text-decoration: none; /* Không gạch chân khi hover */
+      color: #ff5722; /* Đổi màu chữ khi hover (chọn màu tùy ý) */
+    }
+
+
+    @media screen and (max-width: 480px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+
+      .logos-and-title .logo {
+        max-height: 150px;
+      }
+
+      .buy-coffee, .new-words {
+        right: 10px;
+        padding: 8px;
+        font-size: 0.7rem;
+      }
+      .buy-coffee {
+        top: calc(50% - 50px); /* Đặt ở trên tag New Words */
+    }
+
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1><a href="index.html" class="homepage-link">SCRIPT 60s</a></h1>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Logos and Title Section -->
+  <div class="logos-and-title">
+    <img src="assets/banner.png" alt="Logo" class="logo">
+  </div>
+
+  <div class="container">
+    <!-- Main video section -->
+    <div class="video-section">
+      <h1 id="video-title"></h1>
+      <h3 id="video-description"></h3>
+      <iframe id="video-iframe" src="" title="YouTube video player" allowfullscreen></iframe>
+      <script src="js/fetch-writing.js"></script>
+      <h3>Sample IELTS Writing Essay</h3>
+      <div id="post-container"></div>
+      <script src="js/passage.js"></script>
+      <h3>Sentence-by-Sentence Analysis</h3>
+      <div class="pcontainer">
+        <ul class="content-list" id="itemList"></ul>
+      </div>
+      <script src="js/passage-sentence.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+        
+            // Lấy các ID từ URL hoặc sử dụng giá trị mặc định
+            const startpId = urlParams.get('postStartId') || '21'; // Giá trị mặc định
+            const endpId = urlParams.get('postEndId') || '32'; // Giá trị mặc định
+
+            // Load posts với các ID đã lấy
+            loadPosts(startpId, endpId, 'itemList');
+        });
+      </script>
+      
+      
+      
+      <div class="qcontainer" id="quiz-container" data-start-id="24" data-end-id="38">
+        <h1>LET'S PRACTICE!</h1>
+        <div id="start-container">
+          <button id="start-button">Start</button>
+        </div>
+        <div class="sentence" id="sentence" style="display: none;"></div>
+        <div class="options" id="options" style="display: none;"></div>
+        <div class="result" style="display: none;"></div>
+        <div id="buttons" style="display: none;"></div>
+        
+      </div>
+      
+      <script src="js/W-quiz-1.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const urlParams = new URLSearchParams(window.location.search);
+          const quizStartId = urlParams.get('quizStartId') || 1;
+          const quizEndId = urlParams.get('quizEndId') || 10;
+        
+          console.log('Quiz Start ID:', quizStartId);
+          console.log('Quiz End ID:', quizEndId);
+        });
+      </script>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbnails-section">
+      <h3>Other Videos</h3>
+      <div id="thumbnails-container"></div>
+    </div>
+  </div>
+
+  <script>
+    const maxVideosToShow = 5;
+    fetch('data/thumb-writing.json')
+      .then(response => response.json())
+      .then(videos => {
+        videos.sort((a, b) => b.id - a.id);
+        const thumbnailsContainer = document.getElementById("thumbnails-container");
+        videos.slice(0, maxVideosToShow).forEach(video => {
+          const thumbnailDiv = document.createElement("div");
+          thumbnailDiv.classList.add("thumbnail");
+          thumbnailDiv.innerHTML = `
+            <a href="${video.htmlLink}">
+              <img src="${video.thumbnail}" alt="${video.title}">
+              <div>
+                <h4>${video.title}</h4>
+                <p>${video.description}</p>
+              </div>
+            </a>
+          `;
+          thumbnailsContainer.appendChild(thumbnailDiv);
+        });
+      })
+      .catch(error => console.error("Error loading JSON:", error));
+  </script>
+
+  
+
+  <!-- Footer -->
+  <footer>
+    <p>Script60s</p>
+    <p>Learn English through images and videos</p>
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">YouTube</a>
+      <a href="#">TikTok</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+
+      menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('show');
+        menuToggle.innerHTML = nav.classList.contains('show') ? '&#10005;' : '&#9776;';
+      });
+    });
+  </script>
+</body>
+</html>
