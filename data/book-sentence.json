@@ -1,11 +1,66 @@
 [
     {
         "id": 1, 
-        "title": "The line graph compares the percentage of people in three countries who used the Internet between 1999 and 2009.",
-        "segments": ["The line graph", " ", "compares", " ", "the percentage of", " ", "people in three countries who used the Internet", " ", "between 1999 and 2009", "."],
-        "highlight": ["compares", "the percentage of", "people in three countries who used the Internet", "between 1999 and 2009"],
-        "description": "ðə laɪn ɡræf kəmˈpɛrz ðə pərˈsɛntəʤ ʌv ˈpipəl ɪn θri ˈkʌntriz hu juzd ði ˈɪntərˌnɛt bɪˈtwin 1999 ænd 2009.<br>→This sentence introduces the task by stating what the line graph shows.", 
-        "audioSrc": "https://storage.googleapis.com/script60s/SOUND/TASK-1/BAI-1/1-1.mp3"
+        "title": "This is hot honey pork belly.",
+        "segments": ["This is hot honey", " ", "pork belly", "."],
+        "highlight": ["pork belly"],
+        "description": "ðɪs ɪz hɑt ˈhʌni pɔrk ˈbɛli.<br>→Đây là thịt heo ba chỉ mật ong nóng hổi.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 2, 
+        "title": "We add some peppercorns, some bay leaves.",
+        "segments": ["We", " ", "add", " ", "some", " ", "peppercorn", "s", ", ", "some", " ", "bay leave", "s", "."],
+        "highlight": ["add", "peppercorn", "bay leave"],
+        "description": "wi æd sʌm peppercorns, sʌm beɪ livz.<br>→Chúng ta cho tiêu và lá nguyệt quế vào.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 3, 
+        "title": "While we wait for the pork belly to poach, we're gonna make our hot honey.",
+        "segments": ["While we wait for the", " ", "pork belly", " ", "to", " ", "poach", ", ", "we're gonna make our hot honey."],
+        "highlight": ["pork belly", "poach"],
+        "description": "waɪl wi weɪt fɔr ðə pɔrk ˈbɛli tu poʊʧ, wir ˈɡɑnə meɪk ˈaʊər hɑt ˈhʌni.<br>→Trong khi chúng ta chờ thịt ba chỉ luộc, ta sẽ làm mật ong nóng.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 4, 
+        "title": "Half a cup of hot honey and a fourth cup of rice vinegar.",
+        "segments": ["Half a cup of", " ", "hot honey and", " ", "a fourth cup of", " ", "rice vinegar", "."],
+        "highlight": ["Half a cup of", "a fourth cup of", "rice vinegar"],
+        "description": "hæf ə kʌp ʌv hɑt ˈhʌni ænd ə fɔrθ kʌp ʌv raɪs ˈvɪnəɡər."<br>→Một nửa cốc mật ong nóng và một phần tư cốc giấm gạo.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 5, 
+        "title": "This is heated up to 400. Let it crisp up.",
+        "segments": ["This is", " ", "heated up", " ", "to 400", ". ", "Let it", " ", "crisp up", "."],
+        "highlight": ["heated up", "crisp up"],
+        "description": "ðɪs ɪz ˈhitɪd ʌp tu 400. lɛt ɪt krɪsp ʌp.<br>→Cái này đã được đun nóng tới 400 độ. Hãy làm nó giòn lên nào.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 6, 
+        "title": "So after 10 minutes, I'm taking the first fry out, and then I'm bringing the heat up to 450.",
+        "segments": ["So after 10 minutes, ", "I'm", " ", "taking the first", " ", "fry", " ", "out", ", ", "and then I'm", " ", "bringing the heat up", " ", "to 400."],
+        "highlight": ["fry", "taking the first", "out", "bringing the heat up"],
+        "description": "soʊ ˈæftər 10 ˈmɪnəts, aɪm ˈteɪkɪŋ ðə fɜrst fraɪ aʊt, ænd ðɛn aɪm ˈbrɪŋɪŋ ðə hit ʌp tu 450.<br>→Sau 10 phút, tôi sẽ lấy miếng chiên đầu tiên ra và tăng nhiệt độ lên 450.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 7, 
+        "title": "And take this hot honey and brush it right onto the pork belly.",
+        "segments": ["And take this hot honey and", " ", "brush it right onto", " ", "the", " ", "pork belly", "."],
+        "highlight": ["brush it right onto", "pork belly"],
+        "description": "ænd teɪk ðɪs hɑt ˈhʌni ænd brʌʃ ɪt raɪt ˈɑntu ðə pɔrk ˈbɛli.<br>→Và lấy mật ong nóng này và quết ngay lên thịt ba chỉ.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 8, 
+        "title": "Sweet with a crunch. Perfect.",
+        "segments": ["Sweet with a", " ", "crunch", ". ", "Perfect", "."],
+        "highlight": ["crunch"],
+        "description": "swit wɪð ə krʌnʧ. ˈpɜrˌfɪkt.<br>→Giòn tan ngọt ngào. Hoàn hảo.", 
+        "audioSrc": ""
     }
-    
 ]
