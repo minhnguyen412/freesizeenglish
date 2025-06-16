@@ -42,8 +42,8 @@
     {
         "id": 6, 
         "title": "So after 10 minutes, I'm taking the first fry out, and then I'm bringing the heat up to 450.",
-        "segments": ["So after 10 minutes, ", "I'm", " ", "taking the first", " ", "fry", " ", "out", ", ", "and then I'm", " ", "bringing the heat up", " ", "to 400."],
-        "highlight": ["fry", "taking the first", "out", "bringing the heat up"],
+        "segments": ["So after 10 minutes, ", "I'm", " ", "taking the first fry out", ", ", "and then I'm", " ", "bringing the heat up", " ", "to 400."],
+        "highlight": ["taking the first fry out", "bringing the heat up"],
         "description": "soʊ ˈæftər 10 ˈmɪnəts, aɪm ˈteɪkɪŋ ðə fɜrst fraɪ aʊt, ænd ðɛn aɪm ˈbrɪŋɪŋ ðə hit ʌp tu 450.<br>→Sau 10 phút, tôi sẽ lấy miếng chiên đầu tiên ra và tăng nhiệt độ lên 450.", 
         "audioSrc": ""
     },
