@@ -3,7 +3,7 @@
         "id": 1,
         "title": "Hot Honey Pork Belly",
         "description": "FOOD",
-        "thumbnail": "https://storage.googleapis.com/script60s/THUMBNAILS/BOOK-min.png",
+        "thumbnail": "https://res.cloudinary.com/dndwvsqib/image/upload/v1750345418/DA-1_wfvklz.png",
         "videoLink": "https://www.youtube.com/embed/yKnyz7VxKuw?si=EfUUeGaRwWqJGmO1",
         "htmlLink": "book.html?postStartId=1&postEndId=8&quizStartId=1&quizEndId=26&id=1&id2=1"
     }
