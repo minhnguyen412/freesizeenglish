@@ -5,7 +5,7 @@
         "segments": ["This is hot honey", " ", "pork belly", "."],
         "highlight": ["pork belly"],
         "description": "ðɪs ɪz hɑt ˈhʌni pɔrk ˈbɛli.<br>→Đây là thịt heo ba chỉ mật ong nóng hổi.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342960/1-1_kv1ko3.mp3"
     },
     {
         "id": 2, 
@@ -13,7 +13,7 @@
         "segments": ["We", " ", "add", " ", "some", " ", "peppercorn", "s", ", ", "some", " ", "bay leave", "s", "."],
         "highlight": ["add", "peppercorn", "bay leave"],
         "description": "wi æd sʌm peppercorns, sʌm beɪ livz.<br>→Chúng ta cho tiêu và lá nguyệt quế vào.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342960/1-2_hihhon.mp3"
     },
     {
         "id": 3, 
@@ -21,7 +21,7 @@
         "segments": ["While we wait for the", " ", "pork belly", " ", "to", " ", "poach", ", ", "we're gonna make our hot honey."],
         "highlight": ["pork belly", "poach"],
         "description": "waɪl wi weɪt fɔr ðə pɔrk ˈbɛli tu poʊʧ, wir ˈɡɑnə meɪk ˈaʊər hɑt ˈhʌni.<br>→Trong khi chúng ta chờ thịt ba chỉ luộc, ta sẽ làm mật ong nóng.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342960/1-3_wunyze.mp3"
     },
     {
         "id": 4, 
@@ -29,7 +29,7 @@
         "segments": ["Half a cup of", " ", "hot honey and", " ", "a fourth cup of", " ", "rice vinegar", "."],
         "highlight": ["Half a cup of", "a fourth cup of", "rice vinegar"],
         "description": "hæf ə kʌp ʌv hɑt ˈhʌni ænd ə fɔrθ kʌp ʌv raɪs ˈvɪnəɡər.<br>→Một nửa cốc mật ong nóng và một phần tư cốc giấm gạo.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342961/1-4_n38ehw.mp3"
     },
     {
         "id": 5, 
@@ -37,7 +37,7 @@
         "segments": ["This is", " ", "heated up", " ", "to 400", ". ", "Let it", " ", "crisp up", "."],
         "highlight": ["heated up", "crisp up"],
         "description": "ðɪs ɪz ˈhitɪd ʌp tu 400. lɛt ɪt krɪsp ʌp.<br>→Cái này đã được đun nóng tới 400 độ. Hãy làm nó giòn lên nào.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342961/1-5_czsu3t.mp3"
     },
     {
         "id": 6, 
@@ -45,7 +45,7 @@
         "segments": ["So after 10 minutes, ", "I'm", " ", "taking the first fry out", ", ", "and then I'm", " ", "bringing the heat up", " ", "to 400."],
         "highlight": ["taking the first fry out", "bringing the heat up"],
         "description": "soʊ ˈæftər 10 ˈmɪnəts, aɪm ˈteɪkɪŋ ðə fɜrst fraɪ aʊt, ænd ðɛn aɪm ˈbrɪŋɪŋ ðə hit ʌp tu 450.<br>→Sau 10 phút, tôi sẽ lấy miếng chiên đầu tiên ra và tăng nhiệt độ lên 450.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342961/1-6_tvizcf.mp3"
     },
     {
         "id": 7, 
@@ -53,7 +53,7 @@
         "segments": ["And take this hot honey and", " ", "brush it right onto", " ", "the", " ", "pork belly", "."],
         "highlight": ["brush it right onto", "pork belly"],
         "description": "ænd teɪk ðɪs hɑt ˈhʌni ænd brʌʃ ɪt raɪt ˈɑntu ðə pɔrk ˈbɛli.<br>→Và lấy mật ong nóng này và quết ngay lên thịt ba chỉ.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342961/1-7_b6htib.mp3"
     },
     {
         "id": 8, 
@@ -61,6 +61,6 @@
         "segments": ["Sweet with a", " ", "crunch", ". ", "Perfect", "."],
         "highlight": ["crunch"],
         "description": "swit wɪð ə krʌnʧ. ˈpɜrˌfɪkt.<br>→Giòn tan ngọt ngào. Hoàn hảo.", 
-        "audioSrc": ""
+        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342961/1-8_pmr8fu.mp3"
     }
 ]
