@@ -17,10 +17,10 @@
     },
     {
         "id": 3, 
-        "title": "While we wait for the pork belly to poach, we're gonna make our hot honey.",
-        "segments": ["While we wait for the", " ", "pork belly", " ", "to", " ", "poach", ", ", "we're gonna make our hot honey."],
+        "title": "And we're going to poach the pork belly. While we wait for the pork belly to poach, we're gonna make our hot honey.",
+        "segments": ["And we're going to ", "poach", " ", "the", " ", "pork belly", ". ", "While we wait for the", " ", "pork belly", " ", "to", " ", "poach", ", ", "we're gonna make our hot honey."],
         "highlight": ["pork belly", "poach"],
-        "description": "waɪl wi weɪt fɔr ðə pɔrk ˈbɛli tu poʊʧ, wir ˈɡɑnə meɪk ˈaʊər hɑt ˈhʌni.<br>→Trong khi chúng ta chờ thịt ba chỉ luộc, ta sẽ làm mật ong nóng.", 
+        "description": "ænd wɪə ˈɡəʊɪŋ tuː pəʊʧ ðə pɔːk ˈbɛli. waɪl wi weɪt fɔr ðə pɔrk ˈbɛli tu poʊʧ, wir ˈɡɑnə meɪk ˈaʊər hɑt ˈhʌni.<br>→Trong khi chúng ta chờ thịt ba chỉ luộc, ta sẽ làm mật ong nóng.", 
         "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342960/1-3_wunyze.mp3"
     },
     {
@@ -33,7 +33,7 @@
     },
     {
         "id": 5, 
-        "title": "This is heated up to 400. Let it crisp up.",
+        "title": "This is heated up to 450. Let it crisp up.",
         "segments": ["This is", " ", "heated up", " ", "to 400", ". ", "Let it", " ", "crisp up", "."],
         "highlight": ["heated up", "crisp up"],
         "description": "ðɪs ɪz ˈhitɪd ʌp tu 400. lɛt ɪt krɪsp ʌp.<br>→Cái này đã được đun nóng tới 400 độ. Hãy làm nó giòn lên nào.", 
@@ -42,7 +42,7 @@
     {
         "id": 6, 
         "title": "So after 10 minutes, I'm taking the first fry out, and then I'm bringing the heat up to 450.",
-        "segments": ["So after 10 minutes, ", "I'm", " ", "taking the first fry out", ", ", "and then I'm", " ", "bringing the heat up", " ", "to 400."],
+        "segments": ["So after 10 minutes, ", "I'm", " ", "taking the first fry out", ", ", "and then I'm", " ", "bringing the heat up", " ", "to 450."],
         "highlight": ["taking the first fry out", "bringing the heat up"],
         "description": "soʊ ˈæftər 10 ˈmɪnəts, aɪm ˈteɪkɪŋ ðə fɜrst fraɪ aʊt, ænd ðɛn aɪm ˈbrɪŋɪŋ ðə hit ʌp tu 450.<br>→Sau 10 phút, tôi sẽ lấy miếng chiên đầu tiên ra và tăng nhiệt độ lên 450.", 
         "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342961/1-6_tvizcf.mp3"
