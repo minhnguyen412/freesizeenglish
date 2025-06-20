@@ -3,12 +3,12 @@
         {
             "id": 1,
             "audio": "",
-            "sentence": "What word do you use to write about graphs or charts that present contrasting data? ___.",
+            "sentence": "giòn lên: ___.",
             "blanks": [
-                { "answer": "compare" }
+                { "answer": "crisp up" }
                 
             ],
-            "words": ["increase", "experience", "compare", "use"]
+            "words": ["heated up", "crisp up", "crunch", "poach"]
         },
         {
             "id": 2,
