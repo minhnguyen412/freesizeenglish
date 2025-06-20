@@ -10,8 +10,8 @@
     {
         "id": 2, 
         "title": "We add some peppercorns, some bay leaves.",
-        "segments": ["We", " ", "add", " ", "some", " ", "peppercorn", "s", ", ", "some", " ", "bay leave", "s", "."],
-        "highlight": ["add", "peppercorn", "bay leave"],
+        "segments": ["We", " ", "add", " ", "some", " ", "peppercorn", "s", ", ", "some", " ", "bay leaves", "."],
+        "highlight": ["add", "peppercorn", "bay leaves"],
         "description": "wi æd sʌm peppercorns, sʌm beɪ livz.<br>→Chúng ta cho tiêu và lá nguyệt quế vào.", 
         "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342960/1-2_hihhon.mp3"
     },
