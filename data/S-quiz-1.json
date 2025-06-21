@@ -13,112 +13,83 @@
         {
             "id": 2,
             "audio": "",
-            "sentence": "How else can \"the percentage of\" be written? The ___ ___ ___ of",
+            "sentence": "một phần tư cốc: ___",
             "blanks": [
-                { "answer": "pro" },
-                { "answer": "por" },
-                { "answer": "tion" }
+                { "answer": "a fourth cup of" }
             ],
-            "words": ["tion", "por", "pro"]
+            "words": ["Half a cup of", "a fourth cup of"]
         },
         {
             "id": 3,
             "audio": "",
-            "sentence": "How else can \"the percentage of\" be written? The ___ ___ ___ ___ of",
+            "sentence": "a piece of meat from the stomach or soft lower part of a pig's body: ___",
             "blanks": [
-                { "answer": "sh" },
-                { "answer": "a" },
-                { "answer": "r" },
-                { "answer": "e" }
+                { "answer": "pork belly" }
             ],
-            "words": ["e", "sh", "r", "a"]
+            "words": ["peppercorn", "rice vinegar", "bay leaves", "pork belly"]
         },
         {
             "id": 4,
             "audio": "",
-            "sentence": "How else can \"the percentage of\" be written? The ___ ___ ___ ___ of",
+            "sentence": "the sound of hard food being crushed between the teeth, or like something being crushed or broken: ___",
             "blanks": [
-                { "answer": "r" },
-                { "answer": "a" },
-                { "answer": "t" },
-                { "answer": "e" }
+                { "answer": "crunch" }
             ],
-            "words": ["e", "t", "a", "r"]
+            "words": ["heated up", "crisp up", "crunch", "poach"]
         },
         {
             "id": 5,
             "audio": "",
-            "sentence": "How else can \"people who used the internet\" be written?<br> ___ ___;",
+            "sentence": "Lấy miếng chiên đầu tiên ra: ___",
             "blanks": [
-                { "answer": "internet" },
-                { "answer": "users" }
-                
+                { "answer": "taking the first fry out" }
             ],
-            "words": ["internet", "people", "users", "people"]
+            "words": ["taking the first fry out", "bringing the heat up"]
         },
         {
             "id": 6,
             "audio": "",
-            "sentence": "How else can \"between 1999 and 2009\" be written?<br> ___ ___ ___ ___ ___ ___ ___ ___",
+            "sentence": "a sweet and sour liquid made from fermented rice, used to add flavour to food: ___",
             "blanks": [
-                { "answer": "Over" },
-                { "answer": "the" },
-                { "answer": "ten-year" },
-                { "answer": "period" },
-                { "answer": "from" },
-                { "answer": "1999" },
-                { "answer": "to" },
-                { "answer": "2009" }
+                { "answer": "rice vinegar" }
             ],
-            "words": ["1999", "Over", "from", "the", "period", "to", "ten-year", "2009"]
+            "words": ["peppercorn", "rice vinegar", "bay leaves", "pork belly"]
         },
         {
             "id": 7,
             "audio": "",
-            "sentence": "How else can \"the proportion of the population\" be written? ___ ___ ___ ___",
+            "sentence": "được làm nóng lên: ___",
             "blanks": [
-                { "answer": "the" },
-                { "answer": "percentage" },
-                { "answer": "of" },
-                { "answer": "people" }
+                { "answer": "heated up" }
             ],
-            "words": ["people", "of", "percentage", "the"]
+            "words": ["heated up", "crisp up", "crunch", "poach"]
         },
         {
             "id": 8,
             "audio": "",
-            "sentence": "How else can \"the proportion of the population\" be written? ___ ___ ___ ___",
+            "sentence": "nâng nhiệt độ lên: ___",
             "blanks": [
-                { "answer": "the" },
-                { "answer": "share" },
-                { "answer": "of" },
-                { "answer": "indivisuals" }
+                { "answer": "bringing the heat up" }
             ],
-            "words": ["indivisuals", "share", "of", "the"]
+            "words": ["heated up", "bringing the heat up"]
         },
         {
             "id": 9,
             "audio": "",
-            "sentence": "How else can \"the proportion of the population\" be written? ___ ___ ___ ___",
+            "sentence": "phết ngay lên trên: ___",
             "blanks": [
-                { "answer": "the" },
-                { "answer": "number" },
-                { "answer": "of" },
-                { "answer": "people" }
+                { "answer": "brush it right onto" }
             ],
-            "words": ["people", "the", "of", "number"]
+            "words": ["brush it right onto", "bringing the heat up", "taking the first fry out"]
         },
         {
             "id": 10,
             "audio": "",
-            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___",
+            "sentence": "to cook something such as a fish, or an egg with its shell removed, by putting it in gently boiling water or other liquid: ___",
             "blanks": [
-                { "answer": "g" },
-                { "answer": "r" },
-                { "answer": "e" },
-                { "answer": "w" }
+                { "answer": "poach" }
             ],
-            "words": ["w", "e", "r", "g"]
+            "words": ["heated up", "crisp up", "crunch", "poach"]
         },
         {
             "id": 11,
