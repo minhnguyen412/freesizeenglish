@@ -62,5 +62,69 @@
         "highlight": ["crunch"],
         "description": "swit wɪð ə krʌnʧ. ˈpɜrˌfɪkt.<br>→Giòn tan ngọt ngào. Hoàn hảo.", 
         "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1750342961/1-8_pmr8fu.mp3"
+    },
+    {
+        "id": 9, 
+        "title": "Let’s make a skin beauty water.",
+        "segments": ["Let’s make a skin beauty water."],
+        "highlight": [],
+        "description": "lɛts meɪk ə skɪn ˈbjuti ˈwɔtər<br>→Hãy cùng làm một loại nước dưỡng da.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 10, 
+        "title": "We’re going to start by adding warm water.",
+        "segments": ["We’re going to start", " ", "by adding", " ", "warm water", "."],
+        "highlight": ["by adding"],
+        "description": "wir ˈɡoʊɪŋ tu stɑrt baɪ ˈædɪŋ wɔrm ˈwɔtər<br>→Chúng ta sẽ bắt đầu bằng cách thêm nước ấm vào.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 11, 
+        "title": "Next thing we’re going to add is goji berries.",
+        "segments": ["Next thing we’re going to add is goji berries."],
+        "highlight": [],
+        "description": "nɛkst θɪŋ wir ˈɡoʊɪŋ tu æd ɪz goji ˈbɛriz<br>→Thứ tiếp theo chúng ta cho vào là kỷ từ.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 12, 
+        "title": "Then we’re going to add half of a lemon which contains lots of vitamin C.",
+        "segments": ["Then we’re going to add", " ", "half of a lemon", " ", "which contains", " ", "lots of", " ", "vitamin C", "."],
+        "highlight": ["half of a lemon", "which contains", "lots of"],
+        "description": "ðɛn wir ˈɡoʊɪŋ tu æd hæf ʌv ə ˈlɛmən wɪʧ kənˈteɪnz lɑts ʌv ˈvaɪtəmən si<br>→Sau đó chúng ta sẽ cho vào nửa trái chanh, vốn chứa nhiều vitamin C.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 13, 
+        "title": "And you really want to get everything out of your lemon so that your skin beauty water contains lots of vitamin C.",
+        "segments": ["And you really want to", " ", "get everything out of", " your lemon", " ", "so that", " your skin beauty water ", "contains", " ", "lots of", " ", "vitamin C."],
+        "highlight": ["get everything out of", "so that", "contains"],
+        "description": "ænd ju ˈrɪli wɑnt tu ɡɛt ˈɛvriˌθɪŋ aʊt ʌv jʊər ˈlɛmən soʊ ðæt jʊər skɪn ˈbjuti ˈwɔtər kənˈteɪnz lɑts ʌv ˈvaɪtəmən si<br>→Và bạn sẽ muốn vắt hết tất cả những gì có trong chanh của bạn để nước dưỡng da của bạn chứa thật nhiều vitamin C.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 14, 
+        "title": "Last thing we’re going to add is one kiwi, plus the peel of the kiwi, which is also packed with vitamin C.",
+        "segments": ["Last thing we’re going to add is one kiwi, ", "plus the", " ", "peel", " of the kiwi, ", "which is also ", "packed with", " vitamin C."],
+        "highlight": ["peel", "packed with"],
+        "description": "læst θɪŋ wir ˈɡoʊɪŋ tu æd ɪz wʌn ˈkiwi, plʌs ðə pil ʌv ðə ˈkiwi, wɪʧ ɪz ˈɔlsoʊ pækt wɪð ˈvaɪtəmən si<br>→Thứ cuối cùng mà chúng ta cho vào là một trái kiwi, cộng thêm vỏ kiwi, vốn cũng chứa vitamin C.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 15, 
+        "title": "After adding the three ingredients, we’re going to mix everything together, so that it can really spread in the water.",
+        "segments": ["After adding", " ", "the three ", "ingredients", ", we’re going to ", "mix everything together", ", ", "so that", " ", "it can really ", "spread", " in the water."],
+        "highlight": ["After adding", "ingredients", "mix everything together", "so that", "spread"],
+        "description": "ˈæftər ˈædɪŋ ðə θri ɪnˈɡridiənts, wir ˈɡoʊɪŋ tu mɪks ˈɛvriˌθɪŋ təˈɡɛðər, soʊ ðæt ɪt kæn ˈrɪli sprɛd ɪn ðə ˈwɔtər<br>→Sau khi cho ba nguyên liệu vào, chúng ta sẽ trộn tất cả với nhau, để nó có thể thực sự tan ra trong nước.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 16, 
+        "title": "The most important part is to not only drink the water but also to eat everything that’s inside of the water.",
+        "segments": ["The most important part is", " ", "to not only drink the water", " ", "but also to eat everything", " ", "that’s inside of the water."],
+        "highlight": ["to not only drink the water", "but also to eat everything"],
+        "description": "ðə moʊst ɪmˈpɔrtənt pɑrt ɪz tu nɑt ˈoʊnli drɪŋk ðə ˈwɔtər bʌt ˈɔlsoʊ tu it ˈɛvriˌθɪŋ ðæts ɪnˈsaɪd ʌv ðə ˈwɔtər<br>→Điều quan trọng nhất là không chỉ uống nước mà còn ăn hết tất cả những thứ có trong nước.", 
+        "audioSrc": ""
     }
 ]
