@@ -166,5 +166,13 @@
         "highlight": ["the role for teachers in the learning process", "and it will continue to be in the future", "the human interaction and its consequences"],
         "description": "ɪn kənˈkluʒən, ðə roʊl fɔr ˈtiʧərz ɪn ðə ˈlɜrnɪŋ ˈprɑˌsɛs ɪz stɪl ˈvɛri ɪmˈpɔrtənt ænd ɪt wɪl kənˈtɪnju tu bi ɪn ðə ˈfjuʧər bɪˈkɔz noʊ məˈʃin kæn ˌriˈpleɪs ðə ˈhjumən ˌɪntəˈrækʃən ænd ɪts ˈkɑnsəˌkwɛnsəz.<br> (Introductory Phrase-In conclusion,) + S + V + (and + S + V) + (because + S + V)", 
         "audioSrc": ""
-    }
+    },
+    {
+        "id": 21, 
+        "title": "The reality show contestant was reflecting a growing trend in Western culture – the so-called tradwife lifestyle.",
+        "segments": ["The reality show contestant ", "was reflecting a growing trend in Western culture", " – the so-called tradwife lifestyle."],
+        "highlight": ["was reflecting a growing trend in Western culture"],
+        "description": "ɪn kənˈkluʒən, ðə roʊl fɔr ˈtiʧərz ɪn ðə ˈlɜrnɪŋ ˈprɑˌsɛs ɪz stɪl ˈvɛri ɪmˈpɔrtənt ænd ɪt wɪl kənˈtɪnju tu bi ɪn ðə ˈfjuʧər bɪˈkɔz noʊ məˈʃin kæn ˌriˈpleɪs ðə ˈhjumən ˌɪntəˈrækʃən ænd ɪts ˈkɑnsəˌkwɛnsəz.ðə ˌriˈæləˌti ʃoʊ kənˈtɛstənt wʌz rəˈflɛktɪŋ ə ˈɡroʊɪŋ trɛnd ɪn ˈwɛstərn ˈkʌlʧər – ðə ˈsoʊˈkɔld tradwife ˈlaɪfˌstaɪl.<br>Thí sinh của chương trình truyền hình thực tế này đã phản ánh một xu hướng đang phát triển trong văn hóa phương Tây - cái gọi là lối sống người vợ truyền thống.", 
+        "audioSrc": ""
+    },
 ]
