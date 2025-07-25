@@ -335,7 +335,8 @@
                 { "answer": "was" },
                 { "answer": "reflecting" },
                 { "answer": "a" },
-                { "answer": "growing trend" },
+                { "answer": "growing" },
+                { "answer": "trend" },
                 { "answer": "in" },
                 { "answer": "Western culture" },
                 { "answer": "the" },
@@ -343,7 +344,7 @@
                 { "answer": "tradwife" },
                 { "answer": "lifestyle" }
             ],
-            "words": ["Western culture", "tradwife", "reflecting", "growing trend", "lifestyle", "The", "reality show", "a", "the", "contestant", "in", "so-called", "was"]
+            "words": ["Western culture", "tradwife", "reflecting", "growing", "lifestyle", "The", "trend", "reality show", "a", "the", "contestant", "in", "so-called", "was"]
         },
         {
             "id": 28,
@@ -358,7 +359,8 @@
                 { "answer": "to" },
                 { "answer": "take up" },
                 { "answer": "traditional" },
-                { "answer": "gendered roles" },
+                { "answer": "gendered" },
+                { "answer": "roles" },
                 { "answer": "within" },
                 { "answer": "the" },
                 { "answer": "home" },
@@ -369,7 +371,7 @@
                 { "answer": "and" },
                 { "answer": "children" }
             ],
-            "words": ["who", "traditional", "are", "the", "gendered roles", "to", "centred", "serving", "choose", "children", "home", "within", "around", "Tradwives", "their husband", "take up", "and", "women"]
+            "words": ["who", "traditional", "are", "the", "gendered", "to", "centred", "serving", "roles", "choose", "children", "home", "within", "around", "Tradwives", "their husband", "take up", "and", "women"]
         },
         {
             "id": 29,
@@ -386,9 +388,10 @@
                 { "answer": "a" },
                 { "answer": "deference" },
                 { "answer": "to" },
-                { "answer": "one’s husband" }
+                { "answer": "one’s" },
+                { "answer": "husband" },
             ],
-            "words": ["of", "by", "is", "to", "wifehood", "version", "underpinned", "deference", "one’s husband", "a", "This"]
+            "words": ["of", "by", "is", "to", "husband", "wifehood", "version", "underpinned", "deference", "one’s", "a", "This"]
         },
         {
             "id": 30,
