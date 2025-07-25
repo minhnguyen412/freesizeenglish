@@ -113,11 +113,11 @@ button:disabled {
     }
 
     .sentence {
-        font-size: 24px; /* Giảm kích thước chữ */
+        font-size: 15px; /* Giảm kích thước chữ */
     }
 
     .word {
-        font-size: 20px; /* Điều chỉnh kích thước nút */
+        font-size: 15px; /* Điều chỉnh kích thước nút */
     }
     .content-image {
         max-width: 80px; /* Adjust as necessary */
@@ -133,11 +133,11 @@ button:disabled {
     }
 
     .sentence {
-        font-size: 18px; /* Kích thước chữ nhỏ hơn */
+        font-size: 15px; /* Kích thước chữ nhỏ hơn */
     }
 
     .word {
-        font-size: 16px; /* Kích thước nút nhỏ hơn */
+        font-size: 15px; /* Kích thước nút nhỏ hơn */
     }
     .content-image {
         max-width: 65px; /* Adjust as necessary */
@@ -152,11 +152,11 @@ button:disabled {
     }
 
     .sentence {
-        font-size: 24px; /* Giảm kích thước chữ */
+        font-size: 15px; /* Giảm kích thước chữ */
     }
 
     .word {
-        font-size: 20px; /* Điều chỉnh kích thước nút */
+        font-size: 15px; /* Điều chỉnh kích thước nút */
     }
     .content-image {
         max-width: 100px; /* Adjust as necessary */
