@@ -174,5 +174,37 @@
         "highlight": ["was reflecting a growing trend in Western culture"],
         "description": "ɪn kənˈkluʒən, ðə roʊl fɔr ˈtiʧərz ɪn ðə ˈlɜrnɪŋ ˈprɑˌsɛs ɪz stɪl ˈvɛri ɪmˈpɔrtənt ænd ɪt wɪl kənˈtɪnju tu bi ɪn ðə ˈfjuʧər bɪˈkɔz noʊ məˈʃin kæn ˌriˈpleɪs ðə ˈhjumən ˌɪntəˈrækʃən ænd ɪts ˈkɑnsəˌkwɛnsəz.ðə ˌriˈæləˌti ʃoʊ kənˈtɛstənt wʌz rəˈflɛktɪŋ ə ˈɡroʊɪŋ trɛnd ɪn ˈwɛstərn ˈkʌlʧər – ðə ˈsoʊˈkɔld tradwife ˈlaɪfˌstaɪl.<br>Thí sinh của chương trình truyền hình thực tế này đã phản ánh một xu hướng đang phát triển trong văn hóa phương Tây - cái gọi là lối sống người vợ truyền thống.", 
         "audioSrc": ""
+    },
+    {
+        "id": 23, 
+        "title": "Tradwives are women who choose to take up traditional gendered roles within the home, centred around serving their husband and children.",
+        "segments": ["Tradwives are women who choose ", "to take up", "traditional gendered roles ", "within the home", ", ", "centred around", " serving their husband and children."],
+        "highlight": ["to take up", "within the home", "centred around"],
+        "description": "Tradwives ɑr ˈwɪmən hu ʧuz tu teɪk ʌp trəˈdɪʃənəl ˈʤɛndərd roʊlz wɪˈðɪn ðə hoʊm, ˈsɛntərd əˈraʊnd ˈsɜrvɪŋ ðɛr ˈhʌzbənd ænd ˈʧɪldrən.<br>Những người vợ truyền thống là những người phụ nữ chọn đảm nhận những vai trò giới tính truyền thống trong gia đình, tập trung vào việc phục vụ chồng con. ", 
+        "audioSrc": ""
+    },
+    {
+        "id": 24, 
+        "title": "This version of wifehood is underpinned by a deference to one’s husband.",
+        "segments": ["This version of wifehood is ", "underpinned", " by a ", "deference", " ", "to", " one’s husband."],
+        "highlight": ["underpinned", "deference", "to"],
+        "description": "ðɪs ˈvɜrʒən ʌv wifehood ɪz ˈʌndərˌpɪnd baɪ ə ˈdɛfərəns tu wʌnz ˈhʌzbənd.<br>Phiên bản làm vợ này được củng cố bởi sự tôn trọng chồng.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 25, 
+        "title": "Because of this, tradwives tend to be financially dependent on their husbands and many also give over decision-making rights to their husbands.",
+        "segments": ["Because of this, tradwives tend to be financially dependent on their husbands and many also ", "give over", " decision-making rights to their husbands."],
+        "highlight": ["give over"],
+        "description": "bɪˈkɔz ʌv ðɪs, tradwives tɛnd tu bi fəˈnænʃəli dɪˈpɛndənt ɑn ðɛr ˈhʌzbəndz ænd ˈmɛni ˈɔlsoʊ ɡɪv ˈoʊvər dɪˈsɪʒənˌmeɪkɪŋ raɪts tu ðɛr ˈhʌzbəndz.<br>Vì lý do này, các bà vợ truyền thống thường phụ thuộc tài chính vào chồng và nhiều người còn trao quyền quyết định cho chồng.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 26, 
+        "title": "In essence, the tradwife lifestyle rejects the past seven decades of feminism.",
+        "segments": ["In essence", " the tradwife lifestyle rejects the past seven decades of feminism."],
+        "highlight": ["In essence"],
+        "description": "ɪn ˈɛsəns, ðə tradwife ˈlaɪfˌstaɪl rɪˈʤɛkts ðə pæst ˈsɛvən dɛˈkeɪdz ʌv ˈfɛmɪˌnɪzəm.<br>Về bản chất, lối sống người vợ truyền thống này hoàn toàn bác bỏ chủ nghĩa nữ quyền đã tồn tại suốt bảy thập kỷ qua.", 
+        "audioSrc": ""
     }
 ]
