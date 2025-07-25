@@ -326,92 +326,117 @@
         },
         {
             "id": 27,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673134/%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E4%B9%A6_zl0i7l.mp3",
-            "sentence": "___ ___ ___ ___?",
+            "audio": "",
+            "sentence": "Thí sinh của chương trình truyền hình thực tế này đã phản ánh một xu hướng đang phát triển trong văn hóa phương Tây - cái gọi là lối sống người vợ truyền thống.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ -___ ___ ___ ___.",
             "blanks": [
-                { "answer": "这" },
-                { "answer": "是" },
-                { "answer": "什么" },
-                { "answer": "书" }
-                
+                { "answer": "The" },
+                { "answer": "reality show" },
+                { "answer": "contestant" },
+                { "answer": "was" },
+                { "answer": "reflecting" },
+                { "answer": "a" },
+                { "answer": "growing trend" },
+                { "answer": "in" },
+                { "answer": "Western culture" },
+                { "answer": "the" },
+                { "answer": "so-called" },
+                { "answer": "tradwife" },
+                { "answer": "lifestyle" }
             ],
-            "words": ["什么", "书", "是", "这"]
+            "words": ["Western culture", "tradwife", "reflecting", "growing trend", "lifestyle", "The", "reality show", "a", "the", "contestant", "in", "so-called", "was"]
         },
         {
             "id": 28,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673161/%E4%B8%AD%E6%96%87_vbkj3r.mp3",
-            "sentence": "中文 : ___",
+            "audio": "",
+            "sentence": "Những người vợ truyền thống là những người phụ nữ chọn đảm nhận những vai trò giới tính truyền thống trong gia đình, tập trung vào việc phục vụ chồng con. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672808/%E4%B8%AD%E6%96%87_ceposq.png" }
+                { "answer": "Tradwives" },
+                { "answer": "are" },
+                { "answer": "women" },
+                { "answer": "who" },
+                { "answer": "choose" },
+                { "answer": "to" },
+                { "answer": "take up" },
+                { "answer": "traditional" },
+                { "answer": "gendered roles" },
+                { "answer": "within" },
+                { "answer": "the" },
+                { "answer": "home" },
+                { "answer": "centred" },
+                { "answer": "around" },
+                { "answer": "serving" },
+                { "answer": "their husband" },
+                { "answer": "and" },
+                { "answer": "children" }
             ],
-            "words": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672833/%E9%9F%A9%E6%96%87_ipmlxt.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672821/%E6%97%A5%E6%96%87_lnpilr.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672808/%E4%B8%AD%E6%96%87_ceposq.png"]
+            "words": ["who", "traditional", "are", "the", "gendered roles", "to", "centred", "serving", "choose", "children", "home", "within", "around", "Tradwives", "their husband", "take up", "and", "women"]
         },
         {
             "id": 29,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673140/%E8%BF%99%E6%98%AF%E8%B0%81%E7%9A%84%E4%B9%A6_l4mna3.mp3",
-            "sentence": "Whose book is this? <br> ___ ___ ___ ___ ___?",
+            "audio": "",
+            "sentence": "Phiên bản làm vợ này được củng cố bởi sự tôn trọng chồng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "这" },
-                { "answer": "是" },
-                { "answer": "谁" },
-                { "answer": "的" },
-                { "answer": "书" }
+                { "answer": "This" },
+                { "answer": "version" },
+                { "answer": "of" },
+                { "answer": "wifehood" },
+                { "answer": "is" },
+                { "answer": "underpinned" },
+                { "answer": "by" },
+                { "answer": "a" },
+                { "answer": "deference" },
+                { "answer": "to" },
+                { "answer": "one’s husband" }
             ],
-            "words": ["谁", "这", "是", "书", "的"]
+            "words": ["of", "by", "is", "to", "wifehood", "version", "underpinned", "deference", "one’s husband", "a", "This"]
         },
         {
             "id": 30,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673345/%E8%B0%81_ueab1g.mp3",
-            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672830/%E8%B0%81_o4ejhr.gif", ": ___"],
+            "audio": "",
+            "sentence": "Vì lý do này, các bà vợ truyền thống thường phụ thuộc tài chính vào chồng và nhiều người còn trao quyền quyết định cho chồng. <br> ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "谁" }
+                { "answer": "Because" },
+                { "answer": "of" },
+                { "answer": "this" },
+                { "answer": "tradwives" },
+                { "answer": "tend" },
+                { "answer": "to" },
+                { "answer": "be" },
+                { "answer": "financially" },
+                { "answer": "dependent" },
+                { "answer": "on" },
+                { "answer": "their husbands" },
+                { "answer": "and" },
+                { "answer": "many" },
+                { "answer": "also" },
+                { "answer": "give" },
+                { "answer": "over" },
+                { "answer": "decision-making" },
+                { "answer": "rights" },
+                { "answer": "to" },
+                { "answer": "their husbands" }
             ],
-            "words": ["那", "在", "谁"]
+            "words": ["tradwifes", "on", "financially", "to", "of", "and", "over", "to", "dependent", "rights", "also", "Because", "their husbands", "their husbands", "give", "tend", "this", "many", "decision-making", "be"]
         },
         {
             "id": 31,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673139/%E8%BF%99%E6%98%AF%E8%80%81%E5%B8%88%E7%9A%84%E4%B9%A6_ry6pfu.mp3",
-            "sentence": "___ ___ ___ ___ ___.",
+            "audio": "",
+            "sentence": "Về bản chất, lối sống người vợ truyền thống này hoàn toàn bác bỏ chủ nghĩa nữ quyền đã tồn tại suốt bảy thập kỷ qua.<br>___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
             "blanks": [
-                { "answer": "这" },
-                { "answer": "是" },
-                { "answer": "老师" },
-                { "answer": "的" },
-                { "answer": "书" }
+                { "answer": "In" },
+                { "answer": "essence" },
+                { "answer": "the" },
+                { "answer": "tradwife" },
+                { "answer": "lifestyle" },
+                { "answer": "rejects" },
+                { "answer": "the" },
+                { "answer": "past" },
+                { "answer": "seven" },
+                { "answer": "decades" },
+                { "answer": "of" },
+                { "answer": "feminism" }
             ],
-            "words": ["是", "老师", "书", "这", "的"]
-        },
-        {
-            "id": 32,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673142/%E9%82%A3%E6%98%AF%E4%BB%80%E4%B9%88_vhyyi4.mp3",
-            "sentence": "What is that? <br> ___ ___ ___?",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "什么" }
-            ],
-            "words": ["什么", "那", "是"]
-        },
-        {
-            "id": 33,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673311/%E6%9D%82%E5%BF%97_axn4uh.mp3",
-            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672824/%E6%9D%82%E5%BF%97_adnplb.png", ": ___"],
-            "blanks": [
-                { "answer": "杂志" }
-            ],
-            "words": ["杂志", "学校", "身体"]
-        },
-        {
-            "id": 34,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673144/%E9%82%A3%E6%98%AF%E4%BB%80%E4%B9%88%E6%9D%82%E5%BF%97_cj6lqe.mp3",
-            "sentence": "___ ___ ___ ___?",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "什么" },
-                { "answer": "杂志" }
-            ],
-            "words": ["是", "什么", "杂志", "那"]
+            "words": ["In", "past", "rejects", "tradwife", "seven", "the", "decades", "the", "lifestyle", "feminism", "of", "essence"]
         },
         {
             "id": 35,
