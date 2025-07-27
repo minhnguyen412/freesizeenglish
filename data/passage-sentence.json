@@ -234,8 +234,8 @@
     {
         "id": 30, 
         "title": "Before the first decades of this century, it was a cultural imperative, almost universal, for adult children to become independent from their parents as quickly as possible.",
-        "segments": ["Before the first decades of this century, it was a ", "cultural imperative", ", ", "almost universal", ", for adult children to ", "become independent from their parents", " ", "as quickly as possible", "."],
-        "highlight": ["cultural imperative", "almost universal", "as quickly as possible"],
+        "segments": ["Before the first decades of this century, it was a ", "cultural", " ", "imperative", ", ", "almost universal", ", for adult children to ", "become independent from their parents", " ", "as quickly as possible", "."],
+        "highlight": ["imperative", "almost universal", "as quickly as possible"],
         "description": "bɪˈfɔr ðə fɜrst dɛˈkeɪdz ʌv ðɪs ˈsɛnʧəri, ɪt wʌz ə ˈkʌlʧərəl ɪmˈpɛrətɪv, ˈɔlˌmoʊst ˌjunəˈvɜrsəl, fɔr əˈdʌlt ˈʧɪldrən tu bɪˈkʌm ˌɪndɪˈpɛndənt frʌm ðɛr ˈpɛrənts æz ˈkwɪkli æz ˈpɑsəbəl.<br>Trước những thập kỷ đầu tiên của thế kỷ này, việc con cái trưởng thành trở nên độc lập với cha mẹ càng sớm càng tốt là một nhu cầu văn hóa, gần như phổ biến.", 
         "audioSrc": ""
     },
