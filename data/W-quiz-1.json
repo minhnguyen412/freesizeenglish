@@ -442,281 +442,133 @@
             "words": ["In", "past", "rejects", "tradwife", "seven", "the", "decades", "the", "lifestyle", "feminism", "of", "essence"]
         },
         {
-            "id": 35,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673333/%E8%8B%B1%E6%96%87_kjsarw.mp3",
-            "sentence": "英文 : ___",
+            "id": 32,
+            "audio": "",
+            "sentence": "Ngày càng có nhiều con cái trưởng thành ở Úc sống với cha mẹ cho đến giữa độ tuổi 30, trong đó nam giới từ 30 đến 34 tuổi có khả năng ở lại nhà cha mẹ gấp đôi so với phụ nữ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672827/%E8%8B%B1%E6%96%87_vr4hh3.png" }
+                { "answer": "Growing" },
+                { "answer": "numbers" },
+                { "answer": "of" },
+                { "answer": "adult children" },
+                { "answer": "in Australia" },
+                { "answer": "are living" },
+                { "answer": "with" },
+                { "answer": "their parents" },
+                { "answer": "well" },
+                { "answer": "into" },
+                { "answer": "their" },
+                { "answer": "mid-30s" },
+                { "answer": "with" },
+                { "answer": "men" },
+                { "answer": "aged" },
+                { "answer": "30 to 34" },
+                { "answer": "twice" },
+                { "answer": "as likely as" },
+                { "answer": "women" },
+                { "answer": "to remain" },
+                { "answer": "in the" },
+                { "answer": "family home" }
             ],
-            "words": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672827/%E8%8B%B1%E6%96%87_vr4hh3.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672832/%E9%98%BF%E6%8B%89%E4%BC%AF%E6%96%87_zso60r.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672819/%E5%BE%B7%E6%96%87_raeko0.png"]
-        },
-        {
-            "id": 36,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673148/%E9%82%A3%E6%98%AF%E8%B0%81%E7%9A%84%E6%9D%82%E5%BF%97_pq9pbq.mp3",
-            "sentence": "___ ___ ___ ___ ___？",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "谁" },
-                { "answer": "的" },
-                { "answer": "杂志" }
-            ],
-            "words": ["是", "谁", "杂志", "那", "的"]
+            "words": ["adult children", "into", "their parents", "men", "numbers", "mid-30s", "well", "are living", "aged", "of", "twice", "with", "family home", "women", "in Australia", "Growing", "30 to 34", "their", "to remain", "as likely as", "with", "in the",]
         },
         {
             "id": 37,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673145/%E9%82%A3%E6%98%AF%E6%88%91%E6%9C%8B%E5%8F%8B%E7%9A%84%E6%9D%82%E5%BF%97_va0ugf.mp3",
-            "sentence": "That's my friend's magazine. <br> ___ ___ ___ ___ ___ ___.",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "我" },
-                { "answer": "朋友" },
-                { "answer": "的" },
-                { "answer": "杂志" }
-            ],
-            "words": ["那", "我", "的", "朋友", "是", "杂志"]
-        },
-        {
-            "id": 38,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673310/%E6%9C%8B%E5%8F%8B_r32byy.mp3",
-            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672823/%E6%9C%8B%E5%8F%8B_pwkkse.png", ": ___"],
-            "blanks": [
-                { "answer": "朋友" }
-            ],
-            "words": ["老师", "父母", "朋友"]
-        },
-        {
-            "id": 39,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673150/%E4%B8%80_ccdydi.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "yī" }
-            ],
-            "words": ["yī", "yí", "yǐ", "yì"]
-        },
-        {
-            "id": 40,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673165/%E4%BA%94_durk7r.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "wǔ" }
-            ],
-            "words": ["wū", "wú", "wǔ", "wù"]
-        },
-        {
-            "id": 41,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/yu2_cvh99x.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "yú" }
-            ],
-            "words": ["yū", "yú", "yǔ", "yù"]
-        },
-        {
-            "id": 42,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673233/%E5%85%AB_jwszsy.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "bā" }
-            ],
-            "words": ["bā", "bá", "bǎ", "bà"]
-        },
-        {
-            "id": 43,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673261/%E5%A4%A7_ni23pu.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "dà" }
-            ],
-            "words": ["dā", "dá", "dǎ", "dà"]
-        },
-        {
-            "id": 44,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673155/%E4%B8%8D_p3kqjq.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "bù" }
-            ],
-            "words": ["bū", "bú", "bǔ", "bù"]
-        },
-        {
-            "id": 45,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673265/%E5%A5%B3_kxwjg4.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "nǚ" }
-            ],
-            "words": ["nǖ", "nǘ", "nǚ", "nǜ"]
-        },
-        {
-            "id": 46,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673245/%E5%8F%A3_dxcuqi.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "kǒu" }
-            ],
-            "words": ["kōu", "kóu", "kǒu", "kòu"]
-        },
-        {
-            "id": 47,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673324/%E7%99%BD_kbwum2.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "bái" }
-            ],
-            "words": ["bāi", "bái", "bǎi", "bài"]
-        },
-        {
-            "id": 48,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/hei1_hd4jw1.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "hēi" }
-            ],
-            "words": ["hēi", "héi", "hěi", "hèi"]
-        },
-        {
-            "id": 49,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673375/%E9%A9%AC_zbvgtx.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "mǎ" }
-            ],
-            "words": ["mā", "má", "mǎ", "mà"]
-        },
-        {
-            "id": 50,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673172/%E4%BD%A0_ll3o9t.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "nǐ" }
-            ],
-            "words": ["nī", "ní", "nǐ", "nì"]
-        },
-        {
-            "id": 51,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673266/%E5%A5%BD_lge2io.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "hǎo" }
-            ],
-            "words": ["hāo", "háo", "hǎo", "hào"]
-        },
-        {
-            "id": 52,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/pa_l4o4im.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "pa" }
-            ],
-            "words": ["ba", "pa"]
-        },
-        {
-            "id": 53,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/da_gsewdl.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "da" }
-            ],
-            "words": ["da", "ta"]
-        },
-        {
-            "id": 54,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/hei_wd8bah.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "hei" }
-            ],
-            "words": ["hai", "hei"]
-        },
-        {
-            "id": 55,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/po_gplthh.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "po" }
-            ],
-            "words": ["pa", "po"]
-        },
-        {
-            "id": 56,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/gou_g3k7r3.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "gou" }
-            ],
-            "words": ["gao", "gou"]
-        },
-        {
-            "id": 57,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/ka_hcewtw.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "ka" }
-            ],
-            "words": ["ga", "ka"]
-        },
-        {
-            "id": 58,
             "audio": "",
-            "sentence": "你: ___",
+            "sentence": "Dữ liệu điều tra dân số do công ty nghiên cứu thị trường McCrindle phân tích cho thấy hơn một nửa nam giới và 43% phụ nữ từ 20 đến 24 tuổi và không đi học toàn thời gian sống với cha mẹ. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "nǐ" }
+                { "answer": "Census data" },
+                { "answer": "analysed" },
+                { "answer": "by" },
+                { "answer": "market research firm" },
+                { "answer": "McCrindle" },
+                { "answer": "shows" },
+                { "answer": "more than" },
+                { "answer": "half of men" },
+                { "answer": "and" },
+                { "answer": "43 percent" },
+                { "answer": "of women" },
+                { "answer": "aged 20 to 24" },
+                { "answer": "and" },
+                { "answer": "not studying" },
+                { "answer": "full-time" },
+                { "answer": "live with" },
+                { "answer": "their parents" }
             ],
-            "words": ["nǐ", "wǔ", "yǔ", "mǎ"]
+            "words": ["analysed", "and", "more than", "shows", "market research firm", "of women", "and", "half of men", "by", "their parents", "43 percent", "not studying", "aged 20 to 24", "Census data", "full-time", "McCrindle", "live with"]
         },
         {
-            "id": 59,
+            "id":38,
             "audio": "",
-            "sentence": "好: ___",
+            "sentence": "Giám đốc điều hành McCrindle, Sophie Renton, cho biết khả năng chi trả nhà ở và sự đa dạng văn hóa có thể là những lý do khiến nhiều người trưởng thành sống với cha mẹ hơn.<br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "hǎo" }
+                { "answer": "McCrindle" },
+                { "answer": "managing director" },
+                { "answer": "Sophie Renton" },
+                { "answer": "said" },
+                { "answer": "housing affordability" },
+                { "answer": "and" },
+                { "answer": "cultural diversity" },
+                { "answer": "were" },
+                { "answer": "the" },
+                { "answer": "likely" },
+                { "answer": "reasons" },
+                { "answer": "that" },
+                { "answer": "more adults" },
+                { "answer": "lived" },
+                { "answer": "with" },
+                { "answer": "their parents" }
             ],
-            "words": ["nǚ", "wǔ", "hǎo", "bǎi"]
+            "words": ["Sophie Renton", "with", "housing affordability", "managing director", "the", "lived", "were", "cultural diversity", "likely", "more adults", "and", "that", "their parents", "said", "McCrindle", "reasons"]
         },
         {
-            "id":60,
+            "id":39,
             "audio": "",
-            "sentence": "Are you busy?: ___ ___ ___?",
+            "sentence": "Trước những thập kỷ đầu tiên của thế kỷ này, việc con cái trưởng thành trở nên độc lập với cha mẹ càng sớm càng tốt là một nhu cầu văn hóa, gần như phổ biến. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "你" },
-                { "answer": "忙" },
-                { "answer": "吗" }
+                { "answer": "Before" },
+                { "answer": "the first decades" },
+                { "answer": "of" },
+                { "answer": "this century" },
+                { "answer": "it" },
+                { "answer": "was" },
+                { "answer": "a" },
+                { "answer": "cultural" },
+                { "answer": "imperative" },
+                { "answer": "almost" },
+                { "answer": "universal" },
+                { "answer": "for" },
+                { "answer": "adult children" },
+                { "answer": "to" },
+                { "answer": "become" },
+                { "answer": "independent" },
+                { "answer": "from" },
+                { "answer": "their parents" },
+                { "answer": "as quickly as" },
+                { "answer": "possible" }
             ],
-            "words": ["忙", "你", "吗"]
+            "words": ["was", "possible", "of", "almost", "for", "cultural", "from", "the first decades", "adult children", "universal", "a", "it", "as quickly as", "Before", "become", "imperative", "this century", "their parents", "to", "independent"]
         },
         {
-            "id":61,
+            "id":40,
             "audio": "",
-            "sentence": "Very busy: ___ ___。",
+            "sentence": "Trên thực tế, những người không làm được điều đó thường xuyên bị chỉ trích và/hoặc bị chế giễu. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "很" },
-                { "answer": "忙" }
+                { "answer": "In fact" },
+                { "answer": "those" },
+                { "answer": "who" },
+                { "answer": "did" },
+                { "answer": "not" },
+                { "answer": "manage" },
+                { "answer": "to" },
+                { "answer": "do" },
+                { "answer": "that" },
+                { "answer": "were" },
+                { "answer": "constantly" },
+                { "answer": "criticized" },
+                { "answer": "and/or" },
+                { "answer": "caricatured" }
             ],
-            "words": ["忙", "很"]
-        },
-        {
-            "id":62,
-            "audio": "",
-            "sentence": "Is Chinese difficult?: ___ ___ ___?",
-            "blanks": [
-                { "answer": "汉语" },
-                { "answer": "难" },
-                { "answer": "吗" }
-            ],
-            "words": ["难", "吗", "汉语"]
-        },
-        {
-            "id":63,
-            "audio": "",
-            "sentence": "Not too difficult: ___ ___ ___。",
-            "blanks": [
-                { "answer": "不" },
-                { "answer": "太" },
-                { "answer": "难" }
-            ],
-            "words": ["太", "不", "难"]
+            "words": ["those", "manage", "do", "did", "criticized", "were", "who", "caricatured", "and/or", "constantly", "to", "that", "In fact", "not"]
         },
         {
             "id":64,
