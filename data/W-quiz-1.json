@@ -605,7 +605,7 @@
         {
             "id":38,
             "audio": "",
-            "sentence": "Trong khi 1.200 trẻ em đang chờ kết quả xét nghiệm xem có bị phơi nhiễm với các bệnh truyền nhiễm hay không, một nỗi kinh hoàng mà không cha mẹ nào phải đối mặt, và bị cáo vẫn chưa nhận tội hoặc trải qua quá trình xét xử, các phương tiện truyền thông đã bắt đầu tập trung vào việc vụ án này có thể có tác động rộng hơn như thế nào đối với nhân viên chăm sóc trẻ em nam. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___.",
+            "sentence": "Trong khi 1.200 trẻ em đang chờ kết quả xét nghiệm xem có bị phơi nhiễm với các bệnh truyền nhiễm hay không, một nỗi kinh hoàng mà không cha mẹ nào phải đối mặt, và bị cáo vẫn chưa nhận tội hoặc trải qua quá trình xét xử, các phương tiện truyền thông đã bắt đầu tập trung vào việc vụ án này có thể có tác động rộng hơn như thế nào đối với nhân viên chăm sóc trẻ em nam. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
                 { "answer": "As" },
                 { "answer": "1,200" },
