@@ -17,11 +17,11 @@
     },
     {
         "id": 3,
-        "title": "第三课：明天见!",
-        "description": "Lesson 3: See you tomorrow!",
-        "thumbnail": "https://storage.googleapis.com/script60s/THUMBNAILS/write-t2-min.png",
+        "title": "Male childcare workers",
+        "description": "SOCIETY",
+        "thumbnail": "",
         "videoLink": "https://www.youtube.com/embed/VIDEO_ID_1",
-        "htmlLink": "posts.html?postStartId=39&postEndId=47&quizStartId=1&quizEndId=16&id=3"
+        "htmlLink": "task2.html?postStartId=22&postEndId=26&quizStartId=27&quizEndId=31&id=3&id2=5"
     },
       {
         "id": 4,
