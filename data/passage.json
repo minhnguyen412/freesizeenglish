@@ -39,7 +39,7 @@
     },
     {
         "id": 4,
-        "title": "The Emerging Adulthood",
+        "title": "Growing numbers of adult children in Australia are living with their parents well into their mid-30s",
         "imageSrc": "",
         "content": [
             "Growing numbers of adult children in Australia are living with their parents well into their mid-30s, with men aged 30 to 34 twice as likely as women to remain in the family home.",
@@ -47,6 +47,18 @@
             "McCrindle managing director Sophie Renton said housing affordability and cultural diversity were the likely reasons that more adults lived with their parents.",
             "Before the first decades of this century, it was a cultural imperative, almost universal, for adult children to become independent from their parents as quickly as possible.",
             "In fact, those who did not manage to do that were constantly criticized and/or caricatured."
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Male childcare workers",
+        "imageSrc": "",
+        "content": [
+            "Australians are reeling from the news that a Victorian childcare worker has been charged with more than 70 alleged offences against children, including rape.",
+            "As 1,200 children await results to see if they’ve been exposed to infectious diseases, a horror no parent should ever face, and the accused has yet to enter a plea or go through the court process, media commentary has begun to focus on how this case might have implications more broadly for male childcare workers.",
+            "Early childhood education is a heavily female-dominated field and some past inquiries into child sexual abuse by male educators have suggested that, in efforts to avoid appearing discriminatory, male workers may be subject to less scrutiny.",
+            "This dynamic is compounded by efforts for gender balance in childcare, particularly for the perceived benefits of male role models.",
+            "Ironically, this fear of seeming biased can create the very conditions that offenders exploit – grooming colleagues, parents and children to commit abuse while hidden in plain sight."
         ]
     }
 ]
