@@ -246,5 +246,22 @@
         "highlight": ["manage to do that", "caricatured"],
         "description": "ɪn fækt, ðoʊz hu dɪd nɑt ˈmænəʤ tu du ðæt wɜr ˈkɑnstəntli ˈkrɪtəˌsaɪzd ænd/ɔr kəˈrɪkəʧərd.<br>Trên thực tế, những người không làm được điều đó thường xuyên bị chỉ trích và/hoặc bị chế giễu.", 
         "audioSrc": ""
+    },
+    {
+        "id": 32, 
+        "title": "Australians are reeling from the news that a Victorian childcare worker has been charged with more than 70 alleged offences against children, including rape.",
+        "segments": ["Australians ", "are reeling from", " the news that a Victorian childcare worker has been charged with more than 70 ", "alleged offences against", " children, including rape."],
+        "highlight": ["are reeling from", "alleged offences against"],
+        "description": "ɔˈstreɪljənz ɑr ˈrilɪŋ frʌm ðə nuz ðæt ə vɪkˈtɔriən ˈʧaɪldˌkɛr ˈwɜrkər hæz bɪn ʧɑrʤd wɪð mɔr ðæn 70 əˈlɛʤd offences əˈɡɛnst ˈʧɪldrən, ɪnˈkludɪŋ reɪp.<br>Người dân Úc đang bàng hoàng trước tin tức một nhân viên chăm sóc trẻ em ở Victoria bị buộc tội với hơn 70 tội danh liên quan đến trẻ em, bao gồm cả hiếp dâm.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 33, 
+        "title": "As 1,200 children await results to see if they’ve been exposed to infectious diseases, a horror no parent should ever face, and the accused has yet to enter a plea or go through the court process, media commentary has begun to focus on how this case might have implications more broadly for male childcare workers.",
+        "segments": ["As 1,200 children ", "await results", " to see if they’ve been ", "exposed to infectious diseases", ", ", "a horror no parent should ever face", ", ", "and the accused ", "has yet to", " ", "enter a plea", " or go through the court process, ", "media commentary", " has begun to focus on how this case might have ", "implications", " more broadly for male childcare workers."],
+        "highlight": ["await results", "exposed to infectious diseases", "a horror no parent should ever face", "has yet to", "enter a plea", "media commentary", "implications"],
+        "description": "æz 1,200 ˈʧɪldrən əˈweɪt rɪˈzʌlts tu si ɪf ðeɪv bɪn ɪkˈspoʊzd tu ɪnˈfɛkʃəs dɪˈzizəz, ə ˈhɔrər noʊ ˈpɛrənt ʃʊd ˈɛvər feɪs, ænd ði əˈkjuzd hæz jɛt tu ˈɛntər ə pli ɔr ɡoʊ θru ðə kɔrt ˈprɑˌsɛs, ˈmidiə ˈkɑmənˌtɛri hæz bɪˈɡʌn tu ˈfoʊkəs ɑn haʊ ðɪs keɪs maɪt hæv ˌɪmpləˈkeɪʃənz mɔr ˈbrɔdli fɔr meɪl ˈʧaɪldˌkɛr ˈwɜrkərz.<br>Trong khi 1.200 trẻ em đang chờ kết quả xét nghiệm xem có bị phơi nhiễm với các bệnh truyền nhiễm hay không, một nỗi kinh hoàng mà không cha mẹ nào phải đối mặt, và bị cáo vẫn chưa nhận tội hoặc trải qua quá trình xét xử, các phương tiện truyền thông đã bắt đầu tập trung vào việc vụ án này có thể có tác động rộng hơn như thế nào đối với nhân viên chăm sóc trẻ em nam.", 
+        "audioSrc": ""
     }
+    
 ]
