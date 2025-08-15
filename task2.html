@@ -370,13 +370,13 @@
   </div>
 
   <script>
-    
+    const maxVideosToShow = 5;
     fetch('data/thumb-writing-2.json')
       .then(response => response.json())
       .then(videos => {
         videos.sort((a, b) => b.id - a.id);
         const thumbnailsContainer = document.getElementById("thumbnails-container");
-        videos.forEach(video => {
+        videos.slice(0, maxVideosToShow).forEach(video => {
           const thumbnailDiv = document.createElement("div");
           thumbnailDiv.classList.add("thumbnail");
           thumbnailDiv.innerHTML = `
