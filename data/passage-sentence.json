@@ -262,6 +262,14 @@
         "highlight": ["await results", "exposed to infectious diseases", "a horror no parent should ever face", "has yet to", "enter a plea", "media commentary", "implications"],
         "description": "æz 1,200 ˈʧɪldrən əˈweɪt rɪˈzʌlts tu si ɪf ðeɪv bɪn ɪkˈspoʊzd tu ɪnˈfɛkʃəs dɪˈzizəz, ə ˈhɔrər noʊ ˈpɛrənt ʃʊd ˈɛvər feɪs, ænd ði əˈkjuzd hæz jɛt tu ˈɛntər ə pli ɔr ɡoʊ θru ðə kɔrt ˈprɑˌsɛs, ˈmidiə ˈkɑmənˌtɛri hæz bɪˈɡʌn tu ˈfoʊkəs ɑn haʊ ðɪs keɪs maɪt hæv ˌɪmpləˈkeɪʃənz mɔr ˈbrɔdli fɔr meɪl ˈʧaɪldˌkɛr ˈwɜrkərz.<br>Trong khi 1.200 trẻ em đang chờ kết quả xét nghiệm xem có bị phơi nhiễm với các bệnh truyền nhiễm hay không, một nỗi kinh hoàng mà không cha mẹ nào phải đối mặt, và bị cáo vẫn chưa nhận tội hoặc trải qua quá trình xét xử, các phương tiện truyền thông đã bắt đầu tập trung vào việc vụ án này có thể có tác động rộng hơn như thế nào đối với nhân viên chăm sóc trẻ em nam.", 
         "audioSrc": ""
+    },
+    {
+        "id": 34, 
+        "title": "Early childhood education is a heavily female-dominated field and some past inquiries into child sexual abuse by male educators have suggested that, in efforts to avoid appearing discriminatory, male workers may be subject to less scrutiny.",
+        "segments": ["Early childhood education is a ", "heavily female-dominated field", " and some past ", "inquiries", " ", "into", " child sexual abuse by male educators have suggested that, ", "in efforts to", " avoid appearing ", " ", "discriminatory", ", male workers may be ", "subject to", " less ", "scrutiny", "."],
+        "highlight": ["heavily female-dominated field", "inquiries", "into", "in efforts to", "discriminatory", "subject to", "scrutiny"],
+        "description": "ˈɜrli ˈʧaɪldˌhʊd ˌɛʤəˈkeɪʃən ɪz ə ˈhɛvəli ˈfiˌmeɪl-ˈdɑməˌneɪtəd fild ænd sʌm pæst ɪnˈkwaɪəriz ˈɪntu ʧaɪld ˈsɛkʃuəl əˈbjus baɪ meɪl ˈɛʤəˌkeɪtərz hæv səɡˈʤɛstɪd ðæt, ɪn ˈɛfərts tu əˈvɔɪd əˈpɪrɪŋ dɪˈskrɪmənəˌtɔri, meɪl ˈwɜrkərz meɪ bi ˈsʌbʤɪkt tu lɛs ˈskrutəni.<br>Giáo dục mầm non là một lĩnh vực do phụ nữ chiếm ưu thế, và một số cuộc điều tra trước đây về lạm dụng tình dục trẻ em của các nhà giáo dục nam cho thấy rằng, để tránh bị coi là phân biệt đối xử, nhân viên nam có thể ít bị giám sát hơn. Động thái này càng trở nên phức tạp hơn bởi những nỗ lực hướng tới sự cân bằng giới tính trong chăm sóc trẻ em, đặc biệt là vì những lợi ích được cho là của nam giới.", 
+        "audioSrc": ""
     }
     
 ]
