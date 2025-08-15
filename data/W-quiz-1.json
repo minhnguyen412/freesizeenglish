@@ -667,7 +667,7 @@
         {
             "id":39,
             "audio": "",
-            "sentence": "Tuổi trung niên thường có xu hướng nghiêm nghị và luộm thuộm, nhưng nó có thể là một thời kỳ màu mỡ. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___.",
+            "sentence": "Tuổi trung niên thường có xu hướng nghiêm nghị và luộm thuộm, nhưng nó có thể là một thời kỳ màu mỡ. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___.",
             "blanks": [
                 { "answer": "Middle" },
                 { "answer": "age" },
@@ -676,7 +676,7 @@
                 { "answer": "reputation" },
                 { "answer": "for" },
                 { "answer": "being" },
-                { "answer": "stead" },
+                { "answer": "staid" },
                 { "answer": "and" },
                 { "answer": "frumpy" },
                 { "answer": "but" },
