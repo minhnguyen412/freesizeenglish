@@ -376,7 +376,7 @@
       .then(videos => {
         videos.sort((a, b) => b.id - a.id);
         const thumbnailsContainer = document.getElementById("thumbnails-container");
-        videos.slice(0, maxVideosToShow).forEach(video => {
+        videos.forEach(video => {
           const thumbnailDiv = document.createElement("div");
           thumbnailDiv.classList.add("thumbnail");
           thumbnailDiv.innerHTML = `
