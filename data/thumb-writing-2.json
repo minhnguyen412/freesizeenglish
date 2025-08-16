@@ -21,7 +21,7 @@
         "description": "SOCIETY",
         "thumbnail": "",
         "videoLink": "https://www.youtube.com/embed/VIDEO_ID_1",
-        "htmlLink": "task2.html?postStartId=32&postEndId=33&quizStartId=37&quizEndId=38&id=3&id2=5"
+        "htmlLink": "task2.html?postStartId=32&postEndId=33&quizStartId=37&quizEndId=41&id=3&id2=5"
     },
       {
         "id": 4,
@@ -29,7 +29,7 @@
         "description": "SELF DEVELOPMENT",
         "thumbnail": "",
         "videoLink": "https://www.youtube.com/embed/VIDEO_ID_1",
-        "htmlLink": "task2.html?postStartId=32&postEndId=33&quizStartId=39&quizEndId=40&id=4&id2=6"
+        "htmlLink": "task2.html?postStartId=32&postEndId=33&quizStartId=42&quizEndId=43&id=4&id2=6"
     },
       {
         "id": 5,
