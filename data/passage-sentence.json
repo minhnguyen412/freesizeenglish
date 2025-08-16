@@ -270,6 +270,21 @@
         "highlight": ["heavily female-dominated field", "inquiries", "into", "in efforts to", "discriminatory", "subject to", "scrutiny"],
         "description": "ˈɜrli ˈʧaɪldˌhʊd ˌɛʤəˈkeɪʃən ɪz ə ˈhɛvəli ˈfiˌmeɪl-ˈdɑməˌneɪtəd fild ænd sʌm pæst ɪnˈkwaɪəriz ˈɪntu ʧaɪld ˈsɛkʃuəl əˈbjus baɪ meɪl ˈɛʤəˌkeɪtərz hæv səɡˈʤɛstɪd ðæt, ɪn ˈɛfərts tu əˈvɔɪd əˈpɪrɪŋ dɪˈskrɪmənəˌtɔri, meɪl ˈwɜrkərz meɪ bi ˈsʌbʤɪkt tu lɛs ˈskrutəni.<br>Giáo dục mầm non là một lĩnh vực do phụ nữ chiếm ưu thế, và một số cuộc điều tra trước đây về lạm dụng tình dục trẻ em của các nhà giáo dục nam cho thấy rằng, để tránh bị coi là phân biệt đối xử, nhân viên nam có thể ít bị giám sát hơn. Động thái này càng trở nên phức tạp hơn bởi những nỗ lực hướng tới sự cân bằng giới tính trong chăm sóc trẻ em, đặc biệt là vì những lợi ích được cho là của nam giới.", 
         "audioSrc": ""
+    },
+    {
+        "id": 35, 
+        "title": "This dynamic is compounded by efforts for gender balance in childcare, particularly for the perceived benefits of male role models.",
+        "segments": ["This ", "dynamic", " ", "is compounded by", " ", " efforts for gender balance in childcare, particularly for ", "the perceived benefits", " of male role models."],
+        "highlight": ["dynamic", "is compounded by", "the perceived benefits"],
+        "description": "ðɪs daɪˈnæmɪk ɪz kəmˈpaʊndɪd baɪ ˈɛfəts fɔː ˈʤɛndə ˈbælᵊns ɪn ˈʧaɪldˌkeə, pəˈtɪkjələli fɔː ðə pəˈsiːvd ˈbɛnɪfɪts ɒv meɪl rəʊl ˈmɒdᵊlz.<br>Trớ trêu thay, nỗi sợ bị coi là thiên vị này lại có thể tạo ra chính những điều kiện mà kẻ phạm tội lợi dụng - dụ dỗ đồng nghiệp, cha mẹ và con cái thực hiện hành vi lạm dụng trong khi vẫn che giấu hành vi.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 36, 
+        "title": "Ironically, this fear of seeming biased can create the very conditions that offenders exploit – grooming colleagues, parents and children to commit abuse while hidden in plain sight.",
+        "segments": ["Ironically, ", "this fear of seeming biased", " ", "can create the very conditions", " that offenders exploit – grooming colleagues, parents and children ", "to commit abuse", " ", "while hidden in plain sight", "."],
+        "highlight": ["this fear of seeming biased", "can create the very conditions", "to commit abuse", "while hidden in plain sight"],
+        "description": "aɪˈrɒnɪkᵊli, ðɪs fɪər ɒv ˈsiːmɪŋ ˈbaɪəst kæn kriˈeɪt ðə ˈvɛri kənˈdɪʃᵊnz ðæt əˈfɛndəz ɪkˈsplɔɪt – ˈɡruːmɪŋ ˈkɒliːɡz, ˈpeərᵊnts ænd ˈʧɪldrən tuː kəˈmɪt əˈbjuːs waɪl ˈhɪdᵊn ɪn pleɪn saɪt.<br>Mặc dù đây là một sự thật khó chấp nhận, nhưng nghiên cứu cho thấy những người đàn ông có hứng thú tình dục với trẻ em có khả năng làm việc với trẻ em cao hơn, bao gồm cả trong giáo dục và chăm sóc trẻ em sớm.", 
+        "audioSrc": ""
     }
-    
 ]
