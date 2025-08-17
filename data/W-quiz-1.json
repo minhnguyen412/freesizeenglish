@@ -851,31 +851,70 @@
             "words": ["chapter", "new", "early", "has", "or", "to", "it’s", "every", "brings", "before", "midlife", "through", "into", "to", "Whether", "go", "person", "infancy", "develop", "you", "opportunity", "and", "life", "the", "mourn", "now", "gone", "young adulthood", "are", "final", "age", "the", "childhood", "the", "your", "around", "old", "what", "toddlerhood", "loss", "stage", "of", "and", "adolescence", "right", "it"]
         },
         {
-            "id":68,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673313/%E6%B1%89%E8%AF%AD_n6ho4r.mp3",
-            "sentence": "汉语: ___",
+            "id":44,
+            "audio": "",
+            "sentence": "Đây là cơ hội để giải quyết vấn đề và thay đổi. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "hànyǔ" }
+                { "answer": "It" },
+                { "answer": "is" },
+                { "answer": "a" },
+                { "answer": "chance" },
+                { "answer": "to" },
+                { "answer": "work" },
+                { "answer": "through" },
+                { "answer": "something" },
+                { "answer": "and" },
+                { "answer": "change" }
             ],
-            "words": ["hānyú", "hànyǔ", "hanyǔ", "hányu"]
+            "words": ["a", "through", "to", "change", "It", "and", "chance", "something", "work", "is"]
         },
         {
-            "id":69,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673320/%E7%88%B8%E7%88%B8_ktwtw6.mp3",
-            "sentence": "爸爸: ___",
+            "id":45,
+            "audio": "",
+            "sentence": "Vì vậy, việc tin vào triết lý tuổi tác chỉ là con số - một cách có ý thức hoặc vô thức - sẽ cướp đi của chúng ta trải nghiệm quý giá khi cảm thấy gắn bó với dòng thời gian cá nhân của mình. <br> ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ - ___ ___ ___ - ___ ___ ___ ___ ___ ___ ___  ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "bàba" }
+                { "answer": "So" },
+                { "answer": "buying" },
+                { "answer": "into" },
+                { "answer": "the" },
+                { "answer": "age" },
+                { "answer": "is" },
+                { "answer": "just" },
+                { "answer": "a" },
+                { "answer": "number" },
+                { "answer": "philosophy" },
+                { "answer": "consciously" },
+                { "answer": "or" },
+                { "answer": "unconsciously" },
+                { "answer": "robs" },
+                { "answer": "us" },
+                { "answer": "of" },
+                { "answer": "the" },
+                { "answer": "valuable" },
+                { "answer": "experience" },
+                { "answer": "of" },
+                { "answer": "feeling" },
+                { "answer": "rooted" },
+                { "answer": "in },
+                { "answer": "our" },
+                { "answer": "personal" },
+                { "answer": "timeline" }
             ],
-            "words": ["baba", "pàpa", "papa", "bàba"]
+            "words": ["age", "of", "buying", "robs", "timeline", "consciously", "just", "valuable", "number", "unconsciously", "into", "in", "us", "feeling", "or", "is", "our", "philosophy", "experience", "So", "the", "rooted", "of", "a", "the", "personal"]
         },
         {
-            "id":70,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673268/%E5%A6%88%E5%A6%88_cyj7nk.mp3",
-            "sentence": "妈妈: ___",
+            "id":46,
+            "audio": "",
+            "sentence": "Cảm giác gắn bó với điều gì đó chân thật. <br> ___ ___ ___ ___ ___ ___.",
             "blanks": [
-                { "answer": "māma" }
+                { "answer": "Of" },
+                { "answer": "feeling" },
+                { "answer": "rooted" },
+                { "answer": "in" },
+                { "answer": "something" },
+                { "answer": "true" }
             ],
-            "words": ["māma", "mama", "máma", "mǎma"]
+            "words": ["true", "feeling", "something", "in", "Of", "rooted"]
         },
         {
             "id":71,
