@@ -919,7 +919,7 @@
         {
     "id": 47,
     "audio": "",
-    "sentence": "Học sinh trung học ở Anh sẽ được dạy về văn hóa “incel” và mối liên hệ giữa nội dung khiêu dâm và thái độ kỳ thị phụ nữ, một phần trong hướng dẫn của chính phủ được mong đợi từ lâu, dự kiến được công bố vào thứ Ba.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Học sinh trung học ở Anh sẽ được dạy về văn hóa “incel” và mối liên hệ giữa nội dung khiêu dâm và thái độ kỳ thị phụ nữ, một phần trong hướng dẫn của chính phủ được mong đợi từ lâu, dự kiến được công bố vào thứ Ba.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ “___” ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
     "blanks": [
         { "answer": "Secondary" },
         { "answer": "school" },
@@ -931,7 +931,7 @@
         { "answer": "be" },
         { "answer": "taught" },
         { "answer": "about" },
-        { "answer": "“incel”" },
+        { "answer": "incel" },
         { "answer": "culture" },
         { "answer": "and" },
         { "answer": "the" },
@@ -954,13 +954,13 @@
         { "answer": "on" },
         { "answer": "Tuesday" }
     ],
-    "words": ["the", "between", "England", "published", "to", "be", "school", "and", "are", "government", "Tuesday", "“incel”", "due", "links", "as", "part", "long-awaited", "culture", "of", "taught", "about", "in", "to", "be", "statutory", "pornography", "pupils", "guidance", "Secondary", "and", "misogyny", "on"]
+    "words": ["the", "between", "England", "published", "to", "be", "school", "and", "are", "government", "Tuesday", "incel", "due", "links", "as", "part", "long-awaited", "culture", "of", "taught", "about", "in", "to", "be", "statutory", "pornography", "pupils", "guidance", "Secondary", "and", "misogyny", "on"]
 },
 
 {
     "id": 48,
     "audio": "",
-    "sentence": "Hướng dẫn này sẽ tập trung vào các hình mẫu tích cực cho nam sinh và thách thức “những quan niệm sai lầm về phụ nữ và các mối quan hệ đang lan truyền trên mạng trong ‘thế giới đàn ông’”, đồng thời cảnh báo các trường học không nên “kỳ thị nam sinh vì họ là nam sinh”.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Hướng dẫn này sẽ tập trung vào các hình mẫu tích cực cho nam sinh và thách thức “những quan niệm sai lầm về phụ nữ và các mối quan hệ đang lan truyền trên mạng trong ‘thế giới đàn ông’”, đồng thời cảnh báo các trường học không nên “kỳ thị nam sinh vì họ là nam sinh”.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ “___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ‘___’”, ___ ___ ___ ___ ___ “___ ___ ___ ___ ___ ___”",
     "blanks": [
         { "answer": "It" },
         { "answer": "will" },
@@ -976,7 +976,7 @@
         { "answer": "boys" },
         { "answer": "and" },
         { "answer": "challenge" },
-        { "answer": "“myths" },
+        { "answer": "myths" },
         { "answer": "about" },
         { "answer": "women" },
         { "answer": "and" },
@@ -987,25 +987,25 @@
         { "answer": "online" },
         { "answer": "in" },
         { "answer": "the" },
-        { "answer": "‘manosphere’”," },
+        { "answer": "manosphere" },
         { "answer": "but" },
         { "answer": "will" },
         { "answer": "warn" },
         { "answer": "schools" },
         { "answer": "against" },
-        { "answer": "“stigmatising" },
+        { "answer": "stigmatising" },
         { "answer": "boys" },
         { "answer": "for" },
         { "answer": "being" },
-        { "answer": "boys”" }
+        { "answer": "boys" }
     ],
-    "words": ["women", "role", "include", "It", "about", "“stigmatising", "“myths", "spread", "a", "positive", "models", "new", "but", "for", "and", "for", "warn", "‘manosphere’”,", "focus", "will", "online", "and", "on", "challenge", "in", "schools", "against", "boys", "boys", "relationships", "the", "being", "are", "that", "boys”", "will"]
+    "words": ["women", "role", "include", "It", "about", "stigmatising", "myths", "spread", "a", "positive", "models", "new", "but", "for", "and", "for", "warn", "manosphere", "focus", "will", "online", "and", "on", "challenge", "in", "schools", "against", "boys", "boys", "relationships", "the", "being", "are", "that", "boys", "will"]
 },
 
 {
     "id": 49,
     "audio": "",
-    "sentence": "Hướng dẫn cập nhật này được đưa ra ngay sau bộ phim truyền hình Adolescence của Netflix, bộ phim đã gây ra làn sóng phản đối dữ dội trên toàn quốc từ các bậc phụ huynh, nhà giáo dục và các nhà hoạch định chính sách với hình ảnh một cậu bé 13 tuổi bị bắt vì tội giết một bạn nữ cùng lớp.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Hướng dẫn cập nhật này được đưa ra ngay sau bộ phim truyền hình Adolescence của Netflix, bộ phim đã gây ra làn sóng phản đối dữ dội trên toàn quốc từ các bậc phụ huynh, nhà giáo dục và các nhà hoạch định chính sách với hình ảnh một cậu bé 13 tuổi bị bắt vì tội giết một bạn nữ cùng lớp.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
     "blanks": [
         { "answer": "The" },
         { "answer": "updated" },
@@ -1019,14 +1019,14 @@
         { "answer": "the" },
         { "answer": "Netflix" },
         { "answer": "drama" },
-        { "answer": "Adolescence," },
+        { "answer": "Adolescence" },
         { "answer": "which" },
         { "answer": "triggered" },
         { "answer": "a" },
         { "answer": "national" },
         { "answer": "outcry" },
         { "answer": "from" },
-        { "answer": "parents," },
+        { "answer": "parents" },
         { "answer": "educators" },
         { "answer": "and" },
         { "answer": "policymakers" },
@@ -1054,7 +1054,7 @@
 {
     "id": 50,
     "audio": "",
-    "sentence": "Hướng dẫn này cũng trùng khớp với dữ liệu mới do Bộ Giáo dục (DfE) công bố, cho thấy thái độ kỳ thị phụ nữ ở trường trung học đang ở “mức độ dịch bệnh”.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Hướng dẫn này cũng trùng khớp với dữ liệu mới do Bộ Giáo dục (DfE) công bố, cho thấy thái độ kỳ thị phụ nữ ở trường trung học đang ở “mức độ dịch bệnh”.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ “___ ___”",
     "blanks": [
         { "answer": "It" },
         { "answer": "also" },
@@ -1070,7 +1070,7 @@
         { "answer": "Department" },
         { "answer": "for" },
         { "answer": "Education" },
-        { "answer": "(DfE)," },
+        { "answer": "(DfE)" },
         { "answer": "which" },
         { "answer": "it" },
         { "answer": "shows" },
@@ -1082,21 +1082,21 @@
         { "answer": "are" },
         { "answer": "at" },
         { "answer": "an" },
-        { "answer": "“epidemic" },
-        { "answer": "scale”" }
+        { "answer": "epidemic" },
+        { "answer": "scale" }
     ],
-    "words": ["new", "misogynistic", "also", "at", "(DfE),", "coincides", "are", "shows", "at", "data", "school", "to", "It", "be", "by", "it", "attitudes", "the", "scale”", "Department", "with", "published", "which", "Education", "secondary", "“epidemic", "for", "an"]
+    "words": ["new", "misogynistic", "also", "at", "(DfE)", "coincides", "are", "shows", "at", "data", "school", "to", "It", "be", "by", "it", "attitudes", "the", "scale", "Department", "with", "published", "which", "Education", "secondary", "epidemic", "for", "an"]
 },
 
 {
     "id": 51,
     "audio": "",
-    "sentence": "Theo Bộ Giáo dục Anh (DfE), hơn một nửa số học sinh (54%) trong độ tuổi 11-19 tham gia khảo sát cho biết chỉ riêng trong tuần qua, các em đã nghe những bình luận mà các em cho là kỳ thị phụ nữ, trong khi hơn một phần ba (37%) đã nghe những bình luận khiến các em lo ngại về sự an toàn của các em gái.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Theo Bộ Giáo dục Anh (DfE), hơn một nửa số học sinh (54%) trong độ tuổi 11-19 tham gia khảo sát cho biết chỉ riêng trong tuần qua, các em đã nghe những bình luận mà các em cho là kỳ thị phụ nữ, trong khi hơn một phần ba (37%) đã nghe những bình luận khiến các em lo ngại về sự an toàn của các em gái.<br>___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
     "blanks": [
         { "answer": "According" },
         { "answer": "to" },
         { "answer": "the" },
-        { "answer": "DfE," },
+        { "answer": "DfE" },
         { "answer": "more" },
         { "answer": "than" },
         { "answer": "half" },
@@ -1125,7 +1125,7 @@
         { "answer": "the" },
         { "answer": "last" },
         { "answer": "week" },
-        { "answer": "alone," },
+        { "answer": "alone" },
         { "answer": "while" },
         { "answer": "more" },
         { "answer": "than" },
@@ -1145,7 +1145,7 @@
         { "answer": "of" },
         { "answer": "girls" }
     ],
-    "words": ["heard", "had", "them", "week", "a", "concerned", "would", "describe", "half", "the", "took", "pupils", "about", "to", "in", "11-19", "of", "who", "the", "last", "According", "that", "they", "in", "more", "made", "alone,", "as", "(54%)", "survey", "girls", "said", "had", "while", "heard", "third", "comments", "of", "aged", "DfE,", "part", "safety", "they", "the", "than", "misogynistic", "comments", "(37%)", "the", "more", "than"]
+    "words": ["heard", "had", "them", "week", "a", "concerned", "would", "describe", "half", "the", "took", "pupils", "about", "to", "in", "11-19", "of", "who", "the", "last", "According", "that", "they", "in", "more", "made", "alone", "as", "(54%)", "survey", "girls", "said", "had", "while", "heard", "third", "comments", "of", "aged", "DfE", "part", "safety", "they", "the", "than", "misogynistic", "comments", "(37%)", "the", "more", "than"]
 },
 
 
