@@ -41,11 +41,11 @@
     },
       {
         "id": 6,
-        "title": "第六课（一)：我学习汉语",
-        "description": "Lesson 6 (1): I study Chinese",
-        "thumbnail": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734941454/hyjc-1-6-1_ga8j9u.png",
-        "videoLink": "https://www.youtube.com/embed/d84tgGgLcX0?si=ju2cuO6VtSO7ubYg",
-        "htmlLink": "posts.html?postStartId=10&postEndId=20&quizStartId=17&quizEndId=23&id=6"
+        "title": "A worrying increase in cancers of the digestive system",
+        "description": "HEALTH",
+        "thumbnail": "",
+        "videoLink": "",
+        "htmlLink": "task2.html?postStartId=42&postEndId=46&quizStartId=47&quizEndId=51&id=6&id2=8"
     },
       {
         "id": 7,
