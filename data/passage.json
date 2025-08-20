@@ -96,5 +96,17 @@
             "The comprehensive review, which is published in The British Journal of Surgery, suggests that, while the exact cause is unknown, environmental factors, diet and lifestyle, may be responsible for the increase.",
             "Anton Bilchik, surgical oncologist, suggested some possible reasons for the rise in early-onset GI cancers."
         ]
+    },
+    {
+        "id": 9,
+        "title": "Amazon has reportedly laid off several hundred employees",
+        "imageSrc": "",
+        "content": [
+            "Amazon has reportedly laid off several hundred employees from its cloud computing division, Amazon Web Services (AWS), as part of a restructuring effort.",
+            "The layoffs primarily impacted specialist teams that help customers design and implement AWS services, reports Reuters.",
+            "Employees affected by the layoffs were notified on Thursday (July 17) morning.",
+            "Several reported being locked out of company systems shortly after receiving email notifications, with little warning in advance.",
+            "This round of layoffs reflects a wider trend across Amazon under CEO Andy Jassy."
+        ]
     }
 ]
