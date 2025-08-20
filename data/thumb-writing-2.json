@@ -49,10 +49,10 @@
     },
       {
         "id": 7,
-        "title": "第六课（二)：这是什么书？",
-        "description": "Lesson 6 (2): What book is this?",
-        "thumbnail": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734941442/hyjc-1-6-2_xxbwoz.png",
-        "videoLink": "https://www.youtube.com/embed/MpPAY0yn8RQ?si=mmBk2DjeRT8amQcm",
-        "htmlLink": "posts.html?postStartId=21&postEndId=32&quizStartId=24&quizEndId=38&id=7"
+        "title": "Amazon has reportedly laid off several hundred employees",
+        "description": "TECHNOLOGY",
+        "thumbnail": "",
+        "videoLink": "",
+        "htmlLink": "task2.html?postStartId=47&postEndId=51&quizStartId=52&quizEndId=56&id=7&id2=9"
     }
 ]
