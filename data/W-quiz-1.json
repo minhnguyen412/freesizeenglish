@@ -1334,34 +1334,132 @@
     ],
     "words": ["early-onset", "some", "Bilchik", "oncologist", "surgical", "for", "rise", "cancers", "in", "possible", "reasons", "the", "Anton", "suggested", "GI"]
 },
+{
+    "id": 57,
+    "audio": "",
+    "sentence": "Amazon được cho là đã sa thải hàng trăm nhân viên khỏi bộ phận điện toán đám mây, Amazon Web Services (AWS), như một phần của nỗ lực tái cấu trúc.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___, ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Amazon" },
+        { "answer": "has" },
+        { "answer": "reportedly" },
+        { "answer": "laid" },
+        { "answer": "off" },
+        { "answer": "several" },
+        { "answer": "hundred" },
+        { "answer": "employees" },
+        { "answer": "from" },
+        { "answer": "its" },
+        { "answer": "cloud" },
+        { "answer": "computing" },
+        { "answer": "division" },
+        { "answer": "Amazon" },
+        { "answer": "Web" },
+        { "answer": "Services" },
+        { "answer": "(AWS)" },
+        { "answer": "as" },
+        { "answer": "part" },
+        { "answer": "of" },
+        { "answer": "a" },
+        { "answer": "restructuring" },
+        { "answer": "effort" }
+    ],
+    "words": ["cloud", "Amazon", "Web", "division", "as", "Amazon", "effort", "a", "Services", "of", "from", "its", "restructuring", "off", "has", "(AWS)", "hundred", "laid", "several", "reportedly", "part", "employees", "computing"]
+},
 
+{
+    "id": 58,
+    "audio": "",
+    "sentence": "Việc sa thải này chủ yếu ảnh hưởng đến các nhóm chuyên gia giúp khách hàng thiết kế và triển khai các dịch vụ AWS, theo Reuters.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "layoffs" },
+        { "answer": "primarily" },
+        { "answer": "impacted" },
+        { "answer": "specialist" },
+        { "answer": "teams" },
+        { "answer": "that" },
+        { "answer": "help" },
+        { "answer": "customers" },
+        { "answer": "design" },
+        { "answer": "and" },
+        { "answer": "implement" },
+        { "answer": "AWS" },
+        { "answer": "services" },
+        { "answer": "reports" },
+        { "answer": "Reuters" }
+    ],
+    "words": ["layoffs", "specialist", "AWS", "services", "teams", "help", "reports", "and", "customers", "impacted", "The", "implement", "primarily", "Reuters", "that", "design"]
+},
 
-        {
-            "id":71,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673250/%E5%93%A5%E5%93%A5_t3w2af.mp3",
-            "sentence": "哥哥: ___",
-            "blanks": [
-                { "answer": "gēge" }
-            ],
-            "words": ["gege", "gège", "gége", "gēge"]
-        },
-        {
-            "id":72,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673269/%E5%A6%B9%E5%A6%B9_fm9pax.mp3",
-            "sentence": "mèimei: ___",
-            "blanks": [
-                { "answer": "妹妹" }
-            ],
-            "words": ["妈妈", "妹妹", "弟弟", "哥哥"]
-        },
-        {
-            "id":73,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673281/%E5%BC%9F%E5%BC%9F_taqkox.mp3",
-            "sentence": "dìdi: ___",
-            "blanks": [
-                { "answer": "弟弟" }
-            ],
-            "words": ["爸爸", "妹妹", "弟弟", "哥哥"]
-        }
+{
+    "id": 59,
+    "audio": "",
+    "sentence": "Những nhân viên bị ảnh hưởng bởi đợt sa thải này đã được thông báo vào sáng thứ Năm (17 tháng 7).<br>___ ___ ___ ___ ___ ___ ___ ___ ___ (___ ___) ___",
+    "blanks": [
+        { "answer": "Employees" },
+        { "answer": "affected" },
+        { "answer": "by" },
+        { "answer": "the" },
+        { "answer": "layoffs" },
+        { "answer": "were" },
+        { "answer": "notified" },
+        { "answer": "on" },
+        { "answer": "Thursday" },
+        { "answer": "July" },
+        { "answer": "17" },
+        { "answer": "morning" }
+    ],
+    "words": ["17", "by", "notified", "July", "Employees", "on", "were", "Thursday", "affected", "layoffs", "the", "morning"]
+},
+
+{
+    "id": 60,
+    "audio": "",
+    "sentence": "Một số người cho biết họ đã bị khóa khỏi hệ thống của công ty ngay sau khi nhận được thông báo qua email, mà không được báo trước.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Several" },
+        { "answer": "reported" },
+        { "answer": "being" },
+        { "answer": "locked" },
+        { "answer": "out" },
+        { "answer": "of" },
+        { "answer": "company" },
+        { "answer": "systems" },
+        { "answer": "shortly" },
+        { "answer": "after" },
+        { "answer": "receiving" },
+        { "answer": "email" },
+        { "answer": "notifications" },
+        { "answer": "with" },
+        { "answer": "little" },
+        { "answer": "warning" },
+        { "answer": "in" },
+        { "answer": "advance" }
+    ],
+    "words": ["systems", "out", "being", "after", "reported", "in", "email", "shortly", "with", "little", "Several", "of", "advance", "notifications", "receiving", "warning", "company", "locked"]
+},
+
+{
+    "id": 61,
+    "audio": "",
+    "sentence": "Đợt sa thải này phản ánh xu hướng rộng hơn trên toàn Amazon dưới thời CEO Andy Jassy.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "This" },
+        { "answer": "round" },
+        { "answer": "of" },
+        { "answer": "layoffs" },
+        { "answer": "reflects" },
+        { "answer": "a" },
+        { "answer": "wider" },
+        { "answer": "trend" },
+        { "answer": "across" },
+        { "answer": "Amazon" },
+        { "answer": "under" },
+        { "answer": "CEO" },
+        { "answer": "Andy" },
+        { "answer": "Jassy" }
+    ],
+    "words": ["a", "CEO", "layoffs", "under", "round", "of", "reflects", "Andy", "trend", "across", "Jassy", "This", "wider", "Amazon"]
+}
     ]
 }
