@@ -406,5 +406,45 @@
         "highlight": ["some possible reasons"],
         "description": "ˈænˌtɔn Bilchik, ˈsɜrʤɪkəl ɑŋˈkɑləʤɪst, səɡˈʤɛstɪd sʌm ˈpɑsəbəl ˈrizənz fɔr ðə raɪz ɪn ˈɜrli-ˈɑnˌsɛt ʤi-aɪ ˈkænsərz.<br>Anton Bilchik, bác sĩ phẫu thuật ung thư, đã đề xuất một số lý do có thể dẫn đến sự gia tăng ung thư đường tiêu hóa khởi phát sớm.", 
         "audioSrc": ""
+    },
+    {
+        "id": 52, 
+        "title": "Amazon has reportedly laid off several hundred employees from its cloud computing division, Amazon Web Services (AWS), as part of a restructuring effort.",
+        "segments": ["Amazon has ", "reportedly", " laid off several hundred employees from its cloud computing division, Amazon Web Services (AWS), as part of a ", "restructuring effort", "."],
+        "highlight": ["reportedly", "restructuring effort"],
+        "description": "ˈæməˌzɑn hæz rɪˈpɔrtədli leɪd ɔf ˈsɛvrəl ˈhʌndrɪd ɛmˈplɔɪiz frʌm ɪts klaʊd kəmˈpjutɪŋ dɪˈvɪʒən, ˈæməˌzɑn wɛb ˈsɜrvəsəz (eɪ-ˈdʌbəlju-ɛs), æz pɑrt ʌv ə riˈstrʌkʧərɪŋ ˈɛfərt.<br>Amazon được cho là đã sa thải hàng trăm nhân viên khỏi bộ phận điện toán đám mây, Amazon Web Services (AWS), như một phần của nỗ lực tái cấu trúc.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 53, 
+        "title": "The layoffs primarily impacted specialist teams that help customers design and implement AWS services, reports Reuters.",
+        "segments": ["The layoffs ", "primarily impacted", " specialist teams that help customers design and implement AWS services, reports Reuters."],
+        "highlight": ["primarily impacted"],
+        "description": "ðə ˈleɪˌɔfs praɪˈmɛrəli ˈɪmˌpæktɪd ˈspɛʃələst timz ðæt hɛlp ˈkʌstəmərz dɪˈzaɪn ænd ˈɪmpləmənt eɪ-ˈdʌbəlju-ɛs ˈsɜrvəsəz, rɪˈpɔrts ˈrɔɪtərz.<br> Việc sa thải này chủ yếu ảnh hưởng đến các nhóm chuyên gia giúp khách hàng thiết kế và triển khai các dịch vụ AWS, theo Reuters.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 54, 
+        "title": "Employees affected by the layoffs were notified on Thursday (July 17) morning.",
+        "segments": ["Employees affected by the layoffs were ", "notified", " on Thursday (July 17) morning."],
+        "highlight": ["notified"],
+        "description": "ɛmˈplɔɪiz əˈfɛktɪd baɪ ðə ˈleɪˌɔfs wɜr ˈnoʊtəˌfaɪd ɑn ˈθɜrzˌdeɪ (ˌʤuˈlaɪ 17) ˈmɔrnɪŋ.<br>Những nhân viên bị ảnh hưởng bởi đợt sa thải này đã được thông báo vào sáng thứ Năm (17 tháng 7).", 
+        "audioSrc": ""
+    },
+    {
+        "id": 55, 
+        "title": "Several reported being locked out of company systems shortly after receiving email notifications, with little warning in advance.",
+        "segments": ["Several reported being locked out of company systems shortly after receiving email notifications, ", "with little warning in advance", "."],
+        "highlight": ["with little warning in advance"],
+        "description": "ˈsɛvrəl ˌriˈpɔrtəd ˈbiɪŋ lɑkt aʊt ʌv ˈkʌmpəni ˈsɪstəmz ˈʃɔrtli ˈæftər rəˈsivɪŋ iˈmeɪl ˌnoʊtəfəˈkeɪʃənz, wɪð ˈlɪtəl ˈwɔrnɪŋ ɪn ədˈvæns.<br>Một số người cho biết họ đã bị khóa khỏi hệ thống của công ty ngay sau khi nhận được thông báo qua email, mà không được báo trước.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 56, 
+        "title": "This round of layoffs reflects a wider trend across Amazon under CEO Andy Jassy.",
+        "segments": ["This round of layoffs ", "reflects a wider trend across", " Amazon under CEO Andy Jassy."],
+        "highlight": ["reflects a wider trend across"],
+        "description": "ðɪs raʊnd ʌv ˈleɪˌɔfs rɪˈflɛkts ə ˈwaɪdər trɛnd əˈkrɔs ˈæməˌzɑn ˈʌndər si-i-oʊ ˈændi Jassy.<br>Đợt sa thải này phản ánh xu hướng rộng hơn trên toàn Amazon dưới thời CEO Andy Jassy.", 
+        "audioSrc": ""
     }
 ]
