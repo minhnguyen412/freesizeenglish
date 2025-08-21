@@ -1460,6 +1460,146 @@
         { "answer": "Jassy" }
     ],
     "words": ["a", "CEO", "layoffs", "under", "round", "of", "reflects", "Andy", "trend", "across", "Jassy", "This", "wider", "Amazon"]
+},
+        {
+    "id": 62,
+    "audio": "",
+    "sentence": "Nhiều người sẽ ngạc nhiên khi biết rằng ngay cả trong giới ngân hàng, nhà kinh tế và nhà hoạch định chính sách, cũng không có sự hiểu biết chung về cách thức tạo ra tiền mới.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___, ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Many" },
+        { "answer": "people" },
+        { "answer": "would" },
+        { "answer": "be" },
+        { "answer": "surprised" },
+        { "answer": "to" },
+        { "answer": "learn" },
+        { "answer": "that" },
+        { "answer": "even" },
+        { "answer": "among" },
+        { "answer": "bankers" },
+        { "answer": "economists" },
+        { "answer": "and" },
+        { "answer": "policymakers" },
+        { "answer": "there" },
+        { "answer": "is" },
+        { "answer": "no" },
+        { "answer": "common" },
+        { "answer": "understanding" },
+        { "answer": "of" },
+        { "answer": "how" },
+        { "answer": "new" },
+        { "answer": "money" },
+        { "answer": "is" },
+        { "answer": "created" }
+    ],
+    "words": ["Many", "to", "policymakers", "how", "created", "money", "is", "learn", "is", "bankers", "even", "no", "surprised", "among", "people", "of", "there", "and", "be", "understanding", "new", "that", "would", "economists", "common"]
+},
+
+{
+    "id": 63,
+    "audio": "",
+    "sentence": "Thứ nhất, nếu không có sự hiểu biết này, các nỗ lực cải cách ngân hàng dễ thất bại hơn.<br>___, ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "First" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "absence" },
+        { "answer": "of" },
+        { "answer": "this" },
+        { "answer": "understanding" },
+        { "answer": "attempts" },
+        { "answer": "at" },
+        { "answer": "banking" },
+        { "answer": "reform" },
+        { "answer": "are" },
+        { "answer": "more" },
+        { "answer": "likely" },
+        { "answer": "to" },
+        { "answer": "fail" }
+    ],
+    "words": ["this", "banking", "to", "fail", "reform", "of", "absence", "at", "are", "more", "in", "attempts", "the", "understanding", "likely", "First"]
+},
+
+{
+    "id": 64,
+    "audio": "",
+    "sentence": "Thứ hai, việc tạo ra tiền mới và phân bổ sức mua là một chức năng kinh tế quan trọng và mang lại lợi nhuận cao.<br>___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Second" },
+        { "answer": "the" },
+        { "answer": "creation" },
+        { "answer": "of" },
+        { "answer": "new" },
+        { "answer": "money" },
+        { "answer": "and" },
+        { "answer": "the" },
+        { "answer": "allocation" },
+        { "answer": "of" },
+        { "answer": "purchasing" },
+        { "answer": "power" },
+        { "answer": "are" },
+        { "answer": "a" },
+        { "answer": "vital" },
+        { "answer": "economic" },
+        { "answer": "function" },
+        { "answer": "and" },
+        { "answer": "highly" },
+        { "answer": "profitable" }
+    ],
+    "words": ["new", "vital", "the", "purchasing", "are", "money", "creation", "of", "profitable", "the", "Second", "and", "function", "highly", "a", "economic", "and", "of", "power", "allocation"]
+},
+
+{
+    "id": 65,
+    "audio": "",
+    "sentence": "Do đó, đây là vấn đề được công chúng quan tâm đáng kể chứ không phải là một cuộc tranh luận mơ hồ mang tính kỹ trị.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "This" },
+        { "answer": "is" },
+        { "answer": "therefore" },
+        { "answer": "a" },
+        { "answer": "matter" },
+        { "answer": "of" },
+        { "answer": "significant" },
+        { "answer": "public" },
+        { "answer": "interest" },
+        { "answer": "and" },
+        { "answer": "not" },
+        { "answer": "an" },
+        { "answer": "obscure" },
+        { "answer": "technocratic" },
+        { "answer": "debate" }
+    ],
+    "words": ["public", "an", "not", "therefore", "is", "interest", "technocratic", "significant", "obscure", "a", "This", "matter", "of", "and", "debate"]
+},
+
+{
+    "id": 66,
+    "audio": "",
+    "sentence": "Việc làm rõ ràng và minh bạch hơn về vấn đề này có thể cải thiện cả tính chính danh dân chủ của hệ thống ngân hàng lẫn triển vọng kinh tế của chúng ta.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Greater" },
+        { "answer": "clarity" },
+        { "answer": "and" },
+        { "answer": "transparency" },
+        { "answer": "about" },
+        { "answer": "this" },
+        { "answer": "could" },
+        { "answer": "improve" },
+        { "answer": "both" },
+        { "answer": "the" },
+        { "answer": "democratic" },
+        { "answer": "legitimacy" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "banking" },
+        { "answer": "system" },
+        { "answer": "and" },
+        { "answer": "our" },
+        { "answer": "economic" },
+        { "answer": "prospects" }
+    ],
+    "words": ["banking", "could", "prospects", "this", "clarity", "system", "both", "transparency", "the", "Greater", "and", "democratic", "our", "improve", "legitimacy", "the", "and", "economic", "of", "about"]
 }
     ]
 }
