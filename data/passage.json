@@ -108,5 +108,17 @@
             "Several reported being locked out of company systems shortly after receiving email notifications, with little warning in advance.",
             "This round of layoffs reflects a wider trend across Amazon under CEO Andy Jassy."
         ]
+    },
+    {
+        "id": 10,
+        "title": "How new money is created",
+        "imageSrc": "",
+        "content": [
+            "Many people would be surprised to learn that even among bankers, economists, and policymakers, there is no common understanding of how new money is created.",
+            "First, in the absence of this understanding, attempts at banking reform are more likely to fail.",
+            "Second, the creation of new money and the allocation of purchasing power are a vital economic function and highly profitable.",
+            "This is therefore a matter of significant public interest and not an obscure technocratic debate.",
+            "Greater clarity and transparency about this could improve both the democratic legitimacy of the banking system and our economic prospects."
+        ]
     }
 ]
