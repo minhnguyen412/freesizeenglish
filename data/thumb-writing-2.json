@@ -54,5 +54,13 @@
         "thumbnail": "",
         "videoLink": "",
         "htmlLink": "task2.html?postStartId=52&postEndId=56&quizStartId=57&quizEndId=61&id=7&id2=9"
+    },
+    {
+        "id": 8,
+        "title": "How new money is created",
+        "description": "ECONOMY",
+        "thumbnail": "",
+        "videoLink": "",
+        "htmlLink": "task2.html?postStartId=56&postEndId=60&quizStartId=62&quizEndId=66&id=8&id2=10"
     }
 ]
