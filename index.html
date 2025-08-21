@@ -423,45 +423,49 @@
     });
   </script>
   <script>
-    async function loadThumbnails(containerId, jsonPath, startId, endId) {
-      const container = document.getElementById(containerId);
-      try {
-        const response = await fetch(jsonPath);
-        const data = await response.json();
-        // Lọc dữ liệu theo ID từ startId đến endId
-        const filteredData = data.filter(item => item.id >= startId && item.id <= endId);
-        filteredData.forEach(item => {
-          // Tạo thẻ div cho mỗi thumbnail
-          const thumbnail = document.createElement('div');
-          thumbnail.className = 'thumbnail';
-          // Nội dung HTML của thumbnail
-          thumbnail.innerHTML = `
-              <a href="${item.htmlLink}">
-                  <img src="${item.thumbnail}" alt="${item.title} Thumbnail">
-                  <div class="info">
-                      <h4>${item.title}</h4>
-                      <p>${item.description}</p>
-                  </div>
-             </a>
-          `;
-          // Thêm thumbnail vào container
-          container.appendChild(thumbnail);
-        });
-      } catch (error) {
-        console.error('Error fetching JSON data:', error);
-        container.innerHTML = '<p>Failed to load thumbnails.</p>';
-      }
-    }
+  async function loadThumbnails(containerId, jsonPath, startId = 1, endId = null) {
+    const container = document.getElementById(containerId);
+    try {
+      const response = await fetch(jsonPath);
+      const data = await response.json();
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Gọi hàm loadThumbnails với các tham số khác nhau cho mỗi container
-     
-      loadThumbnails('thumbnails-container-3', 'data/thumb-book.json', 1, 3);
-      loadThumbnails('thumbnails-container-4', 'data/thumb-writing.json', 1, 3);
-      loadThumbnails('thumbnails-container-5', 'data/thumb-writing-2.json');
-    });
-  </script>
+      // Nếu có endId thì lọc theo khoảng, nếu không thì lấy từ startId đến hết
+      const filteredData = data.filter(item => {
+        if (endId) {
+          return item.id >= startId && item.id <= endId;
+        } else {
+          return item.id >= startId;
+        }
+      });
+
+      filteredData.forEach(item => {
+        const thumbnail = document.createElement('div');
+        thumbnail.className = 'thumbnail';
+        thumbnail.innerHTML = `
+          <a href="${item.htmlLink}">
+            <img src="${item.thumbnail}" alt="${item.title} Thumbnail">
+            <div class="info">
+              <h4>${item.title}</h4>
+              <p>${item.description || ""}</p>
+            </div>
+          </a>
+        `;
+        container.appendChild(thumbnail);
+      });
+    } catch (error) {
+      console.error('Error fetching JSON data:', error);
+      container.innerHTML = '<p>Failed to load thumbnails.</p>';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadThumbnails('thumbnails-container-3', 'data/thumb-book.json', 1, 3);
+    loadThumbnails('thumbnails-container-4', 'data/thumb-writing.json', 1, 3);
+    loadThumbnails('thumbnails-container-5', 'data/thumb-writing-2.json', 1); // load từ 1 đến hết
+  });
+</script>
 </body>
 </html>
+
 
 
