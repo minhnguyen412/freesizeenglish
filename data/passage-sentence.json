@@ -446,5 +446,45 @@
         "highlight": ["reflects a wider trend across"],
         "description": "ðɪs raʊnd ʌv ˈleɪˌɔfs rɪˈflɛkts ə ˈwaɪdər trɛnd əˈkrɔs ˈæməˌzɑn ˈʌndər si-i-oʊ ˈændi Jassy.<br>Đợt sa thải này phản ánh xu hướng rộng hơn trên toàn Amazon dưới thời CEO Andy Jassy.", 
         "audioSrc": ""
+    },
+    {
+        "id": 57, 
+        "title": "Many people would be surprised to learn that even among bankers, economists, and policymakers, there is no common understanding of how new money is created.",
+        "segments": ["Many people would be surprised to learn that even among bankers, economists, and policymakers, there is no ", "common understanding", " of how new money is created."],
+        "highlight": ["common understanding"],
+        "description": "ˈmɛni ˈpipəl wʊd bi sərˈpraɪzd tu lɜrn ðæt ˈivɪn əˈmʌŋ ˈbæŋkərz, ɪˈkɑnəmɪsts, ænd ˈpɑləsiˌmeɪkərz, ðɛr ɪz noʊ ˈkɑmən ˌʌndərˈstændɪŋ ʌv haʊ nu ˈmʌni ɪz kriˈeɪtɪd.<br>Nhiều người sẽ ngạc nhiên khi biết rằng ngay cả trong giới ngân hàng, nhà kinh tế và nhà hoạch định chính sách, cũng không có sự hiểu biết chung về cách thức tạo ra tiền mới.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 58, 
+        "title": "First, in the absence of this understanding, attempts at banking reform are more likely to fail.",
+        "segments": ["First, ", "in the absence of this understanding", ", ", "attempts at", " banking reform ", "are more likely to", " fail."],
+        "highlight": ["in the absence of this understanding", "attempts at", "are more likely to"],
+        "description": "fɜrst, ɪn ði ˈæbsəns ʌv ðɪs ˌʌndərˈstændɪŋ, əˈtɛmpts æt ˈbæŋkɪŋ riˈfɔrm ɑr mɔr ˈlaɪkli tu feɪl.<br>Thứ nhất, nếu không có sự hiểu biết này, các nỗ lực cải cách ngân hàng dễ thất bại hơn.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 59, 
+        "title": "Second, the creation of new money and the allocation of purchasing power are a vital economic function and highly profitable.",
+        "segments": ["Second, the creation of new money and the ", "allocation", " of purchasing power are a ", "vital", " economic function and ", "highly profitable", "."],
+        "highlight": ["allocation", "vital", "highly profitable"],
+        "description": "ˈsɛkənd, ðə kriˈeɪʃən ʌv nu ˈmʌni ænd ði ˌæləˈkeɪʃən ʌv ˈpɜrʧəsɪŋ ˈpaʊər ɑr ə ˈvaɪtəl ˌɛkəˈnɑmɪk ˈfʌŋkʃən ænd ˈhaɪli ˈprɑfətəbəl.<br>Thứ hai, việc tạo ra tiền mới và phân bổ sức mua là một chức năng kinh tế quan trọng và mang lại lợi nhuận cao.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 60, 
+        "title": "This is therefore a matter of significant public interest and not an obscure technocratic debate.",
+        "segments": ["This is ", "therefore", " a matter of ", "significant public interest", " and not an ", "obscure", " technocratic debate."],
+        "highlight": ["therefore", "significant public interest", "obscure"],
+        "description": "ðɪs ɪz ˈðɛrˌfɔr ə ˈmætər ʌv səɡˈnɪfɪkənt ˈpʌblɪk ˈɪntrəst ænd nɑt ən əbˈskjʊr ˌtɛknəˈkrætɪk dəˈbeɪt.<br>Do đó, đây là vấn đề được công chúng quan tâm đáng kể chứ không phải là một cuộc tranh luận mơ hồ mang tính kỹ trị.", 
+        "audioSrc": ""
+    },
+    {
+        "id": 61, 
+        "title": "Greater clarity and transparency about this could improve both the democratic legitimacy of the banking system and our economic prospects.",
+        "segments": ["Greater clarity and transparency", " about this could improve both the democratic legitimacy of the banking system and our economic prospects."],
+        "highlight": ["Greater clarity and transparency"],
+        "description": "ˈɡreɪtər ˈklɛrəti ænd trænˈspɛrənsi əˈbaʊt ðɪs kʊd ɪmˈpruv boʊθ ðə ˌdɛməˈkrætɪk ləˈʤɪtəməsi ʌv ðə ˈbæŋkɪŋ ˈsɪstəm ænd ˈaʊər ˌɛkəˈnɑmɪk ˈprɑspɛkts.<br>Việc làm rõ ràng và minh bạch hơn về vấn đề này có thể cải thiện cả tính chính danh dân chủ của hệ thống ngân hàng lẫn triển vọng kinh tế của chúng ta.", 
+        "audioSrc": ""
     }
 ]
