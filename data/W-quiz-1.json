@@ -1754,6 +1754,126 @@
         { "answer": "denied" }
     ],
     "words": ["Decades", "a", "to", "charge", "Britain", "after", "criminalised", "believed", "he", "denied", "people", "was", "slavery", "up", "in", "40", "enslaved", "widely", "to", "he", "own", "was"]
-}
+},
+        {
+    "id": 72,
+    "audio": "",
+    "sentence": "Rối loạn lo âu xã hội là một bệnh tâm thần phổ biến, bao gồm lo âu xã hội thường xuyên và sợ bị phán xét.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Social" },
+        { "answer": "anxiety" },
+        { "answer": "disorder" },
+        { "answer": "is" },
+        { "answer": "a" },
+        { "answer": "prevalent" },
+        { "answer": "mental" },
+        { "answer": "illness" },
+        { "answer": "involving" },
+        { "answer": "frequent" },
+        { "answer": "social" },
+        { "answer": "anxiety" },
+        { "answer": "and" },
+        { "answer": "fear" },
+        { "answer": "of" },
+        { "answer": "judgment" }
+    ],
+    "words": ["of", "fear", "and", "a", "is", "anxiety", "frequent", "illness", "mental", "Social", "prevalent", "anxiety", "social", "involving", "disorder", "judgment"]
+},
+
+{
+    "id": 73,
+    "audio": "",
+    "sentence": "Người mắc chứng rối loạn lo âu xã hội thường được phân loại là nhút nhát, khép kín, thờ ơ hoặc không thân thiện.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___, ___, ___ ___",
+    "blanks": [
+        { "answer": "People" },
+        { "answer": "with" },
+        { "answer": "social" },
+        { "answer": "anxiety" },
+        { "answer": "disorder" },
+        { "answer": "are" },
+        { "answer": "often" },
+        { "answer": "classified" },
+        { "answer": "as" },
+        { "answer": "shy" },
+        { "answer": "withdrawn" },
+        { "answer": "indifferent" },
+        { "answer": "or" },
+        { "answer": "unfriendly" }
+    ],
+    "words": ["shy", "with", "indifferent", "or", "unfriendly", "as", "social", "disorder", "classified", "are", "withdrawn", "People", "often", "anxiety"]
+},
+
+{
+    "id": 74,
+    "audio": "",
+    "sentence": "Tuy nhiên, những định kiến ​​này có thể làm giảm đi nỗi sợ hãi cốt lõi và các hành vi đằng sau tình trạng này.<br>___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "However" },
+        { "answer": "these" },
+        { "answer": "stereotypes" },
+        { "answer": "can" },
+        { "answer": "detract" },
+        { "answer": "from" },
+        { "answer": "the" },
+        { "answer": "core" },
+        { "answer": "fear" },
+        { "answer": "and" },
+        { "answer": "behaviors" },
+        { "answer": "behind" },
+        { "answer": "the" },
+        { "answer": "condition" }
+    ],
+    "words": ["from", "these", "However", "detract", "behaviors", "and", "fear", "the", "condition", "the", "can", "core", "stereotypes", "behind"]
+},
+
+{
+    "id": 75,
+    "audio": "",
+    "sentence": "Nếu bạn sống trong nỗi sợ bị phán xét, bạn có thể đang gặp phải các triệu chứng của rối loạn lo âu xã hội.<br>___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "If" },
+        { "answer": "you" },
+        { "answer": "live" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "fear" },
+        { "answer": "of" },
+        { "answer": "being" },
+        { "answer": "judged" },
+        { "answer": "you" },
+        { "answer": "might" },
+        { "answer": "be" },
+        { "answer": "experiencing" },
+        { "answer": "symptoms" },
+        { "answer": "of" },
+        { "answer": "social" },
+        { "answer": "anxiety" },
+        { "answer": "disorder" }
+    ],
+    "words": ["might", "live", "of", "of", "you", "be", "a", "with", "you", "symptoms", "being", "judged", "social", "If", "anxiety", "fear", "disorder", "experiencing"]
+},
+
+{
+    "id": 76,
+    "audio": "",
+    "sentence": "Bạn có thể học cách đối phó với những triệu chứng này và tìm thấy hy vọng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It" },
+        { "answer": "is" },
+        { "answer": "possible" },
+        { "answer": "to" },
+        { "answer": "learn" },
+        { "answer": "how" },
+        { "answer": "to" },
+        { "answer": "cope" },
+        { "answer": "with" },
+        { "answer": "these" },
+        { "answer": "symptoms" },
+        { "answer": "and" },
+        { "answer": "find" },
+        { "answer": "hope" }
+    ],
+    "words": ["learn", "possible", "to", "hope", "cope", "to", "how", "It", "is", "find", "symptoms", "and", "with", "these"]
+},
     ]
 }
