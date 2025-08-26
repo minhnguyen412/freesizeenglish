@@ -10,18 +10,18 @@
     {
         "id": 2,
         "title": "The Emerging Adulthood",
-        "description": "News/Articles",
+        "description": "SOCIETY",
         "thumbnail": "",
         "videoLink": "https://www.youtube.com/embed/VIDEO_ID_1",
         "htmlLink": "task1.html?postStartId=27&postEndId=31&quizStartId=32&quizEndId=36&id=2&id2=4"
     },
     {
         "id": 3,
-        "title": "第三课：明天见!",
-        "description": "Lesson 3: See you tomorrow!",
-        "thumbnail": "https://storage.googleapis.com/script60s/THUMBNAILS/WRITE-T1-min.png",
-        "videoLink": "https://www.youtube.com/embed/VIDEO_ID_1",
-        "htmlLink": "posts.html?postStartId=39&postEndId=47&quizStartId=1&quizEndId=16&id=3"
+        "title": "Liver cancer is the sixth most common cancer in the world",
+        "description": "HEALTH",
+        "thumbnail": "",
+        "videoLink": "",
+        "htmlLink": "task1.html?postStartId=27&postEndId=31&quizStartId=32&quizEndId=36&id=3&id2=14"
     },
       {
         "id": 4,
