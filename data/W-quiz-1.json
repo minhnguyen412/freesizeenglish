@@ -2086,6 +2086,157 @@
         { "answer": "worse" }
     ],
     "words": ["fiction", "and", "are", "in", "to", "distinguish", "that", "the", "school", "get", "further", "to", "vile", "making", "issues", "encouraging", "or", "that", "they", "once", "themselves", "to", "So", "in", "content", "old", "sure", "young", "from", "worse", "fact", "kids", "children", "reject", "trades", "harm", "going", "around", "we’re", "tools", "enough", "the", "and", "self-harm", "understand", "suicide", "in", "secondary"]
+},
+        {
+    "id": 82,
+    "audio": "",
+    "sentence": "Ung thư gan là loại ung thư phổ biến thứ sáu trên thế giới, với khoảng 870.000 ca mắc vào năm 2022.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Liver" },
+        { "answer": "cancer" },
+        { "answer": "is" },
+        { "answer": "the" },
+        { "answer": "sixth" },
+        { "answer": "most" },
+        { "answer": "common" },
+        { "answer": "cancer" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "world" },
+        { "answer": "with" },
+        { "answer": "around" },
+        { "answer": "870,000" },
+        { "answer": "cases" },
+        { "answer": "in" },
+        { "answer": "2022" }
+    ],
+    "words": ["2022", "most", "world", "sixth", "around", "cases", "with", "in", "Liver", "the", "cancer", "is", "cancer", "the", "870,000", "common", "in"]
+},
+
+{
+    "id": 83,
+    "audio": "",
+    "sentence": "Báo cáo mới cho thấy con số này dự kiến sẽ tăng lên 1,52 triệu ca vào năm 2050 nếu không có thay đổi nào.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___, ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "That’s" },
+        { "answer": "projected" },
+        { "answer": "to" },
+        { "answer": "increase" },
+        { "answer": "to" },
+        { "answer": "152" },
+        { "answer": "million" },
+        { "answer": "cases" },
+        { "answer": "in" },
+        { "answer": "2050" },
+        { "answer": "the" },
+        { "answer": "new" },
+        { "answer": "report" },
+        { "answer": "found" },
+        { "answer": "if" },
+        { "answer": "no" },
+        { "answer": "changes" },
+        { "answer": "are" },
+        { "answer": "made" }
+    ],
+    "words": ["the", "no", "cases", "2050", "That’s", "million", "projected", "made", "if", "report", "to", "new", "in", "are", "to", "152", "changes", "increase", "found"]
+},
+
+{
+    "id": 84,
+    "audio": "",
+    "sentence": "Nguyên nhân hàng đầu gây ung thư gan là nhiễm virus, bao gồm virus viêm gan B và C.<br>___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "leading" },
+        { "answer": "cause" },
+        { "answer": "of" },
+        { "answer": "liver" },
+        { "answer": "cancer" },
+        { "answer": "is" },
+        { "answer": "viral" },
+        { "answer": "infections," },
+        { "answer": "including" },
+        { "answer": "the" },
+        { "answer": "hepatitis" },
+        { "answer": "B" },
+        { "answer": "and" },
+        { "answer": "C" },
+        { "answer": "viruses" }
+    ],
+    "words": ["infections", "cancer", "of", "The", "leading", "C", "cause", "liver", "viruses", "including", "hepatitis", "B", "and", "viral", "the", "is"]
+},
+
+{
+    "id": 85,
+    "audio": "",
+    "sentence": "Nhiễm virus viêm gan B - có thể phòng ngừa bằng vắc-xin - chiếm 39% ung thư gan vào năm 2022.<br>___ ___ ___ - ___ ___ ___ ___ ___ ___ - ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Hepatitis" },
+        { "answer": "B" },
+        { "answer": "infections" },
+        { "answer": "which" },
+        { "answer": "are" },
+        { "answer": "preventable" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "vaccine" },
+        { "answer": "accounted" },
+        { "answer": "for" },
+        { "answer": "39%" },
+        { "answer": "of" },
+        { "answer": "liver" },
+        { "answer": "cancers" },
+        { "answer": "in" },
+        { "answer": "2022" }
+    ],
+    "words": ["2022", "vaccine", "infections", "accounted", "B", "with", "a", "cancers", "for", "which", "of", "in", "Hepatitis", "liver", "39%", "are", "preventable"]
+},
+
+{
+    "id": 86,
+    "audio": "",
+    "sentence": "Con số này dự kiến sẽ giảm nhẹ xuống còn 36,9% vào năm 2025.<br>___ ___ ___ ___ ___, ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "That’s" },
+        { "answer": "expected" },
+        { "answer": "to" },
+        { "answer": "fall" },
+        { "answer": "slightly" },
+        { "answer": "to" },
+        { "answer": "36.9%," },
+        { "answer": "by" },
+        { "answer": "2025" }
+    ],
+    "words": ["by", "fall", "to", "slightly", "2025", "That’s", "to", "36.9%,", "expected"]
+},
+
+{
+    "id": 87,
+    "audio": "",
+    "sentence": "Viêm gan C chiếm 29,1% ung thư gan vào năm 2022 và cũng dự kiến sẽ giảm xuống còn 25,9% vào năm 2050.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Hepatitis" },
+        { "answer": "C" },
+        { "answer": "accounted" },
+        { "answer": "for" },
+        { "answer": "29.1%" },
+        { "answer": "of" },
+        { "answer": "liver" },
+        { "answer": "cancers" },
+        { "answer": "in" },
+        { "answer": "2022" },
+        { "answer": "and" },
+        { "answer": "is" },
+        { "answer": "also" },
+        { "answer": "projected" },
+        { "answer": "to" },
+        { "answer": "fall," },
+        { "answer": "to" },
+        { "answer": "25.9%," },
+        { "answer": "by" },
+        { "answer": "2050" }
+    ],
+    "words": ["also", "25.9%,", "2022", "is", "fall,", "in", "and", "to", "to", "Hepatitis", "C", "29.1%", "2050", "for", "cancers", "accounted", "projected", "of", "by", "liver"]
 }
     ]
 }
