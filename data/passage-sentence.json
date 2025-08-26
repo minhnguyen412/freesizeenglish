@@ -606,5 +606,53 @@
         "highlight": ["going further", "around", "distinguish", "vile content"],
         "description": "soʊ wir ˈɡoʊɪŋ ˈfɜrðər ɪn ˈmeɪkɪŋ ʃʊr ðæt wʌns ˈʧɪldrən ɑr oʊld ɪˈnʌf tu ˌʌndərˈstænd ˈɪʃuz əˈraʊnd sɛlf-hɑrm ænd ˈsuəˌsaɪd ɪn ˈsɛkənˌdɛri skul, ðeɪ ɡɛt ðə tulz tu dɪˈstɪŋɡwɪʃ fækt frʌm ˈfɪkʃən, ænd ˈriʤɛkt ðə vaɪl ˈkɑntɛnt ðæt treɪdz ɪn ɛnˈkɜrɪʤɪŋ jʌŋ kɪdz tu hɑrm ðɛmˈsɛlvz ɔr wɜrs.<br>Vì vậy, chúng tôi sẽ tiến xa hơn nữa để đảm bảo rằng khi trẻ em đủ lớn để hiểu các vấn đề liên quan đến tự gây hại và tự tử ở trường trung học, các em sẽ có được các công cụ để phân biệt sự thật với hư cấu, và từ chối những nội dung đồi trụy khuyến khích trẻ nhỏ tự làm hại bản thân hoặc tệ hơn.",
         "audioSrc": ""
+    },
+    {
+        "id": 77, 
+        "title": "Liver cancer is the sixth most common cancer in the world, with around 870,000 cases in 2022.",
+        "segments": ["Liver cancer is ", "the sixth most common", " cancer in the world, with around 870,000 cases in 2022."],
+        "highlight": ["the sixth most common"],
+        "description": "ˈlɪvər ˈkænsər ɪz ðə sɪksθ moʊst ˈkɑmən ˈkænsər ɪn ðə wɜrld, wɪð əˈraʊnd 870,000 ˈkeɪsəz ɪn 2022.<br>Ung thư gan là loại ung thư phổ biến thứ sáu trên thế giới, với khoảng 870.000 ca mắc vào năm 2022.",
+        "audioSrc": ""
+    },
+    {
+        "id": 78, 
+        "title": "That’s projected to increase to 1.52 million cases in 2050, the new report found, if no changes are made.",
+        "segments": ["That’s ", "projected to", " increase to 1.52 million cases in 2050, the new report found, ", "if no changes are made"],
+        "highlight": ["projected to", "if no changes are made"],
+        "description": "ðæts prəˈʤɛktəd tu ɪnˈkris tu 1.52 ˈmɪljən ˈkeɪsəz ɪn 2050, ðə nu rɪˈpɔrt faʊnd, ɪf noʊ ˈʧeɪnʤəz ɑr meɪd.<br>Báo cáo mới cho thấy con số này dự kiến sẽ tăng lên 1,52 triệu ca vào năm 2050 nếu không có thay đổi nào.",
+        "audioSrc": ""
+    },
+    
+        "id": 79, 
+        "title": "The leading cause of liver cancer is viral infections, including the hepatitis B and C viruses.",
+        "segments": ["The leading cause of", " liver cancer is viral infections, including the hepatitis B and C viruses."],
+        "highlight": ["The leading cause of"],
+        "description": "ðə ˈlidɪŋ kɑz ʌv ˈlɪvər ˈkænsər ɪz ˈvaɪrəl ɪnˈfɛkʃənz, ɪnˈkludɪŋ ðə ˌhɛpəˈtaɪtəs bi ænd si ˈvaɪrəsəz. <br>Nguyên nhân hàng đầu gây ung thư gan là nhiễm virus, bao gồm virus viêm gan B và C.",
+        "audioSrc": ""
+    },
+    {
+        "id": 80, 
+        "title": "Hepatitis B infections — which are preventable with a vaccine — accounted for 39% of liver cancers in 2022.",
+        "segments": ["Hepatitis B infections — which are preventable with a vaccine — ", "accounted for", " 39% of liver cancers in 2022."],
+        "highlight": ["accounted for"],
+        "description": "hɛpəˈtaɪtəs bi ɪnˈfɛkʃənz — wɪʧ ɑr prɪˈvɛntəbəl wɪð ə ˌvækˈsin — əˈkaʊntəd fɔr 39% ʌv ˈlɪvər ˈkænsərz ɪn 2022. <br>Nhiễm virus viêm gan B - có thể phòng ngừa bằng vắc-xin - chiếm 39% ung thư gan vào năm 2022.",
+        "audioSrc": ""
+    },
+    {
+        "id": 81, 
+        "title": "That’s expected to fall slightly, to 36.9%, by 2025.",
+        "segments": ["That’s expected to", " fall slightly, to 36.9%, by 2025."],
+        "highlight": ["That’s expected to"],
+        "description": "ðæts ɪkˈspɛktɪd tu fɔl ˈslaɪtli, tu 36.9%, baɪ 2025.<br>Con số này dự kiến sẽ giảm nhẹ xuống còn 36,9% vào năm 2025.",
+        "audioSrc": ""
+    },
+    {
+        "id": 82, 
+        "title": "Hepatitis C accounted for 29.1% of liver cancers in 2022 and is also projected to fall, to 25.9%, by 2050.",
+        "segments": ["Hepatitis C ", "accounted for", " 29.1% of liver cancers in 2022 and ", "is also projected to", " fall, to 25.9%, by 2050."],
+        "highlight": ["accounted for", "is also projected to"],
+        "description": "ˌhɛpəˈtaɪtəs si əˈkaʊntəd fɔr 29.1% ʌv ˈlɪvər ˈkænsərz ɪn 2022 ænd ɪz ˈɔlsoʊ prəˈʤɛktəd tu fɔl, tu 25.9%, baɪ 2050.<br>Viêm gan C chiếm 29,1% ung thư gan vào năm 2022 và cũng dự kiến sẽ giảm xuống còn 25,9% vào năm 2050.",
+        "audioSrc": ""
     }
 ]
