@@ -2241,12 +2241,12 @@
         {
     "id": 88,
     "audio": "",
-    "sentence": "Nhà sản xuất chip AI Nvidia (NVDA.O), động lực chủ đạo đằng sau đợt tăng giá của chỉ số S&P 500 (.SPX), kể từ năm 2023, dự kiến ​​sẽ công bố thu nhập quý 2 vào thứ Tư sau khi thị trường Mỹ đóng cửa.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Nhà sản xuất chip AI Nvidia (NVDA.O), động lực chủ đạo đằng sau đợt tăng giá của chỉ số S&P 500 (.SPX), kể từ năm 2023, dự kiến ​​sẽ công bố thu nhập quý 2 vào thứ Tư sau khi thị trường Mỹ đóng cửa.<br>___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
     "blanks": [
         { "answer": "AI" },
         { "answer": "chipmaker" },
         { "answer": "Nvidia" },
-        { "answer": "(NVDA.O)," },
+        { "answer": "(NVDA.O)" },
         { "answer": "the" },
         { "answer": "dominating" },
         { "answer": "force" },
@@ -2274,7 +2274,7 @@
         { "answer": "market" },
         { "answer": "close" }
     ],
-    "words": ["US", "AI", "earnings", "in", "500", "after", "close", "is", "dominating", "second-quarter", "the", "2023", "the", "report", "index", "to", "on", "behind", "force", "(.SPX)", "Nvidia", "since", "(NVDA.O),", "rally", "chipmaker", "market", "the", "S&P", "Wednesday", "set"]
+    "words": ["US", "AI", "earnings", "in", "500", "after", "close", "is", "dominating", "second-quarter", "the", "2023", "the", "report", "index", "to", "on", "behind", "force", "(.SPX)", "Nvidia", "since", "(NVDA.O)", "rally", "chipmaker", "market", "the", "S&P", "Wednesday", "set"]
 },
 
 {
