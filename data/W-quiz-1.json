@@ -2246,7 +2246,7 @@
         { "answer": "AI" },
         { "answer": "chipmaker" },
         { "answer": "Nvidia" },
-        { "answer": "(NVDAO)" },
+        { "answer": "NVDA.O" },
         { "answer": "the" },
         { "answer": "dominating" },
         { "answer": "force" },
@@ -2258,7 +2258,7 @@
         { "answer": "S&P" },
         { "answer": "500" },
         { "answer": "index" },
-        { "answer": "(SPX)" },
+        { "answer": ".SPX" },
         { "answer": "since" },
         { "answer": "2023" },
         { "answer": "is" },
@@ -2274,7 +2274,7 @@
         { "answer": "market" },
         { "answer": "close" }
     ],
-    "words": ["US", "AI", "earnings", "in", "500", "after", "close", "is", "dominating", "second-quarter", "the", "2023", "the", "report", "index", "to", "on", "behind", "force", "(SPX)", "Nvidia", "since", "(NVDAO)", "rally", "chipmaker", "market", "the", "S&P", "Wednesday", "set"]
+    "words": ["US", "AI", "earnings", "in", "500", "after", "close", "is", "dominating", "second-quarter", "the", "2023", "the", "report", "index", "to", "on", "behind", "force", ".SPX", "Nvidia", "since", "NVDA.O", "rally", "chipmaker", "market", "the", "S&P", "Wednesday", "set"]
 },
 
 {
