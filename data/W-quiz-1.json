@@ -2280,7 +2280,7 @@
 {
     "id": 89,
     "audio": "",
-    "sentence": "Phố Wall đang nín thở và sẽ xem xét kỹ lưỡng các bình luận của công ty để tìm kiếm dấu hiệu chậm lại.<br>___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Phố Wall đang nín thở và sẽ xem xét kỹ lưỡng các bình luận của công ty để tìm kiếm dấu hiệu chậm lại. ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
     "blanks": [
         { "answer": "Wall" },
         { "answer": "Street" },
