@@ -2241,7 +2241,7 @@
         {
     "id": 88,
     "audio": "",
-    "sentence": "Nhà sản xuất chip AI Nvidia (NVDA.O), động lực chủ đạo đằng sau đợt tăng giá của chỉ số S&P 500 (.SPX), kể từ năm 2023, dự kiến ​​sẽ công bố thu nhập quý 2 vào thứ Tư sau khi thị trường Mỹ đóng cửa.<br>___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "sentence": "Nhà sản xuất chip AI Nvidia (NVDA.O), động lực chủ đạo đằng sau đợt tăng giá của chỉ số S&P 500 (.SPX), kể từ năm 2023, dự kiến ​​sẽ công bố thu nhập quý 2 vào thứ Tư sau khi thị trường Mỹ đóng cửa. ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
     "blanks": [
         { "answer": "AI" },
         { "answer": "chipmaker" },
