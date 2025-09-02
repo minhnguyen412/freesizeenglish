@@ -2704,7 +2704,7 @@
 {
     "id": 101,
     "audio": "",
-    "sentence": "Hai đặc tính đặc trưng của tất cả các kích thích gây nghiện là chúng mang tính củng cố (làm tăng khả năng một người sẽ tìm cách tiếp xúc lặp lại với chúng) và mang tính bổ ích nội tại (chúng được coi là tích cực, đáng mong muốn và thú vị).<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ (___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___) ___ ___ ___ (___ ___ ___ ___ ___ ___ ___, ___, ___ ___",
+    "sentence": "Hai đặc tính đặc trưng của tất cả các kích thích gây nghiện là chúng mang tính củng cố (làm tăng khả năng một người sẽ tìm cách tiếp xúc lặp lại với chúng) và mang tính bổ ích nội tại (chúng được coi là tích cực, đáng mong muốn và thú vị).<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ (___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___) ___ ___ ___ (___ ___ ___ ___ ___ ___ ___, ___, ___ ___)",
     "blanks": [
         { "answer": "The" },
         { "answer": "two" },
@@ -2744,7 +2744,7 @@
         { "answer": "positive" },
         { "answer": "desirable" },
         { "answer": "and" },
-        { "answer": "pleasurable)" }
+        { "answer": "pleasurable" }
     ],
     "words": ["stimuli", "pleasurable", "that", "properties", "positive", "and", "characterize", "person", "a", "repeated", "desirable", "perceived", "rewarding", "are", "increase", "will", "intrinsically", "likelihood", "The", "addictive", "as", "them", "to", "seek", "inherently", "the", "and", "reinforcing", "they", "two", "being", "all", "exposure", "are", "that", "are", "they", "they", "that"]
 },
