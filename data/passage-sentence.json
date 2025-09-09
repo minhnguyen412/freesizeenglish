@@ -760,7 +760,7 @@
         "audioSrc": ""
     },
     {
-        "id": 96, 
+        "id": 96,
         "title": "The two properties that characterize all addictive stimuli are that they are reinforcing (they increase the likelihood that a person will seek repeated exposure to them) and intrinsically rewarding (they are perceived as being inherently positive, desirable, and pleasurable).",
         "segments": ["The two properties that characterize all addictive stimuli ", "are that", " they are reinforcing (they ", "increase the likelihood that", " a person will seek repeated exposure to them) and ", "intrinsically rewarding", " (they are ", "perceived as", " being ", "inherently", " positive, desirable, and pleasurable)."],
         "highlight": ["are that", "increase the likelihood that", "intrinsically rewarding", "perceived as", "inherently"],
@@ -768,11 +768,51 @@
         "audioSrc": ""
     },
     {
-        "id": 97, 
+        "id": 97,
         "title": "There are four major chemicals in the brain that influence brain happiness: dopamine, oxytocin, serotonin and endorphins.",
         "segments": ["There are four major chemicals in the brain that influence brain happiness: dopamine, oxytocin, serotonin and endorphins."],
         "highlight": [""],
         "description": "ðɛr ɑr fɔr ˈmeɪʤər ˈkɛmɪkəlz ɪn ðə breɪn ðæt ˈɪnfluəns breɪn ˈhæpinəs: ˈdoʊpəˌmin, ˌɑksəˈtoʊsən, sərəˈtoʊnɪn ænd ɛnˈdɔrfɪnz.<br>Có bốn chất hóa học chính trong não ảnh hưởng đến hạnh phúc của não: dopamine, oxytocin, serotonin và endorphin.",
+        "audioSrc": ""
+    },
+    {
+        "id": 98,
+        "title": "Getting enough quality sleep every night is important for good health.",
+        "segments": ["Getting enough quality sleep every night is important for good health."],
+        "highlight": [""],
+        "description": "ˈɡɛtɪŋ ɪˈnʌf ˈkwɑləti slip ˈɛvəri naɪt ɪz ɪmˈpɔrtənt fɔr ɡʊd hɛlθ.<br>Ngủ đủ giấc, chất lượng mỗi đêm rất quan trọng cho sức khỏe tốt.",
+        "audioSrc": ""
+    },
+    {
+        "id": 99,
+        "title": "However, some people may still be unclear about what “quality sleep” entails and what impact sleep really has on their health.",
+        "segments": ["However, some people may still be unclear about what “quality sleep” ", "entails", " and what impact sleep ", "really has", " on their health."],
+        "highlight": ["entails", "really has"],
+        "description": "ˌhaʊˈɛvər, sʌm ˈpipəl meɪ stɪl bi ənˈklɪr əˈbaʊt wɑt “ˈkwɑləti slip” ɪnˈteɪlz ænd wɑt ˈɪmpækt slip ˈrɪli hæz ɑn ðɛr hɛlθ.<br> Tuy nhiên, một số người vẫn chưa rõ "giấc ngủ chất lượng" bao gồm những gì và giấc ngủ thực sự ảnh hưởng như thế nào đến sức khỏe của họ.",
+        "audioSrc": ""
+    },
+    {
+        "id": 100,
+        "title": "For this study, researchers analyzed medical data from more than 88,000 adults in the UK Biobankdatabase to measure both their sleep traits and disease diagnoses.",
+        "segments": ["For this study, researchers analyzed medical data from more than 88,000 adults in the UK Biobankdatabase ", "to measure both", " their sleep traits and disease diagnoses."],
+        "highlight": ["to measure both"],
+        "description": "fɔr ðɪs ˈstʌdi, ˈrisərʧərz ˈænəˌlaɪzd ˈmɛdəkəl ˈdeɪtə frʌm mɔr ðæn 88,000 əˈdʌlts ɪn ðə ju-keɪ Biobankdatabase tu ˈmɛʒər boʊθ ðɛr slip treɪts ænd dɪˈziz ˌdaɪəɡˈnoʊsiz.<br>Trong nghiên cứu này, các nhà nghiên cứu đã phân tích dữ liệu y tế từ hơn 88.000 người trưởng thành trong cơ sở dữ liệu Biobank của Anh để đo lường cả đặc điểm giấc ngủ và chẩn đoán bệnh của họ.",
+        "audioSrc": ""
+    },
+    {
+        "id": 101,
+        "title": "After an average 7-year follow-up, researchers associated 172 diseases with poor sleep patterns, including irregular bedtimes and off-circadian rhythms.",
+        "segments": ["After ", "an average 7-year follow-up", ", researchers ", "associated 172 diseases with", " ", "poor sleep patterns", ", including ", "irregular bedtimes", " and ", "off-circadian rhythms", "."],
+        "highlight": ["an average 7-year follow-up", "associated 172 diseases with", "poor sleep patterns", "irregular bedtimes", "off-circadian rhythms"],
+        "description": "ˈæftər ən ˈævərɪʤ 7-jɪr ˈfɑloʊˌʌp, ˈrisərʧərz əˈsoʊsiˌeɪtəd 172 dɪˈzizəz wɪð pʊr slip ˈpætərnz, ɪnˈkludɪŋ ɪˈrɛɡjələr ˈbɛdˌtaɪmz ænd ɔf-sərˈkeɪdiən ˈrɪðəmz.<br>Sau thời gian theo dõi trung bình 7 năm, các nhà nghiên cứu đã tìm thấy mối liên hệ giữa 172 bệnh với thói quen ngủ kém, bao gồm giờ đi ngủ không đều và nhịp sinh học không ổn định.",
+        "audioSrc": ""
+    },
+    {
+        "id": 102,
+        "title": "Chen and his team also discovered that 92 of the 172 diseases had more than 20% of their risk traceable to poor sleep, including dementia, primary hypertension, Parkinson’s disease, type 2 diabetes, and acute kidney failure.",
+        "segments": ["Chen and his team also discovered that 92 of the 172 diseases had more than 20% of their risk ", "traceable to", " poor sleep, including dementia, primary hypertension, Parkinson’s disease, type 2 diabetes, and acute kidney failure."],
+        "highlight": [""],
+        "description": "ʧɛn ænd hɪz tim ˈɔlsoʊ dɪˈskʌvərd ðæt 92 ʌv ði 172 dɪˈzizəz hæd mɔr ðæn 20% ʌv ðɛr rɪsk ˈtreɪsəbəl tu pʊr slip, ɪnˈkludɪŋ dɪˈmɛnʃiə, ˈpraɪˌmɛri ˌhaɪpərˈtɛnʃən, ˈpɑrkɪnsənz dɪˈziz, taɪp 2 ˌdaɪəˈbitiz, ænd əˈkjut ˈkɪdni ˈfeɪljər.<br>Chen và nhóm của ông cũng phát hiện ra rằng 92 trong số 172 bệnh có hơn 20% nguy cơ bắt nguồn từ giấc ngủ kém, bao gồm chứng mất trí nhớ, tăng huyết áp nguyên phát, bệnh Parkinson, tiểu đường tuýp 2 và suy thận cấp.",
         "audioSrc": ""
     }
 ]
