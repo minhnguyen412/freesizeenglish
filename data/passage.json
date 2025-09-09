@@ -205,5 +205,17 @@
             "The two properties that characterize all addictive stimuli are that they are reinforcing (they increase the likelihood that a person will seek repeated exposure to them) and intrinsically rewarding (they are perceived as being inherently positive, desirable, and pleasurable).",
             "There are four major chemicals in the brain that influence brain happiness: dopamine, oxytocin, serotonin and endorphins."
         ]
+    },
+    {
+        "id": 18,
+        "title": "Getting enough quality sleep every night",
+        "imageSrc": "",
+        "content": [
+            "Getting enough quality sleep every night is important for good health.",
+            "However, some people may still be unclear about what “quality sleep” entails and what impact sleep really has on their health.",
+            "For this study, researchers analyzed medical data from more than 88,000 adults in the UK Biobankdatabase to measure both their sleep traits and disease diagnoses.",
+            "After an average 7-year follow-up, researchers associated 172 diseases with poor sleep patterns, including irregular bedtimes and off-circadian rhythms.",
+            "Chen and his team also discovered that 92 of the 172 diseases had more than 20% of their risk traceable to poor sleep, including dementia, primary hypertension, Parkinson’s disease, type 2 diabetes, and acute kidney failure."
+        ]
     }
 ]
