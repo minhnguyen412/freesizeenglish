@@ -814,5 +814,45 @@
         "highlight": ["traceable to"],
         "description": "ʧɛn ænd hɪz tim ˈɔlsoʊ dɪˈskʌvərd ðæt 92 ʌv ði 172 dɪˈzizəz hæd mɔr ðæn 20% ʌv ðɛr rɪsk ˈtreɪsəbəl tu pʊr slip, ɪnˈkludɪŋ dɪˈmɛnʃiə, ˈpraɪˌmɛri ˌhaɪpərˈtɛnʃən, ˈpɑrkɪnsənz dɪˈziz, taɪp 2 ˌdaɪəˈbitiz, ænd əˈkjut ˈkɪdni ˈfeɪljər.<br>Chen và nhóm của ông cũng phát hiện ra rằng 92 trong số 172 bệnh có hơn 20% nguy cơ bắt nguồn từ giấc ngủ kém, bao gồm chứng mất trí nhớ, tăng huyết áp nguyên phát, bệnh Parkinson, tiểu đường tuýp 2 và suy thận cấp.",
         "audioSrc": ""
+    },
+    {
+        "id": 103,
+        "title": "In recent years, Jassy has pushed to make the company leaner and more efficient, with a particular emphasis on removing unnecessary layers of management.",
+        "segments": ["In recent years, Jassy ", "has pushed to", " make the company ", "leaner", " and more efficient, ", "with a particular emphasis on", " removing unnecessary layers of management."],
+        "highlight": ["has pushed to", "leaner", "with a particular emphasis on"],
+        "description": "ɪn ˈrisənt jɪrz, Jassy hæz pʊʃt tu meɪk ðə ˈkʌmpəni ˈlinər ænd mɔr ɪˈfɪʃənt, wɪð ə pərˈtɪkjələr ˈɛmfəsəs ɑn riˈmuvɪŋ ənˈnɛsəˌsɛri ˈleɪərz ʌv ˈmænəʤmənt.<br>Trong những năm gần đây, Jassy đã thúc đẩy việc tinh gọn và hiệu quả hơn của công ty, đặc biệt chú trọng đến việc loại bỏ các lớp quản lý không cần thiết.",
+        "audioSrc": ""
+    },
+    {
+        "id": 104,
+        "title": "Even he recently spoke about the growing role of generative AI within Amazon.",
+        "segments": ["Even he recently spoke about ", "the growing role of", " generative AI within Amazon."],
+        "highlight": ["the growing role of"],
+        "description": "ˈivɪn hi ˈrisəntli spoʊk əˈbaʊt ðə ˈɡroʊɪŋ roʊl ʌv ˈʤɛnərətɪv aɪ wɪˈðɪn ˈæməˌzɑn.<br>Thậm chí gần đây ông còn nói về vai trò ngày càng tăng của AI tạo sinh trong Amazon.",
+        "audioSrc": ""
+    },
+    {
+        "id": 105,
+        "title": "Jassy stated that AI would gradually replace some corporate roles to improve efficiency.",
+        "segments": ["Jassy stated that AI would gradually replace some ", "corporate roles", " to ", "improve efficiency", "."],
+        "highlight": ["corporate roles", "improve efficiency"],
+        "description": "Jassy ˈsteɪtɪd ðæt aɪ wʊd ˈɡræʤuəli ˌriˈpleɪs sʌm ˈkɔrpərət roʊlz tu ɪmˈpruv ɪˈfɪʃənsi.<br>Jassy tuyên bố rằng AI sẽ dần thay thế một số vai trò trong công ty để cải thiện hiệu quả.",
+        "audioSrc": ""
+    },
+    {
+        "id": 106,
+        "title": "However, the statement drew backlash from employees who were concerned about potential job losses.",
+        "segments": ["However, the statement ", "drew backlash from", " employees who were concerned about potential job losses."],
+        "highlight": ["drew backlash from"],
+        "description": "ˌhaʊˈɛvər, ðə ˈsteɪtmənt dru ˈbæˌklæʃ frʌm ɛmˈplɔɪiz hu wɜr kənˈsɜrnd əˈbaʊt pəˈtɛnʃəl ʤɑb ˈlɔsəz.<br>Tuy nhiên, tuyên bố này đã vấp phải sự phản đối từ các nhân viên lo ngại về khả năng mất việc.",
+        "audioSrc": ""
+    },
+    {
+        "id": 107,
+        "title": "According to the report, the company assured that it is offering support to employees affected by the layoffs.",
+        "segments": ["According to the report, the company ", "assured that", " it is offering support to employees affected by the layoffs."],
+        "highlight": ["assured that"],
+        "description": "əˈkɔrdɪŋ tu ðə rɪˈpɔrt, ðə ˈkʌmpəni əˈʃʊrd ðæt ɪt ɪz ˈɔfərɪŋ səˈpɔrt tu ɛmˈplɔɪiz əˈfɛktɪd baɪ ðə ˈleɪˌɔfs.<br>Theo báo cáo, công ty đảm bảo rằng họ sẽ hỗ trợ những nhân viên bị ảnh hưởng bởi đợt sa thải.",
+        "audioSrc": ""
     }
 ]
