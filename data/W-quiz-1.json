@@ -2929,6 +2929,132 @@
         { "answer": "failure" }
     ],
     "words": ["and", "discovered", "sleep", "and", "172", "hypertension", "diseases", "his", "dementia", "including", "had", "the", "more", "disease", "92", "of", "type", "than", "poor", "kidney", "Parkinson’s", "also", "to", "traceable", "failure", "their", "diabetes", "risk", "acute", "team", "of", "primary", "that", "Chen", "2", "20%"]
+},
+        {
+    "id": 108,
+    "audio": "",
+    "sentence": "Trong những năm gần đây, Jassy đã thúc đẩy việc tinh gọn và hiệu quả hơn của công ty, đặc biệt chú trọng đến việc loại bỏ các lớp quản lý không cần thiết.<br>___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "In" },
+        { "answer": "recent" },
+        { "answer": "years" },
+        { "answer": "Jassy" },
+        { "answer": "has" },
+        { "answer": "pushed" },
+        { "answer": "to" },
+        { "answer": "make" },
+        { "answer": "the" },
+        { "answer": "company" },
+        { "answer": "leaner" },
+        { "answer": "and" },
+        { "answer": "more" },
+        { "answer": "efficient" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "particular" },
+        { "answer": "emphasis" },
+        { "answer": "on" },
+        { "answer": "removing" },
+        { "answer": "unnecessary" },
+        { "answer": "layers" },
+        { "answer": "of" },
+        { "answer": "management" }
+    ],
+    "words": ["removing", "more", "recent", "Jassy", "company", "unnecessary", "years", "make", "a", "efficient", "to", "In", "pushed", "management", "particular", "and", "leaner", "layers", "of", "the", "with", "emphasis", "on", "has"]
+},
+
+{
+    "id": 109,
+    "audio": "",
+    "sentence": "Thậm chí gần đây ông còn nói về vai trò ngày càng tăng của AI tạo sinh trong Amazon.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Even" },
+        { "answer": "he" },
+        { "answer": "recently" },
+        { "answer": "spoke" },
+        { "answer": "about" },
+        { "answer": "the" },
+        { "answer": "growing" },
+        { "answer": "role" },
+        { "answer": "of" },
+        { "answer": "generative" },
+        { "answer": "AI" },
+        { "answer": "within" },
+        { "answer": "Amazon" }
+    ],
+    "words": ["of", "growing", "AI", "role", "he", "generative", "about", "spoke", "within", "Even", "the", "recently", "Amazon"]
+},
+
+{
+    "id": 110,
+    "audio": "",
+    "sentence": "Jassy tuyên bố rằng AI sẽ dần thay thế một số vai trò trong công ty để cải thiện hiệu quả.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Jassy" },
+        { "answer": "stated" },
+        { "answer": "that" },
+        { "answer": "AI" },
+        { "answer": "would" },
+        { "answer": "gradually" },
+        { "answer": "replace" },
+        { "answer": "some" },
+        { "answer": "corporate" },
+        { "answer": "roles" },
+        { "answer": "to" },
+        { "answer": "improve" },
+        { "answer": "efficiency" }
+    ],
+    "words": ["AI", "efficiency", "to", "Jassy", "roles", "gradually", "corporate", "stated", "replace", "that", "some", "improve", "would"]
+},
+
+{
+    "id": 111,
+    "audio": "",
+    "sentence": "Tuy nhiên, tuyên bố này đã vấp phải sự phản đối từ các nhân viên lo ngại về khả năng mất việc.<br>___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "However" },
+        { "answer": "the" },
+        { "answer": "statement" },
+        { "answer": "drew" },
+        { "answer": "backlash" },
+        { "answer": "from" },
+        { "answer": "employees" },
+        { "answer": "who" },
+        { "answer": "were" },
+        { "answer": "concerned" },
+        { "answer": "about" },
+        { "answer": "potential" },
+        { "answer": "job" },
+        { "answer": "losses" }
+    ],
+    "words": ["were", "about", "potential", "backlash", "However", "job", "employees", "concerned", "the", "statement", "from", "drew", "losses", "who"]
+},
+
+{
+    "id": 112,
+    "audio": "",
+    "sentence": "Theo báo cáo, công ty đảm bảo rằng họ sẽ hỗ trợ những nhân viên bị ảnh hưởng bởi đợt sa thải.<br>___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "According" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "report" },
+        { "answer": "the" },
+        { "answer": "company" },
+        { "answer": "assured" },
+        { "answer": "that" },
+        { "answer": "it" },
+        { "answer": "is" },
+        { "answer": "offering" },
+        { "answer": "support" },
+        { "answer": "to" },
+        { "answer": "employees" },
+        { "answer": "affected" },
+        { "answer": "by" },
+        { "answer": "the" },
+        { "answer": "layoffs" }
+    ],
+    "words": ["support", "to", "affected", "offering", "According", "company", "layoffs", "it", "the", "that", "the", "report", "employees", "the", "to", "is", "assured", "by"]
 }
     ]
 }
