@@ -3055,6 +3055,178 @@
         { "answer": "layoffs" }
     ],
     "words": ["support", "to", "affected", "offering", "According", "company", "layoffs", "it", "the", "that", "the", "report", "employees", "the", "to", "is", "assured", "by"]
-}
+},
+    {
+    "id": 113,
+    "audio": "",
+    "sentence": "Khi nghe về việc làm giàu, hầu hết mọi người thường nghĩ đến các tỷ phú, biệt thự hay những câu chuyện thành công lan truyền chóng mặt.<br>___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "When" },
+        { "answer": "most" },
+        { "answer": "people" },
+        { "answer": "hear" },
+        { "answer": "about" },
+        { "answer": "building" },
+        { "answer": "wealth" },
+        { "answer": "their" },
+        { "answer": "thoughts" },
+        { "answer": "often" },
+        { "answer": "turn" },
+        { "answer": "to" },
+        { "answer": "billionaires" },
+        { "answer": "mansions" },
+        { "answer": "or" },
+        { "answer": "viral" },
+        { "answer": "success" },
+        { "answer": "stories" }
+    ],
+    "words": ["hear", "When", "most", "turn", "viral", "thoughts", "building", "their", "often", "billionaires", "stories", "mansions", "about", "success", "wealth", "or", "to", "people"]
+},
+
+{
+    "id": 114,
+    "audio": "",
+    "sentence": "Một số ít người tưởng tượng mình đang đánh bại thị trường và theo đuổi các khoản đầu tư rủi ro, trong khi những người khác lại cho rằng sống như một nhà sư trong khoảng 10 năm mới là cách tiếp cận đúng đắn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "A" },
+        { "answer": "select" },
+        { "answer": "few" },
+        { "answer": "imagine" },
+        { "answer": "themselves" },
+        { "answer": "beating" },
+        { "answer": "the" },
+        { "answer": "market" },
+        { "answer": "and" },
+        { "answer": "chasing" },
+        { "answer": "risky" },
+        { "answer": "investments" },
+        { "answer": "while" },
+        { "answer": "others" },
+        { "answer": "think" },
+        { "answer": "that" },
+        { "answer": "living" },
+        { "answer": "like" },
+        { "answer": "a" },
+        { "answer": "monk" },
+        { "answer": "for" },
+        { "answer": "10" },
+        { "answer": "or" },
+        { "answer": "so" },
+        { "answer": "years" },
+        { "answer": "is" },
+        { "answer": "the" },
+        { "answer": "right" },
+        { "answer": "approach" }
+    ],
+    "words": ["like", "think", "others", "is", "A", "monk", "risky", "market", "the", "beating", "the", "that", "living", "investments", "chasing", "approach", "for", "select", "imagine", "or", "a", "years", "few", "10", "themselves", "so", "right", "and", "while"]
+},
+
+{
+    "id": 115,
+    "audio": "",
+    "sentence": "Thực tế, làm giàu không phải là một trong những điều này.<br>___ ___, ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "In" },
+        { "answer": "reality" },
+        { "answer": "building" },
+        { "answer": "wealth" },
+        { "answer": "is" },
+        { "answer": "none" },
+        { "answer": "of" },
+        { "answer": "these" },
+        { "answer": "things" }
+    ],
+    "words": ["none", "things", "these", "of", "reality", "is", "building", "In", "wealth"]
+},
+
+{
+    "id": 116,
+    "audio": "",
+    "sentence": "Về bản chất, làm giàu có nghĩa là tăng giá trị tài sản ròng (tài sản trừ đi nợ) theo thời gian và thực hiện theo cách mang lại cho bạn sự tự do, ổn định và nhiều lựa chọn.<br>___ ___ ___, ___ ___ ___ ___ ___ ___ ___ (___ ___ ___ ___ ___) ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___",
+    "blanks": [
+        { "answer": "At" },
+        { "answer": "its" },
+        { "answer": "core" },
+        { "answer": "building" },
+        { "answer": "wealth" },
+        { "answer": "means" },
+        { "answer": "increasing" },
+        { "answer": "your" },
+        { "answer": "net" },
+        { "answer": "worth" },
+        { "answer": "your" },
+        { "answer": "assets" },
+        { "answer": "minus" },
+        { "answer": "your" },
+        { "answer": "debts" },
+        { "answer": "over" },
+        { "answer": "time" },
+        { "answer": "and" },
+        { "answer": "doing" },
+        { "answer": "it" },
+        { "answer": "in" },
+        { "answer": "a" },
+        { "answer": "way" },
+        { "answer": "that" },
+        { "answer": "gives" },
+        { "answer": "you" },
+        { "answer": "freedom" },
+        { "answer": "stability" },
+        { "answer": "and" },
+        { "answer": "options" }
+    ],
+    "words": ["assets", "At", "in", "freedom", "you", "stability", "options", "it", "and", "building", "time", "net", "doing", "minus", "your", "gives", "debts", "increasing", "your", "its", "over", "that", "core", "means", "way", "worth", "a", "and", "wealth", "your"]
+},
+
+{
+    "id": 117,
+    "audio": "",
+    "sentence": "Sự thịnh vượng về tài chính không phải là thứ ai đó tình cờ gặp được vào một ngày may mắn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Financial" },
+        { "answer": "prosperity" },
+        { "answer": "is" },
+        { "answer": "not" },
+        { "answer": "something" },
+        { "answer": "someone" },
+        { "answer": "stumbles" },
+        { "answer": "upon" },
+        { "answer": "on" },
+        { "answer": "a" },
+        { "answer": "lucky" },
+        { "answer": "day" }
+    ],
+    "words": ["is", "day", "Financial", "prosperity", "lucky", "something", "a", "someone", "on", "upon", "stumbles", "not"]
+},
+
+{
+    "id": 118,
+    "audio": "",
+    "sentence": "Thay vào đó, đó là một quá trình rèn luyện liên tục các thói quen, sử dụng các công cụ thông minh và đưa ra những quyết định thúc đẩy bạn đi đúng hướng.<br>___, ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Instead" },
+        { "answer": "it's" },
+        { "answer": "a" },
+        { "answer": "consistent" },
+        { "answer": "exercise" },
+        { "answer": "of" },
+        { "answer": "developing" },
+        { "answer": "habits" },
+        { "answer": "using" },
+        { "answer": "smart" },
+        { "answer": "tools" },
+        { "answer": "and" },
+        { "answer": "making" },
+        { "answer": "decisions" },
+        { "answer": "that" },
+        { "answer": "push" },
+        { "answer": "you" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "right" },
+        { "answer": "direction" }
+    ],
+    "words": ["exercise", "you", "consistent", "developing", "the", "Instead", "smart", "making", "that", "it's", "a", "of", "and", "push", "in", "using", "decisions", "direction", "right", "tools", "habits"]
+}    
     ]
 }
