@@ -3227,6 +3227,152 @@
         { "answer": "direction" }
     ],
     "words": ["exercise", "you", "consistent", "developing", "the", "Instead", "smart", "making", "that", "it's", "a", "of", "and", "push", "in", "using", "decisions", "direction", "right", "tools", "habits"]
-}    
+},
+        {
+    "id": 119,
+    "audio": "",
+    "sentence": "Con người có nhu cầu công bằng rất lớn.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Human" },
+        { "answer": "beings" },
+        { "answer": "have" },
+        { "answer": "a" },
+        { "answer": "strong" },
+        { "answer": "need" },
+        { "answer": "for" },
+        { "answer": "fairness" }
+    ],
+    "words": ["fairness", "beings", "a", "for", "Human", "need", "strong", "have"]
+},
+
+{
+    "id": 120,
+    "audio": "",
+    "sentence": "Dù lớn hay nhỏ, khi thấy điều gì đó bất công xảy ra (đặc biệt là đối với chính mình), chúng ta đều nổi giận.<br>___ ___ ___, ___ ___ ___ ___ ___ ___ (___ ___ ___), ___ ___ ___",
+    "blanks": [
+        { "answer": "Big" },
+        { "answer": "or" },
+        { "answer": "small" },
+        { "answer": "when" },
+        { "answer": "we" },
+        { "answer": "see" },
+        { "answer": "something" },
+        { "answer": "unfair" },
+        { "answer": "done" },
+        { "answer": "especially" },
+        { "answer": "against" },
+        { "answer": "us" },
+        { "answer": "we" },
+        { "answer": "are" },
+        { "answer": "enraged" }
+    ],
+    "words": ["we", "us", "Big", "done", "enraged", "against", "we", "especially", "when", "small", "unfair", "something", "are", "see", "or"]
+},
+
+{
+    "id": 121,
+    "audio": "",
+    "sentence": "Ngay cả một đứa trẻ ba tuổi cũng có thể hét lên khi nhận được phần ít hơn anh chị em của mình.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Even" },
+        { "answer": "a" },
+        { "answer": "three-year-old" },
+        { "answer": "has" },
+        { "answer": "the" },
+        { "answer": "common" },
+        { "answer": "sense" },
+        { "answer": "to" },
+        { "answer": "scream" },
+        { "answer": "when" },
+        { "answer": "they" },
+        { "answer": "get" },
+        { "answer": "a" },
+        { "answer": "smaller" },
+        { "answer": "portion" },
+        { "answer": "than" },
+        { "answer": "their" },
+        { "answer": "sibling" }
+    ],
+    "words": ["a", "portion", "the", "scream", "sense", "sibling", "Even", "a", "they", "when", "to", "has", "common", "three-year-old", "smaller", "their", "than", "get"]
+},
+
+{
+    "id": 122,
+    "audio": "",
+    "sentence": "Cách chơi trò tối hậu thư hoàn toàn hợp lý là người đầu tiên đưa ra mức tối thiểu và người thứ hai chấp nhận, vì nếu không họ sẽ chẳng nhận được gì, và không thể thương lượng thêm.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "purely" },
+        { "answer": "logical" },
+        { "answer": "way" },
+        { "answer": "to" },
+        { "answer": "play" },
+        { "answer": "the" },
+        { "answer": "ultimatum" },
+        { "answer": "game" },
+        { "answer": "is" },
+        { "answer": "for" },
+        { "answer": "the" },
+        { "answer": "first" },
+        { "answer": "person" },
+        { "answer": "to" },
+        { "answer": "offer" },
+        { "answer": "the" },
+        { "answer": "minimum" },
+        { "answer": "and" },
+        { "answer": "for" },
+        { "answer": "the" },
+        { "answer": "second" },
+        { "answer": "person" },
+        { "answer": "to" },
+        { "answer": "accept" },
+        { "answer": "it" },
+        { "answer": "since" },
+        { "answer": "otherwise" },
+        { "answer": "they" },
+        { "answer": "would" },
+        { "answer": "get" },
+        { "answer": "nothing" },
+        { "answer": "and" },
+        { "answer": "there" },
+        { "answer": "is" },
+        { "answer": "no" },
+        { "answer": "other" },
+        { "answer": "negotiation" },
+        { "answer": "possible" }
+    ],
+    "words": ["otherwise", "possible", "play", "to", "for", "get", "minimum", "logical", "is", "and", "the", "to", "accept", "other", "no", "since", "would", "person", "to", "it", "they", "nothing", "the", "first", "offer", "second", "negotiation", "the", "and", "person", "ultimatum", "there", "purely", "The", "game", "way", "the", "for", "is"]
+},
+
+{
+    "id": 123,
+    "audio": "",
+    "sentence": "Tuy nhiên, trên thực tế, người thứ hai từ chối những lời đề nghị thấp hơn 30% tổng số tiền, vì "cảm nhận" được sự bất công của lời đề nghị.<br>___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ‘___’ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "In" },
+        { "answer": "practice" },
+        { "answer": "though" },
+        { "answer": "the" },
+        { "answer": "second" },
+        { "answer": "person" },
+        { "answer": "rejects" },
+        { "answer": "offers" },
+        { "answer": "lower" },
+        { "answer": "than" },
+        { "answer": "30%" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "total" },
+        { "answer": "because" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "perceived" },
+        { "answer": "unfairness" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "offer" }
+    ],
+    "words": ["30%", "because", "the", "the", "second", "of", "perceived", "rejects", "practice", "of", "offers", "offer", "In", "of", "person", "the", "unfairness", "total", "though", "the", "lower", "than"]
+}
     ]
 }
