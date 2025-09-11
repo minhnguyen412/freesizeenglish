@@ -902,5 +902,45 @@
         "highlight": ["Instead", "consistent exercise", "push you in the right direction"],
         "description": "ɪnˈstɛd, ɪts ə kənˈsɪstənt ˈɛksərˌsaɪz ʌv dɪˈvɛləpɪŋ ˈhæbəts, ˈjuzɪŋ smɑrt tulz ænd ˈmeɪkɪŋ dɪˈsɪʒənz ðæt pʊʃ ju ɪn ðə raɪt dəˈrɛkʃən.<br>Thay vào đó, đó là một quá trình rèn luyện liên tục các thói quen, sử dụng các công cụ thông minh và đưa ra những quyết định thúc đẩy bạn đi đúng hướng.",
         "audioSrc": ""
+    },
+    {
+        "id": 114,
+        "title": "Human beings have a strong need for fairness.",
+        "segments": ["Human beings ", "have a strong need for", " fairness."],
+        "highlight": ["have a strong need for"],
+        "description": "ˈhjumən ˈbiɪŋz hæv ə strɔŋ nid fɔr ˈfɛrnəs.<br>Con người có nhu cầu công bằng rất lớn.",
+        "audioSrc": ""
+    },
+    {
+        "id": 115,
+        "title": "Big or small, when we see something unfair done (especially against us), we are enraged.",
+        "segments": ["Big or small, when we ", "see something unfair done", " (especially against us), we are enraged."],
+        "highlight": ["see something unfair done"],
+        "description": "bɪɡ ɔr smɔl, wɛn wi si ˈsʌmθɪŋ ənˈfɛr dʌn (əˈspɛʃli əˈɡɛnst ʌs), wi ɑr ɛnˈreɪʤd.<br>Dù lớn hay nhỏ, khi thấy điều gì đó bất công xảy ra (đặc biệt là đối với chính mình), chúng ta đều nổi giận.",
+        "audioSrc": ""
+    },
+    {
+        "id": 116,
+        "title": "Even a three-year-old has the common sense to scream when they get a smaller portion than their sibling.",
+        "segments": ["Even a three-year-old ", "has the common sense to", " scream when they get a smaller portion than their sibling."],
+        "highlight": ["has the common sense to"],
+        "description": "ˈivɪn ə θri-jɪr-oʊld hæz ðə ˈkɑmən sɛns tu skrim wɛn ðeɪ ɡɛt ə ˈsmɔlər ˈpɔrʃən ðæn ðɛr ˈsɪblɪŋ.<br>Ngay cả một đứa trẻ ba tuổi cũng có thể hét lên khi nhận được phần ít hơn anh chị em của mình.",
+        "audioSrc": ""
+    },
+    {
+        "id": 117,
+        "title": "The purely logical way to play the ultimatum game is for the first person to offer the minimum and for the second person to accept it, since otherwise they would get nothing, and there is no other negotiation possible.",
+        "segments": ["The purely logical way to", " play the ultimatum game is for the first person to offer the minimum and for the second person to accept it, ", "since otherwise they would", " get nothing, and there is no other negotiation possible."],
+        "highlight": ["The purely logical way to", "since otherwise they would"],
+        "description": "ðə ˈpjʊrli ˈlɑʤɪkəl weɪ tu pleɪ ði ˌʌltəˈmeɪtəm ɡeɪm ɪz fɔr ðə fɜrst ˈpɜrsən tu ˈɔfər ðə ˈmɪnəməm ænd fɔr ðə ˈsɛkənd ˈpɜrsən tu ækˈsɛpt ɪt, sɪns ˈʌðərˌwaɪz ðeɪ wʊd ɡɛt ˈnʌθɪŋ, ænd ðɛr ɪz noʊ ˈʌðər nɪˌɡoʊʃiˈeɪʃən ˈpɑsəbəl.<br>Cách chơi trò tối hậu thư hoàn toàn hợp lý là người đầu tiên đưa ra mức tối thiểu và người thứ hai chấp nhận, vì nếu không họ sẽ chẳng nhận được gì, và không thể thương lượng thêm.",
+        "audioSrc": ""
+    },
+    {
+        "id": 118,
+        "title": "In practice though, the second person rejects offers lower than 30% of the total, because of the ‘perceived’ unfairness of the offer.",
+        "segments": ["In practice though", ", the second person rejects offers lower than 30% of the total, because of ", "the ‘perceived’ unfairness", " of the offer."],
+        "highlight": ["In practice though", "the ‘perceived’ unfairness"],
+        "description": "ɪn ˈpræktəs ðoʊ, ðə ˈsɛkənd ˈpɜrsən rɪˈʤɛkts ˈɔfərz ˈloʊər ðæn 30% ʌv ðə ˈtoʊtəl, bɪˈkɔz ʌv ðə pərˈsivd ənˈfɛrnəs ʌv ði ˈɔfər.<br>Tuy nhiên, trên thực tế, người thứ hai từ chối những lời đề nghị thấp hơn 30% tổng số tiền, vì ‘cảm nhận’ được sự bất công của lời đề nghị.",
+        "audioSrc": ""
     }
 ]
