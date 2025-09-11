@@ -3347,7 +3347,7 @@
 {
     "id": 123,
     "audio": "",
-    "sentence": "Tuy nhiên, trên thực tế, người thứ hai từ chối những lời đề nghị thấp hơn 30% tổng số tiền, vì "cảm nhận" được sự bất công của lời đề nghị.<br>___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ‘___’ ___ ___ ___ ___",
+    "sentence": "Tuy nhiên, trên thực tế, người thứ hai từ chối những lời đề nghị thấp hơn 30% tổng số tiền, vì "cảm nhận" được sự bất công của lời đề nghị.<br>___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___",
     "blanks": [
         { "answer": "In" },
         { "answer": "practice" },
