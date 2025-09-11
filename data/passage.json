@@ -242,5 +242,17 @@
             "Financial prosperity is not something someone stumbles upon on a lucky day.",
             "Instead, it's a consistent exercise of developing habits, using smart tools and making decisions that push you in the right direction."
         ]
+    },
+    {
+        "id": 21,
+        "title": "Human beings have a strong need for fairness",
+        "imageSrc": "",
+        "content": [
+            "Human beings have a strong need for fairness.",
+            "Big or small, when we see something unfair done (especially against us), we are enraged.",
+            "Even a three-year-old has the common sense to scream when they get a smaller portion than their sibling.",
+            "The purely logical way to play the ultimatum game is for the first person to offer the minimum and for the second person to accept it, since otherwise they would get nothing, and there is no other negotiation possible.",
+            "In practice though, the second person rejects offers lower than 30% of the total, because of the ‘perceived’ unfairness of the offer."
+        ]
     }
 ]
