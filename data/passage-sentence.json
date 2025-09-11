@@ -854,5 +854,53 @@
         "highlight": ["assured that"],
         "description": "əˈkɔrdɪŋ tu ðə rɪˈpɔrt, ðə ˈkʌmpəni əˈʃʊrd ðæt ɪt ɪz ˈɔfərɪŋ səˈpɔrt tu ɛmˈplɔɪiz əˈfɛktɪd baɪ ðə ˈleɪˌɔfs.<br>Theo báo cáo, công ty đảm bảo rằng họ sẽ hỗ trợ những nhân viên bị ảnh hưởng bởi đợt sa thải.",
         "audioSrc": ""
+    },
+    {
+        "id": 108,
+        "title": "When most people hear about building wealth, their thoughts often turn to billionaires, mansions or viral success stories.",
+        "segments": ["When most people hear about building wealth, ", "their thoughts often turn to", " billionaires, mansions or viral success stories."],
+        "highlight": ["their thoughts often turn to"],
+        "description": "wɛn moʊst ˈpipəl hir əˈbaʊt ˈbɪldɪŋ wɛlθ, ðɛr θɔts ˈɔfən tɜrn tu ˌbɪljəˈnɛrz, ˈmænʧənz ɔr ˈvaɪrəl səkˈsɛs ˈstɔriz.<br>Khi nghe về việc làm giàu, hầu hết mọi người thường nghĩ đến các tỷ phú, biệt thự hay những câu chuyện thành công lan truyền chóng mặt.",
+        "audioSrc": ""
+    },
+    {
+        "id": 109,
+        "title": "A select few imagine themselves beating the market and chasing risky investments, while others think that living like a monk for 10 or so years is the right approach.",
+        "segments": ["A select few", " imagine themselves ", "beating the market", " and chasing risky investments, while others think that living like a monk for 10 or so years is the right approach."],
+        "highlight": ["A select few", "beating the market"],
+        "description": "ə səˈlɛkt fju ɪˈmæʤən ðɛmˈsɛlvz ˈbitɪŋ ðə ˈmɑrkət ænd ˈʧeɪsɪŋ ˈrɪski ɪnˈvɛstmənts, waɪl ˈʌðərz θɪŋk ðæt ˈlɪvɪŋ laɪk ə mʌŋk fɔr 10 ɔr soʊ jɪrz ɪz ðə raɪt əˈproʊʧ.<br>Một số ít người tưởng tượng mình đang đánh bại thị trường và theo đuổi các khoản đầu tư rủi ro, trong khi những người khác lại cho rằng sống như một nhà sư trong khoảng 10 năm mới là cách tiếp cận đúng đắn.",
+        "audioSrc": ""
+    },
+    {
+        "id": 110,
+        "title": "In reality, building wealth is none of these things.",
+        "segments": ["In reality, building wealth is none of these things."],
+        "highlight": [""],
+        "description": "ɪn ˌriˈæləˌti, ˈbɪldɪŋ wɛlθ ɪz nʌn ʌv ðiz θɪŋz.<br>Thực tế, làm giàu không phải là một trong những điều này.",
+        "audioSrc": ""
+    },
+    {
+        "id": 111,
+        "title": "At its core, building wealth means increasing your net worth (your assets minus your debts) over time and doing it in a way that gives you freedom, stability and options.",
+        "segments": ["At its core", ", building wealth means increasing your net worth (your assets minus your debts) over time and doing it in a way that gives you freedom, stability and options."],
+        "highlight": ["At its core"],
+        "description": "æt ɪts kɔr, ˈbɪldɪŋ wɛlθ minz ɪnˈkrisɪŋ jʊər nɛt wɜrθ (jʊər ˈæˌsɛts ˈmaɪnəs jʊər dɛts) ˈoʊvər taɪm ænd ˈduɪŋ ɪt ɪn ə weɪ ðæt ɡɪvz ju ˈfridəm, stəˈbɪlɪti ænd ˈɑpʃənz.<br>Về bản chất, làm giàu có nghĩa là tăng giá trị tài sản ròng (tài sản trừ đi nợ) theo thời gian và thực hiện theo cách mang lại cho bạn sự tự do, ổn định và nhiều lựa chọn.",
+        "audioSrc": ""
+    },
+    {
+        "id": 112,
+        "title": "Financial prosperity is not something someone stumbles upon on a lucky day.",
+        "segments": ["Financial prosperity", " is not something someone ", "stumbles upon", " on a lucky day."],
+        "highlight": ["Financial prosperity"],
+        "description": "fəˈnænʃəl prɑˈspɛrəti ɪz nɑt ˈsʌmθɪŋ ˈsʌmˌwʌn ˈstʌmbəlz əˈpɑn ɑn ə ˈlʌki deɪ.<br>Sự thịnh vượng về tài chính không phải là thứ ai đó tình cờ gặp được vào một ngày may mắn.",
+        "audioSrc": ""
+    },
+    {
+        "id": 113,
+        "title": "Instead, it's a consistent exercise of developing habits, using smart tools and making decisions that push you in the right direction.",
+        "segments": ["Instead", ", it's a ", "consistent exercise", " of developing habits, using smart tools and making decisions that ", "push you in the right direction", "."],
+        "highlight": ["Instead", "consistent exercise", "push you in the right direction"],
+        "description": "ɪnˈstɛd, ɪts ə kənˈsɪstənt ˈɛksərˌsaɪz ʌv dɪˈvɛləpɪŋ ˈhæbəts, ˈjuzɪŋ smɑrt tulz ænd ˈmeɪkɪŋ dɪˈsɪʒənz ðæt pʊʃ ju ɪn ðə raɪt dəˈrɛkʃən.<br>Thay vào đó, đó là một quá trình rèn luyện liên tục các thói quen, sử dụng các công cụ thông minh và đưa ra những quyết định thúc đẩy bạn đi đúng hướng.",
+        "audioSrc": ""
     }
 ]
