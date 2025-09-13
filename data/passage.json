@@ -254,5 +254,17 @@
             "The purely logical way to play the ultimatum game is for the first person to offer the minimum and for the second person to accept it, since otherwise they would get nothing, and there is no other negotiation possible.",
             "In practice though, the second person rejects offers lower than 30% of the total, because of the ‘perceived’ unfairness of the offer."
         ]
+    },
+    {
+        "id": 22,
+        "title": "The longest marine heatwave ever recorded",
+        "imageSrc": "",
+        "content": [
+            "From 2014 to 2016, the Pacific coast of North America experienced the longest marine heatwave ever recorded, with temperatures reaching two to six degrees above historical averages over a prolonged period.",
+            "Researchers from UVic's Baum Lab have compiled a comprehensive overview of the heatwave's ecological impacts, reviewing the findings from 331 primary studies and governmental reports.",
+            "The marine heatwave resulted in unprecedented ecological disturbance across thousands of kilometers of North America's west coast.",
+            "Our comprehensive synthesis of the ecological impacts of the heatwave helps us to better understand its overall impacts and how these fit into the broader context of other marine heatwaves.",
+            "According to the research, 240 different species were found outside of their typical geographic range during the heatwave, with many of them found further north than ever before."
+        ]
     }
 ]
