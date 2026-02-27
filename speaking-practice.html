@@ -643,13 +643,21 @@ async function main() {
     if (!res.ok) throw new Error(`HTTP ${res.status} — could not load data/speaking-data.json`);
     const json = await res.json();
 
-    // Support both array and object formats
+    // Support 3 formats:
+    //   1. Array:           [{id, ...}, {id, ...}]
+    //   2. Single object:   {id, videoUrl, ...}   ← mày đang dùng
+    //   3. Keyed object:    {"lesson-01": {...}, "lesson-02": {...}}
     let sessions;
     if (Array.isArray(json)) {
       sessions = json;
-    } else if (typeof json === 'object') {
-      // object keyed by id → convert to array
-      sessions = Object.values(json);
+    } else if (typeof json === 'object' && json !== null) {
+      // single object có id field riêng → wrap thành array
+      if ('id' in json) {
+        sessions = [json];
+      } else {
+        // keyed by id
+        sessions = Object.values(json);
+      }
     } else {
       throw new Error('speaking-data.json must be an array or object');
     }
