@@ -378,7 +378,7 @@
 <body>
 
 <header>
-  <a class="logo" href="session-viewer.html">🔴 FREESIZE ENGLISH</a>
+  <a class="logo" href="speaking-practice.html">🔴 FREESIZE ENGLISH</a>
   <div class="header-tag">Study Session</div>
 </header>
 
@@ -679,8 +679,7 @@ async function main() {
   } catch (err) {
     showError('Could not load session', `
       <strong>Error:</strong> ${esc(err.message)}<br><br>
-      Make sure <code>data/speaking-data.json</code> exists and you're running via a local server
-      (<code>npx serve .</code> or VS Code Live Server).
+      Make sure <code>data/speaking-data.json</code> exists and contains an entry with <code>"id": "${esc(id || '?')}"</code>.
     `);
   }
 }
