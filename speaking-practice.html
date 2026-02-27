@@ -165,52 +165,27 @@
   .stat-box .num { font-size: 1.3rem; font-weight: 700; }
   .stat-box .lbl { font-size: 0.68rem; opacity: 0.82; }
 
-  /* ── TIKTOK THUMBNAIL ── */
-  .tiktok-thumb-card {
+  /* ── TIKTOK IFRAME (no-scroll) ── */
+  .tiktok-iframe-wrap {
     width: 100%; aspect-ratio: 9/16;
     border: var(--border-thick); border-radius: 20px;
     overflow: hidden; box-shadow: var(--shadow-lg);
     background: #111;
-    display: flex; align-items: center; justify-content: center;
+    position: relative;
   }
-  .tiktok-thumb-placeholder {
-    display: flex; align-items: center; justify-content: center;
+  .tiktok-iframe-wrap iframe {
     width: 100%; height: 100%;
+    border: none; display: block;
+    /* disable all touch/scroll interaction */
+    pointer-events: none;
   }
-  .tiktok-thumb-link {
-    display: block; width: 100%; height: 100%;
-    position: relative; text-decoration: none;
-  }
-  .tiktok-thumb-img {
-    width: 100%; height: 100%; object-fit: cover; display: block;
-  }
-  .tiktok-thumb-overlay {
+  /* transparent overlay — blocks scroll, tap opens TikTok link */
+  .tiktok-iframe-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 55%);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    transition: background 0.2s;
+    z-index: 2;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
-  .tiktok-thumb-link:hover .tiktok-thumb-overlay { background: rgba(0,0,0,0.3); }
-  .tiktok-play-btn {
-    width: 58px; height: 58px; border-radius: 50%;
-    background: rgba(255,255,255,0.93);
-    border: 3px solid var(--black);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem; color: var(--black);
-    box-shadow: var(--shadow-md);
-    transition: transform 0.15s, box-shadow 0.15s;
-  }
-  .tiktok-thumb-link:hover .tiktok-play-btn { transform: scale(1.1); box-shadow: var(--shadow-lg); }
-  .tiktok-author {
-    position: absolute; bottom: 14px; left: 0; right: 0;
-    text-align: center;
-    font-family: 'Quicksand', sans-serif; font-weight: 700;
-    font-size: 0.88rem; color: white;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.9);
-  }
-  .tiktok-fallback { background: linear-gradient(135deg, #111, #222); }
-  .tiktok-fallback-inner { background: none; flex-direction: column; color: white; }
   .tiktok-open-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
     background: var(--black); color: white;
@@ -559,19 +534,25 @@ function buildVideoColHTML(vid, containerIdPrefix) {
   }
 
   if (vid.type === 'tiktok') {
-    const thumbId = `${containerIdPrefix}-thumb`;
-    // Kick off oEmbed fetch to get thumbnail — fill in async
-    if (vid.vid) {
-      fetchTikTokThumb(vid.vid, vid.link, thumbId);
+    if (!vid.vid) {
+      return `
+        <div class="video-placeholder">
+          <span class="big-emoji">🎵</span>
+          <span>Can't extract TikTok video ID</span>
+          <a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a>
+        </div>`;
     }
     return `
-      <div class="tiktok-thumb-card" id="${thumbId}">
-        <div class="tiktok-thumb-placeholder">
-          <div class="loader-spinner" style="width:36px;height:36px;border-width:3px;"></div>
-        </div>
+      <div class="tiktok-iframe-wrap">
+        <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}"
+          allow="autoplay; encrypted-media"
+          allowfullscreen loading="lazy"
+          scrolling="no"
+          style="pointer-events:none;"></iframe>
+        <a class="tiktok-iframe-overlay" href="${esc(vid.link)}" target="_blank" rel="noopener" aria-label="Watch on TikTok"></a>
       </div>
-      <a class="video-link-btn tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0">
           <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
         </svg>
         Watch on TikTok
@@ -589,43 +570,6 @@ function buildVideoColHTML(vid, containerIdPrefix) {
   }
 
   return '';
-}
-
-// ── FETCH TIKTOK THUMBNAIL via oEmbed ──────────────────────────────────────
-async function fetchTikTokThumb(vid, originalUrl, containerId) {
-  const el = document.getElementById(containerId);
-  if (!el) return;
-
-  try {
-    // TikTok oEmbed endpoint
-    const oembedUrl = `https://www.tiktok.com/oembed?url=https://www.tiktok.com/video/${vid}`;
-    const res = await fetch(oembedUrl);
-    if (!res.ok) throw new Error('oEmbed failed');
-    const data = await res.json();
-    const thumb = data.thumbnail_url;
-    const title = data.title || '';
-    const author = data.author_name || '';
-
-    el.innerHTML = `
-      <a href="${esc(originalUrl)}" target="_blank" rel="noopener" class="tiktok-thumb-link">
-        <img src="${esc(thumb)}" alt="${esc(title)}" class="tiktok-thumb-img" loading="lazy">
-        <div class="tiktok-thumb-overlay">
-          <div class="tiktok-play-btn">▶</div>
-          ${author ? `<div class="tiktok-author">@${esc(author)}</div>` : ''}
-        </div>
-      </a>`;
-  } catch {
-    // fallback: just show a branded placeholder with open button
-    el.innerHTML = `
-      <a href="${esc(originalUrl)}" target="_blank" rel="noopener" class="tiktok-thumb-link tiktok-fallback">
-        <div class="tiktok-thumb-overlay tiktok-fallback-inner">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="white" opacity="0.9">
-            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-          </svg>
-          <div style="font-family:'Fredoka',sans-serif;font-size:1rem;font-weight:700;margin-top:10px;">Tap to watch</div>
-        </div>
-      </a>`;
-  }
 }
 
 // ── RENDER ─────────────────────────────────────────────────────────────────
