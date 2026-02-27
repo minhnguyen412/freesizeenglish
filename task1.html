@@ -246,26 +246,25 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
   align-items: center;
   justify-content: center;
 
-  min-width: 56px;
-  height: auto;              /* cho phép cao lên nếu cần */
-  min-height: 34px;
-
-  padding: 4px 12px;         /* padding mềm hơn */
+  min-width: 40px;        /* giảm lại */
+  height: 34px;
+  padding: 0 10px;        /* cho có khoảng thở */
+  
   border: 2.5px dashed #ccc;
   border-radius: 10px;
+  background: transparent;
+  color: #999;
 
   font-family: 'Quicksand', sans-serif;
   font-weight: 800;
   font-size: 0.95rem;
 
-  white-space: normal;       /* 🔥 cho phép wrap */
-  word-break: break-word;    /* 🔥 tránh tràn */
-  text-align: center;
+  white-space: nowrap;    /* quan trọng */
 }
 .blank.filled {
   background: var(--sky-pale); border: var(--border); border-style: solid;
   color: var(--black); border-radius: 10px;
-  padding: 0 10px; cursor: pointer;
+  padding: cursor: pointer;
 }
 .blank.filled:hover { background: #c8ecff; }
 .blank.reveal-correct {
