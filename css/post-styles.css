@@ -246,6 +246,7 @@ h2 {
 }
 
 .description {
+    font-family: 'Quicksand', sans-serif;
     display: none; /* Ẩn mô tả mặc định */
     color: #666; /* Màu chữ cho mô tả */
     margin-top: 5px; /* Khoảng cách cho mô tả */
@@ -366,4 +367,5 @@ h2 {
     font-weight: bold;
     text-decoration: underline;
 }
+
 
