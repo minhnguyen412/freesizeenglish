@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LangCapture — Study Session</title>
+<title>FREESIZE ENGLISH — Study Session</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -40,7 +40,6 @@
     overflow-x: hidden;
   }
 
-  /* dot grid */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -65,254 +64,334 @@
   .header-tag {
     background: var(--white); border: var(--border); border-radius: 50px;
     padding: 5px 18px; font-weight: 700; font-size: 0.88rem;
-    box-shadow: var(--shadow-sm); letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
   }
 
-  /* ── MAIN LAYOUT ── */
-  .container {
-    display: flex; gap: 26px;
+  /* ── PAGE WRAPPER ── */
+  #app { position: relative; z-index: 1; }
+
+  /* ── MAIN GRID: video-left + content-right ── */
+  .page-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 26px;
     padding: 36px 56px 100px;
-    max-width: 1380px; margin: 0 auto; width: 100%;
-    position: relative; z-index: 1;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: start;
   }
 
-  .main-col { flex: 2; display: flex; flex-direction: column; gap: 22px; min-width: 0; }
-  .side-col  { flex: 1; min-width: 280px; max-width: 340px; display: flex; flex-direction: column; gap: 22px; position: sticky; top: 88px; align-self: flex-start; }
+  /* ── VIDEO COLUMN (sticky) ── */
+  .video-col {
+    position: sticky;
+    top: 88px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
 
-  /* ── CARDS ── */
-  .card {
+  /* Vertical video embed box */
+  .video-card {
+    background: var(--black);
+    border: var(--border-thick);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 9 / 16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .video-card iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  /* No-video placeholder */
+  .video-placeholder {
     background: var(--white);
-    border: var(--border-thick); border-radius: 22px;
-    box-shadow: var(--shadow-md); padding: 26px;
-    animation: fadeUp 0.4s ease both;
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .card-title {
-    display: inline-block;
-    font-weight: 700; font-size: 1rem;
-    background: var(--red); color: white;
-    border: var(--border); border-radius: 50px;
-    padding: 5px 20px; box-shadow: var(--shadow-sm);
-    margin-bottom: 18px; letter-spacing: 0.05em;
-  }
-  .card-title.yellow { background: var(--yellow); color: var(--black); }
-  .card-title.sky    { background: var(--sky);    color: var(--black); }
-  .card-title.green  { background: var(--green);  color: white; }
-
-  /* ── VIDEO META ── */
-  .session-meta {
-    display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px;
-  }
-  .meta-pill {
+    border: var(--border-thick);
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 9 / 16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--muted);
     font-family: 'Quicksand', sans-serif;
-    font-size: 0.78rem; font-weight: 700;
-    border: var(--border); border-radius: 50px;
-    padding: 4px 14px; box-shadow: var(--shadow-sm);
-    letter-spacing: 0.04em; color: var(--black);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 24px;
   }
-  .meta-pill.id-pill   { background: var(--red-light); }
-  .meta-pill.date-pill { background: var(--yellow-pale); }
-  .meta-pill.lang-pill { background: var(--sky-pale); }
+  .video-placeholder .big-emoji { font-size: 3.5rem; }
 
-  /* ── VIDEO EMBED ── */
-  .video-wrap {
-    width: 100%; aspect-ratio: 16/9;
-    border: var(--border-thick); border-radius: 14px;
-    overflow: hidden; background: #000; box-shadow: var(--shadow-md);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .video-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
-  .video-wrap.tiktok-wrap { aspect-ratio: 9/16; max-height: 600px; width: auto; margin: 0 auto; }
-
+  /* Open link button below video */
   .video-link-btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    margin-top: 14px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
     background: var(--red-light); border: var(--border); border-radius: 50px;
-    padding: 8px 20px; font-weight: 700; font-size: 0.88rem;
+    padding: 10px 20px; font-weight: 700; font-size: 0.9rem;
     box-shadow: var(--shadow-sm); text-decoration: none; color: var(--black);
     transition: transform 0.12s, box-shadow 0.12s;
   }
   .video-link-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
 
+  /* Session ID mini card below video */
+  .video-meta-card {
+    background: var(--red);
+    border: var(--border-thick); border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    padding: 14px 16px;
+    color: white;
+    text-align: center;
+  }
+  .video-meta-card .session-id {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700; font-size: 0.8rem;
+    background: rgba(255,255,255,0.18); border-radius: 8px;
+    padding: 5px 10px; word-break: break-all; margin-bottom: 10px;
+  }
+  .stat-row { display: flex; gap: 8px; }
+  .stat-box {
+    flex: 1; background: rgba(255,255,255,0.18); border-radius: 10px;
+    padding: 8px 6px; text-align: center;
+    border: 1.5px solid rgba(255,255,255,0.25);
+  }
+  .stat-box .num { font-size: 1.3rem; font-weight: 700; }
+  .stat-box .lbl { font-size: 0.68rem; opacity: 0.82; }
+
+  /* ── CONTENT COLUMN ── */
+  .content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white);
+    border: var(--border-thick); border-radius: 22px;
+    box-shadow: var(--shadow-md); padding: 24px;
+    animation: fadeUp 0.38s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .card-title {
+    display: inline-block;
+    font-weight: 700; font-size: 0.95rem;
+    background: var(--red); color: white;
+    border: var(--border); border-radius: 50px;
+    padding: 5px 20px; box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+  }
+  .card-title.yellow { background: var(--yellow); color: var(--black); }
+  .card-title.sky    { background: var(--sky);    color: var(--black); }
+  .card-title.green  { background: var(--green);  color: white; }
+
+  /* Date pill */
+  .date-pill {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem; font-weight: 700;
+    background: var(--yellow-pale); border: var(--border); border-radius: 50px;
+    padding: 3px 12px; box-shadow: var(--shadow-sm);
+    display: inline-block; margin-bottom: 16px; margin-left: 8px;
+  }
+
   /* ── TRANSCRIPT ── */
   .transcript-body {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1rem; font-weight: 600; line-height: 1.85;
-    color: #333;
+    font-size: 1rem; font-weight: 600; line-height: 1.85; color: #333;
     background: var(--red-pale); border: var(--border);
-    border-radius: 14px; padding: 18px 20px;
-    max-height: 320px; overflow-y: auto;
+    border-radius: 14px; padding: 16px 18px;
+    max-height: 260px; overflow-y: auto;
     white-space: pre-wrap;
   }
-  .transcript-body::-webkit-scrollbar { width: 6px; }
+  .transcript-body::-webkit-scrollbar { width: 5px; }
   .transcript-body::-webkit-scrollbar-thumb { background: var(--red-light); border-radius: 3px; }
 
-  /* ── VOCAB ITEMS ── */
-  .vocab-list { display: flex; flex-direction: column; gap: 10px; }
-  .vocab-item {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.98rem; font-weight: 600; line-height: 1.6;
-    background: var(--red-pale); border: var(--border);
-    border-radius: 14px; padding: 13px 18px;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.12s, box-shadow 0.12s;
-    animation: fadeUp 0.4s ease both;
+  /* ── VOCAB / GRAMMAR PILLS ── */
+  .pill-wrap {
+    display: flex; flex-wrap: wrap; gap: 10px;
   }
-  .vocab-item:nth-child(odd)  { background: var(--yellow-pale); }
-  .vocab-item:nth-child(even) { background: var(--red-pale); }
-  .vocab-item:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+  .vocab-pill {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.92rem; font-weight: 700;
+    border: var(--border); border-radius: 50px;
+    padding: 7px 16px; box-shadow: var(--shadow-sm);
+    transition: transform 0.12s, box-shadow 0.12s;
+    animation: fadeUp 0.35s ease both;
+    cursor: default;
+  }
+  .vocab-pill:nth-child(4n+1) { background: var(--yellow-pale); }
+  .vocab-pill:nth-child(4n+2) { background: var(--red-pale); }
+  .vocab-pill:nth-child(4n+3) { background: var(--sky-pale); }
+  .vocab-pill:nth-child(4n+4) { background: var(--green-pale); }
+  .vocab-pill:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
 
-  /* ── GRAMMAR ITEMS ── */
-  .grammar-list { display: flex; flex-direction: column; gap: 10px; }
   .grammar-item {
     font-family: 'Quicksand', sans-serif;
-    font-size: 0.98rem; font-weight: 600; line-height: 1.6;
+    font-size: 0.95rem; font-weight: 600; line-height: 1.6;
     background: var(--sky-pale); border: var(--border);
-    border-radius: 14px; padding: 13px 18px;
-    box-shadow: var(--shadow-sm);
+    border-radius: 14px; padding: 11px 16px; box-shadow: var(--shadow-sm);
     transition: transform 0.12s, box-shadow 0.12s;
-    animation: fadeUp 0.4s ease both;
+    animation: fadeUp 0.35s ease both;
   }
   .grammar-item:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+  .grammar-list { display: flex; flex-direction: column; gap: 8px; }
 
   /* ── RECORDINGS ── */
-  .recordings-list { display: flex; flex-direction: column; gap: 14px; }
+  .recordings-list { display: flex; flex-direction: column; gap: 12px; }
   .rec-item {
     background: var(--red-pale); border: var(--border);
-    border-radius: 16px; padding: 16px 18px;
-    box-shadow: var(--shadow-sm);
-    animation: fadeUp 0.4s ease both;
+    border-radius: 16px; padding: 14px 16px;
+    box-shadow: var(--shadow-sm); animation: fadeUp 0.35s ease both;
   }
-  .rec-header {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
-  }
+  .rec-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
   .rec-badge {
     background: var(--red); color: white;
     border: var(--border); border-radius: 50px;
-    padding: 3px 14px; font-weight: 700; font-size: 0.82rem;
-    box-shadow: var(--shadow-sm); white-space: nowrap;
+    padding: 3px 14px; font-weight: 700; font-size: 0.8rem;
+    box-shadow: var(--shadow-sm);
   }
-  .rec-ts {
-    font-family: 'Quicksand', sans-serif; font-size: 0.75rem;
-    color: var(--muted); font-weight: 600;
-  }
+  .rec-ts { font-family: 'Quicksand', sans-serif; font-size: 0.73rem; color: var(--muted); font-weight: 600; }
   .rec-item audio {
-    width: 100%; height: 36px; display: block; margin-bottom: 10px;
-    border-radius: 8px; border: var(--border);
+    width: 100%; height: 36px; display: block;
+    border-radius: 8px; border: var(--border); margin-bottom: 6px;
   }
   .rec-stt {
     font-family: 'Quicksand', sans-serif;
-    font-size: 0.9rem; font-weight: 600; color: #444;
+    font-size: 0.88rem; font-weight: 600; color: #444;
     background: var(--white); border: var(--border);
-    border-radius: 10px; padding: 10px 14px; line-height: 1.6;
+    border-radius: 10px; padding: 9px 13px; line-height: 1.6;
   }
   .rec-stt::before { content: '💬 '; }
 
-  /* ── EMPTY / ERROR states ── */
+  /* ── EMPTY STATE ── */
   .empty-state {
-    text-align: center; padding: 32px 20px;
-    color: var(--muted); font-size: 1rem;
+    text-align: center; padding: 28px 20px;
+    color: var(--muted); font-size: 0.95rem;
     font-family: 'Quicksand', sans-serif; font-weight: 600;
   }
-  .empty-state .emoji { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+  .empty-state .emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
 
-  /* ── ERROR CARD ── */
-  .error-card {
-    background: var(--red-light); border: var(--border-thick);
-    border-radius: 22px; box-shadow: var(--shadow-lg);
-    padding: 48px 40px; text-align: center; max-width: 520px;
-    margin: 80px auto; position: relative; z-index: 1;
-  }
-  .error-card .emoji { font-size: 3rem; margin-bottom: 14px; }
-  .error-card h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
-  .error-card p  { font-family: 'Quicksand', sans-serif; color: #555; font-size: 0.97rem; line-height: 1.6; }
-  .error-card code {
-    display: inline-block; background: var(--white); border: var(--border);
-    border-radius: 8px; padding: 2px 10px; font-size: 0.9rem; margin: 4px 2px;
-  }
-
-  /* ── LOADER ── */
-  .loader-wrap {
+  /* ── ERROR / LOADER / LIST PAGE ── */
+  .center-wrap {
     display: flex; flex-direction: column; align-items: center;
     justify-content: center; min-height: 60vh; gap: 18px;
-    position: relative; z-index: 1;
+    position: relative; z-index: 1; padding: 40px;
   }
   .loader-spinner {
-    width: 54px; height: 54px; border-radius: 50%;
+    width: 52px; height: 52px; border-radius: 50%;
     border: 4px solid var(--red-light); border-top-color: var(--red);
     animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
-  .loader-text { font-size: 1.1rem; font-weight: 700; color: var(--red); }
+  .loader-text { font-size: 1.05rem; font-weight: 700; color: var(--red); }
 
-  /* ── SESSION ID BADGE in sidebar ── */
-  .id-card {
-    background: var(--red); color: white;
-    border: var(--border-thick); border-radius: 22px;
-    box-shadow: var(--shadow-lg); padding: 22px;
-    text-align: center;
+  .error-card {
+    background: var(--red-light); border: var(--border-thick);
+    border-radius: 22px; box-shadow: var(--shadow-lg);
+    padding: 44px 36px; text-align: center; max-width: 500px;
   }
-  .id-card .label { font-size: 0.75rem; letter-spacing: 0.1em; opacity: 0.8; margin-bottom: 6px; }
-  .id-card .id-val {
-    font-family: 'Quicksand', sans-serif; font-weight: 700;
-    font-size: 0.85rem; word-break: break-all;
-    background: rgba(255,255,255,0.15); border-radius: 8px; padding: 8px 12px;
-    margin-top: 6px;
+  .error-card .emoji { font-size: 2.8rem; margin-bottom: 12px; }
+  .error-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+  .error-card p { font-family: 'Quicksand', sans-serif; color: #555; font-size: 0.95rem; line-height: 1.65; }
+  .error-card code {
+    background: var(--white); border: var(--border);
+    border-radius: 6px; padding: 1px 8px; font-size: 0.88rem; margin: 2px;
+    display: inline-block;
   }
-  .id-card .stat-row { display: flex; gap: 10px; margin-top: 14px; }
-  .stat-box {
-    flex: 1; background: rgba(255,255,255,0.18); border-radius: 12px;
-    padding: 10px 8px; text-align: center;
-    border: 1.5px solid rgba(255,255,255,0.3);
+
+  /* ── SESSION LIST (no ?id) ── */
+  .session-list {
+    width: 100%; max-width: 680px;
   }
-  .stat-box .num { font-size: 1.5rem; font-weight: 700; }
-  .stat-box .lbl { font-size: 0.72rem; opacity: 0.8; }
+  .session-list h2 {
+    font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;
+    display: inline-block;
+    background: var(--yellow); border: var(--border-thick); border-radius: 50px;
+    padding: 8px 26px; box-shadow: var(--shadow-md);
+  }
+  .session-list-items { display: flex; flex-direction: column; gap: 12px; }
+  .session-list-item {
+    background: var(--white); border: var(--border-thick); border-radius: 16px;
+    box-shadow: var(--shadow-sm); padding: 16px 20px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    text-decoration: none; color: var(--black);
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  .session-list-item:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-lg); }
+  .session-list-item .sli-id {
+    font-weight: 700; font-size: 1rem;
+    background: var(--red-light); border: var(--border); border-radius: 50px;
+    padding: 3px 14px; box-shadow: var(--shadow-sm);
+  }
+  .session-list-item .sli-date {
+    font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--muted);
+  }
+  .session-list-item .sli-arrow {
+    font-size: 1.2rem; color: var(--red); flex-shrink: 0;
+  }
 
   /* ── FOOTER ── */
   footer {
     background: var(--black); color: rgba(255,255,255,0.6);
-    padding: 28px 50px; text-align: center;
-    position: relative; z-index: 1;
+    padding: 28px 50px; text-align: center; position: relative; z-index: 1;
   }
   footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
   footer p { font-size: 0.9rem; }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 1024px) {
-    .container { flex-direction: column; padding: 20px 20px 80px; }
-    .side-col { max-width: 100%; width: 100%; position: static; }
+  @media (max-width: 900px) {
+    .page-grid {
+      grid-template-columns: 1fr;
+      padding: 20px 20px 80px;
+    }
+    .video-col {
+      position: static;
+      /* On mobile, limit video height */
+    }
+    .video-card {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .video-placeholder {
+      max-width: 320px;
+      margin: 0 auto;
+    }
   }
-  @media (max-width: 640px) {
+  @media (max-width: 600px) {
     header { padding: 0 16px; }
-    .container { padding: 16px 14px 60px; }
-    .card { padding: 18px; }
+    .video-card, .video-placeholder { max-width: 100%; }
+    .card { padding: 16px; }
+    .page-grid { padding: 14px 14px 60px; gap: 16px; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <a class="logo" href="#">🔴 LANGCAPTURE</a>
-  <div class="header-tag">Study Session Viewer</div>
+  <a class="logo" href="session-viewer.html">🔴 FREESIZE ENGLISH</a>
+  <div class="header-tag">Study Session</div>
 </header>
 
-<!-- Content injected by JS -->
 <div id="app"></div>
 
 <footer>
-  <p class="brand">LANGCAPTURE</p>
+  <p class="brand">FREESIZE ENGLISH</p>
   <p>Your personal English study archive</p>
 </footer>
 
 <script>
 // ── UTILS ──────────────────────────────────────────────────────────────────
-function getParam(key) {
-  return new URLSearchParams(window.location.search).get(key);
-}
+function getParam(k) { return new URLSearchParams(window.location.search).get(k); }
 
 function fmtDate(iso) {
   if (!iso) return '—';
@@ -324,276 +403,276 @@ function fmtDate(iso) {
   } catch { return iso; }
 }
 
-function escHtml(s) {
-  return String(s || '')
+function esc(s) {
+  return String(s ?? '')
     .replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// Convert plain text blocks (line by line) into styled item divs
-function renderLineItems(text, cls) {
-  if (!text || !text.trim()) return `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
-  const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
-  return lines.map((line, i) =>
-    `<div class="${cls}" style="animation-delay:${i * 0.05}s">${escHtml(line)}</div>`
-  ).join('');
+// ── EXTRACT TIKTOK VIDEO ID — handles many URL forms ──────────────────────
+// https://www.tiktok.com/@user/video/7608273881547148551?...
+// https://vm.tiktok.com/ZMxxxxxxxx/
+function extractTikTokId(url) {
+  const m = url.match(/\/video\/(\d+)/);
+  return m ? m[1] : null;
 }
 
-// ── VIDEO EMBED ────────────────────────────────────────────────────────────
-function buildVideoEmbed(url) {
-  if (!url) return `<div class="empty-state"><span class="emoji">🎬</span>No video URL provided.</div>`;
+// ── NORMALISE JSON ─────────────────────────────────────────────────────────
+function normalise(raw) {
+  const d = { ...raw };
+
+  // recordings: string URL / "url1,url2" / array of objects
+  if (typeof d.recordings === 'string') {
+    const urls = d.recordings.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
+    d.recordings = urls.map((url, i) => ({ index: i+1, url, sttText: '', timestamp: d.createdAt||null }));
+  } else if (Array.isArray(d.recordings)) {
+    d.recordings = d.recordings.map((r, i) => ({
+      index:     r.index || i+1,
+      url:       r.url || r.audioFile || null,
+      sttText:   r.sttText || '',
+      timestamp: r.timestamp || d.createdAt || null,
+    }));
+  } else {
+    d.recordings = [];
+  }
+
+  // vocabulary: "word1, word2" → array
+  d._vocab = typeof d.vocabulary === 'string'
+    ? d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean)
+    : [];
+
+  // grammarStructures: "p1; p2" → array
+  d._grammar = typeof d.grammarStructures === 'string'
+    ? d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean)
+    : [];
+
+  return d;
+}
+
+// ── BUILD VIDEO EMBED ──────────────────────────────────────────────────────
+function buildVideo(url) {
+  if (!url || !url.trim()) return null;
 
   // YouTube
-  const ytMatch = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/);
-  if (ytMatch) {
-    const vid = ytMatch[1];
-    return `
-      <div class="video-wrap">
-        <iframe src="https://www.youtube.com/embed/${vid}?rel=0" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <a class="video-link-btn" href="${escHtml(url)}" target="_blank" rel="noopener">↗ Open on YouTube</a>
-    `;
+  const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/);
+  if (yt) {
+    return {
+      iframe: `https://www.youtube.com/embed/${yt[1]}?rel=0`,
+      link: url,
+      label: '↗ Open on YouTube',
+    };
   }
 
-  // TikTok — embed via blockquote oEmbed or direct iframe
+  // TikTok
   if (url.includes('tiktok.com')) {
-    // Extract video id pattern: /video/XXXXXXXXXXX
-    const ttMatch = url.match(/\/video\/(\d+)/);
-    if (ttMatch) {
-      const vid = ttMatch[1];
-      return `
-        <div class="video-wrap tiktok-wrap">
-          <iframe src="https://www.tiktok.com/embed/v2/${vid}"
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-        <a class="video-link-btn" href="${escHtml(url)}" target="_blank" rel="noopener">↗ Open on TikTok</a>
-      `;
+    const vid = extractTikTokId(url);
+    if (vid) {
+      return {
+        iframe: `https://www.tiktok.com/embed/v2/${vid}`,
+        link: url,
+        label: '↗ Open on TikTok',
+      };
     }
-    // Fallback: just link
-    return `
-      <div class="empty-state" style="border:2.5px solid #1a1a1a;border-radius:14px;padding:32px;">
-        <span class="emoji">🎵</span>
-        TikTok video — can't auto-embed without video ID in URL.<br>
-        <a class="video-link-btn" style="margin-top:14px;" href="${escHtml(url)}" target="_blank">↗ Open on TikTok</a>
-      </div>
-    `;
+    // no video ID — just link
+    return { iframe: null, link: url, label: '↗ Open on TikTok' };
   }
 
-  // Generic iframe fallback
-  return `
-    <div class="video-wrap">
-      <iframe src="${escHtml(url)}" allowfullscreen loading="lazy"></iframe>
-    </div>
-    <a class="video-link-btn" href="${escHtml(url)}" target="_blank" rel="noopener">↗ Open link</a>
-  `;
+  // Generic
+  return { iframe: url, link: url, label: '↗ Open link' };
 }
 
-// ── RECORDINGS ─────────────────────────────────────────────────────────────
-function buildRecordings(recs) {
-  if (!recs || !recs.length) {
-    return `<div class="empty-state"><span class="emoji">🎙️</span>No recordings in this session.</div>`;
-  }
-  return recs.map((rec, i) => {
-    const audioHTML = rec.audioFile
-      ? `<audio controls src="${escHtml(rec.audioFile)}"></audio>
-         <div style="font-family:'Quicksand',sans-serif;font-size:0.75rem;color:var(--muted);margin-bottom:8px;">
-           📁 File: <code style="background:#f5f5f5;padding:1px 6px;border-radius:4px;">${escHtml(rec.audioFile)}</code>
-           — place in same folder as this HTML
-         </div>`
-      : `<div style="font-family:'Quicksand',sans-serif;font-size:0.85rem;color:var(--muted);margin-bottom:8px;">No audio file linked</div>`;
+// ── RENDER ─────────────────────────────────────────────────────────────────
+function renderPage(raw) {
+  const d = normalise(raw);
+  const vid = buildVideo(d.videoUrl);
 
-    const sttHTML = rec.sttText && rec.sttText.trim()
-      ? `<div class="rec-stt">${escHtml(rec.sttText.trim())}</div>`
-      : '';
+  const recCount = d.recordings.length;
+  const vocCount = d._vocab.length;
+  const graCount = d._grammar.length;
 
-    return `
-      <div class="rec-item" style="animation-delay:${i * 0.07}s">
-        <div class="rec-header">
-          <span class="rec-badge">REC #${rec.index || i+1}</span>
-          <span class="rec-ts">${fmtDate(rec.timestamp)}</span>
-        </div>
-        ${audioHTML}
-        ${sttHTML}
+  document.title = `${d.id || 'Session'} — Freesize English`;
+
+  /* ---- VIDEO COLUMN ---- */
+  let videoColHTML;
+  if (vid && vid.iframe) {
+    videoColHTML = `
+      <div class="video-card">
+        <iframe src="${esc(vid.iframe)}"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+          allowfullscreen loading="lazy"></iframe>
       </div>
-    `;
-  }).join('');
-}
-
-// ── RENDER PAGE ────────────────────────────────────────────────────────────
-function renderPage(data) {
-  const recCount   = (data.recordings || []).length;
-  const vocabCount = data.vocabulary ? data.vocabulary.split('\n').filter(l=>l.trim()).length : 0;
-  const gramCount  = data.grammarStructures ? data.grammarStructures.split('\n').filter(l=>l.trim()).length : 0;
-
-  const shortId = (data.id || 'unknown').slice(-12);
-
-  document.title = `LangCapture — ${shortId}`;
-
-  const html = `
-  <div class="container">
-
-    <!-- ══ MAIN COL ══ -->
-    <div class="main-col">
-
-      <!-- Video card -->
-      <div class="card" style="animation-delay:0s">
-        <div class="session-meta">
-          <span class="meta-pill id-pill">🆔 ${escHtml(shortId)}</span>
-          <span class="meta-pill date-pill">📅 ${fmtDate(data.createdAt)}</span>
-          ${data.meta?.sttLanguage ? `<span class="meta-pill lang-pill">🎙️ ${escHtml(data.meta.sttLanguage)}</span>` : ''}
-        </div>
-        ${buildVideoEmbed(data.videoUrl)}
-      </div>
-
-      <!-- Transcript -->
-      <div class="card" style="animation-delay:0.07s">
-        <div class="card-title">📝 Transcript</div>
-        ${data.transcript && data.transcript.trim()
-          ? `<div class="transcript-body">${escHtml(data.transcript)}</div>`
-          : `<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`
-        }
-      </div>
-
-      <!-- Vocabulary -->
-      <div class="card" style="animation-delay:0.12s">
-        <div class="card-title yellow">📚 Vocabulary</div>
-        <div class="vocab-list">
-          ${renderLineItems(data.vocabulary, 'vocab-item')}
-        </div>
-      </div>
-
-      <!-- Grammar -->
-      <div class="card" style="animation-delay:0.17s">
-        <div class="card-title sky">🔤 Grammar & Structures</div>
-        <div class="grammar-list">
-          ${renderLineItems(data.grammarStructures, 'grammar-item')}
-        </div>
-      </div>
-
-      <!-- Recordings -->
-      <div class="card" style="animation-delay:0.22s">
-        <div class="card-title green">🎙️ Audio Recordings</div>
-        <div class="recordings-list">
-          ${buildRecordings(data.recordings)}
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ══ SIDE COL ══ -->
-    <div class="side-col">
-
-      <!-- ID + stats card -->
-      <div class="id-card">
-        <div class="label">SESSION ID</div>
-        <div class="id-val">${escHtml(data.id || '—')}</div>
-        <div class="stat-row">
-          <div class="stat-box">
-            <div class="num">${recCount}</div>
-            <div class="lbl">Recordings</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">${vocabCount}</div>
-            <div class="lbl">Vocab</div>
-          </div>
-          <div class="stat-box">
-            <div class="num">${gramCount}</div>
-            <div class="lbl">Structures</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video link card -->
-      ${data.videoUrl ? `
-      <div class="card" style="animation-delay:0.1s;padding:18px;">
-        <div class="card-title" style="font-size:0.82rem;">🔗 Source Video</div>
-        <a class="video-link-btn" style="width:100%;justify-content:center;margin-top:0;"
-           href="${escHtml(data.videoUrl)}" target="_blank" rel="noopener">
-          ↗ Open original video
+      <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
+        ${esc(vid.label)}
+      </a>`;
+  } else if (vid && vid.link) {
+    videoColHTML = `
+      <div class="video-placeholder">
+        <span class="big-emoji">🎵</span>
+        <span>Can't auto-embed this URL</span>
+        <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:8px;">
+          ${esc(vid.label)}
         </a>
-      </div>` : ''}
+      </div>`;
+  } else {
+    videoColHTML = `
+      <div class="video-placeholder">
+        <span class="big-emoji">🎬</span>
+        <span>No video URL</span>
+      </div>`;
+  }
 
-      <!-- How to load audio note -->
-      ${recCount > 0 ? `
-      <div class="card" style="animation-delay:0.15s;padding:18px;background:var(--yellow-pale);">
-        <div class="card-title yellow" style="font-size:0.82rem;">💡 Note on Audio</div>
-        <p style="font-family:'Quicksand',sans-serif;font-size:0.88rem;font-weight:600;color:#555;line-height:1.65;">
-          Place the <strong>.webm</strong> audio files in the <strong>same folder</strong> as this HTML file for playback to work.
-        </p>
-      </div>` : ''}
+  videoColHTML += `
+    <div class="video-meta-card">
+      <div class="session-id">${esc(d.id || '—')}</div>
+      <div class="stat-row">
+        <div class="stat-box"><div class="num">${recCount}</div><div class="lbl">Audio</div></div>
+        <div class="stat-box"><div class="num">${vocCount}</div><div class="lbl">Vocab</div></div>
+        <div class="stat-box"><div class="num">${graCount}</div><div class="lbl">Grammar</div></div>
+      </div>
+    </div>`;
 
-      <!-- Meta info -->
-      <div class="card" style="animation-delay:0.2s;padding:18px;">
-        <div class="card-title" style="font-size:0.82rem;">ℹ️ Session Info</div>
-        <table style="font-family:'Quicksand',sans-serif;font-size:0.85rem;font-weight:600;width:100%;border-collapse:collapse;">
-          <tr><td style="color:var(--muted);padding:5px 0;padding-right:12px;">Created</td><td>${fmtDate(data.createdAt)}</td></tr>
-          <tr><td style="color:var(--muted);padding:5px 0;padding-right:12px;">Tool</td><td>${escHtml(data.meta?.exportedBy || 'LangCapture')}</td></tr>
-          <tr><td style="color:var(--muted);padding:5px 0;padding-right:12px;">STT Lang</td><td>${escHtml(data.meta?.sttLanguage || '—')}</td></tr>
-        </table>
+  /* ---- CONTENT COLUMN ---- */
+  const transcriptHTML = d.transcript && d.transcript.trim()
+    ? `<div class="transcript-body">${esc(d.transcript)}</div>`
+    : `<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`;
+
+  const vocabHTML = vocCount
+    ? d._vocab.map((v,i) => `<span class="vocab-pill" style="animation-delay:${i*0.04}s">${esc(v)}</span>`).join('')
+    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+
+  const grammarHTML = graCount
+    ? `<div class="grammar-list">${d._grammar.map((g,i) =>
+        `<div class="grammar-item" style="animation-delay:${i*0.05}s">${esc(g)}</div>`
+      ).join('')}</div>`
+    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+
+  const recordingsHTML = recCount
+    ? d.recordings.map((r,i) => `
+        <div class="rec-item" style="animation-delay:${i*0.06}s">
+          <div class="rec-header">
+            <span class="rec-badge">🎙️ REC #${r.index}</span>
+            ${r.timestamp ? `<span class="rec-ts">${fmtDate(r.timestamp)}</span>` : ''}
+          </div>
+          ${r.url
+            ? `<audio controls src="${esc(r.url)}" preload="none"></audio>`
+            : `<p style="font-family:'Quicksand',sans-serif;font-size:0.83rem;color:var(--muted);">No audio linked</p>`}
+          ${r.sttText ? `<div class="rec-stt">${esc(r.sttText)}</div>` : ''}
+        </div>`).join('')
+    : `<div class="empty-state"><span class="emoji">🎙️</span>No recordings in this session.</div>`;
+
+  document.getElementById('app').innerHTML = `
+    <div class="page-grid">
+
+      <div class="video-col">
+        ${videoColHTML}
       </div>
 
-    </div>
-  </div>
-  `;
+      <div class="content-col">
 
-  document.getElementById('app').innerHTML = html;
+        <div class="card" style="animation-delay:0s">
+          <div class="card-title">📝 Transcript</div>
+          <span class="date-pill">📅 ${fmtDate(d.createdAt)}</span>
+          ${transcriptHTML}
+        </div>
+
+        <div class="card" style="animation-delay:0.07s">
+          <div class="card-title yellow">📚 Vocabulary</div>
+          <div class="pill-wrap">${vocabHTML}</div>
+        </div>
+
+        <div class="card" style="animation-delay:0.13s">
+          <div class="card-title sky">🔤 Grammar & Structures</div>
+          ${grammarHTML}
+        </div>
+
+        <div class="card" style="animation-delay:0.19s">
+          <div class="card-title green">🎙️ Audio Recordings</div>
+          <div class="recordings-list">${recordingsHTML}</div>
+        </div>
+
+      </div>
+    </div>`;
 }
 
-// ── SHOW STATES ────────────────────────────────────────────────────────────
+// ── SESSION LIST (no ?id) ──────────────────────────────────────────────────
+function renderList(sessions) {
+  document.title = 'Sessions — Freesize English';
+  const items = sessions.map(s => `
+    <a class="session-list-item" href="?id=${esc(s.id)}">
+      <span class="sli-id">${esc(s.id)}</span>
+      <span class="sli-date">${fmtDate(s.createdAt)}</span>
+      <span class="sli-arrow">→</span>
+    </a>`).join('');
+
+  document.getElementById('app').innerHTML = `
+    <div class="center-wrap">
+      <div class="session-list">
+        <h2>📋 All Sessions</h2>
+        <div class="session-list-items">${items || '<p style="color:var(--muted);font-family:Quicksand,sans-serif;">No sessions found.</p>'}</div>
+      </div>
+    </div>`;
+}
+
+// ── STATES ─────────────────────────────────────────────────────────────────
 function showLoader() {
   document.getElementById('app').innerHTML = `
-    <div class="loader-wrap">
+    <div class="center-wrap">
       <div class="loader-spinner"></div>
-      <div class="loader-text">Loading session...</div>
+      <div class="loader-text">Loading...</div>
     </div>`;
 }
 
 function showError(title, body) {
   document.getElementById('app').innerHTML = `
-    <div class="error-card">
-      <div class="emoji">😕</div>
-      <h2>${escHtml(title)}</h2>
-      <p>${body}</p>
+    <div class="center-wrap">
+      <div class="error-card">
+        <div class="emoji">😕</div>
+        <h2>${esc(title)}</h2>
+        <p>${body}</p>
+      </div>
     </div>`;
 }
 
 // ── MAIN ───────────────────────────────────────────────────────────────────
 async function main() {
   const id = getParam('id');
-
-  if (!id) {
-    showError('No session ID', `
-      Add <code>?id=YOUR_SESSION_ID</code> to the URL.<br><br>
-      Example: <code>session-viewer.html?id=lc_1234567890_abc12</code><br><br>
-      Or to load from a JSON file: <code>?file=my-session.json</code>
-    `);
-    return;
-  }
-
-  // Support ?file=path.json OR ?id=session_id (tries id.json)
-  const fileParam = getParam('file');
-  const jsonUrl   = fileParam || `${id}.json`;
-
   showLoader();
 
   try {
-    const res = await fetch(jsonUrl);
-    if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
-    const data = await res.json();
+    const res = await fetch('data/speaking-data.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status} — could not load data/speaking-data.json`);
+    const json = await res.json();
 
-    // Validate minimum structure
-    if (!data || typeof data !== 'object') throw new Error('Invalid JSON structure');
+    // Support both array and object formats
+    let sessions;
+    if (Array.isArray(json)) {
+      sessions = json;
+    } else if (typeof json === 'object') {
+      // object keyed by id → convert to array
+      sessions = Object.values(json);
+    } else {
+      throw new Error('speaking-data.json must be an array or object');
+    }
 
-    renderPage(data);
+    if (!id) {
+      // No ?id — show list of all sessions
+      renderList(sessions);
+      return;
+    }
+
+    // Find session by id
+    const session = sessions.find(s => String(s.id) === String(id));
+    if (!session) {
+      throw new Error(`Session with id "${id}" not found in speaking-data.json`);
+    }
+
+    renderPage(session);
+
   } catch (err) {
     showError('Could not load session', `
-      Failed to fetch <code>${escHtml(jsonUrl)}</code><br><br>
-      <strong>Error:</strong> ${escHtml(err.message)}<br><br>
-      Make sure the JSON file is in the same folder as this HTML and the server is running.
-      You can't open this file directly with <code>file://</code> — use a local server like
-      <code>npx serve .</code> or VS Code Live Server.
+      <strong>Error:</strong> ${esc(err.message)}<br><br>
+      Make sure <code>data/speaking-data.json</code> exists and you're running via a local server
+      (<code>npx serve .</code> or VS Code Live Server).
     `);
   }
 }
