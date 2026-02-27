@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREESIZE ENGLISH — Study Capture</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:        #1a1a1a;
+  --red:          #ea3324;
+  --red-dark:     #b71c1c;
+  --red-light:    #ffd5d5;
+  --red-pale:     #fff5f5;
+  --cream:        #fffef5;
+  --white:        #ffffff;
+  --yellow:       #ffd84d;
+  --yellow-pale:  #fffbe6;
+  --sky:          #72c8f0;
+  --sky-pale:     #eaf8ff;
+  --green:        #4caf50;
+  --green-pale:   #f0fff0;
+  --green-dark:   #2e7d32;
+  --orange-pale:  #feefdb;
+  --orange:       #fa9f33;
+  --muted:        #888;
+  --border:       2.5px solid var(--black);
+  --border-thick: 3px solid var(--black);
+  --shadow-sm:    3px 3px 0 var(--black);
+  --shadow-md:    4px 4px 0 var(--black);
+  --shadow-lg:    6px 6px 0 var(--black);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Fredoka', sans-serif; font-weight: 500;
+  background: var(--cream); color: var(--black);
+  min-height: 100vh; overflow-x: hidden;
+}
+
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 22px 22px; pointer-events: none; z-index: 0;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--red); border-bottom: var(--border-thick);
+  padding: 0 50px; height: 66px;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 100;
+}
+.logo {
+  font-weight: 700; font-size: 1.65rem; color: white;
+  letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+  text-decoration: none;
+}
+.header-tag {
+  background: var(--white); border: var(--border); border-radius: 50px;
+  padding: 5px 18px; font-weight: 700; font-size: 0.88rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── LAYOUT ── */
+.page {
+  max-width: 900px; margin: 0 auto;
+  padding: 40px 32px 100px;
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 24px;
+}
+
+/* ── STEP CARD ── */
+.step-card {
+  background: var(--white);
+  border: var(--border-thick); border-radius: 22px;
+  box-shadow: var(--shadow-md); overflow: hidden;
+}
+
+.step-head {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 24px;
+  border-bottom: var(--border);
+  background: var(--cream);
+}
+.step-num {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--red); color: white;
+  border: var(--border); box-shadow: var(--shadow-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
+}
+.step-title {
+  font-weight: 700; font-size: 1.1rem;
+}
+.step-body { padding: 22px 24px; }
+
+/* ── INPUTS ── */
+input[type="text"], textarea, select {
+  font-family: 'Quicksand', sans-serif; font-weight: 600;
+  font-size: 0.95rem; color: var(--black);
+  background: var(--white); border: var(--border); border-radius: 12px;
+  padding: 11px 16px; outline: none; width: 100%;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+input[type="text"]:focus, textarea:focus, select:focus {
+  box-shadow: var(--shadow-sm);
+}
+textarea { resize: vertical; min-height: 100px; line-height: 1.7; }
+
+.input-row { display: flex; gap: 10px; align-items: flex-start; }
+.input-row input { flex: 1; }
+
+.field-label {
+  font-family: 'Quicksand', sans-serif; font-weight: 700;
+  font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 7px;
+}
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ── TRANSCRIPT DISPLAY ── */
+.transcript-display {
+  font-family: 'Quicksand', sans-serif; font-weight: 600;
+  font-size: 0.95rem; line-height: 1.8; color: #555;
+  background: var(--red-pale); border: var(--border); border-radius: 12px;
+  padding: 14px 18px; min-height: 80px;
+  margin-bottom: 12px; white-space: pre-wrap;
+}
+.transcript-display.empty { color: var(--muted); font-style: italic; }
+
+/* ── BUTTONS ── */
+.btn {
+  font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem;
+  padding: 10px 22px; border: var(--border-thick); border-radius: 50px;
+  box-shadow: var(--shadow-sm); cursor: pointer;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: transform 0.12s, box-shadow 0.12s;
+  white-space: nowrap; text-decoration: none;
+}
+.btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+.btn:active { transform: translate(1px,1px); box-shadow: none; }
+.btn:disabled { opacity: 0.4; pointer-events: none; }
+
+.btn-red    { background: var(--red);    color: white; }
+.btn-green  { background: var(--green);  color: white; }
+.btn-yellow { background: var(--yellow); color: var(--black); }
+.btn-sky    { background: var(--sky-pale); color: var(--black); }
+.btn-white  { background: var(--white);  color: var(--black); }
+.btn-export { background: var(--red); color: white; font-size: 1.1rem; padding: 13px 32px; box-shadow: var(--shadow-md); }
+.btn-export:hover { box-shadow: var(--shadow-lg); }
+
+/* ── LANG SELECT ── */
+.lang-row {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;
+}
+.lang-row select { width: auto; flex-shrink: 0; }
+
+/* ── RECORDER CARD ── */
+.recorder-inner {
+  background: var(--red-pale); border: var(--border); border-radius: 14px;
+  padding: 18px 20px;
+}
+.rec-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+.rec-dot {
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--muted); border: var(--border); flex-shrink: 0;
+  transition: background 0.3s;
+}
+.rec-dot.active {
+  background: var(--red);
+  animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.rec-timer {
+  font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.2rem;
+  min-width: 54px; color: var(--black);
+}
+
+/* ── STT OUTPUT ── */
+.stt-box {
+  font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.92rem;
+  line-height: 1.7; color: var(--muted);
+  background: var(--white); border: var(--border); border-radius: 10px;
+  padding: 12px 16px; min-height: 56px; margin-bottom: 14px;
+  white-space: pre-wrap;
+}
+.stt-box.has-text { color: var(--black); }
+
+/* ── RECORDINGS LIST ── */
+.recordings-list { display: flex; flex-direction: column; gap: 10px; }
+.rec-item {
+  background: var(--white); border: var(--border); border-radius: 14px;
+  padding: 12px 16px; display: flex; align-items: center; gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.rec-item-num {
+  background: var(--red); color: white;
+  border: var(--border); border-radius: 50px;
+  padding: 2px 12px; font-weight: 700; font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.rec-item audio {
+  flex: 1; height: 32px;
+  border-radius: 8px; min-width: 0;
+}
+.rec-item-stt {
+  font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: var(--muted); max-width: 160px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  flex-shrink: 1;
+}
+.rec-actions { display: flex; gap: 6px; flex-shrink: 0; }
+.btn-icon {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: var(--border); background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 0.9rem;
+  box-shadow: var(--shadow-sm); transition: transform 0.1s, box-shadow 0.1s;
+}
+.btn-icon:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
+.btn-icon.del { background: var(--red-pale); }
+.btn-icon.dl  { background: var(--green-pale); }
+
+/* ── STATUS ── */
+.status-msg {
+  font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.85rem;
+  padding: 9px 16px; border-radius: 10px; margin-top: 10px;
+  border: var(--border); display: none;
+}
+.status-msg.show { display: block; }
+.status-msg.info    { background: var(--yellow-pale); color: #7a5c00; }
+.status-msg.success { background: var(--green-pale);  color: var(--green-dark); }
+.status-msg.error   { background: var(--red-pale);    color: var(--red-dark); }
+
+/* ── EXPORT ── */
+.export-box {
+  background: var(--yellow-pale); border: var(--border-thick); border-radius: 22px;
+  box-shadow: var(--shadow-md); padding: 28px 28px;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+}
+.export-info { flex: 1; }
+.export-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+.export-info p  { font-family: 'Quicksand', sans-serif; font-size: 0.85rem; color: #666; font-weight: 600; }
+
+/* JSON preview */
+.json-preview {
+  background: var(--black); color: #a8ff78;
+  font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.78rem;
+  border: var(--border-thick); border-radius: 14px;
+  padding: 16px 18px; line-height: 1.8;
+  white-space: pre-wrap; overflow-x: auto; max-height: 280px; overflow-y: auto;
+  display: none; margin-top: 16px;
+}
+.json-preview.show { display: block; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--black); color: rgba(255,255,255,0.6);
+  padding: 24px 50px; text-align: center; position: relative; z-index: 1;
+  margin-top: 0;
+}
+footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
+footer p { font-size: 0.88rem; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  header { padding: 0 16px; }
+  .page { padding: 20px 14px 80px; }
+  .step-body { padding: 16px; }
+  .two-col { grid-template-columns: 1fr; }
+  .input-row { flex-direction: column; }
+  .export-box { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">🔴 FREESIZE ENGLISH</a>
+  <div class="header-tag">Study Capture</div>
+</header>
+
+<div class="page">
+
+  <!-- STEP 1 — VIDEO URL -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">1</div>
+      <div class="step-title">🎬 Video Link</div>
+    </div>
+    <div class="step-body">
+      <div class="field-label">YouTube / TikTok / Douyin URL</div>
+      <div class="input-row">
+        <input type="text" id="videoUrl" placeholder="Paste video URL here...">
+        <button class="btn btn-red" onclick="fetchTranscript()">⚡ Fetch</button>
+      </div>
+      <div id="urlStatus" class="status-msg"></div>
+    </div>
+  </div>
+
+  <!-- STEP 2 — TRANSCRIPT -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">2</div>
+      <div class="step-title">📝 Transcript</div>
+    </div>
+    <div class="step-body">
+      <div id="transcriptDisplay" class="transcript-display empty">
+        Transcript will appear here — or paste manually below ↓
+      </div>
+      <div class="field-label">Paste manually (TikTok / Douyin)</div>
+      <textarea id="transcriptManual" placeholder="Paste transcript here..."></textarea>
+    </div>
+  </div>
+
+  <!-- STEP 3 — VOCAB & GRAMMAR -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">3</div>
+      <div class="step-title">📚 Vocabulary & Grammar</div>
+    </div>
+    <div class="step-body">
+      <div class="two-col">
+        <div>
+          <div class="field-label">Vocabulary — words you caught</div>
+          <textarea id="vocabulary" placeholder="e.g. pork belly, crisp up, brush onto..." style="min-height:120px;"></textarea>
+        </div>
+        <div>
+          <div class="field-label">Grammar & Structures</div>
+          <textarea id="grammar" placeholder="e.g. While we wait for...we're gonna...; I'm V-ing" style="min-height:120px;"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 — RECORDING -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">4</div>
+      <div class="step-title">🎙️ Audio Recording</div>
+    </div>
+    <div class="step-body">
+      <div class="lang-row">
+        <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.82rem;color:var(--muted);">STT LANGUAGE:</span>
+        <select id="sttLang">
+          <option value="en-US" selected>🇺🇸 English (US)</option>
+          <option value="en-GB">🇬🇧 English (UK)</option>
+          <option value="en-AU">🇦🇺 English (AU)</option>
+          <option value="vi-VN">🇻🇳 Vietnamese</option>
+          <option value="zh-CN">🇨🇳 Chinese (Mandarin)</option>
+          <option value="zh-TW">🇹🇼 Chinese (Traditional)</option>
+          <option value="ja-JP">🇯🇵 Japanese</option>
+          <option value="ko-KR">🇰🇷 Korean</option>
+          <option value="fr-FR">🇫🇷 French</option>
+          <option value="es-ES">🇪🇸 Spanish</option>
+          <option value="de-DE">🇩🇪 German</option>
+        </select>
+      </div>
+
+      <div class="recorder-inner">
+        <div class="rec-controls">
+          <div class="rec-dot" id="recDot"></div>
+          <div class="rec-timer" id="recTimer">00:00</div>
+          <button class="btn btn-red" id="btnRec" onclick="toggleRecording()">● REC</button>
+          <button class="btn btn-white" id="btnStop" onclick="stopRecording()" disabled>■ Stop</button>
+        </div>
+        <div id="sttOutput" class="stt-box">Speech-to-text appears here while recording...</div>
+        <div id="recStatus" class="status-msg"></div>
+      </div>
+
+      <div id="recordingsList" class="recordings-list" style="margin-top:14px;"></div>
+    </div>
+  </div>
+
+  <!-- STEP 5 — GITHUB CONFIG -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">5</div>
+      <div class="step-title">🔑 GitHub Config</div>
+      <button class="btn btn-white" style="margin-left:auto;font-size:0.8rem;padding:6px 14px;" onclick="toggleGhConfig()">⚙ Config</button>
+    </div>
+    <div class="step-body" id="ghConfigBody" style="display:none;">
+      <div style="background:var(--yellow-pale);border:var(--border);border-radius:12px;padding:14px 16px;margin-bottom:16px;">
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.85rem;margin-bottom:8px;">🔐 Cách lấy Token:</div>
+        <div style="font-family:'Quicksand',sans-serif;font-size:0.82rem;line-height:1.7;color:#555;">
+          GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)<br>
+          → Generate new token → tick <strong>repo</strong> → Copy token
+        </div>
+      </div>
+      <div class="two-col" style="gap:12px;">
+        <div>
+          <div class="field-label">GitHub Username</div>
+          <input type="text" id="ghUser" placeholder="e.g. freesizeenglish">
+        </div>
+        <div>
+          <div class="field-label">Repository Name</div>
+          <input type="text" id="ghRepo" placeholder="e.g. freesizeenglish.github.io">
+        </div>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="field-label">Personal Access Token</div>
+        <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+      </div>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn btn-green" onclick="saveGhConfig()">💾 Save Config</button>
+        <button class="btn btn-white" onclick="testGhConnection()">🔌 Test Connection</button>
+      </div>
+      <div id="ghConfigStatus" class="status-msg"></div>
+    </div>
+    <!-- Config summary (always visible) -->
+    <div id="ghConfigSummary" style="padding:0 24px 16px;display:none;">
+      <div style="font-family:'Quicksand',sans-serif;font-size:0.85rem;font-weight:600;color:var(--muted);">
+        Connected: <span id="ghSummaryText" style="color:var(--green-dark);font-weight:700;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 6 — PUSH TO GITHUB -->
+  <div class="export-box">
+    <div class="export-info">
+      <h3>🚀 Push to GitHub</h3>
+      <p>Đọc <code style="background:var(--red-pale);padding:1px 7px;border-radius:6px;font-size:0.82rem;">data/speaking-data.json</code> từ repo → append session mới → push thẳng lên GitHub. ID tự tăng.</p>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <button class="btn btn-sky" onclick="previewJSON()">👁 Preview</button>
+      <button class="btn btn-export" onclick="pushToGitHub()">🚀 Push to GitHub</button>
+    </div>
+  </div>
+
+  <div id="jsonPreview" class="json-preview"></div>
+  <div id="exportStatus" class="status-msg"></div>
+
+</div>
+
+<footer>
+  <p class="brand">FREESIZE ENGLISH</p>
+  <p>Capture · Study · Remember</p>
+</footer>
+
+<script>
+// ── STATE ──────────────────────────────────────────────────────────────────
+let recordings   = [];  // {index, blob, url, sttText, timestamp, filename}
+let mediaRec     = null;
+let audioChunks  = [];
+let isRecording  = false;
+let timerInt     = null;
+let recSecs      = 0;
+let speechRec    = null;
+let currentSTT   = '';
+
+// ── TRANSCRIPT FETCH ───────────────────────────────────────────────────────
+async function fetchTranscript() {
+  const url = document.getElementById('videoUrl').value.trim();
+  if (!url) return showStatus('urlStatus', 'Paste a video URL first!', 'error');
+
+  const display = document.getElementById('transcriptDisplay');
+  display.className = 'transcript-display empty';
+  display.textContent = 'Fetching...';
+  showStatus('urlStatus', 'Detecting platform...', 'info');
+
+  const isYT = url.includes('youtube.com') || url.includes('youtu.be');
+  if (!isYT) {
+    display.className = 'transcript-display empty';
+    display.textContent = 'TikTok / Douyin detected — auto-fetch unavailable due to platform restrictions. Paste transcript manually below ↓';
+    showStatus('urlStatus', 'Link saved. Paste transcript manually ↓', 'info');
+    return;
+  }
+
+  // YouTube
+  let videoId = null;
+  for (const p of [/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/, /youtube\.com\/embed\/([^&\n?]+)/]) {
+    const m = url.match(p);
+    if (m) { videoId = m[1]; break; }
+  }
+  if (!videoId) {
+    showStatus('urlStatus', 'Invalid YouTube URL', 'error');
+    return;
+  }
+
+  try {
+    const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`;
+    const res  = await fetch(proxyUrl);
+    const html = await res.text();
+    const match = html.match(/"captionTracks":(\[.*?\])/);
+    if (!match) throw new Error('No captions found');
+
+    const tracks = JSON.parse(match[1]);
+    const track  = tracks.find(t => !t.kind) || tracks[0];
+    const capRes = await fetch(`https://corsproxy.io/?${encodeURIComponent(track.baseUrl)}`);
+    const xml    = await capRes.text();
+    const doc    = new DOMParser().parseFromString(xml, 'text/xml');
+    const texts  = doc.querySelectorAll('text');
+
+    const transcript = Array.from(texts).map(t =>
+      t.textContent.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#39;/g,"'").replace(/&quot;/g,'"')
+    ).join(' ');
+
+    display.className = 'transcript-display';
+    display.textContent = transcript;
+    document.getElementById('transcriptManual').value = transcript;
+    showStatus('urlStatus', `✓ Loaded (${texts.length} segments)`, 'success');
+  } catch(e) {
+    display.className = 'transcript-display empty';
+    display.textContent = 'Auto-fetch failed — paste manually below.';
+    showStatus('urlStatus', 'Auto-fetch failed', 'error');
+  }
+}
+
+// ── RECORDING ──────────────────────────────────────────────────────────────
+async function toggleRecording() {
+  isRecording ? stopRecording() : await startRecording();
+}
+
+async function startRecording() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRec     = new MediaRecorder(stream);
+    audioChunks  = [];
+    currentSTT   = '';
+
+    mediaRec.ondataavailable = e => audioChunks.push(e.data);
+    mediaRec.onstop = saveRecording;
+    mediaRec.start();
+    isRecording = true;
+
+    document.getElementById('recDot').classList.add('active');
+    document.getElementById('btnRec').textContent  = '⏸ Pause';
+    document.getElementById('btnStop').disabled    = false;
+
+    recSecs  = 0;
+    timerInt = setInterval(() => {
+      recSecs++;
+      const m = String(Math.floor(recSecs/60)).padStart(2,'0');
+      const s = String(recSecs%60).padStart(2,'0');
+      document.getElementById('recTimer').textContent = `${m}:${s}`;
+    }, 1000);
+
+    startSTT();
+    showStatus('recStatus', 'Recording... speak clearly 🎙️', 'info');
+  } catch(e) {
+    showStatus('recStatus', 'Microphone denied: ' + e.message, 'error');
+  }
+}
+
+function stopRecording() {
+  if (!mediaRec) return;
+  mediaRec.stop();
+  mediaRec.stream.getTracks().forEach(t => t.stop());
+  isRecording = false;
+  clearInterval(timerInt);
+  document.getElementById('recDot').classList.remove('active');
+  document.getElementById('btnRec').textContent = '● REC';
+  document.getElementById('btnStop').disabled   = true;
+  if (speechRec) { speechRec.stop(); speechRec = null; }
+}
+
+function saveRecording() {
+  const blob     = new Blob(audioChunks, { type: 'audio/webm' });
+  const url      = URL.createObjectURL(blob);
+  const idx      = recordings.length + 1;
+  const filename = `recordings/rec_${Date.now()}.webm`;
+
+  recordings.push({ index: idx, blob, url, sttText: currentSTT.trim(), timestamp: new Date().toISOString(), filename });
+  renderRecordings();
+  showStatus('recStatus', `✓ Recording #${idx} saved`, 'success');
+}
+
+function renderRecordings() {
+  const list = document.getElementById('recordingsList');
+  list.innerHTML = '';
+  recordings.forEach((rec, i) => {
+    const div = document.createElement('div');
+    div.className = 'rec-item';
+    div.innerHTML = `
+      <span class="rec-item-num">REC ${rec.index}</span>
+      <audio controls src="${rec.url}"></audio>
+      ${rec.sttText ? `<span class="rec-item-stt" title="${escHtml(rec.sttText)}">${escHtml(rec.sttText)}</span>` : ''}
+      <div class="rec-actions">
+        <button class="btn-icon dl" title="Download audio" onclick="downloadRec(${i})">⬇</button>
+        <button class="btn-icon del" title="Delete" onclick="deleteRec(${i})">✕</button>
+      </div>`;
+    list.appendChild(div);
+  });
+}
+
+function downloadRec(i) {
+  const rec = recordings[i];
+  const a   = document.createElement('a');
+  a.href     = rec.url;
+  a.download = `rec_${rec.index}_${Date.now()}.webm`;
+  a.click();
+}
+
+function deleteRec(i) {
+  recordings.splice(i, 1);
+  // Re-index
+  recordings.forEach((r, idx) => { r.index = idx + 1; });
+  renderRecordings();
+}
+
+// ── SPEECH TO TEXT ─────────────────────────────────────────────────────────
+function startSTT() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) { document.getElementById('sttOutput').textContent = 'STT not supported — use Chrome.'; return; }
+
+  speechRec = new SR();
+  speechRec.continuous    = true;
+  speechRec.interimResults = true;
+  speechRec.lang          = document.getElementById('sttLang').value;
+
+  let finalText = '';
+
+  speechRec.onresult = e => {
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      e.results[i].isFinal ? (finalText += e.results[i][0].transcript + ' ') : (interim += e.results[i][0].transcript);
+    }
+    currentSTT = finalText + interim;
+    const el = document.getElementById('sttOutput');
+    el.className = 'stt-box has-text';
+    el.textContent = currentSTT || '...listening';
+  };
+
+  speechRec.onerror = e => { if (e.error !== 'no-speech') document.getElementById('sttOutput').textContent = 'STT error: ' + e.error; };
+  speechRec.onend   = () => { if (isRecording) { try { speechRec.start(); } catch(e){} } };
+  speechRec.start();
+}
+
+// ── GITHUB CONFIG ──────────────────────────────────────────────────────────
+const LS = {
+  get: k      => { try { return localStorage.getItem(k); } catch{ return null; } },
+  set: (k, v) => { try { localStorage.setItem(k, v); } catch{} },
+};
+
+const GH_FILE = 'data/speaking-data.json';
+
+function getGhCfg() {
+  return {
+    user:  LS.get('gh_user')  || '',
+    repo:  LS.get('gh_repo')  || '',
+    token: LS.get('gh_token') || '',
+  };
+}
+
+function toggleGhConfig() {
+  const body = document.getElementById('ghConfigBody');
+  body.style.display = body.style.display === 'none' ? 'block' : 'none';
+}
+
+function saveGhConfig() {
+  const user  = document.getElementById('ghUser').value.trim();
+  const repo  = document.getElementById('ghRepo').value.trim();
+  const token = document.getElementById('ghToken').value.trim();
+  if (!user || !repo || !token) return showStatus('ghConfigStatus', 'Fill in all 3 fields!', 'error');
+
+  LS.set('gh_user',  user);
+  LS.set('gh_repo',  repo);
+  LS.set('gh_token', token);
+  showStatus('ghConfigStatus', '✓ Config saved to localStorage', 'success');
+  updateGhSummary();
+}
+
+function updateGhSummary() {
+  const cfg = getGhCfg();
+  const summary = document.getElementById('ghConfigSummary');
+  const text    = document.getElementById('ghSummaryText');
+  if (cfg.user && cfg.repo && cfg.token) {
+    text.textContent  = `${cfg.user}/${cfg.repo}`;
+    summary.style.display = 'block';
+  } else {
+    summary.style.display = 'none';
+  }
+}
+
+async function testGhConnection() {
+  const cfg = getGhCfg();
+  if (!cfg.user || !cfg.repo || !cfg.token) return showStatus('ghConfigStatus', 'Save config first!', 'error');
+  showStatus('ghConfigStatus', 'Testing...', 'info');
+  try {
+    const res = await ghGetFile();
+    showStatus('ghConfigStatus', `✓ Connected! File exists with ${res.content.length > 0 ? 'data' : 'empty content'}.`, 'success');
+  } catch(e) {
+    if (e.message === 'NOT_FOUND') {
+      showStatus('ghConfigStatus', '✓ Connected! File does not exist yet — will be created on first push.', 'success');
+    } else {
+      showStatus('ghConfigStatus', 'Error: ' + e.message, 'error');
+    }
+  }
+}
+
+// ── GITHUB API HELPERS ─────────────────────────────────────────────────────
+
+async function ghGetFile() {
+  const cfg = getGhCfg();
+  const res = await fetch(
+    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${GH_FILE}`,
+    { headers: { Authorization: `token ${cfg.token}`, Accept: 'application/vnd.github.v3+json' } }
+  );
+  if (res.status === 404) throw new Error('NOT_FOUND');
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `HTTP ${res.status}`);
+  }
+  return res.json(); // { content (base64), sha, ... }
+}
+
+async function ghPutFile(content, sha, commitMsg) {
+  const cfg = getGhCfg();
+  const body = {
+    message: commitMsg,
+    content: btoa(unescape(encodeURIComponent(content))), // utf-8 safe base64
+    ...(sha ? { sha } : {}),
+  };
+  const res = await fetch(
+    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${GH_FILE}`,
+    {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${cfg.token}`,
+        Accept: 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    }
+  );
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error(err.message || `HTTP ${res.status}`);
+  }
+  return res.json();
+}
+
+// ── BUILD SESSION ──────────────────────────────────────────────────────────
+function buildSession(nextId) {
+  const transcript = document.getElementById('transcriptManual').value.trim() ||
+    (document.getElementById('transcriptDisplay').textContent !== 'Transcript will appear here — or paste manually below ↓'
+      ? document.getElementById('transcriptDisplay').textContent.trim() : '');
+
+  let recField = '';
+  if (recordings.length === 1) recField = recordings[0].filename;
+  else if (recordings.length > 1) recField = recordings.map(r => r.filename).join(', ');
+
+  return {
+    id:               String(nextId),
+    createdAt:        new Date().toISOString(),
+    videoUrl:         document.getElementById('videoUrl').value.trim(),
+    transcript,
+    vocabulary:       document.getElementById('vocabulary').value.trim(),
+    grammarStructures:document.getElementById('grammar').value.trim(),
+    recordings:       recField,
+  };
+}
+
+// ── PREVIEW ────────────────────────────────────────────────────────────────
+async function previewJSON() {
+  const session = buildSession('?');
+  const preview = document.getElementById('jsonPreview');
+  preview.textContent = JSON.stringify(session, null, 2);
+  preview.classList.toggle('show');
+}
+
+// ── PUSH TO GITHUB ─────────────────────────────────────────────────────────
+async function pushToGitHub() {
+  const cfg = getGhCfg();
+  if (!cfg.user || !cfg.repo || !cfg.token) {
+    showStatus('exportStatus', 'Set up GitHub config first (Step 5) ↑', 'error'); return;
+  }
+
+  showStatus('exportStatus', '📡 Reading current file from GitHub...', 'info');
+
+  try {
+    // 1. Try to get existing file + sha
+    let existing = [];
+    let sha      = null;
+
+    try {
+      const fileData   = await ghGetFile();
+      sha              = fileData.sha;
+      const decoded    = decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, ''))));
+      const parsed     = JSON.parse(decoded);
+      existing         = Array.isArray(parsed) ? parsed : [parsed];
+    } catch(e) {
+      if (e.message !== 'NOT_FOUND') throw e;
+      // File doesn't exist → create new
+    }
+
+    // 2. Compute next ID
+    const maxId  = existing.reduce((m, s) => Math.max(m, parseInt(s.id) || 0), 0);
+    const nextId = maxId + 1;
+    const session = buildSession(nextId);
+    existing.push(session);
+
+    // 3. Push
+    showStatus('exportStatus', `📤 Pushing session #${nextId}...`, 'info');
+    const newContent = JSON.stringify(existing, null, 2);
+    await ghPutFile(newContent, sha, `Add session ${nextId}: ${session.videoUrl.slice(0,60)}`);
+
+    showStatus('exportStatus',
+      `✅ Pushed! Session #${nextId} added. Total: ${existing.length} sessions in data/speaking-data.json`,
+      'success'
+    );
+
+    // Update preview if open
+    const preview = document.getElementById('jsonPreview');
+    if (preview.classList.contains('show')) preview.textContent = JSON.stringify(session, null, 2);
+
+  } catch(e) {
+    showStatus('exportStatus', '❌ Error: ' + e.message, 'error');
+    console.error(e);
+  }
+}
+
+// ── HELPERS ────────────────────────────────────────────────────────────────
+function showStatus(id, msg, type) {
+  const el = document.getElementById(id);
+  el.textContent = msg; el.className = `status-msg show ${type}`;
+  if (type !== 'info') setTimeout(() => el.classList.remove('show'), 6000);
+}
+
+function escHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── LIVE TRANSCRIPT PREVIEW ────────────────────────────────────────────────
+document.getElementById('transcriptManual').addEventListener('input', e => {
+  const d = document.getElementById('transcriptDisplay');
+  if (e.target.value.trim()) {
+    d.className   = 'transcript-display';
+    d.textContent = e.target.value;
+  } else {
+    d.className   = 'transcript-display empty';
+    d.textContent = 'Transcript will appear here — or paste manually below ↓';
+  }
+});
+
+// ── LOAD SAVED CONFIG ON START ─────────────────────────────────────────────
+(function() {
+  const cfg = getGhCfg();
+  if (cfg.user)  document.getElementById('ghUser').value  = cfg.user;
+  if (cfg.repo)  document.getElementById('ghRepo').value  = cfg.repo;
+  if (cfg.token) document.getElementById('ghToken').value = cfg.token;
+  updateGhSummary();
+})();
+</script>
+
+</body>
+</html>
