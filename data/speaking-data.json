@@ -1,0 +1,24 @@
+{
+  "id": "l",
+  "createdAt": "2026-02-27T04:13:38.257Z",
+  "videoUrl": "",
+  "transcript": "This is hot honey pork belly. We add some peppercorns, some bay leaves. While we wait for the pork belly to poach, we're gonna make our hot honey. Half a cup of hot honey and a fourth cup of rice vinegar. This is heated up to 400. Let it crisp up. So after 10 minutes, I'm taking the first fry out, and then I'm bringing the heat up to 450. And take this hot honey and brush it right onto the pork belly. Sweet with a crunch. Perfect.",
+  "vocabulary": "pork belly, peppercorns, bay leaves, poach, is heated up to, crisp up, bring the heat up to, brush onto",
+  "grammarStructures": "While we wait for...we're gonna...; I'm V-ing",
+  "recordings": [
+    {
+      "id": "rec_1",
+      "index": 1,
+      "timestamp": "2026-02-27T02:49:09.098Z",
+      "sttText": "",
+      "audioFile": "20_mzufr_rec1.webm",
+      "mimeType": "audio/webm"
+    }
+  ],
+  "meta": {
+    "recordingCount": 1,
+    "exportedBy": "LangCapture v1.2",
+    "sttLanguage": "en-US",
+    "note": "Place audio .webm files in the same folder as this JSON."
+  }
+}
