@@ -1,472 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      background-color: #f4f4f4;
-    }
-
-    /* Header */
-    header {
-      background-color: #ea3324;
-      color: white;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 50px;
-      padding-right: 50px;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-    /* Hide menu in responsive mode */
-    nav {
-      display: flex;
-    }
-
-    /* Responsive cho màn hình nhỏ hơn 768px */
-    @media screen and (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-      }
-
-      nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #ea3324;
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      nav.show {
-        display: flex;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-
-      nav ul li a {
-        font-size: 1rem;
-      }
-    }
-
-    /* Main Content */
-    .main-content {
-      flex: 1;
-      padding: 20px;
-      text-align: center;
-      background-image: url('');
-      background-size: cover; /* Phủ kín khung */
-      background-position: center; /* Căn giữa ảnh */
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 100px;
-    }
-
-    .main-content img {
-      width: 80px;
-      height: auto;
-    }
-
-    .logos-and-title {
-      
-      display: flex;
-      justify-content: center; /* Phân tách khoảng cách giữa các phần tử */
-      align-items: center;/* Căn giữa theo chiều dọc */
-      width: 100%;
-      
-      
-    }
-
-    .logos-and-title .logo {
-      width: 100%;
-      height: auto;
-      max-height: 800px;
-      object-fit: contain;
-    }
-    
-
-    .thumbnail-section {
-      margin-top: 30px;
-      text-align: left;
-      
-      
-    }
-
-    .thumbnail-section h2 {
-      display: inline-block;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      
-      margin-left: 90px; /* Cách lề trái */
-      
-      padding: 10px;
-      border-radius: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-weight: bold;
-
-    }
-    .thumbnail-section h3 {
-      font-size: 1 rem;
-      margin-bottom: 10px;
-      color: #333;
-      padding-left: 100px;
-    }
-    
-    .thumbnails {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .thumbnail {
-      width: 300px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
-      background-color: #ffffff;
-      
-    }
-
-    .thumbnail:hover {
-      transform: translateY(-5px);
-    }
-
-    .thumbnail img {
-      width: 100%;
-      height: auto;
-    }
-
-    .thumbnail .info {
-      padding: 10px;
-      background: #FFFFFF;
-    }
-
-    .thumbnail .info h4 {
-      margin-bottom: 5px;
-      font-size: 1rem;
-      color: #333;
-    }
-
-    .thumbnail .info p {
-      font-size: 0.875rem;
-      color: #666;
-    }
-
-    /* Tag New Words */
-    .new-words {
-      position: fixed;
-      top: 50%;
-      right: 20px;
-      transform: translateY(-50%);
-      background-color: #ffeb3b;
-      padding: 10px;
-      border-radius: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #ea3324;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-
-    footer .social-icons {
-      margin-top: 10px;
-    }
-
-    footer .social-icons a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: white;
-    }
-    .thumbnail a,
-    .new-words a {
-      text-decoration: none; /* Loại bỏ gạch chân */
-      color: inherit; /* Sử dụng màu chữ hiện tại */
-    }
-
-    .thumbnail a:hover,
-    .new-words a:hover {
-      text-decoration: none; /* Không gạch chân khi hover */
-      color: #ff5722; /* Đổi màu chữ khi hover (chọn màu tùy ý) */
-    }
-    
-/* Responsive cho màn hình nhỏ hơn 768px */
-@media screen and (max-width: 768px) {
-    /* Header */
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    /* Logos and Title */
-    .logos-and-title {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .logos-and-title .logo {
-    
-        max-height: 200px;
-        margin: 10px 0;
-        
-    }
-
-    /* Thumbnails */
-    
-    .thumbnails {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .thumbnail {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 15px;
-    }
-
-    /* Typography */
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    .thumbnail-section h2 {
-        font-size: 1.2rem;
-        margin-left: 15px;
-    }
-
-    .thumbnail-section h3 {
-        font-size: 0.9rem;
-        padding-left: 20px;
-    }
-
-    .thumbnail .info h4 {
-        font-size: 0.9rem;
-    }
-
-    .thumbnail .info p {
-        font-size: 0.8rem;
-    }
-
-    /* New Words Tag */
-    .new-words {
-         
-        right: 10px;
-        padding: 8px;
-    }
-}
-
-/* Responsive cho màn hình rất nhỏ */
-@media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 1.3rem;
-    }
-
-    .logos-and-title .logo {
-    
-        
-        max-height: 150px;
-    }
-
-    .thumbnail-section h2 {
-        font-size: 1rem;
-        margin-left: 10px;
-    }
-
-    .thumbnail-section h3 {
-        font-size: 0.8rem;
-        padding-left: 15px;
-    }
-}
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <h1>SCRIPT 60s</h1>
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      &#9776; <!-- Biểu tượng ba gạch -->
-    </button>
-    <nav>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="shop.html">Shop</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Logos and Title Section -->
-  <div class="logos-and-title">
-      <img src="assets/homepage.png" alt="Logo" class="logo">
-      
-  </div>
-
-  <!-- Main Content -->
-  <div class="main-content">
-    
-
-    <div class="thumbnail-section">
-      
-      
-      <h2 style="background-color: #feefdb; color: #fa9f33;">Everyday Activities 📚</h2>
-      
-      <div class="thumbnails" id="thumbnails-container-3">
-      </div>
-      
-      <h2 style="background-color: #d8ebff; color: #1e86fb;">Ielts Writing ✍️</h2>
-      <h3>TASK 1</h3>
-      <div class="thumbnails" id="thumbnails-container-4">
-      </div>
-      <h3>TASK 2</h3>
-      <div class="thumbnails" id="thumbnails-container-5">
-      </div>
-    </div>
-  </div>
-  
-  <!-- New Words Tag -->
-  <div class="new-words">
-    <a href="newword.html">New Words</a>
-  </div>
-  
-  <!-- Footer -->
-  <footer>
-    <p>Script60s</p>
-    <p>Learn English through images and videos</p>
-    <div class="social-icons">
-      <a href="#">Facebook</a>
-      <a href="#">YouTube</a>
-      <a href="#">TikTok</a>
-      <a href="#">Instagram</a>
-    </div>
-  </footer>
-  <script>
-    // JavaScript để điều khiển nút hamburger menu
-    document.addEventListener('DOMContentLoaded', function () {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const nav = document.querySelector('nav');
-
-      menuToggle.addEventListener('click', function () {
-        nav.classList.toggle('show');
-
-        // Chuyển đổi biểu tượng giữa ba gạch và dấu X
-        if (nav.classList.contains('show')) {
-          menuToggle.innerHTML = '&#10005;'; // Biểu tượng X
-        } else {
-          menuToggle.innerHTML = '&#9776;'; // Biểu tượng ba gạch
-        }
-      });
-    });
-  </script>
-  <script>
-  async function loadThumbnails(containerId, jsonPath, startId = 1, endId = null) {
-    const container = document.getElementById(containerId);
-    try {
-      const response = await fetch(jsonPath);
-      const data = await response.json();
-
-      // Nếu có endId thì lọc theo khoảng, nếu không thì lấy từ startId đến hết
-      const filteredData = data.filter(item => {
-        if (endId) {
-          return item.id >= startId && item.id <= endId;
-        } else {
-          return item.id >= startId;
-        }
-      });
-
-      filteredData.forEach(item => {
-        const thumbnail = document.createElement('div');
-        thumbnail.className = 'thumbnail';
-        thumbnail.innerHTML = `
-          <a href="${item.htmlLink}">
-            <img src="${item.thumbnail}" alt="${item.title} Thumbnail">
-            <div class="info">
-              <h4>${item.title}</h4>
-              <p>${item.description || ""}</p>
-            </div>
-          </a>
-        `;
-        container.appendChild(thumbnail);
-      });
-    } catch (error) {
-      console.error('Error fetching JSON data:', error);
-      container.innerHTML = '<p>Failed to load thumbnails.</p>';
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREESIZE ENGLISH</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:       #1a1a1a;
+    --red:         #ea3324;
+    --red-dark:    #b71c1c;
+    --red-light:   #ffd5d5;
+    --red-pale:    #fff5f5;
+    --cream:       #fffef5;
+    --white:       #ffffff;
+    --yellow:      #ffd84d;
+    --yellow-pale: #fffbe6;
+    --orange-pale: #feefdb;
+    --orange:      #fa9f33;
+    --blue-pale:   #d8ebff;
+    --blue:        #1e86fb;
+    --sky-pale:    #eaf8ff;
+    --border:      2.5px solid var(--black);
+    --border-thick:3px solid var(--black);
+    --shadow-sm:   3px 3px 0 var(--black);
+    --shadow-md:   4px 4px 0 var(--black);
+    --shadow-lg:   6px 6px 0 var(--black);
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    loadThumbnails('thumbnails-container-3', 'data/thumb-book.json', 1);
-    loadThumbnails('thumbnails-container-4', 'data/thumb-writing.json', 1);
-    loadThumbnails('thumbnails-container-5', 'data/thumb-writing-2.json', 1); // load từ 1 đến hết
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    background: var(--cream);
+    color: var(--black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* dot grid texture */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none; z-index: 0;
+  }
+
+  /* ── HEADER ───────────────────────────────────── */
+  header {
+    background: var(--red);
+    border-bottom: var(--border-thick);
+    padding: 0 50px; height: 66px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+  }
+
+  header h1 {
+    font-weight: 700; font-size: 1.7rem; color: white;
+    letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  }
+
+  .menu-toggle {
+    display: none; font-size: 24px;
+    background: none; border: none; color: white; cursor: pointer;
+  }
+
+  nav ul {
+    list-style: none; display: flex; gap: 8px; align-items: center;
+  }
+
+  nav ul li a {
+    text-decoration: none; color: var(--black);
+    font-weight: 700; font-size: 0.95rem;
+    background: var(--white); border: var(--border); border-radius: 50px;
+    padding: 6px 18px; display: inline-block;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+
+  /* ── HERO ─────────────────────────────────────── */
+  .hero {
+    background: var(--red);
+    border-bottom: var(--border-thick);
+    padding: 56px 50px 52px;
+    text-align: center;
+    position: relative; z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--yellow); border: var(--border-thick); border-radius: 50px;
+    padding: 6px 22px; font-weight: 700; font-size: 0.85rem;
+    box-shadow: var(--shadow-sm); margin-bottom: 18px;
+    letter-spacing: 0.06em;
+  }
+
+  .hero h2 {
+    font-size: 3rem; font-weight: 700; color: white;
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+    line-height: 1.15; margin-bottom: 14px;
+  }
+
+  .hero p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem; font-weight: 600;
+    color: rgba(255,255,255,0.85); max-width: 480px; margin: 0 auto;
+  }
+
+  /* ── MAIN ─────────────────────────────────────── */
+  main {
+    flex: 1; position: relative; z-index: 1;
+    padding: 48px 56px 100px;
+    max-width: 1300px; margin: 0 auto; width: 100%;
+  }
+
+  /* ── SECTION HEADER ───────────────────────────── */
+  .section-header {
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 24px; margin-top: 48px;
+  }
+  .section-header:first-child { margin-top: 0; }
+
+  .section-title {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 1.25rem;
+    border: var(--border-thick); border-radius: 50px;
+    padding: 8px 26px; box-shadow: var(--shadow-md);
+  }
+  .section-title.orange { background: var(--orange-pale); color: var(--orange); }
+  .section-title.blue   { background: var(--blue-pale);   color: var(--blue); }
+  .section-title.red    { background: var(--red-light);   color: var(--red-dark); }
+
+  .section-divider {
+    flex: 1; height: 2.5px; background: var(--black);
+    border-radius: 2px;
+  }
+
+  .sub-label {
+    display: inline-block;
+    font-family: 'Quicksand', sans-serif; font-weight: 700;
+    font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
+    border: var(--border); border-radius: 50px;
+    padding: 4px 16px; box-shadow: var(--shadow-sm);
+    margin-bottom: 18px; margin-top: 6px;
+  }
+  .sub-label.task1 { background: var(--sky-pale); }
+  .sub-label.task2 { background: var(--yellow-pale); }
+
+  /* ── THUMBNAIL GRID ───────────────────────────── */
+  .thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+    margin-bottom: 8px;
+  }
+
+  .thumbnail {
+    background: var(--white);
+    border: var(--border-thick); border-radius: 18px;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: transform 0.14s, box-shadow 0.14s;
+    cursor: pointer;
+  }
+  .thumbnail:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-lg); }
+
+  .thumbnail a { text-decoration: none; color: inherit; display: block; }
+
+  /* emoji banner */
+  .thumb-emoji-banner {
+    height: 100px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+    border-bottom: var(--border);
+  }
+
+  /* alternating bg colors */
+  .thumbnail:nth-child(4n+1) .thumb-emoji-banner { background: var(--yellow-pale); }
+  .thumbnail:nth-child(4n+2) .thumb-emoji-banner { background: var(--red-light); }
+  .thumbnail:nth-child(4n+3) .thumb-emoji-banner { background: var(--sky-pale); }
+  .thumbnail:nth-child(4n+4) .thumb-emoji-banner { background: var(--orange-pale); }
+
+  .thumb-info {
+    padding: 14px 16px 16px;
+  }
+  .thumb-info h4 {
+    font-size: 1rem; font-weight: 700;
+    color: var(--black); margin-bottom: 5px; line-height: 1.35;
+  }
+  .thumb-info p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.82rem; font-weight: 600; color: #777;
+    line-height: 1.5;
+  }
+
+  /* loading skeleton */
+  .skeleton-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px; margin-bottom: 8px;
+  }
+  .skeleton-card {
+    background: var(--white); border: var(--border-thick); border-radius: 18px;
+    box-shadow: var(--shadow-md); overflow: hidden;
+    animation: shimmer 1.4s ease-in-out infinite;
+  }
+  .skeleton-banner { height: 100px; background: #eee; border-bottom: var(--border); }
+  .skeleton-body { padding: 14px 16px; }
+  .skeleton-line {
+    height: 14px; border-radius: 6px; background: #eee; margin-bottom: 8px;
+  }
+  .skeleton-line.short { width: 60%; }
+  @keyframes shimmer {
+    0%,100% { opacity: 1; } 50% { opacity: 0.5; }
+  }
+
+  /* ── FIXED NEW WORDS TAG ──────────────────────── */
+  .new-words {
+    position: fixed; top: 50%; right: 20px;
+    transform: translateY(-50%);
+    background: var(--yellow); border: var(--border-thick); border-radius: 20px;
+    padding: 10px 14px; box-shadow: var(--shadow-md);
+    font-weight: 700; font-size: 0.88rem; z-index: 50;
+    transition: transform 0.12s;
+    writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.05em;
+  }
+  .new-words:hover { transform: translateY(-50%) translate(-2px,-2px); }
+  .new-words a { text-decoration: none; color: var(--black); }
+
+  /* ── FOOTER ───────────────────────────────────── */
+  footer {
+    background: var(--black); color: rgba(255,255,255,0.65);
+    padding: 28px 50px; text-align: center;
+    position: relative; z-index: 1;
+  }
+  footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.3rem; margin-bottom: 5px; }
+  footer p { font-size: 0.9rem; font-weight: 500; margin-bottom: 3px; }
+  footer .social-icons { margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  footer .social-icons a {
+    text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.88rem;
+    background: var(--red-light); border: var(--border); border-radius: 50px;
+    padding: 5px 16px; box-shadow: var(--shadow-sm);
+    transition: transform 0.12s;
+  }
+  footer .social-icons a:hover { transform: translate(-1px,-2px); }
+
+  /* ── RESPONSIVE ───────────────────────────────── */
+  @media (max-width: 768px) {
+    header { padding: 0 16px; position: relative; }
+    .menu-toggle { display: block; }
+    nav {
+      display: none; position: absolute; top: 66px; left: 0; right: 0;
+      background: var(--red); border-bottom: var(--border);
+      padding: 12px 0; flex-direction: column; z-index: 99;
+    }
+    nav.show { display: flex; }
+    nav ul { flex-direction: column; align-items: center; gap: 8px; padding: 6px 0; }
+
+    .hero { padding: 36px 20px 32px; }
+    .hero h2 { font-size: 2rem; }
+
+    main { padding: 28px 16px 80px; }
+
+    .thumbnails, .skeleton-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+    .thumb-emoji-banner { height: 80px; font-size: 2.2rem; }
+
+    .new-words { right: 10px; padding: 8px 10px; font-size: 0.8rem; }
+    footer { padding: 28px 20px; }
+  }
+
+  @media (max-width: 480px) {
+    .thumbnails, .skeleton-grid { grid-template-columns: 1fr 1fr; }
+    .hero h2 { font-size: 1.6rem; }
+    .section-title { font-size: 1.05rem; padding: 7px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>SCRIPT 60s</h1>
+  <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="shop.html">Shop</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🇬🇧 Learn English through videos</div>
+  <h2>FREESIZE ENGLISH</h2>
+  <p>Real English. Real content. One video at a time.</p>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- Everyday Activities -->
+  <div class="section-header">
+    <div class="section-title orange">📚 Everyday Activities</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="thumbnails" id="thumbnails-container-3"></div>
+
+  <!-- IELTS Writing -->
+  <div class="section-header">
+    <div class="section-title blue">✍️ IELTS Writing</div>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="sub-label task1">Task 1</div>
+  <div class="thumbnails" id="thumbnails-container-4"></div>
+
+  <div class="sub-label task2">Task 2</div>
+  <div class="thumbnails" id="thumbnails-container-5"></div>
+
+</main>
+
+<!-- FIXED TAG -->
+<div class="new-words">
+  <a href="newword.html">New Words</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="brand">SCRIPT 60s</p>
+  <p>Learn English through images and videos</p>
+  <div class="social-icons">
+    <a href="#">Facebook</a>
+    <a href="#">YouTube</a>
+    <a href="#">TikTok</a>
+    <a href="#">Instagram</a>
+  </div>
+</footer>
+
+<script>
+// ── HAMBURGER ──────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+  menuToggle.addEventListener('click', function () {
+    nav.classList.toggle('show');
+    menuToggle.innerHTML = nav.classList.contains('show') ? '&#10005;' : '&#9776;';
   });
+});
+
+// ── EMOJI POOL — assign based on title keywords ────────────────────────────
+const emojiMap = [
+  { keys: ['food','eat','cook','recipe','restaurant','lunch','dinner','breakfast','coffee','drink'], emoji: '🍜' },
+  { keys: ['travel','trip','vacation','holiday','flight','hotel','city','abroad'], emoji: '✈️' },
+  { keys: ['sport','gym','exercise','fitness','run','football','basketball','swim'], emoji: '⚽' },
+  { keys: ['work','job','office','meeting','business','career','company'], emoji: '💼' },
+  { keys: ['school','study','exam','university','class','education','learn'], emoji: '🎓' },
+  { keys: ['money','finance','bank','budget','save','invest'], emoji: '💰' },
+  { keys: ['health','hospital','doctor','medicine','body','sleep','mental'], emoji: '🏥' },
+  { keys: ['family','home','house','parent','child','kid','baby'], emoji: '🏠' },
+  { keys: ['music','song','concert','band','sing','playlist'], emoji: '🎵' },
+  { keys: ['movie','film','cinema','watch','show','series'], emoji: '🎬' },
+  { keys: ['nature','environment','plant','animal','ocean','forest'], emoji: '🌿' },
+  { keys: ['technology','tech','computer','app','phone','internet','ai'], emoji: '💻' },
+  { keys: ['fashion','clothes','style','outfit','shopping'], emoji: '👗' },
+  { keys: ['write','writing','essay','task','report','ielts','graph','chart','table','diagram','map'], emoji: '✍️' },
+  { keys: ['speak','speaking','conversation','talk','discuss'], emoji: '💬' },
+  { keys: ['read','reading','book','article','story'], emoji: '📖' },
+];
+
+const fallbackEmojis = ['📝','🎯','💡','🌟','🔥','⚡','🎈','🌈','🦋','🎪','🎭','🎨','🧩','🎲'];
+
+function pickEmoji(title, idx) {
+  const t = (title || '').toLowerCase();
+  for (const { keys, emoji } of emojiMap) {
+    if (keys.some(k => t.includes(k))) return emoji;
+  }
+  return fallbackEmojis[idx % fallbackEmojis.length];
+}
+
+// ── SKELETON LOADER ────────────────────────────────────────────────────────
+function showSkeletons(containerId, count = 4) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = Array.from({ length: count }, () => `
+    <div class="skeleton-card">
+      <div class="skeleton-banner"></div>
+      <div class="skeleton-body">
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line short"></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── LOAD THUMBNAILS ────────────────────────────────────────────────────────
+async function loadThumbnails(containerId, jsonPath, startId = 1, endId = null) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  showSkeletons(containerId);
+
+  try {
+    const response = await fetch(jsonPath);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+
+    const filtered = data.filter(item =>
+      endId ? item.id >= startId && item.id <= endId : item.id >= startId
+    );
+
+    if (!filtered.length) {
+      container.innerHTML = `<p style="font-family:'Quicksand',sans-serif;color:#999;font-size:0.9rem;padding:8px 0;">No items found.</p>`;
+      return;
+    }
+
+    container.innerHTML = '';
+    filtered.forEach((item, i) => {
+      const emoji = pickEmoji(item.title, i);
+      const div = document.createElement('div');
+      div.className = 'thumbnail';
+      div.style.animationDelay = `${i * 0.04}s`;
+      div.innerHTML = `
+        <a href="${item.htmlLink}">
+          <div class="thumb-emoji-banner">${emoji}</div>
+          <div class="thumb-info">
+            <h4>${item.title || 'Untitled'}</h4>
+            <p>${item.description || ''}</p>
+          </div>
+        </a>
+      `;
+      container.appendChild(div);
+    });
+  } catch (error) {
+    console.error('Error loading thumbnails:', error);
+    container.innerHTML = `
+      <p style="font-family:'Quicksand',sans-serif;color:#999;font-size:0.9rem;padding:8px 0;grid-column:1/-1;">
+        Failed to load content. Make sure <code style="background:#eee;padding:1px 6px;border-radius:4px;">${jsonPath}</code> exists.
+      </p>`;
+  }
+}
+
+// ── INIT ───────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  loadThumbnails('thumbnails-container-3', 'data/thumb-book.json', 1);
+  loadThumbnails('thumbnails-container-4', 'data/thumb-writing.json', 1);
+  loadThumbnails('thumbnails-container-5', 'data/thumb-writing-2.json', 1);
+});
 </script>
 </body>
 </html>
-
-
-
-
