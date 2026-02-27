@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Post Page — Script 60s</title>
+<title>IELTS WRITING PRACTICE - TASK 1</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/post-styles.css">
 <style>
-/* ── RESET & VARS ──────────────────────────────────── */
 :root {
   --black:        #1a1a1a;
   --red:          #ea3324;
@@ -28,7 +27,6 @@
   --green-dark:   #2e7d32;
   --pink:         #ffadc5;
   --pink-pale:    #fff2f6;
-  --lavender:     #e8e0ff;
   --border:       2.5px solid var(--black);
   --border-thick: 3px solid var(--black);
   --shadow-sm:    3px 3px 0 var(--black);
@@ -40,60 +38,44 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Fredoka', sans-serif;
-  font-weight: 500;
-  background: var(--cream);
-  color: var(--black);
-  min-height: 100vh;
-  display: flex; flex-direction: column;
+  font-family: 'Fredoka', sans-serif; font-weight: 500;
+  background: var(--cream); color: var(--black);
+  min-height: 100vh; display: flex; flex-direction: column;
   overflow-x: hidden;
 }
-
 body::before {
-  content: '';
-  position: fixed; inset: 0;
+  content: ''; position: fixed; inset: 0;
   background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-  background-size: 22px 22px;
-  pointer-events: none; z-index: 0;
+  background-size: 22px 22px; pointer-events: none; z-index: 0;
 }
 
-/* ── HEADER ────────────────────────────────────────── */
+/* ── HEADER ── */
 header {
-  background: var(--red);
-  border-bottom: var(--border-thick);
+  background: var(--red); border-bottom: var(--border-thick);
   padding: 0 50px; height: 66px;
   display: flex; justify-content: space-between; align-items: center;
   position: sticky; top: 0; z-index: 100;
 }
-header h1 {
-  font-weight: 700; font-size: 1.7rem; color: white;
-  letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
-}
+header h1 { font-weight: 700; font-size: 1.7rem; color: white; letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.2); }
 .homepage-link { text-decoration: none; color: inherit; }
-.menu-toggle {
-  display: none; font-size: 24px;
-  background: none; border: none; color: white; cursor: pointer;
-}
+.menu-toggle { display: none; font-size: 24px; background: none; border: none; color: white; cursor: pointer; }
 nav ul { list-style: none; display: flex; gap: 8px; align-items: center; }
 nav ul li a {
-  text-decoration: none; color: var(--black);
-  font-weight: 700; font-size: 0.95rem;
+  text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.95rem;
   background: var(--white); border: var(--border); border-radius: 50px;
-  padding: 6px 18px; display: inline-block;
-  box-shadow: var(--shadow-sm);
+  padding: 6px 18px; display: inline-block; box-shadow: var(--shadow-sm);
   transition: transform 0.12s, box-shadow 0.12s;
 }
 nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
 
-/* ── LAYOUT ────────────────────────────────────────── */
+/* ── LAYOUT ── */
 .container {
-  display: flex; gap: 26px;
-  padding: 36px 56px 100px;
+  display: flex; gap: 26px; padding: 36px 56px 100px;
   max-width: 1380px; margin: 0 auto; width: 100%;
   position: relative; z-index: 1; flex: 1;
 }
 .main-col { flex: 2; display: flex; flex-direction: column; gap: 22px; min-width: 0; }
-.side-col  {
+.side-col {
   flex: 1; min-width: 260px; max-width: 320px;
   display: flex; flex-direction: column; gap: 16px;
   position: sticky; top: 88px; align-self: flex-start;
@@ -102,160 +84,89 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
 .side-col::-webkit-scrollbar { width: 4px; }
 .side-col::-webkit-scrollbar-thumb { background: var(--red-light); border-radius: 2px; }
 
-/* ── CARDS ─────────────────────────────────────────── */
-.card {
-  background: var(--white);
-  border: var(--border-thick); border-radius: 22px;
-  box-shadow: var(--shadow-md); padding: 26px;
-}
+/* ── CARDS ── */
+.card { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 26px; }
 .card-title {
-  display: inline-block;
-  font-weight: 700; font-size: 1rem;
-  background: var(--red); color: white;
-  border: var(--border); border-radius: 50px;
-  padding: 5px 20px; box-shadow: var(--shadow-sm);
-  margin-bottom: 18px; letter-spacing: 0.05em;
+  display: inline-block; font-weight: 700; font-size: 1rem;
+  background: var(--red); color: white; border: var(--border); border-radius: 50px;
+  padding: 5px 20px; box-shadow: var(--shadow-sm); margin-bottom: 18px; letter-spacing: 0.05em;
 }
 .card-title.yellow { background: var(--yellow); color: var(--black); }
 .card-title.blue   { background: var(--blue);   color: white; }
 .card-title.green  { background: var(--green);  color: white; }
-.card-title.sky    { background: var(--sky-pale);  color: var(--black); border-color: var(--black); }
+.card-title.sky    { background: var(--sky-pale); color: var(--black); border-color: var(--black); }
 
-/* ── POST CONTENT (sentence analysis) ─────────────── */
-#post-container {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1rem; font-weight: 600; line-height: 1.8;
-  color: #333;
-}
-#post-container img {
-  display: block; margin: 16px auto; max-width: 100%;
-  height: auto; border-radius: 12px; border: var(--border);
-}
-
+/* ── POST CONTENT ── */
+#post-container { font-family: 'Quicksand', sans-serif; font-size: 1rem; font-weight: 600; line-height: 1.8; color: #333; }
+#post-container img { display: block; margin: 16px auto; max-width: 100%; height: auto; border-radius: 12px; border: var(--border); }
 .content-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .content-list li {
   display: flex; flex-direction: column;
   background: var(--yellow-pale); border: var(--border); border-radius: 16px;
-  padding: 14px 18px; position: relative;
-  transition: box-shadow 0.15s;
+  padding: 14px 18px; transition: box-shadow 0.15s;
 }
 .content-list li:nth-child(even) { background: var(--red-pale); }
 .content-list li:hover { box-shadow: var(--shadow-md); }
 
-/* ── SIDEBAR LESSONS ───────────────────────────────── */
-.sidebar-card {
-  background: var(--white);
-  border: var(--border-thick); border-radius: 22px;
-  box-shadow: var(--shadow-md); padding: 18px;
-}
+/* ── SIDEBAR ── */
+.sidebar-card { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 18px; }
 .sidebar-card h3 {
   display: inline-block; font-weight: 700; font-size: 1rem;
-  background: var(--red); color: white;
-  border: var(--border); border-radius: 50px;
-  padding: 5px 18px; box-shadow: var(--shadow-sm);
-  margin-bottom: 16px;
+  background: var(--red); color: white; border: var(--border); border-radius: 50px;
+  padding: 5px 18px; box-shadow: var(--shadow-sm); margin-bottom: 16px;
 }
-
 .lesson-item {
   display: flex; gap: 12px; align-items: center;
-  border: var(--border); border-radius: 14px;
-  background: var(--cream);
-  margin-bottom: 10px;
-  transition: transform 0.12s, box-shadow 0.12s;
-  overflow: hidden;
+  border: var(--border); border-radius: 14px; background: var(--cream);
+  margin-bottom: 10px; transition: transform 0.12s, box-shadow 0.12s; overflow: hidden;
 }
 .lesson-item:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-sm); }
-.lesson-item a {
-  text-decoration: none; color: inherit;
-  display: flex; gap: 10px; align-items: center;
-  width: 100%; padding: 10px 12px;
-}
-.lesson-emoji {
-  width: 44px; height: 44px; border-radius: 10px;
-  border: var(--border); background: var(--yellow-pale);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; flex-shrink: 0;
-}
+.lesson-item a { text-decoration: none; color: inherit; display: flex; gap: 10px; align-items: center; width: 100%; padding: 10px 12px; }
+.lesson-emoji { width: 44px; height: 44px; border-radius: 10px; border: var(--border); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
 .lesson-item:nth-child(3n+1) .lesson-emoji { background: var(--yellow-pale); }
 .lesson-item:nth-child(3n+2) .lesson-emoji { background: var(--red-light); }
 .lesson-item:nth-child(3n+3) .lesson-emoji { background: var(--sky-pale); }
 .lesson-info h4 { font-size: 0.88rem; font-weight: 700; color: var(--black); margin-bottom: 2px; line-height: 1.3; }
 .lesson-info p  { font-family: 'Quicksand', sans-serif; font-size: 0.75rem; font-weight: 600; color: #888; }
 
-/* ── QUIZ SECTION ──────────────────────────────────── */
-.qcontainer {
-  background: var(--white);
-  border: var(--border-thick); border-radius: 22px;
-  box-shadow: var(--shadow-md); padding: 28px 26px;
-}
+/* ── QUIZ ── */
+.qcontainer { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 28px 26px; }
+.quiz-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.quiz-title { display: inline-block; font-weight: 700; font-size: 1.15rem; background: var(--yellow); border: var(--border-thick); border-radius: 50px; padding: 8px 24px; box-shadow: var(--shadow-sm); }
+.quiz-progress-wrap { background: #eee; border: var(--border); border-radius: 50px; height: 10px; margin-bottom: 6px; overflow: hidden; display: none; }
+.quiz-progress-fill { height: 100%; background: var(--red); border-radius: 50px; transition: width 0.35s ease; }
+.quiz-counter { font-family: 'Quicksand', sans-serif; font-size: 0.82rem; font-weight: 700; color: #888; margin-bottom: 14px; display: none; }
 
-.quiz-header {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 12px; margin-bottom: 20px; flex-wrap: wrap;
-}
-.quiz-title {
-  display: inline-block; font-weight: 700; font-size: 1.15rem;
-  background: var(--yellow); border: var(--border-thick); border-radius: 50px;
-  padding: 8px 24px; box-shadow: var(--shadow-sm);
-}
-
-/* Progress bar */
-.quiz-progress-wrap {
-  background: #eee; border: var(--border); border-radius: 50px;
-  height: 10px; margin-bottom: 6px; overflow: hidden; display: none;
-}
-.quiz-progress-fill {
-  height: 100%; background: var(--red); border-radius: 50px;
-  transition: width 0.35s ease;
-}
-.quiz-counter {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 0.82rem; font-weight: 700; color: #888;
-  margin-bottom: 14px; display: none;
-}
-
-/* Start button */
 #start-button {
   font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1.2rem;
-  background: var(--red); color: white;
-  padding: 12px 36px; border: var(--border-thick); border-radius: 50px;
-  box-shadow: var(--shadow-md); cursor: pointer;
-  transition: transform 0.12s, box-shadow 0.12s;
+  background: var(--red); color: white; padding: 12px 36px;
+  border: var(--border-thick); border-radius: 50px; box-shadow: var(--shadow-md);
+  cursor: pointer; transition: transform 0.12s, box-shadow 0.12s;
 }
 #start-button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
 
-/* ── SENTENCE (blank zone) ─────────────────────────── */
+/* ── SENTENCE ── */
 .sentence {
-  display: none;
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1.25rem; font-weight: 600;
-  line-height: 2.2;
-  flex-wrap: wrap; align-items: center; gap: 4px;
-  margin-bottom: 16px;
-  background: var(--red-pale); border: var(--border); border-radius: 14px;
-  padding: 16px 18px;
+  display: none; flex-wrap: wrap; align-items: center; gap: 4px;
+  font-family: 'Quicksand', sans-serif; font-size: 1.2rem; font-weight: 600; line-height: 2.4;
+  margin-bottom: 16px; background: var(--red-pale); border: var(--border); border-radius: 14px; padding: 16px 18px;
 }
 
-/* Blank pill */
+/* ── BLANK — auto-expands to match word width ── */
 .blank {
   display: inline-flex; align-items: center; justify-content: center;
-  /* width: auto — dãn theo nội dung khi filled */
-  min-width: 52px; height: 34px;
+  min-width: 52px; height: 34px; padding: 0 10px;
   border: 2.5px dashed #bbb; border-radius: 10px;
   background: transparent; color: #999;
   font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 0.95rem;
   vertical-align: middle; margin: 0 3px;
-  padding: 0 10px;
-  transition: min-width 0.15s ease, border-color 0.15s, background 0.15s;
-  white-space: nowrap;
-  /* transition cho smooth khi fill */
-  overflow: hidden;
+  /* smooth expand when word is placed */
+  transition: min-width 0.12s ease, border-color 0.15s, background 0.15s;
+  white-space: nowrap; overflow: hidden;
 }
 .blank.filled {
   background: var(--sky-pale); border: var(--border); border-style: solid;
-  color: var(--black); border-radius: 10px;
-  padding: 0 10px; cursor: pointer;
-  /* min-width được set inline bởi JS theo độ rộng thực của word chip */
+  color: var(--black); padding: 0 10px; cursor: pointer;
 }
 .blank.filled:hover { background: #c8ecff; }
 .blank.reveal-correct {
@@ -267,160 +178,92 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
   border-style: solid; color: #c0392b; cursor: default;
 }
 
-/* ── OPTIONS ───────────────────────────────────────── */
-.options {
-  display: none;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 14px;
-  justify-content: flex-start;
-}
-
-/* Duolingo-style word chip */
+/* ── OPTIONS ── */
+.options { display: none; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; justify-content: flex-start; }
 .word {
   font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 0.95rem;
-  padding: 8px 16px;
-  background: var(--white); color: var(--black);
+  padding: 8px 16px; background: var(--white); color: var(--black);
   border: var(--border-thick); border-radius: 12px;
-  /* key: bottom shadow gives the 3D "raisable" look */
-  box-shadow: 0 4px 0 var(--black);
-  cursor: pointer;
+  box-shadow: 0 4px 0 var(--black); cursor: pointer;
   transition: transform 0.1s, box-shadow 0.1s;
-  user-select: none; white-space: nowrap;
-  -webkit-tap-highlight-color: transparent;
+  user-select: none; white-space: nowrap; -webkit-tap-highlight-color: transparent;
 }
-/* Duolingo bounce up on click */
-.word:active:not(.used):not(:disabled) {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 var(--black);
-}
-.word:hover:not(.used):not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 var(--black);
-  background: var(--yellow-pale);
-}
-/* When selected → floats into blank, becomes invisible in tray */
-.word.used { visibility: hidden; pointer-events: none; }
+.word:active:not(.used):not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 var(--black); }
+.word:hover:not(.used):not(:disabled)  { transform: translateY(-2px); box-shadow: 0 6px 0 var(--black); background: var(--yellow-pale); }
+.word.used    { visibility: hidden; pointer-events: none; }
 .word:disabled { opacity: 0.35; pointer-events: none; }
-.word.correct-reveal   { background: var(--green-pale);  border-color: var(--green-dark); }
-.word.incorrect-reveal { background: var(--pink-pale);   border-color: #e53935; }
+.word.correct-reveal   { background: var(--green-pale); border-color: var(--green-dark); }
+.word.incorrect-reveal { background: var(--pink-pale);  border-color: #e53935; }
 
-/* ── RESULT FEEDBACK ───────────────────────────────── */
-.result-bar {
-  display: none;
-  border: var(--border-thick); border-radius: 16px;
-  padding: 14px 18px; margin-bottom: 14px;
-  font-weight: 700; font-size: 1rem;
-  align-items: center; gap: 10px;
-}
+/* ── RESULT / ACTIONS / SUMMARY ── */
+.result-bar { display: none; border: var(--border-thick); border-radius: 16px; padding: 14px 18px; margin-bottom: 14px; font-weight: 700; font-size: 1rem; align-items: center; gap: 10px; }
 .result-bar.correct   { background: var(--green-pale); border-color: var(--green-dark); color: var(--green-dark); }
 .result-bar.incorrect { background: var(--pink-pale);  border-color: #e53935;           color: #c0392b; }
 
-/* ── ACTION BUTTONS ────────────────────────────────── */
 .quiz-actions { display: none; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
-.quiz-actions button {
-  font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem;
-  padding: 10px 26px; border: var(--border-thick); border-radius: 50px;
-  box-shadow: var(--shadow-sm); cursor: pointer;
-  transition: transform 0.12s, box-shadow 0.12s;
-}
+.quiz-actions button { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem; padding: 10px 26px; border: var(--border-thick); border-radius: 50px; box-shadow: var(--shadow-sm); cursor: pointer; transition: transform 0.12s, box-shadow 0.12s; }
 .quiz-actions button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-.btn-next   { background: var(--green); color: white; }
-.btn-retry  { background: var(--red);   color: white; }
-.btn-finish { background: var(--yellow); color: var(--black); }
-.btn-replay { background: var(--sky-pale); color: var(--black); border-color: var(--black); }
+.btn-next   { background: var(--green);    color: white; }
+.btn-retry  { background: var(--red);      color: white; }
+.btn-finish { background: var(--yellow);   color: var(--black); }
 
-/* ── SCORE SUMMARY ─────────────────────────────────── */
-.score-summary {
-  display: none; text-align: center; padding: 20px 0 8px;
-}
-.score-circle {
-  width: 110px; height: 110px; border-radius: 50%;
-  border: var(--border-thick); margin: 0 auto 16px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-lg); font-weight: 700;
-}
+.score-summary { display: none; text-align: center; padding: 20px 0 8px; }
+.score-circle { width: 110px; height: 110px; border-radius: 50%; border: var(--border-thick); margin: 0 auto 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); font-weight: 700; }
 .score-circle .score-num   { font-size: 2rem; line-height: 1; }
 .score-circle .score-label { font-size: 0.8rem; color: #666; }
 .score-summary h2 { font-size: 1.3rem; margin-bottom: 6px; }
 .score-summary p  { color: #666; font-size: 0.95rem; margin-bottom: 18px; font-family: 'Quicksand', sans-serif; }
 
-/* ── FIXED TAG ─────────────────────────────────────── */
+/* ── FIXED TAG ── */
 .new-words {
-  position: fixed; top: 50%; right: 20px;
-  transform: translateY(-50%);
+  position: fixed; top: 50%; right: 20px; transform: translateY(-50%);
   background: var(--yellow); border: var(--border-thick); border-radius: 20px;
-  padding: 10px 14px; box-shadow: var(--shadow-md);
-  font-weight: 700; font-size: 0.88rem; z-index: 50;
-  writing-mode: vertical-rl; letter-spacing: 0.05em;
-  transition: transform 0.12s;
+  padding: 10px 14px; box-shadow: var(--shadow-md); font-weight: 700; font-size: 0.88rem; z-index: 50;
+  writing-mode: vertical-rl; letter-spacing: 0.05em; transition: transform 0.12s;
 }
 .new-words:hover { transform: translateY(-50%) translate(-2px,-2px); }
 .new-words a { text-decoration: none; color: var(--black); }
 
-/* ── FOOTER ────────────────────────────────────────── */
-footer {
-  background: var(--black); color: rgba(255,255,255,0.65);
-  padding: 28px 50px; text-align: center;
-  position: relative; z-index: 1;
-}
+/* ── FOOTER ── */
+footer { background: var(--black); color: rgba(255,255,255,0.65); padding: 28px 50px; text-align: center; position: relative; z-index: 1; }
 footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
 footer p { font-size: 0.9rem; font-weight: 500; }
 footer .social-icons { margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-footer .social-icons a {
-  text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.88rem;
-  background: var(--red-light); border: var(--border); border-radius: 50px;
-  padding: 5px 16px; box-shadow: var(--shadow-sm);
-  transition: transform 0.12s;
-}
+footer .social-icons a { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.88rem; background: var(--red-light); border: var(--border); border-radius: 50px; padding: 5px 16px; box-shadow: var(--shadow-sm); transition: transform 0.12s; }
 footer .social-icons a:hover { transform: translate(-1px,-2px); }
 
-/* ── RESPONSIVE ────────────────────────────────────── */
+/* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .container { flex-direction: column; padding: 20px 20px 80px; }
-  .side-col {
-    max-width: 100%; width: 100%;
-    position: static; max-height: none; overflow: visible;
-  }
+  .side-col { max-width: 100%; width: 100%; position: static; max-height: none; overflow: visible; }
   #thumbnails-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
 }
-
 @media (max-width: 768px) {
   header { padding: 0 16px; position: relative; }
   .menu-toggle { display: block; }
-  nav {
-    display: none; position: absolute; top: 66px; left: 0; right: 0;
-    background: var(--red); border-bottom: var(--border);
-    padding: 12px 0; flex-direction: column; z-index: 99;
-  }
+  nav { display: none; position: absolute; top: 66px; left: 0; right: 0; background: var(--red); border-bottom: var(--border); padding: 12px 0; flex-direction: column; z-index: 99; }
   nav.show { display: flex; }
-  nav ul   { flex-direction: column; align-items: center; gap: 8px; padding: 6px 0; }
-
+  nav ul { flex-direction: column; align-items: center; gap: 8px; padding: 6px 0; }
   .container { padding: 14px 14px 80px; gap: 16px; }
   .card { padding: 18px 16px; }
-
-  /* Quiz on mobile: tighter */
-  .sentence { font-size: 1.05rem; padding: 12px 14px; line-height: 2.0; }
-  .blank    { height: 30px; font-size: 0.85rem; min-width: 44px; }
-  .word     { font-size: 0.88rem; padding: 7px 13px; }
+  .sentence { font-size: 1.05rem; padding: 12px 14px; line-height: 2.2; }
+  .blank  { height: 30px; font-size: 0.85rem; min-width: 40px; }
+  .word   { font-size: 0.88rem; padding: 7px 13px; }
   .qcontainer { padding: 18px 14px; }
-
   .new-words { right: 10px; }
   footer { padding: 24px 16px; }
 }
-
 @media (max-width: 480px) {
   header h1 { font-size: 1.3rem; }
-  .sentence { font-size: 0.98rem; }
-  .word     { font-size: 0.82rem; padding: 6px 11px; }
+  .sentence { font-size: 0.95rem; }
+  .word { font-size: 0.82rem; padding: 6px 11px; }
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
-  <h1><a href="index.html" class="homepage-link">SCRIPT 60s</a></h1>
+  <h1><a href="index.html" class="homepage-link">FREESIZE ENGLISH</a></h1>
   <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
   <nav>
     <ul>
@@ -431,20 +274,15 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   </nav>
 </header>
 
-<!-- MAIN LAYOUT -->
 <div class="container">
-
-  <!-- ══ MAIN COLUMN ══ -->
   <div class="main-col">
 
-    <!-- Essay / Post Content -->
     <div class="card">
       <div class="card-title">📄 Sample IELTS Writing Essay</div>
       <div id="post-container"></div>
       <script src="js/passage.js"></script>
     </div>
 
-    <!-- Sentence Analysis -->
     <div class="card">
       <div class="card-title yellow">🔍 Sentence-by-Sentence Analysis</div>
       <div class="pcontainer">
@@ -459,37 +297,25 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
       </script>
     </div>
 
-    <!-- ── QUIZ ─────────────────────────────────────── -->
+    <!-- QUIZ -->
     <div class="qcontainer" id="quiz-container" data-start-id="24" data-end-id="38">
       <div class="quiz-header">
         <span class="quiz-title">🎯 Let's Practice!</span>
       </div>
-
       <div id="start-container">
         <button id="start-button">▶ Start Quiz</button>
       </div>
-
-      <div class="quiz-counter"  id="quiz-counter"></div>
+      <div class="quiz-counter" id="quiz-counter"></div>
       <div class="quiz-progress-wrap" id="quiz-progress-wrap">
         <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
       </div>
-
-      <!-- Sentence with blanks -->
       <div class="sentence" id="sentence"></div>
-
-      <!-- Word options -->
-      <div class="options" id="options"></div>
-
-      <!-- Feedback bar -->
+      <div class="options"  id="options"></div>
       <div class="result-bar" id="result-bar"></div>
-
-      <!-- Action buttons (Next / Retry / Finish) -->
       <div class="quiz-actions" id="quiz-actions"></div>
-
-      <!-- Score summary -->
       <div class="score-summary" id="score-summary">
         <div class="score-circle" id="score-circle">
-          <span class="score-num"  id="score-num">0/0</span>
+          <span class="score-num" id="score-num">0/0</span>
           <span class="score-label">correct</span>
         </div>
         <h2 id="score-title">Quiz Complete!</h2>
@@ -500,36 +326,27 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
       </div>
     </div>
 
-  </div><!-- /main-col -->
+  </div>
 
-  <!-- ══ SIDEBAR ══ -->
   <div class="side-col">
     <div class="sidebar-card">
       <h3>Other Lessons</h3>
       <div id="thumbnails-container"></div>
     </div>
   </div>
+</div>
 
-</div><!-- /container -->
-
-<!-- FIXED TAG -->
 <div class="new-words"><a href="newword.html">New Words</a></div>
 
-<!-- FOOTER -->
 <footer>
-  <p class="brand">SCRIPT 60s</p>
+  <p class="brand">FREESIZE ENGLISH</p>
   <p>Learn English through images and videos</p>
   <div class="social-icons">
-    <a href="#">Facebook</a>
-    <a href="#">YouTube</a>
-    <a href="#">TikTok</a>
-    <a href="#">Instagram</a>
+    <a href="#">Facebook</a><a href="#">YouTube</a>
+    <a href="#">TikTok</a><a href="#">Instagram</a>
   </div>
 </footer>
 
-<!-- ── SCRIPTS ─────────────────────────────────────────────────── -->
-
-<!-- Hamburger -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
@@ -541,10 +358,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-<!-- Sidebar lessons (no images, emoji instead) -->
 <script>
 const lessonEmojis = ['✍️','📝','📊','📈','🗺️','📉','🔤','💬','📖','🌍','🎓','💡'];
-fetch('data/thumb-writing-2.json')
+fetch('data/thumb-writing.json')
   .then(r => r.json())
   .then(videos => {
     videos.sort((a, b) => b.id - a.id);
@@ -564,43 +380,28 @@ fetch('data/thumb-writing-2.json')
       container.appendChild(div);
     });
   })
-  .catch(err => console.error('Error loading JSON:', err));
+  .catch(err => console.error('Error:', err));
 </script>
 
-<!-- Fetch video title (optional, still calls the original js) -->
-<script src="js/fetch-writing-2.js"></script>
+<script src="js/fetch-writing.js"></script>
 
-<!-- ── QUIZ LOGIC — Duolingo style ─────────────────────────────── -->
 <script>
 (function () {
-
-  /* ── helpers ── */
   function isImg(s) { return /\.(jpe?g|png|gif|webp|bmp|svg)$/i.test(String(s||'')); }
   function wordHTML(w) { return isImg(w) ? `<img src="${w}" alt="" style="height:40px;border-radius:6px;">` : String(w); }
   function qs(sel) { return document.querySelector(sel); }
-  function qsa(sel) { return document.querySelectorAll(sel); }
 
-  /* ── audio ── */
-  function mkAudio(src) { const a = new Audio(src); return a; }
   const SFX = {
-    click:     mkAudio('assets/click.mp3'),
-    correct:   mkAudio('assets/correct.mp3'),
-    incorrect: mkAudio('assets/incorrect.mp3'),
-    victory:   mkAudio('assets/victory.mp3'),
+    click:    new Audio('assets/click.mp3'),
+    correct:  new Audio('assets/correct.mp3'),
+    incorrect:new Audio('assets/incorrect.mp3'),
+    victory:  new Audio('assets/victory.mp3'),
   };
-  function play(key) {
-    try { SFX[key].currentTime = 0; SFX[key].play().catch(()=>{}); } catch(e){}
-  }
+  function play(k) { try { SFX[k].currentTime = 0; SFX[k].play().catch(()=>{}); } catch(e){} }
 
-  /* ── state ── */
-  let questions    = [];
-  let curIdx       = 0;
-  let scoreCorrect = 0;
-  let slots        = [];   // array of {word, optBtn} | null  per blank
-  let revealed     = false;
-  let wrongLog     = [];
+  let questions = [], curIdx = 0, scoreCorrect = 0;
+  let slots = [], revealed = false, wrongLog = [];
 
-  /* ── DOM refs ── */
   const startCont  = qs('#start-container');
   const startBtn   = qs('#start-button');
   const sentenceEl = qs('#sentence');
@@ -617,278 +418,182 @@ fetch('data/thumb-writing-2.json')
   const scoreCircle  = qs('#score-circle');
   const restartBtn   = qs('#restart-btn');
 
-  /* ── load JSON ── */
   async function loadQ(startId, endId) {
     try {
-      const urls = ['data/W-quiz-1.json'];
-      const all  = await Promise.all(urls.map(u => fetch(u).then(r => r.json())));
-      const raw  = all.flatMap(d => Array.isArray(d) ? d : (d.questions || []));
+      const all = await Promise.all(['data/W-quiz-1.json'].map(u => fetch(u).then(r => r.json())));
+      const raw = all.flatMap(d => Array.isArray(d) ? d : (d.questions || []));
       return raw.filter(q => q.id >= startId && q.id <= endId);
     } catch(e) {
-      console.warn('quiz JSON failed, using demo:', e);
       return [
-        { id:1, sentence:'She ___ to school every day.',    blanks:[{answer:'goes'}],   words:['goes','go','went','gone'] },
-        { id:2, sentence:'The report ___ three main ideas.',blanks:[{answer:'covers'}],  words:['covers','cover','covered','has'] },
+        { id:1, sentence:'She ___ to school every day.',     blanks:[{answer:'goes'}],  words:['goes','go','went','gone'] },
+        { id:2, sentence:'The report ___ three main ideas.', blanks:[{answer:'covers'}], words:['covers','cover','covered','has'] },
         { id:3, sentence:'___ the graph shows, sales ___.',  blanks:[{answer:'As'},{answer:'rose'}], words:['As','Since','rose','fall','While','dropped'] },
       ];
     }
   }
 
-  /* ── START ── */
   startBtn.addEventListener('click', async () => {
-    const qc   = qs('#quiz-container');
-    const p    = new URLSearchParams(window.location.search);
-    const sId  = parseInt(p.get('quizStartId')) || parseInt(qc.dataset.startId) || 1;
-    const eId  = parseInt(p.get('quizEndId'))   || parseInt(qc.dataset.endId)   || 10;
-
-    questions    = await loadQ(sId, eId);
-    curIdx       = 0;
-    scoreCorrect = 0;
-    wrongLog     = [];
-
-    startCont.style.display  = 'none';
-    progWrap.style.display   = 'block';
-    counterEl.style.display  = 'block';
-    summaryEl.style.display  = 'none';
+    const qc  = qs('#quiz-container');
+    const p   = new URLSearchParams(window.location.search);
+    const sId = parseInt(p.get('quizStartId')) || parseInt(qc.dataset.startId) || 1;
+    const eId = parseInt(p.get('quizEndId'))   || parseInt(qc.dataset.endId)   || 10;
+    questions = await loadQ(sId, eId);
+    curIdx = 0; scoreCorrect = 0; wrongLog = [];
+    startCont.style.display = 'none';
+    progWrap.style.display  = 'block';
+    counterEl.style.display = 'block';
+    summaryEl.style.display = 'none';
     showQ();
   });
 
-  /* ── SHOW QUESTION ── */
   function showQ() {
     if (curIdx >= questions.length) { showSummary(); return; }
+    const q = questions[curIdx];
+    revealed = false;
+    slots = (q.blanks || []).map(() => null);
 
-    const q      = questions[curIdx];
-    const blanks = q.blanks || [];
-    revealed     = false;
-    slots        = blanks.map(() => null);
-
-    /* progress */
     progFill.style.width  = (curIdx / questions.length * 100) + '%';
     counterEl.textContent = `Question ${curIdx + 1} / ${questions.length}`;
 
-    /* build sentence HTML */
     let sentRaw = Array.isArray(q.sentence)
       ? q.sentence.map(t => isImg(t) ? `<img src="${t}" alt="" style="height:44px;border-radius:8px;vertical-align:middle;">` : String(t)).join(' ')
-      : String(q.sentence || '').replace(/([\S]+\.(?:jpe?g|png|gif|bmp|webp|svg))/gi,
-          '<img src="$1" alt="" style="height:44px;border-radius:8px;vertical-align:middle;">');
-
+      : String(q.sentence || '');
     let bi = 0;
-    const sentHTML = sentRaw.replace(/___/g, () => {
-      const idx = bi++;
-      return `<span class="blank" data-bi="${idx}"></span>`;
-    });
-    sentenceEl.innerHTML = sentHTML;
+    sentenceEl.innerHTML = sentRaw.replace(/___/g, () => `<span class="blank" data-bi="${bi++}"></span>`);
     sentenceEl.style.display = 'flex';
+    sentenceEl.querySelectorAll('.blank').forEach(el => el.addEventListener('click', () => returnWord(el)));
 
-    /* blank click → return word */
-    sentenceEl.querySelectorAll('.blank').forEach(el => {
-      el.addEventListener('click', () => returnWord(el));
-    });
-
-    /* build word chips */
     const words = [...(q.words || [])].sort(() => Math.random() - 0.5);
     optionsEl.innerHTML = '';
     optionsEl.style.display = 'flex';
-
     words.forEach(w => {
       const btn = document.createElement('button');
-      btn.className    = 'word';
-      btn.dataset.word = String(w);
-      btn.innerHTML    = wordHTML(w);
+      btn.className = 'word'; btn.dataset.word = String(w);
+      btn.innerHTML = wordHTML(w);
       btn.addEventListener('click', () => pickWord(btn));
       optionsEl.appendChild(btn);
     });
 
-    /* reset feedback */
-    resultBar.className   = 'result-bar';
-    resultBar.style.display = 'none';
-    resultBar.textContent   = '';
-
-    actionsEl.innerHTML     = '';
-    actionsEl.style.display = 'none';
+    resultBar.className = 'result-bar'; resultBar.style.display = 'none';
+    actionsEl.innerHTML = ''; actionsEl.style.display = 'none';
   }
 
-  /* ── PICK WORD → fill next empty blank ── */
+  /* ── PICK WORD → measure width first, then expand blank ── */
   function pickWord(btn) {
     if (revealed || btn.classList.contains('used')) return;
-
     const emptyBi = slots.findIndex(s => s === null);
     if (emptyBi === -1) return;
-
     play('click');
 
-    const blankEl = sentenceEl.querySelector(`[data-bi="${emptyBi}"]`);
-    if (!blankEl) return;
-
-    // Measure actual rendered width of the word chip BEFORE hiding it
-    const btnRect = btn.getBoundingClientRect();
-    const wordW   = Math.ceil(btnRect.width);
+    // Measure the word chip width BEFORE hiding it
+    const wordW = Math.ceil(btn.getBoundingClientRect().width);
 
     btn.classList.add('used');
+    const blankEl = sentenceEl.querySelector(`[data-bi="${emptyBi}"]`);
+    if (!blankEl) return;
 
     blankEl.innerHTML    = wordHTML(btn.dataset.word);
     blankEl.classList.add('filled');
     blankEl.dataset.word = btn.dataset.word;
-    // Expand blank to match the word width so layout stays stable
+    // Expand blank to exactly match the word chip width
     blankEl.style.minWidth = wordW + 'px';
 
     slots[emptyBi] = { optBtn: btn, word: btn.dataset.word };
-
-    /* auto-check when all blanks filled */
-    if (slots.every(s => s !== null)) {
-      setTimeout(() => checkAnswers(questions[curIdx]), 120);
-    }
+    if (slots.every(s => s !== null)) setTimeout(() => checkAnswers(questions[curIdx]), 120);
   }
 
-  /* ── RETURN WORD → click on filled blank ── */
+  /* ── RETURN WORD → reset blank width ── */
   function returnWord(blankEl) {
     if (revealed) return;
-    const bi   = parseInt(blankEl.dataset.bi);
+    const bi = parseInt(blankEl.dataset.bi);
     const slot = slots[bi];
     if (!slot) return;
-
     play('click');
     slot.optBtn.classList.remove('used');
-    blankEl.innerHTML  = '';
-    blankEl.className  = 'blank';
+    blankEl.innerHTML      = '';
+    blankEl.className      = 'blank';
     blankEl.setAttribute('data-bi', String(bi));
     blankEl.removeAttribute('data-word');
-    blankEl.style.minWidth = ''; // reset về default
-
+    blankEl.style.minWidth = '';   // ← reset to CSS default
     slots[bi] = null;
-
-    /* re-attach click */
     blankEl.addEventListener('click', () => returnWord(blankEl));
   }
 
-  /* ── CHECK ANSWERS ── */
   function checkAnswers(q) {
     if (revealed) return;
     revealed = true;
-
-    const blanks   = q.blanks || [];
-    let   allRight = true;
-
+    const blanks = q.blanks || [];
+    let allRight = true;
     blanks.forEach((b, i) => {
       const given = slots[i]?.word;
       const ok    = String(given) === String(b.answer);
-      if (!ok) {
-        allRight = false;
-        wrongLog.push({ question: String(q.sentence||''), given: String(given||''), answer: String(b.answer) });
-      }
+      if (!ok) { allRight = false; wrongLog.push({ question: String(q.sentence||''), given: String(given||''), answer: String(b.answer) }); }
       const blankEl = sentenceEl.querySelector(`[data-bi="${i}"]`);
       if (blankEl) blankEl.classList.add(ok ? 'reveal-correct' : 'reveal-wrong');
     });
-
-    /* colour word chips */
     optionsEl.querySelectorAll('.word').forEach(btn => {
       btn.disabled = true;
-      const isAns = blanks.some(b => String(b.answer) === btn.dataset.word);
+      const isAns  = blanks.some(b => String(b.answer) === btn.dataset.word);
       const wasUsed = slots.some(s => s && s.optBtn === btn);
       if (wasUsed && isAns)  btn.classList.add('correct-reveal');
       if (wasUsed && !isAns) btn.classList.add('incorrect-reveal');
       if (!wasUsed && isAns) btn.classList.add('correct-reveal');
     });
-
     if (allRight) {
-      scoreCorrect++;
-      play('correct');
+      scoreCorrect++; play('correct');
       showResultBar(true, '✅ Correct!');
       showActionBtn(curIdx === questions.length - 1 ? 'finish' : 'next');
     } else {
       play('incorrect');
-      const correctStr = blanks.map(b => b.answer).join(' / ');
-      showResultBar(false, `❌ Correct answer: ${correctStr}`);
+      showResultBar(false, `❌ Correct: ${blanks.map(b => b.answer).join(' / ')}`);
       showActionBtn('retry');
     }
   }
 
-  /* ── RESULT BAR ── */
   function showResultBar(ok, msg) {
     resultBar.className    = `result-bar ${ok ? 'correct' : 'incorrect'}`;
     resultBar.textContent  = msg;
     resultBar.style.display = 'flex';
   }
 
-  /* ── ACTION BUTTON ── */
   function showActionBtn(type) {
-    actionsEl.innerHTML     = '';
-    actionsEl.style.display = 'flex';
-
-    if (type === 'next') {
-      const btn = document.createElement('button');
-      btn.className   = 'btn-next';
-      btn.textContent = 'Continue →';
-      btn.addEventListener('click', () => { curIdx++; showQ(); });
-      actionsEl.appendChild(btn);
-
-    } else if (type === 'finish') {
-      const btn = document.createElement('button');
-      btn.className   = 'btn-finish';
-      btn.textContent = 'See Results 🏆';
-      btn.addEventListener('click', showSummary);
-      actionsEl.appendChild(btn);
-
-    } else if (type === 'retry') {
-      const btn = document.createElement('button');
-      btn.className   = 'btn-retry';
-      btn.textContent = 'Try Again 🔄';
-      btn.addEventListener('click', () => showQ()); /* replay same question */
-      actionsEl.appendChild(btn);
-    }
+    actionsEl.innerHTML = ''; actionsEl.style.display = 'flex';
+    const btn = document.createElement('button');
+    if (type === 'next')   { btn.className = 'btn-next';   btn.textContent = 'Continue →';    btn.addEventListener('click', () => { curIdx++; showQ(); }); }
+    if (type === 'finish') { btn.className = 'btn-finish'; btn.textContent = 'See Results 🏆'; btn.addEventListener('click', showSummary); }
+    if (type === 'retry')  { btn.className = 'btn-retry';  btn.textContent = 'Try Again 🔄';   btn.addEventListener('click', () => showQ()); }
+    actionsEl.appendChild(btn);
   }
 
-  /* ── SUMMARY ── */
   function showSummary() {
-    sentenceEl.style.display  = 'none';
-    optionsEl.style.display   = 'none';
-    resultBar.style.display   = 'none';
-    actionsEl.style.display   = 'none';
-    progWrap.style.display    = 'none';
-    counterEl.style.display   = 'none';
+    sentenceEl.style.display = optionsEl.style.display = resultBar.style.display = actionsEl.style.display = 'none';
+    progWrap.style.display   = counterEl.style.display = 'none';
     play('victory');
-
     progFill.style.width = '100%';
     const total = questions.length;
     const pct   = total ? Math.round(scoreCorrect / total * 100) : 0;
     scoreNumEl.textContent = `${scoreCorrect}/${total}`;
-
     if (pct >= 80) {
-      scoreCircle.style.background  = 'var(--green-pale)';
-      scoreCircle.style.borderColor = 'var(--green)';
+      scoreCircle.style.cssText += ';background:var(--green-pale);border-color:var(--green)';
       scoreTitleEl.textContent = '🎉 Excellent!';
       scoreMsgEl.textContent   = `You got ${scoreCorrect}/${total} correct (${pct}%). Amazing work!`;
     } else if (pct >= 50) {
-      scoreCircle.style.background  = 'var(--yellow-pale)';
-      scoreCircle.style.borderColor = 'var(--yellow)';
+      scoreCircle.style.cssText += ';background:var(--yellow-pale);border-color:var(--yellow)';
       scoreTitleEl.textContent = '👍 Good effort!';
       scoreMsgEl.textContent   = `You got ${scoreCorrect}/${total} correct (${pct}%). Keep going!`;
     } else {
-      scoreCircle.style.background  = 'var(--pink-pale)';
-      scoreCircle.style.borderColor = 'var(--pink)';
+      scoreCircle.style.cssText += ';background:var(--pink-pale);border-color:var(--pink)';
       scoreTitleEl.textContent = '💪 Keep practising!';
       scoreMsgEl.textContent   = `You got ${scoreCorrect}/${total} correct (${pct}%). Try again!`;
     }
     summaryEl.style.display = 'block';
-
-    /* optional tracking hook */
-    if (window.saveQuizAttempt) {
-      const p = new URLSearchParams(window.location.search);
-      window.saveQuizAttempt(p.get('id') || 'unknown', scoreCorrect, total, wrongLog);
-    }
   }
 
-  /* ── RESTART ── */
   restartBtn.addEventListener('click', () => {
-    summaryEl.style.display  = 'none';
-    startCont.style.display  = 'block';
-    progWrap.style.display   = 'none';
-    counterEl.style.display  = 'none';
-    progFill.style.width     = '0%';
-    sentenceEl.style.display = 'none';
-    optionsEl.style.display  = 'none';
-    resultBar.style.display  = 'none';
-    actionsEl.style.display  = 'none';
+    summaryEl.style.display = 'none'; startCont.style.display = 'block';
+    progWrap.style.display  = counterEl.style.display = 'none';
+    progFill.style.width    = '0%';
+    sentenceEl.style.display = optionsEl.style.display = resultBar.style.display = actionsEl.style.display = 'none';
   });
 
 })();
