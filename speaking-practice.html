@@ -165,7 +165,7 @@
   .stat-box .num { font-size: 1.3rem; font-weight: 700; }
   .stat-box .lbl { font-size: 0.68rem; opacity: 0.82; }
 
-  /* ── TIKTOK IFRAME (no-scroll) ── */
+  /* ── TIKTOK IFRAME (interactive) ── */
   .tiktok-iframe-wrap {
     width: 100%; aspect-ratio: 9/16;
     border: var(--border-thick); border-radius: 20px;
@@ -176,15 +176,7 @@
   .tiktok-iframe-wrap iframe {
     width: 100%; height: 100%;
     border: none; display: block;
-    /* disable all touch/scroll interaction */
-    pointer-events: none;
-  }
-  /* transparent overlay — blocks scroll, tap opens TikTok link */
-  .tiktok-iframe-overlay {
-    position: absolute; inset: 0;
-    z-index: 2;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
+    /* fully interactive — user can unmute, pause, fullscreen */
   }
   .tiktok-open-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -409,8 +401,8 @@
 <body>
 
 <header>
-  <a class="logo" href="index.html">🔴 FREESIZE ENGLISH</a>
-  <a class="header-tag" href="speaking-practice.html">Study Session</a>
+  <a class="logo" href="speaking-practice.html">🔴 FREESIZE ENGLISH</a>
+  <div class="header-tag">Study Session</div>
 </header>
 
 <div id="app"></div>
@@ -544,12 +536,10 @@ function buildVideoColHTML(vid, containerIdPrefix) {
     }
     return `
       <div class="tiktok-iframe-wrap">
-        <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}"
-          allow="autoplay; encrypted-media"
+        <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}?autoplay=1"
+          allow="autoplay; encrypted-media; fullscreen"
           allowfullscreen loading="lazy"
-          scrolling="no"
-          style="pointer-events:none;"></iframe>
-        <a class="tiktok-iframe-overlay" href="${esc(vid.link)}" target="_blank" rel="noopener" aria-label="Watch on TikTok"></a>
+          scrolling="no"></iframe>
       </div>
       <a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0">
