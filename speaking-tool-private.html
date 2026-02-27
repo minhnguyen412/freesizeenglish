@@ -290,9 +290,34 @@ footer p { font-size: 0.88rem; }
   <div class="step-card">
     <div class="step-head">
       <div class="step-num">1</div>
-      <div class="step-title">🎬 Video Link</div>
+      <div class="step-title">🎬 Video Info</div>
     </div>
     <div class="step-body">
+      <div class="two-col" style="margin-bottom:14px;">
+        <div>
+          <div class="field-label">Title *</div>
+          <input type="text" id="sessionTitle" placeholder="e.g. Hot Honey Pork Belly">
+        </div>
+        <div>
+          <div class="field-label">Topic (description) *</div>
+          <div style="display:flex;gap:8px;">
+            <select id="sessionTopic" style="flex:1;">
+              <option value="">— Select topic —</option>
+              <option value="FOOD">🍜 FOOD</option>
+              <option value="HEALTH">💪 HEALTH</option>
+              <option value="TRAVEL">✈️ TRAVEL</option>
+              <option value="TECH">💻 TECH</option>
+              <option value="LIFESTYLE">🌿 LIFESTYLE</option>
+              <option value="BUSINESS">📈 BUSINESS</option>
+              <option value="SCIENCE">🔬 SCIENCE</option>
+              <option value="CULTURE">🎭 CULTURE</option>
+              <option value="SPORT">⚽ SPORT</option>
+              <option value="OTHER">📌 OTHER</option>
+            </select>
+            <input type="text" id="sessionTopicCustom" placeholder="or type custom..." style="flex:1;">
+          </div>
+        </div>
+      </div>
       <div class="field-label">YouTube / TikTok / Douyin URL</div>
       <div class="input-row">
         <input type="text" id="videoUrl" placeholder="Paste video URL here...">
@@ -423,7 +448,7 @@ footer p { font-size: 0.88rem; }
   <div class="export-box">
     <div class="export-info">
       <h3>🚀 Push to GitHub</h3>
-      <p>Đọc <code style="background:var(--red-pale);padding:1px 7px;border-radius:6px;font-size:0.82rem;">data/speaking-data.json</code> từ repo → append session mới → push thẳng lên GitHub. ID tự tăng.</p>
+      <p>Push 2 files cùng lúc: <code style="background:var(--red-pale);padding:1px 7px;border-radius:6px;font-size:0.82rem;">data/speaking-data.json</code> + <code style="background:var(--sky-pale);padding:1px 7px;border-radius:6px;font-size:0.82rem;">data/speaking-thumb.json</code> — ID tự tăng, tự sync.</p>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
       <button class="btn btn-sky" onclick="previewJSON()">👁 Preview</button>
@@ -681,7 +706,7 @@ async function testGhConnection() {
   if (!cfg.user || !cfg.repo || !cfg.token) return showStatus('ghConfigStatus', 'Save config first!', 'error');
   showStatus('ghConfigStatus', 'Testing...', 'info');
   try {
-    const res = await ghGetFile();
+    const res = await ghGetFile('data/speaking-data.json');
     showStatus('ghConfigStatus', `✓ Connected! File exists with ${res.content.length > 0 ? 'data' : 'empty content'}.`, 'success');
   } catch(e) {
     if (e.message === 'NOT_FOUND') {
@@ -694,10 +719,10 @@ async function testGhConnection() {
 
 // ── GITHUB API HELPERS ─────────────────────────────────────────────────────
 
-async function ghGetFile() {
+async function ghGetFile(path) {
   const cfg = getGhCfg();
   const res = await fetch(
-    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${GH_FILE}`,
+    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${path}`,
     { headers: { Authorization: `token ${cfg.token}`, Accept: 'application/vnd.github.v3+json' } }
   );
   if (res.status === 404) throw new Error('NOT_FOUND');
@@ -705,18 +730,18 @@ async function ghGetFile() {
     const err = await res.json().catch(() => ({}));
     throw new Error(err.message || `HTTP ${res.status}`);
   }
-  return res.json(); // { content (base64), sha, ... }
+  return res.json();
 }
 
-async function ghPutFile(content, sha, commitMsg) {
+async function ghPutFile(path, content, sha, commitMsg) {
   const cfg = getGhCfg();
   const body = {
     message: commitMsg,
-    content: btoa(unescape(encodeURIComponent(content))), // utf-8 safe base64
+    content: btoa(unescape(encodeURIComponent(content))),
     ...(sha ? { sha } : {}),
   };
   const res = await fetch(
-    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${GH_FILE}`,
+    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${path}`,
     {
       method: 'PUT',
       headers: {
@@ -734,7 +759,14 @@ async function ghPutFile(content, sha, commitMsg) {
   return res.json();
 }
 
-// ── BUILD SESSION ──────────────────────────────────────────────────────────
+// ── GET TOPIC VALUE ────────────────────────────────────────────────────────
+function getTopic() {
+  const sel    = document.getElementById('sessionTopic').value.trim();
+  const custom = document.getElementById('sessionTopicCustom').value.trim();
+  return custom || sel || '';
+}
+
+// ── BUILD SESSION (speaking-data.json) ────────────────────────────────────
 function buildSession(nextId) {
   const transcript = document.getElementById('transcriptManual').value.trim() ||
     (document.getElementById('transcriptDisplay').textContent !== 'Transcript will appear here — or paste manually below ↓'
@@ -755,6 +787,19 @@ function buildSession(nextId) {
   };
 }
 
+// ── BUILD THUMB ENTRY (speaking-thumb.json) ────────────────────────────────
+function buildThumb(nextId) {
+  const videoUrl = document.getElementById('videoUrl').value.trim();
+  return {
+    id:          nextId,
+    title:       document.getElementById('sessionTitle').value.trim(),
+    description: getTopic(),
+    thumbnail:   '',
+    videoLink:   videoUrl,
+    htmlLink:    `speaking-practice.html?id=${nextId}`,
+  };
+}
+
 // ── PREVIEW ────────────────────────────────────────────────────────────────
 async function previewJSON() {
   const session = buildSession('?');
@@ -770,43 +815,77 @@ async function pushToGitHub() {
     showStatus('exportStatus', 'Set up GitHub config first (Step 5) ↑', 'error'); return;
   }
 
-  showStatus('exportStatus', '📡 Reading current file from GitHub...', 'info');
+  // Validate required fields
+  const title = document.getElementById('sessionTitle').value.trim();
+  const topic = getTopic();
+  if (!title) { showStatus('exportStatus', '❌ Please enter a Title first!', 'error'); return; }
+  if (!topic) { showStatus('exportStatus', '❌ Please select or enter a Topic first!', 'error'); return; }
+
+  showStatus('exportStatus', '📡 Reading files from GitHub...', 'info');
 
   try {
-    // 1. Try to get existing file + sha
-    let existing = [];
-    let sha      = null;
+    // ── 1. Fetch both files in parallel ──
+    const [dataResult, thumbResult] = await Promise.allSettled([
+      ghGetFile('data/speaking-data.json'),
+      ghGetFile('data/speaking-thumb.json'),
+    ]);
 
-    try {
-      const fileData   = await ghGetFile();
-      sha              = fileData.sha;
-      const decoded    = decodeURIComponent(escape(atob(fileData.content.replace(/\n/g, ''))));
-      const parsed     = JSON.parse(decoded);
-      existing         = Array.isArray(parsed) ? parsed : [parsed];
-    } catch(e) {
-      if (e.message !== 'NOT_FOUND') throw e;
-      // File doesn't exist → create new
+    // speaking-data.json
+    let existingData = [], dataSha = null;
+    if (dataResult.status === 'fulfilled') {
+      dataSha     = dataResult.value.sha;
+      const dec   = decodeURIComponent(escape(atob(dataResult.value.content.replace(/\n/g,''))));
+      const parsed = JSON.parse(dec);
+      existingData = Array.isArray(parsed) ? parsed : [parsed];
     }
 
-    // 2. Compute next ID
-    const maxId  = existing.reduce((m, s) => Math.max(m, parseInt(s.id) || 0), 0);
-    const nextId = maxId + 1;
-    const session = buildSession(nextId);
-    existing.push(session);
+    // speaking-thumb.json
+    let existingThumb = [], thumbSha = null;
+    if (thumbResult.status === 'fulfilled') {
+      thumbSha     = thumbResult.value.sha;
+      const dec    = decodeURIComponent(escape(atob(thumbResult.value.content.replace(/\n/g,''))));
+      const parsed = JSON.parse(dec);
+      existingThumb = Array.isArray(parsed) ? parsed : [parsed];
+    }
 
-    // 3. Push
-    showStatus('exportStatus', `📤 Pushing session #${nextId}...`, 'info');
-    const newContent = JSON.stringify(existing, null, 2);
-    await ghPutFile(newContent, sha, `Add session ${nextId}: ${session.videoUrl.slice(0,60)}`);
+    // ── 2. Compute next ID (max across both files for safety) ──
+    const maxData  = existingData.reduce((m,s)  => Math.max(m, parseInt(s.id)||0), 0);
+    const maxThumb = existingThumb.reduce((m,s) => Math.max(m, parseInt(s.id)||0), 0);
+    const nextId   = Math.max(maxData, maxThumb) + 1;
+
+    const session = buildSession(nextId);
+    const thumb   = buildThumb(nextId);
+    existingData.push(session);
+    existingThumb.push(thumb);
+
+    // ── 3. Push both files ──
+    showStatus('exportStatus', `📤 Pushing session #${nextId} to 2 files...`, 'info');
+
+    await Promise.all([
+      ghPutFile(
+        'data/speaking-data.json',
+        JSON.stringify(existingData,  null, 2),
+        dataSha,
+        `Add session ${nextId}: ${title}`
+      ),
+      ghPutFile(
+        'data/speaking-thumb.json',
+        JSON.stringify(existingThumb, null, 2),
+        thumbSha,
+        `Add thumb ${nextId}: ${title}`
+      ),
+    ]);
 
     showStatus('exportStatus',
-      `✅ Pushed! Session #${nextId} added. Total: ${existing.length} sessions in data/speaking-data.json`,
+      `✅ Done! Session #${nextId} "${title}" pushed to both files. Netlify deploys in ~30s.`,
       'success'
     );
 
-    // Update preview if open
+    // Update preview
     const preview = document.getElementById('jsonPreview');
-    if (preview.classList.contains('show')) preview.textContent = JSON.stringify(session, null, 2);
+    if (preview.classList.contains('show')) {
+      preview.textContent = JSON.stringify({ session, thumb }, null, 2);
+    }
 
   } catch(e) {
     showStatus('exportStatus', '❌ Error: ' + e.message, 'error');
