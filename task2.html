@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IELTS WRITING PRACTICE - TASK 2</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/post-styles.css">
 <style>
 /* ── RESET & VARS ──────────────────────────────────── */
@@ -226,8 +227,10 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
 
 /* ── SENTENCE (blank zone) ─────────────────────────── */
 .sentence {
-  display: none;
-  font-family: 'Fredoka', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.25rem; font-weight: 600;
   line-height: 2.2;
   flex-wrap: wrap; align-items: center; gap: 4px;
@@ -238,15 +241,25 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
 
 /* Blank pill */
 .blank {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-width: 56px; height: 34px;
-  border: 2.5px dashed #ccc; border-radius: 10px;
-  background: transparent; color: #999;
-  font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 0.95rem;
-  vertical-align: middle; margin: 0 3px;
-  padding: 0 8px;
-  transition: border-color 0.15s, background 0.15s;
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 56px;
+  height: auto;              /* cho phép cao lên nếu cần */
+  min-height: 34px;
+
+  padding: 4px 12px;         /* padding mềm hơn */
+  border: 2.5px dashed #ccc;
+  border-radius: 10px;
+
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+
+  white-space: normal;       /* 🔥 cho phép wrap */
+  word-break: break-word;    /* 🔥 tránh tràn */
+  text-align: center;
 }
 .blank.filled {
   background: var(--sky-pale); border: var(--border); border-style: solid;
