@@ -1,12 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IELTS WRITING PRACTICE - TASK 1</title>
+<title>Post Page — Script 60s</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/post-styles.css">
 <style>
 /* ── RESET & VARS ──────────────────────────────────── */
@@ -228,10 +226,8 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
 
 /* ── SENTENCE (blank zone) ─────────────────────────── */
 .sentence {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  font-family: 'Quicksand', sans-serif;
+  display: none;
+  font-family: 'Fredoka', sans-serif;
   font-size: 1.25rem; font-weight: 600;
   line-height: 2.2;
   flex-wrap: wrap; align-items: center; gap: 4px;
@@ -242,29 +238,24 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
 
 /* Blank pill */
 .blank {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 40px;        /* giảm lại */
-  height: 34px;
-  padding: 0 10px;        /* cho có khoảng thở */
-  
-  border: 2.5px dashed #ccc;
-  border-radius: 10px;
-  background: transparent;
-  color: #999;
-
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 800;
-  font-size: 0.95rem;
-
-  white-space: nowrap;    /* quan trọng */
+  display: inline-flex; align-items: center; justify-content: center;
+  /* width: auto — dãn theo nội dung khi filled */
+  min-width: 52px; height: 34px;
+  border: 2.5px dashed #bbb; border-radius: 10px;
+  background: transparent; color: #999;
+  font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 0.95rem;
+  vertical-align: middle; margin: 0 3px;
+  padding: 0 10px;
+  transition: min-width 0.15s ease, border-color 0.15s, background 0.15s;
+  white-space: nowrap;
+  /* transition cho smooth khi fill */
+  overflow: hidden;
 }
 .blank.filled {
   background: var(--sky-pale); border: var(--border); border-style: solid;
   color: var(--black); border-radius: 10px;
-  padding: cursor: pointer;
+  padding: 0 10px; cursor: pointer;
+  /* min-width được set inline bởi JS theo độ rộng thực của word chip */
 }
 .blank.filled:hover { background: #c8ecff; }
 .blank.reveal-correct {
@@ -429,7 +420,7 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
 
 <!-- HEADER -->
 <header>
-  <h1><a href="index.html" class="homepage-link">FREESIZE ENGLISH</a></h1>
+  <h1><a href="index.html" class="homepage-link">SCRIPT 60s</a></h1>
   <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
   <nav>
     <ul>
@@ -553,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- Sidebar lessons (no images, emoji instead) -->
 <script>
 const lessonEmojis = ['✍️','📝','📊','📈','🗺️','📉','🔤','💬','📖','🌍','🎓','💡'];
-fetch('data/thumb-writing.json')
+fetch('data/thumb-writing-2.json')
   .then(r => r.json())
   .then(videos => {
     videos.sort((a, b) => b.id - a.id);
@@ -577,7 +568,7 @@ fetch('data/thumb-writing.json')
 </script>
 
 <!-- Fetch video title (optional, still calls the original js) -->
-<script src="js/fetch-writing.js"></script>
+<script src="js/fetch-writing-2.js"></script>
 
 <!-- ── QUIZ LOGIC — Duolingo style ─────────────────────────────── -->
 <script>
@@ -725,14 +716,21 @@ fetch('data/thumb-writing.json')
     if (emptyBi === -1) return;
 
     play('click');
-    btn.classList.add('used');
 
     const blankEl = sentenceEl.querySelector(`[data-bi="${emptyBi}"]`);
     if (!blankEl) return;
 
-    blankEl.innerHTML = wordHTML(btn.dataset.word);
+    // Measure actual rendered width of the word chip BEFORE hiding it
+    const btnRect = btn.getBoundingClientRect();
+    const wordW   = Math.ceil(btnRect.width);
+
+    btn.classList.add('used');
+
+    blankEl.innerHTML    = wordHTML(btn.dataset.word);
     blankEl.classList.add('filled');
     blankEl.dataset.word = btn.dataset.word;
+    // Expand blank to match the word width so layout stays stable
+    blankEl.style.minWidth = wordW + 'px';
 
     slots[emptyBi] = { optBtn: btn, word: btn.dataset.word };
 
@@ -751,10 +749,12 @@ fetch('data/thumb-writing.json')
 
     play('click');
     slot.optBtn.classList.remove('used');
-    blankEl.innerHTML = '';
-    blankEl.className = 'blank';
+    blankEl.innerHTML  = '';
+    blankEl.className  = 'blank';
     blankEl.setAttribute('data-bi', String(bi));
     blankEl.removeAttribute('data-word');
+    blankEl.style.minWidth = ''; // reset về default
+
     slots[bi] = null;
 
     /* re-attach click */
