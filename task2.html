@@ -108,6 +108,22 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
 .content-list li:nth-child(even) { background: var(--red-pale); }
 .content-list li:hover { box-shadow: var(--shadow-md); }
 
+/* ── Audio span (☊) TTS styling ── */
+#itemList .audio {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  background: var(--white); border: var(--border); box-shadow: var(--shadow-sm);
+  font-size: 1.1rem; cursor: pointer;
+  transition: transform .12s, box-shadow .12s, background .12s;
+  vertical-align: middle;
+}
+#itemList .audio:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); background: var(--sky-pale); }
+#itemList .audio.tts-speaking {
+  background: var(--yellow); border-color: var(--black);
+  animation: tts-pulse .7s ease-in-out infinite;
+}
+@keyframes tts-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.18)} }
+
 /* ── SIDEBAR ── */
 .sidebar-card { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 18px; }
 .sidebar-card h3 {
@@ -293,7 +309,93 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
         document.addEventListener('DOMContentLoaded', () => {
           const p = new URLSearchParams(window.location.search);
           loadPosts(p.get('postStartId') || '21', p.get('postEndId') || '32', 'itemList');
+          // passage-sentence.js uses fetch + Promise → give it time to render
+          setTimeout(patchAudioSpans, 800);
         });
+
+        // ── TTS via Web Speech API (free, no API key needed) ──
+        let ttsActive = null; // { span, utter }
+
+        function patchAudioSpans() {
+          const audioSpans = document.querySelectorAll('#itemList li .audio');
+          audioSpans.forEach(span => {
+            if (span.dataset.ttsPatch) return; // already patched
+            span.dataset.ttsPatch = '1';
+
+            // Find the sentence text = h2 text inside the same li
+            const li   = span.closest('li');
+            const h2   = li?.querySelector('h2');
+            const text = h2?.textContent?.trim() || '';
+            if (!text) return;
+
+            // Style the span to look more like a button
+            span.title   = 'Listen (TTS)';
+            span.setAttribute('role', 'button');
+
+            // Remove old listener by cloning — replace original node
+            const newSpan = span.cloneNode(true);
+            span.parentNode.replaceChild(newSpan, span);
+
+            newSpan.addEventListener('click', e => {
+              e.stopPropagation();
+              ttsSpeak(newSpan, text);
+            });
+          });
+        }
+
+        function ttsSpeak(span, text) {
+          if (!window.speechSynthesis) { alert('TTS not supported in this browser'); return; }
+
+          // Clicking the active span → stop
+          if (ttsActive && ttsActive.span === span) {
+            window.speechSynthesis.cancel();
+            ttsReset(span);
+            return;
+          }
+
+          // Stop previous
+          if (ttsActive) { window.speechSynthesis.cancel(); ttsReset(ttsActive.span); }
+
+          const utter  = new SpeechSynthesisUtterance(text);
+          utter.lang   = 'en-US';
+          utter.rate   = 0.88;
+          utter.pitch  = 1;
+
+          // Pick best English voice
+          const pickVoice = () => {
+            const voices  = window.speechSynthesis.getVoices();
+            return voices.find(v => v.lang === 'en-US' && /natural|samantha|google/i.test(v.name))
+                || voices.find(v => v.lang === 'en-US')
+                || voices.find(v => v.lang.startsWith('en'));
+          };
+          const voice = pickVoice();
+          if (voice) utter.voice = voice;
+
+          utter.onstart = () => {
+            span.textContent = '⏹';
+            span.classList.add('tts-speaking');
+            ttsActive = { span, utter };
+          };
+          const done = () => {
+            ttsReset(span);
+            if (ttsActive?.span === span) ttsActive = null;
+          };
+          utter.onend   = done;
+          utter.onerror = done;
+
+          window.speechSynthesis.speak(utter);
+        }
+
+        function ttsReset(span) {
+          span.textContent = '☊';
+          span.classList.remove('tts-speaking');
+        }
+
+        // Chrome needs voices loaded async
+        if (window.speechSynthesis) {
+          window.speechSynthesis.getVoices(); // warm up
+          window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+        }
       </script>
     </div>
 
@@ -360,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <script>
 const lessonEmojis = ['✍️','📝','📊','📈','🗺️','📉','🔤','💬','📖','🌍','🎓','💡'];
-fetch('data/thumb-writing-2.json')
+fetch('data/thumb-writing.json')
   .then(r => r.json())
   .then(videos => {
     videos.sort((a, b) => b.id - a.id);
@@ -383,7 +485,7 @@ fetch('data/thumb-writing-2.json')
   .catch(err => console.error('Error:', err));
 </script>
 
-<script src="js/fetch-writing-2.js"></script>
+<script src="js/fetch-writing.js"></script>
 
 <script>
 (function () {
