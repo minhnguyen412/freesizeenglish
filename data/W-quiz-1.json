@@ -4308,6 +4308,116 @@
         { "answer": "itinerary" }
     ],
     "words": ["that", "city", "cruises", "in", "there,", "a", "weeklong", "not", "Amsterdam", "on", "what", "often", "River", "much", "do", "as", "is", "is", "just", "time", "the", "itinerary", "dock", "typically", "one", "spend", "stop"]
+},
+        {
+    "id": 149,
+    "audio": "",
+    "sentence": "Liệu những lo ngại về đợt tăng giá cổ phiếu AI có bị thổi phồng quá mức?<br>___ ___ ___ ___ ___ ___ ___?",
+    "blanks": [
+        { "answer": "Are" },
+        { "answer": "concerns" },
+        { "answer": "about" },
+        { "answer": "the" },
+        { "answer": "AI" },
+        { "answer": "rally" },
+        { "answer": "overblown" }
+    ],
+    "words": ["AI", "rally", "concerns", "the", "overblown", "Are", "about"]
+},
+
+{
+    "id": 150,
+    "audio": "",
+    "sentence": "Giám đốc điều hành OpenAI, Sam Altman, gần đây cho biết các nhà đầu tư đang quá phấn khích về AI.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
+    "blanks": [
+        { "answer": "OpenAI" },
+        { "answer": "CEO" },
+        { "answer": "Sam" },
+        { "answer": "Altman" },
+        { "answer": "recently" },
+        { "answer": "said" },
+        { "answer": "investors" },
+        { "answer": "were" },
+        { "answer": "overexcited" },
+        { "answer": "about" },
+        { "answer": "AI" }
+    ],
+    "words": ["overexcited", "Altman", "AI", "Sam", "said", "OpenAI", "investors", "about", "recently", "CEO", "were"]
+},
+
+{
+    "id": 151,
+    "audio": "",
+    "sentence": "Các công ty công nghệ bao gồm Meta và Microsoft - những người mua chip lớn của Nvidia - đang chi mạnh tay cho các kế hoạch AI của họ, và ngay cả khi họ bắt đầu thấy những dấu hiệu khả quan về lợi nhuận, điều tương tự không thể nói về hầu hết các công ty khác.<br>___ ___ ___ ___ ___ ___ - ___ ___ ___ ___ ___ - ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___.",
+    "blanks": [
+        { "answer": "Tech" },
+        { "answer": "firms" },
+        { "answer": "including" },
+        { "answer": "Meta" },
+        { "answer": "and" },
+        { "answer": "Microsoft" },
+        { "answer": "big" },
+        { "answer": "buyers" },
+        { "answer": "of" },
+        { "answer": "Nvidia's" },
+        { "answer": "chips" },
+        { "answer": "are" },
+        { "answer": "spending" },
+        { "answer": "liberally" },
+        { "answer": "on" },
+        { "answer": "their" },
+        { "answer": "AI" },
+        { "answer": "plans" },
+        { "answer": "and" },
+        { "answer": "even" },
+        { "answer": "if" },
+        { "answer": "they" },
+        { "answer": "are" },
+        { "answer": "starting" },
+        { "answer": "to" },
+        { "answer": "see" },
+        { "answer": "the" },
+        { "answer": "green" },
+        { "answer": "shoots" },
+        { "answer": "of" },
+        { "answer": "returns" },
+        { "answer": "the" },
+        { "answer": "same" },
+        { "answer": "cannot" },
+        { "answer": "be" },
+        { "answer": "said" },
+        { "answer": "about" },
+        { "answer": "most" },
+        { "answer": "other" },
+        { "answer": "companies" }
+    ],
+    "words": ["shoots", "said", "returns", "are", "other", "and", "of", "to", "green", "are", "the", "the", "their", "big", "companies", "chips", "Tech", "see", "starting", "most", "Nvidia's", "on", "of", "Microsoft", "if", "AI", "plans", "firms", "be", "they", "Meta", "spending", "liberally", "buyers", "including", "cannot", "and", "about", "even", "same"]
+},
+
+{
+    "id": 152,
+    "audio": "",
+    "sentence": "Bình luận của Nvidia về nhu cầu sẽ hoặc làm cho các nhà đầu tư yên tâm hoặc gây ra đợt bán tháo cổ phiếu liên quan đến AI.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
+    "blanks": [
+        { "answer": "Nvidia's" },
+        { "answer": "commentary" },
+        { "answer": "about" },
+        { "answer": "demand" },
+        { "answer": "will" },
+        { "answer": "either" },
+        { "answer": "put" },
+        { "answer": "investors" },
+        { "answer": "at" },
+        { "answer": "ease" },
+        { "answer": "or" },
+        { "answer": "prompt" },
+        { "answer": "a" },
+        { "answer": "selloff" },
+        { "answer": "in" },
+        { "answer": "AI-related" },
+        { "answer": "shares" }
+    ],
+    "words": ["or", "either", "demand", "will", "selloff", "investors", "about", "commentary", "prompt", "a", "in", "at", "Nvidia's", "shares", "put", "AI-related", "ease"]
 }
     ]
 }
