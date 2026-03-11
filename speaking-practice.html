@@ -504,7 +504,7 @@
     .page-grid { grid-template-columns: 1fr; padding: 20px 20px 80px; }
     .video-col { position: static; }
     .video-card, .video-placeholder { max-width: 320px; margin: 0 auto; }
-    .video-col.tiktok-col { display: none; }
+    .tiktok-hide-mobile { display: none; }
   }
   @media (max-width: 600px) {
     header { padding: 0 16px; }
@@ -523,7 +523,7 @@
 
 <header>
   <a class="logo" href="index.html">🔴 FREESIZE ENGLISH</a>
-  <div class="header-tag">Study Session</div>
+
 </header>
 
 <div id="app"></div>
@@ -619,7 +619,7 @@ function buildVideoColHTML(vid) {
       return `<div class="video-placeholder"><span class="big-emoji">🎵</span><span>Can't extract TikTok ID</span><a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a></div>`;
     }
     return `
-      <div class="tiktok-iframe-wrap">
+      <div class="tiktok-iframe-wrap tiktok-hide-mobile">
         <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}?autoplay=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" scrolling="no"></iframe>
       </div>
       <a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
@@ -837,7 +837,7 @@ function renderPage(raw) {
     <div class="page-grid">
 
       <!-- VIDEO COLUMN -->
-      <div class="video-col${vid && vid.type === 'tiktok' ? ' tiktok-col' : ''}">
+      <div class="video-col">
         ${videoColHTML}
       </div>
 
