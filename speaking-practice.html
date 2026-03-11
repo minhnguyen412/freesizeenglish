@@ -646,7 +646,8 @@ async function toggleRecording() {
 async function startRecording() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    mediaRec    = new MediaRecorder(stream);
+    const mimeType = getSupportedMimeType();
+    mediaRec    = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
     audioChunks = [];
     currentSTT  = '';
 
@@ -686,11 +687,27 @@ function stopRecording() {
   if (speechRec) { speechRec.stop(); speechRec = null; }
 }
 
+function getSupportedMimeType() {
+  const types = [
+    'audio/mp4',           // iOS Safari, macOS Safari
+    'audio/webm;codecs=opus',
+    'audio/webm',
+    'audio/ogg;codecs=opus',
+    'audio/ogg',
+  ];
+  for (const t of types) {
+    if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) return t;
+  }
+  return '';
+}
+
 function saveLiveRecording() {
-  const blob  = new Blob(audioChunks, { type: 'audio/webm' });
+  const mimeType = getSupportedMimeType();
+  const blob  = new Blob(audioChunks, mimeType ? { type: mimeType } : {});
   const url   = URL.createObjectURL(blob);
+  const ext   = mimeType.includes('mp4') ? 'mp4' : mimeType.includes('ogg') ? 'ogg' : 'webm';
   const idx   = liveRecordings.length + 1;
-  liveRecordings.push({ index: idx, blob, url, sttText: currentSTT.trim(), timestamp: new Date().toISOString() });
+  liveRecordings.push({ index: idx, blob, url, ext, sttText: currentSTT.trim(), timestamp: new Date().toISOString() });
   renderLiveRecordings();
   showRecStatus(`✓ Recording #${idx} saved`, 'success');
 }
@@ -722,7 +739,7 @@ function downloadLiveRec(i) {
   const rec = liveRecordings[i];
   const a   = document.createElement('a');
   a.href     = rec.url;
-  a.download = `practice_rec_${rec.index}_${Date.now()}.webm`;
+  a.download = `practice_rec_${rec.index}_${Date.now()}.${rec.ext || 'webm'}`;
   a.click();
 }
 
@@ -785,26 +802,10 @@ function renderPage(raw) {
     <div class="video-meta-card">
       <div class="session-id">${esc(d.id || '—')}</div>
       <div class="stat-row">
-        <div class="stat-box"><div class="num">${recCount}</div><div class="lbl">Saved</div></div>
         <div class="stat-box"><div class="num">${vocCount}</div><div class="lbl">Vocab</div></div>
         <div class="stat-box"><div class="num">${graCount}</div><div class="lbl">Grammar</div></div>
       </div>
     </div>`;
-
-  /* ---- Saved recordings ---- */
-  const savedRecsHTML = recCount
-    ? d.recordings.map((r, i) => `
-        <div class="rec-item" style="animation-delay:${i*0.06}s">
-          <div class="rec-header">
-            <span class="rec-badge">🎙️ REC #${r.index}</span>
-            ${r.timestamp ? `<span class="rec-ts">${fmtDate(r.timestamp)}</span>` : ''}
-          </div>
-          ${r.url
-            ? `<audio controls src="${esc(r.url)}" preload="none"></audio>`
-            : `<p style="font-family:'Quicksand',sans-serif;font-size:0.83rem;color:var(--muted);">No audio linked</p>`}
-          ${r.sttText ? `<div class="rec-stt">${esc(r.sttText)}</div>` : ''}
-        </div>`).join('')
-    : '';
 
   /* ---- Transcript ---- */
   const transcriptHTML = d.transcript && d.transcript.trim()
@@ -853,8 +854,12 @@ function renderPage(raw) {
           ${grammarHTML}
         </div>
 
+        <!-- Audio Recordings — live recorder only -->
+        <div class="card" style="animation-delay:0.19s">
+          <div class="card-title green">🎙️ Audio Recordings</div>
+
           <!-- ═══ LIVE RECORDER ═══ -->
-          <div class="recorder-section" style="${recCount ? 'border-top:none;padding-top:0;' : 'border-top:none;padding-top:0;'}">
+          <div class="recorder-section" style="border-top:none;padding-top:0;">
 
             <!-- Language select -->
             <div class="lang-row">
