@@ -4418,6 +4418,150 @@
         { "answer": "shares" }
     ],
     "words": ["or", "either", "demand", "will", "selloff", "investors", "about", "commentary", "prompt", "a", "in", "at", "Nvidia's", "shares", "put", "AI-related", "ease"]
+},
+        {
+    "id": 153,
+    "audio": "",
+    "sentence": "Các nghiên cứu đã chỉ ra rằng có mối tương quan tích cực giữa số lượng sở thích và năng lực mà một người phát triển với tác động sáng tạo.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
+    "blanks": [
+        { "answer": "Studies" },
+        { "answer": "have" },
+        { "answer": "shown" },
+        { "answer": "that" },
+        { "answer": "there" },
+        { "answer": "is" },
+        { "answer": "a" },
+        { "answer": "positive" },
+        { "answer": "correlation" },
+        { "answer": "between" },
+        { "answer": "the" },
+        { "answer": "number" },
+        { "answer": "of" },
+        { "answer": "interests" },
+        { "answer": "and" },
+        { "answer": "competencies" },
+        { "answer": "one" },
+        { "answer": "develops" },
+        { "answer": "and" },
+        { "answer": "creative" },
+        { "answer": "impact" }
+    ],
+    "words": ["shown", "correlation", "have", "Studies", "a", "develops", "there", "of", "competencies", "interests", "positive", "one", "impact", "that", "the", "between", "number", "and", "creative", "is", "and"]
+},
+
+{
+    "id": 154,
+    "audio": "",
+    "sentence": "Những người đa tài giống như “thợ giỏi nhiều việc”.<br>___ ___ ___ ___ ___ ‘___ ___ ___ ___’.",
+    "blanks": [
+        { "answer": "Polymaths" },
+        { "answer": "are" },
+        { "answer": "a" },
+        { "answer": "bit" },
+        { "answer": "like" },
+        { "answer": "jack" },
+        { "answer": "of" },
+        { "answer": "all" },
+        { "answer": "sorts" }
+    ],
+    "words": ["bit", "all", "jack", "are", "like", "of", "sorts", "a", "Polymaths"]
+},
+
+{
+    "id": 155,
+    "audio": "",
+    "sentence": "Các chuyên gia thường tập trung vào những gì đặc thù trong lĩnh vực của họ, thu hẹp phạm vi, trong khi những người đa tài có thể là những người tích hợp tuyệt vời.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___, ___ ___ ___ ___ ___ ___.",
+    "blanks": [
+        { "answer": "Specialists" },
+        { "answer": "tend" },
+        { "answer": "to" },
+        { "answer": "focus" },
+        { "answer": "on" },
+        { "answer": "what" },
+        { "answer": "is" },
+        { "answer": "specific" },
+        { "answer": "to" },
+        { "answer": "their" },
+        { "answer": "field" },
+        { "answer": "narrowing" },
+        { "answer": "down" },
+        { "answer": "their" },
+        { "answer": "scope" },
+        { "answer": "while" },
+        { "answer": "polymaths" },
+        { "answer": "can" },
+        { "answer": "be" },
+        { "answer": "great" },
+        { "answer": "integrators" }
+    ],
+    "words": ["field", "narrowing", "on", "their", "great", "scope", "is", "their", "to", "to", "integrators", "specific", "tend", "focus", "Specialists", "down", "while", "polymaths", "be", "what", "can"]
+},
+
+{
+    "id": 156,
+    "audio": "",
+    "sentence": "Thông qua sự tò mò và khát khao học hỏi “một chút về nhiều thứ”, họ có thể mang những gì tốt nhất mà người khác đã tạo ra và tích hợp nó vào lĩnh vực cốt lõi của mình.<br>___ ___ ___ ___ ___ ___ ___ ‘___ ___ ___ ___ ___’ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
+    "blanks": [
+        { "answer": "Through" },
+        { "answer": "their" },
+        { "answer": "curiosity" },
+        { "answer": "and" },
+        { "answer": "thirst" },
+        { "answer": "for" },
+        { "answer": "learning" },
+        { "answer": "a" },
+        { "answer": "little" },
+        { "answer": "about" },
+        { "answer": "a" },
+        { "answer": "lot" },
+        { "answer": "they" },
+        { "answer": "can" },
+        { "answer": "bring" },
+        { "answer": "the" },
+        { "answer": "best" },
+        { "answer": "of" },
+        { "answer": "what" },
+        { "answer": "others" },
+        { "answer": "have" },
+        { "answer": "created" },
+        { "answer": "and" },
+        { "answer": "integrate" },
+        { "answer": "it" },
+        { "answer": "in" },
+        { "answer": "their" },
+        { "answer": "core" },
+        { "answer": "field" }
+    ],
+    "words": ["little", "and", "a", "best", "thirst", "their", "about", "the", "in", "and", "what", "bring", "core", "others", "field", "integrate", "curiosity", "lot", "it", "created", "can", "learning", "have", "their", "for", "Through", "of", "a", "they"]
+},
+
+{
+    "id": 157,
+    "audio": "",
+    "sentence": "Những người đa tài mang đến những sự kết hợp độc đáo giữa các kỹ năng và kiến ​​thức từ nhiều lĩnh vực, và sau đó tích hợp chúng để hiện thực hóa những ý tưởng đột phá.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___.",
+    "blanks": [
+        { "answer": "Polymaths" },
+        { "answer": "bring" },
+        { "answer": "atypical" },
+        { "answer": "combinations" },
+        { "answer": "of" },
+        { "answer": "skills" },
+        { "answer": "and" },
+        { "answer": "knowledge" },
+        { "answer": "across" },
+        { "answer": "fields" },
+        { "answer": "and" },
+        { "answer": "then" },
+        { "answer": "integrate" },
+        { "answer": "them" },
+        { "answer": "to" },
+        { "answer": "bring" },
+        { "answer": "to" },
+        { "answer": "life" },
+        { "answer": "disruptive" },
+        { "answer": "ideas" }
+    ],
+    "words": ["and", "of", "them", "ideas", "bring", "skills", "to", "and", "bring", "combinations", "knowledge", "to", "Polymaths", "atypical", "then", "life", "across", "integrate", "fields", "disruptive"]
 }
     ]
 }
