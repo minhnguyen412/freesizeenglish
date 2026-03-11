@@ -20,6 +20,8 @@
     --sky-pale:    #eaf8ff;
     --green:       #4caf50;
     --green-pale:  #f0fff0;
+    --green-dark:  #2e7d32;
+    --orange-pale: #feefdb;
     --muted:       #888;
     --border:      2.5px solid var(--black);
     --border-thick:3px solid var(--black);
@@ -70,7 +72,7 @@
   /* ── PAGE WRAPPER ── */
   #app { position: relative; z-index: 1; }
 
-  /* ── MAIN GRID: video-left + content-right ── */
+  /* ── MAIN GRID ── */
   .page-grid {
     display: grid;
     grid-template-columns: 340px 1fr;
@@ -90,7 +92,6 @@
     gap: 14px;
   }
 
-  /* Vertical video embed box */
   .video-card {
     background: var(--black);
     border: var(--border-thick);
@@ -104,13 +105,10 @@
     width: 100%;
   }
   .video-card iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
+    width: 100%; height: 100%;
+    border: none; display: block;
   }
 
-  /* No-video placeholder */
   .video-placeholder {
     background: var(--white);
     border: var(--border-thick);
@@ -131,7 +129,6 @@
   }
   .video-placeholder .big-emoji { font-size: 3.5rem; }
 
-  /* Open link button below video */
   .video-link-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
     background: var(--red-light); border: var(--border); border-radius: 50px;
@@ -141,7 +138,6 @@
   }
   .video-link-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
 
-  /* Session ID mini card below video */
   .video-meta-card {
     background: var(--red);
     border: var(--border-thick); border-radius: 16px;
@@ -165,18 +161,15 @@
   .stat-box .num { font-size: 1.3rem; font-weight: 700; }
   .stat-box .lbl { font-size: 0.68rem; opacity: 0.82; }
 
-  /* ── TIKTOK IFRAME (interactive) ── */
   .tiktok-iframe-wrap {
     width: 100%; aspect-ratio: 9/16;
     border: var(--border-thick); border-radius: 20px;
     overflow: hidden; box-shadow: var(--shadow-lg);
     background: #111;
-    position: relative;
   }
   .tiktok-iframe-wrap iframe {
     width: 100%; height: 100%;
     border: none; display: block;
-    /* fully interactive — user can unmute, pause, fullscreen */
   }
   .tiktok-open-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -218,7 +211,6 @@
   .card-title.sky    { background: var(--sky);    color: var(--black); }
   .card-title.green  { background: var(--green);  color: white; }
 
-  /* Date pill */
   .date-pill {
     font-family: 'Quicksand', sans-serif;
     font-size: 0.75rem; font-weight: 700;
@@ -240,9 +232,7 @@
   .transcript-body::-webkit-scrollbar-thumb { background: var(--red-light); border-radius: 3px; }
 
   /* ── VOCAB / GRAMMAR PILLS ── */
-  .pill-wrap {
-    display: flex; flex-wrap: wrap; gap: 10px;
-  }
+  .pill-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
   .vocab-pill {
     font-family: 'Quicksand', sans-serif;
     font-size: 0.92rem; font-weight: 700;
@@ -269,14 +259,14 @@
   .grammar-item:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
   .grammar-list { display: flex; flex-direction: column; gap: 8px; }
 
-  /* ── RECORDINGS ── */
-  .recordings-list { display: flex; flex-direction: column; gap: 12px; }
+  /* ── RECORDINGS (saved from JSON) ── */
+  .saved-recordings-list { display: flex; flex-direction: column; gap: 12px; }
   .rec-item {
     background: var(--red-pale); border: var(--border);
     border-radius: 16px; padding: 14px 16px;
     box-shadow: var(--shadow-sm); animation: fadeUp 0.35s ease both;
   }
-  .rec-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .rec-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
   .rec-badge {
     background: var(--red); color: white;
     border: var(--border); border-radius: 50px;
@@ -295,6 +285,145 @@
     border-radius: 10px; padding: 9px 13px; line-height: 1.6;
   }
   .rec-stt::before { content: '💬 '; }
+
+  /* ── LIVE RECORDER SECTION ── */
+  .recorder-section {
+    margin-top: 20px;
+    border-top: var(--border);
+    padding-top: 20px;
+  }
+  .recorder-section-title {
+    font-weight: 700; font-size: 0.95rem;
+    background: var(--green); color: white;
+    border: var(--border); border-radius: 50px;
+    padding: 5px 20px; box-shadow: var(--shadow-sm);
+    display: inline-block; margin-bottom: 16px;
+  }
+
+  /* Lang select row */
+  .lang-row {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;
+  }
+  .lang-row select {
+    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.88rem;
+    background: var(--white); border: var(--border); border-radius: 10px;
+    padding: 7px 12px; outline: none; cursor: pointer;
+    transition: box-shadow 0.15s;
+  }
+  .lang-row select:focus { box-shadow: var(--shadow-sm); }
+
+  /* Recorder inner */
+  .recorder-inner {
+    background: var(--red-pale); border: var(--border); border-radius: 14px;
+    padding: 16px 18px; margin-bottom: 14px;
+  }
+  .rec-controls {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap;
+  }
+  .rec-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--muted); border: var(--border); flex-shrink: 0;
+    transition: background 0.3s;
+  }
+  .rec-dot.active {
+    background: var(--red);
+    animation: blink 1s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .rec-timer {
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.1rem;
+    min-width: 50px; color: var(--black);
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 0.95rem;
+    padding: 9px 20px; border: var(--border-thick); border-radius: 50px;
+    box-shadow: var(--shadow-sm); cursor: pointer;
+    display: inline-flex; align-items: center; gap: 7px;
+    transition: transform 0.12s, box-shadow 0.12s;
+    white-space: nowrap; background: var(--white); color: var(--black);
+  }
+  .btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+  .btn:active { transform: translate(1px,1px); box-shadow: none; }
+  .btn:disabled { opacity: 0.4; pointer-events: none; }
+  .btn-red    { background: var(--red);    color: white; }
+  .btn-green  { background: var(--green);  color: white; }
+  .btn-white  { background: var(--white);  color: var(--black); }
+  .btn-sky    { background: var(--sky-pale); color: var(--black); }
+
+  /* STT output */
+  .stt-box {
+    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.9rem;
+    line-height: 1.7; color: var(--muted);
+    background: var(--white); border: var(--border); border-radius: 10px;
+    padding: 11px 14px; min-height: 52px;
+    white-space: pre-wrap;
+  }
+  .stt-box.has-text { color: var(--black); }
+
+  /* Live recordings list */
+  .live-recordings-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .live-rec-item {
+    background: var(--white); border: var(--border); border-radius: 14px;
+    padding: 12px 14px; display: flex; align-items: center; gap: 10px;
+    box-shadow: var(--shadow-sm);
+    animation: fadeUp 0.3s ease both;
+  }
+  .live-rec-num {
+    background: var(--green); color: white;
+    border: var(--border); border-radius: 50px;
+    padding: 2px 12px; font-weight: 700; font-size: 0.78rem;
+    flex-shrink: 0;
+  }
+  .live-rec-item audio {
+    flex: 1; height: 32px;
+    border-radius: 8px; min-width: 0;
+    border: var(--border);
+  }
+  .live-rec-stt {
+    font-family: 'Quicksand', sans-serif; font-size: 0.75rem; font-weight: 600;
+    color: var(--muted); max-width: 140px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    flex-shrink: 1;
+  }
+  .live-rec-actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+  .btn-icon {
+    width: 32px; height: 32px; border-radius: 50%;
+    border: var(--border); background: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 0.88rem;
+    box-shadow: var(--shadow-sm); transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .btn-icon:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
+  .btn-icon.del { background: var(--red-pale); }
+  .btn-icon.dl  { background: var(--green-pale); }
+
+  /* Status msg */
+  .status-msg {
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.82rem;
+    padding: 8px 14px; border-radius: 10px; margin-top: 10px;
+    border: var(--border); display: none;
+  }
+  .status-msg.show { display: block; }
+  .status-msg.info    { background: var(--yellow-pale); color: #7a5c00; }
+  .status-msg.success { background: var(--green-pale);  color: var(--green-dark); }
+  .status-msg.error   { background: var(--red-pale);    color: var(--red-dark); }
+
+  /* Divider label */
+  .divider-label {
+    display: flex; align-items: center; gap: 10px;
+    margin: 18px 0 14px;
+    font-family: 'Quicksand', sans-serif; font-weight: 700;
+    font-size: 0.78rem; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .divider-label::before, .divider-label::after {
+    content: ''; flex: 1; height: 2px;
+    background: var(--black); opacity: 0.12;
+  }
 
   /* ── EMPTY STATE ── */
   .empty-state {
@@ -332,10 +461,8 @@
     display: inline-block;
   }
 
-  /* ── SESSION LIST (no ?id) ── */
-  .session-list {
-    width: 100%; max-width: 680px;
-  }
+  /* ── SESSION LIST ── */
+  .session-list { width: 100%; max-width: 680px; }
   .session-list h2 {
     font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;
     display: inline-block;
@@ -359,9 +486,7 @@
   .session-list-item .sli-date {
     font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--muted);
   }
-  .session-list-item .sli-arrow {
-    font-size: 1.2rem; color: var(--red); flex-shrink: 0;
-  }
+  .session-list-item .sli-arrow { font-size: 1.2rem; color: var(--red); flex-shrink: 0; }
 
   /* ── FOOTER ── */
   footer {
@@ -373,22 +498,9 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    .page-grid {
-      grid-template-columns: 1fr;
-      padding: 20px 20px 80px;
-    }
-    .video-col {
-      position: static;
-      /* On mobile, limit video height */
-    }
-    .video-card {
-      max-width: 320px;
-      margin: 0 auto;
-    }
-    .video-placeholder {
-      max-width: 320px;
-      margin: 0 auto;
-    }
+    .page-grid { grid-template-columns: 1fr; padding: 20px 20px 80px; }
+    .video-col { position: static; }
+    .video-card, .video-placeholder { max-width: 320px; margin: 0 auto; }
   }
   @media (max-width: 600px) {
     header { padding: 0 16px; }
@@ -432,9 +544,6 @@ function esc(s) {
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// ── EXTRACT TIKTOK VIDEO ID — handles many URL forms ──────────────────────
-// https://www.tiktok.com/@user/video/7608273881547148551?...
-// https://vm.tiktok.com/ZMxxxxxxxx/
 function extractTikTokId(url) {
   const m = url.match(/\/video\/(\d+)/);
   return m ? m[1] : null;
@@ -444,7 +553,6 @@ function extractTikTokId(url) {
 function normalise(raw) {
   const d = { ...raw };
 
-  // recordings: string URL / "url1,url2" / array of objects
   if (typeof d.recordings === 'string') {
     const urls = d.recordings.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
     d.recordings = urls.map((url, i) => ({ index: i+1, url, sttText: '', timestamp: d.createdAt||null }));
@@ -459,12 +567,10 @@ function normalise(raw) {
     d.recordings = [];
   }
 
-  // vocabulary: "word1, word2" → array
   d._vocab = typeof d.vocabulary === 'string'
     ? d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean)
     : [];
 
-  // grammarStructures: "p1; p2" → array
   d._grammar = typeof d.grammarStructures === 'string'
     ? d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean)
     : [];
@@ -476,90 +582,191 @@ function normalise(raw) {
 function buildVideo(url) {
   if (!url || !url.trim()) return null;
 
-  // YouTube
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/);
   if (yt) {
-    return {
-      type: 'youtube',
-      iframe: `https://www.youtube.com/embed/${yt[1]}?rel=0`,
-      link: url,
-      label: '↗ Open on YouTube',
-    };
+    return { type: 'youtube', iframe: `https://www.youtube.com/embed/${yt[1]}?rel=0`, link: url, label: '↗ Open on YouTube' };
   }
 
-  // TikTok — NO iframe, show thumbnail + open link
   if (url.includes('tiktok.com')) {
-    const vid = extractTikTokId(url);
-    return {
-      type: 'tiktok',
-      vid,
-      link: url,
-      label: '↗ Watch on TikTok',
-    };
+    return { type: 'tiktok', vid: extractTikTokId(url), link: url, label: '↗ Watch on TikTok' };
   }
 
-  // Generic iframe fallback
   return { type: 'generic', iframe: url, link: url, label: '↗ Open link' };
 }
 
-// ── RENDER VIDEO COLUMN HTML ───────────────────────────────────────────────
-// Returns HTML string; for TikTok also kicks off async thumbnail fetch
-function buildVideoColHTML(vid, containerIdPrefix) {
+function buildVideoColHTML(vid) {
   if (!vid) {
-    return `
-      <div class="video-placeholder">
-        <span class="big-emoji">🎬</span>
-        <span>No video URL</span>
-      </div>`;
+    return `<div class="video-placeholder"><span class="big-emoji">🎬</span><span>No video URL</span></div>`;
   }
-
   if (vid.type === 'youtube') {
     return `
       <div class="video-card">
-        <iframe src="${esc(vid.iframe)}"
-          allow="autoplay; encrypted-media; picture-in-picture"
-          allowfullscreen loading="lazy"></iframe>
+        <iframe src="${esc(vid.iframe)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
-      <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
-        ${esc(vid.label)}
-      </a>`;
+      <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
   }
-
   if (vid.type === 'tiktok') {
     if (!vid.vid) {
-      return `
-        <div class="video-placeholder">
-          <span class="big-emoji">🎵</span>
-          <span>Can't extract TikTok video ID</span>
-          <a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a>
-        </div>`;
+      return `<div class="video-placeholder"><span class="big-emoji">🎵</span><span>Can't extract TikTok ID</span><a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a></div>`;
     }
     return `
       <div class="tiktok-iframe-wrap">
-        <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}?autoplay=1"
-          allow="autoplay; encrypted-media; fullscreen"
-          allowfullscreen loading="lazy"
-          scrolling="no"></iframe>
+        <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}?autoplay=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" scrolling="no"></iframe>
       </div>
       <a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0">
-          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
-        </svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
         Watch on TikTok
       </a>`;
   }
+  return `<div class="video-card"><iframe src="${esc(vid.iframe)}" allowfullscreen loading="lazy"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
+}
 
-  if (vid.type === 'generic') {
-    return `
-      <div class="video-card">
-        <iframe src="${esc(vid.iframe)}" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
-        ${esc(vid.label)}
-      </a>`;
+// ── LIVE RECORDER STATE ────────────────────────────────────────────────────
+let liveRecordings = [];
+let mediaRec       = null;
+let audioChunks    = [];
+let isRecording    = false;
+let timerInt       = null;
+let recSecs        = 0;
+let speechRec      = null;
+let currentSTT     = '';
+
+function showRecStatus(msg, type) {
+  const el = document.getElementById('liveRecStatus');
+  if (!el) return;
+  el.textContent = msg;
+  el.className = `status-msg show ${type}`;
+  if (type !== 'info') setTimeout(() => el.classList.remove('show'), 5000);
+}
+
+async function toggleRecording() {
+  isRecording ? stopRecording() : await startRecording();
+}
+
+async function startRecording() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRec    = new MediaRecorder(stream);
+    audioChunks = [];
+    currentSTT  = '';
+
+    mediaRec.ondataavailable = e => audioChunks.push(e.data);
+    mediaRec.onstop = saveLiveRecording;
+    mediaRec.start();
+    isRecording = true;
+
+    document.getElementById('liveRecDot').classList.add('active');
+    document.getElementById('liveRecBtn').textContent  = '⏸ Pause';
+    document.getElementById('liveStopBtn').disabled    = false;
+
+    recSecs  = 0;
+    timerInt = setInterval(() => {
+      recSecs++;
+      const m = String(Math.floor(recSecs/60)).padStart(2,'0');
+      const s = String(recSecs%60).padStart(2,'0');
+      document.getElementById('liveRecTimer').textContent = `${m}:${s}`;
+    }, 1000);
+
+    startSTT();
+    showRecStatus('Recording... speak clearly 🎙️', 'info');
+  } catch(e) {
+    showRecStatus('Microphone denied: ' + e.message, 'error');
+  }
+}
+
+function stopRecording() {
+  if (!mediaRec) return;
+  mediaRec.stop();
+  mediaRec.stream.getTracks().forEach(t => t.stop());
+  isRecording = false;
+  clearInterval(timerInt);
+  document.getElementById('liveRecDot').classList.remove('active');
+  document.getElementById('liveRecBtn').textContent = '● REC';
+  document.getElementById('liveStopBtn').disabled   = true;
+  if (speechRec) { speechRec.stop(); speechRec = null; }
+}
+
+function saveLiveRecording() {
+  const blob  = new Blob(audioChunks, { type: 'audio/webm' });
+  const url   = URL.createObjectURL(blob);
+  const idx   = liveRecordings.length + 1;
+  liveRecordings.push({ index: idx, blob, url, sttText: currentSTT.trim(), timestamp: new Date().toISOString() });
+  renderLiveRecordings();
+  showRecStatus(`✓ Recording #${idx} saved`, 'success');
+}
+
+function renderLiveRecordings() {
+  const list = document.getElementById('liveRecordingsList');
+  if (!list) return;
+  if (liveRecordings.length === 0) {
+    list.innerHTML = '<div style="font-family:Quicksand,sans-serif;font-size:0.85rem;color:var(--muted);padding:4px 0;">No recordings yet — hit REC to start!</div>';
+    return;
+  }
+  list.innerHTML = '';
+  liveRecordings.forEach((rec, i) => {
+    const div = document.createElement('div');
+    div.className = 'live-rec-item';
+    div.innerHTML = `
+      <span class="live-rec-num">REC ${rec.index}</span>
+      <audio controls src="${rec.url}"></audio>
+      ${rec.sttText ? `<span class="live-rec-stt" title="${esc(rec.sttText)}">${esc(rec.sttText)}</span>` : ''}
+      <div class="live-rec-actions">
+        <button class="btn-icon dl" title="Download audio" onclick="downloadLiveRec(${i})">⬇</button>
+        <button class="btn-icon del" title="Delete" onclick="deleteLiveRec(${i})">✕</button>
+      </div>`;
+    list.appendChild(div);
+  });
+}
+
+function downloadLiveRec(i) {
+  const rec = liveRecordings[i];
+  const a   = document.createElement('a');
+  a.href     = rec.url;
+  a.download = `practice_rec_${rec.index}_${Date.now()}.webm`;
+  a.click();
+}
+
+function deleteLiveRec(i) {
+  liveRecordings.splice(i, 1);
+  liveRecordings.forEach((r, idx) => { r.index = idx + 1; });
+  renderLiveRecordings();
+}
+
+// ── SPEECH TO TEXT ─────────────────────────────────────────────────────────
+function startSTT() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const el = document.getElementById('liveSttOutput');
+  if (!SR) {
+    if (el) { el.textContent = 'STT not supported — use Chrome.'; el.classList.add('has-text'); }
+    return;
   }
 
-  return '';
+  speechRec = new SR();
+  speechRec.continuous     = true;
+  speechRec.interimResults = true;
+  speechRec.lang           = document.getElementById('liveSttLang')?.value || 'en-US';
+
+  let finalText = '';
+
+  speechRec.onresult = e => {
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      e.results[i].isFinal
+        ? (finalText += e.results[i][0].transcript + ' ')
+        : (interim  += e.results[i][0].transcript);
+    }
+    currentSTT = finalText + interim;
+    if (el) {
+      el.className   = 'stt-box has-text';
+      el.textContent = currentSTT || '...listening';
+    }
+  };
+
+  speechRec.onerror = e => {
+    if (e.error !== 'no-speech' && el) el.textContent = 'STT error: ' + e.error;
+  };
+  speechRec.onend = () => { if (isRecording) { try { speechRec.start(); } catch(e){} } };
+  speechRec.start();
 }
 
 // ── RENDER ─────────────────────────────────────────────────────────────────
@@ -574,33 +781,19 @@ function renderPage(raw) {
   document.title = `${d.id || 'Session'} — Freesize English`;
 
   /* ---- VIDEO COLUMN ---- */
-  const videoColHTML = buildVideoColHTML(vid, `sess-${d.id}`) + `
+  const videoColHTML = buildVideoColHTML(vid) + `
     <div class="video-meta-card">
       <div class="session-id">${esc(d.id || '—')}</div>
       <div class="stat-row">
-        <div class="stat-box"><div class="num">${recCount}</div><div class="lbl">Audio</div></div>
+        <div class="stat-box"><div class="num">${recCount}</div><div class="lbl">Saved</div></div>
         <div class="stat-box"><div class="num">${vocCount}</div><div class="lbl">Vocab</div></div>
         <div class="stat-box"><div class="num">${graCount}</div><div class="lbl">Grammar</div></div>
       </div>
     </div>`;
 
-  /* ---- CONTENT COLUMN ---- */
-  const transcriptHTML = d.transcript && d.transcript.trim()
-    ? `<div class="transcript-body">${esc(d.transcript)}</div>`
-    : `<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`;
-
-  const vocabHTML = vocCount
-    ? d._vocab.map((v,i) => `<span class="vocab-pill" style="animation-delay:${i*0.04}s">${esc(v)}</span>`).join('')
-    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
-
-  const grammarHTML = graCount
-    ? `<div class="grammar-list">${d._grammar.map((g,i) =>
-        `<div class="grammar-item" style="animation-delay:${i*0.05}s">${esc(g)}</div>`
-      ).join('')}</div>`
-    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
-
-  const recordingsHTML = recCount
-    ? d.recordings.map((r,i) => `
+  /* ---- Saved recordings ---- */
+  const savedRecsHTML = recCount
+    ? d.recordings.map((r, i) => `
         <div class="rec-item" style="animation-delay:${i*0.06}s">
           <div class="rec-header">
             <span class="rec-badge">🎙️ REC #${r.index}</span>
@@ -611,43 +804,106 @@ function renderPage(raw) {
             : `<p style="font-family:'Quicksand',sans-serif;font-size:0.83rem;color:var(--muted);">No audio linked</p>`}
           ${r.sttText ? `<div class="rec-stt">${esc(r.sttText)}</div>` : ''}
         </div>`).join('')
-    : `<div class="empty-state"><span class="emoji">🎙️</span>No recordings in this session.</div>`;
+    : '';
+
+  /* ---- Transcript ---- */
+  const transcriptHTML = d.transcript && d.transcript.trim()
+    ? `<div class="transcript-body">${esc(d.transcript)}</div>`
+    : `<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`;
+
+  /* ---- Vocab ---- */
+  const vocabHTML = vocCount
+    ? d._vocab.map((v, i) => `<span class="vocab-pill" style="animation-delay:${i*0.04}s">${esc(v)}</span>`).join('')
+    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+
+  /* ---- Grammar ---- */
+  const grammarHTML = graCount
+    ? `<div class="grammar-list">${d._grammar.map((g, i) =>
+        `<div class="grammar-item" style="animation-delay:${i*0.05}s">${esc(g)}</div>`
+      ).join('')}</div>`
+    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
 
   document.getElementById('app').innerHTML = `
     <div class="page-grid">
 
+      <!-- VIDEO COLUMN -->
       <div class="video-col">
         ${videoColHTML}
       </div>
 
+      <!-- CONTENT COLUMN -->
       <div class="content-col">
 
+        <!-- Transcript -->
         <div class="card" style="animation-delay:0s">
           <div class="card-title">📝 Transcript</div>
           <span class="date-pill">📅 ${fmtDate(d.createdAt)}</span>
           ${transcriptHTML}
         </div>
 
+        <!-- Vocabulary -->
         <div class="card" style="animation-delay:0.07s">
           <div class="card-title yellow">📚 Vocabulary</div>
           <div class="pill-wrap">${vocabHTML}</div>
         </div>
 
+        <!-- Grammar -->
         <div class="card" style="animation-delay:0.13s">
           <div class="card-title sky">🔤 Grammar & Structures</div>
           ${grammarHTML}
         </div>
 
-        <div class="card" style="animation-delay:0.19s">
-          <div class="card-title green">🎙️ Audio Recordings</div>
-          <div class="recordings-list">${recordingsHTML}</div>
+          <!-- ═══ LIVE RECORDER ═══ -->
+          <div class="recorder-section" style="${recCount ? 'border-top:none;padding-top:0;' : 'border-top:none;padding-top:0;'}">
+
+            <!-- Language select -->
+            <div class="lang-row">
+              <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.8rem;color:var(--muted);">STT LANGUAGE:</span>
+              <select id="liveSttLang">
+                <option value="en-US" selected>🇺🇸 English (US)</option>
+                <option value="en-GB">🇬🇧 English (UK)</option>
+                <option value="en-AU">🇦🇺 English (AU)</option>
+                <option value="vi-VN">🇻🇳 Vietnamese</option>
+                <option value="zh-CN">🇨🇳 Chinese (Mandarin)</option>
+                <option value="zh-TW">🇹🇼 Chinese (Traditional)</option>
+                <option value="ja-JP">🇯🇵 Japanese</option>
+                <option value="ko-KR">🇰🇷 Korean</option>
+                <option value="fr-FR">🇫🇷 French</option>
+                <option value="es-ES">🇪🇸 Spanish</option>
+                <option value="de-DE">🇩🇪 German</option>
+              </select>
+            </div>
+
+            <!-- Recorder controls -->
+            <div class="recorder-inner">
+              <div class="rec-controls">
+                <div class="rec-dot" id="liveRecDot"></div>
+                <div class="rec-timer" id="liveRecTimer">00:00</div>
+                <button class="btn btn-red" id="liveRecBtn" onclick="toggleRecording()">● REC</button>
+                <button class="btn btn-white" id="liveStopBtn" onclick="stopRecording()" disabled>■ Stop</button>
+              </div>
+              <!-- STT live output -->
+              <div id="liveSttOutput" class="stt-box">Speech-to-text appears here while recording...</div>
+            </div>
+
+            <!-- Status -->
+            <div id="liveRecStatus" class="status-msg"></div>
+
+            <!-- Live recordings list -->
+            <div id="liveRecordingsList" class="live-recordings-list" style="margin-top:10px;">
+              <div style="font-family:Quicksand,sans-serif;font-size:0.85rem;color:var(--muted);padding:4px 0;">No recordings yet — hit REC to start!</div>
+            </div>
+
+          </div>
+          <!-- ═══ END RECORDER ═══ -->
+
         </div>
 
       </div>
     </div>`;
 }
 
-// ── SESSION LIST (no ?id) ──────────────────────────────────────────────────
+// ── SESSION LIST ───────────────────────────────────────────────────────────
 function renderList(sessions) {
   document.title = 'Sessions — Freesize English';
   const items = sessions.map(s => `
@@ -656,7 +912,6 @@ function renderList(sessions) {
       <span class="sli-date">${fmtDate(s.createdAt)}</span>
       <span class="sli-arrow">→</span>
     </a>`).join('');
-
   document.getElementById('app').innerHTML = `
     <div class="center-wrap">
       <div class="session-list">
@@ -666,7 +921,6 @@ function renderList(sessions) {
     </div>`;
 }
 
-// ── STATES ─────────────────────────────────────────────────────────────────
 function showLoader() {
   document.getElementById('app').innerHTML = `
     <div class="center-wrap">
@@ -690,49 +944,30 @@ function showError(title, body) {
 async function main() {
   const id = getParam('id');
   showLoader();
-
   try {
     const res = await fetch('data/speaking-data.json');
     if (!res.ok) throw new Error(`HTTP ${res.status} — could not load data/speaking-data.json`);
     const json = await res.json();
 
-    // Support 3 formats:
-    //   1. Array:           [{id, ...}, {id, ...}]
-    //   2. Single object:   {id, videoUrl, ...}   ← mày đang dùng
-    //   3. Keyed object:    {"lesson-01": {...}, "lesson-02": {...}}
     let sessions;
     if (Array.isArray(json)) {
       sessions = json;
     } else if (typeof json === 'object' && json !== null) {
-      // single object có id field riêng → wrap thành array
-      if ('id' in json) {
-        sessions = [json];
-      } else {
-        // keyed by id
-        sessions = Object.values(json);
-      }
+      sessions = 'id' in json ? [json] : Object.values(json);
     } else {
       throw new Error('speaking-data.json must be an array or object');
     }
 
-    if (!id) {
-      // No ?id — show list of all sessions
-      renderList(sessions);
-      return;
-    }
+    if (!id) { renderList(sessions); return; }
 
-    // Find session by id
     const session = sessions.find(s => String(s.id) === String(id));
-    if (!session) {
-      throw new Error(`Session with id "${id}" not found in speaking-data.json`);
-    }
+    if (!session) throw new Error(`Session with id "${id}" not found in speaking-data.json`);
 
     renderPage(session);
-
   } catch (err) {
     showError('Could not load session', `
       <strong>Error:</strong> ${esc(err.message)}<br><br>
-      Make sure <code>data/speaking-data.json</code> exists and contains an entry with <code>"id": "${esc(id || '?')}"</code>.
+      Make sure <code>data/speaking-data.json</code> exists and contains an entry with <code>"id": "${esc(getParam('id') || '?')}"</code>.
     `);
   }
 }
