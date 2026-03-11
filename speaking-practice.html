@@ -316,6 +316,7 @@
   .recorder-inner {
     background: var(--red-pale); border: var(--border); border-radius: 14px;
     padding: 16px 18px; margin-bottom: 14px;
+    width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden;
   }
   .rec-controls {
     display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap;
@@ -358,7 +359,9 @@
     line-height: 1.7; color: var(--muted);
     background: var(--white); border: var(--border); border-radius: 10px;
     padding: 11px 14px; min-height: 52px;
-    white-space: pre-wrap;
+    white-space: pre-wrap; word-break: break-word;
+    overflow-wrap: break-word; overflow: hidden;
+    width: 100%; max-width: 100%; box-sizing: border-box;
   }
   .stt-box.has-text { color: var(--black); }
 
@@ -501,12 +504,18 @@
     .page-grid { grid-template-columns: 1fr; padding: 20px 20px 80px; }
     .video-col { position: static; }
     .video-card, .video-placeholder { max-width: 320px; margin: 0 auto; }
+    .video-col.tiktok-col { display: none; }
   }
   @media (max-width: 600px) {
     header { padding: 0 16px; }
     .video-card, .video-placeholder { max-width: 100%; }
     .card { padding: 16px; }
     .page-grid { padding: 14px 14px 60px; gap: 16px; }
+    .live-rec-item { flex-wrap: wrap; }
+    .live-rec-item audio { min-width: 0; width: 100%; flex: none; order: 2; }
+    .live-rec-num { order: 1; }
+    .live-rec-stt { order: 3; max-width: 100%; white-space: normal; }
+    .live-rec-actions { order: 4; }
   }
 </style>
 </head>
@@ -828,7 +837,7 @@ function renderPage(raw) {
     <div class="page-grid">
 
       <!-- VIDEO COLUMN -->
-      <div class="video-col">
+      <div class="video-col${vid && vid.type === 'tiktok' ? ' tiktok-col' : ''}">
         ${videoColHTML}
       </div>
 
