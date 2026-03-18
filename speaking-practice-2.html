@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREESIZE ENGLISH — Study Session</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:       #1a1a1a;
+    --red:         #e63030;
+    --red-dark:    #b71c1c;
+    --red-light:   #ffd5d5;
+    --red-pale:    #fff5f5;
+    --cream:       #fffef5;
+    --white:       #ffffff;
+    --yellow:      #ffd84d;
+    --yellow-pale: #fffbe6;
+    --sky:         #72c8f0;
+    --sky-pale:    #eaf8ff;
+    --green:       #4caf50;
+    --green-pale:  #f0fff0;
+    --green-dark:  #2e7d32;
+    --orange-pale: #feefdb;
+    --muted:       #888;
+    --border:      2.5px solid var(--black);
+    --border-thick:3px solid var(--black);
+    --shadow-sm:   3px 3px 0 var(--black);
+    --shadow-md:   4px 4px 0 var(--black);
+    --shadow-lg:   6px 6px 0 var(--black);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    background: var(--cream);
+    color: var(--black);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none; z-index: 0;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--red);
+    border-bottom: var(--border-thick);
+    padding: 0 50px; height: 66px;
+    display: flex; justify-content: space-between; align-items: center;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .logo {
+    font-weight: 700; font-size: 1.65rem; color: white;
+    letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+    text-decoration: none;
+  }
+  .header-tag {
+    background: var(--white); border: var(--border); border-radius: 50px;
+    padding: 5px 18px; font-weight: 700; font-size: 0.88rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* ── PAGE WRAPPER ── */
+  #app { position: relative; z-index: 1; }
+
+  /* ── MAIN LAYOUT ── */
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 36px 40px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white);
+    border: var(--border-thick); border-radius: 22px;
+    box-shadow: var(--shadow-md); padding: 24px;
+    animation: fadeUp 0.38s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .card-title {
+    display: inline-block;
+    font-weight: 700; font-size: 0.95rem;
+    background: var(--red); color: white;
+    border: var(--border); border-radius: 50px;
+    padding: 5px 20px; box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+  }
+  .card-title.yellow { background: var(--yellow); color: var(--black); }
+  .card-title.sky    { background: var(--sky);    color: var(--black); }
+  .card-title.green  { background: var(--green);  color: white; }
+
+  .date-pill {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.75rem; font-weight: 700;
+    background: var(--yellow-pale); border: var(--border); border-radius: 50px;
+    padding: 3px 12px; box-shadow: var(--shadow-sm);
+    display: inline-block; margin-bottom: 16px; margin-left: 8px;
+  }
+
+  /* ── TRANSCRIPT PARAGRAPHS ── */
+  .transcript-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .transcript-para-wrap {
+    position: relative;
+  }
+
+  .transcript-para {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem; font-weight: 600; line-height: 1.85; color: #333;
+    background: var(--red-pale); border: var(--border);
+    border-radius: 14px; padding: 14px 56px 14px 18px;
+    animation: fadeUp 0.35s ease both;
+  }
+
+  /* Mini REC button inside each paragraph box */
+  .para-rec-btn {
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: var(--border);
+    background: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 0.7rem; font-weight: 700;
+    font-family: 'Fredoka', sans-serif;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.12s, box-shadow 0.12s, background 0.15s;
+    color: var(--black);
+    flex-direction: column;
+    gap: 1px;
+    z-index: 2;
+  }
+  .para-rec-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+  .para-rec-btn.recording {
+    background: var(--red); color: white;
+    animation: recPulse 1s ease-in-out infinite;
+  }
+  @keyframes recPulse { 0%,100%{box-shadow: var(--shadow-sm)} 50%{box-shadow: 0 0 0 6px rgba(230,48,48,0.18), var(--shadow-sm)} }
+
+  .para-rec-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--red); flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .para-rec-btn.recording .para-rec-dot { background: white; }
+
+  /* Inline recordings for each paragraph */
+  .para-recordings {
+    margin-top: 8px;
+    display: flex; flex-direction: column; gap: 6px;
+    padding-left: 4px;
+  }
+  .para-rec-item {
+    background: var(--white); border: var(--border); border-radius: 12px;
+    padding: 8px 12px; display: flex; align-items: center; gap: 8px;
+    box-shadow: var(--shadow-sm); animation: fadeUp 0.25s ease both;
+    flex-wrap: wrap;
+  }
+  .para-rec-num {
+    background: var(--green); color: white;
+    border: var(--border); border-radius: 50px;
+    padding: 2px 10px; font-weight: 700; font-size: 0.75rem; flex-shrink: 0;
+  }
+  .para-rec-item audio {
+    flex: 1; height: 32px; min-width: 120px;
+    border-radius: 8px; border: var(--border);
+  }
+  .para-rec-stt {
+    font-family: 'Quicksand', sans-serif; font-size: 0.75rem; font-weight: 600;
+    color: var(--muted); flex: 2; min-width: 80px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .para-rec-actions { display: flex; gap: 5px; flex-shrink: 0; }
+
+  /* STT live bubble per paragraph */
+  .para-stt-live {
+    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.82rem;
+    line-height: 1.6; color: var(--muted);
+    background: var(--white); border: var(--border); border-radius: 10px;
+    padding: 8px 12px; margin-top: 6px;
+    display: none; white-space: pre-wrap; word-break: break-word;
+  }
+  .para-stt-live.visible { display: block; }
+  .para-stt-live.has-text { color: var(--black); }
+
+  /* Para timer badge */
+  .para-timer {
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.72rem;
+    color: white; letter-spacing: 0.03em;
+    display: none;
+  }
+  .para-rec-btn.recording .para-timer { display: block; }
+  .para-rec-btn.recording .para-rec-dot { display: none; }
+
+  /* ── VOCAB / GRAMMAR PILLS ── */
+  .pill-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+  .vocab-pill {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.92rem; font-weight: 700;
+    border: var(--border); border-radius: 50px;
+    padding: 7px 16px; box-shadow: var(--shadow-sm);
+    transition: transform 0.12s, box-shadow 0.12s;
+    animation: fadeUp 0.35s ease both;
+    cursor: default;
+  }
+  .vocab-pill:nth-child(4n+1) { background: var(--yellow-pale); }
+  .vocab-pill:nth-child(4n+2) { background: var(--red-pale); }
+  .vocab-pill:nth-child(4n+3) { background: var(--sky-pale); }
+  .vocab-pill:nth-child(4n+4) { background: var(--green-pale); }
+  .vocab-pill:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+
+  .grammar-item {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95rem; font-weight: 600; line-height: 1.6;
+    background: var(--sky-pale); border: var(--border);
+    border-radius: 14px; padding: 11px 16px; box-shadow: var(--shadow-sm);
+    transition: transform 0.12s, box-shadow 0.12s;
+    animation: fadeUp 0.35s ease both;
+  }
+  .grammar-item:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+  .grammar-list { display: flex; flex-direction: column; gap: 8px; }
+
+  /* ── BTN ICON ── */
+  .btn-icon {
+    width: 28px; height: 28px; border-radius: 50%;
+    border: var(--border); background: var(--white);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 0.8rem;
+    box-shadow: var(--shadow-sm); transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .btn-icon:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
+  .btn-icon.del { background: var(--red-pale); }
+  .btn-icon.dl  { background: var(--green-pale); }
+
+  /* ── EMPTY STATE ── */
+  .empty-state {
+    text-align: center; padding: 28px 20px;
+    color: var(--muted); font-size: 0.95rem;
+    font-family: 'Quicksand', sans-serif; font-weight: 600;
+  }
+  .empty-state .emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+
+  /* ── ERROR / LOADER / LIST PAGE ── */
+  .center-wrap {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; min-height: 60vh; gap: 18px;
+    position: relative; z-index: 1; padding: 40px;
+  }
+  .loader-spinner {
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 4px solid var(--red-light); border-top-color: var(--red);
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loader-text { font-size: 1.05rem; font-weight: 700; color: var(--red); }
+
+  .error-card {
+    background: var(--red-light); border: var(--border-thick);
+    border-radius: 22px; box-shadow: var(--shadow-lg);
+    padding: 44px 36px; text-align: center; max-width: 500px;
+  }
+  .error-card .emoji { font-size: 2.8rem; margin-bottom: 12px; }
+  .error-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+  .error-card p { font-family: 'Quicksand', sans-serif; color: #555; font-size: 0.95rem; line-height: 1.65; }
+  .error-card code {
+    background: var(--white); border: var(--border);
+    border-radius: 6px; padding: 1px 8px; font-size: 0.88rem; margin: 2px;
+    display: inline-block;
+  }
+
+  /* ── SESSION LIST ── */
+  .session-list { width: 100%; max-width: 680px; }
+  .session-list h2 {
+    font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;
+    display: inline-block;
+    background: var(--yellow); border: var(--border-thick); border-radius: 50px;
+    padding: 8px 26px; box-shadow: var(--shadow-md);
+  }
+  .session-list-items { display: flex; flex-direction: column; gap: 12px; }
+  .session-list-item {
+    background: var(--white); border: var(--border-thick); border-radius: 16px;
+    box-shadow: var(--shadow-sm); padding: 16px 20px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    text-decoration: none; color: var(--black);
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  .session-list-item:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-lg); }
+  .session-list-item .sli-id {
+    font-weight: 700; font-size: 1rem;
+    background: var(--red-light); border: var(--border); border-radius: 50px;
+    padding: 3px 14px; box-shadow: var(--shadow-sm);
+  }
+  .session-list-item .sli-date {
+    font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--muted);
+  }
+  .session-list-item .sli-arrow { font-size: 1.2rem; color: var(--red); flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black); color: rgba(255,255,255,0.6);
+    padding: 28px 50px; text-align: center; position: relative; z-index: 1;
+  }
+  footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
+  footer p { font-size: 0.9rem; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    header { padding: 0 16px; }
+    .page-wrap { padding: 14px 14px 60px; gap: 16px; }
+    .card { padding: 16px; }
+    .para-rec-item audio { min-width: 0; width: 100%; flex: none; order: 2; }
+    .para-rec-stt { max-width: 100%; white-space: normal; order: 3; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">🔴 FREESIZE ENGLISH</a>
+</header>
+
+<div id="app"></div>
+
+<footer>
+  <p class="brand">FREESIZE ENGLISH</p>
+  <p>Your personal English study archive</p>
+</footer>
+
+<script>
+// ── UTILS ──────────────────────────────────────────────────────────────────
+function getParam(k) { return new URLSearchParams(window.location.search).get(k); }
+
+function fmtDate(iso) {
+  if (!iso) return '—';
+  try {
+    return new Date(iso).toLocaleString('vi-VN', {
+      day:'2-digit', month:'2-digit', year:'numeric',
+      hour:'2-digit', minute:'2-digit'
+    });
+  } catch { return iso; }
+}
+
+function esc(s) {
+  return String(s ?? '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── NORMALISE JSON ─────────────────────────────────────────────────────────
+function normalise(raw) {
+  const d = { ...raw };
+
+  d._vocab = typeof d.vocabulary === 'string'
+    ? d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean)
+    : [];
+
+  d._grammar = typeof d.grammarStructures === 'string'
+    ? d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean)
+    : [];
+
+  // Split transcript into paragraphs by \n
+  d._paragraphs = typeof d.transcript === 'string'
+    ? d.transcript.split(/\n+/).map(s=>s.trim()).filter(Boolean)
+    : [];
+
+  return d;
+}
+
+// ── PER-PARAGRAPH RECORDER STATE ──────────────────────────────────────────
+// Map: paraIndex -> { recordings: [], mediaRec, isRecording, timerInt, secs, speechRec, currentSTT }
+const paraStates = {};
+
+function getState(idx) {
+  if (!paraStates[idx]) {
+    paraStates[idx] = {
+      recordings: [],
+      mediaRec: null,
+      audioChunks: [],
+      isRecording: false,
+      timerInt: null,
+      secs: 0,
+      speechRec: null,
+      currentSTT: '',
+    };
+  }
+  return paraStates[idx];
+}
+
+function getSupportedMimeType() {
+  const types = ['audio/mp4','audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/ogg'];
+  for (const t of types) {
+    if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) return t;
+  }
+  return '';
+}
+
+async function toggleParaRec(idx) {
+  const st = getState(idx);
+  st.isRecording ? stopParaRec(idx) : await startParaRec(idx);
+}
+
+async function startParaRec(idx) {
+  const st = getState(idx);
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const mimeType = getSupportedMimeType();
+    st.audioChunks = [];
+    st.currentSTT  = '';
+    st.mediaRec    = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+    st.mediaRec.ondataavailable = e => st.audioChunks.push(e.data);
+    st.mediaRec.onstop = () => saveParaRec(idx);
+    st.mediaRec.start();
+    st.isRecording = true;
+
+    // Update button UI
+    const btn = document.getElementById(`para-rec-btn-${idx}`);
+    if (btn) btn.classList.add('recording');
+
+    // Show STT box
+    const sttEl = document.getElementById(`para-stt-${idx}`);
+    if (sttEl) { sttEl.classList.add('visible'); sttEl.textContent = '🎙️ Listening...'; }
+
+    // Timer
+    st.secs = 0;
+    st.timerInt = setInterval(() => {
+      st.secs++;
+      const m = String(Math.floor(st.secs/60)).padStart(2,'0');
+      const s = String(st.secs%60).padStart(2,'0');
+      const timerEl = document.getElementById(`para-timer-${idx}`);
+      if (timerEl) timerEl.textContent = `${m}:${s}`;
+    }, 1000);
+
+    startParaSTT(idx);
+  } catch(e) {
+    alert('Microphone access denied: ' + e.message);
+  }
+}
+
+function stopParaRec(idx) {
+  const st = getState(idx);
+  if (!st.mediaRec) return;
+  st.mediaRec.stop();
+  st.mediaRec.stream.getTracks().forEach(t => t.stop());
+  st.isRecording = false;
+  clearInterval(st.timerInt);
+
+  const btn = document.getElementById(`para-rec-btn-${idx}`);
+  if (btn) btn.classList.remove('recording');
+
+  if (st.speechRec) { try { st.speechRec.stop(); } catch(e){} st.speechRec = null; }
+}
+
+function saveParaRec(idx) {
+  const st = getState(idx);
+  const mimeType = getSupportedMimeType();
+  const blob = new Blob(st.audioChunks, mimeType ? { type: mimeType } : {});
+  const url  = URL.createObjectURL(blob);
+  const ext  = mimeType.includes('mp4') ? 'mp4' : mimeType.includes('ogg') ? 'ogg' : 'webm';
+  const recIdx = st.recordings.length + 1;
+  st.recordings.push({ index: recIdx, blob, url, ext, sttText: st.currentSTT.trim() });
+
+  // Hide STT box after save
+  const sttEl = document.getElementById(`para-stt-${idx}`);
+  if (sttEl) { sttEl.classList.remove('visible', 'has-text'); sttEl.textContent = ''; }
+
+  renderParaRecordings(idx);
+}
+
+function renderParaRecordings(idx) {
+  const st = getState(idx);
+  const list = document.getElementById(`para-recs-${idx}`);
+  if (!list) return;
+  list.innerHTML = '';
+  st.recordings.forEach((rec, i) => {
+    const div = document.createElement('div');
+    div.className = 'para-rec-item';
+    div.innerHTML = `
+      <span class="para-rec-num">REC ${rec.index}</span>
+      <audio controls src="${rec.url}"></audio>
+      ${rec.sttText ? `<span class="para-rec-stt" title="${esc(rec.sttText)}">${esc(rec.sttText)}</span>` : ''}
+      <div class="para-rec-actions">
+        <button class="btn-icon dl" title="Download" onclick="downloadParaRec(${idx},${i})">⬇</button>
+        <button class="btn-icon del" title="Delete" onclick="deleteParaRec(${idx},${i})">✕</button>
+      </div>`;
+    list.appendChild(div);
+  });
+}
+
+function downloadParaRec(idx, i) {
+  const rec = getState(idx).recordings[i];
+  const a = document.createElement('a');
+  a.href     = rec.url;
+  a.download = `para${idx+1}_rec${rec.index}_${Date.now()}.${rec.ext||'webm'}`;
+  a.click();
+}
+
+function deleteParaRec(idx, i) {
+  const st = getState(idx);
+  st.recordings.splice(i, 1);
+  st.recordings.forEach((r, j) => { r.index = j + 1; });
+  renderParaRecordings(idx);
+}
+
+// ── SPEECH TO TEXT per paragraph ──────────────────────────────────────────
+function startParaSTT(idx) {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const sttEl = document.getElementById(`para-stt-${idx}`);
+  const st = getState(idx);
+
+  if (!SR) {
+    if (sttEl) { sttEl.textContent = 'STT not supported in this browser.'; sttEl.classList.add('visible','has-text'); }
+    return;
+  }
+
+  const lang = document.getElementById('globalSttLang')?.value || 'en-US';
+  st.speechRec = new SR();
+  st.speechRec.continuous     = true;
+  st.speechRec.interimResults = true;
+  st.speechRec.lang           = lang;
+
+  let finalText = '';
+
+  st.speechRec.onresult = e => {
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      e.results[i].isFinal
+        ? (finalText += e.results[i][0].transcript + ' ')
+        : (interim   += e.results[i][0].transcript);
+    }
+    st.currentSTT = finalText + interim;
+    if (sttEl) {
+      sttEl.className = 'para-stt-live visible has-text';
+      sttEl.textContent = st.currentSTT || '...listening';
+    }
+  };
+
+  st.speechRec.onerror = e => {
+    if (e.error !== 'no-speech' && sttEl) sttEl.textContent = 'STT error: ' + e.error;
+  };
+  st.speechRec.onend = () => {
+    if (st.isRecording) { try { st.speechRec.start(); } catch(e){} }
+  };
+  st.speechRec.start();
+}
+
+// ── RENDER ─────────────────────────────────────────────────────────────────
+function renderPage(raw) {
+  const d = normalise(raw);
+
+  document.title = `${d.id || 'Session'} — Freesize English`;
+
+  const vocCount = d._vocab.length;
+  const graCount = d._grammar.length;
+
+  /* ---- Transcript paragraphs ---- */
+  let transcriptHTML = '';
+  if (d._paragraphs.length === 0) {
+    transcriptHTML = `<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`;
+  } else {
+    transcriptHTML = `
+      <!-- Global STT language selector -->
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
+        <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.8rem;color:var(--muted);">STT LANGUAGE:</span>
+        <select id="globalSttLang" style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:0.88rem;background:var(--white);border:var(--border);border-radius:10px;padding:7px 12px;outline:none;cursor:pointer;">
+          <option value="en-US" selected>🇺🇸 English (US)</option>
+          <option value="en-GB">🇬🇧 English (UK)</option>
+          <option value="en-AU">🇦🇺 English (AU)</option>
+          <option value="vi-VN">🇻🇳 Vietnamese</option>
+          <option value="zh-CN">🇨🇳 Chinese (Mandarin)</option>
+          <option value="zh-TW">🇹🇼 Chinese (Traditional)</option>
+          <option value="ja-JP">🇯🇵 Japanese</option>
+          <option value="ko-KR">🇰🇷 Korean</option>
+          <option value="fr-FR">🇫🇷 French</option>
+          <option value="es-ES">🇪🇸 Spanish</option>
+          <option value="de-DE">🇩🇪 German</option>
+        </select>
+      </div>
+      <div class="transcript-list">
+        ${d._paragraphs.map((para, i) => `
+          <div class="transcript-para-wrap" style="animation-delay:${i*0.05}s">
+            <div class="transcript-para">${esc(para)}</div>
+            <button
+              class="para-rec-btn"
+              id="para-rec-btn-${i}"
+              title="Record this paragraph"
+              onclick="toggleParaRec(${i})"
+            >
+              <div class="para-rec-dot"></div>
+              <span class="para-timer" id="para-timer-${i}">00:00</span>
+            </button>
+            <div id="para-stt-${i}" class="para-stt-live"></div>
+            <div id="para-recs-${i}" class="para-recordings"></div>
+          </div>
+        `).join('')}
+      </div>`;
+  }
+
+  /* ---- Vocab ---- */
+  const vocabHTML = vocCount
+    ? d._vocab.map((v, i) => `<span class="vocab-pill" style="animation-delay:${i*0.04}s">${esc(v)}</span>`).join('')
+    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+
+  /* ---- Grammar ---- */
+  const grammarHTML = graCount
+    ? `<div class="grammar-list">${d._grammar.map((g, i) =>
+        `<div class="grammar-item" style="animation-delay:${i*0.05}s">${esc(g)}</div>`
+      ).join('')}</div>`
+    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+
+  /* ---- Session info pill ---- */
+  const infoPill = `
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px;">
+      <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.85rem;background:var(--red-light);border:var(--border);border-radius:50px;padding:4px 16px;box-shadow:var(--shadow-sm);">${esc(d.id||'—')}</span>
+      <span class="date-pill" style="margin-bottom:0;margin-left:0;">📅 ${fmtDate(d.createdAt)}</span>
+      <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.78rem;background:var(--yellow-pale);border:var(--border);border-radius:50px;padding:4px 14px;box-shadow:var(--shadow-sm);">${vocCount} vocab · ${graCount} grammar</span>
+    </div>`;
+
+  document.getElementById('app').innerHTML = `
+    <div class="page-wrap">
+
+      <!-- Info row -->
+      <div style="animation:fadeUp 0.3s ease both;">${infoPill}</div>
+
+      <!-- Transcript -->
+      <div class="card" style="animation-delay:0.04s">
+        <div class="card-title">📝 Transcript</div>
+        ${transcriptHTML}
+      </div>
+
+      <!-- Vocabulary -->
+      <div class="card" style="animation-delay:0.1s">
+        <div class="card-title yellow">📚 Vocabulary</div>
+        <div class="pill-wrap">${vocabHTML}</div>
+      </div>
+
+      <!-- Grammar -->
+      <div class="card" style="animation-delay:0.16s">
+        <div class="card-title sky">🔤 Grammar & Structures</div>
+        ${grammarHTML}
+      </div>
+
+    </div>`;
+}
+
+// ── SESSION LIST ───────────────────────────────────────────────────────────
+function renderList(sessions) {
+  document.title = 'Sessions — Freesize English';
+  const items = sessions.map(s => `
+    <a class="session-list-item" href="?id=${esc(s.id)}">
+      <span class="sli-id">${esc(s.id)}</span>
+      <span class="sli-date">${fmtDate(s.createdAt)}</span>
+      <span class="sli-arrow">→</span>
+    </a>`).join('');
+  document.getElementById('app').innerHTML = `
+    <div class="center-wrap">
+      <div class="session-list">
+        <h2>📋 All Sessions</h2>
+        <div class="session-list-items">${items || '<p style="color:var(--muted);font-family:Quicksand,sans-serif;">No sessions found.</p>'}</div>
+      </div>
+    </div>`;
+}
+
+function showLoader() {
+  document.getElementById('app').innerHTML = `
+    <div class="center-wrap">
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading...</div>
+    </div>`;
+}
+
+function showError(title, body) {
+  document.getElementById('app').innerHTML = `
+    <div class="center-wrap">
+      <div class="error-card">
+        <div class="emoji">😕</div>
+        <h2>${esc(title)}</h2>
+        <p>${body}</p>
+      </div>
+    </div>`;
+}
+
+// ── MAIN ───────────────────────────────────────────────────────────────────
+async function main() {
+  const id = getParam('id');
+  showLoader();
+  try {
+    const res = await fetch('data/speaking-data.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status} — could not load data/speaking-data.json`);
+    const json = await res.json();
+
+    let sessions;
+    if (Array.isArray(json)) {
+      sessions = json;
+    } else if (typeof json === 'object' && json !== null) {
+      sessions = 'id' in json ? [json] : Object.values(json);
+    } else {
+      throw new Error('speaking-data.json must be an array or object');
+    }
+
+    if (!id) { renderList(sessions); return; }
+
+    const session = sessions.find(s => String(s.id) === String(id));
+    if (!session) throw new Error(`Session with id "${id}" not found in speaking-data.json`);
+
+    renderPage(session);
+  } catch (err) {
+    showError('Could not load session', `
+      <strong>Error:</strong> ${esc(err.message)}<br><br>
+      Make sure <code>data/speaking-data.json</code> exists and contains an entry with <code>"id": "${esc(getParam('id') || '?')}"</code>.
+    `);
+  }
+}
+
+main();
+</script>
+</body>
+</html>
