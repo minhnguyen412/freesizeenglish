@@ -23,6 +23,8 @@
   --green-dark:   #2e7d32;
   --orange-pale:  #feefdb;
   --orange:       #fa9f33;
+  --purple-pale:  #f3f0ff;
+  --purple:       #7c3aed;
   --muted:        #888;
   --border:       2.5px solid var(--black);
   --border-thick: 3px solid var(--black);
@@ -92,6 +94,7 @@ header {
   display: flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
 }
+.step-num.purple { background: var(--purple); }
 .step-title {
   font-weight: 700; font-size: 1.1rem;
 }
@@ -149,6 +152,7 @@ textarea { resize: vertical; min-height: 100px; line-height: 1.7; }
 .btn-yellow { background: var(--yellow); color: var(--black); }
 .btn-sky    { background: var(--sky-pale); color: var(--black); }
 .btn-white  { background: var(--white);  color: var(--black); }
+.btn-purple { background: var(--purple); color: white; }
 .btn-export { background: var(--red); color: white; font-size: 1.1rem; padding: 13px 32px; box-shadow: var(--shadow-md); }
 .btn-export:hover { box-shadow: var(--shadow-lg); }
 
@@ -236,6 +240,79 @@ textarea { resize: vertical; min-height: 100px; line-height: 1.7; }
 .status-msg.success { background: var(--green-pale);  color: var(--green-dark); }
 .status-msg.error   { background: var(--red-pale);    color: var(--red-dark); }
 
+/* ── 12 TENSES GRID ── */
+.tenses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.tense-slot {
+  border: var(--border); border-radius: 16px;
+  overflow: hidden; box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.12s, transform 0.12s;
+}
+.tense-slot:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+.tense-slot-head {
+  padding: 8px 14px;
+  border-bottom: var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.tense-badge {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; padding: 2px 8px; border-radius: 20px;
+  border: 1.5px solid currentColor; white-space: nowrap;
+}
+.tense-name {
+  font-family: 'Quicksand', sans-serif; font-weight: 700;
+  font-size: 0.8rem; line-height: 1.3; flex: 1;
+}
+.tense-slot textarea {
+  border: none; border-radius: 0;
+  font-size: 0.82rem; min-height: 72px;
+  padding: 10px 14px; resize: none;
+  background: var(--white);
+  font-family: 'Quicksand', sans-serif; font-weight: 600; line-height: 1.6;
+}
+.tense-slot textarea:focus { box-shadow: none; outline: 2px solid var(--black); outline-offset: -2px; }
+.tense-slot textarea::placeholder { color: #bbb; font-style: italic; font-size: 0.78rem; }
+
+/* Tense color groups */
+.tense-simple   .tense-slot-head { background: #fff8e1; }
+.tense-simple   .tense-badge     { color: #b45309; border-color: #b45309; background: #fef3c7; }
+.tense-simple   textarea         { background: #fffdf0; }
+
+.tense-cont     .tense-slot-head { background: #e0f2fe; }
+.tense-cont     .tense-badge     { color: #0369a1; border-color: #0369a1; background: #bae6fd; }
+.tense-cont     textarea         { background: #f0faff; }
+
+.tense-perfect  .tense-slot-head { background: #f0fdf4; }
+.tense-perfect  .tense-badge     { color: #166534; border-color: #166534; background: #bbf7d0; }
+.tense-perfect  textarea         { background: #f7fff9; }
+
+.tense-perf-cont .tense-slot-head { background: #fdf4ff; }
+.tense-perf-cont .tense-badge     { color: #7e22ce; border-color: #7e22ce; background: #e9d5ff; }
+.tense-perf-cont textarea         { background: #fdf8ff; }
+
+.tenses-legend {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-bottom: 18px;
+  font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 700;
+}
+.legend-dot {
+  display: flex; align-items: center; gap: 6px;
+}
+.legend-color {
+  width: 12px; height: 12px; border-radius: 3px; border: 1.5px solid rgba(0,0,0,0.15);
+}
+.tenses-section-label {
+  font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted);
+  margin: 16px 0 8px; display: flex; align-items: center; gap: 8px;
+}
+.tenses-section-label::after {
+  content: ''; flex: 1; height: 1.5px; background: rgba(0,0,0,0.1);
+}
+
 /* ── EXPORT ── */
 .export-box {
   background: var(--yellow-pale); border: var(--border-thick); border-radius: 22px;
@@ -246,7 +323,6 @@ textarea { resize: vertical; min-height: 100px; line-height: 1.7; }
 .export-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
 .export-info p  { font-family: 'Quicksand', sans-serif; font-size: 0.85rem; color: #666; font-weight: 600; }
 
-/* JSON preview */
 .json-preview {
   background: var(--black); color: #a8ff78;
   font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.78rem;
@@ -261,19 +337,22 @@ textarea { resize: vertical; min-height: 100px; line-height: 1.7; }
 footer {
   background: var(--black); color: rgba(255,255,255,0.6);
   padding: 24px 50px; text-align: center; position: relative; z-index: 1;
-  margin-top: 0;
 }
 footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
 footer p { font-size: 0.88rem; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   header { padding: 0 16px; }
   .page { padding: 20px 14px 80px; }
   .step-body { padding: 16px; }
   .two-col { grid-template-columns: 1fr; }
   .input-row { flex-direction: column; }
   .export-box { flex-direction: column; }
+  .tenses-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .tenses-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -362,10 +441,131 @@ footer p { font-size: 0.88rem; }
     </div>
   </div>
 
-  <!-- STEP 4 — RECORDING -->
+  <!-- STEP 4 — 12 TENSES -->
   <div class="step-card">
     <div class="step-head">
-      <div class="step-num">4</div>
+      <div class="step-num" style="background:var(--purple);">4</div>
+      <div class="step-title">🕐 12 Tenses — Practice Sentences</div>
+      <button class="btn btn-white" style="margin-left:auto;font-size:0.8rem;padding:6px 14px;" onclick="clearAllTenses()">🗑 Clear all</button>
+    </div>
+    <div class="step-body">
+      <p style="font-family:'Quicksand',sans-serif;font-size:0.85rem;font-weight:600;color:var(--muted);margin-bottom:16px;">
+        Nhập câu ví dụ từ video cho từng thì — giúp ghi nhớ ngữ cảnh thực tế 🎯
+      </p>
+
+      <div class="tenses-legend">
+        <div class="legend-dot"><div class="legend-color" style="background:#fef3c7;border-color:#b45309;"></div><span>Simple</span></div>
+        <div class="legend-dot"><div class="legend-color" style="background:#bae6fd;border-color:#0369a1;"></div><span>Continuous</span></div>
+        <div class="legend-dot"><div class="legend-color" style="background:#bbf7d0;border-color:#166534;"></div><span>Perfect</span></div>
+        <div class="legend-dot"><div class="legend-color" style="background:#e9d5ff;border-color:#7e22ce;"></div><span>Perfect Continuous</span></div>
+      </div>
+
+      <!-- PAST group -->
+      <div class="tenses-section-label">⬅ PAST</div>
+      <div class="tenses-grid" style="margin-bottom:4px;">
+        <div class="tense-slot tense-simple">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Simple</span>
+            <span class="tense-name">Past Simple</span>
+          </div>
+          <textarea id="tense_past_simple" placeholder="e.g. I added salt and stirred for 2 minutes."></textarea>
+        </div>
+        <div class="tense-slot tense-cont">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Continuous</span>
+            <span class="tense-name">Past Continuous</span>
+          </div>
+          <textarea id="tense_past_cont" placeholder="e.g. While the oil was heating, I chopped the garlic."></textarea>
+        </div>
+        <div class="tense-slot tense-perfect">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Perfect</span>
+            <span class="tense-name">Past Perfect</span>
+          </div>
+          <textarea id="tense_past_perfect" placeholder="e.g. By the time it was done, I had already prepped everything."></textarea>
+        </div>
+        <div class="tense-slot tense-perf-cont" style="grid-column: 1 / -1; max-width: calc(33.33% - 4px);">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Perf. Cont.</span>
+            <span class="tense-name">Past Perfect Continuous</span>
+          </div>
+          <textarea id="tense_past_perf_cont" placeholder="e.g. The pork had been marinating for 3 hours before we cooked it."></textarea>
+        </div>
+      </div>
+
+      <!-- PRESENT group -->
+      <div class="tenses-section-label">● PRESENT</div>
+      <div class="tenses-grid" style="margin-bottom:4px;">
+        <div class="tense-slot tense-simple">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Simple</span>
+            <span class="tense-name">Present Simple</span>
+          </div>
+          <textarea id="tense_pres_simple" placeholder="e.g. You always score the skin before roasting."></textarea>
+        </div>
+        <div class="tense-slot tense-cont">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Continuous</span>
+            <span class="tense-name">Present Continuous</span>
+          </div>
+          <textarea id="tense_pres_cont" placeholder="e.g. We're gonna let this rest for about five minutes."></textarea>
+        </div>
+        <div class="tense-slot tense-perfect">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Perfect</span>
+            <span class="tense-name">Present Perfect</span>
+          </div>
+          <textarea id="tense_pres_perfect" placeholder="e.g. I've never tried honey glaze on pork before."></textarea>
+        </div>
+        <div class="tense-slot tense-perf-cont" style="grid-column: 1 / -1; max-width: calc(33.33% - 4px);">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Perf. Cont.</span>
+            <span class="tense-name">Present Perfect Continuous</span>
+          </div>
+          <textarea id="tense_pres_perf_cont" placeholder="e.g. I've been cooking this dish for about 20 minutes now."></textarea>
+        </div>
+      </div>
+
+      <!-- FUTURE group -->
+      <div class="tenses-section-label">➡ FUTURE</div>
+      <div class="tenses-grid">
+        <div class="tense-slot tense-simple">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Simple</span>
+            <span class="tense-name">Future Simple</span>
+          </div>
+          <textarea id="tense_fut_simple" placeholder="e.g. It will get crispy on top in the oven."></textarea>
+        </div>
+        <div class="tense-slot tense-cont">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Continuous</span>
+            <span class="tense-name">Future Continuous</span>
+          </div>
+          <textarea id="tense_fut_cont" placeholder="e.g. By 6pm we'll be eating this amazing dish."></textarea>
+        </div>
+        <div class="tense-slot tense-perfect">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Perfect</span>
+            <span class="tense-name">Future Perfect</span>
+          </div>
+          <textarea id="tense_fut_perfect" placeholder="e.g. By tonight, I will have made this three times."></textarea>
+        </div>
+        <div class="tense-slot tense-perf-cont" style="grid-column: 1 / -1; max-width: calc(33.33% - 4px);">
+          <div class="tense-slot-head">
+            <span class="tense-badge">Perf. Cont.</span>
+            <span class="tense-name">Future Perfect Continuous</span>
+          </div>
+          <textarea id="tense_fut_perf_cont" placeholder="e.g. By the time it's done, the sauce will have been reducing for 30 minutes."></textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STEP 5 — RECORDING -->
+  <div class="step-card">
+    <div class="step-head">
+      <div class="step-num">5</div>
       <div class="step-title">🎙️ Audio Recording</div>
     </div>
     <div class="step-body">
@@ -401,10 +601,10 @@ footer p { font-size: 0.88rem; }
     </div>
   </div>
 
-  <!-- STEP 5 — GITHUB CONFIG -->
+  <!-- STEP 6 — GITHUB CONFIG -->
   <div class="step-card">
     <div class="step-head">
-      <div class="step-num">5</div>
+      <div class="step-num">6</div>
       <div class="step-title">🔑 GitHub Config</div>
       <button class="btn btn-white" style="margin-left:auto;font-size:0.8rem;padding:6px 14px;" onclick="toggleGhConfig()">⚙ Config</button>
     </div>
@@ -436,7 +636,6 @@ footer p { font-size: 0.88rem; }
       </div>
       <div id="ghConfigStatus" class="status-msg"></div>
     </div>
-    <!-- Config summary (always visible) -->
     <div id="ghConfigSummary" style="padding:0 24px 16px;display:none;">
       <div style="font-family:'Quicksand',sans-serif;font-size:0.85rem;font-weight:600;color:var(--muted);">
         Connected: <span id="ghSummaryText" style="color:var(--green-dark);font-weight:700;"></span>
@@ -444,7 +643,7 @@ footer p { font-size: 0.88rem; }
     </div>
   </div>
 
-  <!-- STEP 6 — PUSH TO GITHUB -->
+  <!-- STEP 7 — PUSH TO GITHUB -->
   <div class="export-box">
     <div class="export-info">
       <h3>🚀 Push to GitHub</h3>
@@ -467,8 +666,31 @@ footer p { font-size: 0.88rem; }
 </footer>
 
 <script>
+// ── TENSE IDS ──────────────────────────────────────────────────────────────
+const TENSE_IDS = [
+  'past_simple','past_cont','past_perfect','past_perf_cont',
+  'pres_simple','pres_cont','pres_perfect','pres_perf_cont',
+  'fut_simple','fut_cont','fut_perfect','fut_perf_cont',
+];
+
+function clearAllTenses() {
+  TENSE_IDS.forEach(id => {
+    const el = document.getElementById('tense_' + id);
+    if (el) el.value = '';
+  });
+}
+
+function getTensesData() {
+  const obj = {};
+  TENSE_IDS.forEach(id => {
+    const el = document.getElementById('tense_' + id);
+    obj[id] = el ? el.value.trim() : '';
+  });
+  return obj;
+}
+
 // ── STATE ──────────────────────────────────────────────────────────────────
-let recordings   = [];  // {index, blob, url, sttText, timestamp, filename}
+let recordings   = [];
 let mediaRec     = null;
 let audioChunks  = [];
 let isRecording  = false;
@@ -495,16 +717,12 @@ async function fetchTranscript() {
     return;
   }
 
-  // YouTube
   let videoId = null;
   for (const p of [/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/, /youtube\.com\/embed\/([^&\n?]+)/]) {
     const m = url.match(p);
     if (m) { videoId = m[1]; break; }
   }
-  if (!videoId) {
-    showStatus('urlStatus', 'Invalid YouTube URL', 'error');
-    return;
-  }
+  if (!videoId) { showStatus('urlStatus', 'Invalid YouTube URL', 'error'); return; }
 
   try {
     const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`;
@@ -588,7 +806,6 @@ function saveRecording() {
   const url      = URL.createObjectURL(blob);
   const idx      = recordings.length + 1;
   const filename = `recordings/rec_${Date.now()}.webm`;
-
   recordings.push({ index: idx, blob, url, sttText: currentSTT.trim(), timestamp: new Date().toISOString(), filename });
   renderRecordings();
   showStatus('recStatus', `✓ Recording #${idx} saved`, 'success');
@@ -605,7 +822,7 @@ function renderRecordings() {
       <audio controls src="${rec.url}"></audio>
       ${rec.sttText ? `<span class="rec-item-stt" title="${escHtml(rec.sttText)}">${escHtml(rec.sttText)}</span>` : ''}
       <div class="rec-actions">
-        <button class="btn-icon dl" title="Download audio" onclick="downloadRec(${i})">⬇</button>
+        <button class="btn-icon dl" title="Download" onclick="downloadRec(${i})">⬇</button>
         <button class="btn-icon del" title="Delete" onclick="deleteRec(${i})">✕</button>
       </div>`;
     list.appendChild(div);
@@ -615,14 +832,11 @@ function renderRecordings() {
 function downloadRec(i) {
   const rec = recordings[i];
   const a   = document.createElement('a');
-  a.href     = rec.url;
-  a.download = `rec_${rec.index}_${Date.now()}.webm`;
-  a.click();
+  a.href = rec.url; a.download = `rec_${rec.index}_${Date.now()}.webm`; a.click();
 }
 
 function deleteRec(i) {
   recordings.splice(i, 1);
-  // Re-index
   recordings.forEach((r, idx) => { r.index = idx + 1; });
   renderRecordings();
 }
@@ -661,14 +875,8 @@ const LS = {
   set: (k, v) => { try { localStorage.setItem(k, v); } catch{} },
 };
 
-const GH_FILE = 'data/speaking-data.json';
-
 function getGhCfg() {
-  return {
-    user:  LS.get('gh_user')  || '',
-    repo:  LS.get('gh_repo')  || '',
-    token: LS.get('gh_token') || '',
-  };
+  return { user: LS.get('gh_user')||'', repo: LS.get('gh_repo')||'', token: LS.get('gh_token')||'' };
 }
 
 function toggleGhConfig() {
@@ -681,11 +889,8 @@ function saveGhConfig() {
   const repo  = document.getElementById('ghRepo').value.trim();
   const token = document.getElementById('ghToken').value.trim();
   if (!user || !repo || !token) return showStatus('ghConfigStatus', 'Fill in all 3 fields!', 'error');
-
-  LS.set('gh_user',  user);
-  LS.set('gh_repo',  repo);
-  LS.set('gh_token', token);
-  showStatus('ghConfigStatus', '✓ Config saved to localStorage', 'success');
+  LS.set('gh_user', user); LS.set('gh_repo', repo); LS.set('gh_token', token);
+  showStatus('ghConfigStatus', '✓ Config saved', 'success');
   updateGhSummary();
 }
 
@@ -694,7 +899,7 @@ function updateGhSummary() {
   const summary = document.getElementById('ghConfigSummary');
   const text    = document.getElementById('ghSummaryText');
   if (cfg.user && cfg.repo && cfg.token) {
-    text.textContent  = `${cfg.user}/${cfg.repo}`;
+    text.textContent = `${cfg.user}/${cfg.repo}`;
     summary.style.display = 'block';
   } else {
     summary.style.display = 'none';
@@ -706,18 +911,13 @@ async function testGhConnection() {
   if (!cfg.user || !cfg.repo || !cfg.token) return showStatus('ghConfigStatus', 'Save config first!', 'error');
   showStatus('ghConfigStatus', 'Testing...', 'info');
   try {
-    const res = await ghGetFile('data/speaking-data.json');
-    showStatus('ghConfigStatus', `✓ Connected! File exists with ${res.content.length > 0 ? 'data' : 'empty content'}.`, 'success');
+    await ghGetFile('data/speaking-data.json');
+    showStatus('ghConfigStatus', '✓ Connected! File exists.', 'success');
   } catch(e) {
-    if (e.message === 'NOT_FOUND') {
-      showStatus('ghConfigStatus', '✓ Connected! File does not exist yet — will be created on first push.', 'success');
-    } else {
-      showStatus('ghConfigStatus', 'Error: ' + e.message, 'error');
-    }
+    if (e.message === 'NOT_FOUND') showStatus('ghConfigStatus', '✓ Connected! File will be created on first push.', 'success');
+    else showStatus('ghConfigStatus', 'Error: ' + e.message, 'error');
   }
 }
-
-// ── GITHUB API HELPERS ─────────────────────────────────────────────────────
 
 async function ghGetFile(path) {
   const cfg = getGhCfg();
@@ -726,47 +926,28 @@ async function ghGetFile(path) {
     { headers: { Authorization: `token ${cfg.token}`, Accept: 'application/vnd.github.v3+json' } }
   );
   if (res.status === 404) throw new Error('NOT_FOUND');
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err.message || `HTTP ${res.status}`);
-  }
+  if (!res.ok) { const err = await res.json().catch(()=>({})); throw new Error(err.message || `HTTP ${res.status}`); }
   return res.json();
 }
 
 async function ghPutFile(path, content, sha, commitMsg) {
   const cfg = getGhCfg();
-  const body = {
-    message: commitMsg,
-    content: btoa(unescape(encodeURIComponent(content))),
-    ...(sha ? { sha } : {}),
-  };
+  const body = { message: commitMsg, content: btoa(unescape(encodeURIComponent(content))), ...(sha ? { sha } : {}) };
   const res = await fetch(
     `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${path}`,
-    {
-      method: 'PUT',
-      headers: {
-        Authorization: `token ${cfg.token}`,
-        Accept: 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    }
+    { method: 'PUT', headers: { Authorization: `token ${cfg.token}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body) }
   );
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({}));
-    throw new Error(err.message || `HTTP ${res.status}`);
-  }
+  if (!res.ok) { const err = await res.json().catch(()=>({})); throw new Error(err.message || `HTTP ${res.status}`); }
   return res.json();
 }
 
-// ── GET TOPIC VALUE ────────────────────────────────────────────────────────
+// ── BUILD DATA ─────────────────────────────────────────────────────────────
 function getTopic() {
-  const sel    = document.getElementById('sessionTopic').value.trim();
+  const sel = document.getElementById('sessionTopic').value.trim();
   const custom = document.getElementById('sessionTopicCustom').value.trim();
   return custom || sel || '';
 }
 
-// ── BUILD SESSION (speaking-data.json) ────────────────────────────────────
 function buildSession(nextId) {
   const transcript = document.getElementById('transcriptManual').value.trim() ||
     (document.getElementById('transcriptDisplay').textContent !== 'Transcript will appear here — or paste manually below ↓'
@@ -783,24 +964,22 @@ function buildSession(nextId) {
     transcript,
     vocabulary:       document.getElementById('vocabulary').value.trim(),
     grammarStructures:document.getElementById('grammar').value.trim(),
+    tenses:           getTensesData(),
     recordings:       recField,
   };
 }
 
-// ── BUILD THUMB ENTRY (speaking-thumb.json) ────────────────────────────────
 function buildThumb(nextId) {
-  const videoUrl = document.getElementById('videoUrl').value.trim();
   return {
     id:          nextId,
     title:       document.getElementById('sessionTitle').value.trim(),
     description: getTopic(),
     thumbnail:   '',
-    videoLink:   videoUrl,
+    videoLink:   document.getElementById('videoUrl').value.trim(),
     htmlLink:    `speaking-practice.html?id=${nextId}`,
   };
 }
 
-// ── PREVIEW ────────────────────────────────────────────────────────────────
 async function previewJSON() {
   const session = buildSession('?');
   const preview = document.getElementById('jsonPreview');
@@ -808,14 +987,10 @@ async function previewJSON() {
   preview.classList.toggle('show');
 }
 
-// ── PUSH TO GITHUB ─────────────────────────────────────────────────────────
 async function pushToGitHub() {
   const cfg = getGhCfg();
-  if (!cfg.user || !cfg.repo || !cfg.token) {
-    showStatus('exportStatus', 'Set up GitHub config first (Step 5) ↑', 'error'); return;
-  }
+  if (!cfg.user || !cfg.repo || !cfg.token) { showStatus('exportStatus', 'Set up GitHub config first (Step 6) ↑', 'error'); return; }
 
-  // Validate required fields
   const title = document.getElementById('sessionTitle').value.trim();
   const topic = getTopic();
   if (!title) { showStatus('exportStatus', '❌ Please enter a Title first!', 'error'); return; }
@@ -824,31 +999,27 @@ async function pushToGitHub() {
   showStatus('exportStatus', '📡 Reading files from GitHub...', 'info');
 
   try {
-    // ── 1. Fetch both files in parallel ──
     const [dataResult, thumbResult] = await Promise.allSettled([
       ghGetFile('data/speaking-data.json'),
       ghGetFile('data/speaking-thumb.json'),
     ]);
 
-    // speaking-data.json
     let existingData = [], dataSha = null;
     if (dataResult.status === 'fulfilled') {
-      dataSha     = dataResult.value.sha;
-      const dec   = decodeURIComponent(escape(atob(dataResult.value.content.replace(/\n/g,''))));
+      dataSha = dataResult.value.sha;
+      const dec = decodeURIComponent(escape(atob(dataResult.value.content.replace(/\n/g,''))));
       const parsed = JSON.parse(dec);
       existingData = Array.isArray(parsed) ? parsed : [parsed];
     }
 
-    // speaking-thumb.json
     let existingThumb = [], thumbSha = null;
     if (thumbResult.status === 'fulfilled') {
-      thumbSha     = thumbResult.value.sha;
-      const dec    = decodeURIComponent(escape(atob(thumbResult.value.content.replace(/\n/g,''))));
+      thumbSha = thumbResult.value.sha;
+      const dec = decodeURIComponent(escape(atob(thumbResult.value.content.replace(/\n/g,''))));
       const parsed = JSON.parse(dec);
       existingThumb = Array.isArray(parsed) ? parsed : [parsed];
     }
 
-    // ── 2. Compute next ID (max across both files for safety) ──
     const maxData  = existingData.reduce((m,s)  => Math.max(m, parseInt(s.id)||0), 0);
     const maxThumb = existingThumb.reduce((m,s) => Math.max(m, parseInt(s.id)||0), 0);
     const nextId   = Math.max(maxData, maxThumb) + 1;
@@ -858,34 +1029,17 @@ async function pushToGitHub() {
     existingData.push(session);
     existingThumb.push(thumb);
 
-    // ── 3. Push both files ──
     showStatus('exportStatus', `📤 Pushing session #${nextId} to 2 files...`, 'info');
 
     await Promise.all([
-      ghPutFile(
-        'data/speaking-data.json',
-        JSON.stringify(existingData,  null, 2),
-        dataSha,
-        `Add session ${nextId}: ${title}`
-      ),
-      ghPutFile(
-        'data/speaking-thumb.json',
-        JSON.stringify(existingThumb, null, 2),
-        thumbSha,
-        `Add thumb ${nextId}: ${title}`
-      ),
+      ghPutFile('data/speaking-data.json', JSON.stringify(existingData, null, 2), dataSha, `Add session ${nextId}: ${title}`),
+      ghPutFile('data/speaking-thumb.json', JSON.stringify(existingThumb, null, 2), thumbSha, `Add thumb ${nextId}: ${title}`),
     ]);
 
-    showStatus('exportStatus',
-      `✅ Done! Session #${nextId} "${title}" pushed to both files. Netlify deploys in ~30s.`,
-      'success'
-    );
+    showStatus('exportStatus', `✅ Done! Session #${nextId} "${title}" pushed. Netlify deploys in ~30s.`, 'success');
 
-    // Update preview
     const preview = document.getElementById('jsonPreview');
-    if (preview.classList.contains('show')) {
-      preview.textContent = JSON.stringify({ session, thumb }, null, 2);
-    }
+    if (preview.classList.contains('show')) preview.textContent = JSON.stringify({ session, thumb }, null, 2);
 
   } catch(e) {
     showStatus('exportStatus', '❌ Error: ' + e.message, 'error');
@@ -904,19 +1058,16 @@ function escHtml(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// ── LIVE TRANSCRIPT PREVIEW ────────────────────────────────────────────────
 document.getElementById('transcriptManual').addEventListener('input', e => {
   const d = document.getElementById('transcriptDisplay');
   if (e.target.value.trim()) {
-    d.className   = 'transcript-display';
-    d.textContent = e.target.value;
+    d.className = 'transcript-display'; d.textContent = e.target.value;
   } else {
-    d.className   = 'transcript-display empty';
+    d.className = 'transcript-display empty';
     d.textContent = 'Transcript will appear here — or paste manually below ↓';
   }
 });
 
-// ── LOAD SAVED CONFIG ON START ─────────────────────────────────────────────
 (function() {
   const cfg = getGhCfg();
   if (cfg.user)  document.getElementById('ghUser').value  = cfg.user;
@@ -925,6 +1076,5 @@ document.getElementById('transcriptManual').addEventListener('input', e => {
   updateGhSummary();
 })();
 </script>
-
 </body>
 </html>
