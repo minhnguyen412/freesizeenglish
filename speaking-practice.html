@@ -22,6 +22,9 @@
     --green-pale:  #f0fff0;
     --green-dark:  #2e7d32;
     --orange-pale: #feefdb;
+    --purple:      #7c3aed;
+    --purple-pale: #f3f0ff;
+    --purple-light:#e9d5ff;
     --muted:       #888;
     --border:      2.5px solid var(--black);
     --border-thick:3px solid var(--black);
@@ -34,26 +37,20 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 500;
-    background: var(--cream);
-    color: var(--black);
-    min-height: 100vh;
-    overflow-x: hidden;
+    font-family: 'Fredoka', sans-serif; font-weight: 500;
+    background: var(--cream); color: var(--black);
+    min-height: 100vh; overflow-x: hidden;
   }
 
   body::before {
-    content: '';
-    position: fixed; inset: 0;
+    content: ''; position: fixed; inset: 0;
     background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-    background-size: 22px 22px;
-    pointer-events: none; z-index: 0;
+    background-size: 22px 22px; pointer-events: none; z-index: 0;
   }
 
   /* ── HEADER ── */
   header {
-    background: var(--red);
-    border-bottom: var(--border-thick);
+    background: var(--red); border-bottom: var(--border-thick);
     padding: 0 50px; height: 66px;
     display: flex; justify-content: space-between; align-items: center;
     position: sticky; top: 0; z-index: 100;
@@ -62,11 +59,6 @@
     font-weight: 700; font-size: 1.65rem; color: white;
     letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.25);
     text-decoration: none;
-  }
-  .header-tag {
-    background: var(--white); border: var(--border); border-radius: 50px;
-    padding: 5px 18px; font-weight: 700; font-size: 0.88rem;
-    box-shadow: var(--shadow-sm);
   }
 
   /* ── PAGE WRAPPER ── */
@@ -85,47 +77,25 @@
 
   /* ── VIDEO COLUMN (sticky) ── */
   .video-col {
-    position: sticky;
-    top: 88px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+    position: sticky; top: 88px;
+    display: flex; flex-direction: column; gap: 14px;
   }
 
   .video-card {
-    background: var(--black);
-    border: var(--border-thick);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    background: var(--black); border: var(--border-thick); border-radius: 20px;
+    overflow: hidden; box-shadow: var(--shadow-lg);
     aspect-ratio: 9 / 16;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    display: flex; align-items: center; justify-content: center; width: 100%;
   }
-  .video-card iframe {
-    width: 100%; height: 100%;
-    border: none; display: block;
-  }
+  .video-card iframe { width: 100%; height: 100%; border: none; display: block; }
 
   .video-placeholder {
-    background: var(--white);
-    border: var(--border-thick);
-    border-radius: 20px;
-    box-shadow: var(--shadow-md);
-    aspect-ratio: 9 / 16;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    color: var(--muted);
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-align: center;
-    padding: 24px;
+    background: var(--white); border: var(--border-thick); border-radius: 20px;
+    box-shadow: var(--shadow-md); aspect-ratio: 9 / 16;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px; color: var(--muted);
+    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.95rem;
+    text-align: center; padding: 24px;
   }
   .video-placeholder .big-emoji { font-size: 3.5rem; }
 
@@ -139,42 +109,30 @@
   .video-link-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
 
   .video-meta-card {
-    background: var(--red);
-    border: var(--border-thick); border-radius: 16px;
-    box-shadow: var(--shadow-md);
-    padding: 14px 16px;
-    color: white;
-    text-align: center;
+    background: var(--red); border: var(--border-thick); border-radius: 16px;
+    box-shadow: var(--shadow-md); padding: 14px 16px; color: white; text-align: center;
   }
   .video-meta-card .session-id {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 700; font-size: 0.8rem;
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.8rem;
     background: rgba(255,255,255,0.18); border-radius: 8px;
     padding: 5px 10px; word-break: break-all; margin-bottom: 10px;
   }
   .stat-row { display: flex; gap: 8px; }
   .stat-box {
     flex: 1; background: rgba(255,255,255,0.18); border-radius: 10px;
-    padding: 8px 6px; text-align: center;
-    border: 1.5px solid rgba(255,255,255,0.25);
+    padding: 8px 6px; text-align: center; border: 1.5px solid rgba(255,255,255,0.25);
   }
   .stat-box .num { font-size: 1.3rem; font-weight: 700; }
   .stat-box .lbl { font-size: 0.68rem; opacity: 0.82; }
 
   .tiktok-iframe-wrap {
-    width: 100%; aspect-ratio: 9/16;
-    border: var(--border-thick); border-radius: 20px;
-    overflow: hidden; box-shadow: var(--shadow-lg);
-    background: #111;
+    width: 100%; aspect-ratio: 9/16; border: var(--border-thick); border-radius: 20px;
+    overflow: hidden; box-shadow: var(--shadow-lg); background: #111;
   }
-  .tiktok-iframe-wrap iframe {
-    width: 100%; height: 100%;
-    border: none; display: block;
-  }
+  .tiktok-iframe-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
   .tiktok-open-btn {
     display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--black); color: white;
-    border: var(--border-thick); border-radius: 50px;
+    background: var(--black); color: white; border: var(--border-thick); border-radius: 50px;
     padding: 11px 22px; font-weight: 700; font-size: 0.92rem;
     box-shadow: var(--shadow-md); text-decoration: none;
     transition: transform 0.12s, box-shadow 0.12s;
@@ -182,16 +140,11 @@
   .tiktok-open-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); color: white; }
 
   /* ── CONTENT COLUMN ── */
-  .content-col {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+  .content-col { display: flex; flex-direction: column; gap: 20px; }
 
   /* ── CARDS ── */
   .card {
-    background: var(--white);
-    border: var(--border-thick); border-radius: 22px;
+    background: var(--white); border: var(--border-thick); border-radius: 22px;
     box-shadow: var(--shadow-md); padding: 24px;
     animation: fadeUp 0.38s ease both;
   }
@@ -200,20 +153,17 @@
     to   { opacity: 1; transform: translateY(0); }
   }
   .card-title {
-    display: inline-block;
-    font-weight: 700; font-size: 0.95rem;
-    background: var(--red); color: white;
-    border: var(--border); border-radius: 50px;
-    padding: 5px 20px; box-shadow: var(--shadow-sm);
-    margin-bottom: 16px;
+    display: inline-block; font-weight: 700; font-size: 0.95rem;
+    background: var(--red); color: white; border: var(--border); border-radius: 50px;
+    padding: 5px 20px; box-shadow: var(--shadow-sm); margin-bottom: 16px;
   }
   .card-title.yellow { background: var(--yellow); color: var(--black); }
   .card-title.sky    { background: var(--sky);    color: var(--black); }
   .card-title.green  { background: var(--green);  color: white; }
+  .card-title.purple { background: var(--purple); color: white; }
 
   .date-pill {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.75rem; font-weight: 700;
+    font-family: 'Quicksand', sans-serif; font-size: 0.75rem; font-weight: 700;
     background: var(--yellow-pale); border: var(--border); border-radius: 50px;
     padding: 3px 12px; box-shadow: var(--shadow-sm);
     display: inline-block; margin-bottom: 16px; margin-left: 8px;
@@ -221,12 +171,10 @@
 
   /* ── TRANSCRIPT ── */
   .transcript-body {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1rem; font-weight: 600; line-height: 1.85; color: #333;
-    background: var(--red-pale); border: var(--border);
-    border-radius: 14px; padding: 16px 18px;
-    max-height: 260px; overflow-y: auto;
-    white-space: pre-wrap;
+    font-family: 'Quicksand', sans-serif; font-size: 1rem; font-weight: 600;
+    line-height: 1.85; color: #333;
+    background: var(--red-pale); border: var(--border); border-radius: 14px;
+    padding: 16px 18px; max-height: 260px; overflow-y: auto; white-space: pre-wrap;
   }
   .transcript-body::-webkit-scrollbar { width: 5px; }
   .transcript-body::-webkit-scrollbar-thumb { background: var(--red-light); border-radius: 3px; }
@@ -234,13 +182,10 @@
   /* ── VOCAB / GRAMMAR PILLS ── */
   .pill-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
   .vocab-pill {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.92rem; font-weight: 700;
-    border: var(--border); border-radius: 50px;
-    padding: 7px 16px; box-shadow: var(--shadow-sm);
-    transition: transform 0.12s, box-shadow 0.12s;
-    animation: fadeUp 0.35s ease both;
-    cursor: default;
+    font-family: 'Quicksand', sans-serif; font-size: 0.92rem; font-weight: 700;
+    border: var(--border); border-radius: 50px; padding: 7px 16px;
+    box-shadow: var(--shadow-sm); transition: transform 0.12s, box-shadow 0.12s;
+    animation: fadeUp 0.35s ease both; cursor: default;
   }
   .vocab-pill:nth-child(4n+1) { background: var(--yellow-pale); }
   .vocab-pill:nth-child(4n+2) { background: var(--red-pale); }
@@ -248,95 +193,137 @@
   .vocab-pill:nth-child(4n+4) { background: var(--green-pale); }
   .vocab-pill:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
 
+  .grammar-list { display: flex; flex-direction: column; gap: 8px; }
   .grammar-item {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.95rem; font-weight: 600; line-height: 1.6;
-    background: var(--sky-pale); border: var(--border);
-    border-radius: 14px; padding: 11px 16px; box-shadow: var(--shadow-sm);
-    transition: transform 0.12s, box-shadow 0.12s;
-    animation: fadeUp 0.35s ease both;
+    font-family: 'Quicksand', sans-serif; font-size: 0.95rem; font-weight: 600; line-height: 1.6;
+    background: var(--sky-pale); border: var(--border); border-radius: 14px;
+    padding: 11px 16px; box-shadow: var(--shadow-sm);
+    transition: transform 0.12s, box-shadow 0.12s; animation: fadeUp 0.35s ease both;
   }
   .grammar-item:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-  .grammar-list { display: flex; flex-direction: column; gap: 8px; }
 
-  /* ── RECORDINGS (saved from JSON) ── */
-  .saved-recordings-list { display: flex; flex-direction: column; gap: 12px; }
+  /* ── 12 TENSES DISPLAY ── */
+  .tenses-tabs {
+    display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px;
+  }
+  .tense-tab {
+    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.78rem;
+    padding: 5px 14px; border-radius: 50px; border: var(--border); cursor: pointer;
+    transition: all 0.12s; box-shadow: var(--shadow-sm);
+    background: var(--white); color: var(--black);
+  }
+  .tense-tab:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
+  .tense-tab.active-past    { background: #fef3c7; border-color: #b45309; color: #92400e; }
+  .tense-tab.active-present { background: var(--sky-pale); border-color: #0369a1; color: #0369a1; }
+  .tense-tab.active-future  { background: var(--green-pale); border-color: #166534; color: #166534; }
+
+  .tenses-table-wrap {
+    border: var(--border-thick); border-radius: 16px; overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .tenses-table {
+    width: 100%; border-collapse: collapse;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .tenses-table th {
+    padding: 10px 14px; font-size: 0.72rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    border-bottom: var(--border); text-align: left;
+    white-space: nowrap;
+  }
+  .tenses-table td {
+    padding: 11px 14px; font-size: 0.88rem; font-weight: 600; line-height: 1.55;
+    border-bottom: 2px solid rgba(0,0,0,0.06); vertical-align: top;
+  }
+  .tenses-table tr:last-child td { border-bottom: none; }
+  .tenses-table tr:hover td { background: rgba(0,0,0,0.018); }
+
+  /* Row color groups */
+  .tense-row-simple   td:first-child { border-left: 4px solid #f59e0b; }
+  .tense-row-cont     td:first-child { border-left: 4px solid #38bdf8; }
+  .tense-row-perfect  td:first-child { border-left: 4px solid #4ade80; }
+  .tense-row-perf-cont td:first-child { border-left: 4px solid #a78bfa; }
+
+  .tense-name-cell {
+    display: flex; flex-direction: column; gap: 3px;
+  }
+  .tense-display-name {
+    font-weight: 700; font-size: 0.88rem; color: var(--black);
+  }
+  .tense-type-badge {
+    display: inline-block; font-size: 0.6rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    padding: 1px 7px; border-radius: 20px; border: 1.5px solid currentColor;
+    width: fit-content;
+  }
+  .badge-simple   { color: #b45309; background: #fef3c7; border-color: #b45309; }
+  .badge-cont     { color: #0369a1; background: #bae6fd; border-color: #0369a1; }
+  .badge-perfect  { color: #166534; background: #bbf7d0; border-color: #166534; }
+  .badge-perf-cont{ color: #7e22ce; background: #e9d5ff; border-color: #7e22ce; }
+
+  .tense-sentence {
+    color: #333; line-height: 1.6;
+  }
+  .tense-empty {
+    color: #ccc; font-style: italic; font-size: 0.82rem;
+  }
+
+  .tense-group-header {
+    font-weight: 700; font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 0.08em; padding: 8px 14px 6px;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .tense-group-header.past    { background: #fef9ee; color: #92400e; }
+  .tense-group-header.present { background: #f0f9ff; color: #0369a1; }
+  .tense-group-header.future  { background: #f0fdf4; color: #166534; }
+
+  /* tense stats in meta card */
+  .tense-filled-count {
+    font-family: 'Quicksand', sans-serif; font-size: 0.7rem; font-weight: 700;
+    opacity: 0.82;
+  }
+
+  /* ── RECORDINGS ── */
   .rec-item {
-    background: var(--red-pale); border: var(--border);
-    border-radius: 16px; padding: 14px 16px;
-    box-shadow: var(--shadow-sm); animation: fadeUp 0.35s ease both;
+    background: var(--red-pale); border: var(--border); border-radius: 16px;
+    padding: 14px 16px; box-shadow: var(--shadow-sm); animation: fadeUp 0.35s ease both;
+    margin-bottom: 10px;
   }
   .rec-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
   .rec-badge {
-    background: var(--red); color: white;
-    border: var(--border); border-radius: 50px;
-    padding: 3px 14px; font-weight: 700; font-size: 0.8rem;
-    box-shadow: var(--shadow-sm);
+    background: var(--red); color: white; border: var(--border); border-radius: 50px;
+    padding: 3px 14px; font-weight: 700; font-size: 0.8rem; box-shadow: var(--shadow-sm);
   }
   .rec-ts { font-family: 'Quicksand', sans-serif; font-size: 0.73rem; color: var(--muted); font-weight: 600; }
-  .rec-item audio {
-    width: 100%; height: 36px; display: block;
-    border-radius: 8px; border: var(--border); margin-bottom: 6px;
-  }
+  .rec-item audio { width: 100%; height: 36px; display: block; border-radius: 8px; border: var(--border); margin-bottom: 6px; }
   .rec-stt {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 0.88rem; font-weight: 600; color: #444;
-    background: var(--white); border: var(--border);
-    border-radius: 10px; padding: 9px 13px; line-height: 1.6;
+    font-family: 'Quicksand', sans-serif; font-size: 0.88rem; font-weight: 600; color: #444;
+    background: var(--white); border: var(--border); border-radius: 10px; padding: 9px 13px; line-height: 1.6;
   }
   .rec-stt::before { content: '💬 '; }
 
-  /* ── LIVE RECORDER SECTION ── */
-  .recorder-section {
-    margin-top: 20px;
-    border-top: var(--border);
-    padding-top: 20px;
-  }
-  .recorder-section-title {
-    font-weight: 700; font-size: 0.95rem;
-    background: var(--green); color: white;
-    border: var(--border); border-radius: 50px;
-    padding: 5px 20px; box-shadow: var(--shadow-sm);
-    display: inline-block; margin-bottom: 16px;
-  }
-
-  /* Lang select row */
-  .lang-row {
-    display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap;
-  }
+  /* ── RECORDER SECTION ── */
+  .lang-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
   .lang-row select {
     font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.88rem;
     background: var(--white); border: var(--border); border-radius: 10px;
     padding: 7px 12px; outline: none; cursor: pointer;
-    transition: box-shadow 0.15s;
   }
-  .lang-row select:focus { box-shadow: var(--shadow-sm); }
-
-  /* Recorder inner */
   .recorder-inner {
     background: var(--red-pale); border: var(--border); border-radius: 14px;
     padding: 16px 18px; margin-bottom: 14px;
     width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden;
   }
-  .rec-controls {
-    display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap;
-  }
+  .rec-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
   .rec-dot {
     width: 12px; height: 12px; border-radius: 50%;
-    background: var(--muted); border: var(--border); flex-shrink: 0;
-    transition: background 0.3s;
+    background: var(--muted); border: var(--border); flex-shrink: 0; transition: background 0.3s;
   }
-  .rec-dot.active {
-    background: var(--red);
-    animation: blink 1s ease-in-out infinite;
-  }
+  .rec-dot.active { background: var(--red); animation: blink 1s ease-in-out infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .rec-timer {
-    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.1rem;
-    min-width: 50px; color: var(--black);
-  }
+  .rec-timer { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.1rem; min-width: 50px; }
 
-  /* Buttons */
   .btn {
     font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 0.95rem;
     padding: 9px 20px; border: var(--border-thick); border-radius: 50px;
@@ -348,63 +335,43 @@
   .btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
   .btn:active { transform: translate(1px,1px); box-shadow: none; }
   .btn:disabled { opacity: 0.4; pointer-events: none; }
-  .btn-red    { background: var(--red);    color: white; }
-  .btn-green  { background: var(--green);  color: white; }
-  .btn-white  { background: var(--white);  color: var(--black); }
-  .btn-sky    { background: var(--sky-pale); color: var(--black); }
+  .btn-red   { background: var(--red);   color: white; }
+  .btn-white { background: var(--white); color: var(--black); }
 
-  /* STT output */
   .stt-box {
     font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.9rem;
-    line-height: 1.7; color: var(--muted);
-    background: var(--white); border: var(--border); border-radius: 10px;
-    padding: 11px 14px; min-height: 52px;
-    white-space: pre-wrap; word-break: break-word;
-    overflow-wrap: break-word; overflow: hidden;
-    width: 100%; max-width: 100%; box-sizing: border-box;
+    line-height: 1.7; color: var(--muted); background: var(--white); border: var(--border);
+    border-radius: 10px; padding: 11px 14px; min-height: 52px;
+    white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word;
+    overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box;
   }
   .stt-box.has-text { color: var(--black); }
-
-  /* Live recordings list */
-  .live-recordings-list { display: flex; flex-direction: column; gap: 10px; }
 
   .live-rec-item {
     background: var(--white); border: var(--border); border-radius: 14px;
     padding: 12px 14px; display: flex; align-items: center; gap: 10px;
-    box-shadow: var(--shadow-sm);
-    animation: fadeUp 0.3s ease both;
+    box-shadow: var(--shadow-sm); animation: fadeUp 0.3s ease both; margin-bottom: 8px;
   }
   .live-rec-num {
-    background: var(--green); color: white;
-    border: var(--border); border-radius: 50px;
-    padding: 2px 12px; font-weight: 700; font-size: 0.78rem;
-    flex-shrink: 0;
+    background: var(--green); color: white; border: var(--border); border-radius: 50px;
+    padding: 2px 12px; font-weight: 700; font-size: 0.78rem; flex-shrink: 0;
   }
-  .live-rec-item audio {
-    flex: 1; height: 32px;
-    border-radius: 8px; min-width: 0;
-    border: var(--border);
-  }
+  .live-rec-item audio { flex: 1; height: 32px; border-radius: 8px; min-width: 0; border: var(--border); }
   .live-rec-stt {
     font-family: 'Quicksand', sans-serif; font-size: 0.75rem; font-weight: 600;
-    color: var(--muted); max-width: 140px;
-    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-    flex-shrink: 1;
+    color: var(--muted); max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
   .live-rec-actions { display: flex; gap: 6px; flex-shrink: 0; }
-
   .btn-icon {
-    width: 32px; height: 32px; border-radius: 50%;
-    border: var(--border); background: var(--white);
+    width: 32px; height: 32px; border-radius: 50%; border: var(--border); background: var(--white);
     display: flex; align-items: center; justify-content: center;
-    cursor: pointer; font-size: 0.88rem;
-    box-shadow: var(--shadow-sm); transition: transform 0.1s, box-shadow 0.1s;
+    cursor: pointer; font-size: 0.88rem; box-shadow: var(--shadow-sm);
+    transition: transform 0.1s, box-shadow 0.1s;
   }
   .btn-icon:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
   .btn-icon.del { background: var(--red-pale); }
   .btn-icon.dl  { background: var(--green-pale); }
 
-  /* Status msg */
   .status-msg {
     font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.82rem;
     padding: 8px 14px; border-radius: 10px; margin-top: 10px;
@@ -415,28 +382,14 @@
   .status-msg.success { background: var(--green-pale);  color: var(--green-dark); }
   .status-msg.error   { background: var(--red-pale);    color: var(--red-dark); }
 
-  /* Divider label */
-  .divider-label {
-    display: flex; align-items: center; gap: 10px;
-    margin: 18px 0 14px;
-    font-family: 'Quicksand', sans-serif; font-weight: 700;
-    font-size: 0.78rem; letter-spacing: 0.06em;
-    text-transform: uppercase; color: var(--muted);
-  }
-  .divider-label::before, .divider-label::after {
-    content: ''; flex: 1; height: 2px;
-    background: var(--black); opacity: 0.12;
-  }
-
   /* ── EMPTY STATE ── */
   .empty-state {
-    text-align: center; padding: 28px 20px;
-    color: var(--muted); font-size: 0.95rem;
+    text-align: center; padding: 28px 20px; color: var(--muted); font-size: 0.95rem;
     font-family: 'Quicksand', sans-serif; font-weight: 600;
   }
   .empty-state .emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
 
-  /* ── ERROR / LOADER / LIST PAGE ── */
+  /* ── LOADER / ERROR ── */
   .center-wrap {
     display: flex; flex-direction: column; align-items: center;
     justify-content: center; min-height: 60vh; gap: 18px;
@@ -451,24 +404,18 @@
   .loader-text { font-size: 1.05rem; font-weight: 700; color: var(--red); }
 
   .error-card {
-    background: var(--red-light); border: var(--border-thick);
-    border-radius: 22px; box-shadow: var(--shadow-lg);
-    padding: 44px 36px; text-align: center; max-width: 500px;
+    background: var(--red-light); border: var(--border-thick); border-radius: 22px;
+    box-shadow: var(--shadow-lg); padding: 44px 36px; text-align: center; max-width: 500px;
   }
   .error-card .emoji { font-size: 2.8rem; margin-bottom: 12px; }
   .error-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
   .error-card p { font-family: 'Quicksand', sans-serif; color: #555; font-size: 0.95rem; line-height: 1.65; }
-  .error-card code {
-    background: var(--white); border: var(--border);
-    border-radius: 6px; padding: 1px 8px; font-size: 0.88rem; margin: 2px;
-    display: inline-block;
-  }
+  .error-card code { background: var(--white); border: var(--border); border-radius: 6px; padding: 1px 8px; font-size: 0.88rem; }
 
   /* ── SESSION LIST ── */
   .session-list { width: 100%; max-width: 680px; }
   .session-list h2 {
-    font-size: 1.4rem; font-weight: 700; margin-bottom: 20px;
-    display: inline-block;
+    font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; display: inline-block;
     background: var(--yellow); border: var(--border-thick); border-radius: 50px;
     padding: 8px 26px; box-shadow: var(--shadow-md);
   }
@@ -477,19 +424,14 @@
     background: var(--white); border: var(--border-thick); border-radius: 16px;
     box-shadow: var(--shadow-sm); padding: 16px 20px;
     display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    text-decoration: none; color: var(--black);
-    transition: transform 0.12s, box-shadow 0.12s;
+    text-decoration: none; color: var(--black); transition: transform 0.12s, box-shadow 0.12s;
   }
   .session-list-item:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-lg); }
   .session-list-item .sli-id {
-    font-weight: 700; font-size: 1rem;
-    background: var(--red-light); border: var(--border); border-radius: 50px;
-    padding: 3px 14px; box-shadow: var(--shadow-sm);
+    font-weight: 700; background: var(--red-light); border: var(--border); border-radius: 50px; padding: 3px 14px;
   }
-  .session-list-item .sli-date {
-    font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--muted);
-  }
-  .session-list-item .sli-arrow { font-size: 1.2rem; color: var(--red); flex-shrink: 0; }
+  .session-list-item .sli-date { font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--muted); }
+  .session-list-item .sli-arrow { font-size: 1.2rem; color: var(--red); }
 
   /* ── FOOTER ── */
   footer {
@@ -516,6 +458,8 @@
     .live-rec-num { order: 1; }
     .live-rec-stt { order: 3; max-width: 100%; white-space: normal; }
     .live-rec-actions { order: 4; }
+    .tenses-table { font-size: 0.82rem; }
+    .tenses-table th, .tenses-table td { padding: 8px 10px; }
   }
 </style>
 </head>
@@ -523,7 +467,6 @@
 
 <header>
   <a class="logo" href="index.html">🔴 FREESIZE ENGLISH</a>
-
 </header>
 
 <div id="app"></div>
@@ -534,6 +477,28 @@
 </footer>
 
 <script>
+// ── TENSE DEFINITIONS ──────────────────────────────────────────────────────
+const TENSES = [
+  { id:'past_simple',      group:'past',    name:'Past Simple',                   type:'simple',    badge:'badge-simple' },
+  { id:'past_cont',        group:'past',    name:'Past Continuous',               type:'cont',      badge:'badge-cont' },
+  { id:'past_perfect',     group:'past',    name:'Past Perfect',                  type:'perfect',   badge:'badge-perfect' },
+  { id:'past_perf_cont',   group:'past',    name:'Past Perfect Continuous',       type:'perf-cont', badge:'badge-perf-cont' },
+  { id:'pres_simple',      group:'present', name:'Present Simple',                type:'simple',    badge:'badge-simple' },
+  { id:'pres_cont',        group:'present', name:'Present Continuous',            type:'cont',      badge:'badge-cont' },
+  { id:'pres_perfect',     group:'present', name:'Present Perfect',               type:'perfect',   badge:'badge-perfect' },
+  { id:'pres_perf_cont',   group:'present', name:'Present Perfect Continuous',    type:'perf-cont', badge:'badge-perf-cont' },
+  { id:'fut_simple',       group:'future',  name:'Future Simple',                 type:'simple',    badge:'badge-simple' },
+  { id:'fut_cont',         group:'future',  name:'Future Continuous',             type:'cont',      badge:'badge-cont' },
+  { id:'fut_perfect',      group:'future',  name:'Future Perfect',                type:'perfect',   badge:'badge-perfect' },
+  { id:'fut_perf_cont',    group:'future',  name:'Future Perfect Continuous',     type:'perf-cont', badge:'badge-perf-cont' },
+];
+
+const GROUP_LABELS = {
+  past:    { emoji: '⬅', label: 'PAST',    cls: 'past' },
+  present: { emoji: '●', label: 'PRESENT', cls: 'present' },
+  future:  { emoji: '➡', label: 'FUTURE',  cls: 'future' },
+};
+
 // ── UTILS ──────────────────────────────────────────────────────────────────
 function getParam(k) { return new URLSearchParams(window.location.search).get(k); }
 
@@ -541,16 +506,13 @@ function fmtDate(iso) {
   if (!iso) return '—';
   try {
     return new Date(iso).toLocaleString('vi-VN', {
-      day:'2-digit', month:'2-digit', year:'numeric',
-      hour:'2-digit', minute:'2-digit'
+      day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'
     });
   } catch { return iso; }
 }
 
 function esc(s) {
-  return String(s ?? '')
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 function extractTikTokId(url) {
@@ -567,57 +529,41 @@ function normalise(raw) {
     d.recordings = urls.map((url, i) => ({ index: i+1, url, sttText: '', timestamp: d.createdAt||null }));
   } else if (Array.isArray(d.recordings)) {
     d.recordings = d.recordings.map((r, i) => ({
-      index:     r.index || i+1,
-      url:       r.url || r.audioFile || null,
-      sttText:   r.sttText || '',
-      timestamp: r.timestamp || d.createdAt || null,
+      index: r.index || i+1, url: r.url || r.audioFile || null,
+      sttText: r.sttText || '', timestamp: r.timestamp || d.createdAt || null,
     }));
   } else {
     d.recordings = [];
   }
 
   d._vocab = typeof d.vocabulary === 'string'
-    ? d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean)
-    : [];
+    ? d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean) : [];
 
   d._grammar = typeof d.grammarStructures === 'string'
-    ? d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean)
-    : [];
+    ? d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean) : [];
+
+  // tenses — object keyed by tense id
+  d._tenses = (typeof d.tenses === 'object' && d.tenses !== null) ? d.tenses : {};
 
   return d;
 }
 
-// ── BUILD VIDEO EMBED ──────────────────────────────────────────────────────
+// ── VIDEO ──────────────────────────────────────────────────────────────────
 function buildVideo(url) {
   if (!url || !url.trim()) return null;
-
   const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/);
-  if (yt) {
-    return { type: 'youtube', iframe: `https://www.youtube.com/embed/${yt[1]}?rel=0`, link: url, label: '↗ Open on YouTube' };
-  }
-
-  if (url.includes('tiktok.com')) {
-    return { type: 'tiktok', vid: extractTikTokId(url), link: url, label: '↗ Watch on TikTok' };
-  }
-
+  if (yt) return { type: 'youtube', iframe: `https://www.youtube.com/embed/${yt[1]}?rel=0`, link: url, label: '↗ Open on YouTube' };
+  if (url.includes('tiktok.com')) return { type: 'tiktok', vid: extractTikTokId(url), link: url, label: '↗ Watch on TikTok' };
   return { type: 'generic', iframe: url, link: url, label: '↗ Open link' };
 }
 
 function buildVideoColHTML(vid) {
-  if (!vid) {
-    return `<div class="video-placeholder"><span class="big-emoji">🎬</span><span>No video URL</span></div>`;
-  }
-  if (vid.type === 'youtube') {
-    return `
-      <div class="video-card">
-        <iframe src="${esc(vid.iframe)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
-  }
+  if (!vid) return `<div class="video-placeholder"><span class="big-emoji">🎬</span><span>No video URL</span></div>`;
+  if (vid.type === 'youtube') return `
+    <div class="video-card"><iframe src="${esc(vid.iframe)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+    <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
   if (vid.type === 'tiktok') {
-    if (!vid.vid) {
-      return `<div class="video-placeholder"><span class="big-emoji">🎵</span><span>Can't extract TikTok ID</span><a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a></div>`;
-    }
+    if (!vid.vid) return `<div class="video-placeholder"><span class="big-emoji">🎵</span><span>Can't extract TikTok ID</span><a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a></div>`;
     return `
       <div class="tiktok-iframe-wrap tiktok-hide-mobile">
         <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}?autoplay=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" scrolling="no"></iframe>
@@ -630,35 +576,83 @@ function buildVideoColHTML(vid) {
   return `<div class="video-card"><iframe src="${esc(vid.iframe)}" allowfullscreen loading="lazy"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
 }
 
+// ── BUILD TENSES TABLE HTML ────────────────────────────────────────────────
+function buildTensesHTML(tensesData) {
+  const filledCount = TENSES.filter(t => tensesData[t.id] && tensesData[t.id].trim()).length;
+  if (filledCount === 0) {
+    return `<div class="empty-state"><span class="emoji">📭</span>No tense sentences saved yet.</div>`;
+  }
+
+  const groups = ['past', 'present', 'future'];
+  let html = `
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+      <div style="font-family:'Quicksand',sans-serif;font-size:0.82rem;font-weight:700;color:var(--muted);">
+        ${filledCount}/12 thì có câu ví dụ
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#fef3c7;border:1.5px solid #b45309;display:inline-block;"></span>Simple</span>
+        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#bae6fd;border:1.5px solid #0369a1;display:inline-block;"></span>Continuous</span>
+        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#bbf7d0;border:1.5px solid #166534;display:inline-block;"></span>Perfect</span>
+        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#e9d5ff;border:1.5px solid #7e22ce;display:inline-block;"></span>Perf. Cont.</span>
+      </div>
+    </div>
+    <div class="tenses-table-wrap">
+      <table class="tenses-table">
+        <thead>
+          <tr style="background:var(--purple-pale);">
+            <th style="width:38%;color:var(--purple);">Tense</th>
+            <th style="color:var(--purple);">Example Sentence</th>
+          </tr>
+        </thead>
+        <tbody>`;
+
+  groups.forEach(grp => {
+    const g = GROUP_LABELS[grp];
+    const grpTenses = TENSES.filter(t => t.group === grp);
+    const grpFilled = grpTenses.filter(t => tensesData[t.id] && tensesData[t.id].trim()).length;
+    if (grpFilled === 0) return;
+
+    html += `<tr><td colspan="2" class="tense-group-header ${g.cls}">${g.emoji} ${g.label} <span style="opacity:0.6;font-weight:600;">(${grpFilled}/${grpTenses.length})</span></td></tr>`;
+
+    grpTenses.forEach(t => {
+      const sentence = tensesData[t.id] ? tensesData[t.id].trim() : '';
+      if (!sentence) return;
+      html += `
+        <tr class="tense-row-${t.type}">
+          <td>
+            <div class="tense-name-cell">
+              <span class="tense-display-name">${esc(t.name)}</span>
+              <span class="tense-type-badge ${t.badge}">${t.type === 'perf-cont' ? 'Perf. Cont.' : t.type.charAt(0).toUpperCase() + t.type.slice(1)}</span>
+            </div>
+          </td>
+          <td><span class="tense-sentence">${esc(sentence)}</span></td>
+        </tr>`;
+    });
+  });
+
+  html += `</tbody></table></div>`;
+  return html;
+}
+
 // ── LIVE RECORDER STATE ────────────────────────────────────────────────────
-let liveRecordings = [];
-let mediaRec       = null;
-let audioChunks    = [];
-let isRecording    = false;
-let timerInt       = null;
-let recSecs        = 0;
-let speechRec      = null;
-let currentSTT     = '';
+let liveRecordings = [], mediaRec = null, audioChunks = [], isRecording = false;
+let timerInt = null, recSecs = 0, speechRec = null, currentSTT = '';
 
 function showRecStatus(msg, type) {
   const el = document.getElementById('liveRecStatus');
   if (!el) return;
-  el.textContent = msg;
-  el.className = `status-msg show ${type}`;
+  el.textContent = msg; el.className = `status-msg show ${type}`;
   if (type !== 'info') setTimeout(() => el.classList.remove('show'), 5000);
 }
 
-async function toggleRecording() {
-  isRecording ? stopRecording() : await startRecording();
-}
+async function toggleRecording() { isRecording ? stopRecording() : await startRecording(); }
 
 async function startRecording() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     const mimeType = getSupportedMimeType();
     mediaRec    = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
-    audioChunks = [];
-    currentSTT  = '';
+    audioChunks = []; currentSTT = '';
 
     mediaRec.ondataavailable = e => audioChunks.push(e.data);
     mediaRec.onstop = saveLiveRecording;
@@ -666,10 +660,10 @@ async function startRecording() {
     isRecording = true;
 
     document.getElementById('liveRecDot').classList.add('active');
-    document.getElementById('liveRecBtn').textContent  = '⏸ Pause';
-    document.getElementById('liveStopBtn').disabled    = false;
+    document.getElementById('liveRecBtn').textContent = '⏸ Pause';
+    document.getElementById('liveStopBtn').disabled   = false;
 
-    recSecs  = 0;
+    recSecs = 0;
     timerInt = setInterval(() => {
       recSecs++;
       const m = String(Math.floor(recSecs/60)).padStart(2,'0');
@@ -679,17 +673,13 @@ async function startRecording() {
 
     startSTT();
     showRecStatus('Recording... speak clearly 🎙️', 'info');
-  } catch(e) {
-    showRecStatus('Microphone denied: ' + e.message, 'error');
-  }
+  } catch(e) { showRecStatus('Microphone denied: ' + e.message, 'error'); }
 }
 
 function stopRecording() {
   if (!mediaRec) return;
-  mediaRec.stop();
-  mediaRec.stream.getTracks().forEach(t => t.stop());
-  isRecording = false;
-  clearInterval(timerInt);
+  mediaRec.stop(); mediaRec.stream.getTracks().forEach(t => t.stop());
+  isRecording = false; clearInterval(timerInt);
   document.getElementById('liveRecDot').classList.remove('active');
   document.getElementById('liveRecBtn').textContent = '● REC';
   document.getElementById('liveStopBtn').disabled   = true;
@@ -697,16 +687,8 @@ function stopRecording() {
 }
 
 function getSupportedMimeType() {
-  const types = [
-    'audio/mp4',           // iOS Safari, macOS Safari
-    'audio/webm;codecs=opus',
-    'audio/webm',
-    'audio/ogg;codecs=opus',
-    'audio/ogg',
-  ];
-  for (const t of types) {
-    if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) return t;
-  }
+  const types = ['audio/mp4','audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/ogg'];
+  for (const t of types) { if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) return t; }
   return '';
 }
 
@@ -737,7 +719,7 @@ function renderLiveRecordings() {
       <audio controls src="${rec.url}"></audio>
       ${rec.sttText ? `<span class="live-rec-stt" title="${esc(rec.sttText)}">${esc(rec.sttText)}</span>` : ''}
       <div class="live-rec-actions">
-        <button class="btn-icon dl" title="Download audio" onclick="downloadLiveRec(${i})">⬇</button>
+        <button class="btn-icon dl" title="Download" onclick="downloadLiveRec(${i})">⬇</button>
         <button class="btn-icon del" title="Delete" onclick="deleteLiveRec(${i})">✕</button>
       </div>`;
     list.appendChild(div);
@@ -746,10 +728,8 @@ function renderLiveRecordings() {
 
 function downloadLiveRec(i) {
   const rec = liveRecordings[i];
-  const a   = document.createElement('a');
-  a.href     = rec.url;
-  a.download = `practice_rec_${rec.index}_${Date.now()}.${rec.ext || 'webm'}`;
-  a.click();
+  const a = document.createElement('a');
+  a.href = rec.url; a.download = `practice_rec_${rec.index}_${Date.now()}.${rec.ext||'webm'}`; a.click();
 }
 
 function deleteLiveRec(i) {
@@ -758,88 +738,70 @@ function deleteLiveRec(i) {
   renderLiveRecordings();
 }
 
-// ── SPEECH TO TEXT ─────────────────────────────────────────────────────────
 function startSTT() {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   const el = document.getElementById('liveSttOutput');
-  if (!SR) {
-    if (el) { el.textContent = 'STT not supported — use Chrome.'; el.classList.add('has-text'); }
-    return;
-  }
+  if (!SR) { if (el) { el.textContent = 'STT not supported — use Chrome.'; el.classList.add('has-text'); } return; }
 
   speechRec = new SR();
-  speechRec.continuous     = true;
-  speechRec.interimResults = true;
-  speechRec.lang           = document.getElementById('liveSttLang')?.value || 'en-US';
+  speechRec.continuous = true; speechRec.interimResults = true;
+  speechRec.lang = document.getElementById('liveSttLang')?.value || 'en-US';
 
   let finalText = '';
-
   speechRec.onresult = e => {
     let interim = '';
     for (let i = e.resultIndex; i < e.results.length; i++) {
-      e.results[i].isFinal
-        ? (finalText += e.results[i][0].transcript + ' ')
-        : (interim  += e.results[i][0].transcript);
+      e.results[i].isFinal ? (finalText += e.results[i][0].transcript + ' ') : (interim += e.results[i][0].transcript);
     }
     currentSTT = finalText + interim;
-    if (el) {
-      el.className   = 'stt-box has-text';
-      el.textContent = currentSTT || '...listening';
-    }
+    if (el) { el.className = 'stt-box has-text'; el.textContent = currentSTT || '...listening'; }
   };
-
-  speechRec.onerror = e => {
-    if (e.error !== 'no-speech' && el) el.textContent = 'STT error: ' + e.error;
-  };
+  speechRec.onerror = e => { if (e.error !== 'no-speech' && el) el.textContent = 'STT error: ' + e.error; };
   speechRec.onend = () => { if (isRecording) { try { speechRec.start(); } catch(e){} } };
   speechRec.start();
 }
 
 // ── RENDER ─────────────────────────────────────────────────────────────────
 function renderPage(raw) {
-  const d = normalise(raw);
+  const d   = normalise(raw);
   const vid = buildVideo(d.videoUrl);
 
-  const recCount = d.recordings.length;
   const vocCount = d._vocab.length;
   const graCount = d._grammar.length;
+  const tenFilled = TENSES.filter(t => d._tenses[t.id] && d._tenses[t.id].trim()).length;
 
   document.title = `${d.id || 'Session'} — Freesize English`;
 
-  /* ---- VIDEO COLUMN ---- */
   const videoColHTML = buildVideoColHTML(vid) + `
     <div class="video-meta-card">
       <div class="session-id">${esc(d.id || '—')}</div>
       <div class="stat-row">
         <div class="stat-box"><div class="num">${vocCount}</div><div class="lbl">Vocab</div></div>
         <div class="stat-box"><div class="num">${graCount}</div><div class="lbl">Grammar</div></div>
+        <div class="stat-box"><div class="num">${tenFilled}</div><div class="lbl">Tenses</div></div>
       </div>
     </div>`;
 
-  /* ---- Transcript ---- */
   const transcriptHTML = d.transcript && d.transcript.trim()
     ? `<div class="transcript-body">${esc(d.transcript)}</div>`
     : `<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`;
 
-  /* ---- Vocab ---- */
   const vocabHTML = vocCount
     ? d._vocab.map((v, i) => `<span class="vocab-pill" style="animation-delay:${i*0.04}s">${esc(v)}</span>`).join('')
     : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
 
-  /* ---- Grammar ---- */
   const grammarHTML = graCount
     ? `<div class="grammar-list">${d._grammar.map((g, i) =>
-        `<div class="grammar-item" style="animation-delay:${i*0.05}s">${esc(g)}</div>`
-      ).join('')}</div>`
+        `<div class="grammar-item" style="animation-delay:${i*0.05}s">${esc(g)}</div>`).join('')}</div>`
     : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+
+  const tensesHTML = buildTensesHTML(d._tenses);
 
   document.getElementById('app').innerHTML = `
     <div class="page-grid">
 
       <!-- VIDEO COLUMN -->
-      <div class="video-col">
-        ${videoColHTML}
-      </div>
+      <div class="video-col">${videoColHTML}</div>
 
       <!-- CONTENT COLUMN -->
       <div class="content-col">
@@ -863,13 +825,17 @@ function renderPage(raw) {
           ${grammarHTML}
         </div>
 
-        <!-- Audio Recordings — live recorder only -->
-        <div class="card" style="animation-delay:0.19s">
+        <!-- 12 Tenses -->
+        <div class="card" style="animation-delay:0.18s">
+          <div class="card-title purple">🕐 12 Tenses — Practice Sentences</div>
+          ${tensesHTML}
+        </div>
+
+        <!-- Audio Recordings -->
+        <div class="card" style="animation-delay:0.22s">
           <div class="card-title green">🎙️ Audio Recordings</div>
 
-          <!-- ═══ LIVE RECORDER ═══ -->
-          <div class="recorder-section" style="border-top:none;padding-top:0;">
-
+          <div>
             <!-- Language select -->
             <div class="lang-row">
               <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.8rem;color:var(--muted);">STT LANGUAGE:</span>
@@ -888,7 +854,6 @@ function renderPage(raw) {
               </select>
             </div>
 
-            <!-- Recorder controls -->
             <div class="recorder-inner">
               <div class="rec-controls">
                 <div class="rec-dot" id="liveRecDot"></div>
@@ -896,21 +861,15 @@ function renderPage(raw) {
                 <button class="btn btn-red" id="liveRecBtn" onclick="toggleRecording()">● REC</button>
                 <button class="btn btn-white" id="liveStopBtn" onclick="stopRecording()" disabled>■ Stop</button>
               </div>
-              <!-- STT live output -->
               <div id="liveSttOutput" class="stt-box">Speech-to-text appears here while recording...</div>
             </div>
 
-            <!-- Status -->
             <div id="liveRecStatus" class="status-msg"></div>
 
-            <!-- Live recordings list -->
-            <div id="liveRecordingsList" class="live-recordings-list" style="margin-top:10px;">
+            <div id="liveRecordingsList" style="margin-top:10px;">
               <div style="font-family:Quicksand,sans-serif;font-size:0.85rem;color:var(--muted);padding:4px 0;">No recordings yet — hit REC to start!</div>
             </div>
-
           </div>
-          <!-- ═══ END RECORDER ═══ -->
-
         </div>
 
       </div>
@@ -936,22 +895,11 @@ function renderList(sessions) {
 }
 
 function showLoader() {
-  document.getElementById('app').innerHTML = `
-    <div class="center-wrap">
-      <div class="loader-spinner"></div>
-      <div class="loader-text">Loading...</div>
-    </div>`;
+  document.getElementById('app').innerHTML = `<div class="center-wrap"><div class="loader-spinner"></div><div class="loader-text">Loading...</div></div>`;
 }
 
 function showError(title, body) {
-  document.getElementById('app').innerHTML = `
-    <div class="center-wrap">
-      <div class="error-card">
-        <div class="emoji">😕</div>
-        <h2>${esc(title)}</h2>
-        <p>${body}</p>
-      </div>
-    </div>`;
+  document.getElementById('app').innerHTML = `<div class="center-wrap"><div class="error-card"><div class="emoji">😕</div><h2>${esc(title)}</h2><p>${body}</p></div></div>`;
 }
 
 // ── MAIN ───────────────────────────────────────────────────────────────────
@@ -964,25 +912,17 @@ async function main() {
     const json = await res.json();
 
     let sessions;
-    if (Array.isArray(json)) {
-      sessions = json;
-    } else if (typeof json === 'object' && json !== null) {
-      sessions = 'id' in json ? [json] : Object.values(json);
-    } else {
-      throw new Error('speaking-data.json must be an array or object');
-    }
+    if (Array.isArray(json)) { sessions = json; }
+    else if (typeof json === 'object' && json !== null) { sessions = 'id' in json ? [json] : Object.values(json); }
+    else { throw new Error('speaking-data.json must be an array or object'); }
 
     if (!id) { renderList(sessions); return; }
 
     const session = sessions.find(s => String(s.id) === String(id));
-    if (!session) throw new Error(`Session with id "${id}" not found in speaking-data.json`);
-
+    if (!session) throw new Error(`Session with id "${id}" not found`);
     renderPage(session);
   } catch (err) {
-    showError('Could not load session', `
-      <strong>Error:</strong> ${esc(err.message)}<br><br>
-      Make sure <code>data/speaking-data.json</code> exists and contains an entry with <code>"id": "${esc(getParam('id') || '?')}"</code>.
-    `);
+    showError('Could not load session', `<strong>Error:</strong> ${esc(err.message)}<br><br>Make sure <code>data/speaking-data.json</code> exists and contains <code>"id": "${esc(getParam('id') || '?')}"</code>.`);
   }
 }
 
