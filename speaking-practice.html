@@ -208,47 +208,49 @@ function buildVideoColHTML(vid){
 
 // ── BUILD TENSE ANNOTATION HTML ───────────────────────────────────────────
 function buildTenseHTML(tenseAnn) {
-  if (!tenseAnn || !tenseAnn.sentence || !tenseAnn.sentence.trim()) {
-    return `<div class="empty-state"><span class="emoji">📭</span>No tense annotation saved yet.</div>`;
+  if (!tenseAnn || !tenseAnn.sentence) {
+    return `<div class="empty-state"><span class="emoji">📭</span>No tense annotation.</div>`;
   }
 
-  const { sentence, annotations } = tenseAnn;
-  const anns = (annotations || []).slice().sort((a,b) => a.start - b.start);
+  let sentenceHTML = esc(tenseAnn.sentence);
 
-  // Build annotated sentence
-  let sentHtml = '', cursor = 0;
-  anns.forEach(ann => {
-    if (ann.start > cursor) sentHtml += `<span class="plain">${esc(sentence.slice(cursor, ann.start))}</span>`;
-    sentHtml += `<span class="tense-mark hl-${esc(ann.tenseId)}">${esc(sentence.slice(ann.start, ann.end))}</span>`;
-    cursor = ann.end;
-  });
-  if (cursor < sentence.length) sentHtml += `<span class="plain">${esc(sentence.slice(cursor))}</span>`;
+  // highlight theo text
+  (tenseAnn.annotations || []).forEach(ann => {
+    if (!ann.text) return;
 
-  // Build notes
-  let notesHtml = '';
-  anns.forEach((ann, i) => {
-    const t = TENSE_MAP[ann.tenseId] || {};
-    notesHtml += `
-      <div class="tense-note" style="animation-delay:${i*0.06}s">
-        <span class="tense-note-swatch" style="background:${t.color||'#888'};"></span>
-        <div class="tense-note-body">
-          <div class="tense-note-phrase hl-${esc(ann.tenseId)}" style="display:inline-block;border-radius:6px;padding:2px 8px;margin-bottom:6px;">"${esc(ann.text)}"</div>
-          <br>
-          <span class="tense-note-tag" style="background:${t.bg||'#eee'};color:${t.fg||'#333'};">${esc(ann.tenseLabel || t.label || ann.tenseId)}</span>
-        </div>
-      </div>`;
+    const safeText = ann.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // escape regex
+    const regex = new RegExp(`(${safeText})`, 'g');
+
+    sentenceHTML = sentenceHTML.replace(
+      regex,
+      `<span class="tense-mark" style="background:#fff3cd;border-bottom:3px solid #f59e0b;">
+        $1
+      </span>`
+    );
   });
+
+  // build note list
+  const notesHTML = (tenseAnn.annotations || []).map(ann => `
+    <div class="tense-note">
+      <div class="tense-note-body">
+        <div class="tense-note-phrase">"${esc(ann.text)}"</div>
+        <span class="tense-note-tag">${esc(ann.tenseLabel)}</span>
+      </div>
+    </div>
+  `).join('');
 
   return `
     <div class="tense-sentence-wrap">
-      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--purple);margin-bottom:12px;">📌 Annotated sentence</div>
-      <div class="tense-sentence-text">${sentHtml}</div>
+      <div class="tense-sentence-text">${sentenceHTML}</div>
     </div>
-    ${anns.length > 0 ? `
-      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:10px;">📝 Tense notes</div>
-      <div class="tense-notes">${notesHtml}</div>` : ''}`;
-}
 
+    ${notesHTML ? `
+      <div style="margin-top:12px">
+        ${notesHTML}
+      </div>
+    ` : ''}
+  `;
+}
 // ── LIVE RECORDER ─────────────────────────────────────────────────────────
 let liveRecs=[],mediaRec=null,audioChunks=[],isRecording=false;
 let timerInt=null,recSecs=0,speechRec=null,currentSTT='';
