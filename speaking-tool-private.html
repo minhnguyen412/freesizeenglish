@@ -7,357 +7,186 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --black:        #1a1a1a;
-  --red:          #ea3324;
-  --red-dark:     #b71c1c;
-  --red-light:    #ffd5d5;
-  --red-pale:     #fff5f5;
-  --cream:        #fffef5;
-  --white:        #ffffff;
-  --yellow:       #ffd84d;
-  --yellow-pale:  #fffbe6;
-  --sky:          #72c8f0;
-  --sky-pale:     #eaf8ff;
-  --green:        #4caf50;
-  --green-pale:   #f0fff0;
-  --green-dark:   #2e7d32;
-  --orange-pale:  #feefdb;
-  --orange:       #fa9f33;
-  --purple-pale:  #f3f0ff;
-  --purple:       #7c3aed;
-  --muted:        #888;
-  --border:       2.5px solid var(--black);
-  --border-thick: 3px solid var(--black);
-  --shadow-sm:    3px 3px 0 var(--black);
-  --shadow-md:    4px 4px 0 var(--black);
-  --shadow-lg:    6px 6px 0 var(--black);
+  --black:#1a1a1a;--red:#ea3324;--red-dark:#b71c1c;--red-light:#ffd5d5;--red-pale:#fff5f5;
+  --cream:#fffef5;--white:#ffffff;--yellow:#ffd84d;--yellow-pale:#fffbe6;
+  --sky:#72c8f0;--sky-pale:#eaf8ff;--green:#4caf50;--green-pale:#f0fff0;--green-dark:#2e7d32;
+  --purple:#7c3aed;--purple-pale:#f3f0ff;--muted:#888;
+  --border:2.5px solid var(--black);--border-thick:3px solid var(--black);
+  --shadow-sm:3px 3px 0 var(--black);--shadow-md:4px 4px 0 var(--black);--shadow-lg:6px 6px 0 var(--black);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Fredoka',sans-serif;font-weight:500;background:var(--cream);color:var(--black);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;z-index:0}
+header{background:var(--red);border-bottom:var(--border-thick);padding:0 50px;height:66px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{font-weight:700;font-size:1.65rem;color:white;letter-spacing:.05em;text-shadow:2px 2px 0 rgba(0,0,0,.25);text-decoration:none}
+.header-tag{background:var(--white);border:var(--border);border-radius:50px;padding:5px 18px;font-weight:700;font-size:.88rem;box-shadow:var(--shadow-sm)}
+.page{max-width:900px;margin:0 auto;padding:40px 32px 100px;position:relative;z-index:1;display:flex;flex-direction:column;gap:24px}
+.step-card{background:var(--white);border:var(--border-thick);border-radius:22px;box-shadow:var(--shadow-md);overflow:hidden}
+.step-head{display:flex;align-items:center;gap:14px;padding:16px 24px;border-bottom:var(--border);background:var(--cream)}
+.step-num{width:34px;height:34px;border-radius:50%;background:var(--red);color:white;border:var(--border);box-shadow:var(--shadow-sm);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0}
+.step-num.purple{background:var(--purple)}
+.step-title{font-weight:700;font-size:1.1rem;flex:1}
+.step-body{padding:22px 24px}
+input[type="text"],textarea,select{font-family:'Quicksand',sans-serif;font-weight:600;font-size:.95rem;color:var(--black);background:var(--white);border:var(--border);border-radius:12px;padding:11px 16px;outline:none;width:100%;transition:box-shadow .15s}
+input[type="text"]:focus,textarea:focus,select:focus{box-shadow:var(--shadow-sm)}
+textarea{resize:vertical;min-height:100px;line-height:1.7}
+.input-row{display:flex;gap:10px;align-items:flex-start}
+.input-row input{flex:1}
+.field-label{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.transcript-display{font-family:'Quicksand',sans-serif;font-weight:600;font-size:.95rem;line-height:1.8;color:#555;background:var(--red-pale);border:var(--border);border-radius:12px;padding:14px 18px;min-height:80px;margin-bottom:12px;white-space:pre-wrap}
+.transcript-display.empty{color:var(--muted);font-style:italic}
+.btn{font-family:'Fredoka',sans-serif;font-weight:700;font-size:1rem;padding:10px 22px;border:var(--border-thick);border-radius:50px;box-shadow:var(--shadow-sm);cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:transform .12s,box-shadow .12s;white-space:nowrap;text-decoration:none;background:var(--white);color:var(--black)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+.btn:active{transform:translate(1px,1px);box-shadow:none}
+.btn:disabled{opacity:.4;pointer-events:none}
+.btn-red{background:var(--red);color:white}
+.btn-green{background:var(--green);color:white}
+.btn-sky{background:var(--sky-pale);color:var(--black)}
+.btn-white{background:var(--white);color:var(--black)}
+.btn-export{background:var(--red);color:white;font-size:1.1rem;padding:13px 32px;box-shadow:var(--shadow-md)}
+.btn-export:hover{box-shadow:var(--shadow-lg)}
+.lang-row{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.lang-row select{width:auto;flex-shrink:0}
+.recorder-inner{background:var(--red-pale);border:var(--border);border-radius:14px;padding:18px 20px}
+.rec-controls{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.rec-dot{width:12px;height:12px;border-radius:50%;background:var(--muted);border:var(--border);flex-shrink:0;transition:background .3s}
+.rec-dot.active{background:var(--red);animation:blink 1s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.rec-timer{font-family:'Quicksand',sans-serif;font-weight:700;font-size:1.2rem;min-width:54px}
+.stt-box{font-family:'Quicksand',sans-serif;font-weight:600;font-size:.92rem;line-height:1.7;color:var(--muted);background:var(--white);border:var(--border);border-radius:10px;padding:12px 16px;min-height:56px;margin-bottom:14px;white-space:pre-wrap}
+.stt-box.has-text{color:var(--black)}
+.recordings-list{display:flex;flex-direction:column;gap:10px}
+.rec-item{background:var(--white);border:var(--border);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:12px;box-shadow:var(--shadow-sm)}
+.rec-item-num{background:var(--red);color:white;border:var(--border);border-radius:50px;padding:2px 12px;font-weight:700;font-size:.8rem;flex-shrink:0}
+.rec-item audio{flex:1;height:32px;border-radius:8px;min-width:0}
+.rec-item-stt{font-family:'Quicksand',sans-serif;font-size:.78rem;font-weight:600;color:var(--muted);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex-shrink:1}
+.rec-actions{display:flex;gap:6px;flex-shrink:0}
+.btn-icon{width:32px;height:32px;border-radius:50%;border:var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.9rem;box-shadow:var(--shadow-sm);transition:transform .1s,box-shadow .1s}
+.btn-icon:hover{transform:translate(-1px,-1px);box-shadow:var(--shadow-md)}
+.btn-icon.del{background:var(--red-pale)}
+.btn-icon.dl{background:var(--green-pale)}
+.status-msg{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.85rem;padding:9px 16px;border-radius:10px;margin-top:10px;border:var(--border);display:none}
+.status-msg.show{display:block}
+.status-msg.info{background:var(--yellow-pale);color:#7a5c00}
+.status-msg.success{background:var(--green-pale);color:var(--green-dark)}
+.status-msg.error{background:var(--red-pale);color:var(--red-dark)}
+.export-box{background:var(--yellow-pale);border:var(--border-thick);border-radius:22px;box-shadow:var(--shadow-md);padding:28px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.export-info{flex:1}
+.export-info h3{font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.export-info p{font-family:'Quicksand',sans-serif;font-size:.85rem;color:#666;font-weight:600}
+.json-preview{background:var(--black);color:#a8ff78;font-family:'Quicksand',sans-serif;font-weight:600;font-size:.78rem;border:var(--border-thick);border-radius:14px;padding:16px 18px;line-height:1.8;white-space:pre-wrap;overflow-x:auto;max-height:280px;overflow-y:auto;display:none;margin-top:16px}
+.json-preview.show{display:block}
+footer{background:var(--black);color:rgba(255,255,255,.6);padding:24px 50px;text-align:center;position:relative;z-index:1}
+footer .brand{font-weight:700;color:var(--red-light);font-size:1.2rem;margin-bottom:4px}
+footer p{font-size:.88rem}
+
+/* ── TENSE ANNOTATOR ── */
+.tense-hint{font-family:'Quicksand',sans-serif;font-size:.82rem;font-weight:600;color:#555;background:var(--yellow-pale);border:var(--border);border-radius:10px;padding:10px 14px;margin-bottom:14px;line-height:1.65}
+.tense-hint strong{font-weight:700}
+
+.annotated-wrap{background:var(--purple-pale);border:var(--border);border-radius:14px;padding:16px 18px;margin-bottom:14px;display:none;position:relative}
+.annotated-label{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--purple);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.selecting-badge{background:var(--yellow);border:var(--border);border-radius:50px;padding:1px 10px;font-size:.68rem;font-weight:700;display:none}
+.selecting-badge.show{display:inline-block}
+
+.word-token{
+  font-family:'Quicksand',sans-serif;font-weight:600;font-size:1rem;
+  display:inline;padding:2px 1px;line-height:2.2;cursor:pointer;
+  border-radius:5px;transition:background .1s;
+  position:relative;
+}
+.word-token.space-tok{cursor:default}
+.word-token:not(.space-tok):not(.tagged-tok):hover{background:rgba(124,58,237,.12)}
+.word-token.selecting-start-tok{
+  background:var(--yellow) !important;
+  border-radius:6px;
+  outline:2.5px solid #ca8a04;
+}
+.word-token.in-range-tok{
+  background:rgba(253,212,0,.38) !important;
+  border-radius:3px;
 }
 
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* tagged word — the mark inside */
+.word-token.tagged-tok{cursor:pointer}
+.word-token.tagged-tok mark{
+  border-radius:5px;padding:2px 5px;
+  font-family:'Quicksand',sans-serif;font-weight:700;font-size:.97rem;
+  cursor:pointer;
+  text-decoration:none;
+  transition:opacity .15s;
+}
+.word-token.tagged-tok mark:hover{opacity:.7}
 
-body {
-  font-family: 'Fredoka', sans-serif; font-weight: 500;
-  background: var(--cream); color: var(--black);
-  min-height: 100vh; overflow-x: hidden;
-}
+.hl-past_simple    {background:#fef9c3;border-bottom:3px solid #ca8a04;color:#78350f}
+.hl-past_cont      {background:#dbeafe;border-bottom:3px solid #3b82f6;color:#1e3a8a}
+.hl-past_perfect   {background:#dcfce7;border-bottom:3px solid #22c55e;color:#14532d}
+.hl-past_perf_cont {background:#f3e8ff;border-bottom:3px solid #a855f7;color:#581c87}
+.hl-pres_simple    {background:#fef3c7;border-bottom:3px solid #f59e0b;color:#78350f}
+.hl-pres_cont      {background:#bae6fd;border-bottom:3px solid #0ea5e9;color:#0c4a6e}
+.hl-pres_perfect   {background:#bbf7d0;border-bottom:3px solid #4ade80;color:#14532d}
+.hl-pres_perf_cont {background:#e9d5ff;border-bottom:3px solid #c084fc;color:#581c87}
+.hl-fut_simple     {background:#fed7aa;border-bottom:3px solid #f97316;color:#7c2d12}
+.hl-fut_cont       {background:#cffafe;border-bottom:3px solid #22d3ee;color:#164e63}
+.hl-fut_perfect    {background:#d9f99d;border-bottom:3px solid #84cc16;color:#365314}
+.hl-fut_perf_cont  {background:#fce7f3;border-bottom:3px solid #ec4899;color:#831843}
 
-body::before {
-  content: ''; position: fixed; inset: 0;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-  background-size: 22px 22px; pointer-events: none; z-index: 0;
+/* ── POPUP — absolute, NOT fixed ── */
+#tensePopup{
+  position:absolute;
+  z-index:500;
+  background:var(--white);
+  border:var(--border-thick);
+  border-radius:18px;
+  box-shadow:var(--shadow-lg);
+  overflow:hidden;
+  min-width:248px;
+  display:none;
 }
+@keyframes popIn{from{opacity:0;transform:scale(.93) translateY(-6px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.popup-show{animation:popIn .13s ease forwards}
+.popup-header{background:var(--purple);color:white;padding:10px 16px;font-family:'Fredoka',sans-serif;font-weight:700;font-size:.9rem;display:flex;align-items:center;gap:8px}
+.popup-selection{font-family:'Quicksand',sans-serif;font-size:.75rem;font-weight:700;background:rgba(255,255,255,.25);border-radius:6px;padding:2px 8px;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.popup-scroll{max-height:280px;overflow-y:auto;padding:6px}
+.popup-group{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:8px 10px 3px}
+.popup-item{display:flex;align-items:center;gap:8px;font-family:'Quicksand',sans-serif;font-weight:700;font-size:.84rem;padding:8px 10px;border-radius:10px;cursor:pointer;transition:background .1s;user-select:none}
+.popup-item:hover{background:var(--purple-pale)}
+.popup-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;border:1.5px solid rgba(0,0,0,.15)}
+.popup-cancel{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.78rem;color:var(--muted);text-align:center;padding:8px;border-top:2px solid rgba(0,0,0,.07);cursor:pointer;user-select:none}
+.popup-cancel:hover{color:var(--black)}
 
-/* ── HEADER ── */
-header {
-  background: var(--red); border-bottom: var(--border-thick);
-  padding: 0 50px; height: 66px;
-  display: flex; justify-content: space-between; align-items: center;
-  position: sticky; top: 0; z-index: 100;
-}
-.logo {
-  font-weight: 700; font-size: 1.65rem; color: white;
-  letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.25);
-  text-decoration: none;
-}
-.header-tag {
-  background: var(--white); border: var(--border); border-radius: 50px;
-  padding: 5px 18px; font-weight: 700; font-size: 0.88rem;
-  box-shadow: var(--shadow-sm);
-}
+/* Saved sentence cards */
+.saved-sent-card{background:var(--white);border:var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.saved-sent-head{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--purple-pale);border-bottom:2px solid rgba(124,58,237,.15)}
+.saved-sent-num{background:var(--purple);color:white;border-radius:50px;padding:1px 10px;font-family:'Quicksand',sans-serif;font-weight:700;font-size:.75rem;flex-shrink:0}
+.saved-sent-text{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.85rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--black)}
+.saved-sent-del{width:26px;height:26px;border-radius:50%;border:var(--border);background:var(--red-pale);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.7rem;flex-shrink:0}
+.saved-sent-del:hover{box-shadow:var(--shadow-sm)}
+.saved-sent-tags{display:flex;flex-wrap:wrap;gap:6px;padding:10px 14px}
+.saved-tag-pill{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.74rem;padding:3px 10px;border-radius:20px;white-space:nowrap}
 
-/* ── LAYOUT ── */
-.page {
-  max-width: 900px; margin: 0 auto;
-  padding: 40px 32px 100px;
-  position: relative; z-index: 1;
-  display: flex; flex-direction: column; gap: 24px;
-}
+/* Ann list */
+.ann-list{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.ann-row{display:flex;align-items:center;gap:10px;background:var(--white);border:var(--border);border-radius:12px;padding:8px 12px;box-shadow:var(--shadow-sm)}
+.ann-swatch{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.ann-quoted{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.84rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ann-badge{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.7rem;padding:3px 10px;border-radius:20px;flex-shrink:0;white-space:nowrap}
+.ann-x{width:24px;height:24px;border-radius:50%;border:var(--border);background:var(--red-pale);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.7rem;flex-shrink:0}
+.ann-x:hover{box-shadow:var(--shadow-sm)}
 
-/* ── STEP CARD ── */
-.step-card {
-  background: var(--white);
-  border: var(--border-thick); border-radius: 22px;
-  box-shadow: var(--shadow-md); overflow: hidden;
-}
-
-.step-head {
-  display: flex; align-items: center; gap: 14px;
-  padding: 16px 24px;
-  border-bottom: var(--border);
-  background: var(--cream);
-}
-.step-num {
-  width: 34px; height: 34px; border-radius: 50%;
-  background: var(--red); color: white;
-  border: var(--border); box-shadow: var(--shadow-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
-}
-.step-num.purple { background: var(--purple); }
-.step-title {
-  font-weight: 700; font-size: 1.1rem;
-}
-.step-body { padding: 22px 24px; }
-
-/* ── INPUTS ── */
-input[type="text"], textarea, select {
-  font-family: 'Quicksand', sans-serif; font-weight: 600;
-  font-size: 0.95rem; color: var(--black);
-  background: var(--white); border: var(--border); border-radius: 12px;
-  padding: 11px 16px; outline: none; width: 100%;
-  transition: box-shadow 0.15s, border-color 0.15s;
-}
-input[type="text"]:focus, textarea:focus, select:focus {
-  box-shadow: var(--shadow-sm);
-}
-textarea { resize: vertical; min-height: 100px; line-height: 1.7; }
-
-.input-row { display: flex; gap: 10px; align-items: flex-start; }
-.input-row input { flex: 1; }
-
-.field-label {
-  font-family: 'Quicksand', sans-serif; font-weight: 700;
-  font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 7px;
-}
-
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-/* ── TRANSCRIPT DISPLAY ── */
-.transcript-display {
-  font-family: 'Quicksand', sans-serif; font-weight: 600;
-  font-size: 0.95rem; line-height: 1.8; color: #555;
-  background: var(--red-pale); border: var(--border); border-radius: 12px;
-  padding: 14px 18px; min-height: 80px;
-  margin-bottom: 12px; white-space: pre-wrap;
-}
-.transcript-display.empty { color: var(--muted); font-style: italic; }
-
-/* ── BUTTONS ── */
-.btn {
-  font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem;
-  padding: 10px 22px; border: var(--border-thick); border-radius: 50px;
-  box-shadow: var(--shadow-sm); cursor: pointer;
-  display: inline-flex; align-items: center; gap: 8px;
-  transition: transform 0.12s, box-shadow 0.12s;
-  white-space: nowrap; text-decoration: none;
-}
-.btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-.btn:active { transform: translate(1px,1px); box-shadow: none; }
-.btn:disabled { opacity: 0.4; pointer-events: none; }
-
-.btn-red    { background: var(--red);    color: white; }
-.btn-green  { background: var(--green);  color: white; }
-.btn-yellow { background: var(--yellow); color: var(--black); }
-.btn-sky    { background: var(--sky-pale); color: var(--black); }
-.btn-white  { background: var(--white);  color: var(--black); }
-.btn-purple { background: var(--purple); color: white; }
-.btn-export { background: var(--red); color: white; font-size: 1.1rem; padding: 13px 32px; box-shadow: var(--shadow-md); }
-.btn-export:hover { box-shadow: var(--shadow-lg); }
-
-/* ── LANG SELECT ── */
-.lang-row {
-  display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;
-}
-.lang-row select { width: auto; flex-shrink: 0; }
-
-/* ── RECORDER CARD ── */
-.recorder-inner {
-  background: var(--red-pale); border: var(--border); border-radius: 14px;
-  padding: 18px 20px;
-}
-.rec-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
-.rec-dot {
-  width: 12px; height: 12px; border-radius: 50%;
-  background: var(--muted); border: var(--border); flex-shrink: 0;
-  transition: background 0.3s;
-}
-.rec-dot.active {
-  background: var(--red);
-  animation: blink 1s ease-in-out infinite;
-}
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-.rec-timer {
-  font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.2rem;
-  min-width: 54px; color: var(--black);
-}
-
-/* ── STT OUTPUT ── */
-.stt-box {
-  font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.92rem;
-  line-height: 1.7; color: var(--muted);
-  background: var(--white); border: var(--border); border-radius: 10px;
-  padding: 12px 16px; min-height: 56px; margin-bottom: 14px;
-  white-space: pre-wrap;
-}
-.stt-box.has-text { color: var(--black); }
-
-/* ── RECORDINGS LIST ── */
-.recordings-list { display: flex; flex-direction: column; gap: 10px; }
-.rec-item {
-  background: var(--white); border: var(--border); border-radius: 14px;
-  padding: 12px 16px; display: flex; align-items: center; gap: 12px;
-  box-shadow: var(--shadow-sm);
-}
-.rec-item-num {
-  background: var(--red); color: white;
-  border: var(--border); border-radius: 50px;
-  padding: 2px 12px; font-weight: 700; font-size: 0.8rem;
-  flex-shrink: 0;
-}
-.rec-item audio {
-  flex: 1; height: 32px;
-  border-radius: 8px; min-width: 0;
-}
-.rec-item-stt {
-  font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600;
-  color: var(--muted); max-width: 160px;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  flex-shrink: 1;
-}
-.rec-actions { display: flex; gap: 6px; flex-shrink: 0; }
-.btn-icon {
-  width: 32px; height: 32px; border-radius: 50%;
-  border: var(--border); background: var(--white);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; font-size: 0.9rem;
-  box-shadow: var(--shadow-sm); transition: transform 0.1s, box-shadow 0.1s;
-}
-.btn-icon:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
-.btn-icon.del { background: var(--red-pale); }
-.btn-icon.dl  { background: var(--green-pale); }
-
-/* ── STATUS ── */
-.status-msg {
-  font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.85rem;
-  padding: 9px 16px; border-radius: 10px; margin-top: 10px;
-  border: var(--border); display: none;
-}
-.status-msg.show { display: block; }
-.status-msg.info    { background: var(--yellow-pale); color: #7a5c00; }
-.status-msg.success { background: var(--green-pale);  color: var(--green-dark); }
-.status-msg.error   { background: var(--red-pale);    color: var(--red-dark); }
-
-/* ── 12 TENSES GRID ── */
-.tenses-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-.tense-slot {
-  border: var(--border); border-radius: 16px;
-  overflow: hidden; box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.12s, transform 0.12s;
-}
-.tense-slot:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-.tense-slot-head {
-  padding: 8px 14px;
-  border-bottom: var(--border);
-  display: flex; align-items: center; gap: 8px;
-}
-.tense-badge {
-  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em;
-  text-transform: uppercase; padding: 2px 8px; border-radius: 20px;
-  border: 1.5px solid currentColor; white-space: nowrap;
-}
-.tense-name {
-  font-family: 'Quicksand', sans-serif; font-weight: 700;
-  font-size: 0.8rem; line-height: 1.3; flex: 1;
-}
-.tense-slot textarea {
-  border: none; border-radius: 0;
-  font-size: 0.82rem; min-height: 72px;
-  padding: 10px 14px; resize: none;
-  background: var(--white);
-  font-family: 'Quicksand', sans-serif; font-weight: 600; line-height: 1.6;
-}
-.tense-slot textarea:focus { box-shadow: none; outline: 2px solid var(--black); outline-offset: -2px; }
-.tense-slot textarea::placeholder { color: #bbb; font-style: italic; font-size: 0.78rem; }
-
-/* Tense color groups */
-.tense-simple   .tense-slot-head { background: #fff8e1; }
-.tense-simple   .tense-badge     { color: #b45309; border-color: #b45309; background: #fef3c7; }
-.tense-simple   textarea         { background: #fffdf0; }
-
-.tense-cont     .tense-slot-head { background: #e0f2fe; }
-.tense-cont     .tense-badge     { color: #0369a1; border-color: #0369a1; background: #bae6fd; }
-.tense-cont     textarea         { background: #f0faff; }
-
-.tense-perfect  .tense-slot-head { background: #f0fdf4; }
-.tense-perfect  .tense-badge     { color: #166534; border-color: #166534; background: #bbf7d0; }
-.tense-perfect  textarea         { background: #f7fff9; }
-
-.tense-perf-cont .tense-slot-head { background: #fdf4ff; }
-.tense-perf-cont .tense-badge     { color: #7e22ce; border-color: #7e22ce; background: #e9d5ff; }
-.tense-perf-cont textarea         { background: #fdf8ff; }
-
-.tenses-legend {
-  display: flex; flex-wrap: wrap; gap: 10px;
-  margin-bottom: 18px;
-  font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 700;
-}
-.legend-dot {
-  display: flex; align-items: center; gap: 6px;
-}
-.legend-color {
-  width: 12px; height: 12px; border-radius: 3px; border: 1.5px solid rgba(0,0,0,0.15);
-}
-.tenses-section-label {
-  font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.72rem;
-  text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted);
-  margin: 16px 0 8px; display: flex; align-items: center; gap: 8px;
-}
-.tenses-section-label::after {
-  content: ''; flex: 1; height: 1.5px; background: rgba(0,0,0,0.1);
-}
-
-/* ── EXPORT ── */
-.export-box {
-  background: var(--yellow-pale); border: var(--border-thick); border-radius: 22px;
-  box-shadow: var(--shadow-md); padding: 28px 28px;
-  display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
-}
-.export-info { flex: 1; }
-.export-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
-.export-info p  { font-family: 'Quicksand', sans-serif; font-size: 0.85rem; color: #666; font-weight: 600; }
-
-.json-preview {
-  background: var(--black); color: #a8ff78;
-  font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.78rem;
-  border: var(--border-thick); border-radius: 14px;
-  padding: 16px 18px; line-height: 1.8;
-  white-space: pre-wrap; overflow-x: auto; max-height: 280px; overflow-y: auto;
-  display: none; margin-top: 16px;
-}
-.json-preview.show { display: block; }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--black); color: rgba(255,255,255,0.6);
-  padding: 24px 50px; text-align: center; position: relative; z-index: 1;
-}
-footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
-footer p { font-size: 0.88rem; }
-
-/* ── RESPONSIVE ── */
-@media (max-width: 700px) {
-  header { padding: 0 16px; }
-  .page { padding: 20px 14px 80px; }
-  .step-body { padding: 16px; }
-  .two-col { grid-template-columns: 1fr; }
-  .input-row { flex-direction: column; }
-  .export-box { flex-direction: column; }
-  .tenses-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 480px) {
-  .tenses-grid { grid-template-columns: 1fr; }
+@media(max-width:640px){
+  header{padding:0 16px}
+  .page{padding:20px 14px 80px}
+  .step-body{padding:16px}
+  .two-col{grid-template-columns:1fr}
+  .input-row{flex-direction:column}
+  .export-box{flex-direction:column}
 }
 </style>
 </head>
 <body>
-
 <header>
   <a class="logo" href="#">🔴 FREESIZE ENGLISH</a>
   <div class="header-tag">Study Capture</div>
@@ -365,12 +194,9 @@ footer p { font-size: 0.88rem; }
 
 <div class="page">
 
-  <!-- STEP 1 — VIDEO URL -->
+  <!-- STEP 1 -->
   <div class="step-card">
-    <div class="step-head">
-      <div class="step-num">1</div>
-      <div class="step-title">🎬 Video Info</div>
-    </div>
+    <div class="step-head"><div class="step-num">1</div><div class="step-title">🎬 Video Info</div></div>
     <div class="step-body">
       <div class="two-col" style="margin-bottom:14px;">
         <div>
@@ -378,26 +204,21 @@ footer p { font-size: 0.88rem; }
           <input type="text" id="sessionTitle" placeholder="e.g. Hot Honey Pork Belly">
         </div>
         <div>
-          <div class="field-label">Topic (description) *</div>
+          <div class="field-label">Topic *</div>
           <div style="display:flex;gap:8px;">
             <select id="sessionTopic" style="flex:1;">
               <option value="">— Select topic —</option>
-              <option value="FOOD">🍜 FOOD</option>
-              <option value="HEALTH">💪 HEALTH</option>
-              <option value="TRAVEL">✈️ TRAVEL</option>
-              <option value="TECH">💻 TECH</option>
-              <option value="LIFESTYLE">🌿 LIFESTYLE</option>
-              <option value="BUSINESS">📈 BUSINESS</option>
-              <option value="SCIENCE">🔬 SCIENCE</option>
-              <option value="CULTURE">🎭 CULTURE</option>
-              <option value="SPORT">⚽ SPORT</option>
-              <option value="OTHER">📌 OTHER</option>
+              <option value="FOOD">🍜 FOOD</option><option value="HEALTH">💪 HEALTH</option>
+              <option value="TRAVEL">✈️ TRAVEL</option><option value="TECH">💻 TECH</option>
+              <option value="LIFESTYLE">🌿 LIFESTYLE</option><option value="BUSINESS">📈 BUSINESS</option>
+              <option value="SCIENCE">🔬 SCIENCE</option><option value="CULTURE">🎭 CULTURE</option>
+              <option value="SPORT">⚽ SPORT</option><option value="OTHER">📌 OTHER</option>
             </select>
             <input type="text" id="sessionTopicCustom" placeholder="or type custom..." style="flex:1;">
           </div>
         </div>
       </div>
-      <div class="field-label">YouTube / TikTok / Douyin URL</div>
+      <div class="field-label">YouTube / TikTok URL</div>
       <div class="input-row">
         <input type="text" id="videoUrl" placeholder="Paste video URL here...">
         <button class="btn btn-red" onclick="fetchTranscript()">⚡ Fetch</button>
@@ -406,31 +227,23 @@ footer p { font-size: 0.88rem; }
     </div>
   </div>
 
-  <!-- STEP 2 — TRANSCRIPT -->
+  <!-- STEP 2 -->
   <div class="step-card">
-    <div class="step-head">
-      <div class="step-num">2</div>
-      <div class="step-title">📝 Transcript</div>
-    </div>
+    <div class="step-head"><div class="step-num">2</div><div class="step-title">📝 Transcript</div></div>
     <div class="step-body">
-      <div id="transcriptDisplay" class="transcript-display empty">
-        Transcript will appear here — or paste manually below ↓
-      </div>
+      <div id="transcriptDisplay" class="transcript-display empty">Transcript will appear here — or paste manually below ↓</div>
       <div class="field-label">Paste manually (TikTok / Douyin)</div>
       <textarea id="transcriptManual" placeholder="Paste transcript here..."></textarea>
     </div>
   </div>
 
-  <!-- STEP 3 — VOCAB & GRAMMAR -->
+  <!-- STEP 3 -->
   <div class="step-card">
-    <div class="step-head">
-      <div class="step-num">3</div>
-      <div class="step-title">📚 Vocabulary & Grammar</div>
-    </div>
+    <div class="step-head"><div class="step-num">3</div><div class="step-title">📚 Vocabulary & Grammar</div></div>
     <div class="step-body">
       <div class="two-col">
         <div>
-          <div class="field-label">Vocabulary — words you caught</div>
+          <div class="field-label">Vocabulary</div>
           <textarea id="vocabulary" placeholder="e.g. pork belly, crisp up, brush onto..." style="min-height:120px;"></textarea>
         </div>
         <div>
@@ -441,136 +254,65 @@ footer p { font-size: 0.88rem; }
     </div>
   </div>
 
-  <!-- STEP 4 — 12 TENSES -->
+  <!-- STEP 4 — TENSE ANNOTATOR -->
   <div class="step-card">
     <div class="step-head">
-      <div class="step-num" style="background:var(--purple);">4</div>
-      <div class="step-title">🕐 12 Tenses — Practice Sentences</div>
-      <button class="btn btn-white" style="margin-left:auto;font-size:0.8rem;padding:6px 14px;" onclick="clearAllTenses()">🗑 Clear all</button>
+      <div class="step-num purple">4</div>
+      <div class="step-title">🕐 Tense Annotation</div>
+      <button class="btn btn-white" style="margin-left:auto;font-size:.8rem;padding:6px 14px;" onclick="clearTenses()">🗑 Clear</button>
     </div>
     <div class="step-body">
-      <p style="font-family:'Quicksand',sans-serif;font-size:0.85rem;font-weight:600;color:var(--muted);margin-bottom:16px;">
-        Nhập câu ví dụ từ video cho từng thì — giúp ghi nhớ ngữ cảnh thực tế 🎯
-      </p>
-
-      <div class="tenses-legend">
-        <div class="legend-dot"><div class="legend-color" style="background:#fef3c7;border-color:#b45309;"></div><span>Simple</span></div>
-        <div class="legend-dot"><div class="legend-color" style="background:#bae6fd;border-color:#0369a1;"></div><span>Continuous</span></div>
-        <div class="legend-dot"><div class="legend-color" style="background:#bbf7d0;border-color:#166534;"></div><span>Perfect</span></div>
-        <div class="legend-dot"><div class="legend-color" style="background:#e9d5ff;border-color:#7e22ce;"></div><span>Perfect Continuous</span></div>
+      <div class="tense-hint">
+        💡 Nhập câu → <strong>click từ đầu</strong> (vàng) → <strong>click từ cuối</strong> → chọn thì → <strong>✚ Lưu câu</strong> để thêm câu mới.
+        <span style="opacity:.7;font-size:.77rem;display:block;margin-top:3px;">Click vào từ đã tag để xoá tag đó. ESC để huỷ chọn.</span>
       </div>
 
-      <!-- PAST group -->
-      <div class="tenses-section-label">⬅ PAST</div>
-      <div class="tenses-grid" style="margin-bottom:4px;">
-        <div class="tense-slot tense-simple">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Simple</span>
-            <span class="tense-name">Past Simple</span>
-          </div>
-          <textarea id="tense_past_simple" placeholder="e.g. I added salt and stirred for 2 minutes."></textarea>
+      <div class="field-label">Nhập câu</div>
+      <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;">
+        <textarea id="sentenceRaw"
+          style="font-family:'Quicksand',sans-serif;font-weight:600;font-size:.97rem;color:var(--black);background:var(--white);border:var(--border);border-radius:12px;padding:12px 16px;flex:1;min-height:68px;resize:vertical;line-height:1.75;outline:none;"
+          placeholder="e.g. While the oil was heating, I had already chopped the garlic..."
+          rows="2" oninput="onSentenceInput()"></textarea>
+        <button class="btn btn-green" onclick="saveSentence()" id="btnSaveSentence" disabled
+          style="flex-shrink:0;align-self:flex-end;">✚ Lưu câu</button>
+      </div>
+
+      <!-- popup lives INSIDE annotated-wrap so position:absolute works -->
+      <div class="annotated-wrap" id="annotatedWrap">
+        <div class="annotated-label">
+          📌 Click từ để chọn range
+          <span class="selecting-badge" id="selectingBadge">🟡 Đang chọn từ đầu…</span>
         </div>
-        <div class="tense-slot tense-cont">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Continuous</span>
-            <span class="tense-name">Past Continuous</span>
+        <div id="wordDisplay" style="line-height:2.4;padding:4px 0;word-break:break-word;"></div>
+
+        <!-- POPUP inside the relative-positioned wrap -->
+        <div id="tensePopup">
+          <div class="popup-header">
+            <span>Tag thì cho:</span>
+            <span class="popup-selection" id="popupSelectionText"></span>
           </div>
-          <textarea id="tense_past_cont" placeholder="e.g. While the oil was heating, I chopped the garlic."></textarea>
-        </div>
-        <div class="tense-slot tense-perfect">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Perfect</span>
-            <span class="tense-name">Past Perfect</span>
-          </div>
-          <textarea id="tense_past_perfect" placeholder="e.g. By the time it was done, I had already prepped everything."></textarea>
-        </div>
-        <div class="tense-slot tense-perf-cont" style="grid-column: 1 / -1; max-width: calc(33.33% - 4px);">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Perf. Cont.</span>
-            <span class="tense-name">Past Perfect Continuous</span>
-          </div>
-          <textarea id="tense_past_perf_cont" placeholder="e.g. The pork had been marinating for 3 hours before we cooked it."></textarea>
+          <div class="popup-scroll" id="popupScroll"></div>
+          <div class="popup-cancel" id="popupCancel">✕ Huỷ</div>
         </div>
       </div>
 
-      <!-- PRESENT group -->
-      <div class="tenses-section-label">● PRESENT</div>
-      <div class="tenses-grid" style="margin-bottom:4px;">
-        <div class="tense-slot tense-simple">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Simple</span>
-            <span class="tense-name">Present Simple</span>
-          </div>
-          <textarea id="tense_pres_simple" placeholder="e.g. You always score the skin before roasting."></textarea>
-        </div>
-        <div class="tense-slot tense-cont">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Continuous</span>
-            <span class="tense-name">Present Continuous</span>
-          </div>
-          <textarea id="tense_pres_cont" placeholder="e.g. We're gonna let this rest for about five minutes."></textarea>
-        </div>
-        <div class="tense-slot tense-perfect">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Perfect</span>
-            <span class="tense-name">Present Perfect</span>
-          </div>
-          <textarea id="tense_pres_perfect" placeholder="e.g. I've never tried honey glaze on pork before."></textarea>
-        </div>
-        <div class="tense-slot tense-perf-cont" style="grid-column: 1 / -1; max-width: calc(33.33% - 4px);">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Perf. Cont.</span>
-            <span class="tense-name">Present Perfect Continuous</span>
-          </div>
-          <textarea id="tense_pres_perf_cont" placeholder="e.g. I've been cooking this dish for about 20 minutes now."></textarea>
-        </div>
-      </div>
+      <!-- current working annotations (before saving) -->
+      <div class="ann-list" id="annList"></div>
 
-      <!-- FUTURE group -->
-      <div class="tenses-section-label">➡ FUTURE</div>
-      <div class="tenses-grid">
-        <div class="tense-slot tense-simple">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Simple</span>
-            <span class="tense-name">Future Simple</span>
-          </div>
-          <textarea id="tense_fut_simple" placeholder="e.g. It will get crispy on top in the oven."></textarea>
-        </div>
-        <div class="tense-slot tense-cont">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Continuous</span>
-            <span class="tense-name">Future Continuous</span>
-          </div>
-          <textarea id="tense_fut_cont" placeholder="e.g. By 6pm we'll be eating this amazing dish."></textarea>
-        </div>
-        <div class="tense-slot tense-perfect">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Perfect</span>
-            <span class="tense-name">Future Perfect</span>
-          </div>
-          <textarea id="tense_fut_perfect" placeholder="e.g. By tonight, I will have made this three times."></textarea>
-        </div>
-        <div class="tense-slot tense-perf-cont" style="grid-column: 1 / -1; max-width: calc(33.33% - 4px);">
-          <div class="tense-slot-head">
-            <span class="tense-badge">Perf. Cont.</span>
-            <span class="tense-name">Future Perfect Continuous</span>
-          </div>
-          <textarea id="tense_fut_perf_cont" placeholder="e.g. By the time it's done, the sauce will have been reducing for 30 minutes."></textarea>
-        </div>
+      <!-- saved sentences list -->
+      <div id="savedSentencesWrap" style="display:none;margin-top:18px;">
+        <div class="field-label" style="margin-bottom:10px;">📋 Các câu đã lưu <span id="savedCount" style="background:var(--purple);color:white;border-radius:50px;padding:1px 9px;font-size:.72rem;margin-left:4px;">0</span></div>
+        <div id="savedSentencesList" style="display:flex;flex-direction:column;gap:10px;"></div>
       </div>
-
     </div>
   </div>
 
   <!-- STEP 5 — RECORDING -->
   <div class="step-card">
-    <div class="step-head">
-      <div class="step-num">5</div>
-      <div class="step-title">🎙️ Audio Recording</div>
-    </div>
+    <div class="step-head"><div class="step-num">5</div><div class="step-title">🎙️ Audio Recording</div></div>
     <div class="step-body">
       <div class="lang-row">
-        <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.82rem;color:var(--muted);">STT LANGUAGE:</span>
+        <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:.82rem;color:var(--muted);">STT LANGUAGE:</span>
         <select id="sttLang">
           <option value="en-US" selected>🇺🇸 English (US)</option>
           <option value="en-GB">🇬🇧 English (UK)</option>
@@ -585,7 +327,6 @@ footer p { font-size: 0.88rem; }
           <option value="de-DE">🇩🇪 German</option>
         </select>
       </div>
-
       <div class="recorder-inner">
         <div class="rec-controls">
           <div class="rec-dot" id="recDot"></div>
@@ -596,40 +337,29 @@ footer p { font-size: 0.88rem; }
         <div id="sttOutput" class="stt-box">Speech-to-text appears here while recording...</div>
         <div id="recStatus" class="status-msg"></div>
       </div>
-
       <div id="recordingsList" class="recordings-list" style="margin-top:14px;"></div>
     </div>
   </div>
 
-  <!-- STEP 6 — GITHUB CONFIG -->
+  <!-- STEP 6 — GITHUB -->
   <div class="step-card">
     <div class="step-head">
       <div class="step-num">6</div>
       <div class="step-title">🔑 GitHub Config</div>
-      <button class="btn btn-white" style="margin-left:auto;font-size:0.8rem;padding:6px 14px;" onclick="toggleGhConfig()">⚙ Config</button>
+      <button class="btn btn-white" style="margin-left:auto;font-size:.8rem;padding:6px 14px;" onclick="toggleGhConfig()">⚙ Config</button>
     </div>
     <div class="step-body" id="ghConfigBody" style="display:none;">
       <div style="background:var(--yellow-pale);border:var(--border);border-radius:12px;padding:14px 16px;margin-bottom:16px;">
-        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.85rem;margin-bottom:8px;">🔐 Cách lấy Token:</div>
-        <div style="font-family:'Quicksand',sans-serif;font-size:0.82rem;line-height:1.7;color:#555;">
-          GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)<br>
-          → Generate new token → tick <strong>repo</strong> → Copy token
+        <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:.85rem;margin-bottom:8px;">🔐 Cách lấy Token:</div>
+        <div style="font-family:'Quicksand',sans-serif;font-size:.82rem;line-height:1.7;color:#555;">
+          GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token → tick <strong>repo</strong> → Copy token
         </div>
       </div>
       <div class="two-col" style="gap:12px;">
-        <div>
-          <div class="field-label">GitHub Username</div>
-          <input type="text" id="ghUser" placeholder="e.g. freesizeenglish">
-        </div>
-        <div>
-          <div class="field-label">Repository Name</div>
-          <input type="text" id="ghRepo" placeholder="e.g. freesizeenglish.github.io">
-        </div>
+        <div><div class="field-label">GitHub Username</div><input type="text" id="ghUser" placeholder="e.g. freesizeenglish"></div>
+        <div><div class="field-label">Repository Name</div><input type="text" id="ghRepo" placeholder="e.g. freesizeenglish.github.io"></div>
       </div>
-      <div style="margin-top:12px;">
-        <div class="field-label">Personal Access Token</div>
-        <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
-      </div>
+      <div style="margin-top:12px;"><div class="field-label">Personal Access Token</div><input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"></div>
       <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
         <button class="btn btn-green" onclick="saveGhConfig()">💾 Save Config</button>
         <button class="btn btn-white" onclick="testGhConnection()">🔌 Test Connection</button>
@@ -637,27 +367,25 @@ footer p { font-size: 0.88rem; }
       <div id="ghConfigStatus" class="status-msg"></div>
     </div>
     <div id="ghConfigSummary" style="padding:0 24px 16px;display:none;">
-      <div style="font-family:'Quicksand',sans-serif;font-size:0.85rem;font-weight:600;color:var(--muted);">
+      <div style="font-family:'Quicksand',sans-serif;font-size:.85rem;font-weight:600;color:var(--muted);">
         Connected: <span id="ghSummaryText" style="color:var(--green-dark);font-weight:700;"></span>
       </div>
     </div>
   </div>
 
-  <!-- STEP 7 — PUSH TO GITHUB -->
+  <!-- PUSH -->
   <div class="export-box">
     <div class="export-info">
       <h3>🚀 Push to GitHub</h3>
-      <p>Push 2 files cùng lúc: <code style="background:var(--red-pale);padding:1px 7px;border-radius:6px;font-size:0.82rem;">data/speaking-data.json</code> + <code style="background:var(--sky-pale);padding:1px 7px;border-radius:6px;font-size:0.82rem;">data/speaking-thumb.json</code> — ID tự tăng, tự sync.</p>
+      <p>Push 2 files: <code style="background:var(--red-pale);padding:1px 7px;border-radius:6px;font-size:.82rem;">data/speaking-data.json</code> + <code style="background:var(--sky-pale);padding:1px 7px;border-radius:6px;font-size:.82rem;">data/speaking-thumb.json</code></p>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
       <button class="btn btn-sky" onclick="previewJSON()">👁 Preview</button>
       <button class="btn btn-export" onclick="pushToGitHub()">🚀 Push to GitHub</button>
     </div>
   </div>
-
   <div id="jsonPreview" class="json-preview"></div>
   <div id="exportStatus" class="status-msg"></div>
-
 </div>
 
 <footer>
@@ -666,415 +394,501 @@ footer p { font-size: 0.88rem; }
 </footer>
 
 <script>
-// ── TENSE IDS ──────────────────────────────────────────────────────────────
-const TENSE_IDS = [
-  'past_simple','past_cont','past_perfect','past_perf_cont',
-  'pres_simple','pres_cont','pres_perfect','pres_perf_cont',
-  'fut_simple','fut_cont','fut_perfect','fut_perf_cont',
+// ── TENSE DEFINITIONS ──────────────────────────────────────────────────────
+const TENSES = [
+  {id:'past_simple',     label:'Past Simple',                group:'PAST',    color:'#ca8a04'},
+  {id:'past_cont',       label:'Past Continuous',            group:'PAST',    color:'#3b82f6'},
+  {id:'past_perfect',    label:'Past Perfect',               group:'PAST',    color:'#22c55e'},
+  {id:'past_perf_cont',  label:'Past Perfect Continuous',    group:'PAST',    color:'#a855f7'},
+  {id:'pres_simple',     label:'Present Simple',             group:'PRESENT', color:'#f59e0b'},
+  {id:'pres_cont',       label:'Present Continuous',         group:'PRESENT', color:'#0ea5e9'},
+  {id:'pres_perfect',    label:'Present Perfect',            group:'PRESENT', color:'#4ade80'},
+  {id:'pres_perf_cont',  label:'Present Perfect Continuous', group:'PRESENT', color:'#c084fc'},
+  {id:'fut_simple',      label:'Future Simple',              group:'FUTURE',  color:'#f97316'},
+  {id:'fut_cont',        label:'Future Continuous',          group:'FUTURE',  color:'#22d3ee'},
+  {id:'fut_perfect',     label:'Future Perfect',             group:'FUTURE',  color:'#84cc16'},
+  {id:'fut_perf_cont',   label:'Future Perfect Continuous',  group:'FUTURE',  color:'#ec4899'},
 ];
+const TENSE_MAP = Object.fromEntries(TENSES.map(t => [t.id, t]));
 
-function clearAllTenses() {
-  TENSE_IDS.forEach(id => {
-    const el = document.getElementById('tense_' + id);
-    if (el) el.value = '';
+// Build popup items ONCE
+(function buildPopup() {
+  const scroll = document.getElementById('popupScroll');
+  let lastGroup = '';
+  TENSES.forEach(t => {
+    if (t.group !== lastGroup) {
+      const g = document.createElement('div');
+      g.className = 'popup-group';
+      g.textContent = t.group;
+      scroll.appendChild(g);
+      lastGroup = t.group;
+    }
+    const item = document.createElement('div');
+    item.className = 'popup-item';
+    item.dataset.tenseId = t.id;
+    item.innerHTML = `<span class="popup-dot" style="background:${t.color}"></span><span>${t.label}</span>`;
+    item.addEventListener('mousedown', e => {
+      e.preventDefault(); // prevent blur/losing context
+      e.stopPropagation();
+      applyTense(t.id);
+    });
+    scroll.appendChild(item);
   });
-}
+})();
 
-function getTensesData() {
-  const obj = {};
-  TENSE_IDS.forEach(id => {
-    const el = document.getElementById('tense_' + id);
-    obj[id] = el ? el.value.trim() : '';
+document.getElementById('popupCancel').addEventListener('mousedown', e => {
+  e.preventDefault();
+  e.stopPropagation();
+  cancelSelection();
+});
+
+// ── STATE ──
+let tokens         = [];
+let annotations    = [];
+let selectStart    = null;
+let savedSentences = []; // [{sentence, annotations:[{text,startWordIdx,endWordIdx,tenseId,tenseLabel}]}]
+
+// ── TOKENIZE ──
+function tokenize(sentence) {
+  const parts = sentence.split(/(\s+)/);
+  const result = [];
+  let wordIdx = 0;
+  parts.forEach(p => {
+    if (/^\s+$/.test(p)) {
+      result.push({ word: p, isSpace: true, index: null });
+    } else if (p.length) {
+      result.push({ word: p, isSpace: false, index: wordIdx++ });
+    }
   });
-  return obj;
+  return result;
 }
 
-// ── STATE ──────────────────────────────────────────────────────────────────
-let recordings   = [];
-let mediaRec     = null;
-let audioChunks  = [];
-let isRecording  = false;
-let timerInt     = null;
-let recSecs      = 0;
-let speechRec    = null;
-let currentSTT   = '';
-
-// ── TRANSCRIPT FETCH ───────────────────────────────────────────────────────
-async function fetchTranscript() {
-  const url = document.getElementById('videoUrl').value.trim();
-  if (!url) return showStatus('urlStatus', 'Paste a video URL first!', 'error');
-
-  const display = document.getElementById('transcriptDisplay');
-  display.className = 'transcript-display empty';
-  display.textContent = 'Fetching...';
-  showStatus('urlStatus', 'Detecting platform...', 'info');
-
-  const isYT = url.includes('youtube.com') || url.includes('youtu.be');
-  if (!isYT) {
-    display.className = 'transcript-display empty';
-    display.textContent = 'TikTok / Douyin detected — auto-fetch unavailable due to platform restrictions. Paste transcript manually below ↓';
-    showStatus('urlStatus', 'Link saved. Paste transcript manually ↓', 'info');
-    return;
+// ── SENTENCE INPUT ──
+function onSentenceInput() {
+  annotations = [];
+  selectStart = null;
+  const val = document.getElementById('sentenceRaw').value;
+  const wrap = document.getElementById('annotatedWrap');
+  if (val.trim()) {
+    tokens = tokenize(val);
+    wrap.style.display = 'block';
+    renderWords();
+    document.getElementById('btnSaveSentence').disabled = false;
+  } else {
+    tokens = [];
+    wrap.style.display = 'none';
+    document.getElementById('wordDisplay').innerHTML = '';
+    document.getElementById('btnSaveSentence').disabled = true;
   }
-
-  let videoId = null;
-  for (const p of [/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/, /youtube\.com\/embed\/([^&\n?]+)/]) {
-    const m = url.match(p);
-    if (m) { videoId = m[1]; break; }
-  }
-  if (!videoId) { showStatus('urlStatus', 'Invalid YouTube URL', 'error'); return; }
-
-  try {
-    const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`;
-    const res  = await fetch(proxyUrl);
-    const html = await res.text();
-    const match = html.match(/"captionTracks":(\[.*?\])/);
-    if (!match) throw new Error('No captions found');
-
-    const tracks = JSON.parse(match[1]);
-    const track  = tracks.find(t => !t.kind) || tracks[0];
-    const capRes = await fetch(`https://corsproxy.io/?${encodeURIComponent(track.baseUrl)}`);
-    const xml    = await capRes.text();
-    const doc    = new DOMParser().parseFromString(xml, 'text/xml');
-    const texts  = doc.querySelectorAll('text');
-
-    const transcript = Array.from(texts).map(t =>
-      t.textContent.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#39;/g,"'").replace(/&quot;/g,'"')
-    ).join(' ');
-
-    display.className = 'transcript-display';
-    display.textContent = transcript;
-    document.getElementById('transcriptManual').value = transcript;
-    showStatus('urlStatus', `✓ Loaded (${texts.length} segments)`, 'success');
-  } catch(e) {
-    display.className = 'transcript-display empty';
-    display.textContent = 'Auto-fetch failed — paste manually below.';
-    showStatus('urlStatus', 'Auto-fetch failed', 'error');
-  }
+  renderAnnList();
+  updateBadge();
+  hidePopup();
 }
 
-// ── RECORDING ──────────────────────────────────────────────────────────────
-async function toggleRecording() {
-  isRecording ? stopRecording() : await startRecording();
+// ── SAVE SENTENCE ──
+function saveSentence() {
+  const sentence = document.getElementById('sentenceRaw').value.trim();
+  if (!sentence) return;
+  savedSentences.push({
+    sentence,
+    annotations: annotations.map(a => ({
+      text:         a.text,
+      tenseId:      a.tenseId,
+      tenseLabel:   TENSE_MAP[a.tenseId]?.label || a.tenseId
+    }))
+  });
+  // Reset working area
+  document.getElementById('sentenceRaw').value = '';
+  annotations = [];
+  selectStart = null;
+  tokens = [];
+  document.getElementById('annotatedWrap').style.display = 'none';
+  document.getElementById('wordDisplay').innerHTML = '';
+  document.getElementById('btnSaveSentence').disabled = true;
+  renderAnnList();
+  updateBadge();
+  hidePopup();
+  renderSavedSentences();
 }
 
-async function startRecording() {
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    mediaRec     = new MediaRecorder(stream);
-    audioChunks  = [];
-    currentSTT   = '';
-
-    mediaRec.ondataavailable = e => audioChunks.push(e.data);
-    mediaRec.onstop = saveRecording;
-    mediaRec.start();
-    isRecording = true;
-
-    document.getElementById('recDot').classList.add('active');
-    document.getElementById('btnRec').textContent  = '⏸ Pause';
-    document.getElementById('btnStop').disabled    = false;
-
-    recSecs  = 0;
-    timerInt = setInterval(() => {
-      recSecs++;
-      const m = String(Math.floor(recSecs/60)).padStart(2,'0');
-      const s = String(recSecs%60).padStart(2,'0');
-      document.getElementById('recTimer').textContent = `${m}:${s}`;
-    }, 1000);
-
-    startSTT();
-    showStatus('recStatus', 'Recording... speak clearly 🎙️', 'info');
-  } catch(e) {
-    showStatus('recStatus', 'Microphone denied: ' + e.message, 'error');
-  }
-}
-
-function stopRecording() {
-  if (!mediaRec) return;
-  mediaRec.stop();
-  mediaRec.stream.getTracks().forEach(t => t.stop());
-  isRecording = false;
-  clearInterval(timerInt);
-  document.getElementById('recDot').classList.remove('active');
-  document.getElementById('btnRec').textContent = '● REC';
-  document.getElementById('btnStop').disabled   = true;
-  if (speechRec) { speechRec.stop(); speechRec = null; }
-}
-
-function saveRecording() {
-  const blob     = new Blob(audioChunks, { type: 'audio/webm' });
-  const url      = URL.createObjectURL(blob);
-  const idx      = recordings.length + 1;
-  const filename = `recordings/rec_${Date.now()}.webm`;
-  recordings.push({ index: idx, blob, url, sttText: currentSTT.trim(), timestamp: new Date().toISOString(), filename });
-  renderRecordings();
-  showStatus('recStatus', `✓ Recording #${idx} saved`, 'success');
-}
-
-function renderRecordings() {
-  const list = document.getElementById('recordingsList');
+// ── RENDER SAVED SENTENCES ──
+function renderSavedSentences() {
+  const wrap = document.getElementById('savedSentencesWrap');
+  const list = document.getElementById('savedSentencesList');
+  const count = document.getElementById('savedCount');
+  count.textContent = savedSentences.length;
+  if (savedSentences.length === 0) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'block';
   list.innerHTML = '';
-  recordings.forEach((rec, i) => {
+  savedSentences.forEach((s, i) => {
+    const card = document.createElement('div');
+    card.className = 'saved-sent-card';
+    const tagsHtml = s.annotations.length
+      ? s.annotations.map(a => {
+          const t = TENSE_MAP[a.tenseId];
+          return `<span class="saved-tag-pill hl-${a.tenseId}">"${escH(a.text)}" — ${t ? t.label : a.tenseId}</span>`;
+        }).join('')
+      : `<span style="font-family:'Quicksand',sans-serif;font-size:.78rem;color:var(--muted);font-weight:600;">Chưa tag thì nào</span>`;
+    card.innerHTML = `
+      <div class="saved-sent-head">
+        <span class="saved-sent-num">Câu ${i + 1}</span>
+        <span class="saved-sent-text" title="${escH(s.sentence)}">${escH(s.sentence)}</span>
+        <div class="saved-sent-del" onclick="deleteSavedSentence(${i})" title="Xoá câu này">✕</div>
+      </div>
+      <div class="saved-sent-tags">${tagsHtml}</div>`;
+    list.appendChild(card);
+  });
+}
+
+function deleteSavedSentence(i) {
+  savedSentences.splice(i, 1);
+  renderSavedSentences();
+}
+
+// ── RENDER WORDS ──
+function renderWords() {
+  const container = document.getElementById('wordDisplay');
+  container.innerHTML = '';
+
+  tokens.forEach(tok => {
+    const span = document.createElement('span');
+
+    if (tok.isSpace) {
+      span.className = 'word-token space-tok';
+      span.textContent = tok.word;
+    } else {
+      span.dataset.widx = tok.index;
+      const ann = getAnnotationAt(tok.index);
+
+      if (ann) {
+        span.className = 'word-token tagged-tok';
+        const t = TENSE_MAP[ann.tenseId];
+        const mark = document.createElement('mark');
+        mark.className = 'hl-' + ann.tenseId;
+        mark.title = t ? t.label : '';
+        mark.textContent = tok.word;
+        span.appendChild(mark);
+        // clicking tagged word removes its annotation
+        span.addEventListener('click', e => {
+          e.stopPropagation();
+          removeAnnotation(ann);
+        });
+      } else {
+        span.className = 'word-token';
+        span.textContent = tok.word;
+
+        // visual range highlight
+        if (selectStart !== null) {
+          if (tok.index === selectStart) {
+            span.classList.add('selecting-start-tok');
+          } else if (tok.index > selectStart) {
+            span.classList.add('in-range-tok');
+          }
+        }
+
+        span.addEventListener('click', e => {
+          e.stopPropagation();
+          handleWordClick(tok.index, span);
+        });
+      }
+    }
+    container.appendChild(span);
+  });
+}
+
+// ── WORD CLICK ──
+function handleWordClick(widx, spanEl) {
+  if (selectStart === null) {
+    // First click: set start
+    selectStart = widx;
+    renderWords();
+    updateBadge();
+  } else {
+    // Second click: open popup
+    const start = Math.min(selectStart, widx);
+    const end   = Math.max(selectStart, widx);
+    const text  = getTextRange(start, end);
+    if (!text.trim()) { cancelSelection(); return; }
+    openPopup(spanEl, text, start, end);
+  }
+}
+
+function getAnnotationAt(widx) {
+  return annotations.find(a => widx >= a.startIdx && widx <= a.endIdx) || null;
+}
+
+function getTextRange(s, e) {
+  return tokens
+    .filter(t => !t.isSpace && t.index >= s && t.index <= e)
+    .map(t => t.word).join(' ');
+}
+
+// ── POPUP (absolute position inside .annotated-wrap) ──
+let _pending = null;
+
+function openPopup(anchorSpan, text, startIdx, endIdx) {
+  _pending = { startIdx, endIdx, text };
+
+  const popup = document.getElementById('tensePopup');
+  document.getElementById('popupSelectionText').textContent =
+    '"' + text.substring(0, 26) + (text.length > 26 ? '…' : '') + '"';
+
+  // Position relative to annotated-wrap
+  const wrap    = document.getElementById('annotatedWrap');
+  const wRect   = wrap.getBoundingClientRect();
+  const aRect   = anchorSpan.getBoundingClientRect();
+
+  // Show first so we get popup dimensions
+  popup.style.display = 'block';
+  popup.style.left = '0px';
+  popup.style.top  = '0px';
+  popup.classList.remove('popup-show');
+  void popup.offsetWidth; // force reflow
+  popup.classList.add('popup-show');
+
+  const pw = popup.offsetWidth;
+  const ph = popup.offsetHeight;
+
+  let left = aRect.left - wRect.left;
+  let top  = aRect.bottom - wRect.top + 8;
+
+  // keep inside wrap horizontally
+  if (left + pw > wRect.width - 4) left = wRect.width - pw - 4;
+  if (left < 0) left = 0;
+
+  // flip above if not enough room below (relative to viewport)
+  if (aRect.bottom + ph + 8 > window.innerHeight - 8) {
+    top = aRect.top - wRect.top - ph - 8;
+  }
+
+  popup.style.left = left + 'px';
+  popup.style.top  = top  + 'px';
+}
+
+function hidePopup() {
+  document.getElementById('tensePopup').style.display = 'none';
+  document.getElementById('tensePopup').classList.remove('popup-show');
+}
+
+function cancelSelection() {
+  hidePopup();
+  _pending    = null;
+  selectStart = null;
+  renderWords();
+  updateBadge();
+}
+
+// ── APPLY TENSE ──
+function applyTense(tenseId) {
+  if (!_pending) return;
+  const { startIdx, endIdx, text } = _pending;
+  // remove overlapping
+  annotations = annotations.filter(a => !(a.startIdx <= endIdx && a.endIdx >= startIdx));
+  annotations.push({ startIdx, endIdx, text, tenseId });
+  annotations.sort((a, b) => a.startIdx - b.startIdx);
+
+  _pending    = null;
+  selectStart = null;
+  hidePopup();
+  renderWords();
+  renderAnnList();
+  updateBadge();
+}
+
+// ── REMOVE ──
+function removeAnnotation(ann) {
+  annotations = annotations.filter(a => a !== ann);
+  renderWords();
+  renderAnnList();
+}
+
+function removeAnnByIdx(i) {
+  annotations.splice(i, 1);
+  renderWords();
+  renderAnnList();
+}
+
+// ── BADGE ──
+function updateBadge() {
+  const b = document.getElementById('selectingBadge');
+  if (selectStart !== null) {
+    const tok = tokens.find(t => !t.isSpace && t.index === selectStart);
+    b.textContent = tok ? `🟡 Từ đầu: "${tok.word}" — click từ cuối` : '🟡 Click từ cuối…';
+    b.classList.add('show');
+  } else {
+    b.classList.remove('show');
+  }
+}
+
+// ── ANN LIST ──
+function renderAnnList() {
+  const list = document.getElementById('annList');
+  list.innerHTML = '';
+  annotations.forEach((ann, i) => {
+    const t = TENSE_MAP[ann.tenseId];
     const div = document.createElement('div');
-    div.className = 'rec-item';
+    div.className = 'ann-row';
     div.innerHTML = `
-      <span class="rec-item-num">REC ${rec.index}</span>
-      <audio controls src="${rec.url}"></audio>
-      ${rec.sttText ? `<span class="rec-item-stt" title="${escHtml(rec.sttText)}">${escHtml(rec.sttText)}</span>` : ''}
-      <div class="rec-actions">
-        <button class="btn-icon dl" title="Download" onclick="downloadRec(${i})">⬇</button>
-        <button class="btn-icon del" title="Delete" onclick="deleteRec(${i})">✕</button>
-      </div>`;
+      <span class="ann-swatch" style="background:${t.color}"></span>
+      <span class="ann-quoted">"${escH(ann.text)}"</span>
+      <span class="ann-badge hl-${ann.tenseId}">${t.label}</span>
+      <div class="ann-x" onclick="removeAnnByIdx(${i})" title="Remove">✕</div>`;
     list.appendChild(div);
   });
 }
 
-function downloadRec(i) {
-  const rec = recordings[i];
-  const a   = document.createElement('a');
-  a.href = rec.url; a.download = `rec_${rec.index}_${Date.now()}.webm`; a.click();
+// ── CLEAR ALL ──
+function clearTenses() {
+  savedSentences = [];
+  annotations = []; selectStart = null; tokens = [];
+  document.getElementById('sentenceRaw').value = '';
+  document.getElementById('annotatedWrap').style.display = 'none';
+  document.getElementById('wordDisplay').innerHTML = '';
+  document.getElementById('btnSaveSentence').disabled = true;
+  renderAnnList();
+  renderSavedSentences();
+  updateBadge();
+  hidePopup();
 }
 
-function deleteRec(i) {
-  recordings.splice(i, 1);
-  recordings.forEach((r, idx) => { r.index = idx + 1; });
-  renderRecordings();
-}
-
-// ── SPEECH TO TEXT ─────────────────────────────────────────────────────────
-function startSTT() {
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SR) { document.getElementById('sttOutput').textContent = 'STT not supported — use Chrome.'; return; }
-
-  speechRec = new SR();
-  speechRec.continuous    = true;
-  speechRec.interimResults = true;
-  speechRec.lang          = document.getElementById('sttLang').value;
-
-  let finalText = '';
-
-  speechRec.onresult = e => {
-    let interim = '';
-    for (let i = e.resultIndex; i < e.results.length; i++) {
-      e.results[i].isFinal ? (finalText += e.results[i][0].transcript + ' ') : (interim += e.results[i][0].transcript);
-    }
-    currentSTT = finalText + interim;
-    const el = document.getElementById('sttOutput');
-    el.className = 'stt-box has-text';
-    el.textContent = currentSTT || '...listening';
-  };
-
-  speechRec.onerror = e => { if (e.error !== 'no-speech') document.getElementById('sttOutput').textContent = 'STT error: ' + e.error; };
-  speechRec.onend   = () => { if (isRecording) { try { speechRec.start(); } catch(e){} } };
-  speechRec.start();
-}
-
-// ── GITHUB CONFIG ──────────────────────────────────────────────────────────
-const LS = {
-  get: k      => { try { return localStorage.getItem(k); } catch{ return null; } },
-  set: (k, v) => { try { localStorage.setItem(k, v); } catch{} },
-};
-
-function getGhCfg() {
-  return { user: LS.get('gh_user')||'', repo: LS.get('gh_repo')||'', token: LS.get('gh_token')||'' };
-}
-
-function toggleGhConfig() {
-  const body = document.getElementById('ghConfigBody');
-  body.style.display = body.style.display === 'none' ? 'block' : 'none';
-}
-
-function saveGhConfig() {
-  const user  = document.getElementById('ghUser').value.trim();
-  const repo  = document.getElementById('ghRepo').value.trim();
-  const token = document.getElementById('ghToken').value.trim();
-  if (!user || !repo || !token) return showStatus('ghConfigStatus', 'Fill in all 3 fields!', 'error');
-  LS.set('gh_user', user); LS.set('gh_repo', repo); LS.set('gh_token', token);
-  showStatus('ghConfigStatus', '✓ Config saved', 'success');
-  updateGhSummary();
-}
-
-function updateGhSummary() {
-  const cfg = getGhCfg();
-  const summary = document.getElementById('ghConfigSummary');
-  const text    = document.getElementById('ghSummaryText');
-  if (cfg.user && cfg.repo && cfg.token) {
-    text.textContent = `${cfg.user}/${cfg.repo}`;
-    summary.style.display = 'block';
-  } else {
-    summary.style.display = 'none';
-  }
-}
-
-async function testGhConnection() {
-  const cfg = getGhCfg();
-  if (!cfg.user || !cfg.repo || !cfg.token) return showStatus('ghConfigStatus', 'Save config first!', 'error');
-  showStatus('ghConfigStatus', 'Testing...', 'info');
-  try {
-    await ghGetFile('data/speaking-data.json');
-    showStatus('ghConfigStatus', '✓ Connected! File exists.', 'success');
-  } catch(e) {
-    if (e.message === 'NOT_FOUND') showStatus('ghConfigStatus', '✓ Connected! File will be created on first push.', 'success');
-    else showStatus('ghConfigStatus', 'Error: ' + e.message, 'error');
-  }
-}
-
-async function ghGetFile(path) {
-  const cfg = getGhCfg();
-  const res = await fetch(
-    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${path}`,
-    { headers: { Authorization: `token ${cfg.token}`, Accept: 'application/vnd.github.v3+json' } }
-  );
-  if (res.status === 404) throw new Error('NOT_FOUND');
-  if (!res.ok) { const err = await res.json().catch(()=>({})); throw new Error(err.message || `HTTP ${res.status}`); }
-  return res.json();
-}
-
-async function ghPutFile(path, content, sha, commitMsg) {
-  const cfg = getGhCfg();
-  const body = { message: commitMsg, content: btoa(unescape(encodeURIComponent(content))), ...(sha ? { sha } : {}) };
-  const res = await fetch(
-    `https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${path}`,
-    { method: 'PUT', headers: { Authorization: `token ${cfg.token}`, Accept: 'application/vnd.github.v3+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body) }
-  );
-  if (!res.ok) { const err = await res.json().catch(()=>({})); throw new Error(err.message || `HTTP ${res.status}`); }
-  return res.json();
-}
-
-// ── BUILD DATA ─────────────────────────────────────────────────────────────
-function getTopic() {
-  const sel = document.getElementById('sessionTopic').value.trim();
-  const custom = document.getElementById('sessionTopicCustom').value.trim();
-  return custom || sel || '';
-}
-
-function buildSession(nextId) {
-  const transcript = document.getElementById('transcriptManual').value.trim() ||
-    (document.getElementById('transcriptDisplay').textContent !== 'Transcript will appear here — or paste manually below ↓'
-      ? document.getElementById('transcriptDisplay').textContent.trim() : '');
-
-  let recField = '';
-  if (recordings.length === 1) recField = recordings[0].filename;
-  else if (recordings.length > 1) recField = recordings.map(r => r.filename).join(', ');
-
-  return {
-    id:               String(nextId),
-    createdAt:        new Date().toISOString(),
-    videoUrl:         document.getElementById('videoUrl').value.trim(),
-    transcript,
-    vocabulary:       document.getElementById('vocabulary').value.trim(),
-    grammarStructures:document.getElementById('grammar').value.trim(),
-    tenses:           getTensesData(),
-    recordings:       recField,
-  };
-}
-
-function buildThumb(nextId) {
-  return {
-    id:          nextId,
-    title:       document.getElementById('sessionTitle').value.trim(),
-    description: getTopic(),
-    thumbnail:   '',
-    videoLink:   document.getElementById('videoUrl').value.trim(),
-    htmlLink:    `speaking-practice.html?id=${nextId}`,
-  };
-}
-
-async function previewJSON() {
-  const session = buildSession('?');
-  const preview = document.getElementById('jsonPreview');
-  preview.textContent = JSON.stringify(session, null, 2);
-  preview.classList.toggle('show');
-}
-
-async function pushToGitHub() {
-  const cfg = getGhCfg();
-  if (!cfg.user || !cfg.repo || !cfg.token) { showStatus('exportStatus', 'Set up GitHub config first (Step 6) ↑', 'error'); return; }
-
-  const title = document.getElementById('sessionTitle').value.trim();
-  const topic = getTopic();
-  if (!title) { showStatus('exportStatus', '❌ Please enter a Title first!', 'error'); return; }
-  if (!topic) { showStatus('exportStatus', '❌ Please select or enter a Topic first!', 'error'); return; }
-
-  showStatus('exportStatus', '📡 Reading files from GitHub...', 'info');
-
-  try {
-    const [dataResult, thumbResult] = await Promise.allSettled([
-      ghGetFile('data/speaking-data.json'),
-      ghGetFile('data/speaking-thumb.json'),
-    ]);
-
-    let existingData = [], dataSha = null;
-    if (dataResult.status === 'fulfilled') {
-      dataSha = dataResult.value.sha;
-      const dec = decodeURIComponent(escape(atob(dataResult.value.content.replace(/\n/g,''))));
-      const parsed = JSON.parse(dec);
-      existingData = Array.isArray(parsed) ? parsed : [parsed];
-    }
-
-    let existingThumb = [], thumbSha = null;
-    if (thumbResult.status === 'fulfilled') {
-      thumbSha = thumbResult.value.sha;
-      const dec = decodeURIComponent(escape(atob(thumbResult.value.content.replace(/\n/g,''))));
-      const parsed = JSON.parse(dec);
-      existingThumb = Array.isArray(parsed) ? parsed : [parsed];
-    }
-
-    const maxData  = existingData.reduce((m,s)  => Math.max(m, parseInt(s.id)||0), 0);
-    const maxThumb = existingThumb.reduce((m,s) => Math.max(m, parseInt(s.id)||0), 0);
-    const nextId   = Math.max(maxData, maxThumb) + 1;
-
-    const session = buildSession(nextId);
-    const thumb   = buildThumb(nextId);
-    existingData.push(session);
-    existingThumb.push(thumb);
-
-    showStatus('exportStatus', `📤 Pushing session #${nextId} to 2 files...`, 'info');
-
-    await Promise.all([
-      ghPutFile('data/speaking-data.json', JSON.stringify(existingData, null, 2), dataSha, `Add session ${nextId}: ${title}`),
-      ghPutFile('data/speaking-thumb.json', JSON.stringify(existingThumb, null, 2), thumbSha, `Add thumb ${nextId}: ${title}`),
-    ]);
-
-    showStatus('exportStatus', `✅ Done! Session #${nextId} "${title}" pushed. Netlify deploys in ~30s.`, 'success');
-
-    const preview = document.getElementById('jsonPreview');
-    if (preview.classList.contains('show')) preview.textContent = JSON.stringify({ session, thumb }, null, 2);
-
-  } catch(e) {
-    showStatus('exportStatus', '❌ Error: ' + e.message, 'error');
-    console.error(e);
-  }
-}
-
-// ── HELPERS ────────────────────────────────────────────────────────────────
-function showStatus(id, msg, type) {
-  const el = document.getElementById(id);
-  el.textContent = msg; el.className = `status-msg show ${type}`;
-  if (type !== 'info') setTimeout(() => el.classList.remove('show'), 6000);
-}
-
-function escHtml(s) {
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-document.getElementById('transcriptManual').addEventListener('input', e => {
-  const d = document.getElementById('transcriptDisplay');
-  if (e.target.value.trim()) {
-    d.className = 'transcript-display'; d.textContent = e.target.value;
-  } else {
-    d.className = 'transcript-display empty';
-    d.textContent = 'Transcript will appear here — or paste manually below ↓';
+// Close popup on outside click
+document.addEventListener('click', e => {
+  const popup = document.getElementById('tensePopup');
+  if (popup.style.display !== 'none' &&
+      !popup.contains(e.target) &&
+      !document.getElementById('wordDisplay').contains(e.target)) {
+    cancelSelection();
   }
 });
 
-(function() {
-  const cfg = getGhCfg();
-  if (cfg.user)  document.getElementById('ghUser').value  = cfg.user;
-  if (cfg.repo)  document.getElementById('ghRepo').value  = cfg.repo;
-  if (cfg.token) document.getElementById('ghToken').value = cfg.token;
-  updateGhSummary();
-})();
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') cancelSelection();
+});
+
+// getTenseData now returns all saved sentences
+function getTenseData() {
+  // also include whatever's currently in the working area (unsaved)
+  const working = document.getElementById('sentenceRaw').value.trim();
+  const all = [...savedSentences];
+  if (working && annotations.length) {
+    all.push({
+      sentence: working,
+      annotations: annotations.map(a => ({
+        text: a.text,
+        tenseLabel: TENSE_MAP[a.tenseId]?.label || a.tenseId
+      }))
+    });
+  }
+  return all; // array of {sentence, annotations:[...]}
+}
+
+// ── RECORDING ──────────────────────────────────────────────────────────────
+let recordings=[],mediaRec=null,audioChunks=[],isRecording=false;
+let timerInt=null,recSecs=0,speechRec=null,currentSTT='';
+async function toggleRecording(){isRecording?stopRecording():await startRecording()}
+async function startRecording(){
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    mediaRec=new MediaRecorder(stream);audioChunks=[];currentSTT='';
+    mediaRec.ondataavailable=e=>audioChunks.push(e.data);
+    mediaRec.onstop=saveRecording;mediaRec.start();isRecording=true;
+    document.getElementById('recDot').classList.add('active');
+    document.getElementById('btnRec').textContent='⏸ Pause';
+    document.getElementById('btnStop').disabled=false;
+    recSecs=0;timerInt=setInterval(()=>{recSecs++;const m=String(Math.floor(recSecs/60)).padStart(2,'0'),s=String(recSecs%60).padStart(2,'0');document.getElementById('recTimer').textContent=`${m}:${s}`},1000);
+    startSTT();showStatus('recStatus','Recording... 🎙️','info');
+  }catch(e){showStatus('recStatus','Microphone denied: '+e.message,'error')}
+}
+function stopRecording(){
+  if(!mediaRec)return;mediaRec.stop();mediaRec.stream.getTracks().forEach(t=>t.stop());
+  isRecording=false;clearInterval(timerInt);
+  document.getElementById('recDot').classList.remove('active');
+  document.getElementById('btnRec').textContent='● REC';
+  document.getElementById('btnStop').disabled=true;
+  if(speechRec){speechRec.stop();speechRec=null}
+}
+function saveRecording(){
+  const blob=new Blob(audioChunks,{type:'audio/webm'}),url=URL.createObjectURL(blob),idx=recordings.length+1;
+  recordings.push({index:idx,blob,url,sttText:currentSTT.trim(),timestamp:new Date().toISOString(),filename:`recordings/rec_${Date.now()}.webm`});
+  renderRecordings();showStatus('recStatus',`✓ Recording #${idx} saved`,'success');
+}
+function renderRecordings(){
+  const list=document.getElementById('recordingsList');list.innerHTML='';
+  recordings.forEach((rec,i)=>{const div=document.createElement('div');div.className='rec-item';div.innerHTML=`<span class="rec-item-num">REC ${rec.index}</span><audio controls src="${rec.url}"></audio>${rec.sttText?`<span class="rec-item-stt" title="${escH(rec.sttText)}">${escH(rec.sttText)}</span>`:''}<div class="rec-actions"><button class="btn-icon dl" onclick="dlRec(${i})">⬇</button><button class="btn-icon del" onclick="delRec(${i})">✕</button></div>`;list.appendChild(div)});
+}
+function dlRec(i){const r=recordings[i],a=document.createElement('a');a.href=r.url;a.download=`rec_${r.index}_${Date.now()}.webm`;a.click()}
+function delRec(i){recordings.splice(i,1);recordings.forEach((r,j)=>r.index=j+1);renderRecordings()}
+function startSTT(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){document.getElementById('sttOutput').textContent='STT not supported — use Chrome.';return}
+  speechRec=new SR();speechRec.continuous=true;speechRec.interimResults=true;speechRec.lang=document.getElementById('sttLang').value;
+  let final='';
+  speechRec.onresult=e=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++)e.results[i].isFinal?(final+=e.results[i][0].transcript+' '):(interim+=e.results[i][0].transcript);currentSTT=final+interim;const el=document.getElementById('sttOutput');el.className='stt-box has-text';el.textContent=currentSTT||'...listening'};
+  speechRec.onerror=e=>{if(e.error!=='no-speech')document.getElementById('sttOutput').textContent='STT error: '+e.error};
+  speechRec.onend=()=>{if(isRecording)try{speechRec.start()}catch(e){}};
+  speechRec.start();
+}
+
+// ── TRANSCRIPT FETCH ───────────────────────────────────────────────────────
+async function fetchTranscript(){
+  const url=document.getElementById('videoUrl').value.trim();
+  if(!url)return showStatus('urlStatus','Paste a video URL first!','error');
+  const display=document.getElementById('transcriptDisplay');display.className='transcript-display empty';display.textContent='Fetching...';showStatus('urlStatus','Detecting...','info');
+  if(!url.includes('youtube.com')&&!url.includes('youtu.be')){display.className='transcript-display empty';display.textContent='TikTok/Douyin — paste manually below ↓';showStatus('urlStatus','Link saved. Paste transcript manually ↓','info');return}
+  let videoId=null;for(const p of[/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/]){const m=url.match(p);if(m){videoId=m[1];break}}
+  if(!videoId){showStatus('urlStatus','Invalid YouTube URL','error');return}
+  try{
+    const res=await fetch(`https://corsproxy.io/?${encodeURIComponent(`https://www.youtube.com/watch?v=${videoId}`)}`);const html=await res.text();
+    const match=html.match(/"captionTracks":(\[.*?\])/);if(!match)throw new Error('No captions');
+    const tracks=JSON.parse(match[1]),track=tracks.find(t=>!t.kind)||tracks[0];
+    const xml=await(await fetch(`https://corsproxy.io/?${encodeURIComponent(track.baseUrl)}`)).text();
+    const texts=new DOMParser().parseFromString(xml,'text/xml').querySelectorAll('text');
+    const transcript=Array.from(texts).map(t=>t.textContent.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#39;/g,"'").replace(/&quot;/g,'"')).join(' ');
+    display.className='transcript-display';display.textContent=transcript;document.getElementById('transcriptManual').value=transcript;showStatus('urlStatus',`✓ Loaded (${texts.length} segments)`,'success');
+  }catch(e){display.className='transcript-display empty';display.textContent='Auto-fetch failed — paste manually below.';showStatus('urlStatus','Failed','error')}
+}
+
+// ── GITHUB ──────────────────────────────────────────────────────────────────
+const LS={get:k=>{try{return localStorage.getItem(k)}catch{return null}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch{}}};
+function getGhCfg(){return{user:LS.get('gh_user')||'',repo:LS.get('gh_repo')||'',token:LS.get('gh_token')||''}}
+function toggleGhConfig(){const b=document.getElementById('ghConfigBody');b.style.display=b.style.display==='none'?'block':'none'}
+function saveGhConfig(){const u=document.getElementById('ghUser').value.trim(),r=document.getElementById('ghRepo').value.trim(),t=document.getElementById('ghToken').value.trim();if(!u||!r||!t)return showStatus('ghConfigStatus','Fill all 3!','error');LS.set('gh_user',u);LS.set('gh_repo',r);LS.set('gh_token',t);showStatus('ghConfigStatus','✓ Saved','success');updateGhSummary()}
+function updateGhSummary(){const cfg=getGhCfg(),s=document.getElementById('ghConfigSummary'),tx=document.getElementById('ghSummaryText');if(cfg.user&&cfg.repo&&cfg.token){tx.textContent=`${cfg.user}/${cfg.repo}`;s.style.display='block'}else s.style.display='none'}
+async function testGhConnection(){const cfg=getGhCfg();if(!cfg.user||!cfg.repo||!cfg.token)return showStatus('ghConfigStatus','Save config first!','error');showStatus('ghConfigStatus','Testing...','info');try{await ghGetFile('data/speaking-data.json');showStatus('ghConfigStatus','✓ Connected!','success')}catch(e){if(e.message==='NOT_FOUND')showStatus('ghConfigStatus','✓ Connected! Will create on first push.','success');else showStatus('ghConfigStatus','Error: '+e.message,'error')}}
+async function ghGetFile(p){const cfg=getGhCfg();const res=await fetch(`https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${p}`,{headers:{Authorization:`token ${cfg.token}`,Accept:'application/vnd.github.v3+json'}});if(res.status===404)throw new Error('NOT_FOUND');if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e.message||`HTTP ${res.status}`)}return res.json()}
+async function ghPutFile(p,content,sha,msg){const cfg=getGhCfg();const body={message:msg,content:btoa(unescape(encodeURIComponent(content))),...(sha?{sha}:{})};const res=await fetch(`https://api.github.com/repos/${cfg.user}/${cfg.repo}/contents/${p}`,{method:'PUT',headers:{Authorization:`token ${cfg.token}`,Accept:'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});if(!res.ok){const e=await res.json().catch(()=>({}));throw new Error(e.message||`HTTP ${res.status}`)}return res.json()}
+function getTopic(){return document.getElementById('sessionTopicCustom').value.trim()||document.getElementById('sessionTopic').value.trim()||''}
+function buildSession(nextId){
+  const transcript=document.getElementById('transcriptManual').value.trim()||(document.getElementById('transcriptDisplay').textContent.includes('Transcript will')?'':document.getElementById('transcriptDisplay').textContent.trim());
+  const recField=recordings.length===1?recordings[0].filename:recordings.length>1?recordings.map(r=>r.filename).join(', '):'';
+  return{id:String(nextId),createdAt:new Date().toISOString(),videoUrl:document.getElementById('videoUrl').value.trim(),transcript,vocabulary:document.getElementById('vocabulary').value.trim(),grammarStructures:document.getElementById('grammar').value.trim(),tenseAnnotation:getTenseData(),recordings:recField};
+}
+function buildThumb(nextId){return{id:nextId,title:document.getElementById('sessionTitle').value.trim(),description:getTopic(),thumbnail:'',videoLink:document.getElementById('videoUrl').value.trim(),htmlLink:`speaking-practice.html?id=${nextId}`}}
+async function previewJSON(){const s=buildSession('?');const p=document.getElementById('jsonPreview');p.textContent=JSON.stringify(s,null,2);p.classList.toggle('show')}
+async function pushToGitHub(){
+  const cfg=getGhCfg();if(!cfg.user||!cfg.repo||!cfg.token){showStatus('exportStatus','Set up GitHub config first!','error');return}
+  const title=document.getElementById('sessionTitle').value.trim(),topic=getTopic();
+  if(!title){showStatus('exportStatus','❌ Enter a Title first!','error');return}
+  if(!topic){showStatus('exportStatus','❌ Select or enter a Topic first!','error');return}
+  showStatus('exportStatus','📡 Reading files...','info');
+  try{
+    const[dr,tr]=await Promise.allSettled([ghGetFile('data/speaking-data.json'),ghGetFile('data/speaking-thumb.json')]);
+    let eD=[],dSha=null;if(dr.status==='fulfilled'){dSha=dr.value.sha;const dec=decodeURIComponent(escape(atob(dr.value.content.replace(/\n/g,''))));const p=JSON.parse(dec);eD=Array.isArray(p)?p:[p]}
+    let eT=[],tSha=null;if(tr.status==='fulfilled'){tSha=tr.value.sha;const dec=decodeURIComponent(escape(atob(tr.value.content.replace(/\n/g,''))));const p=JSON.parse(dec);eT=Array.isArray(p)?p:[p]}
+    const nextId=Math.max(eD.reduce((m,s)=>Math.max(m,parseInt(s.id)||0),0),eT.reduce((m,s)=>Math.max(m,parseInt(s.id)||0),0))+1;
+    const session=buildSession(nextId),thumb=buildThumb(nextId);
+    eD.push(session);eT.push(thumb);
+    showStatus('exportStatus',`📤 Pushing session #${nextId}...`,'info');
+    await Promise.all([ghPutFile('data/speaking-data.json',JSON.stringify(eD,null,2),dSha,`Add session ${nextId}: ${title}`),ghPutFile('data/speaking-thumb.json',JSON.stringify(eT,null,2),tSha,`Add thumb ${nextId}: ${title}`)]);
+    showStatus('exportStatus',`✅ Done! Session #${nextId} "${title}" pushed.`,'success');
+  }catch(e){showStatus('exportStatus','❌ Error: '+e.message,'error')}
+}
+
+// ── HELPERS ──────────────────────────────────────────────────────────────
+function showStatus(id,msg,type){const el=document.getElementById(id);el.textContent=msg;el.className=`status-msg show ${type}`;if(type!=='info')setTimeout(()=>el.classList.remove('show'),6000)}
+function escH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+document.getElementById('transcriptManual').addEventListener('input',e=>{const d=document.getElementById('transcriptDisplay');if(e.target.value.trim()){d.className='transcript-display';d.textContent=e.target.value}else{d.className='transcript-display empty';d.textContent='Transcript will appear here — or paste manually below ↓'}});
+(function(){const cfg=getGhCfg();if(cfg.user)document.getElementById('ghUser').value=cfg.user;if(cfg.repo)document.getElementById('ghRepo').value=cfg.repo;if(cfg.token)document.getElementById('ghToken').value=cfg.token;updateGhSummary()})();
 </script>
 </body>
 </html>
