@@ -7,868 +7,383 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --black:       #1a1a1a;
-    --red:         #e63030;
-    --red-dark:    #b71c1c;
-    --red-light:   #ffd5d5;
-    --red-pale:    #fff5f5;
-    --cream:       #fffef5;
-    --white:       #ffffff;
-    --yellow:      #ffd84d;
-    --yellow-pale: #fffbe6;
-    --sky:         #72c8f0;
-    --sky-pale:    #eaf8ff;
-    --green:       #4caf50;
-    --green-pale:  #f0fff0;
-    --green-dark:  #2e7d32;
-    --orange-pale: #feefdb;
-    --purple:      #7c3aed;
-    --purple-pale: #f3f0ff;
-    --purple-light:#e9d5ff;
-    --muted:       #888;
-    --border:      2.5px solid var(--black);
-    --border-thick:3px solid var(--black);
-    --shadow-sm:   3px 3px 0 var(--black);
-    --shadow-md:   4px 4px 0 var(--black);
-    --shadow-lg:   6px 6px 0 var(--black);
+    --black:#1a1a1a;--red:#e63030;--red-dark:#b71c1c;--red-light:#ffd5d5;--red-pale:#fff5f5;
+    --cream:#fffef5;--white:#ffffff;--yellow:#ffd84d;--yellow-pale:#fffbe6;
+    --sky:#72c8f0;--sky-pale:#eaf8ff;--green:#4caf50;--green-pale:#f0fff0;--green-dark:#2e7d32;
+    --purple:#7c3aed;--purple-pale:#f3f0ff;--purple-light:#e9d5ff;
+    --muted:#888;
+    --border:2.5px solid var(--black);--border-thick:3px solid var(--black);
+    --shadow-sm:3px 3px 0 var(--black);--shadow-md:4px 4px 0 var(--black);--shadow-lg:6px 6px 0 var(--black);
   }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Fredoka',sans-serif;font-weight:500;background:var(--cream);color:var(--black);min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;z-index:0}
+  header{background:var(--red);border-bottom:var(--border-thick);padding:0 50px;height:66px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+  .logo{font-weight:700;font-size:1.65rem;color:white;letter-spacing:.05em;text-shadow:2px 2px 0 rgba(0,0,0,.25);text-decoration:none}
+  #app{position:relative;z-index:1}
+  .page-grid{display:grid;grid-template-columns:340px 1fr;gap:26px;padding:36px 56px 100px;max-width:1300px;margin:0 auto;align-items:start}
+  .video-col{position:sticky;top:88px;display:flex;flex-direction:column;gap:14px}
+  .video-card{background:var(--black);border:var(--border-thick);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;width:100%}
+  .video-card iframe{width:100%;height:100%;border:none;display:block}
+  .video-placeholder{background:var(--white);border:var(--border-thick);border-radius:20px;box-shadow:var(--shadow-md);aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-family:'Quicksand',sans-serif;font-weight:600;font-size:.95rem;text-align:center;padding:24px}
+  .video-placeholder .big-emoji{font-size:3.5rem}
+  .video-link-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red-light);border:var(--border);border-radius:50px;padding:10px 20px;font-weight:700;font-size:.9rem;box-shadow:var(--shadow-sm);text-decoration:none;color:var(--black);transition:transform .12s,box-shadow .12s}
+  .video-link-btn:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+  .video-meta-card{background:var(--red);border:var(--border-thick);border-radius:16px;box-shadow:var(--shadow-md);padding:14px 16px;color:white;text-align:center}
+  .video-meta-card .session-id{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.8rem;background:rgba(255,255,255,.18);border-radius:8px;padding:5px 10px;word-break:break-all;margin-bottom:10px}
+  .stat-row{display:flex;gap:8px}
+  .stat-box{flex:1;background:rgba(255,255,255,.18);border-radius:10px;padding:8px 6px;text-align:center;border:1.5px solid rgba(255,255,255,.25)}
+  .stat-box .num{font-size:1.3rem;font-weight:700}
+  .stat-box .lbl{font-size:.68rem;opacity:.82}
+  .tiktok-iframe-wrap{width:100%;aspect-ratio:9/16;border:var(--border-thick);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:#111}
+  .tiktok-iframe-wrap iframe{width:100%;height:100%;border:none;display:block}
+  .tiktok-open-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--black);color:white;border:var(--border-thick);border-radius:50px;padding:11px 22px;font-weight:700;font-size:.92rem;box-shadow:var(--shadow-md);text-decoration:none;transition:transform .12s,box-shadow .12s}
+  .tiktok-open-btn:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-lg);color:white}
+  .content-col{display:flex;flex-direction:column;gap:20px}
+  .card{background:var(--white);border:var(--border-thick);border-radius:22px;box-shadow:var(--shadow-md);padding:24px;animation:fadeUp .38s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  .card-title{display:inline-block;font-weight:700;font-size:.95rem;background:var(--red);color:white;border:var(--border);border-radius:50px;padding:5px 20px;box-shadow:var(--shadow-sm);margin-bottom:16px}
+  .card-title.yellow{background:var(--yellow);color:var(--black)}
+  .card-title.sky{background:var(--sky);color:var(--black)}
+  .card-title.green{background:var(--green);color:white}
+  .card-title.purple{background:var(--purple);color:white}
+  .date-pill{font-family:'Quicksand',sans-serif;font-size:.75rem;font-weight:700;background:var(--yellow-pale);border:var(--border);border-radius:50px;padding:3px 12px;box-shadow:var(--shadow-sm);display:inline-block;margin-bottom:16px;margin-left:8px}
+  .transcript-body{font-family:'Quicksand',sans-serif;font-size:1rem;font-weight:600;line-height:1.85;color:#333;background:var(--red-pale);border:var(--border);border-radius:14px;padding:16px 18px;max-height:260px;overflow-y:auto;white-space:pre-wrap}
+  .transcript-body::-webkit-scrollbar{width:5px}
+  .transcript-body::-webkit-scrollbar-thumb{background:var(--red-light);border-radius:3px}
+  .pill-wrap{display:flex;flex-wrap:wrap;gap:10px}
+  .vocab-pill{font-family:'Quicksand',sans-serif;font-size:.92rem;font-weight:700;border:var(--border);border-radius:50px;padding:7px 16px;box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s;animation:fadeUp .35s ease both;cursor:default}
+  .vocab-pill:nth-child(4n+1){background:var(--yellow-pale)}
+  .vocab-pill:nth-child(4n+2){background:var(--red-pale)}
+  .vocab-pill:nth-child(4n+3){background:var(--sky-pale)}
+  .vocab-pill:nth-child(4n+4){background:var(--green-pale)}
+  .vocab-pill:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+  .grammar-list{display:flex;flex-direction:column;gap:8px}
+  .grammar-item{font-family:'Quicksand',sans-serif;font-size:.95rem;font-weight:600;line-height:1.6;background:var(--sky-pale);border:var(--border);border-radius:14px;padding:11px 16px;box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s;animation:fadeUp .35s ease both}
+  .grammar-item:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
 
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  /* ── TENSE ANNOTATION DISPLAY ── */
+  .tense-sentence-wrap{background:var(--purple-pale);border:var(--border);border-radius:16px;padding:20px 22px;margin-bottom:18px}
+  .tense-sentence-text{font-family:'Quicksand',sans-serif;font-weight:600;font-size:1.05rem;line-height:2.6;word-break:break-word}
+  .tense-sentence-text .plain{color:var(--black)}
+  .tense-mark{border-radius:5px;padding:2px 6px;font-family:'Quicksand',sans-serif;font-weight:700;cursor:default;display:inline}
+  /* mark colors */
+  .hl-past_simple    {background:#fef9c3;border-bottom:3px solid #ca8a04;color:#78350f}
+  .hl-past_cont      {background:#dbeafe;border-bottom:3px solid #3b82f6;color:#1e3a8a}
+  .hl-past_perfect   {background:#dcfce7;border-bottom:3px solid #22c55e;color:#14532d}
+  .hl-past_perf_cont {background:#f3e8ff;border-bottom:3px solid #a855f7;color:#581c87}
+  .hl-pres_simple    {background:#fef3c7;border-bottom:3px solid #f59e0b;color:#78350f}
+  .hl-pres_cont      {background:#bae6fd;border-bottom:3px solid #0ea5e9;color:#0c4a6e}
+  .hl-pres_perfect   {background:#bbf7d0;border-bottom:3px solid #4ade80;color:#14532d}
+  .hl-pres_perf_cont {background:#e9d5ff;border-bottom:3px solid #c084fc;color:#581c87}
+  .hl-fut_simple     {background:#fed7aa;border-bottom:3px solid #f97316;color:#7c2d12}
+  .hl-fut_cont       {background:#cffafe;border-bottom:3px solid #22d3ee;color:#164e63}
+  .hl-fut_perfect    {background:#d9f99d;border-bottom:3px solid #84cc16;color:#365314}
+  .hl-fut_perf_cont  {background:#fce7f3;border-bottom:3px solid #ec4899;color:#831843}
 
-  body {
-    font-family: 'Fredoka', sans-serif; font-weight: 500;
-    background: var(--cream); color: var(--black);
-    min-height: 100vh; overflow-x: hidden;
-  }
+  /* Tense notes list */
+  .tense-notes{display:flex;flex-direction:column;gap:10px}
+  .tense-note{display:flex;align-items:flex-start;gap:12px;background:var(--white);border:var(--border);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow-sm);animation:fadeUp .35s ease both}
+  .tense-note-swatch{width:14px;height:14px;border-radius:50%;flex-shrink:0;margin-top:3px}
+  .tense-note-body{flex:1;min-width:0}
+  .tense-note-phrase{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:4px}
+  .tense-note-tag{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.72rem;padding:3px 10px;border-radius:20px;display:inline-block}
 
-  body::before {
-    content: ''; position: fixed; inset: 0;
-    background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-    background-size: 22px 22px; pointer-events: none; z-index: 0;
-  }
-
-  /* ── HEADER ── */
-  header {
-    background: var(--red); border-bottom: var(--border-thick);
-    padding: 0 50px; height: 66px;
-    display: flex; justify-content: space-between; align-items: center;
-    position: sticky; top: 0; z-index: 100;
-  }
-  .logo {
-    font-weight: 700; font-size: 1.65rem; color: white;
-    letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.25);
-    text-decoration: none;
-  }
-
-  /* ── PAGE WRAPPER ── */
-  #app { position: relative; z-index: 1; }
-
-  /* ── MAIN GRID ── */
-  .page-grid {
-    display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 26px;
-    padding: 36px 56px 100px;
-    max-width: 1300px;
-    margin: 0 auto;
-    align-items: start;
-  }
-
-  /* ── VIDEO COLUMN (sticky) ── */
-  .video-col {
-    position: sticky; top: 88px;
-    display: flex; flex-direction: column; gap: 14px;
-  }
-
-  .video-card {
-    background: var(--black); border: var(--border-thick); border-radius: 20px;
-    overflow: hidden; box-shadow: var(--shadow-lg);
-    aspect-ratio: 9 / 16;
-    display: flex; align-items: center; justify-content: center; width: 100%;
-  }
-  .video-card iframe { width: 100%; height: 100%; border: none; display: block; }
-
-  .video-placeholder {
-    background: var(--white); border: var(--border-thick); border-radius: 20px;
-    box-shadow: var(--shadow-md); aspect-ratio: 9 / 16;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 12px; color: var(--muted);
-    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.95rem;
-    text-align: center; padding: 24px;
-  }
-  .video-placeholder .big-emoji { font-size: 3.5rem; }
-
-  .video-link-btn {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--red-light); border: var(--border); border-radius: 50px;
-    padding: 10px 20px; font-weight: 700; font-size: 0.9rem;
-    box-shadow: var(--shadow-sm); text-decoration: none; color: var(--black);
-    transition: transform 0.12s, box-shadow 0.12s;
-  }
-  .video-link-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-
-  .video-meta-card {
-    background: var(--red); border: var(--border-thick); border-radius: 16px;
-    box-shadow: var(--shadow-md); padding: 14px 16px; color: white; text-align: center;
-  }
-  .video-meta-card .session-id {
-    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.8rem;
-    background: rgba(255,255,255,0.18); border-radius: 8px;
-    padding: 5px 10px; word-break: break-all; margin-bottom: 10px;
-  }
-  .stat-row { display: flex; gap: 8px; }
-  .stat-box {
-    flex: 1; background: rgba(255,255,255,0.18); border-radius: 10px;
-    padding: 8px 6px; text-align: center; border: 1.5px solid rgba(255,255,255,0.25);
-  }
-  .stat-box .num { font-size: 1.3rem; font-weight: 700; }
-  .stat-box .lbl { font-size: 0.68rem; opacity: 0.82; }
-
-  .tiktok-iframe-wrap {
-    width: 100%; aspect-ratio: 9/16; border: var(--border-thick); border-radius: 20px;
-    overflow: hidden; box-shadow: var(--shadow-lg); background: #111;
-  }
-  .tiktok-iframe-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
-  .tiktok-open-btn {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--black); color: white; border: var(--border-thick); border-radius: 50px;
-    padding: 11px 22px; font-weight: 700; font-size: 0.92rem;
-    box-shadow: var(--shadow-md); text-decoration: none;
-    transition: transform 0.12s, box-shadow 0.12s;
-  }
-  .tiktok-open-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); color: white; }
-
-  /* ── CONTENT COLUMN ── */
-  .content-col { display: flex; flex-direction: column; gap: 20px; }
-
-  /* ── CARDS ── */
-  .card {
-    background: var(--white); border: var(--border-thick); border-radius: 22px;
-    box-shadow: var(--shadow-md); padding: 24px;
-    animation: fadeUp 0.38s ease both;
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .card-title {
-    display: inline-block; font-weight: 700; font-size: 0.95rem;
-    background: var(--red); color: white; border: var(--border); border-radius: 50px;
-    padding: 5px 20px; box-shadow: var(--shadow-sm); margin-bottom: 16px;
-  }
-  .card-title.yellow { background: var(--yellow); color: var(--black); }
-  .card-title.sky    { background: var(--sky);    color: var(--black); }
-  .card-title.green  { background: var(--green);  color: white; }
-  .card-title.purple { background: var(--purple); color: white; }
-
-  .date-pill {
-    font-family: 'Quicksand', sans-serif; font-size: 0.75rem; font-weight: 700;
-    background: var(--yellow-pale); border: var(--border); border-radius: 50px;
-    padding: 3px 12px; box-shadow: var(--shadow-sm);
-    display: inline-block; margin-bottom: 16px; margin-left: 8px;
-  }
-
-  /* ── TRANSCRIPT ── */
-  .transcript-body {
-    font-family: 'Quicksand', sans-serif; font-size: 1rem; font-weight: 600;
-    line-height: 1.85; color: #333;
-    background: var(--red-pale); border: var(--border); border-radius: 14px;
-    padding: 16px 18px; max-height: 260px; overflow-y: auto; white-space: pre-wrap;
-  }
-  .transcript-body::-webkit-scrollbar { width: 5px; }
-  .transcript-body::-webkit-scrollbar-thumb { background: var(--red-light); border-radius: 3px; }
-
-  /* ── VOCAB / GRAMMAR PILLS ── */
-  .pill-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
-  .vocab-pill {
-    font-family: 'Quicksand', sans-serif; font-size: 0.92rem; font-weight: 700;
-    border: var(--border); border-radius: 50px; padding: 7px 16px;
-    box-shadow: var(--shadow-sm); transition: transform 0.12s, box-shadow 0.12s;
-    animation: fadeUp 0.35s ease both; cursor: default;
-  }
-  .vocab-pill:nth-child(4n+1) { background: var(--yellow-pale); }
-  .vocab-pill:nth-child(4n+2) { background: var(--red-pale); }
-  .vocab-pill:nth-child(4n+3) { background: var(--sky-pale); }
-  .vocab-pill:nth-child(4n+4) { background: var(--green-pale); }
-  .vocab-pill:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-
-  .grammar-list { display: flex; flex-direction: column; gap: 8px; }
-  .grammar-item {
-    font-family: 'Quicksand', sans-serif; font-size: 0.95rem; font-weight: 600; line-height: 1.6;
-    background: var(--sky-pale); border: var(--border); border-radius: 14px;
-    padding: 11px 16px; box-shadow: var(--shadow-sm);
-    transition: transform 0.12s, box-shadow 0.12s; animation: fadeUp 0.35s ease both;
-  }
-  .grammar-item:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-
-  /* ── 12 TENSES DISPLAY ── */
-  .tenses-tabs {
-    display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px;
-  }
-  .tense-tab {
-    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.78rem;
-    padding: 5px 14px; border-radius: 50px; border: var(--border); cursor: pointer;
-    transition: all 0.12s; box-shadow: var(--shadow-sm);
-    background: var(--white); color: var(--black);
-  }
-  .tense-tab:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
-  .tense-tab.active-past    { background: #fef3c7; border-color: #b45309; color: #92400e; }
-  .tense-tab.active-present { background: var(--sky-pale); border-color: #0369a1; color: #0369a1; }
-  .tense-tab.active-future  { background: var(--green-pale); border-color: #166534; color: #166534; }
-
-  .tenses-table-wrap {
-    border: var(--border-thick); border-radius: 16px; overflow: hidden;
-    box-shadow: var(--shadow-sm);
-  }
-  .tenses-table {
-    width: 100%; border-collapse: collapse;
-    font-family: 'Quicksand', sans-serif;
-  }
-  .tenses-table th {
-    padding: 10px 14px; font-size: 0.72rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.06em;
-    border-bottom: var(--border); text-align: left;
-    white-space: nowrap;
-  }
-  .tenses-table td {
-    padding: 11px 14px; font-size: 0.88rem; font-weight: 600; line-height: 1.55;
-    border-bottom: 2px solid rgba(0,0,0,0.06); vertical-align: top;
-  }
-  .tenses-table tr:last-child td { border-bottom: none; }
-  .tenses-table tr:hover td { background: rgba(0,0,0,0.018); }
-
-  /* Row color groups */
-  .tense-row-simple   td:first-child { border-left: 4px solid #f59e0b; }
-  .tense-row-cont     td:first-child { border-left: 4px solid #38bdf8; }
-  .tense-row-perfect  td:first-child { border-left: 4px solid #4ade80; }
-  .tense-row-perf-cont td:first-child { border-left: 4px solid #a78bfa; }
-
-  .tense-name-cell {
-    display: flex; flex-direction: column; gap: 3px;
-  }
-  .tense-display-name {
-    font-weight: 700; font-size: 0.88rem; color: var(--black);
-  }
-  .tense-type-badge {
-    display: inline-block; font-size: 0.6rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em;
-    padding: 1px 7px; border-radius: 20px; border: 1.5px solid currentColor;
-    width: fit-content;
-  }
-  .badge-simple   { color: #b45309; background: #fef3c7; border-color: #b45309; }
-  .badge-cont     { color: #0369a1; background: #bae6fd; border-color: #0369a1; }
-  .badge-perfect  { color: #166534; background: #bbf7d0; border-color: #166534; }
-  .badge-perf-cont{ color: #7e22ce; background: #e9d5ff; border-color: #7e22ce; }
-
-  .tense-sentence {
-    color: #333; line-height: 1.6;
-  }
-  .tense-empty {
-    color: #ccc; font-style: italic; font-size: 0.82rem;
-  }
-
-  .tense-group-header {
-    font-weight: 700; font-size: 0.7rem; text-transform: uppercase;
-    letter-spacing: 0.08em; padding: 8px 14px 6px;
-    border-bottom: 2px solid rgba(0,0,0,0.06);
-    display: flex; align-items: center; gap: 6px;
-  }
-  .tense-group-header.past    { background: #fef9ee; color: #92400e; }
-  .tense-group-header.present { background: #f0f9ff; color: #0369a1; }
-  .tense-group-header.future  { background: #f0fdf4; color: #166534; }
-
-  /* tense stats in meta card */
-  .tense-filled-count {
-    font-family: 'Quicksand', sans-serif; font-size: 0.7rem; font-weight: 700;
-    opacity: 0.82;
-  }
-
-  /* ── RECORDINGS ── */
-  .rec-item {
-    background: var(--red-pale); border: var(--border); border-radius: 16px;
-    padding: 14px 16px; box-shadow: var(--shadow-sm); animation: fadeUp 0.35s ease both;
-    margin-bottom: 10px;
-  }
-  .rec-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; flex-wrap: wrap; }
-  .rec-badge {
-    background: var(--red); color: white; border: var(--border); border-radius: 50px;
-    padding: 3px 14px; font-weight: 700; font-size: 0.8rem; box-shadow: var(--shadow-sm);
-  }
-  .rec-ts { font-family: 'Quicksand', sans-serif; font-size: 0.73rem; color: var(--muted); font-weight: 600; }
-  .rec-item audio { width: 100%; height: 36px; display: block; border-radius: 8px; border: var(--border); margin-bottom: 6px; }
-  .rec-stt {
-    font-family: 'Quicksand', sans-serif; font-size: 0.88rem; font-weight: 600; color: #444;
-    background: var(--white); border: var(--border); border-radius: 10px; padding: 9px 13px; line-height: 1.6;
-  }
-  .rec-stt::before { content: '💬 '; }
-
-  /* ── RECORDER SECTION ── */
-  .lang-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
-  .lang-row select {
-    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.88rem;
-    background: var(--white); border: var(--border); border-radius: 10px;
-    padding: 7px 12px; outline: none; cursor: pointer;
-  }
-  .recorder-inner {
-    background: var(--red-pale); border: var(--border); border-radius: 14px;
-    padding: 16px 18px; margin-bottom: 14px;
-    width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden;
-  }
-  .rec-controls { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
-  .rec-dot {
-    width: 12px; height: 12px; border-radius: 50%;
-    background: var(--muted); border: var(--border); flex-shrink: 0; transition: background 0.3s;
-  }
-  .rec-dot.active { background: var(--red); animation: blink 1s ease-in-out infinite; }
-  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
-  .rec-timer { font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 1.1rem; min-width: 50px; }
-
-  .btn {
-    font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 0.95rem;
-    padding: 9px 20px; border: var(--border-thick); border-radius: 50px;
-    box-shadow: var(--shadow-sm); cursor: pointer;
-    display: inline-flex; align-items: center; gap: 7px;
-    transition: transform 0.12s, box-shadow 0.12s;
-    white-space: nowrap; background: var(--white); color: var(--black);
-  }
-  .btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
-  .btn:active { transform: translate(1px,1px); box-shadow: none; }
-  .btn:disabled { opacity: 0.4; pointer-events: none; }
-  .btn-red   { background: var(--red);   color: white; }
-  .btn-white { background: var(--white); color: var(--black); }
-
-  .stt-box {
-    font-family: 'Quicksand', sans-serif; font-weight: 600; font-size: 0.9rem;
-    line-height: 1.7; color: var(--muted); background: var(--white); border: var(--border);
-    border-radius: 10px; padding: 11px 14px; min-height: 52px;
-    white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word;
-    overflow: hidden; width: 100%; max-width: 100%; box-sizing: border-box;
-  }
-  .stt-box.has-text { color: var(--black); }
-
-  .live-rec-item {
-    background: var(--white); border: var(--border); border-radius: 14px;
-    padding: 12px 14px; display: flex; align-items: center; gap: 10px;
-    box-shadow: var(--shadow-sm); animation: fadeUp 0.3s ease both; margin-bottom: 8px;
-  }
-  .live-rec-num {
-    background: var(--green); color: white; border: var(--border); border-radius: 50px;
-    padding: 2px 12px; font-weight: 700; font-size: 0.78rem; flex-shrink: 0;
-  }
-  .live-rec-item audio { flex: 1; height: 32px; border-radius: 8px; min-width: 0; border: var(--border); }
-  .live-rec-stt {
-    font-family: 'Quicksand', sans-serif; font-size: 0.75rem; font-weight: 600;
-    color: var(--muted); max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  }
-  .live-rec-actions { display: flex; gap: 6px; flex-shrink: 0; }
-  .btn-icon {
-    width: 32px; height: 32px; border-radius: 50%; border: var(--border); background: var(--white);
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; font-size: 0.88rem; box-shadow: var(--shadow-sm);
-    transition: transform 0.1s, box-shadow 0.1s;
-  }
-  .btn-icon:hover { transform: translate(-1px,-1px); box-shadow: var(--shadow-md); }
-  .btn-icon.del { background: var(--red-pale); }
-  .btn-icon.dl  { background: var(--green-pale); }
-
-  .status-msg {
-    font-family: 'Quicksand', sans-serif; font-weight: 700; font-size: 0.82rem;
-    padding: 8px 14px; border-radius: 10px; margin-top: 10px;
-    border: var(--border); display: none;
-  }
-  .status-msg.show { display: block; }
-  .status-msg.info    { background: var(--yellow-pale); color: #7a5c00; }
-  .status-msg.success { background: var(--green-pale);  color: var(--green-dark); }
-  .status-msg.error   { background: var(--red-pale);    color: var(--red-dark); }
-
-  /* ── EMPTY STATE ── */
-  .empty-state {
-    text-align: center; padding: 28px 20px; color: var(--muted); font-size: 0.95rem;
-    font-family: 'Quicksand', sans-serif; font-weight: 600;
-  }
-  .empty-state .emoji { font-size: 2.2rem; display: block; margin-bottom: 8px; }
-
-  /* ── LOADER / ERROR ── */
-  .center-wrap {
-    display: flex; flex-direction: column; align-items: center;
-    justify-content: center; min-height: 60vh; gap: 18px;
-    position: relative; z-index: 1; padding: 40px;
-  }
-  .loader-spinner {
-    width: 52px; height: 52px; border-radius: 50%;
-    border: 4px solid var(--red-light); border-top-color: var(--red);
-    animation: spin 0.8s linear infinite;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .loader-text { font-size: 1.05rem; font-weight: 700; color: var(--red); }
-
-  .error-card {
-    background: var(--red-light); border: var(--border-thick); border-radius: 22px;
-    box-shadow: var(--shadow-lg); padding: 44px 36px; text-align: center; max-width: 500px;
-  }
-  .error-card .emoji { font-size: 2.8rem; margin-bottom: 12px; }
-  .error-card h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
-  .error-card p { font-family: 'Quicksand', sans-serif; color: #555; font-size: 0.95rem; line-height: 1.65; }
-  .error-card code { background: var(--white); border: var(--border); border-radius: 6px; padding: 1px 8px; font-size: 0.88rem; }
-
-  /* ── SESSION LIST ── */
-  .session-list { width: 100%; max-width: 680px; }
-  .session-list h2 {
-    font-size: 1.4rem; font-weight: 700; margin-bottom: 20px; display: inline-block;
-    background: var(--yellow); border: var(--border-thick); border-radius: 50px;
-    padding: 8px 26px; box-shadow: var(--shadow-md);
-  }
-  .session-list-items { display: flex; flex-direction: column; gap: 12px; }
-  .session-list-item {
-    background: var(--white); border: var(--border-thick); border-radius: 16px;
-    box-shadow: var(--shadow-sm); padding: 16px 20px;
-    display: flex; justify-content: space-between; align-items: center; gap: 16px;
-    text-decoration: none; color: var(--black); transition: transform 0.12s, box-shadow 0.12s;
-  }
-  .session-list-item:hover { transform: translate(-3px,-3px); box-shadow: var(--shadow-lg); }
-  .session-list-item .sli-id {
-    font-weight: 700; background: var(--red-light); border: var(--border); border-radius: 50px; padding: 3px 14px;
-  }
-  .session-list-item .sli-date { font-family: 'Quicksand', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--muted); }
-  .session-list-item .sli-arrow { font-size: 1.2rem; color: var(--red); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--black); color: rgba(255,255,255,0.6);
-    padding: 28px 50px; text-align: center; position: relative; z-index: 1;
-  }
-  footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
-  footer p { font-size: 0.9rem; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .page-grid { grid-template-columns: 1fr; padding: 20px 20px 80px; }
-    .video-col { position: static; }
-    .video-card, .video-placeholder { max-width: 320px; margin: 0 auto; }
-    .tiktok-hide-mobile { display: none; }
-  }
-  @media (max-width: 600px) {
-    header { padding: 0 16px; }
-    .video-card, .video-placeholder { max-width: 100%; }
-    .card { padding: 16px; }
-    .page-grid { padding: 14px 14px 60px; gap: 16px; }
-    .live-rec-item { flex-wrap: wrap; }
-    .live-rec-item audio { min-width: 0; width: 100%; flex: none; order: 2; }
-    .live-rec-num { order: 1; }
-    .live-rec-stt { order: 3; max-width: 100%; white-space: normal; }
-    .live-rec-actions { order: 4; }
-    .tenses-table { font-size: 0.82rem; }
-    .tenses-table th, .tenses-table td { padding: 8px 10px; }
-  }
+  /* Recorder section */
+  .lang-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+  .lang-row select{font-family:'Quicksand',sans-serif;font-weight:600;font-size:.88rem;background:var(--white);border:var(--border);border-radius:10px;padding:7px 12px;outline:none;cursor:pointer}
+  .recorder-inner{background:var(--red-pale);border:var(--border);border-radius:14px;padding:16px 18px;margin-bottom:14px;width:100%;max-width:100%;box-sizing:border-box;overflow:hidden}
+  .rec-controls{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+  .rec-dot{width:12px;height:12px;border-radius:50%;background:var(--muted);border:var(--border);flex-shrink:0;transition:background .3s}
+  .rec-dot.active{background:var(--red);animation:blink 1s ease-in-out infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  .rec-timer{font-family:'Quicksand',sans-serif;font-weight:700;font-size:1.1rem;min-width:50px}
+  .btn{font-family:'Fredoka',sans-serif;font-weight:700;font-size:.95rem;padding:9px 20px;border:var(--border-thick);border-radius:50px;box-shadow:var(--shadow-sm);cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:transform .12s,box-shadow .12s;white-space:nowrap;background:var(--white);color:var(--black)}
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+  .btn:active{transform:translate(1px,1px);box-shadow:none}
+  .btn:disabled{opacity:.4;pointer-events:none}
+  .btn-red{background:var(--red);color:white}
+  .btn-white{background:var(--white);color:var(--black)}
+  .stt-box{font-family:'Quicksand',sans-serif;font-weight:600;font-size:.9rem;line-height:1.7;color:var(--muted);background:var(--white);border:var(--border);border-radius:10px;padding:11px 14px;min-height:52px;white-space:pre-wrap;word-break:break-word;overflow-wrap:break-word;overflow:hidden;width:100%;max-width:100%;box-sizing:border-box}
+  .stt-box.has-text{color:var(--black)}
+  .live-rec-item{background:var(--white);border:var(--border);border-radius:14px;padding:12px 14px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-sm);animation:fadeUp .3s ease both;margin-bottom:8px}
+  .live-rec-num{background:var(--green);color:white;border:var(--border);border-radius:50px;padding:2px 12px;font-weight:700;font-size:.78rem;flex-shrink:0}
+  .live-rec-item audio{flex:1;height:32px;border-radius:8px;min-width:0;border:var(--border)}
+  .live-rec-stt{font-family:'Quicksand',sans-serif;font-size:.75rem;font-weight:600;color:var(--muted);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .live-rec-actions{display:flex;gap:6px;flex-shrink:0}
+  .btn-icon{width:32px;height:32px;border-radius:50%;border:var(--border);background:var(--white);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:.88rem;box-shadow:var(--shadow-sm);transition:transform .1s,box-shadow .1s}
+  .btn-icon:hover{transform:translate(-1px,-1px);box-shadow:var(--shadow-md)}
+  .btn-icon.del{background:var(--red-pale)}
+  .btn-icon.dl{background:var(--green-pale)}
+  .status-msg{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.82rem;padding:8px 14px;border-radius:10px;margin-top:10px;border:var(--border);display:none}
+  .status-msg.show{display:block}
+  .status-msg.info{background:var(--yellow-pale);color:#7a5c00}
+  .status-msg.success{background:var(--green-pale);color:var(--green-dark)}
+  .status-msg.error{background:var(--red-pale);color:var(--red-dark)}
+  .empty-state{text-align:center;padding:28px 20px;color:var(--muted);font-size:.95rem;font-family:'Quicksand',sans-serif;font-weight:600}
+  .empty-state .emoji{font-size:2.2rem;display:block;margin-bottom:8px}
+  .center-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;gap:18px;position:relative;z-index:1;padding:40px}
+  .loader-spinner{width:52px;height:52px;border-radius:50%;border:4px solid var(--red-light);border-top-color:var(--red);animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .loader-text{font-size:1.05rem;font-weight:700;color:var(--red)}
+  .error-card{background:var(--red-light);border:var(--border-thick);border-radius:22px;box-shadow:var(--shadow-lg);padding:44px 36px;text-align:center;max-width:500px}
+  .error-card .emoji{font-size:2.8rem;margin-bottom:12px}
+  .error-card h2{font-size:1.5rem;font-weight:700;margin-bottom:10px}
+  .error-card p{font-family:'Quicksand',sans-serif;color:#555;font-size:.95rem;line-height:1.65}
+  .error-card code{background:var(--white);border:var(--border);border-radius:6px;padding:1px 8px;font-size:.88rem}
+  .session-list{width:100%;max-width:680px}
+  .session-list h2{font-size:1.4rem;font-weight:700;margin-bottom:20px;display:inline-block;background:var(--yellow);border:var(--border-thick);border-radius:50px;padding:8px 26px;box-shadow:var(--shadow-md)}
+  .session-list-items{display:flex;flex-direction:column;gap:12px}
+  .session-list-item{background:var(--white);border:var(--border-thick);border-radius:16px;box-shadow:var(--shadow-sm);padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;text-decoration:none;color:var(--black);transition:transform .12s,box-shadow .12s}
+  .session-list-item:hover{transform:translate(-3px,-3px);box-shadow:var(--shadow-lg)}
+  .session-list-item .sli-id{font-weight:700;background:var(--red-light);border:var(--border);border-radius:50px;padding:3px 14px}
+  .session-list-item .sli-date{font-family:'Quicksand',sans-serif;font-size:.78rem;font-weight:600;color:var(--muted)}
+  .session-list-item .sli-arrow{font-size:1.2rem;color:var(--red)}
+  footer{background:var(--black);color:rgba(255,255,255,.6);padding:28px 50px;text-align:center;position:relative;z-index:1}
+  footer .brand{font-weight:700;color:var(--red-light);font-size:1.2rem;margin-bottom:4px}
+  footer p{font-size:.9rem}
+  @media(max-width:900px){.page-grid{grid-template-columns:1fr;padding:20px 20px 80px}.video-col{position:static}.video-card,.video-placeholder{max-width:320px;margin:0 auto}.tiktok-hide-mobile{display:none}}
+  @media(max-width:600px){header{padding:0 16px}.video-card,.video-placeholder{max-width:100%}.card{padding:16px}.page-grid{padding:14px 14px 60px;gap:16px}.live-rec-item{flex-wrap:wrap}.live-rec-item audio{min-width:0;width:100%;flex:none;order:2}.live-rec-num{order:1}.live-rec-stt{order:3;max-width:100%;white-space:normal}.live-rec-actions{order:4}}
 </style>
 </head>
 <body>
-
-<header>
-  <a class="logo" href="index.html">🔴 FREESIZE ENGLISH</a>
-</header>
-
+<header><a class="logo" href="index.html">🔴 FREESIZE ENGLISH</a></header>
 <div id="app"></div>
-
-<footer>
-  <p class="brand">FREESIZE ENGLISH</p>
-  <p>Your personal English study archive</p>
-</footer>
+<footer><p class="brand">FREESIZE ENGLISH</p><p>Your personal English study archive</p></footer>
 
 <script>
-// ── TENSE DEFINITIONS ──────────────────────────────────────────────────────
+// ── TENSE CONFIG ───────────────────────────────────────────────────────────
 const TENSES = [
-  { id:'past_simple',      group:'past',    name:'Past Simple',                   type:'simple',    badge:'badge-simple' },
-  { id:'past_cont',        group:'past',    name:'Past Continuous',               type:'cont',      badge:'badge-cont' },
-  { id:'past_perfect',     group:'past',    name:'Past Perfect',                  type:'perfect',   badge:'badge-perfect' },
-  { id:'past_perf_cont',   group:'past',    name:'Past Perfect Continuous',       type:'perf-cont', badge:'badge-perf-cont' },
-  { id:'pres_simple',      group:'present', name:'Present Simple',                type:'simple',    badge:'badge-simple' },
-  { id:'pres_cont',        group:'present', name:'Present Continuous',            type:'cont',      badge:'badge-cont' },
-  { id:'pres_perfect',     group:'present', name:'Present Perfect',               type:'perfect',   badge:'badge-perfect' },
-  { id:'pres_perf_cont',   group:'present', name:'Present Perfect Continuous',    type:'perf-cont', badge:'badge-perf-cont' },
-  { id:'fut_simple',       group:'future',  name:'Future Simple',                 type:'simple',    badge:'badge-simple' },
-  { id:'fut_cont',         group:'future',  name:'Future Continuous',             type:'cont',      badge:'badge-cont' },
-  { id:'fut_perfect',      group:'future',  name:'Future Perfect',                type:'perfect',   badge:'badge-perfect' },
-  { id:'fut_perf_cont',    group:'future',  name:'Future Perfect Continuous',     type:'perf-cont', badge:'badge-perf-cont' },
+  {id:'past_simple',     label:'Past Simple',                color:'#ca8a04',bg:'#fef9c3',fg:'#78350f'},
+  {id:'past_cont',       label:'Past Continuous',            color:'#3b82f6',bg:'#dbeafe',fg:'#1e3a8a'},
+  {id:'past_perfect',    label:'Past Perfect',               color:'#22c55e',bg:'#dcfce7',fg:'#14532d'},
+  {id:'past_perf_cont',  label:'Past Perfect Continuous',    color:'#a855f7',bg:'#f3e8ff',fg:'#581c87'},
+  {id:'pres_simple',     label:'Present Simple',             color:'#f59e0b',bg:'#fef3c7',fg:'#78350f'},
+  {id:'pres_cont',       label:'Present Continuous',         color:'#0ea5e9',bg:'#bae6fd',fg:'#0c4a6e'},
+  {id:'pres_perfect',    label:'Present Perfect',            color:'#4ade80',bg:'#bbf7d0',fg:'#14532d'},
+  {id:'pres_perf_cont',  label:'Present Perfect Continuous', color:'#c084fc',bg:'#e9d5ff',fg:'#581c87'},
+  {id:'fut_simple',      label:'Future Simple',              color:'#f97316',bg:'#fed7aa',fg:'#7c2d12'},
+  {id:'fut_cont',        label:'Future Continuous',          color:'#22d3ee',bg:'#cffafe',fg:'#164e63'},
+  {id:'fut_perfect',     label:'Future Perfect',             color:'#84cc16',bg:'#d9f99d',fg:'#365314'},
+  {id:'fut_perf_cont',   label:'Future Perfect Continuous',  color:'#ec4899',bg:'#fce7f3',fg:'#831843'},
 ];
-
-const GROUP_LABELS = {
-  past:    { emoji: '⬅', label: 'PAST',    cls: 'past' },
-  present: { emoji: '●', label: 'PRESENT', cls: 'present' },
-  future:  { emoji: '➡', label: 'FUTURE',  cls: 'future' },
-};
+const TENSE_MAP = Object.fromEntries(TENSES.map(t=>[t.id,t]));
 
 // ── UTILS ──────────────────────────────────────────────────────────────────
-function getParam(k) { return new URLSearchParams(window.location.search).get(k); }
+function getParam(k){return new URLSearchParams(window.location.search).get(k)}
+function fmtDate(iso){if(!iso)return'—';try{return new Date(iso).toLocaleString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})}catch{return iso}}
+function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function extractTikTokId(url){const m=url.match(/\/video\/(\d+)/);return m?m[1]:null}
 
-function fmtDate(iso) {
-  if (!iso) return '—';
-  try {
-    return new Date(iso).toLocaleString('vi-VN', {
-      day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit'
-    });
-  } catch { return iso; }
-}
-
-function esc(s) {
-  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-function extractTikTokId(url) {
-  const m = url.match(/\/video\/(\d+)/);
-  return m ? m[1] : null;
-}
-
-// ── NORMALISE JSON ─────────────────────────────────────────────────────────
-function normalise(raw) {
-  const d = { ...raw };
-
-  if (typeof d.recordings === 'string') {
-    const urls = d.recordings.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
-    d.recordings = urls.map((url, i) => ({ index: i+1, url, sttText: '', timestamp: d.createdAt||null }));
-  } else if (Array.isArray(d.recordings)) {
-    d.recordings = d.recordings.map((r, i) => ({
-      index: r.index || i+1, url: r.url || r.audioFile || null,
-      sttText: r.sttText || '', timestamp: r.timestamp || d.createdAt || null,
-    }));
-  } else {
-    d.recordings = [];
-  }
-
-  d._vocab = typeof d.vocabulary === 'string'
-    ? d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean) : [];
-
-  d._grammar = typeof d.grammarStructures === 'string'
-    ? d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean) : [];
-
-  // tenses — object keyed by tense id
-  d._tenses = (typeof d.tenses === 'object' && d.tenses !== null) ? d.tenses : {};
-
+function normalise(raw){
+  const d={...raw};
+  if(typeof d.recordings==='string'){const urls=d.recordings.split(/[\n,]+/).map(s=>s.trim()).filter(Boolean);d.recordings=urls.map((url,i)=>({index:i+1,url,sttText:'',timestamp:d.createdAt||null}))}
+  else if(Array.isArray(d.recordings))d.recordings=d.recordings.map((r,i)=>({index:r.index||i+1,url:r.url||r.audioFile||null,sttText:r.sttText||'',timestamp:r.timestamp||d.createdAt||null}));
+  else d.recordings=[];
+  d._vocab=typeof d.vocabulary==='string'?d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean):[];
+  d._grammar=typeof d.grammarStructures==='string'?d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean):[];
+  // tenseAnnotation: {sentence, annotations:[{text,start,end,tenseId,tenseLabel}]}
+  d._tenseAnn=(d.tenseAnnotation&&typeof d.tenseAnnotation==='object')?d.tenseAnnotation:{sentence:'',annotations:[]};
   return d;
 }
 
 // ── VIDEO ──────────────────────────────────────────────────────────────────
-function buildVideo(url) {
-  if (!url || !url.trim()) return null;
-  const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/);
-  if (yt) return { type: 'youtube', iframe: `https://www.youtube.com/embed/${yt[1]}?rel=0`, link: url, label: '↗ Open on YouTube' };
-  if (url.includes('tiktok.com')) return { type: 'tiktok', vid: extractTikTokId(url), link: url, label: '↗ Watch on TikTok' };
-  return { type: 'generic', iframe: url, link: url, label: '↗ Open link' };
+function buildVideo(url){
+  if(!url||!url.trim())return null;
+  const yt=url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/);
+  if(yt)return{type:'youtube',iframe:`https://www.youtube.com/embed/${yt[1]}?rel=0`,link:url,label:'↗ Open on YouTube'};
+  if(url.includes('tiktok.com'))return{type:'tiktok',vid:extractTikTokId(url),link:url,label:'↗ Watch on TikTok'};
+  return{type:'generic',iframe:url,link:url,label:'↗ Open link'};
+}
+function buildVideoColHTML(vid){
+  if(!vid)return`<div class="video-placeholder"><span class="big-emoji">🎬</span><span>No video URL</span></div>`;
+  if(vid.type==='youtube')return`<div class="video-card"><iframe src="${esc(vid.iframe)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
+  if(vid.type==='tiktok'){
+    if(!vid.vid)return`<div class="video-placeholder"><span class="big-emoji">🎵</span><span>Can't extract TikTok ID</span><a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a></div>`;
+    return`<div class="tiktok-iframe-wrap tiktok-hide-mobile"><iframe src="https://www.tiktok.com/embed/v2/${vid.vid}?autoplay=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" scrolling="no"></iframe></div><a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>Watch on TikTok</a>`;
+  }
+  return`<div class="video-card"><iframe src="${esc(vid.iframe)}" allowfullscreen loading="lazy"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
 }
 
-function buildVideoColHTML(vid) {
-  if (!vid) return `<div class="video-placeholder"><span class="big-emoji">🎬</span><span>No video URL</span></div>`;
-  if (vid.type === 'youtube') return `
-    <div class="video-card"><iframe src="${esc(vid.iframe)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
-    <a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
-  if (vid.type === 'tiktok') {
-    if (!vid.vid) return `<div class="video-placeholder"><span class="big-emoji">🎵</span><span>Can't extract TikTok ID</span><a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener" style="margin-top:12px;">↗ Open on TikTok</a></div>`;
-    return `
-      <div class="tiktok-iframe-wrap tiktok-hide-mobile">
-        <iframe src="https://www.tiktok.com/embed/v2/${vid.vid}?autoplay=1" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" scrolling="no"></iframe>
-      </div>
-      <a class="tiktok-open-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
-        Watch on TikTok
-      </a>`;
-  }
-  return `<div class="video-card"><iframe src="${esc(vid.iframe)}" allowfullscreen loading="lazy"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
-}
-
-// ── BUILD TENSES TABLE HTML ────────────────────────────────────────────────
-function buildTensesHTML(tensesData) {
-  const filledCount = TENSES.filter(t => tensesData[t.id] && tensesData[t.id].trim()).length;
-  if (filledCount === 0) {
-    return `<div class="empty-state"><span class="emoji">📭</span>No tense sentences saved yet.</div>`;
+// ── BUILD TENSE ANNOTATION HTML ───────────────────────────────────────────
+function buildTenseHTML(tenseAnn) {
+  if (!tenseAnn || !tenseAnn.sentence || !tenseAnn.sentence.trim()) {
+    return `<div class="empty-state"><span class="emoji">📭</span>No tense annotation saved yet.</div>`;
   }
 
-  const groups = ['past', 'present', 'future'];
-  let html = `
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
-      <div style="font-family:'Quicksand',sans-serif;font-size:0.82rem;font-weight:700;color:var(--muted);">
-        ${filledCount}/12 thì có câu ví dụ
-      </div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;">
-        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#fef3c7;border:1.5px solid #b45309;display:inline-block;"></span>Simple</span>
-        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#bae6fd;border:1.5px solid #0369a1;display:inline-block;"></span>Continuous</span>
-        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#bbf7d0;border:1.5px solid #166534;display:inline-block;"></span>Perfect</span>
-        <span style="font-family:'Quicksand',sans-serif;font-size:0.7rem;font-weight:700;display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#e9d5ff;border:1.5px solid #7e22ce;display:inline-block;"></span>Perf. Cont.</span>
-      </div>
-    </div>
-    <div class="tenses-table-wrap">
-      <table class="tenses-table">
-        <thead>
-          <tr style="background:var(--purple-pale);">
-            <th style="width:38%;color:var(--purple);">Tense</th>
-            <th style="color:var(--purple);">Example Sentence</th>
-          </tr>
-        </thead>
-        <tbody>`;
+  const { sentence, annotations } = tenseAnn;
+  const anns = (annotations || []).slice().sort((a,b) => a.start - b.start);
 
-  groups.forEach(grp => {
-    const g = GROUP_LABELS[grp];
-    const grpTenses = TENSES.filter(t => t.group === grp);
-    const grpFilled = grpTenses.filter(t => tensesData[t.id] && tensesData[t.id].trim()).length;
-    if (grpFilled === 0) return;
-
-    html += `<tr><td colspan="2" class="tense-group-header ${g.cls}">${g.emoji} ${g.label} <span style="opacity:0.6;font-weight:600;">(${grpFilled}/${grpTenses.length})</span></td></tr>`;
-
-    grpTenses.forEach(t => {
-      const sentence = tensesData[t.id] ? tensesData[t.id].trim() : '';
-      if (!sentence) return;
-      html += `
-        <tr class="tense-row-${t.type}">
-          <td>
-            <div class="tense-name-cell">
-              <span class="tense-display-name">${esc(t.name)}</span>
-              <span class="tense-type-badge ${t.badge}">${t.type === 'perf-cont' ? 'Perf. Cont.' : t.type.charAt(0).toUpperCase() + t.type.slice(1)}</span>
-            </div>
-          </td>
-          <td><span class="tense-sentence">${esc(sentence)}</span></td>
-        </tr>`;
-    });
+  // Build annotated sentence
+  let sentHtml = '', cursor = 0;
+  anns.forEach(ann => {
+    if (ann.start > cursor) sentHtml += `<span class="plain">${esc(sentence.slice(cursor, ann.start))}</span>`;
+    sentHtml += `<span class="tense-mark hl-${esc(ann.tenseId)}">${esc(sentence.slice(ann.start, ann.end))}</span>`;
+    cursor = ann.end;
   });
+  if (cursor < sentence.length) sentHtml += `<span class="plain">${esc(sentence.slice(cursor))}</span>`;
 
-  html += `</tbody></table></div>`;
-  return html;
-}
-
-// ── LIVE RECORDER STATE ────────────────────────────────────────────────────
-let liveRecordings = [], mediaRec = null, audioChunks = [], isRecording = false;
-let timerInt = null, recSecs = 0, speechRec = null, currentSTT = '';
-
-function showRecStatus(msg, type) {
-  const el = document.getElementById('liveRecStatus');
-  if (!el) return;
-  el.textContent = msg; el.className = `status-msg show ${type}`;
-  if (type !== 'info') setTimeout(() => el.classList.remove('show'), 5000);
-}
-
-async function toggleRecording() { isRecording ? stopRecording() : await startRecording(); }
-
-async function startRecording() {
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const mimeType = getSupportedMimeType();
-    mediaRec    = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
-    audioChunks = []; currentSTT = '';
-
-    mediaRec.ondataavailable = e => audioChunks.push(e.data);
-    mediaRec.onstop = saveLiveRecording;
-    mediaRec.start();
-    isRecording = true;
-
-    document.getElementById('liveRecDot').classList.add('active');
-    document.getElementById('liveRecBtn').textContent = '⏸ Pause';
-    document.getElementById('liveStopBtn').disabled   = false;
-
-    recSecs = 0;
-    timerInt = setInterval(() => {
-      recSecs++;
-      const m = String(Math.floor(recSecs/60)).padStart(2,'0');
-      const s = String(recSecs%60).padStart(2,'0');
-      document.getElementById('liveRecTimer').textContent = `${m}:${s}`;
-    }, 1000);
-
-    startSTT();
-    showRecStatus('Recording... speak clearly 🎙️', 'info');
-  } catch(e) { showRecStatus('Microphone denied: ' + e.message, 'error'); }
-}
-
-function stopRecording() {
-  if (!mediaRec) return;
-  mediaRec.stop(); mediaRec.stream.getTracks().forEach(t => t.stop());
-  isRecording = false; clearInterval(timerInt);
-  document.getElementById('liveRecDot').classList.remove('active');
-  document.getElementById('liveRecBtn').textContent = '● REC';
-  document.getElementById('liveStopBtn').disabled   = true;
-  if (speechRec) { speechRec.stop(); speechRec = null; }
-}
-
-function getSupportedMimeType() {
-  const types = ['audio/mp4','audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/ogg'];
-  for (const t of types) { if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) return t; }
-  return '';
-}
-
-function saveLiveRecording() {
-  const mimeType = getSupportedMimeType();
-  const blob  = new Blob(audioChunks, mimeType ? { type: mimeType } : {});
-  const url   = URL.createObjectURL(blob);
-  const ext   = mimeType.includes('mp4') ? 'mp4' : mimeType.includes('ogg') ? 'ogg' : 'webm';
-  const idx   = liveRecordings.length + 1;
-  liveRecordings.push({ index: idx, blob, url, ext, sttText: currentSTT.trim(), timestamp: new Date().toISOString() });
-  renderLiveRecordings();
-  showRecStatus(`✓ Recording #${idx} saved`, 'success');
-}
-
-function renderLiveRecordings() {
-  const list = document.getElementById('liveRecordingsList');
-  if (!list) return;
-  if (liveRecordings.length === 0) {
-    list.innerHTML = '<div style="font-family:Quicksand,sans-serif;font-size:0.85rem;color:var(--muted);padding:4px 0;">No recordings yet — hit REC to start!</div>';
-    return;
-  }
-  list.innerHTML = '';
-  liveRecordings.forEach((rec, i) => {
-    const div = document.createElement('div');
-    div.className = 'live-rec-item';
-    div.innerHTML = `
-      <span class="live-rec-num">REC ${rec.index}</span>
-      <audio controls src="${rec.url}"></audio>
-      ${rec.sttText ? `<span class="live-rec-stt" title="${esc(rec.sttText)}">${esc(rec.sttText)}</span>` : ''}
-      <div class="live-rec-actions">
-        <button class="btn-icon dl" title="Download" onclick="downloadLiveRec(${i})">⬇</button>
-        <button class="btn-icon del" title="Delete" onclick="deleteLiveRec(${i})">✕</button>
+  // Build notes
+  let notesHtml = '';
+  anns.forEach((ann, i) => {
+    const t = TENSE_MAP[ann.tenseId] || {};
+    notesHtml += `
+      <div class="tense-note" style="animation-delay:${i*0.06}s">
+        <span class="tense-note-swatch" style="background:${t.color||'#888'};"></span>
+        <div class="tense-note-body">
+          <div class="tense-note-phrase hl-${esc(ann.tenseId)}" style="display:inline-block;border-radius:6px;padding:2px 8px;margin-bottom:6px;">"${esc(ann.text)}"</div>
+          <br>
+          <span class="tense-note-tag" style="background:${t.bg||'#eee'};color:${t.fg||'#333'};">${esc(ann.tenseLabel || t.label || ann.tenseId)}</span>
+        </div>
       </div>`;
-    list.appendChild(div);
   });
+
+  return `
+    <div class="tense-sentence-wrap">
+      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--purple);margin-bottom:12px;">📌 Annotated sentence</div>
+      <div class="tense-sentence-text">${sentHtml}</div>
+    </div>
+    ${anns.length > 0 ? `
+      <div style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:10px;">📝 Tense notes</div>
+      <div class="tense-notes">${notesHtml}</div>` : ''}`;
 }
 
-function downloadLiveRec(i) {
-  const rec = liveRecordings[i];
-  const a = document.createElement('a');
-  a.href = rec.url; a.download = `practice_rec_${rec.index}_${Date.now()}.${rec.ext||'webm'}`; a.click();
+// ── LIVE RECORDER ─────────────────────────────────────────────────────────
+let liveRecs=[],mediaRec=null,audioChunks=[],isRecording=false;
+let timerInt=null,recSecs=0,speechRec=null,currentSTT='';
+function showRecStatus(msg,type){const el=document.getElementById('liveRecStatus');if(!el)return;el.textContent=msg;el.className=`status-msg show ${type}`;if(type!=='info')setTimeout(()=>el.classList.remove('show'),5000)}
+async function toggleRecording(){isRecording?stopRecording():await startRecording()}
+async function startRecording(){
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    const mt=getSupportedMimeType();
+    mediaRec=mt?new MediaRecorder(stream,{mimeType:mt}):new MediaRecorder(stream);
+    audioChunks=[];currentSTT='';
+    mediaRec.ondataavailable=e=>audioChunks.push(e.data);mediaRec.onstop=saveLiveRec;mediaRec.start();isRecording=true;
+    document.getElementById('liveRecDot').classList.add('active');
+    document.getElementById('liveRecBtn').textContent='⏸ Pause';
+    document.getElementById('liveStopBtn').disabled=false;
+    recSecs=0;timerInt=setInterval(()=>{recSecs++;const m=String(Math.floor(recSecs/60)).padStart(2,'0'),s=String(recSecs%60).padStart(2,'0');document.getElementById('liveRecTimer').textContent=`${m}:${s}`},1000);
+    startSTT();showRecStatus('Recording... 🎙️','info');
+  }catch(e){showRecStatus('Microphone denied: '+e.message,'error')}
 }
-
-function deleteLiveRec(i) {
-  liveRecordings.splice(i, 1);
-  liveRecordings.forEach((r, idx) => { r.index = idx + 1; });
-  renderLiveRecordings();
+function stopRecording(){
+  if(!mediaRec)return;mediaRec.stop();mediaRec.stream.getTracks().forEach(t=>t.stop());
+  isRecording=false;clearInterval(timerInt);
+  document.getElementById('liveRecDot').classList.remove('active');
+  document.getElementById('liveRecBtn').textContent='● REC';
+  document.getElementById('liveStopBtn').disabled=true;
+  if(speechRec){speechRec.stop();speechRec=null}
 }
-
-function startSTT() {
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  const el = document.getElementById('liveSttOutput');
-  if (!SR) { if (el) { el.textContent = 'STT not supported — use Chrome.'; el.classList.add('has-text'); } return; }
-
-  speechRec = new SR();
-  speechRec.continuous = true; speechRec.interimResults = true;
-  speechRec.lang = document.getElementById('liveSttLang')?.value || 'en-US';
-
-  let finalText = '';
-  speechRec.onresult = e => {
-    let interim = '';
-    for (let i = e.resultIndex; i < e.results.length; i++) {
-      e.results[i].isFinal ? (finalText += e.results[i][0].transcript + ' ') : (interim += e.results[i][0].transcript);
-    }
-    currentSTT = finalText + interim;
-    if (el) { el.className = 'stt-box has-text'; el.textContent = currentSTT || '...listening'; }
-  };
-  speechRec.onerror = e => { if (e.error !== 'no-speech' && el) el.textContent = 'STT error: ' + e.error; };
-  speechRec.onend = () => { if (isRecording) { try { speechRec.start(); } catch(e){} } };
+function getSupportedMimeType(){const types=['audio/mp4','audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/ogg'];for(const t of types)if(MediaRecorder.isTypeSupported&&MediaRecorder.isTypeSupported(t))return t;return''}
+function saveLiveRec(){
+  const mt=getSupportedMimeType(),blob=new Blob(audioChunks,mt?{type:mt}:{});
+  const url=URL.createObjectURL(blob),ext=mt.includes('mp4')?'mp4':mt.includes('ogg')?'ogg':'webm';
+  const idx=liveRecs.length+1;
+  liveRecs.push({index:idx,blob,url,ext,sttText:currentSTT.trim()});
+  renderLiveRecs();showRecStatus(`✓ Recording #${idx} saved`,'success');
+}
+function renderLiveRecs(){
+  const list=document.getElementById('liveRecordingsList');if(!list)return;
+  if(liveRecs.length===0){list.innerHTML='<div style="font-family:Quicksand,sans-serif;font-size:.85rem;color:var(--muted);padding:4px 0;">No recordings yet — hit REC to start!</div>';return}
+  list.innerHTML='';
+  liveRecs.forEach((rec,i)=>{const div=document.createElement('div');div.className='live-rec-item';div.innerHTML=`<span class="live-rec-num">REC ${rec.index}</span><audio controls src="${rec.url}"></audio>${rec.sttText?`<span class="live-rec-stt" title="${esc(rec.sttText)}">${esc(rec.sttText)}</span>`:''}<div class="live-rec-actions"><button class="btn-icon dl" onclick="dlLiveRec(${i})">⬇</button><button class="btn-icon del" onclick="delLiveRec(${i})">✕</button></div>`;list.appendChild(div)});
+}
+function dlLiveRec(i){const r=liveRecs[i],a=document.createElement('a');a.href=r.url;a.download=`practice_rec_${r.index}_${Date.now()}.${r.ext||'webm'}`;a.click()}
+function delLiveRec(i){liveRecs.splice(i,1);liveRecs.forEach((r,j)=>r.index=j+1);renderLiveRecs()}
+function startSTT(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  const el=document.getElementById('liveSttOutput');
+  if(!SR){if(el){el.textContent='STT not supported — use Chrome.';el.classList.add('has-text')}return}
+  speechRec=new SR();speechRec.continuous=true;speechRec.interimResults=true;
+  speechRec.lang=document.getElementById('liveSttLang')?.value||'en-US';
+  let finalText='';
+  speechRec.onresult=e=>{let interim='';for(let i=e.resultIndex;i<e.results.length;i++)e.results[i].isFinal?(finalText+=e.results[i][0].transcript+' '):(interim+=e.results[i][0].transcript);currentSTT=finalText+interim;if(el){el.className='stt-box has-text';el.textContent=currentSTT||'...listening'}};
+  speechRec.onerror=e=>{if(e.error!=='no-speech'&&el)el.textContent='STT error: '+e.error};
+  speechRec.onend=()=>{if(isRecording)try{speechRec.start()}catch(e){}};
   speechRec.start();
 }
 
-// ── RENDER ─────────────────────────────────────────────────────────────────
-function renderPage(raw) {
-  const d   = normalise(raw);
-  const vid = buildVideo(d.videoUrl);
+// ── RENDER PAGE ───────────────────────────────────────────────────────────
+function renderPage(raw){
+  const d=normalise(raw);
+  const vid=buildVideo(d.videoUrl);
+  const vocCount=d._vocab.length,graCount=d._grammar.length;
+  const annCount=(d._tenseAnn.annotations||[]).length;
+  document.title=`${d.id||'Session'} — Freesize English`;
 
-  const vocCount = d._vocab.length;
-  const graCount = d._grammar.length;
-  const tenFilled = TENSES.filter(t => d._tenses[t.id] && d._tenses[t.id].trim()).length;
-
-  document.title = `${d.id || 'Session'} — Freesize English`;
-
-  const videoColHTML = buildVideoColHTML(vid) + `
+  const videoColHTML=buildVideoColHTML(vid)+`
     <div class="video-meta-card">
-      <div class="session-id">${esc(d.id || '—')}</div>
+      <div class="session-id">${esc(d.id||'—')}</div>
       <div class="stat-row">
         <div class="stat-box"><div class="num">${vocCount}</div><div class="lbl">Vocab</div></div>
         <div class="stat-box"><div class="num">${graCount}</div><div class="lbl">Grammar</div></div>
-        <div class="stat-box"><div class="num">${tenFilled}</div><div class="lbl">Tenses</div></div>
+        <div class="stat-box"><div class="num">${annCount}</div><div class="lbl">Tenses</div></div>
       </div>
     </div>`;
 
-  const transcriptHTML = d.transcript && d.transcript.trim()
-    ? `<div class="transcript-body">${esc(d.transcript)}</div>`
-    : `<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`;
+  const transcriptHTML=d.transcript&&d.transcript.trim()?`<div class="transcript-body">${esc(d.transcript)}</div>`:`<div class="empty-state"><span class="emoji">📭</span>No transcript saved.</div>`;
+  const vocabHTML=vocCount?d._vocab.map((v,i)=>`<span class="vocab-pill" style="animation-delay:${i*.04}s">${esc(v)}</span>`).join(''):`<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+  const grammarHTML=graCount?`<div class="grammar-list">${d._grammar.map((g,i)=>`<div class="grammar-item" style="animation-delay:${i*.05}s">${esc(g)}</div>`).join('')}</div>`:`<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
+  const tenseHTML=buildTenseHTML(d._tenseAnn);
 
-  const vocabHTML = vocCount
-    ? d._vocab.map((v, i) => `<span class="vocab-pill" style="animation-delay:${i*0.04}s">${esc(v)}</span>`).join('')
-    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
-
-  const grammarHTML = graCount
-    ? `<div class="grammar-list">${d._grammar.map((g, i) =>
-        `<div class="grammar-item" style="animation-delay:${i*0.05}s">${esc(g)}</div>`).join('')}</div>`
-    : `<div class="empty-state"><span class="emoji">📭</span>Nothing added yet.</div>`;
-
-  const tensesHTML = buildTensesHTML(d._tenses);
-
-  document.getElementById('app').innerHTML = `
+  document.getElementById('app').innerHTML=`
     <div class="page-grid">
-
-      <!-- VIDEO COLUMN -->
       <div class="video-col">${videoColHTML}</div>
-
-      <!-- CONTENT COLUMN -->
       <div class="content-col">
 
-        <!-- Transcript -->
         <div class="card" style="animation-delay:0s">
           <div class="card-title">📝 Transcript</div>
           <span class="date-pill">📅 ${fmtDate(d.createdAt)}</span>
           ${transcriptHTML}
         </div>
 
-        <!-- Vocabulary -->
-        <div class="card" style="animation-delay:0.07s">
+        <div class="card" style="animation-delay:.07s">
           <div class="card-title yellow">📚 Vocabulary</div>
           <div class="pill-wrap">${vocabHTML}</div>
         </div>
 
-        <!-- Grammar -->
-        <div class="card" style="animation-delay:0.13s">
+        <div class="card" style="animation-delay:.13s">
           <div class="card-title sky">🔤 Grammar & Structures</div>
           ${grammarHTML}
         </div>
 
-        <!-- 12 Tenses -->
-        <div class="card" style="animation-delay:0.18s">
-          <div class="card-title purple">🕐 12 Tenses — Practice Sentences</div>
-          ${tensesHTML}
+        <div class="card" style="animation-delay:.18s">
+          <div class="card-title purple">🕐 Tense Annotation</div>
+          ${tenseHTML}
         </div>
 
-        <!-- Audio Recordings -->
-        <div class="card" style="animation-delay:0.22s">
+        <div class="card" style="animation-delay:.23s">
           <div class="card-title green">🎙️ Audio Recordings</div>
-
-          <div>
-            <!-- Language select -->
-            <div class="lang-row">
-              <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:0.8rem;color:var(--muted);">STT LANGUAGE:</span>
-              <select id="liveSttLang">
-                <option value="en-US" selected>🇺🇸 English (US)</option>
-                <option value="en-GB">🇬🇧 English (UK)</option>
-                <option value="en-AU">🇦🇺 English (AU)</option>
-                <option value="vi-VN">🇻🇳 Vietnamese</option>
-                <option value="zh-CN">🇨🇳 Chinese (Mandarin)</option>
-                <option value="zh-TW">🇹🇼 Chinese (Traditional)</option>
-                <option value="ja-JP">🇯🇵 Japanese</option>
-                <option value="ko-KR">🇰🇷 Korean</option>
-                <option value="fr-FR">🇫🇷 French</option>
-                <option value="es-ES">🇪🇸 Spanish</option>
-                <option value="de-DE">🇩🇪 German</option>
-              </select>
+          <div class="lang-row">
+            <span style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:.8rem;color:var(--muted);">STT LANGUAGE:</span>
+            <select id="liveSttLang">
+              <option value="en-US" selected>🇺🇸 English (US)</option>
+              <option value="en-GB">🇬🇧 English (UK)</option>
+              <option value="en-AU">🇦🇺 English (AU)</option>
+              <option value="vi-VN">🇻🇳 Vietnamese</option>
+              <option value="zh-CN">🇨🇳 Chinese (Mandarin)</option>
+              <option value="zh-TW">🇹🇼 Chinese (Traditional)</option>
+              <option value="ja-JP">🇯🇵 Japanese</option>
+              <option value="ko-KR">🇰🇷 Korean</option>
+              <option value="fr-FR">🇫🇷 French</option>
+              <option value="es-ES">🇪🇸 Spanish</option>
+              <option value="de-DE">🇩🇪 German</option>
+            </select>
+          </div>
+          <div class="recorder-inner">
+            <div class="rec-controls">
+              <div class="rec-dot" id="liveRecDot"></div>
+              <div class="rec-timer" id="liveRecTimer">00:00</div>
+              <button class="btn btn-red" id="liveRecBtn" onclick="toggleRecording()">● REC</button>
+              <button class="btn btn-white" id="liveStopBtn" onclick="stopRecording()" disabled>■ Stop</button>
             </div>
-
-            <div class="recorder-inner">
-              <div class="rec-controls">
-                <div class="rec-dot" id="liveRecDot"></div>
-                <div class="rec-timer" id="liveRecTimer">00:00</div>
-                <button class="btn btn-red" id="liveRecBtn" onclick="toggleRecording()">● REC</button>
-                <button class="btn btn-white" id="liveStopBtn" onclick="stopRecording()" disabled>■ Stop</button>
-              </div>
-              <div id="liveSttOutput" class="stt-box">Speech-to-text appears here while recording...</div>
-            </div>
-
-            <div id="liveRecStatus" class="status-msg"></div>
-
-            <div id="liveRecordingsList" style="margin-top:10px;">
-              <div style="font-family:Quicksand,sans-serif;font-size:0.85rem;color:var(--muted);padding:4px 0;">No recordings yet — hit REC to start!</div>
-            </div>
+            <div id="liveSttOutput" class="stt-box">Speech-to-text appears here while recording...</div>
+          </div>
+          <div id="liveRecStatus" class="status-msg"></div>
+          <div id="liveRecordingsList" style="margin-top:10px;">
+            <div style="font-family:Quicksand,sans-serif;font-size:.85rem;color:var(--muted);padding:4px 0;">No recordings yet — hit REC to start!</div>
           </div>
         </div>
 
@@ -877,55 +392,33 @@ function renderPage(raw) {
 }
 
 // ── SESSION LIST ───────────────────────────────────────────────────────────
-function renderList(sessions) {
-  document.title = 'Sessions — Freesize English';
-  const items = sessions.map(s => `
-    <a class="session-list-item" href="?id=${esc(s.id)}">
-      <span class="sli-id">${esc(s.id)}</span>
-      <span class="sli-date">${fmtDate(s.createdAt)}</span>
-      <span class="sli-arrow">→</span>
-    </a>`).join('');
-  document.getElementById('app').innerHTML = `
-    <div class="center-wrap">
-      <div class="session-list">
-        <h2>📋 All Sessions</h2>
-        <div class="session-list-items">${items || '<p style="color:var(--muted);font-family:Quicksand,sans-serif;">No sessions found.</p>'}</div>
-      </div>
-    </div>`;
+function renderList(sessions){
+  document.title='Sessions — Freesize English';
+  const items=sessions.map(s=>`<a class="session-list-item" href="?id=${esc(s.id)}"><span class="sli-id">${esc(s.id)}</span><span class="sli-date">${fmtDate(s.createdAt)}</span><span class="sli-arrow">→</span></a>`).join('');
+  document.getElementById('app').innerHTML=`<div class="center-wrap"><div class="session-list"><h2>📋 All Sessions</h2><div class="session-list-items">${items||'<p style="color:var(--muted);font-family:Quicksand,sans-serif;">No sessions found.</p>'}</div></div></div>`;
 }
-
-function showLoader() {
-  document.getElementById('app').innerHTML = `<div class="center-wrap"><div class="loader-spinner"></div><div class="loader-text">Loading...</div></div>`;
-}
-
-function showError(title, body) {
-  document.getElementById('app').innerHTML = `<div class="center-wrap"><div class="error-card"><div class="emoji">😕</div><h2>${esc(title)}</h2><p>${body}</p></div></div>`;
-}
+function showLoader(){document.getElementById('app').innerHTML=`<div class="center-wrap"><div class="loader-spinner"></div><div class="loader-text">Loading...</div></div>`}
+function showError(title,body){document.getElementById('app').innerHTML=`<div class="center-wrap"><div class="error-card"><div class="emoji">😕</div><h2>${esc(title)}</h2><p>${body}</p></div></div>`}
 
 // ── MAIN ───────────────────────────────────────────────────────────────────
-async function main() {
-  const id = getParam('id');
-  showLoader();
-  try {
-    const res = await fetch('data/speaking-data.json');
-    if (!res.ok) throw new Error(`HTTP ${res.status} — could not load data/speaking-data.json`);
-    const json = await res.json();
-
+async function main(){
+  const id=getParam('id');showLoader();
+  try{
+    const res=await fetch('data/speaking-data.json');
+    if(!res.ok)throw new Error(`HTTP ${res.status} — could not load data/speaking-data.json`);
+    const json=await res.json();
     let sessions;
-    if (Array.isArray(json)) { sessions = json; }
-    else if (typeof json === 'object' && json !== null) { sessions = 'id' in json ? [json] : Object.values(json); }
-    else { throw new Error('speaking-data.json must be an array or object'); }
-
-    if (!id) { renderList(sessions); return; }
-
-    const session = sessions.find(s => String(s.id) === String(id));
-    if (!session) throw new Error(`Session with id "${id}" not found`);
+    if(Array.isArray(json))sessions=json;
+    else if(typeof json==='object'&&json!==null)sessions='id'in json?[json]:Object.values(json);
+    else throw new Error('speaking-data.json must be an array or object');
+    if(!id){renderList(sessions);return}
+    const session=sessions.find(s=>String(s.id)===String(id));
+    if(!session)throw new Error(`Session with id "${id}" not found`);
     renderPage(session);
-  } catch (err) {
-    showError('Could not load session', `<strong>Error:</strong> ${esc(err.message)}<br><br>Make sure <code>data/speaking-data.json</code> exists and contains <code>"id": "${esc(getParam('id') || '?')}"</code>.`);
+  }catch(err){
+    showError('Could not load session',`<strong>Error:</strong> ${esc(err.message)}<br><br>Make sure <code>data/speaking-data.json</code> exists and contains <code>"id": "${esc(getParam('id')||'?')}"</code>.`);
   }
 }
-
 main();
 </script>
 </body>
