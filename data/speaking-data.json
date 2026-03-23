@@ -61,5 +61,116 @@
     "vocabulary": "Irish goodbye: the act of leaving without telling anyone, fathom /ˈfæð·əm/ to discover the meaning of something, dip",
     "grammarStructures": "And I just think so much of their lives are just strongly correlated to things that cause the loneliness.; there will be guaranteed at least a few of them that are going to...; whenever I leave the function; We're not gonna check in on her.; you best believe someone would call 911; I know plenty of my friends would be so worried, and they would never get home.; Like, they would never live with themselves if something went wrong, and they never did anything about it.; So they would be searching for me.; So then tie that to the phenomenon of...; this extends into so many aspects of life; And there's probably inevitably gonna be someone in the comments going like",
     "recordings": ""
-  }
+  },
+  {
+  "id": "8",
+  "createdAt": "2026-03-23T17:34:15.395Z",
+  "videoUrl": "https://www.tiktok.com/@jawsolyn/video/7619715441417522446?_r=1&_t=ZS-94vrhNOmkzt",
+  "transcript": "Something I didn't expect after getting laid off, my permanent neck, back, and shoulder pain that I've had my entire life is gone.\nI've been unemployed for four weeks now and I noticed this about two weeks in. My back and neck pain. gone.\nI'm talking multiple rounds of PT, years of professional massages, stretches, even a tech neck pillow. Nothing ever fixed the permanent knots that I had in my shoulder and back until I got laid off. And now no more pain.\nWho woulda thunk not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?\nNot something I expected whatsoever, but this is literally the first time in my entire life I've not had back pain.\nsafe to say I'm enjoying this and I can't wait to find out what other perks funemployment has in store for me :)",
+  "vocabulary": "the permanent knots",
+  "grammarStructures": "Who woulda thunk not V-ing would VO?; Not something I expected whatsoever, but...; what other perks N has in store for me",
+  "tenseAnnotation": [
+    {
+      "sentence": "Something I didn't expect after getting laid off, my permanent neck, back, and shoulder pain that I've had my entire life is gone.",
+      "annotations": [
+        {
+          "text": "Something I didn't expect after getting laid off,",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        },
+        {
+          "text": "my permanent neck, back, and shoulder pain that I've had my entire life",
+          "tenseId": "pres_perfect",
+          "tenseLabel": "Present Perfect"
+        },
+        {
+          "text": "is gone.",
+          "tenseId": "pres_simple",
+          "tenseLabel": "Present Simple"
+        }
+      ]
+    },
+    {
+      "sentence": "I've been unemployed for four weeks now and I noticed this about two weeks in. My back and neck pain. gone.",
+      "annotations": [
+        {
+          "text": "I've been unemployed for four weeks now",
+          "tenseId": "pres_perfect",
+          "tenseLabel": "Present Perfect"
+        },
+        {
+          "text": "and I noticed this about two weeks in.",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        },
+        {
+          "text": "My back and neck pain. gone.",
+          "tenseId": "pres_simple",
+          "tenseLabel": "Present Simple"
+        }
+      ]
+    },
+    {
+      "sentence": "Nothing ever fixed the permanent knots that I had in my shoulder and back until I got laid off. And now no more pain.",
+      "annotations": [
+        {
+          "text": "Nothing ever fixed the permanent knots",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        },
+        {
+          "text": "that I had in my shoulder and back until I got laid off.",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        }
+      ]
+    },
+    {
+      "sentence": "Who woulda thunk not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?",
+      "annotations": [
+        {
+          "text": "Who woulda thunk",
+          "tenseId": "past_perfect",
+          "tenseLabel": "Past Perfect"
+        },
+        {
+          "text": "not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        }
+      ]
+    },
+    {
+      "sentence": "Not something I expected whatsoever, but this is literally the first time in my entire life I've not had back pain.",
+      "annotations": [
+        {
+          "text": "Not something I expected whatsoever,",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        },
+        {
+          "text": "but this is literally the first time in my entire life I've not had back pain.",
+          "tenseId": "pres_perfect",
+          "tenseLabel": "Present Perfect"
+        }
+      ]
+    },
+    {
+      "sentence": "safe to say I'm enjoying this and I can't wait to find out what other perks funemployment has in store for me :)",
+      "annotations": [
+        {
+          "text": "safe to say I'm enjoying this",
+          "tenseId": "pres_cont",
+          "tenseLabel": "Present Continuous"
+        },
+        {
+          "text": "and I can't wait to find out what other perks funemployment has in store for me",
+          "tenseId": "pres_simple",
+          "tenseLabel": "Present Simple"
+        }
+      ]
+    }
+  ],
+  "recordings": ""
+}
 ]
