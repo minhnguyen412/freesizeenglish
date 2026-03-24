@@ -172,5 +172,41 @@
     }
   ],
   "recordings": ""
+},
+{
+  "id": "9",
+  "createdAt": "2026-03-24T14:39:52.142Z",
+  "videoUrl": "https://www.tiktok.com/@das0925/video/7619371352012754206?_r=1&_t=ZS-94xTN7WpMCC",
+  "transcript": "How are religious women going to be anti abortion and then proceed to have premarital sex?\nAnd then they either A. Shame other women for having an abortion or B. Have the kid that they never wanted. Because they're anti abortion as a result of their premarital sex and then pass on generational trauma to their child.\nI'm sorry, but the math ain't math and the logic does not make sense here. 2 + 2 = 5. Like, I just. Maybe it's because I've never been in the state of religious psychosis, but it simply just does not compute in my head. \nLike, you would think that if you're against abortion you would either wait until marriage or just stay celibate until you find, quote unquote the one. But somehow you're having premarital sex, yet you're anti abortion and or having children you didn't even want and then putting your child through trauma.",
+  "vocabulary": "pass on generational trauma, in the state of religious psychosis, compute: to calculate something, putting your child through trauma",
+  "grammarStructures": "And then they either A. or B. ; Because they're … as a result of …; But somehow you're …, yet you're…",
+  "tenseAnnotation": [
+    {
+      "sentence": "Like, you would think that if you're against abortion you would either wait until marriage or just stay celibate until you find, quote unquote the one.",
+      "annotations": [
+        {
+          "text": "Like, you would think that",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        },
+        {
+          "text": "if you're against abortion",
+          "tenseId": "pres_simple",
+          "tenseLabel": "Present Simple"
+        },
+        {
+          "text": "you would either wait until marriage or just stay celibate",
+          "tenseId": "past_simple",
+          "tenseLabel": "Past Simple"
+        },
+        {
+          "text": "until you find, quote unquote the one.",
+          "tenseId": "pres_simple",
+          "tenseLabel": "Present Simple"
+        }
+      ]
+    }
+  ],
+  "recordings": ""
 }
 ]
