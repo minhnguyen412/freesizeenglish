@@ -89,6 +89,15 @@
   .tense-note-body{flex:1;min-width:0}
   .tense-note-phrase{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:4px}
   .tense-note-tag{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.72rem;padding:3px 10px;border-radius:20px;display:inline-block}
+  .mark-wrap { position: relative; display: inline; }
+  .tip {
+    position: absolute; bottom: calc(100% + 6px); left: 50%;
+    transform: translateX(-50%); font-size: 11px; font-weight: 700;
+    white-space: nowrap; padding: 3px 9px; border-radius: 20px;
+    pointer-events: none; opacity: 0; transition: opacity .15s;
+    z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  }
+  .mark-wrap:hover .tip { opacity: 1; }
 
   /* Recorder section */
   .lang-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
@@ -208,7 +217,6 @@ function buildVideoColHTML(vid){
 
 // ── BUILD TENSE ANNOTATION HTML ───────────────────────────────────────────
 function buildTenseHTML(tenseAnn) {
-  // tenseAnn là mảng [{sentence, annotations:[{text, tenseId, tenseLabel}]}]
   if (!Array.isArray(tenseAnn) || tenseAnn.length === 0) {
     return `<div class="empty-state"><span class="emoji">📭</span>No tense annotation.</div>`;
   }
@@ -228,33 +236,22 @@ function buildTenseHTML(tenseAnn) {
       if (start < cursor) return;
       if (start > cursor) html += esc(sentence.slice(cursor, start));
       const t = TENSE_MAP[ann.tenseId] || {};
-      html += `<span class="tense-mark hl-${esc(ann.tenseId)}" title="${esc(ann.tenseLabel)}">${esc(ann.text)}</span>`;
+      html += `<span class="mark-wrap">
+        <span class="tense-mark hl-${esc(ann.tenseId)}">${esc(ann.text)}</span>
+        <span class="tip" style="background:${esc(t.bg)};border:1px solid ${esc(t.color)};color:${esc(t.fg)}">${esc(t.label)}</span>
+      </span>`;
       cursor = end;
     });
     html += esc(sentence.slice(cursor));
     return html;
   }
 
-  return tenseAnn.map((item, i) => {
+  return tenseAnn.map((item) => {
     const sentHTML = highlightSentence(item.sentence || '', item.annotations || []);
-    const notesHTML = (item.annotations || []).map(ann => {
-      const t = TENSE_MAP[ann.tenseId] || {};
-      return `
-        <div class="tense-note">
-          <div class="tense-note-swatch" style="background:${esc(t.color||'#aaa')}"></div>
-          <div class="tense-note-body">
-            <div class="tense-note-phrase">"${esc(ann.text)}"</div>
-            <span class="tense-note-tag" style="background:${esc(t.bg||'#eee')};color:${esc(t.fg||'#333')}">${esc(ann.tenseLabel)}</span>
-          </div>
-        </div>`;
-    }).join('');
-
     return `
       <div class="tense-sentence-wrap" style="margin-bottom:18px">
         <div class="tense-sentence-text">${sentHTML}</div>
-      </div>
-      ${notesHTML ? `<div class="tense-notes" style="margin-bottom:18px">${notesHTML}</div>` : ''}
-    `;
+      </div>`;
   }).join('');
 }
 // ── LIVE RECORDER ─────────────────────────────────────────────────────────
