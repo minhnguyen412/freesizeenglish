@@ -67,7 +67,7 @@
   .tense-sentence-wrap{background:var(--purple-pale);border:var(--border);border-radius:16px;padding:20px 22px;margin-bottom:18px}
   .tense-sentence-text{font-family:'Quicksand',sans-serif;font-weight:600;font-size:1.05rem;line-height:2.6;word-break:break-word}
   .tense-sentence-text .plain{color:var(--black)}
-  .tense-mark{border-radius:5px;padding:2px 6px;font-family:'Quicksand',sans-serif;font-weight:700;cursor:default;display:inline}
+  .tense-mark{border-radius:5px;padding:2px 6px;font-family:'Quicksand',sans-serif;font-weight:700;cursor:pointer;display:inline}
   /* mark colors */
   .hl-past_simple    {background:#fef9c3;border-bottom:3px solid #ca8a04;color:#78350f}
   .hl-past_cont      {background:#dbeafe;border-bottom:3px solid #3b82f6;color:#1e3a8a}
@@ -82,22 +82,20 @@
   .hl-fut_perfect    {background:#d9f99d;border-bottom:3px solid #84cc16;color:#365314}
   .hl-fut_perf_cont  {background:#fce7f3;border-bottom:3px solid #ec4899;color:#831843}
 
-  /* Tense notes list */
-  .tense-notes{display:flex;flex-direction:column;gap:10px}
-  .tense-note{display:flex;align-items:flex-start;gap:12px;background:var(--white);border:var(--border);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow-sm);animation:fadeUp .35s ease both}
-  .tense-note-swatch{width:14px;height:14px;border-radius:50%;flex-shrink:0;margin-top:3px}
-  .tense-note-body{flex:1;min-width:0}
-  .tense-note-phrase{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.9rem;margin-bottom:4px}
-  .tense-note-tag{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.72rem;padding:3px 10px;border-radius:20px;display:inline-block}
-  .mark-wrap { position: relative; display: inline; }
-  .tip {
-    position: absolute; bottom: calc(100% + 6px); left: 50%;
-    transform: translateX(-50%); font-size: 11px; font-weight: 700;
-    white-space: nowrap; padding: 3px 9px; border-radius: 20px;
-    pointer-events: none; opacity: 0; transition: opacity .15s;
-    z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  /* ── TOOLTIP ── */
+  .mark-wrap{position:relative;display:inline}
+  .tip{
+    position:absolute;bottom:calc(100% + 6px);left:50%;
+    transform:translateX(-50%);font-size:11px;font-weight:700;
+    white-space:nowrap;padding:3px 9px;border-radius:20px;
+    pointer-events:none;opacity:0;transition:opacity .15s;
+    z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.12);
+    font-family:'Quicksand',sans-serif;
   }
-  .mark-wrap:hover .tip { opacity: 1; }
+  /* desktop hover */
+  .mark-wrap:hover .tip{opacity:1}
+  /* mobile tap */
+  .mark-wrap.active .tip{opacity:1}
 
   /* Recorder section */
   .lang-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
@@ -192,7 +190,6 @@ function normalise(raw){
   else d.recordings=[];
   d._vocab=typeof d.vocabulary==='string'?d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean):[];
   d._grammar=typeof d.grammarStructures==='string'?d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean):[];
-  // tenseAnnotation: {sentence, annotations:[{text,start,end,tenseId,tenseLabel}]}
   d._tenseAnn = Array.isArray(d.tenseAnnotation) ? d.tenseAnnotation : [];
   return d;
 }
@@ -236,10 +233,7 @@ function buildTenseHTML(tenseAnn) {
       if (start < cursor) return;
       if (start > cursor) html += esc(sentence.slice(cursor, start));
       const t = TENSE_MAP[ann.tenseId] || {};
-      html += `<span class="mark-wrap">
-        <span class="tense-mark hl-${esc(ann.tenseId)}">${esc(ann.text)}</span>
-        <span class="tip" style="background:${esc(t.bg)};border:1px solid ${esc(t.color)};color:${esc(t.fg)}">${esc(t.label)}</span>
-      </span>`;
+      html += `<span class="mark-wrap"><span class="tense-mark hl-${esc(ann.tenseId)}">${esc(ann.text)}</span><span class="tip" style="background:${esc(t.bg)};border:1px solid ${esc(t.color)};color:${esc(t.fg)}">${esc(t.label)}</span></span>`;
       cursor = end;
     });
     html += esc(sentence.slice(cursor));
@@ -248,12 +242,25 @@ function buildTenseHTML(tenseAnn) {
 
   return tenseAnn.map((item) => {
     const sentHTML = highlightSentence(item.sentence || '', item.annotations || []);
-    return `
-      <div class="tense-sentence-wrap" style="margin-bottom:18px">
-        <div class="tense-sentence-text">${sentHTML}</div>
-      </div>`;
+    return `<div class="tense-sentence-wrap" style="margin-bottom:18px"><div class="tense-sentence-text">${sentHTML}</div></div>`;
   }).join('');
 }
+
+// ── TOOLTIP TOUCH SUPPORT ─────────────────────────────────────────────────
+function initTooltipTouch() {
+  document.querySelectorAll('.mark-wrap').forEach(wrap => {
+    wrap.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const isActive = this.classList.contains('active');
+      document.querySelectorAll('.mark-wrap.active').forEach(el => el.classList.remove('active'));
+      if (!isActive) this.classList.add('active');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.mark-wrap.active').forEach(el => el.classList.remove('active'));
+  });
+}
+
 // ── LIVE RECORDER ─────────────────────────────────────────────────────────
 let liveRecs=[],mediaRec=null,audioChunks=[],isRecording=false;
 let timerInt=null,recSecs=0,speechRec=null,currentSTT='';
@@ -315,7 +322,7 @@ function renderPage(raw){
   const d=normalise(raw);
   const vid=buildVideo(d.videoUrl);
   const vocCount=d._vocab.length,graCount=d._grammar.length;
-  const annCount=(d._tenseAnn.annotations||[]).length;
+  const annCount=Array.isArray(d._tenseAnn)?d._tenseAnn.reduce((s,i)=>s+(i.annotations||[]).length,0):0;
   document.title=`${d.id||'Session'} — Freesize English`;
 
   const videoColHTML=buildVideoColHTML(vid)+`
@@ -394,6 +401,9 @@ function renderPage(raw){
 
       </div>
     </div>`;
+
+  // ── gắn touch listener SAU KHI innerHTML đã được set ──
+  setTimeout(initTooltipTouch, 0);
 }
 
 // ── SESSION LIST ───────────────────────────────────────────────────────────
