@@ -184,7 +184,7 @@ function normalise(raw){
   d._vocab=typeof d.vocabulary==='string'?d.vocabulary.split(/[,\n]+/).map(s=>s.trim()).filter(Boolean):[];
   d._grammar=typeof d.grammarStructures==='string'?d.grammarStructures.split(/[;\n]+/).map(s=>s.trim()).filter(Boolean):[];
   // tenseAnnotation: {sentence, annotations:[{text,start,end,tenseId,tenseLabel}]}
-  d._tenseAnn=(d.tenseAnnotation&&typeof d.tenseAnnotation==='object')?d.tenseAnnotation:{sentence:'',annotations:[]};
+  d._tenseAnn = Array.isArray(d.tenseAnnotation) ? d.tenseAnnotation : [];
   return d;
 }
 
@@ -208,48 +208,54 @@ function buildVideoColHTML(vid){
 
 // ── BUILD TENSE ANNOTATION HTML ───────────────────────────────────────────
 function buildTenseHTML(tenseAnn) {
-  if (!tenseAnn || !tenseAnn.sentence) {
+  // tenseAnn là mảng [{sentence, annotations:[{text, tenseId, tenseLabel}]}]
+  if (!Array.isArray(tenseAnn) || tenseAnn.length === 0) {
     return `<div class="empty-state"><span class="emoji">📭</span>No tense annotation.</div>`;
   }
 
-  let sentenceHTML = esc(tenseAnn.sentence);
+  function highlightSentence(sentence, annotations) {
+    const found = [];
+    annotations.forEach(ann => {
+      if (!ann.text) return;
+      const idx = sentence.indexOf(ann.text);
+      if (idx !== -1) found.push({ start: idx, end: idx + ann.text.length, ann });
+    });
+    found.sort((a, b) => a.start - b.start);
 
-  // highlight theo text
-  (tenseAnn.annotations || []).forEach(ann => {
-    if (!ann.text) return;
+    let html = '';
+    let cursor = 0;
+    found.forEach(({ start, end, ann }) => {
+      if (start < cursor) return;
+      if (start > cursor) html += esc(sentence.slice(cursor, start));
+      const t = TENSE_MAP[ann.tenseId] || {};
+      html += `<span class="tense-mark hl-${esc(ann.tenseId)}" title="${esc(ann.tenseLabel)}">${esc(ann.text)}</span>`;
+      cursor = end;
+    });
+    html += esc(sentence.slice(cursor));
+    return html;
+  }
 
-    const safeText = ann.text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // escape regex
-    const regex = new RegExp(`(${safeText})`, 'g');
+  return tenseAnn.map((item, i) => {
+    const sentHTML = highlightSentence(item.sentence || '', item.annotations || []);
+    const notesHTML = (item.annotations || []).map(ann => {
+      const t = TENSE_MAP[ann.tenseId] || {};
+      return `
+        <div class="tense-note">
+          <div class="tense-note-swatch" style="background:${esc(t.color||'#aaa')}"></div>
+          <div class="tense-note-body">
+            <div class="tense-note-phrase">"${esc(ann.text)}"</div>
+            <span class="tense-note-tag" style="background:${esc(t.bg||'#eee')};color:${esc(t.fg||'#333')}">${esc(ann.tenseLabel)}</span>
+          </div>
+        </div>`;
+    }).join('');
 
-    sentenceHTML = sentenceHTML.replace(
-      regex,
-      `<span class="tense-mark" style="background:#fff3cd;border-bottom:3px solid #f59e0b;">
-        $1
-      </span>`
-    );
-  });
-
-  // build note list
-  const notesHTML = (tenseAnn.annotations || []).map(ann => `
-    <div class="tense-note">
-      <div class="tense-note-body">
-        <div class="tense-note-phrase">"${esc(ann.text)}"</div>
-        <span class="tense-note-tag">${esc(ann.tenseLabel)}</span>
+    return `
+      <div class="tense-sentence-wrap" style="margin-bottom:18px">
+        <div class="tense-sentence-text">${sentHTML}</div>
       </div>
-    </div>
-  `).join('');
-
-  return `
-    <div class="tense-sentence-wrap">
-      <div class="tense-sentence-text">${sentenceHTML}</div>
-    </div>
-
-    ${notesHTML ? `
-      <div style="margin-top:12px">
-        ${notesHTML}
-      </div>
-    ` : ''}
-  `;
+      ${notesHTML ? `<div class="tense-notes" style="margin-bottom:18px">${notesHTML}</div>` : ''}
+    `;
+  }).join('');
 }
 // ── LIVE RECORDER ─────────────────────────────────────────────────────────
 let liveRecs=[],mediaRec=null,audioChunks=[],isRecording=false;
