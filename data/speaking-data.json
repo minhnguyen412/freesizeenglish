@@ -218,5 +218,26 @@
   "grammarStructures": "And there's no feeling better in life than when ...",
   "tenseAnnotation": [],
   "recordings": ""
+},
+{
+  "id": "11",
+  "createdAt": "2026-03-26T14:22:16.769Z",
+  "videoUrl": "https://www.tiktok.com/@jovennatran/video/7612939303965986069?_r=1&_t=ZS-950qkQhiF5J",
+  "transcript": "I'm a girl's girl, but this is a list of girls that I would respectfully put in a headlock if I ever met in real life.\nNo. 1, coming in strong at the top of our pyramid, we have homewreckers. Need I say more? If you know that a guy has a girl and you're still going for him, yeah, yeah, I'm putting you in a headlock. I'm throwing you over my shoulder.\nGirls who pretend to be nice when they're really not. Like I love bitches, I love mean, bitchy, attitudey girls, but as long as you're just true to that essence, we're good. Like I rather you be bitchy to my face than you talking shit behind my back.\nNo. 3, we have girls that treat you differently around guys and emphasis on the word treat because I don't mind girls that act differently around guys cause that's pretty common and sometimes it's genuinely just a means of validation for them and I really don't mind that but I draw the line at when they treat you differently around guys like when they become meaner to you and when they just mistreat you. Yeah, no baby girl. That's where I draw the line.\nThis might be a controversial take and I might get canceled for this, but girls who call other girls pick me. I don't know why, but I just find the girls who call other girls pick me's are usually the pick me's like why do You have so much hatred in your heart that you must also then pull down another girl, even if she is already going low. When she is already low, you do not go lower, baby. You go higher because that's who you are.\nLast but not least, we have girls who say, you're copying me. Like baby girl, baby girl. Let me see you do that. Like baby girl. We do not copy over here. We do not gate keep. There's no competition here, babe.\nIf you are triggered by this list, then maybe you should do some inner work. And if you don't do any of the things on this list, then stay the baddie that you already are.",
+  "vocabulary": "put in a headlock: To restrain someone by wrapping one's arm around someone's head or neck, coming in strong, attitudey: Showing a pointedly arrogant attitude, essence: the basic or most important idea or quality of something, genuinely  /ˈdʒen.ju.ɪn.li/: really and sincerely,  just a means of validation, pull down another girl,",
+  "grammarStructures": "Like I rather you be adj than you Ving; draw the line at when...; she is already Ving;",
+  "tenseAnnotation": [
+    {
+      "sentence": "If you know that a guy has a girl and you're still going for him, yeah, yeah, I'm putting you in a headlock.",
+      "annotations": [
+        {
+          "text": "you're still going for him, yeah, yeah, I'm putting you in a headlock.",
+          "tenseId": "pres_cont",
+          "tenseLabel": "Present Continuous"
+        }
+      ]
+    }
+  ],
+  "recordings": ""
 }
 ]
