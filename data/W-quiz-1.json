@@ -4708,6 +4708,156 @@
         { "answer": "wealth-building" }
     ],
     "words": ["has", "implicated", "colonial", "tens", "millions", "Edinburgh", "slavery", "the", "in", "that", "equivalent", "or", "from", "raised", "donors", "of", "wealth-building", "It", "established", "of", "of", "pounds"]
-}
+},
+{
+    "id": 163,
+    "audio": "",
+    "sentence": "Mặc dù đây là một sự thật khó chấp nhận, nhưng nghiên cứu cho thấy những người đàn ông có hứng thú tình dục với trẻ em có khả năng làm việc với trẻ em cao hơn, bao gồm cả trong giáo dục và chăm sóc trẻ em sớm.<br>___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "While" },
+        { "answer": "it" },
+        { "answer": "is" },
+        { "answer": "an" },
+        { "answer": "uncomfortable" },
+        { "answer": "fact" },
+        { "answer": "to" },
+        { "answer": "confront" },
+        { "answer": "research" },
+        { "answer": "shows" },
+        { "answer": "men" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "sexual" },
+        { "answer": "interest" },
+        { "answer": "in" },
+        { "answer": "children" },
+        { "answer": "are" },
+        { "answer": "disproportionately" },
+        { "answer": "more" },
+        { "answer": "likely" },
+        { "answer": "to" },
+        { "answer": "work" },
+        { "answer": "with" },
+        { "answer": "children" },
+        { "answer": "including" },
+        { "answer": "in" },
+        { "answer": "early" },
+        { "answer": "education" },
+        { "answer": "and" },
+        { "answer": "care" }
+    ],
+    "words": ["likely", "to", "in", "research", "it", "in", "interest", "children", "men", "While", "disproportionately", "uncomfortable", "children", "and", "with", "sexual", "with", "confront", "care", "a", "work", "are", "to", "more", "an", "fact", "early", "shows", "education", "including", "is"]
+},
+
+{
+    "id": 164,
+    "audio": "",
+    "sentence": "Dữ liệu cho thấy cứ 20 người đàn ông trong cộng đồng Úc thì có một người là tội phạm có động cơ (những cá nhân khai báo rằng họ vừa có hứng thú tình dục vừa có hành vi phạm tội với trẻ em).<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ (___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___)",
+    "blanks": [
+        { "answer": "Data" },
+        { "answer": "shows" },
+        { "answer": "that" },
+        { "answer": "one" },
+        { "answer": "in" },
+        { "answer": "20" },
+        { "answer": "men" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "Australian" },
+        { "answer": "community" },
+        { "answer": "are" },
+        { "answer": "motivated" },
+        { "answer": "offenders" },
+        { "answer": "individuals" },
+        { "answer": "who" },
+        { "answer": "reported" },
+        { "answer": "both" },
+        { "answer": "sexual" },
+        { "answer": "interest" },
+        { "answer": "in" },
+        { "answer": "and" },
+        { "answer": "offending" },
+        { "answer": "against" },
+        { "answer": "children" }
+    ],
+    "words": ["men", "the", "interest", "offending", "in", "one", "are", "Australian", "Data", "20", "motivated", "community", "sexual", "in", "individuals", "and", "offenders", "both", "children", "shows", "in", "who", "that", "against", "reported"]
+},
+
+{
+    "id": 165,
+    "audio": "",
+    "sentence": "Tuy nhiên, khả năng họ làm việc với trẻ em cao gấp gần ba lần so với những người đàn ông khác.<br>___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "However" },
+        { "answer": "they" },
+        { "answer": "are" },
+        { "answer": "almost" },
+        { "answer": "three" },
+        { "answer": "times" },
+        { "answer": "more" },
+        { "answer": "likely" },
+        { "answer": "to" },
+        { "answer": "work" },
+        { "answer": "with" },
+        { "answer": "children" },
+        { "answer": "compared" },
+        { "answer": "with" },
+        { "answer": "other" },
+        { "answer": "men" }
+    ],
+    "words": ["to", "they", "other", "with", "almost", "more", "likely", "work", "children", "However", "times", "three", "with", "are", "men", "compared"]
+},
+
+{
+    "id": 166,
+    "audio": "",
+    "sentence": "Thật không may, dữ liệu có hệ thống về lạm dụng tình dục trẻ em trong các cơ sở chăm sóc trẻ em còn hạn chế.<br>___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Unfortunately" },
+        { "answer": "systematic" },
+        { "answer": "data" },
+        { "answer": "on" },
+        { "answer": "child" },
+        { "answer": "sexual" },
+        { "answer": "abuse" },
+        { "answer": "in" },
+        { "answer": "childcare" },
+        { "answer": "is" },
+        { "answer": "limited" }
+    ],
+    "words": ["on", "data", "in", "sexual", "Unfortunately", "systematic", "abuse", "childcare", "child", "is", "limited"]
+},
+
+{
+    "id": 167,
+    "audio": "",
+    "sentence": "Những phát hiện hiện tại phù hợp với nghiên cứu toàn diện duy nhất được thực hiện về vấn đề này, sau thử nghiệm trường mầm non McMartin được công bố rộng rãi tại Hoa Kỳ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Existing" },
+        { "answer": "findings" },
+        { "answer": "align" },
+        { "answer": "with" },
+        { "answer": "the" },
+        { "answer": "only" },
+        { "answer": "comprehensive" },
+        { "answer": "study" },
+        { "answer": "conducted" },
+        { "answer": "on" },
+        { "answer": "this" },
+        { "answer": "issue" },
+        { "answer": "which" },
+        { "answer": "followed" },
+        { "answer": "the" },
+        { "answer": "highly" },
+        { "answer": "publicised" },
+        { "answer": "McMartin" },
+        { "answer": "preschool" },
+        { "answer": "trial" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "US" }
+    ],
+    "words": ["highly", "only", "in", "followed", "US", "preschool", "the", "comprehensive", "conducted", "study", "McMartin", "align", "findings", "publicised", "with", "the", "the", "issue", "this", "on", "Existing", "trial", "which"]
+} 
     ]
 }
