@@ -63,181 +63,287 @@
     "recordings": ""
   },
   {
-  "id": "8",
-  "createdAt": "2026-03-23T17:34:15.395Z",
-  "videoUrl": "https://www.tiktok.com/@jawsolyn/video/7619715441417522446?_r=1&_t=ZS-94vrhNOmkzt",
-  "transcript": "Something I didn't expect after getting laid off, my permanent neck, back, and shoulder pain that I've had my entire life is gone.\nI've been unemployed for four weeks now and I noticed this about two weeks in. My back and neck pain. gone.\nI'm talking multiple rounds of PT, years of professional massages, stretches, even a tech neck pillow. Nothing ever fixed the permanent knots that I had in my shoulder and back until I got laid off. And now no more pain.\nWho woulda thunk not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?\nNot something I expected whatsoever, but this is literally the first time in my entire life I've not had back pain.\nsafe to say I'm enjoying this and I can't wait to find out what other perks funemployment has in store for me :)",
-  "vocabulary": "the permanent knots",
-  "grammarStructures": "Who woulda thunk not V-ing would VO?; Not something I expected whatsoever, but...; what other perks N has in store for me",
-  "tenseAnnotation": [
-    {
-      "sentence": "Something I didn't expect after getting laid off, my permanent neck, back, and shoulder pain that I've had my entire life is gone.",
-      "annotations": [
-        {
-          "text": "Something I didn't expect after getting laid off,",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        },
-        {
-          "text": "my permanent neck, back, and shoulder pain that I've had my entire life",
-          "tenseId": "pres_perfect",
-          "tenseLabel": "Present Perfect"
-        },
-        {
-          "text": "is gone.",
-          "tenseId": "pres_simple",
-          "tenseLabel": "Present Simple"
-        }
-      ]
-    },
-    {
-      "sentence": "I've been unemployed for four weeks now and I noticed this about two weeks in. My back and neck pain. gone.",
-      "annotations": [
-        {
-          "text": "I've been unemployed for four weeks now",
-          "tenseId": "pres_perfect",
-          "tenseLabel": "Present Perfect"
-        },
-        {
-          "text": "and I noticed this about two weeks in.",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        },
-        {
-          "text": "My back and neck pain. gone.",
-          "tenseId": "pres_simple",
-          "tenseLabel": "Present Simple"
-        }
-      ]
-    },
-    {
-      "sentence": "Nothing ever fixed the permanent knots that I had in my shoulder and back until I got laid off. And now no more pain.",
-      "annotations": [
-        {
-          "text": "Nothing ever fixed the permanent knots",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        },
-        {
-          "text": "that I had in my shoulder and back until I got laid off.",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        }
-      ]
-    },
-    {
-      "sentence": "Who woulda thunk not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?",
-      "annotations": [
-        {
-          "text": "Who woulda thunk",
-          "tenseId": "past_perfect",
-          "tenseLabel": "Past Perfect"
-        },
-        {
-          "text": "not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        }
-      ]
-    },
-    {
-      "sentence": "Not something I expected whatsoever, but this is literally the first time in my entire life I've not had back pain.",
-      "annotations": [
-        {
-          "text": "Not something I expected whatsoever,",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        },
-        {
-          "text": "but this is literally the first time in my entire life I've not had back pain.",
-          "tenseId": "pres_perfect",
-          "tenseLabel": "Present Perfect"
-        }
-      ]
-    },
-    {
-      "sentence": "safe to say I'm enjoying this and I can't wait to find out what other perks funemployment has in store for me :)",
-      "annotations": [
-        {
-          "text": "safe to say I'm enjoying this",
-          "tenseId": "pres_cont",
-          "tenseLabel": "Present Continuous"
-        },
-        {
-          "text": "and I can't wait to find out what other perks funemployment has in store for me",
-          "tenseId": "pres_simple",
-          "tenseLabel": "Present Simple"
-        }
-      ]
-    }
-  ],
-  "recordings": ""
-},
-{
-  "id": "9",
-  "createdAt": "2026-03-24T14:39:52.142Z",
-  "videoUrl": "https://www.tiktok.com/@das0925/video/7619371352012754206?_r=1&_t=ZS-94xTN7WpMCC",
-  "transcript": "How are religious women going to be anti abortion and then proceed to have premarital sex?\nAnd then they either A. Shame other women for having an abortion or B. Have the kid that they never wanted. Because they're anti abortion as a result of their premarital sex and then pass on generational trauma to their child.\nI'm sorry, but the math ain't math and the logic does not make sense here. 2 + 2 = 5. Like, I just. Maybe it's because I've never been in the state of religious psychosis, but it simply just does not compute in my head. \nLike, you would think that if you're against abortion you would either wait until marriage or just stay celibate until you find, quote unquote the one. But somehow you're having premarital sex, yet you're anti abortion and or having children you didn't even want and then putting your child through trauma.",
-  "vocabulary": "pass on generational trauma, in the state of religious psychosis, compute: to calculate something, putting your child through trauma",
-  "grammarStructures": "And then they either A. or B. ; Because they're … as a result of …; But somehow you're …, yet you're…",
-  "tenseAnnotation": [
-    {
-      "sentence": "Like, you would think that if you're against abortion you would either wait until marriage or just stay celibate until you find, quote unquote the one.",
-      "annotations": [
-        {
-          "text": "Like, you would think that",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        },
-        {
-          "text": "if you're against abortion",
-          "tenseId": "pres_simple",
-          "tenseLabel": "Present Simple"
-        },
-        {
-          "text": "you would either wait until marriage or just stay celibate",
-          "tenseId": "past_simple",
-          "tenseLabel": "Past Simple"
-        },
-        {
-          "text": "until you find, quote unquote the one.",
-          "tenseId": "pres_simple",
-          "tenseLabel": "Present Simple"
-        }
-      ]
-    }
-  ],
-  "recordings": ""
-},
-{
-  "id": "10",
-  "createdAt": "2026-03-25T15:00:13.912Z",
-  "videoUrl": "https://www.tiktok.com/@das0925/video/7617112084890897694?_r=1&_t=ZS-94zCU0JkQtR",
-  "transcript": "And there's no feeling better in life than when everyone at work hates the same person.\nAnd look, I love talking shit with my best friends, and I love beating a dead horse with my best friends.\nBut talking shit about a co worker colleague you fucking hate at work with everyone else?\nBitch, there is no feeling more cathartic, more validating, more comradery inducing than talking shit about someone you hate with fellow colleagues.\nWhen. Ugh. Because when money is on the line, the rants be even more feral.",
-  "vocabulary": "beating a dead horse: to waste time and effort on a topic that has already been discussed, cathartic/kəˈTHärdik/: providing psychological relief through the open expression of strong emotions, validating: make or declare legally valid, comradery/ˈkäm-ˌra-d(ə-)rē /: a feeling of friendliness， goodwill， and familiarity among the people in a group, induce /in-ˈdüs/: to move by persuasion or influence, rant /ˈrant/: to complain loudly, angrily, or unreasonably",
-  "grammarStructures": "And there's no feeling better in life than when ...",
-  "tenseAnnotation": [],
-  "recordings": ""
-},
-{
-  "id": "11",
-  "createdAt": "2026-03-26T14:22:16.769Z",
-  "videoUrl": "https://www.tiktok.com/@jovennatran/video/7612939303965986069?_r=1&_t=ZS-950qkQhiF5J",
-  "transcript": "I'm a girl's girl, but this is a list of girls that I would respectfully put in a headlock if I ever met in real life.\nNo. 1, coming in strong at the top of our pyramid, we have homewreckers. Need I say more? If you know that a guy has a girl and you're still going for him, yeah, yeah, I'm putting you in a headlock. I'm throwing you over my shoulder.\nGirls who pretend to be nice when they're really not. Like I love bitches, I love mean, bitchy, attitudey girls, but as long as you're just true to that essence, we're good. Like I rather you be bitchy to my face than you talking shit behind my back.\nNo. 3, we have girls that treat you differently around guys and emphasis on the word treat because I don't mind girls that act differently around guys cause that's pretty common and sometimes it's genuinely just a means of validation for them and I really don't mind that but I draw the line at when they treat you differently around guys like when they become meaner to you and when they just mistreat you. Yeah, no baby girl. That's where I draw the line.\nThis might be a controversial take and I might get canceled for this, but girls who call other girls pick me. I don't know why, but I just find the girls who call other girls pick me's are usually the pick me's like why do You have so much hatred in your heart that you must also then pull down another girl, even if she is already going low. When she is already low, you do not go lower, baby. You go higher because that's who you are.\nLast but not least, we have girls who say, you're copying me. Like baby girl, baby girl. Let me see you do that. Like baby girl. We do not copy over here. We do not gate keep. There's no competition here, babe.\nIf you are triggered by this list, then maybe you should do some inner work. And if you don't do any of the things on this list, then stay the baddie that you already are.",
-  "vocabulary": "put in a headlock: To restrain someone by wrapping one's arm around someone's head or neck, coming in strong, attitudey: Showing a pointedly arrogant attitude, essence: the basic or most important idea or quality of something, genuinely  /ˈdʒen.ju.ɪn.li/: really and sincerely,  just a means of validation, pull down another girl,",
-  "grammarStructures": "Like I rather you be adj than you Ving; draw the line at when...; she is already Ving;",
-  "tenseAnnotation": [
-    {
-      "sentence": "If you know that a guy has a girl and you're still going for him, yeah, yeah, I'm putting you in a headlock.",
-      "annotations": [
-        {
-          "text": "you're still going for him, yeah, yeah, I'm putting you in a headlock.",
-          "tenseId": "pres_cont",
-          "tenseLabel": "Present Continuous"
-        }
-      ]
-    }
-  ],
-  "recordings": ""
-}
+    "id": "8",
+    "createdAt": "2026-03-23T17:34:15.395Z",
+    "videoUrl": "https://www.tiktok.com/@jawsolyn/video/7619715441417522446?_r=1&_t=ZS-94vrhNOmkzt",
+    "transcript": "Something I didn't expect after getting laid off, my permanent neck, back, and shoulder pain that I've had my entire life is gone.\nI've been unemployed for four weeks now and I noticed this about two weeks in. My back and neck pain. gone.\nI'm talking multiple rounds of PT, years of professional massages, stretches, even a tech neck pillow. Nothing ever fixed the permanent knots that I had in my shoulder and back until I got laid off. And now no more pain.\nWho woulda thunk not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?\nNot something I expected whatsoever, but this is literally the first time in my entire life I've not had back pain.\nsafe to say I'm enjoying this and I can't wait to find out what other perks funemployment has in store for me :)",
+    "vocabulary": "the permanent knots",
+    "grammarStructures": "Who woulda thunk not V-ing would VO?; Not something I expected whatsoever, but...; what other perks N has in store for me",
+    "tenseAnnotation": [
+      {
+        "sentence": "Something I didn't expect after getting laid off, my permanent neck, back, and shoulder pain that I've had my entire life is gone.",
+        "annotations": [
+          {
+            "text": "Something I didn't expect after getting laid off,",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "my permanent neck, back, and shoulder pain that I've had my entire life",
+            "tenseId": "pres_perfect",
+            "tenseLabel": "Present Perfect"
+          },
+          {
+            "text": "is gone.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "I've been unemployed for four weeks now and I noticed this about two weeks in. My back and neck pain. gone.",
+        "annotations": [
+          {
+            "text": "I've been unemployed for four weeks now",
+            "tenseId": "pres_perfect",
+            "tenseLabel": "Present Perfect"
+          },
+          {
+            "text": "and I noticed this about two weeks in.",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "My back and neck pain. gone.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "Nothing ever fixed the permanent knots that I had in my shoulder and back until I got laid off. And now no more pain.",
+        "annotations": [
+          {
+            "text": "Nothing ever fixed the permanent knots",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "that I had in my shoulder and back until I got laid off.",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "Who woulda thunk not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?",
+        "annotations": [
+          {
+            "text": "Who woulda thunk",
+            "tenseId": "past_perfect",
+            "tenseLabel": "Past Perfect"
+          },
+          {
+            "text": "not spending 8+ hours a day, 5 days a week sat in front of a desk with the posture of a shrimp would fix my back issues?",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "Not something I expected whatsoever, but this is literally the first time in my entire life I've not had back pain.",
+        "annotations": [
+          {
+            "text": "Not something I expected whatsoever,",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "but this is literally the first time in my entire life I've not had back pain.",
+            "tenseId": "pres_perfect",
+            "tenseLabel": "Present Perfect"
+          }
+        ]
+      },
+      {
+        "sentence": "safe to say I'm enjoying this and I can't wait to find out what other perks funemployment has in store for me :)",
+        "annotations": [
+          {
+            "text": "safe to say I'm enjoying this",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          },
+          {
+            "text": "and I can't wait to find out what other perks funemployment has in store for me",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      }
+    ],
+    "recordings": ""
+  },
+  {
+    "id": "9",
+    "createdAt": "2026-03-24T14:39:52.142Z",
+    "videoUrl": "https://www.tiktok.com/@das0925/video/7619371352012754206?_r=1&_t=ZS-94xTN7WpMCC",
+    "transcript": "How are religious women going to be anti abortion and then proceed to have premarital sex?\nAnd then they either A. Shame other women for having an abortion or B. Have the kid that they never wanted. Because they're anti abortion as a result of their premarital sex and then pass on generational trauma to their child.\nI'm sorry, but the math ain't math and the logic does not make sense here. 2 + 2 = 5. Like, I just. Maybe it's because I've never been in the state of religious psychosis, but it simply just does not compute in my head. \nLike, you would think that if you're against abortion you would either wait until marriage or just stay celibate until you find, quote unquote the one. But somehow you're having premarital sex, yet you're anti abortion and or having children you didn't even want and then putting your child through trauma.",
+    "vocabulary": "pass on generational trauma, in the state of religious psychosis, compute: to calculate something, putting your child through trauma",
+    "grammarStructures": "And then they either A. or B. ; Because they're … as a result of …; But somehow you're …, yet you're…",
+    "tenseAnnotation": [
+      {
+        "sentence": "Like, you would think that if you're against abortion you would either wait until marriage or just stay celibate until you find, quote unquote the one.",
+        "annotations": [
+          {
+            "text": "Like, you would think that",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "if you're against abortion",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          },
+          {
+            "text": "you would either wait until marriage or just stay celibate",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "until you find, quote unquote the one.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      }
+    ],
+    "recordings": ""
+  },
+  {
+    "id": "10",
+    "createdAt": "2026-03-25T15:00:13.912Z",
+    "videoUrl": "https://www.tiktok.com/@das0925/video/7617112084890897694?_r=1&_t=ZS-94zCU0JkQtR",
+    "transcript": "And there's no feeling better in life than when everyone at work hates the same person.\nAnd look, I love talking shit with my best friends, and I love beating a dead horse with my best friends.\nBut talking shit about a co worker colleague you fucking hate at work with everyone else?\nBitch, there is no feeling more cathartic, more validating, more comradery inducing than talking shit about someone you hate with fellow colleagues.\nWhen. Ugh. Because when money is on the line, the rants be even more feral.",
+    "vocabulary": "beating a dead horse: to waste time and effort on a topic that has already been discussed, cathartic/kəˈTHärdik/: providing psychological relief through the open expression of strong emotions, validating: make or declare legally valid, comradery/ˈkäm-ˌra-d(ə-)rē /: a feeling of friendliness， goodwill， and familiarity among the people in a group, induce /in-ˈdüs/: to move by persuasion or influence, rant /ˈrant/: to complain loudly, angrily, or unreasonably",
+    "grammarStructures": "And there's no feeling better in life than when ...",
+    "tenseAnnotation": [],
+    "recordings": ""
+  },
+  {
+    "id": "11",
+    "createdAt": "2026-03-26T14:22:16.769Z",
+    "videoUrl": "https://www.tiktok.com/@jovennatran/video/7612939303965986069?_r=1&_t=ZS-950qkQhiF5J",
+    "transcript": "I'm a girl's girl, but this is a list of girls that I would respectfully put in a headlock if I ever met in real life.\nNo. 1, coming in strong at the top of our pyramid, we have homewreckers. Need I say more? If you know that a guy has a girl and you're still going for him, yeah, yeah, I'm putting you in a headlock. I'm throwing you over my shoulder.\nGirls who pretend to be nice when they're really not. Like I love bitches, I love mean, bitchy, attitudey girls, but as long as you're just true to that essence, we're good. Like I rather you be bitchy to my face than you talking shit behind my back.\nNo. 3, we have girls that treat you differently around guys and emphasis on the word treat because I don't mind girls that act differently around guys cause that's pretty common and sometimes it's genuinely just a means of validation for them and I really don't mind that but I draw the line at when they treat you differently around guys like when they become meaner to you and when they just mistreat you. Yeah, no baby girl. That's where I draw the line.\nThis might be a controversial take and I might get canceled for this, but girls who call other girls pick me. I don't know why, but I just find the girls who call other girls pick me's are usually the pick me's like why do You have so much hatred in your heart that you must also then pull down another girl, even if she is already going low. When she is already low, you do not go lower, baby. You go higher because that's who you are.\nLast but not least, we have girls who say, you're copying me. Like baby girl, baby girl. Let me see you do that. Like baby girl. We do not copy over here. We do not gate keep. There's no competition here, babe.\nIf you are triggered by this list, then maybe you should do some inner work. And if you don't do any of the things on this list, then stay the baddie that you already are.",
+    "vocabulary": "put in a headlock: To restrain someone by wrapping one's arm around someone's head or neck, coming in strong, attitudey: Showing a pointedly arrogant attitude, essence: the basic or most important idea or quality of something, genuinely  /ˈdʒen.ju.ɪn.li/: really and sincerely,  just a means of validation, pull down another girl,",
+    "grammarStructures": "Like I rather you be adj than you Ving; draw the line at when...; she is already Ving;",
+    "tenseAnnotation": [
+      {
+        "sentence": "If you know that a guy has a girl and you're still going for him, yeah, yeah, I'm putting you in a headlock.",
+        "annotations": [
+          {
+            "text": "you're still going for him, yeah, yeah, I'm putting you in a headlock.",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          }
+        ]
+      }
+    ],
+    "recordings": ""
+  },
+  {
+    "id": "12",
+    "createdAt": "2026-03-27T14:15:24.982Z",
+    "videoUrl": "https://www.tiktok.com/@sageyamagata/video/7604978301907520782?_r=1&_t=ZS-952XI1pkZj2",
+    "transcript": "I'm getting ready for an interview for a server position, and I have a degree in political science.\nIs it where I wanna be? No.\nBut is it where I am? Yes.\nAnd I was talking to my friend the other day about lucky girl syndrome and what it means. And lucky girl syndrome is not just that you are this lucky girl, that everything good happens to you in the world, no matter what, and just these abundance of great miracles are just flowing into your life. That is not lucky girl syndrome.\nLucky girl syndrome is no matter what happens to you in life, you have the grit, the resilience, the strength to pivot and to keep going and to alchemise anything that happens to you into your ultimate growth and into your ultimate good.\nAnd I have lucky girl syndrome. Despite my circumstances, despite the fact that i'm going into an interview that I know i'm highly overqualified for, i'm not going to go in with the attitude of, oh, i'm highly overqualified for this job, so you should hire me anyways because i'm lucky and I deserve this. I'm going in with the attitude of, this is not exactly where I plan my life to be, but I know that somehow this is gonna be for my ultimate good and the ultimate growth of my experience, because I am lucky. And no matter what, everything always works out for my ultimate, highest good. \nSo why would this not be the same. That is the ultimate meaning of lucky girl syndrome. And I fully believe that no matter what my circumstances are, I have the ability and resilience to keep going and to alchemize it into something amazing.",
+    "vocabulary": "these abundance of great miracles, grit: courage and determination despite difficulty, alchemize: transform the nature or properties of (something) by a seemingly magical process, highly overqualified for",
+    "grammarStructures": "Despite N, i'm not Ving;  but I know that somehow this is gonna be for...; So why would this not be the same; And I fully believe that no matter what my circumstances are,...",
+    "tenseAnnotation": [
+      {
+        "sentence": "I'm getting ready for an interview for a server position, and I have a degree in political science.",
+        "annotations": [
+          {
+            "text": "I'm getting ready for an interview for a server position,",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          },
+          {
+            "text": "and I have a degree in political science.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "And I was talking to my friend the other day about lucky girl syndrome and what it means.",
+        "annotations": [
+          {
+            "text": "And I was talking to my friend the other day about lucky girl syndrome",
+            "tenseId": "past_cont",
+            "tenseLabel": "Past Continuous"
+          },
+          {
+            "text": "and what it means.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "And lucky girl syndrome is not just that you are this lucky girl, that everything good happens to you in the world, no matter what, and just these abundance of great miracles are just flowing into your life.",
+        "annotations": [
+          {
+            "text": "And lucky girl syndrome is not just that you are this lucky girl, that everything good happens to you in the world, no matter what,",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          },
+          {
+            "text": "and just these abundance of great miracles are just flowing into your life.",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          }
+        ]
+      },
+      {
+        "sentence": "Despite my circumstances, despite the fact that i'm going into an interview that I know i'm highly overqualified for, i'm not going to go in with the attitude of, oh, i'm highly overqualified for this job, so you should hire me anyways because i'm lucky and I deserve this.",
+        "annotations": [
+          {
+            "text": "Despite my circumstances, despite the fact that i'm going into an interview that",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          },
+          {
+            "text": "I know i'm highly overqualified for,",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          },
+          {
+            "text": "i'm not going to go in with the attitude of,",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          },
+          {
+            "text": "oh, i'm highly overqualified for this job, so you should hire me anyways because i'm lucky and I deserve this.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "I'm going in with the attitude of, this is not exactly where I plan my life to be, but I know that somehow this is gonna be for my ultimate good and the ultimate growth of my experience, because I am lucky.",
+        "annotations": [
+          {
+            "text": "I'm going in with the attitude of,",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          },
+          {
+            "text": "this is not exactly where I plan my life to be, but I know that somehow",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          },
+          {
+            "text": "this is gonna be for my ultimate good and the ultimate growth of my experience,",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          },
+          {
+            "text": "because I am lucky.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      }
+    ],
+    "recordings": ""
+  }
 ]
