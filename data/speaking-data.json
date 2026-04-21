@@ -345,5 +345,56 @@
       }
     ],
     "recordings": ""
+  },
+  {
+    "id": "13",
+    "createdAt": "2026-04-21T15:18:22.252Z",
+    "videoUrl": "",
+    "transcript": "I think some of y'all just like drama. \nYou like chaos.\n80% of the people who complain to me about shit are SpongeBob and this meme.\nBiggest example I can think of is I go to the university of Alabama and all the sorority girls here complain about being a sorority 24/7 and yet stay in the sorority.\nI don't feel bad for you.\nThis is completely optional.\nNot only that but you are paying to be a part of this organization, same thing with relationships.\nNobody is forcing you to be friends with people or to date people and don't get me wrong sometimes you just need to vent but it gets to a point and some of y'all be complaining about the consequences of your own actions.\nI had this guy complain to me that he felt bad because he micro cheated on his bitch.\nMaybe don't be in a relationship if you wanna be a hoe.\nPersonally if something threatens my peace in the slightest, I'm gone, okay.\nI'm done and I actually don't enjoy just sitting around gossiping because I have bigger and better things to do with my life, you know what I mean.",
+    "vocabulary": "vent, threatens my peace in the slightest",
+    "grammarStructures": "all the sorority girls here complain about being a sorority 24/7 and yet stay in the sorority; Not only that but ...; but it gets to a point and some of y'all be complaining about...; I had this guy complain to me; sitting around gossiping",
+    "tenseAnnotation": [
+      {
+        "sentence": "Not only that but you are paying to be a part of this organization, same thing with relationships.",
+        "annotations": [
+          {
+            "text": "you are paying to be a part of this organization, same thing with relationships.",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          }
+        ]
+      },
+      {
+        "sentence": "Nobody is forcing you to be friends with people or to date people",
+        "annotations": [
+          {
+            "text": "Nobody is forcing you to be friends with people or to date people",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          }
+        ]
+      },
+      {
+        "sentence": "I had this guy complain to me that he felt bad because he micro cheated on his bitch.",
+        "annotations": [
+          {
+            "text": "I had this guy",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "complain to me that",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          },
+          {
+            "text": "he felt bad because he micro cheated on his bitch.",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          }
+        ]
+      }
+    ],
+    "recordings": ""
   }
 ]
