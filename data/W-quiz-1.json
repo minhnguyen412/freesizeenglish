@@ -4858,6 +4858,123 @@
         { "answer": "US" }
     ],
     "words": ["highly", "only", "in", "followed", "US", "preschool", "the", "comprehensive", "conducted", "study", "McMartin", "align", "findings", "publicised", "with", "the", "the", "issue", "this", "on", "Existing", "trial", "which"]
-} 
+},
+        {
+    "id": 168,
+    "audio": "",
+    "sentence": "Nhưng tại sao việc trở thành một "người vợ truyền thống" lại ngày càng phổ biến vào năm 2025, và tại sao nó lại trở nên dễ bán đến vậy?<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "why" },
+        { "answer": "is" },
+        { "answer": "being" },
+        { "answer": "a" },
+        { "answer": "tradwife" },
+        { "answer": "growing" },
+        { "answer": "in" },
+        { "answer": "popularity" },
+        { "answer": "in" },
+        { "answer": "2025," },
+        { "answer": "and" },
+        { "answer": "how" },
+        { "answer": "has" },
+        { "answer": "it" },
+        { "answer": "become" },
+        { "answer": "so" },
+        { "answer": "marketable?" }
+    ],
+    "words": ["in", "so", "and", "tradwife", "marketable?", "popularity", "a", "it", "being", "is", "become", "has", "2025,", "in", "why", "growing", "how", "But"]
+},
+
+{
+    "id": 169,
+    "audio": "",
+    "sentence": "Một phần nguyên nhân là do mạng xã hội.<br>___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Social" },
+        { "answer": "media" },
+        { "answer": "is" },
+        { "answer": "partly" },
+        { "answer": "to" },
+        { "answer": "blame" }
+    ],
+    "words": ["Social", "is", "media", "partly", "to", "blame"]
+},
+
+{
+    "id": 170,
+    "audio": "",
+    "sentence": "Xu hướng người vợ truyền thống ngày càng được biết đến rộng rãi trên các nền tảng như Instagram và TikTok.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "tradwife" },
+        { "answer": "trend" },
+        { "answer": "has" },
+        { "answer": "risen" },
+        { "answer": "in" },
+        { "answer": "visibility" },
+        { "answer": "across" },
+        { "answer": "platforms" },
+        { "answer": "such" },
+        { "answer": "as" },
+        { "answer": "Instagram" },
+        { "answer": "and" },
+        { "answer": "TikTok" }
+    ],
+    "words": ["trend", "such", "in", "Instagram", "and", "visibility", "TikTok", "The", "risen", "platforms", "as", "has", "tradwife", "across"]
+},
+
+{
+    "id": 171,
+    "audio": "",
+    "sentence": "Tuy nhiên, đằng sau niềm vui nội trợ này thường là sự ủng hộ cho sự phục tùng.<br>___, ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "However" },
+        { "answer": "underneath" },
+        { "answer": "this" },
+        { "answer": "joy" },
+        { "answer": "of" },
+        { "answer": "domesticity" },
+        { "answer": "is" },
+        { "answer": "often" },
+        { "answer": "an" },
+        { "answer": "advocation" },
+        { "answer": "of" },
+        { "answer": "subservience" }
+    ],
+    "words": ["an", "However", "of", "of", "advocation", "domesticity", "underneath", "is", "this", "often", "joy", "subservience"]
+},
+
+{
+    "id": 172,
+    "audio": "",
+    "sentence": "Nhiều "người vợ truyền thống" công khai quảng bá niềm vui hàng ngày mà họ có được từ việc phục vụ chồng mình, người mà họ cho là “người đứng đầu” tự nhiên của gia đình.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___, ___ ___ ___ ___ ___ “___” ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Many" },
+        { "answer": "tradwives" },
+        { "answer": "openly" },
+        { "answer": "promote" },
+        { "answer": "the" },
+        { "answer": "daily" },
+        { "answer": "pleasure" },
+        { "answer": "they" },
+        { "answer": "get" },
+        { "answer": "from" },
+        { "answer": "serving" },
+        { "answer": "their" },
+        { "answer": "husbands" },
+        { "answer": "who" },
+        { "answer": "they" },
+        { "answer": "argue" },
+        { "answer": "are" },
+        { "answer": "the" },
+        { "answer": "natural" },
+        { "answer": "head" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "household" }
+    ],
+    "words": ["get", "from", "husbands", "Many", "daily", "of", "argue", "they", "the", "they", "head", "who", "natural", "the", "serving", "their", "pleasure", "household", "promote", "openly", "are", "the", "tradwives"]
+}
     ]
 }
