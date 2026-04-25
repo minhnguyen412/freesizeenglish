@@ -396,5 +396,71 @@
       }
     ],
     "recordings": ""
+  },
+  {
+    "id": "14",
+    "createdAt": "2026-04-25T14:31:26.902Z",
+    "videoUrl": "https://www.tiktok.com/@jordynjones/video/7631707061679590670?_r=1&_t=ZS-95ppUR5971I",
+    "transcript": "Okay. I just got a matcha from LA LA Land, and I met the cutest girl standing behind me in line.\nWe started talking. She's in California for her first time.\nShe's so brave. She's asking me for all these recommendations, and she's so happy to be here.\nShe was also asking me what I recommend getting from there.\nAnd I asked her if she likes matcha, and she said yes. So I just ordered her the same thing that I got, and I paid for her drink. She was so moved, and it felt so good to help someone out and just talk to someone.\nI like to do these small acts of kindness through my day to day, but I wanted to share it with you guys today because my friends at Good Neighbor Day America are hosting a challenge of 250 million acts of kindness.\nI will share more details on the screen.\nBasically, we encourage you guys to do a small act of kindness, share a video, and the grand prize winner gets VIP sweet tickets to one of the biggest football matches this summer.\nI encourage you all to be kind, spread positivity, be a light, and make someone's day.",
+    "vocabulary": "was so moved",
+    "grammarStructures": "She was also asking me what I recommend getting from there.",
+    "tenseAnnotation": [
+      {
+        "sentence": "She was also asking me what I recommend getting from there.",
+        "annotations": [
+          {
+            "text": "She was also asking me",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "what I recommend getting from there.",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "And I asked her if she likes matcha, and she said yes.",
+        "annotations": [
+          {
+            "text": "And I asked her if",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "she likes matcha,",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          },
+          {
+            "text": "and she said yes.",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          }
+        ]
+      },
+      {
+        "sentence": "I like to do these small acts of kindness through my day to day, but I wanted to share it with you guys today because my friends at Good Neighbor Day America are hosting a challenge of 250 million acts of kindness.",
+        "annotations": [
+          {
+            "text": "I like to do these small acts of kindness through my day to day,",
+            "tenseId": "pres_simple",
+            "tenseLabel": "Present Simple"
+          },
+          {
+            "text": "but I wanted to share it with you guys today",
+            "tenseId": "past_simple",
+            "tenseLabel": "Past Simple"
+          },
+          {
+            "text": "because my friends at Good Neighbor Day America are hosting a challenge of 250 million acts of kindness.",
+            "tenseId": "pres_cont",
+            "tenseLabel": "Present Continuous"
+          }
+        ]
+      }
+    ],
+    "recordings": ""
   }
 ]
