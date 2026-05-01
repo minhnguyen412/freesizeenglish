@@ -1,0 +1,1474 @@
+{
+  "definitions": [
+    {
+      "phrase": "Growing numbers of",
+      "definition": "Increasing in size or quantity; more and more people doing or having something.",
+      "source": "Cambridge",
+      "citation": "increasing in size or quantity"
+    },
+    {
+      "phrase": "Housing affordability",
+      "definition": "The extent to which housing costs are manageable for people, typically measured as housing that costs less than a third of a household's income.",
+      "source": "Cambridge",
+      "citation": "Affordability is measured as housing that costs less than a third of a household's income"
+    },
+    {
+      "phrase": "The sixth most common",
+      "definition": "Ranked sixth in frequency among all items of the same type.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "is the leading cause of",
+      "definition": "Is the main reason for something happening, especially death or disease.",
+      "source": "Cambridge Collocation"
+    },
+    {
+      "phrase": "accounted for",
+      "definition": "To form the total of something; to explain the reason for something.",
+      "source": "Cambridge",
+      "citation": "to form the total of something"
+    },
+    {
+      "phrase": "That's expected to",
+      "definition": "Believed to be going to happen or arrive.",
+      "source": "Cambridge",
+      "citation": "believed to be going to happen or arrive"
+    },
+    {
+      "phrase": "is also projected to",
+      "definition": "Planned or calculated for the future based on known information.",
+      "source": "Cambridge",
+      "citation": "planned for the future or calculated based on information already known"
+    },
+    {
+      "phrase": "if no changes are made",
+      "definition": "Conditional phrase meaning under the current circumstances without any alterations; if things stay as they are.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "projected to",
+      "definition": "Calculated or estimated about the future based on current information.",
+      "source": "Cambridge",
+      "citation": "to calculate an amount or number expected in the future from information already known"
+    },
+    {
+      "phrase": "the rally",
+      "definition": "A political gathering or public meeting; in finance, a recovery in prices after a decline.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "is set to",
+      "definition": "Intended to happen; prepared or ready for something.",
+      "source": "Cambridge",
+      "citation": "to start working or dealing with something in an energetic and determined way"
+    },
+    {
+      "phrase": "a far cry from",
+      "definition": "Very different from; nothing like.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "Gross margin",
+      "definition": "A company's profit from selling goods or services before costs not directly related to production are taken away.",
+      "source": "Cambridge",
+      "citation": "a company's profit from selling goods or services in a particular period before costs not directly related to producing them are taken away"
+    },
+    {
+      "phrase": "eye-popping",
+      "definition": "Extremely large, surprising, or shocking; causing your eyes to widen in surprise.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "entails",
+      "definition": "To make something necessary, or to involve something.",
+      "source": "Cambridge",
+      "citation": "to make something necessary, or to involve something"
+    },
+    {
+      "phrase": "really has",
+      "definition": "Emphatic form of has; truly possesses or contains.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "to measure both",
+      "definition": "To assess or evaluate two things or aspects.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "an average 7-year follow-up",
+      "definition": "A study or observation period of about 7 years on average.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "associated 172 diseases with poor sleep patterns",
+      "definition": "Found connections between 172 medical conditions and unhealthy sleep habits.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "irregular bedtimes",
+      "definition": "Inconsistent times for going to sleep.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "off-circadian rhythms",
+      "definition": "Disturbed natural sleep-wake cycles of the body.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "traceable to",
+      "definition": "If something is traceable, it is possible to find out where it came from.",
+      "source": "Cambridge",
+      "citation": "if a product is traceable, information is available about where and how the product and its parts or contents were made"
+    },
+    {
+      "phrase": "are more than twice as likely to",
+      "definition": "Have a probability that is over 200% compared to another group.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "more than four times as likely to",
+      "definition": "Have a probability over 400% compared to another group.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "had increased by almost",
+      "definition": "Grew by approximately but not quite reaching a certain amount.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "in the 40-49 age band",
+      "definition": "Among people aged between 40 and 49 years old.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "are still very much lower in",
+      "definition": "Remain significantly less common or numerous in a particular place or group.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "highlight the need for",
+      "definition": "To attract attention to or emphasize that something important is necessary.",
+      "source": "Cambridge",
+      "citation": "to attract attention to or emphasize something important"
+    },
+    {
+      "phrase": "targeted awareness and interventions",
+      "definition": "Specific educational efforts and actions aimed at particular groups or issues.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "confront",
+      "definition": "To face, meet, or deal with a difficult situation or person.",
+      "source": "Cambridge",
+      "citation": "to face, meet, or deal with a difficult situation or person"
+    },
+    {
+      "phrase": "disproportionately more likely to",
+      "definition": "To a degree that is too large or too small in relation to something else; having an unequal chance.",
+      "source": "Cambridge",
+      "citation": "too large or too small in comparison to something else"
+    },
+    {
+      "phrase": "including",
+      "definition": "Containing as part of a whole; also.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "motivated offenders",
+      "definition": "Criminals who are driven by specific reasons or purposes.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "offending against",
+      "definition": "Committing crimes or wrongdoing against someone or something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "systematic data on",
+      "definition": "Organized and planned collection of information about something.",
+      "source": "Cambridge",
+      "citation": "according to an agreed set of methods or organized plan"
+    },
+    {
+      "phrase": "align with",
+      "definition": "To be the same or similar, or to agree with each other.",
+      "source": "Cambridge",
+      "citation": "to be the same or similar, or to agree with each other"
+    },
+    {
+      "phrase": "which followed",
+      "definition": "That came after something else in time or order.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "was reflecting a growing trend in Western culture",
+      "definition": "Was showing or indicating an increasing pattern in Western societies.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "to take up",
+      "definition": "To begin to participate in or start doing something (an activity, hobby, habit).",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "within the home",
+      "definition": "Inside or inside the house/apartment; domestic setting.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "centred around",
+      "definition": "Focused on or having something as the main subject; organized around a central theme.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "underpinned",
+      "definition": "Supported, justified, or formed the basis of something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "deference to",
+      "definition": "Respect shown for another person because of their experience, knowledge, age, or power.",
+      "source": "Cambridge",
+      "citation": "respect shown for another person esp. because of that person's experience, knowledge, age, or power"
+    },
+    {
+      "phrase": "give over",
+      "definition": "To hand over or transfer something to someone else; to stop doing something and start doing something else instead.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "In essence",
+      "definition": "Relating to the most important characteristics or ideas of something; basically.",
+      "source": "Cambridge",
+      "citation": "relating to the most important characteristics or ideas of something"
+    },
+    {
+      "phrase": "are reeling from",
+      "definition": "Are shocked, confused, or strongly affected by something (usually bad news or events).",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "alleged offences against",
+      "definition": "Accused crimes or wrongdoings committed against someone.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "await results",
+      "definition": "Are waiting for outcomes or findings to come out.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "exposed to infectious diseases",
+      "definition": "At risk of catching contagious illnesses due to contact with infected individuals or environments.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "a horror no parent should ever face",
+      "definition": "Something so terrible that no parent should ever have to experience it.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "has yet to enter a plea",
+      "definition": "Has not yet made a formal statement of guilt or innocence in a legal case.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "media commentary",
+      "definition": "Reports, analysis, and opinions about events in newspapers, TV, radio, or online.",
+      "source": "Cambridge",
+      "citation": "a continuous description of events as they are happening"
+    },
+    {
+      "phrase": "implications",
+      "definition": "The effect that a situation or action will have on something else; results or consequences.",
+      "source": "Cambridge",
+      "citation": "a suggestion of something that is made without saying it directly"
+    },
+    {
+      "phrase": "heavily female-dominated field",
+      "definition": "An area of work or study where women make up the vast majority of workers.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "inquiries into",
+      "definition": "Official investigations or examinations of something.",
+      "source": "Cambridge",
+      "citation": "an official attempt to discover the facts about something"
+    },
+    {
+      "phrase": "in efforts to",
+      "definition": "In attempts to; trying to.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "discriminatory",
+      "definition": "Treating a person or group differently and usually worse because of their race, gender, etc.",
+      "source": "Cambridge",
+      "citation": "treating a person or group differently from and usually worse than other people, because of their race, gender, sexuality, etc."
+    },
+    {
+      "phrase": "subject to",
+      "definition": "Under the authority or control of; affected by or likely to experience something.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "scrutiny",
+      "definition": "Careful and detailed examination of something in order to get information about it.",
+      "source": "Cambridge",
+      "citation": "the careful and detailed examination of something in order to get information about it"
+    },
+    {
+      "phrase": "dynamic",
+      "definition": "Continuously changing or developing; having a lot of ideas and enthusiasm.",
+      "source": "Cambridge",
+      "citation": "continuously changing or developing"
+    },
+    {
+      "phrase": "is compounded by",
+      "definition": "Is made worse by the addition of another problem.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "the perceived benefits",
+      "definition": "The advantages that are thought to exist, whether or not they are real.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "this fear of seeming biased",
+      "definition": "Worry about appearing to have an unfair preference for one side over another.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "can create the very conditions",
+      "definition": "Can actually cause the exact circumstances that lead to a bad outcome.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "to commit abuse",
+      "definition": "To carry out harmful, violent, or mistreating behavior toward someone.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "while hidden in plain sight",
+      "definition": "Although visible to everyone but not recognized or noticed for what it really is.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "has a reputation for",
+      "definition": "Is generally known or believed to have a particular characteristic.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "staid",
+      "definition": "Serious, boring, and slightly old-fashioned.",
+      "source": "Cambridge",
+      "citation": "serious, boring, and slightly old-fashioned"
+    },
+    {
+      "phrase": "frumpy",
+      "definition": "(Of a person or their clothes) old-fashioned and not attractive.",
+      "source": "Cambridge",
+      "citation": "(of a person or their clothes) old-fashioned and not attractive"
+    },
+    {
+      "phrase": "mourn the loss",
+      "definition": "To feel sadness and grief because someone or something is gone.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "to grow through and around it",
+      "definition": "To develop despite obstacles or difficulties.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "work through",
+      "definition": "To deal with a problem or difficult situation over time until it is resolved.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "buying into",
+      "definition": "Accepting and believing in an idea or plan, often without questioning it.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "consciously or unconsciously",
+      "definition": "Either deliberately or without being aware of it.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "robs us of",
+      "definition": "Takes away something from us, usually something valuable.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "feeling rooted in",
+      "definition": "Having a sense of belonging to a particular place or situation.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "are to be taught",
+      "definition": "Should or will be instructed or educated in something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "as part of",
+      "definition": "As one element of a larger whole.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "long-awaited",
+      "definition": "Something that people have been expecting and waiting for, often for a long time.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "statutory",
+      "definition": "Decided, controlled, or required by law.",
+      "source": "Cambridge",
+      "citation": "decided, controlled, or required by law"
+    },
+    {
+      "phrase": "due to",
+      "definition": "Because of; caused by.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "a new focus on",
+      "definition": "Increased attention or concentration on a particular subject.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "are spread online",
+      "definition": "Are shared widely on the internet.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "manosphere",
+      "definition": "An online community of blogs, forums, and websites promoting anti-feminist and male-supremacist views.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "warn schools against",
+      "definition": "Advise or caution educational institutions to avoid doing something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "stigmatizing",
+      "definition": "Treating someone unfairly by disapproving of them; making them feel ashamed or excluded.",
+      "source": "Cambridge",
+      "citation": "to treat someone or something unfairly by disapproving of him, her, or it"
+    },
+    {
+      "phrase": "comes hard on the heels of",
+      "definition": "Happens very soon after a previous event; follows closely.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "outcry",
+      "definition": "A strong public expression of anger and disapproval about something.",
+      "source": "Cambridge",
+      "citation": "a strong expression of anger and disapproval about something, made by a group of people or by the public"
+    },
+    {
+      "phrase": "with its portrayal of",
+      "definition": "In the way it represents or depicts something (often in media).",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "coincides with",
+      "definition": "Happens at or near the same time as something else.",
+      "source": "Cambridge",
+      "citation": "to happen at or near the same time"
+    },
+    {
+      "phrase": "new data to be published",
+      "definition": "Fresh information that will be released or made public.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "in the last week alone",
+      "definition": "Only within the most recent seven-day period.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "made them concerned about",
+      "definition": "Caused them to feel worried or anxious about something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "there has been a worrying increase",
+      "definition": "A troubling rise or growth has occurred.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "have yet to",
+      "definition": "Have not yet; are still in the process of.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "early-onset",
+      "definition": "Appearing or developing at an unusually young age.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "may be responsible for",
+      "definition": "Could be the cause of; might be blamed for something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "some possible reasons",
+      "definition": "Several potential explanations or causes.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "reportedly",
+      "definition": "According to what many people say, but not confirmed as true.",
+      "source": "Cambridge",
+      "citation": "according to what many people say"
+    },
+    {
+      "phrase": "restructuring effort",
+      "definition": "An attempt to reorganize a company, business, or system to make it work more effectively.",
+      "source": "Cambridge",
+      "citation": "to organize a company, business, or system in a new way to make it operate more effectively"
+    },
+    {
+      "phrase": "primarily impacted",
+      "definition": "Mainly or for the most part affected.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "notified",
+      "definition": "Officially informed or given notice about something.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "with little warning in advance",
+      "definition": "Without much time to prepare; unexpectedly.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "reflects a wider trend across",
+      "definition": "Shows a broader pattern that is happening in many places or areas.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "common understanding",
+      "definition": "Shared knowledge or agreement about how something works or what it means.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "in the absence of this understanding",
+      "definition": "Because this knowledge or agreement does not exist.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "attempts at",
+      "definition": "Efforts or tries to achieve something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "are more likely to",
+      "definition": "Have a higher probability of doing something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "allocation",
+      "definition": "The process of distributing or assigning resources, money, time, etc.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "vital",
+      "definition": "Extremely important; essential for life or success.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "highly profitable",
+      "definition": "Making a lot of money; very successful financially.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "This is therefore a",
+      "definition": "Because of the previous information, this constitutes or represents a.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "significant public interest",
+      "definition": "Important matter that affects many people and attracts their attention.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "obscure",
+      "definition": "Not known to many people; not clear and difficult to understand.",
+      "source": "Cambridge",
+      "citation": "not known to many people"
+    },
+    {
+      "phrase": "Greater clarity and transparency about",
+      "definition": "More openness, honesty, and clear information regarding something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "amassed a fortune",
+      "definition": "Collected or accumulated a large amount of money or wealth.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "lavishing his wealth on",
+      "definition": "Spending a lot of money freely on someone or something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "philanthropic",
+      "definition": "Giving money to help people who are poor or sick, or to pay for things like museums or schools.",
+      "source": "Cambridge",
+      "citation": "giving money to help people who are poor or sick, or to pay for things such as museums or schools that are good for society"
+    },
+    {
+      "phrase": "It also appears",
+      "definition": "In addition, it seems that; it is also evident that.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "ensured",
+      "definition": "Made certain or guaranteed something would happen.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "linked to",
+      "definition": "Connected to; associated with.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "benevolence",
+      "definition": "The quality of being kind and helpful; the act of giving money or help to people.",
+      "source": "Cambridge",
+      "citation": "the quality of being kind and helpful"
+    },
+    {
+      "phrase": "onwards",
+      "definition": "Starting from a particular time or point and continuing forward.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "several of which",
+      "definition": "Some number of things from a previously mentioned group.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "enmeshed in",
+      "definition": "Caught or involved in something unpleasant or dangerous that is difficult to escape.",
+      "source": "Cambridge",
+      "citation": "to catch or involve someone in something unpleasant or dangerous from which it is difficult to escape"
+    },
+    {
+      "phrase": "enslavement-based",
+      "definition": "Relating to or founded on the practice of owning humans as property.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "prevalent mental illness",
+      "definition": "A type of mental illness that is common or widespread.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "involving frequent social anxiety",
+      "definition": "Including or containing repeated feelings of worry or fear in social situations.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "classified as",
+      "definition": "Officially categorized or grouped as a particular type.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "withdrawn",
+      "definition": "Shy and quiet, preferring to be alone rather than with other people.",
+      "source": "Cambridge",
+      "citation": "shy and quiet and preferring to be alone rather than with other people"
+    },
+    {
+      "phrase": "indifferent",
+      "definition": "Not caring about or interested in someone or something.",
+      "source": "Cambridge",
+      "citation": "not caring about or being interested in someone or something"
+    },
+    {
+      "phrase": "detract from",
+      "definition": "To make something seem less valuable or less deserving of admiration than it really is.",
+      "source": "Cambridge",
+      "citation": "to make something seem less valuable or less deserving of admiration than it really is"
+    },
+    {
+      "phrase": "might be experiencing",
+      "definition": "Could possibly be feeling or going through something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "are bombarded by",
+      "definition": "Are constantly attacked or overwhelmed by large amounts of something (usually information).",
+      "source": "Cambridge",
+      "citation": "to direct so many things at someone, especially to ask them so many questions, that they find it difficult to deal with"
+    },
+    {
+      "phrase": "vortex of vices",
+      "definition": "A swirling, dangerous situation involving multiple bad habits or immoral behaviors.",
+      "source": "Cambridge",
+      "citation": "a mass of air or water that spins around very fast and pulls objects into its empty centre. a dangerous or bad situation"
+    },
+    {
+      "phrase": "equip",
+      "definition": "To give someone the skills or information needed to do a particular thing.",
+      "source": "Cambridge",
+      "citation": "to give someone or something the skills or information needed to do a particular thing"
+    },
+    {
+      "phrase": "from the get-go",
+      "definition": "From the very beginning; right from the start.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "resilience to",
+      "definition": "The ability to recover quickly from difficulties; toughness.",
+      "source": "Cambridge",
+      "citation": "the ability to be happy, successful, etc. again after something difficult or bad has happened"
+    },
+    {
+      "phrase": "to take on challenge and risk",
+      "definition": "To accept or undertake difficult tasks that involve danger or uncertainty.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "grit and resilience",
+      "definition": "Courage, determination, and the ability to keep going despite difficulties.",
+      "source": "Cambridge",
+      "citation": "courage and determination despite difficulty"
+    },
+    {
+      "phrase": "going further in",
+      "definition": "Making additional progress in a subject or activity.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "to understand issues around",
+      "definition": "To comprehend problems or matters related to a topic.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "distinguish fact from fiction",
+      "definition": "To tell the difference between what is true and what is imagined or made up.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "vile content",
+      "definition": "Extremely unpleasant, immoral, or disgusting material.",
+      "source": "Cambridge",
+      "citation": "unpleasant, immoral, and unacceptable"
+    },
+    {
+      "phrase": "cut through",
+      "definition": "To understand and explain something complex in a clear and direct way.",
+      "source": "Cambridge",
+      "citation": "to understand something that is not easy to understand"
+    },
+    {
+      "phrase": "tangled historical",
+      "definition": "Confusingly complex or mixed-up history; history that is difficult to understand because it is complicated.",
+      "source": "Cambridge",
+      "citation": "twisted into an untidy mass or confused and complicated"
+    },
+    {
+      "phrase": "to all intents and purposes",
+      "definition": "In all the most important ways; practically speaking.",
+      "source": "Cambridge",
+      "citation": "in all the most important ways"
+    },
+    {
+      "phrase": "is referred to",
+      "definition": "Is called or named; is given a particular label or term.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "circulate in the economy",
+      "definition": "Move around or flow through the economic system.",
+      "source": "Cambridge",
+      "citation": "to go around or through something, or to make something go around or through something"
+    },
+    {
+      "phrase": "further narrow down",
+      "definition": "To make a search or selection more specific by eliminating more options.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "as consisting of",
+      "definition": "As being made up of particular elements or parts.",
+      "source": "Cambridge",
+      "citation": "to be made of or formed from something"
+    },
+    {
+      "phrase": "accounts for less than",
+      "definition": "Represents a smaller proportion of the total.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "makes up the remaining 97 per cent",
+      "definition": "Forms all of the other percentage after the previously mentioned portion is counted.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "compulsive engagement",
+      "definition": "Repeated behavior that is difficult to stop despite negative consequences.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "rewarding stimuli",
+      "definition": "Pleasant triggers or rewards that encourage certain behaviors.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "adverse consequences",
+      "definition": "Negative or harmful results.",
+      "source": "Cambridge",
+      "citation": "having a negative or harmful effect on something"
+    },
+    {
+      "phrase": "one which is induced by repeated exposure to",
+      "definition": "Something caused by being shown or experiencing something many times.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "an addictive stimulus",
+      "definition": "Something that creates a strong urge to keep doing or having it because it produces pleasure.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "the core pathology that drives",
+      "definition": "The main problem or disease that causes and controls a particular behavior or condition.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "are that",
+      "definition": "The reasons or explanations are that.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "increase the likelihood that",
+      "definition": "Make it more probable that something will happen.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "intrinsically rewarding",
+      "definition": "Providing satisfaction or pleasure as an inherent part of the activity itself (not requiring external rewards).",
+      "source": "Cambridge",
+      "citation": "in a way that is an extremely important and basic characteristic of a person or thing"
+    },
+    {
+      "phrase": "perceived as",
+      "definition": "Thought of or regarded as being a certain way.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "inherently",
+      "definition": "In a way that is a basic part of something; essentially.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "has pushed to",
+      "definition": "Has forced or driven something toward a particular direction or goal.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "leaner",
+      "definition": "(Of a company or organization) More efficient by reducing unnecessary costs or staff.",
+      "source": "Cambridge",
+      "citation": "using only what is necessary, and determined to work effectively in order to compete successfully"
+    },
+    {
+      "phrase": "with a particular emphasis on",
+      "definition": "Focusing especially on one aspect or area.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "the growing role of",
+      "definition": "An increasing function or importance of something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "corporate roles",
+      "definition": "Jobs or positions within companies or businesses.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "improve efficiency",
+      "definition": "To make a process or system work better with less waste, time, or cost.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "drew backlash from",
+      "definition": "Created a strong, negative reaction from a group of people.",
+      "source": "Cambridge",
+      "citation": "a strong, negative reaction to something, esp. to change"
+    },
+    {
+      "phrase": "assured that",
+      "definition": "Promise or guarantee that something is true or will happen.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "their thoughts often turn to",
+      "definition": "They frequently start thinking about something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "A select few",
+      "definition": "A small, chosen group of people.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "beating the market",
+      "definition": "Achieving better investment returns than the overall market average.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "At its core",
+      "definition": "In its most fundamental nature; essentially.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "Financial prosperity",
+      "definition": "Economic success; the state of having a lot of money and resources.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "Instead",
+      "definition": "As an alternative; rather.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "consistent exercise",
+      "definition": "Regular physical activity performed on a regular schedule.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "push you in the right direction",
+      "definition": "Give you motivation or guidance to do something beneficial.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "have a strong need for",
+      "definition": "Want or require something very much.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "see something unfair done",
+      "definition": "Observe or witness an action that treats someone badly or unjustly.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "has the common sense to",
+      "definition": "Possesses the natural ability to make good judgments in practical situations.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "The purely logical way to",
+      "definition": "The completely rational method or approach for doing something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "since otherwise they would",
+      "definition": "Because if they do not do this, they will experience some negative consequence.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "In practice though",
+      "definition": "When you actually try to do something, however; in reality.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "the perceived unfairness",
+      "definition": "The unjust treatment that is believed to exist, whether real or not.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "the longest marine heatwave ever recorded",
+      "definition": "An unusually long period of exceptionally warm ocean temperatures.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "over a prolonged period",
+      "definition": "For an extended length of time.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "have compiled a comprehensive overview of",
+      "definition": "Have gathered and organized complete information about something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "resulted in",
+      "definition": "Caused something to happen; led to a particular outcome.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "unprecedented",
+      "definition": "Never having happened or existed before; new and unusual.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "ecological disturbance",
+      "definition": "A change or disruption to the natural environment and its systems.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "across",
+      "definition": "In every part of; throughout.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "to better understand",
+      "definition": "To more clearly comprehend.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "fit into the broader context of",
+      "definition": "To be seen as part of a larger situation or framework.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "further north than ever before",
+      "definition": "In a more northern location than at any previous time.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "In essence",
+      "definition": "Basically; when you look at the main point.",
+      "source": "Cambridge",
+      "citation": "relating to the most important characteristics or ideas of something"
+    },
+    {
+      "phrase": "dynamic",
+      "definition": "Always changing and developing; energetic.",
+      "source": "Cambridge",
+      "citation": "continuously changing or developing"
+    },
+    {
+      "phrase": "experiment with new things",
+      "definition": "Try out or test different ideas, products, or methods.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "creatively integrate together",
+      "definition": "To combine different elements in an original and imaginative way.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "disruptive solutions",
+      "definition": "New ideas or methods that completely change the way things are done, often in a revolutionary way.",
+      "source": "Cambridge",
+      "citation": "causing trouble and therefore stopping something from continuing as usual"
+    },
+    {
+      "phrase": "quite likely that",
+      "definition": "Probably; there is a good chance that.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "crossed paths with",
+      "definition": "Met or encountered (someone) by chance.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "geek out",
+      "definition": "To become extremely enthusiastic and focused on a topic of personal interest.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "going down the rabbit hole",
+      "definition": "Entering a confusing or complex situation where you are not sure what will happen next.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "chances are",
+      "definition": "It is probable that; most likely.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "to a certain extent",
+      "definition": "Partly; somewhat; in one way but not completely.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "It's not so much about",
+      "definition": "The main point is not really about something; rather it focuses on something else.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "make the most out of it",
+      "definition": "To use an opportunity to get the best possible results.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "confirm earlier commitments",
+      "definition": "To officially agree again to promises or plans made before.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "clarify that",
+      "definition": "To make something clearer or easier to understand; to explain.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "should not agree to",
+      "definition": "Ought not to accept or say yes to.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "was made compulsory for",
+      "definition": "Became required by law or rules for a particular group of people.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "brought forward",
+      "definition": "Moved to an earlier time or date; also to present or introduce.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "has been under pressure to ditch",
+      "definition": "Has been forced or strongly encouraged to abandon or give up something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "proscribed",
+      "definition": "Listed officially as dangerous or forbidden; prohibited.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "timely",
+      "definition": "Happening at a suitable or appropriate time; punctual.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "In an attempt to",
+      "definition": "Trying to; with the goal of.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "the influx of tourists",
+      "definition": "The arrival and entry of large numbers of visitors to a place.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "aims to",
+      "definition": "Intends to; has the goal of doing something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "has set up",
+      "definition": "Has established or created (a system, organization, meeting, etc.).",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "exchange thoughts",
+      "definition": "To share ideas, opinions, or viewpoints with others.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "typically",
+      "definition": "In most cases; usually.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "a weeklong itinerary",
+      "definition": "A schedule of activities and events planned for an entire week.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "concerns about",
+      "definition": "Worries or anxieties regarding a particular subject.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "rally overblown",
+      "definition": "A demonstration or gathering that is made bigger or more dramatic than is necessary or appropriate.",
+      "source": "Cambridge",
+      "citation": "bigger or more important or impressive than it should be"
+    },
+    {
+      "phrase": "overexcited about",
+      "definition": "Too enthusiastic or animated about something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "are spending liberally on",
+      "definition": "Are using a lot of money for something without being careful about costs.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "they are starting to see the green shoots of returns",
+      "definition": "They are beginning to see the first signs of profit or positive results after a difficult period.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "most other companies",
+      "definition": "The majority of other businesses.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "commentary about",
+      "definition": "Discussion, reports, or opinions about a subject.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "put investors at ease",
+      "definition": "Make investors feel calm and less worried.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "prompt a selloff in",
+      "definition": "Cause investors to quickly sell their shares or assets in a particular area.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "correlation between",
+      "definition": "A relationship or connection between two or more things.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "competencies",
+      "definition": "Important skills needed to do a job well.",
+      "source": "Cambridge",
+      "citation": "an important skill that is needed to do a job"
+    },
+    {
+      "phrase": "specific to",
+      "definition": "Relating only to a particular thing or situation.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "narrowing down",
+      "definition": "Reducing the number of options to a more manageable set.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "integrators",
+      "definition": "People or companies that combine different parts of computer systems or technologies to form a complete working system.",
+      "source": "Cambridge",
+      "citation": "a person or company that puts together pieces of computer equipment to form computer systems"
+    },
+    {
+      "phrase": "thirst for",
+      "definition": "A strong desire or craving for something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "integrate it in their core field",
+      "definition": "To combine something with their main area of work or expertise.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "atypical combinations of",
+      "definition": "Unusual pairings or mixtures of things that do not normally go together.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "across fields",
+      "definition": "In many different areas of study or work.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "integrate",
+      "definition": "To combine two or more things to make a whole.",
+      "source": "Cambridge",
+      "citation": "the action or process of successfully joining or mixing with a different group of people"
+    },
+    {
+      "phrase": "disruptive ideas",
+      "definition": "New concepts that challenge and change existing ways of doing things.",
+      "source": "Cambridge",
+      "citation": "causing trouble and therefore stopping something from continuing as usual"
+    },
+    {
+      "phrase": "a calculated act of reputation washing",
+      "definition": "A deliberate action intended to make someone's public image look better than it really is.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "one of hundreds of",
+      "definition": "One example from a large group.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "made their fortunes from",
+      "definition": "Earned or accumulated their wealth through a particular activity.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "profiting from",
+      "definition": "Making money or gaining financial benefit from something.",
+      "source": "Cambridge",
+      "citation": "to be earning, or start to earn, money from a trade or business rather than losing it"
+    },
+    {
+      "phrase": "served as",
+      "definition": "Acted in the role of; performed the function of.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "enslavers",
+      "definition": "People who keep others in slavery; owners of enslaved people.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "slavers",
+      "definition": "People or ships involved in the slave trade; those who sell human beings as property.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "entanglements with",
+      "definition": "Complicated or difficult connections or relationships with someone or something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "commissioned by",
+      "definition": "Officially asked or hired by someone to create or do something.",
+      "source": "Cambridge",
+      "citation": "to formally choose someone to do a special piece of work, or to formally ask for a special piece of work from someone"
+    },
+    {
+      "phrase": "It has established that",
+      "definition": "Research or investigation has proven or shown that.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "the equivalent of",
+      "definition": "The same as; an amount or thing that is equal in value, meaning, or effect.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "implicated in",
+      "definition": "Shown or suspected to be involved in something bad.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "growing in popularity",
+      "definition": "Becoming more liked or used by more people over time.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "how has it become",
+      "definition": "In what way has it transformed into a particular state.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "marketable",
+      "definition": "Products or skills that are easy to sell because a lot of people want them.",
+      "source": "Cambridge",
+      "citation": "Marketable products or skills are easy to sell because a lot of people want them"
+    },
+    {
+      "phrase": "is partly to blame",
+      "definition": "Shares some responsibility for a problem or negative situation.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "has risen in visibility across platforms",
+      "definition": "Has become more noticeable or seen on many different websites and apps.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "underneath this joy of",
+      "definition": "Hidden beneath or behind the pleasure or happiness from something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "advocation of subservience",
+      "definition": "The promotion or support of placing oneself in a lower position and obeying others.",
+      "source": "Cambridge",
+      "citation": "a willingness to do what other people want, or the act of considering your wishes as less important than those of other people"
+    },
+    {
+      "phrase": "openly promote",
+      "definition": "To publicly support or encourage something without hiding it.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "get from",
+      "definition": "To obtain, receive, or acquire something from someone or somewhere.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "who they argue are",
+      "definition": "Whom they claim or state are.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "fall within",
+      "definition": "Are included in; belong to a particular category or range.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "to some extent report a general feeling of",
+      "definition": "Partially describe or express a widespread mood or atmosphere that is.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "a trail of",
+      "definition": "A series of marks, events, or consequences left behind by something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "due to",
+      "definition": "Because of; caused by.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "pop up",
+      "definition": "To suddenly appear, often unexpectedly.",
+      "source": "Cambridge"
+    },
+    {
+      "phrase": "which seem equally exciting",
+      "definition": "That appear to provide the same level of pleasure or interest.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "ends up leaving them with a feeling of frustration for",
+      "definition": "Results in them feeling disappointed and annoyed about something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "properly finish any of them",
+      "definition": "Completely complete or conclude any of the tasks or activities.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "results in an inability to",
+      "definition": "Causes the condition of not being able to do something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "finally results in",
+      "definition": "Ultimately leads to or causes a particular outcome.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "any of them at all",
+      "definition": "Any single one of the items or actions being discussed.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "Simply because",
+      "definition": "Only or just for the reason that.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "make up their mind on",
+      "definition": "Come to a decision about something.",
+      "source": "Paraphrase"
+    },
+    {
+      "phrase": "prolonged procrastination",
+      "definition": "An extended period of delaying or putting off tasks that need to be done.",
+      "source": "Paraphrase"
+    }
+  ]
+}
