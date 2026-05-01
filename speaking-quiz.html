@@ -365,6 +365,67 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
     font-size: 0.8rem;
   }
 }
+  /* ── ANSWER KEY ── */
+.answer-key-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--blue-pale);
+  border: var(--border-thick);
+  border-radius: 16px;
+}
+
+.answer-key-toggle {
+  width: 100%;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 18px;
+  background: var(--blue);
+  color: white;
+  border: var(--border-thick);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.answer-key-toggle:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+}
+
+.answer-key-toggle.open {
+  background: var(--red);
+}
+
+.answer-key-content {
+  margin-top: 16px;
+}
+
+.answer-key-item {
+  background: white;
+  border: var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+}
+
+.answer-key-item-q {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--black);
+}
+
+.answer-key-item-a {
+  color: var(--green-dark);
+  font-weight: 600;
+}
+  .btn-exit {
+  background: var(--black);
+  color: white;
+}
 </style>
 </head>
 <body>
@@ -439,6 +500,14 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
           <button class="btn-exit" id="back-setup-btn">⟲ Back to Setup</button>
         </div>
       </div>
+      <div class="answer-key-section" id="answer-key-section" style="display:none; margin-top: 30px;">
+  <button class="answer-key-toggle" id="answer-key-toggle">
+    📋 Show All Answers (Collapsible)
+  </button>
+  <div class="answer-key-content" id="answer-key-content" style="display:none;">
+    <div id="answer-key-list"></div>
+  </div>
+</div>
     </div>
 
   </div>
@@ -623,6 +692,8 @@ function showQ() {
     showSummary();
     return;
   }
+  // Thêm dòng này
+  if (curIdx === 0) loadAnswerKey();
 
   const q = questions[curIdx];
   revealed = false;
@@ -778,6 +849,18 @@ function showResultBar(ok, msg) {
 function showActionBtn(type) {
   actionsEl.innerHTML = '';
   actionsEl.style.display = 'flex';
+  // Thêm nút Skip
+  if (type === 'next' || type === 'retry') {
+    const skipBtn = document.createElement('button');
+    skipBtn.className = 'btn-exit';
+    skipBtn.textContent = 'Skip ⏭';
+    skipBtn.style.marginLeft = 'auto';
+    skipBtn.addEventListener('click', () => {
+      curIdx++;
+      showQ();
+    });
+    actionsEl.appendChild(skipBtn);
+  }
 
   const btn = document.createElement('button');
 
@@ -963,7 +1046,41 @@ async function loadSidebarList() {
     sidebarList.innerHTML = `<li style="padding:12px 16px;color:#999;font-size:0.9rem;">Failed to load</li>`;
   }
 }
+// ════════════════════════════════════════════════════════════════
+// ANSWER KEY (COLLAPSIBLE)
+// ════════════════════════════════════════════════════════════════
+function loadAnswerKey() {
+  const answerKeySection = qs('#answer-key-section');
+  const answerKeyToggle = qs('#answer-key-toggle');
+  const answerKeyContent = qs('#answer-key-content');
+  const answerKeyList = qs('#answer-key-list');
 
+  answerKeySection.style.display = 'block';
+
+  answerKeyToggle.addEventListener('click', () => {
+    const isOpen = answerKeyContent.style.display !== 'none';
+    answerKeyContent.style.display = isOpen ? 'none' : 'block';
+    answerKeyToggle.classList.toggle('open');
+  });
+
+  // Render answer key
+  answerKeyList.innerHTML = '';
+  questions.forEach((q, idx) => {
+    const blanks = q.blanks || [];
+    const answers = blanks.map(b => b.answer).join(' / ');
+    const sentence = Array.isArray(q.sentence) 
+      ? q.sentence.join(' ') 
+      : q.sentence;
+
+    const item = document.createElement('div');
+    item.className = 'answer-key-item';
+    item.innerHTML = `
+      <div class="answer-key-item-q">Q${idx + 1}: ${sentence}</div>
+      <div class="answer-key-item-a">✓ Answer: <strong>${answers}</strong></div>
+    `;
+    answerKeyList.appendChild(item);
+  });
+}
 // ════════════════════════════════════════════════════════════════
 // CALL ON PAGE LOAD
 // ════════════════════════════════════════════════════════════════
