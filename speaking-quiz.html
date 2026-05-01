@@ -663,8 +663,7 @@ startBtn.addEventListener('click', async () => {
   }
 
   questions = filterAndSortQuestions(sortOrder, countInput);
-  // Thêm dòng này
-  loadAnswerKey();
+  
 
   if (questions.length === 0) {
     alert('❌ No questions available!');
@@ -1053,23 +1052,29 @@ async function loadSidebarList() {
 // ════════════════════════════════════════════════════════════════
 // ANSWER KEY (COLLAPSIBLE)
 // ════════════════════════════════════════════════════════════════
-function loadAnswerKey() {
-  const answerKeySection = qs('#answer-key-section');
+async function loadAnswerKey() {
+  // Load allQuestions nếu chưa có
+  if (allQuestions.length === 0) {
+    await loadAllQuestions();
+  }
+
   const answerKeyToggle = qs('#answer-key-toggle');
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
-  
+  // Xóa event listener cũ nếu có
+  answerKeyToggle.removeEventListener('click', toggleAnswerKey);
+  answerKeyToggle.addEventListener('click', toggleAnswerKey);
 
-  answerKeyToggle.addEventListener('click', () => {
+  function toggleAnswerKey() {
     const isOpen = answerKeyContent.style.display !== 'none';
     answerKeyContent.style.display = isOpen ? 'none' : 'block';
     answerKeyToggle.classList.toggle('open');
-  });
+  }
 
-  // Render answer key
+  // Render answer key từ tất cả questions
   answerKeyList.innerHTML = '';
-  questions.forEach((q, idx) => {
+  allQuestions.forEach((q, idx) => {
     const blanks = q.blanks || [];
     const answers = blanks.map(b => b.answer).join(' / ');
     const sentence = Array.isArray(q.sentence) 
@@ -1089,8 +1094,9 @@ function loadAnswerKey() {
 // CALL ON PAGE LOAD
 // ════════════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
-  loadAllQuestions();
-  loadSidebarList();
+  loadAllQuestions().then(() => {
+    loadAnswerKey();
+    loadSidebarList();
 });
 </script>
 
