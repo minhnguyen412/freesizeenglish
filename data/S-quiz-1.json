@@ -134,14 +134,14 @@
         { "answer": "watching" },
         { "answer": "something" },
         { "answer": "and" },
-        { "answer": "i'll" },
+        { "answer": "it'll" },
         { "answer": "just" },
         { "answer": "be" },
         { "answer": "a" },
         { "answer": "constant" },
         { "answer": "munch" }
     ],
-    "words": ["just", "i'll", "watching", "something", "constant", "a", "munch", "and", "I'm", "be"]
+    "words": ["just", "it'll", "watching", "something", "constant", "a", "munch", "and", "I'm", "be"]
 },
 
 {
@@ -573,7 +573,7 @@
         { "answer": "thinking" },
         { "answer": "what" },
         { "answer": "can" },
-        { "answer": "i" },
+        { "answer": "I" },
         { "answer": "munch" },
         { "answer": "on" },
         { "answer": "as" },
@@ -583,7 +583,7 @@
         { "answer": "get" },
         { "answer": "home" }
     ],
-    "words": ["get", "thinking", "home", "on", "was", "what", "I", "I", "as", "soon", "can", "as", "munch", "i"]
+    "words": ["get", "thinking", "home", "on", "was", "what", "I", "I", "as", "soon", "can", "as", "munch", "I"]
 },
 
 {
