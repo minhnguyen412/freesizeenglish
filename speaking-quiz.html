@@ -1091,11 +1091,6 @@ function loadAnswerKey() {
 document.addEventListener('DOMContentLoaded', () => {
   loadAllQuestions();
   loadSidebarList();
-  // Thêm dòng này - load answer key khi page load
-  qs('#answer-key-toggle').addEventListener('click', function() {
-    const content = qs('#answer-key-content');
-    content.style.display = content.style.display === 'none' ? 'block' : 'none';
-    this.classList.toggle('open');
 });
 </script>
 
