@@ -235,6 +235,125 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   .sentence { font-size: 0.95rem; }
   .word { font-size: 0.82rem; padding: 6px 11px; }
 }
+  /* ── SIDEBAR ── */
+.sidebar {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-card {
+  background: var(--white);
+  border: var(--border-thick);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.14s, box-shadow 0.14s;
+  cursor: pointer;
+}
+
+.sidebar-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.sidebar-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.sidebar-emoji {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  border-bottom: var(--border);
+  background: var(--yellow-pale);
+}
+
+.sidebar-card:nth-child(2) .sidebar-emoji { background: var(--red-light); }
+.sidebar-card:nth-child(3) .sidebar-emoji { background: var(--sky-pale); }
+.sidebar-card:nth-child(4) .sidebar-emoji { background: var(--orange-pale); }
+.sidebar-card:nth-child(5) .sidebar-emoji { background: var(--yellow-pale); }
+
+.sidebar-info {
+  padding: 12px 14px;
+}
+
+.sidebar-info h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.sidebar-info p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #777;
+  line-height: 1.4;
+}
+
+.sidebar-title {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1rem;
+  background: var(--orange-pale);
+  color: var(--orange);
+  border: var(--border-thick);
+  border-radius: 50px;
+  padding: 6px 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+  .sidebar-emoji {
+    height: 70px;
+    font-size: 2rem;
+  }
+  .sidebar-info h4 {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .sidebar-emoji {
+    height: 60px;
+    font-size: 1.8rem;
+  }
+  .sidebar-card {
+    border-radius: 14px;
+  }
+  .sidebar-info {
+    padding: 10px 12px;
+  }
+  .sidebar-info h4 {
+    font-size: 0.8rem;
+  }
+  .sidebar-info p {
+    font-size: 0.7rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -311,6 +430,11 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
       </div>
     </div>
 
+  </div>
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-title">📚 Related</div>
+    <!-- Thumbnails will be loaded here -->
   </div>
 </div>
 
@@ -759,6 +883,80 @@ qs('.menu-toggle')?.addEventListener('click', function () {
 // ════════════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
   loadAllQuestions();
+});
+// ════════════════════════════════════════════════════════════════
+// EMOJI MAP FOR SIDEBAR
+// ════════════════════════════════════════════════════════════════
+const emojiMap = [
+  { keys: ['food','eat','cook','recipe','restaurant','lunch','dinner','breakfast','coffee','drink'], emoji: '🍜' },
+  { keys: ['travel','trip','vacation','holiday','flight','hotel','city','abroad'], emoji: '✈️' },
+  { keys: ['sport','gym','exercise','fitness','run','football','basketball','swim'], emoji: '⚽' },
+  { keys: ['work','job','office','meeting','business','career','company'], emoji: '💼' },
+  { keys: ['school','study','exam','university','class','education','learn'], emoji: '🎓' },
+  { keys: ['money','finance','bank','budget','save','invest'], emoji: '💰' },
+  { keys: ['health','hospital','doctor','medicine','body','sleep','mental'], emoji: '🏥' },
+  { keys: ['family','home','house','parent','child','kid','baby'], emoji: '🏠' },
+  { keys: ['music','song','concert','band','sing','playlist'], emoji: '🎵' },
+  { keys: ['movie','film','cinema','watch','show','series'], emoji: '🎬' },
+  { keys: ['nature','environment','plant','animal','ocean','forest'], emoji: '🌿' },
+  { keys: ['technology','tech','computer','app','phone','internet','ai'], emoji: '💻' },
+  { keys: ['fashion','clothes','style','outfit','shopping'], emoji: '👗' },
+  { keys: ['speak','speaking','conversation','talk','discuss'], emoji: '💬' },
+  { keys: ['read','reading','book','article','story'], emoji: '📖' },
+];
+
+const fallbackEmojis = ['📝','🎯','💡','🌟','🔥','⚡','🎈','🌈','🦋','🎪'];
+
+function pickEmojiForSidebar(title, idx) {
+  const t = (title || '').toLowerCase();
+  for (const { keys, emoji } of emojiMap) {
+    if (keys.some(k => t.includes(k))) return emoji;
+  }
+  return fallbackEmojis[idx % fallbackEmojis.length];
+}
+
+// ════════════════════════════════════════════════════════════════
+// LOAD SIDEBAR THUMBNAILS
+// ════════════════════════════════════════════════════════════════
+async function loadSidebarThumbnails() {
+  const sidebar = qs('#sidebar');
+  if (!sidebar) return;
+
+  try {
+    const response = await fetch('data/speaking-thumb.json');
+    const items = await response.json();
+    
+    // Chỉ lấy 4 item đầu tiên
+    const limited = items.slice(0, 4);
+
+    limited.forEach((item, i) => {
+      const emoji = pickEmojiForSidebar(item.title, i);
+      
+      const card = document.createElement('div');
+      card.className = 'sidebar-card';
+      card.innerHTML = `
+        <a href="${item.htmlLink}" target="_blank">
+          <div class="sidebar-emoji">${emoji}</div>
+          <div class="sidebar-info">
+            <h4>${item.title || 'Untitled'}</h4>
+            <p>${item.description || ''}</p>
+          </div>
+        </a>
+      `;
+      sidebar.appendChild(card);
+    });
+  } catch (error) {
+    console.error('Error loading sidebar:', error);
+    sidebar.innerHTML = `<p style="color:#999;font-size:0.9rem;">Failed to load</p>`;
+  }
+}
+
+// ════════════════════════════════════════════════════════════════
+// CALL ON PAGE LOAD
+// ════════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  loadAllQuestions();
+  loadSidebarThumbnails();
 });
 </script>
 
