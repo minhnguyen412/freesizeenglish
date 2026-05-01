@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IELTS Writing Quiz - Practice Mode</title>
+<title>Speaking Quiz - Practice Mode</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -463,11 +463,18 @@ startBtn.addEventListener('click', async () => {
     return;
   }
 
+  // Reset state
   curIdx = 0;
   scoreCorrect = 0;
+  resetQuizUI();
+  
+  // Show quiz elements
   setupCard.style.display = 'none';
   quizContainer.classList.add('active');
   summaryEl.style.display = 'none';
+  progWrap.style.display = 'block';
+  counterEl.style.display = 'block';
+  
   showQ();
 });
 
@@ -696,6 +703,20 @@ function showSummary() {
 }
 
 // ════════════════════════════════════════════════════════════════
+// RESET QUIZ UI
+// ════════════════════════════════════════════════════════════════
+function resetQuizUI() {
+  summaryEl.style.display = 'none';
+  sentenceEl.style.display = 'none';
+  optionsEl.style.display = 'none';
+  resultBar.style.display = 'none';
+  actionsEl.style.display = 'none';
+  progWrap.style.display = 'none';
+  counterEl.style.display = 'none';
+  progFill.style.width = '0%';
+}
+
+// ════════════════════════════════════════════════════════════════
 // EVENT LISTENERS
 // ════════════════════════════════════════════════════════════════
 resetBtn.addEventListener('click', () => {
@@ -705,27 +726,25 @@ resetBtn.addEventListener('click', () => {
 
 exitBtn.addEventListener('click', () => {
   if (confirm('Are you sure? Your progress will be lost.')) {
+    resetQuizUI();
     quizContainer.classList.remove('active');
     setupCard.style.display = 'block';
-    summaryEl.style.display = 'none';
-    sentenceEl.style.display = 'none';
-    optionsEl.style.display = 'none';
-    resultBar.style.display = 'none';
-    actionsEl.style.display = 'none';
   }
 });
 
 restartBtn.addEventListener('click', () => {
   summaryEl.style.display = 'none';
+  progWrap.style.display = 'block';
+  counterEl.style.display = 'block';
   curIdx = 0;
   scoreCorrect = 0;
   showQ();
 });
 
 backSetupBtn.addEventListener('click', () => {
+  resetQuizUI();
   quizContainer.classList.remove('active');
   setupCard.style.display = 'block';
-  summaryEl.style.display = 'none';
 });
 
 // Mobile menu toggle
