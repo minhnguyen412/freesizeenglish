@@ -467,14 +467,14 @@ startBtn.addEventListener('click', async () => {
   curIdx = 0;
   scoreCorrect = 0;
   resetQuizUI();
-  
+
   // Show quiz elements
   setupCard.style.display = 'none';
   quizContainer.classList.add('active');
   summaryEl.style.display = 'none';
-  progWrap.style.display = 'block';
-  counterEl.style.display = 'block';
-  
+  progWrap.style.display = '';
+  counterEl.style.display = '';
+
   showQ();
 });
 
@@ -496,6 +496,7 @@ function showQ() {
   counterEl.textContent = `Question ${curIdx + 1} / ${questions.length}`;
 
   // Render sentence with blanks
+  sentenceEl.style.display = '';  // Reset inline style
   let sentRaw = Array.isArray(q.sentence)
     ? q.sentence.map(t =>
         isImg(t)
@@ -511,6 +512,7 @@ function showQ() {
   });
 
   // Render word options
+  optionsEl.style.display = '';  // Reset inline style
   const words = [...(q.words || [])].sort(() => Math.random() - 0.5);
   optionsEl.innerHTML = '';
   words.forEach(w => {
@@ -732,8 +734,10 @@ exitBtn.addEventListener('click', () => {
 
 restartBtn.addEventListener('click', () => {
   summaryEl.style.display = 'none';
-  progWrap.style.display = 'block';
-  counterEl.style.display = 'block';
+  progWrap.style.display = '';
+  counterEl.style.display = '';
+  sentenceEl.style.display = '';
+  optionsEl.style.display = '';
   curIdx = 0;
   scoreCorrect = 0;
   showQ();
