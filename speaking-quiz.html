@@ -726,9 +726,7 @@ resetBtn.addEventListener('click', () => {
 
 exitBtn.addEventListener('click', () => {
   if (confirm('Are you sure? Your progress will be lost.')) {
-    resetQuizUI();
-    quizContainer.classList.remove('active');
-    setupCard.style.display = 'block';
+    location.reload();
   }
 });
 
@@ -742,9 +740,7 @@ restartBtn.addEventListener('click', () => {
 });
 
 backSetupBtn.addEventListener('click', () => {
-  resetQuizUI();
-  quizContainer.classList.remove('active');
-  setupCard.style.display = 'block';
+  location.reload();
 });
 
 // Mobile menu toggle
