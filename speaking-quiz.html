@@ -505,7 +505,7 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   <button class="answer-key-toggle" id="answer-key-toggle">
     📋 Show All Answers (Collapsible)
   </button>
-  <div class="answer-key-content" id="answer-key-content" style="display:none;">
+  <div class="answer-key-content" id="answer-key-content">
     <div id="answer-key-list"></div>
   </div>
 </div>
@@ -663,6 +663,8 @@ startBtn.addEventListener('click', async () => {
   }
 
   questions = filterAndSortQuestions(sortOrder, countInput);
+  // Thêm dòng này
+  loadAnswerKey();
 
   if (questions.length === 0) {
     alert('❌ No questions available!');
@@ -692,8 +694,7 @@ function showQ() {
     showSummary();
     return;
   }
-  // Thêm dòng này
-  if (curIdx === 0) loadAnswerKey();
+  
 
   const q = questions[curIdx];
   revealed = false;
@@ -736,6 +737,19 @@ function showQ() {
   resultBar.style.display = 'none';
   actionsEl.innerHTML = '';
   actionsEl.style.display = 'none';
+  // Thêm đoạn này - hiển thị nút Skip từ đầu
+  actionsEl.innerHTML = '';
+  const skipBtn = document.createElement('button');
+  skipBtn.className = 'btn-exit';
+  skipBtn.textContent = 'Skip ⏭';
+  skipBtn.setAttribute('data-skip', 'true'); // Thêm dòng này
+  skipBtn.style.marginTop = '12px';
+  skipBtn.addEventListener('click', () => {
+    curIdx++;
+    showQ();
+  });
+  actionsEl.appendChild(skipBtn);
+  actionsEl.style.display = 'flex';
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -847,20 +861,8 @@ function showResultBar(ok, msg) {
 // SHOW ACTION BUTTONS
 // ════════════════════════════════════════════════════════════════
 function showActionBtn(type) {
-  actionsEl.innerHTML = '';
-  actionsEl.style.display = 'flex';
-  // Thêm nút Skip
-  if (type === 'next' || type === 'retry') {
-    const skipBtn = document.createElement('button');
-    skipBtn.className = 'btn-exit';
-    skipBtn.textContent = 'Skip ⏭';
-    skipBtn.style.marginLeft = 'auto';
-    skipBtn.addEventListener('click', () => {
-      curIdx++;
-      showQ();
-    });
-    actionsEl.appendChild(skipBtn);
-  }
+  // Không xóa hết, chỉ xóa nút "Continue/Retry/Finish" cũ
+  actionsEl.querySelectorAll('button:not([data-skip])').forEach(b => b.remove());
 
   const btn = document.createElement('button');
 
@@ -885,7 +887,9 @@ function showActionBtn(type) {
     btn.addEventListener('click', () => showQ());
   }
 
-  actionsEl.appendChild(btn);
+  btn.style.marginRight = 'auto';
+  actionsEl.insertBefore(btn, actionsEl.firstChild);
+  actionsEl.style.display = 'flex';
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -1055,7 +1059,7 @@ function loadAnswerKey() {
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
-  answerKeySection.style.display = 'block';
+  
 
   answerKeyToggle.addEventListener('click', () => {
     const isOpen = answerKeyContent.style.display !== 'none';
@@ -1087,6 +1091,11 @@ function loadAnswerKey() {
 document.addEventListener('DOMContentLoaded', () => {
   loadAllQuestions();
   loadSidebarList();
+  // Thêm dòng này - load answer key khi page load
+  qs('#answer-key-toggle').addEventListener('click', function() {
+    const content = qs('#answer-key-content');
+    content.style.display = content.style.display === 'none' ? 'block' : 'none';
+    this.classList.toggle('open');
 });
 </script>
 
