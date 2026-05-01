@@ -1,755 +1,3248 @@
 {
     "questions": [
         {
-            "id": 1,
-            "audio": "",
-            "sentence": "giòn lên: ___.",
-            "blanks": [
-                { "answer": "crisp up" }
-                
-            ],
-            "words": ["heated up", "crisp up", "crunch", "poach"]
-        },
-        {
-            "id": 2,
-            "audio": "",
-            "sentence": "một phần tư cốc: ___",
-            "blanks": [
-                { "answer": "a fourth cup of" }
-            ],
-            "words": ["Half a cup of", "a fourth cup of"]
-        },
-        {
-            "id": 3,
-            "audio": "",
-            "sentence": "a piece of meat from the stomach or soft lower part of a pig's body: ___",
-            "blanks": [
-                { "answer": "pork belly" }
-            ],
-            "words": ["peppercorn", "rice vinegar", "bay leaves", "pork belly"]
-        },
-        {
-            "id": 4,
-            "audio": "",
-            "sentence": "the sound of hard food being crushed between the teeth, or like something being crushed or broken: ___",
-            "blanks": [
-                { "answer": "crunch" }
-            ],
-            "words": ["heated up", "crisp up", "crunch", "poach"]
-        },
-        {
-            "id": 5,
-            "audio": "",
-            "sentence": "Lấy miếng chiên đầu tiên ra: ___",
-            "blanks": [
-                { "answer": "taking the first fry out" }
-            ],
-            "words": ["taking the first fry out", "bringing the heat up"]
-        },
-        {
-            "id": 6,
-            "audio": "",
-            "sentence": "a sweet and sour liquid made from fermented rice, used to add flavour to food: ___",
-            "blanks": [
-                { "answer": "rice vinegar" }
-            ],
-            "words": ["peppercorn", "rice vinegar", "bay leaves", "pork belly"]
-        },
-        {
-            "id": 7,
-            "audio": "",
-            "sentence": "được làm nóng lên: ___",
-            "blanks": [
-                { "answer": "heated up" }
-            ],
-            "words": ["heated up", "crisp up", "crunch", "poach"]
-        },
-        {
-            "id": 8,
-            "audio": "",
-            "sentence": "nâng nhiệt độ lên: ___",
-            "blanks": [
-                { "answer": "bringing the heat up" }
-            ],
-            "words": ["heated up", "bringing the heat up"]
-        },
-        {
-            "id": 9,
-            "audio": "",
-            "sentence": "phết ngay lên trên: ___",
-            "blanks": [
-                { "answer": "brush it right onto" }
-            ],
-            "words": ["brush it right onto", "bringing the heat up", "taking the first fry out"]
-        },
-        {
-            "id": 10,
-            "audio": "",
-            "sentence": "to cook something such as a fish, or an egg with its shell removed, by putting it in gently boiling water or other liquid: ___",
-            "blanks": [
-                { "answer": "poach" }
-            ],
-            "words": ["heated up", "crisp up", "crunch", "poach"]
-        },
-        {
-            "id": 11,
-            "audio": "",
-            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "r" },
-                { "answer": "o" },
-                { "answer": "s" },
-                { "answer": "e" }
-            ],
-            "words": ["e", "r", "o", "s"]
-        },
-        {
-            "id": 12,
-            "audio": "",
-            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "w" },
-                { "answer": "e" },
-                { "answer": "n" },
-                { "answer": "t" },
-                { "answer": "u" },
-                { "answer": "p" }
-            ],
-            "words": ["e", "u", "t", "p", "w", "n"]
-        },
-        {
-            "id": 13,
-            "audio": "",
-            "sentence": "Beside \"increased\", you could use: ___ ___ ___ ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "ex" },
-                { "answer": "pe" },
-                { "answer": "ri" },
-                { "answer": "enced" },
-                { "answer": "gr" },
-                { "answer": "ow" },
-                { "answer": "th" }
-            ],
-            "words": ["th", "ex", "ri", "ow", "pe", "gr", "enced"]
-        },
-        {
-            "id": 14,
-            "audio": "",
-            "sentence": "Alternatives for \"over the period shown\": ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "throughout" },
-                { "answer": "the" },
-                { "answer": "given" },
-                { "answer": "period" }
-                
-            ],
-            "words": ["throughout", "period", "the", "given"]
-        },
-        {
-            "id": 15,
-            "audio": "",
-            "sentence": "In this sentence, \"a much larger percentage of Canadians and Americans had access to the Internet in comparison with Mexicans\", which one is the noun phrase?___<br>A. had access to the Internet<br>B. a much larger percentage<br>C. in comparison with Mexicans",
-            "blanks": [
-                { "answer": "B" }
-            ],
-            "words": ["A", "B", "C"]
-        },
-        {
-            "id": 16,
-            "audio": "",
-            "sentence": "In this sentence, \"a much larger percentage of Canadians and Americans had access to the Internet in comparison with Mexicans\", which one is the main verb phrase?___<br>A. had access to the Internet<br>B. a much larger percentage<br>C. in comparison with Mexicans",
-            "blanks": [
-                { "answer": "A" }
-            ],
-            "words": ["A", "B", "C"]
-        },
-        {
-            "id": 17,
-            "audio": "",
-            "sentence": "In this sentence, \"a much larger percentage of Canadians and Americans had access to the Internet in comparison with Mexicans\", which one is the prepositional phrase showing contrast?___<br>A. had access to the Internet<br>B. a much larger percentage<br>C. in comparison with Mexicans",
-            "blanks": [
-                { "answer": "C" }
-            ],
-            "words": ["A", "B", "C"]
-        },
-        {
-            "id": 18,
-            "audio": "",
-            "sentence": "Alternatives for \"experienced\": ___ ___ ___",
-            "blanks": [
-                { "answer": "s" },
-                { "answer": "a" },
-                { "answer": "w" }
-                
-                
-            ],
-            "words": [ "s", "w", "a"]
-        },
-        {
-            "id": 19,
-            "audio": "",
-            "sentence": "Alternatives for \"the fastest growth\": ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "the" },
-                { "answer": "most" },
-                { "answer": "rapid" },
-                { "answer": "increase" }
-                
-            ],
-            "words": ["most", "rapid", "the", "increase"]
-        },
-        {
-            "id": 20,
-            "audio": "",
-            "sentence": "Alternatives for \"the proportion of people\": ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "the" },
-                { "answer": "percentage" },
-                { "answer": "of" },
-                { "answer": "individuals" }
-                
-            ],
-            "words": ["of", "the", "individuals", "percentage"]
-        },
-        {
-            "id": 21,
-            "audio": "",
-            "sentence": "Alternatives for \"the proportion of people\": ___ ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "the" },
-                { "answer": "share" },
-                { "answer": "of" },
-                { "answer": "the" },
-                { "answer": "population" }
-            ],
-            "words": ["the", "the", "population", "of", "share"]
-        },
-        {
-            "id": 22,
-            "audio": "",
-            "sentence": "Alternatives for \"figures\": ___ ___ ___",
-            "blanks": [
-                
-                { "answer": "sta" },
-                { "answer": "tis" },
-                { "answer": "tics" }
-                
-            ],
-            "words": ["tis", "sta", "tics"]
-        },
-        {
-            "id": 23,
-            "audio": "",
-            "sentence": "Alternatives for \"respectively\": ___ ___ ___ ___ ___",
-            "blanks": [
-                
-                { "answer": "cor" },
-                { "answer": "re" },
-                { "answer": "spon" },
-                { "answer": "ding" },
-                { "answer": "ly" }
-                
-            ],
-            "words": ["spon", "ly", "ding", "cor", "re"]
-        },
-        {
-            "id": 24,
-            "audio": "",
-            "sentence": "Alternatives for \"almost\": ___ ___ ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "n" },
-                { "answer": "e" },
-                { "answer": "a" },
-                { "answer": "r" },
-                { "answer": "l" },
-                { "answer": "y" }
-            ],
-            "words": ["y", "n", "l", "e", "r", "a"]
-        },
-        {
-            "id": 25,
-            "audio": "",
-            "sentence": "Alternatives for \"almost\": ___ ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "ap" },
-                { "answer": "pro" },
-                { "answer": "xi" },
-                { "answer": "mate" },
-                { "answer": "ly" }
-               
-            ],
-            "words": ["ly", "pro", "mate", "xi", "ap"]
-        },
-        {
-            "id": 26,
-            "audio": "",
-            "sentence": "Alternatives for \"almost\": ___ ___ ___ ___ ___ ___ ___",
-            "blanks": [
-                { "answer": "r" },
-                { "answer": "o" },
-                { "answer": "u" },
-                { "answer": "g" },
-                { "answer": "h" },
-                { "answer": "l" },
-                { "answer": "y" }
-            ],
-            "words": ["y", "r", "l", "u", "g", "o", "h"]
-        },
-        {
-            "id": 27,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673134/%E8%BF%99%E6%98%AF%E4%BB%80%E4%B9%88%E4%B9%A6_zl0i7l.mp3",
-            "sentence": "___ ___ ___ ___?",
-            "blanks": [
-                { "answer": "这" },
-                { "answer": "是" },
-                { "answer": "什么" },
-                { "answer": "书" }
-                
-            ],
-            "words": ["什么", "书", "是", "这"]
-        },
-        {
-            "id": 28,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673161/%E4%B8%AD%E6%96%87_vbkj3r.mp3",
-            "sentence": "中文 : ___",
-            "blanks": [
-                { "answer": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672808/%E4%B8%AD%E6%96%87_ceposq.png" }
-            ],
-            "words": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672833/%E9%9F%A9%E6%96%87_ipmlxt.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672821/%E6%97%A5%E6%96%87_lnpilr.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672808/%E4%B8%AD%E6%96%87_ceposq.png"]
-        },
-        {
-            "id": 29,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673140/%E8%BF%99%E6%98%AF%E8%B0%81%E7%9A%84%E4%B9%A6_l4mna3.mp3",
-            "sentence": "Whose book is this? <br> ___ ___ ___ ___ ___?",
-            "blanks": [
-                { "answer": "这" },
-                { "answer": "是" },
-                { "answer": "谁" },
-                { "answer": "的" },
-                { "answer": "书" }
-            ],
-            "words": ["谁", "这", "是", "书", "的"]
-        },
-        {
-            "id": 30,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673345/%E8%B0%81_ueab1g.mp3",
-            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672830/%E8%B0%81_o4ejhr.gif", ": ___"],
-            "blanks": [
-                { "answer": "谁" }
-            ],
-            "words": ["那", "在", "谁"]
-        },
-        {
-            "id": 31,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673139/%E8%BF%99%E6%98%AF%E8%80%81%E5%B8%88%E7%9A%84%E4%B9%A6_ry6pfu.mp3",
-            "sentence": "___ ___ ___ ___ ___.",
-            "blanks": [
-                { "answer": "这" },
-                { "answer": "是" },
-                { "answer": "老师" },
-                { "answer": "的" },
-                { "answer": "书" }
-            ],
-            "words": ["是", "老师", "书", "这", "的"]
-        },
-        {
-            "id": 32,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673142/%E9%82%A3%E6%98%AF%E4%BB%80%E4%B9%88_vhyyi4.mp3",
-            "sentence": "What is that? <br> ___ ___ ___?",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "什么" }
-            ],
-            "words": ["什么", "那", "是"]
-        },
-        {
-            "id": 33,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673311/%E6%9D%82%E5%BF%97_axn4uh.mp3",
-            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672824/%E6%9D%82%E5%BF%97_adnplb.png", ": ___"],
-            "blanks": [
-                { "answer": "杂志" }
-            ],
-            "words": ["杂志", "学校", "身体"]
-        },
-        {
-            "id": 34,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673144/%E9%82%A3%E6%98%AF%E4%BB%80%E4%B9%88%E6%9D%82%E5%BF%97_cj6lqe.mp3",
-            "sentence": "___ ___ ___ ___?",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "什么" },
-                { "answer": "杂志" }
-            ],
-            "words": ["是", "什么", "杂志", "那"]
-        },
-        {
-            "id": 35,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673333/%E8%8B%B1%E6%96%87_kjsarw.mp3",
-            "sentence": "英文 : ___",
-            "blanks": [
-                { "answer": "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672827/%E8%8B%B1%E6%96%87_vr4hh3.png" }
-            ],
-            "words": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672827/%E8%8B%B1%E6%96%87_vr4hh3.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672832/%E9%98%BF%E6%8B%89%E4%BC%AF%E6%96%87_zso60r.png", "https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672819/%E5%BE%B7%E6%96%87_raeko0.png"]
-        },
-        {
-            "id": 36,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673148/%E9%82%A3%E6%98%AF%E8%B0%81%E7%9A%84%E6%9D%82%E5%BF%97_pq9pbq.mp3",
-            "sentence": "___ ___ ___ ___ ___？",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "谁" },
-                { "answer": "的" },
-                { "answer": "杂志" }
-            ],
-            "words": ["是", "谁", "杂志", "那", "的"]
-        },
-        {
-            "id": 37,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673145/%E9%82%A3%E6%98%AF%E6%88%91%E6%9C%8B%E5%8F%8B%E7%9A%84%E6%9D%82%E5%BF%97_va0ugf.mp3",
-            "sentence": "That's my friend's magazine. <br> ___ ___ ___ ___ ___ ___.",
-            "blanks": [
-                { "answer": "那" },
-                { "answer": "是" },
-                { "answer": "我" },
-                { "answer": "朋友" },
-                { "answer": "的" },
-                { "answer": "杂志" }
-            ],
-            "words": ["那", "我", "的", "朋友", "是", "杂志"]
-        },
-        {
-            "id": 38,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673310/%E6%9C%8B%E5%8F%8B_r32byy.mp3",
-            "sentence": ["https://res.cloudinary.com/dndwvsqib/image/upload/f_auto,q_auto/v1734672823/%E6%9C%8B%E5%8F%8B_pwkkse.png", ": ___"],
-            "blanks": [
-                { "answer": "朋友" }
-            ],
-            "words": ["老师", "父母", "朋友"]
-        },
-        {
-            "id": 39,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673150/%E4%B8%80_ccdydi.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "yī" }
-            ],
-            "words": ["yī", "yí", "yǐ", "yì"]
-        },
-        {
-            "id": 40,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673165/%E4%BA%94_durk7r.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "wǔ" }
-            ],
-            "words": ["wū", "wú", "wǔ", "wù"]
-        },
-        {
-            "id": 41,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/yu2_cvh99x.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "yú" }
-            ],
-            "words": ["yū", "yú", "yǔ", "yù"]
-        },
-        {
-            "id": 42,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673233/%E5%85%AB_jwszsy.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "bā" }
-            ],
-            "words": ["bā", "bá", "bǎ", "bà"]
-        },
-        {
-            "id": 43,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673261/%E5%A4%A7_ni23pu.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "dà" }
-            ],
-            "words": ["dā", "dá", "dǎ", "dà"]
-        },
-        {
-            "id": 44,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673155/%E4%B8%8D_p3kqjq.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "bù" }
-            ],
-            "words": ["bū", "bú", "bǔ", "bù"]
-        },
-        {
-            "id": 45,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673265/%E5%A5%B3_kxwjg4.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "nǚ" }
-            ],
-            "words": ["nǖ", "nǘ", "nǚ", "nǜ"]
-        },
-        {
-            "id": 46,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673245/%E5%8F%A3_dxcuqi.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "kǒu" }
-            ],
-            "words": ["kōu", "kóu", "kǒu", "kòu"]
-        },
-        {
-            "id": 47,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673324/%E7%99%BD_kbwum2.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "bái" }
-            ],
-            "words": ["bāi", "bái", "bǎi", "bài"]
-        },
-        {
-            "id": 48,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/hei1_hd4jw1.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "hēi" }
-            ],
-            "words": ["hēi", "héi", "hěi", "hèi"]
-        },
-        {
-            "id": 49,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673375/%E9%A9%AC_zbvgtx.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "mǎ" }
-            ],
-            "words": ["mā", "má", "mǎ", "mà"]
-        },
-        {
-            "id": 50,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673172/%E4%BD%A0_ll3o9t.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "nǐ" }
-            ],
-            "words": ["nī", "ní", "nǐ", "nì"]
-        },
-        {
-            "id": 51,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673266/%E5%A5%BD_lge2io.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "hǎo" }
-            ],
-            "words": ["hāo", "háo", "hǎo", "hào"]
-        },
-        {
-            "id": 52,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/pa_l4o4im.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "pa" }
-            ],
-            "words": ["ba", "pa"]
-        },
-        {
-            "id": 53,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/da_gsewdl.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "da" }
-            ],
-            "words": ["da", "ta"]
-        },
-        {
-            "id": 54,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/hei_wd8bah.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "hei" }
-            ],
-            "words": ["hai", "hei"]
-        },
-        {
-            "id": 55,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354395/po_gplthh.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "po" }
-            ],
-            "words": ["pa", "po"]
-        },
-        {
-            "id": 56,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/gou_g3k7r3.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "gou" }
-            ],
-            "words": ["gao", "gou"]
-        },
-        {
-            "id": 57,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1735354394/ka_hcewtw.mp3",
-            "sentence": "Which sound do you hear? ___",
-            "blanks": [
-                { "answer": "ka" }
-            ],
-            "words": ["ga", "ka"]
-        },
-        {
-            "id": 58,
-            "audio": "",
-            "sentence": "你: ___",
-            "blanks": [
-                { "answer": "nǐ" }
-            ],
-            "words": ["nǐ", "wǔ", "yǔ", "mǎ"]
-        },
-        {
-            "id": 59,
-            "audio": "",
-            "sentence": "好: ___",
-            "blanks": [
-                { "answer": "hǎo" }
-            ],
-            "words": ["nǚ", "wǔ", "hǎo", "bǎi"]
-        },
-        {
-            "id":60,
-            "audio": "",
-            "sentence": "Are you busy?: ___ ___ ___?",
-            "blanks": [
-                { "answer": "你" },
-                { "answer": "忙" },
-                { "answer": "吗" }
-            ],
-            "words": ["忙", "你", "吗"]
-        },
-        {
-            "id":61,
-            "audio": "",
-            "sentence": "Very busy: ___ ___。",
-            "blanks": [
-                { "answer": "很" },
-                { "answer": "忙" }
-            ],
-            "words": ["忙", "很"]
-        },
-        {
-            "id":62,
-            "audio": "",
-            "sentence": "Is Chinese difficult?: ___ ___ ___?",
-            "blanks": [
-                { "answer": "汉语" },
-                { "answer": "难" },
-                { "answer": "吗" }
-            ],
-            "words": ["难", "吗", "汉语"]
-        },
-        {
-            "id":63,
-            "audio": "",
-            "sentence": "Not too difficult: ___ ___ ___。",
-            "blanks": [
-                { "answer": "不" },
-                { "answer": "太" },
-                { "answer": "难" }
-            ],
-            "words": ["太", "不", "难"]
-        },
-        {
-            "id":64,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673171/%E4%BB%96%E5%A5%B9_ajweaf.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "tā" }
-            ],
-            "words": ["tā", "tá", "tǎ", "tà"]
-        },
-        {
-            "id":65,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673287/%E5%BF%99_ez8ywo.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "máng" }
-            ],
-            "words": ["māng", "máng", "mǎng", "màng"]
-        },
-        {
-            "id":66,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673282/%E5%BE%88_h1omcw.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "hěn" }
-            ],
-            "words": ["hēn", "hén", "hěn", "hèn"]
-        },
-        {
-            "id":67,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673364/%E9%9A%BE_soiuxw.mp3",
-            "sentence": "Listen and choose the correct pinyin: ___",
-            "blanks": [
-                { "answer": "nán" }
-            ],
-            "words": ["nān", "nán", "nǎn", "nàn"]
-        },
-        {
-            "id":68,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673313/%E6%B1%89%E8%AF%AD_n6ho4r.mp3",
-            "sentence": "汉语: ___",
-            "blanks": [
-                { "answer": "hànyǔ" }
-            ],
-            "words": ["hānyú", "hànyǔ", "hanyǔ", "hányu"]
-        },
-        {
-            "id":69,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673320/%E7%88%B8%E7%88%B8_ktwtw6.mp3",
-            "sentence": "爸爸: ___",
-            "blanks": [
-                { "answer": "bàba" }
-            ],
-            "words": ["baba", "pàpa", "papa", "bàba"]
-        },
-        {
-            "id":70,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673268/%E5%A6%88%E5%A6%88_cyj7nk.mp3",
-            "sentence": "妈妈: ___",
-            "blanks": [
-                { "answer": "māma" }
-            ],
-            "words": ["māma", "mama", "máma", "mǎma"]
-        },
-        {
-            "id":71,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673250/%E5%93%A5%E5%93%A5_t3w2af.mp3",
-            "sentence": "哥哥: ___",
-            "blanks": [
-                { "answer": "gēge" }
-            ],
-            "words": ["gege", "gège", "gége", "gēge"]
-        },
-        {
-            "id":72,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673269/%E5%A6%B9%E5%A6%B9_fm9pax.mp3",
-            "sentence": "mèimei: ___",
-            "blanks": [
-                { "answer": "妹妹" }
-            ],
-            "words": ["妈妈", "妹妹", "弟弟", "哥哥"]
-        },
-        {
-            "id":73,
-            "audio": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673281/%E5%BC%9F%E5%BC%9F_taqkox.mp3",
-            "sentence": "dìdi: ___",
-            "blanks": [
-                { "answer": "弟弟" }
-            ],
-            "words": ["爸爸", "妹妹", "弟弟", "哥哥"]
-        }
+    "id": 1,
+    "audio": "",
+    "sentence": "Lâu rồi tôi chưa ăn gói vị quế.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "haven't" },
+        { "answer": "had" },
+        { "answer": "the" },
+        { "answer": "cinnamon" },
+        { "answer": "pack" },
+        { "answer": "for" },
+        { "answer": "ages" }
+    ],
+    "words": ["for", "cinnamon", "haven't", "pack", "the", "ages", "had", "I"]
+},
+
+{
+    "id": 2,
+    "audio": "",
+    "sentence": "Đây là gói cuối trong combo của tôi, tôi đã ăn rất nhiều rồi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "This" },
+        { "answer": "is" },
+        { "answer": "the" },
+        { "answer": "last" },
+        { "answer": "of" },
+        { "answer": "my" },
+        { "answer": "bundle," },
+        { "answer": "I've" },
+        { "answer": "had" },
+        { "answer": "so" },
+        { "answer": "many" },
+        { "answer": "of" },
+        { "answer": "it" }
+    ],
+    "words": ["had", "the", "bundle,", "so", "it", "my", "many", "of", "This", "I've", "of", "last", "is"]
+},
+
+{
+    "id": 3,
+    "audio": "",
+    "sentence": "Tôi quên mất vị quế ngon thế nào rồi, mà nói chung là tôi đang rất đói.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "forgot" },
+        { "answer": "how" },
+        { "answer": "good" },
+        { "answer": "the" },
+        { "answer": "cinnamon" },
+        { "answer": "one" },
+        { "answer": "is," },
+        { "answer": "anyway" },
+        { "answer": "guy," },
+        { "answer": "I'm" },
+        { "answer": "so" },
+        { "answer": "hungry" }
+    ],
+    "words": ["anyway", "good", "one", "the", "I'm", "guy,", "I", "hungry", "so", "cinnamon", "is,", "how", "forgot"]
+},
+
+{
+    "id": 4,
+    "audio": "",
+    "sentence": "Tại vì tôi chỉ ăn mỗi cái salad đó rồi đi ra ngoài.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It's" },
+        { "answer": "because" },
+        { "answer": "I" },
+        { "answer": "ate" },
+        { "answer": "that" },
+        { "answer": "salad" },
+        { "answer": "and" },
+        { "answer": "then" },
+        { "answer": "I've" },
+        { "answer": "been" },
+        { "answer": "out" }
+    ],
+    "words": ["then", "ate", "I", "It's", "out", "because", "that", "salad", "and", "been", "I've"]
+},
+
+{
+    "id": 5,
+    "audio": "",
+    "sentence": "Tôi đang rất thích thời tiết này, cảm giác như mùa hè vậy.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I've" },
+        { "answer": "been" },
+        { "answer": "really" },
+        { "answer": "enjoying" },
+        { "answer": "the" },
+        { "answer": "weather," },
+        { "answer": "it" },
+        { "answer": "feels" },
+        { "answer": "like" },
+        { "answer": "summer" },
+        { "answer": "to" },
+        { "answer": "me" }
+    ],
+    "words": ["enjoying", "me", "to", "really", "I've", "the", "weather,", "it", "summer", "like", "feels", "been"]
+},
+
+{
+    "id": 6,
+    "audio": "",
+    "sentence": "Trời ơi, tôi hay ăn kiểu này khi ngồi trên sofa.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Oh" },
+        { "answer": "my" },
+        { "answer": "god," },
+        { "answer": "this" },
+        { "answer": "is" },
+        { "answer": "how" },
+        { "answer": "I" },
+        { "answer": "eat" },
+        { "answer": "them" },
+        { "answer": "when" },
+        { "answer": "I'm" },
+        { "answer": "on" },
+        { "answer": "the" },
+        { "answer": "sofa" }
+    ],
+    "words": ["god,", "sofa", "I'm", "Oh", "I", "them", "this", "when", "how", "my", "is", "the", "on", "eat"]
+},
+
+{
+    "id": 7,
+    "audio": "",
+    "sentence": "Tôi vừa xem gì đó vừa ăn liên tục.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "watching" },
+        { "answer": "something" },
+        { "answer": "and" },
+        { "answer": "i'll" },
+        { "answer": "just" },
+        { "answer": "be" },
+        { "answer": "a" },
+        { "answer": "constant" },
+        { "answer": "munch" }
+    ],
+    "words": ["just", "i'll", "watching", "something", "constant", "a", "munch", "and", "I'm", "be"]
+},
+
+{
+    "id": 8,
+    "audio": "",
+    "sentence": "Chắc lát nữa tôi sẽ ăn hết cái này trên sofa.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "probably" },
+        { "answer": "gonna" },
+        { "answer": "finish" },
+        { "answer": "this" },
+        { "answer": "on" },
+        { "answer": "the" },
+        { "answer": "sofa" },
+        { "answer": "later" }
+    ],
+    "words": ["I'm", "on", "gonna", "this", "finish", "sofa", "probably", "the", "later"]
+},
+
+{
+    "id": 9,
+    "audio": "",
+    "sentence": "Vắt 1 muỗng nước cốt chanh vào nước rồi uống.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Squeeze" },
+        { "answer": "a" },
+        { "answer": "tablespoon" },
+        { "answer": "of" },
+        { "answer": "lemon" },
+        { "answer": "into" },
+        { "answer": "some" },
+        { "answer": "water" },
+        { "answer": "and" },
+        { "answer": "drink" },
+        { "answer": "it" }
+    ],
+    "words": ["into", "of", "and", "it", "some", "lemon", "a", "tablespoon", "drink", "water", "Squeeze"]
+},
+
+{
+    "id": 10,
+    "audio": "",
+    "sentence": "Nó sẽ kích thích tiêu hóa và giúp thải bớt natri dư.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It's" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "stimulate" },
+        { "answer": "digestion" },
+        { "answer": "and" },
+        { "answer": "it's" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "flush" },
+        { "answer": "out" },
+        { "answer": "the" },
+        { "answer": "extra" },
+        { "answer": "sodium" }
+    ],
+    "words": ["digestion", "going", "going", "It's", "to", "and", "extra", "flush", "the", "stimulate", "it's", "sodium", "to", "out"]
+},
+
+{
+    "id": 11,
+    "audio": "",
+    "sentence": "Bạn sẽ hít thật sâu để bụng phồng lên.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You're" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "inhale" },
+        { "answer": "deeply" },
+        { "answer": "and" },
+        { "answer": "just" },
+        { "answer": "fill" },
+        { "answer": "up" },
+        { "answer": "your" },
+        { "answer": "belly" }
+    ],
+    "words": ["You're", "up", "fill", "just", "inhale", "and", "your", "to", "belly", "going", "deeply"]
+},
+
+{
+    "id": 12,
+    "audio": "",
+    "sentence": "Tôi đang đổ rác trong mấy thùng hôi này và rót nước nóng từ ấm vào.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "emptying" },
+        { "answer": "these" },
+        { "answer": "stinky" },
+        { "answer": "trash" },
+        { "answer": "cans" },
+        { "answer": "and" },
+        { "answer": "pouring" },
+        { "answer": "hot" },
+        { "answer": "water" },
+        { "answer": "inside" },
+        { "answer": "from" },
+        { "answer": "my" },
+        { "answer": "kettle" }
+    ],
+    "words": ["stinky", "emptying", "inside", "from", "pouring", "water", "I'm", "trash", "my", "kettle", "these", "and", "cans", "hot"]
+},
+
+{
+    "id": 13,
+    "audio": "",
+    "sentence": "Gắn miếng lau dùng một lần vào cây lau và chà đến khi nổi bọt.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "adding" },
+        { "answer": "a" },
+        { "answer": "disposable" },
+        { "answer": "pad" },
+        { "answer": "to" },
+        { "answer": "this" },
+        { "answer": "cleaning" },
+        { "answer": "wand" },
+        { "answer": "and" },
+        { "answer": "scrubbing" },
+        { "answer": "until" },
+        { "answer": "it" },
+        { "answer": "lathers" }
+    ],
+    "words": ["wand", "it", "scrubbing", "and", "cleaning", "until", "to", "adding", "lathers", "a", "pad", "this", "disposable"]
+},
+
+{
+    "id": 14,
+    "audio": "",
+    "sentence": "Rửa lại rồi lau khô bằng khăn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "rinsing" },
+        { "answer": "them" },
+        { "answer": "off," },
+        { "answer": "wiping" },
+        { "answer": "them" },
+        { "answer": "down" },
+        { "answer": "with" },
+        { "answer": "the" },
+        { "answer": "towels" }
+    ],
+    "words": ["down", "off,", "rinsing", "with", "them", "towels", "them", "the", "wiping"]
+},
+
+{
+    "id": 15,
+    "audio": "",
+    "sentence": "Bỏ viên khử mùi vào và thay túi rác mới.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "dropping" },
+        { "answer": "in" },
+        { "answer": "these" },
+        { "answer": "air" },
+        { "answer": "fresheners" },
+        { "answer": "and" },
+        { "answer": "reloading" },
+        { "answer": "bags" }
+    ],
+    "words": ["air", "these", "and", "fresheners", "dropping", "in", "bags", "reloading"]
+},
+
+{
+    "id": 16,
+    "audio": "",
+    "sentence": "Tôi có râu lún phún nên sẽ cạo nhanh.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "got" },
+        { "answer": "some" },
+        { "answer": "stubble," },
+        { "answer": "so" },
+        { "answer": "I'm" },
+        { "answer": "gonna" },
+        { "answer": "shave" },
+        { "answer": "this" },
+        { "answer": "off" },
+        { "answer": "really" },
+        { "answer": "quick" }
+    ],
+    "words": ["really", "got", "gonna", "shave", "this", "off", "stubble,", "so", "I", "I'm", "quick", "some"]
+},
+
+{
+    "id": 17,
+    "audio": "",
+    "sentence": "Dạo này tôi không thấy tự tin lắm.<br>___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Lately," },
+        { "answer": "I" },
+        { "answer": "haven't" },
+        { "answer": "felt" },
+        { "answer": "too" },
+        { "answer": "confident" }
+    ],
+    "words": ["too", "Lately,", "I", "confident", "felt", "haven't"]
+},
+
+{
+    "id": 18,
+    "audio": "",
+    "sentence": "Điều khó chịu nhất của mụn là nó mất thời gian mới hết.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Think" },
+        { "answer": "the" },
+        { "answer": "most" },
+        { "answer": "annoying" },
+        { "answer": "thing" },
+        { "answer": "about" },
+        { "answer": "having" },
+        { "answer": "acne" },
+        { "answer": "is" },
+        { "answer": "that" },
+        { "answer": "it" },
+        { "answer": "takes" },
+        { "answer": "time" },
+        { "answer": "for" },
+        { "answer": "it" },
+        { "answer": "to" },
+        { "answer": "go" },
+        { "answer": "away" }
+    ],
+    "words": ["thing", "for", "that", "takes", "time", "it", "away", "about", "acne", "annoying", "to", "is", "having", "most", "it", "Think", "go", "the"]
+},
+
+{
+    "id": 19,
+    "audio": "",
+    "sentence": "Trong lúc chờ thịt ba chỉ chín, mình làm mật ong cay.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "While" },
+        { "answer": "we" },
+        { "answer": "wait" },
+        { "answer": "for" },
+        { "answer": "the" },
+        { "answer": "pork" },
+        { "answer": "belly" },
+        { "answer": "to" },
+        { "answer": "poach," },
+        { "answer": "we're" },
+        { "answer": "gonna" },
+        { "answer": "make" },
+        { "answer": "our" },
+        { "answer": "hot" },
+        { "answer": "honey" }
+    ],
+    "words": ["wait", "the", "While", "pork", "gonna", "poach,", "honey", "we're", "make", "for", "belly", "to", "our", "we", "hot"]
+},
+
+{
+    "id": 20,
+    "audio": "",
+    "sentence": "Sau 10 phút, tôi vớt mẻ chiên đầu ra rồi tăng nhiệt lên 450.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "So" },
+        { "answer": "after" },
+        { "answer": "10" },
+        { "answer": "minutes," },
+        { "answer": "I'm" },
+        { "answer": "taking" },
+        { "answer": "the" },
+        { "answer": "first" },
+        { "answer": "fry" },
+        { "answer": "out," },
+        { "answer": "and" },
+        { "answer": "then" },
+        { "answer": "I'm" },
+        { "answer": "bringing" },
+        { "answer": "the" },
+        { "answer": "heat" },
+        { "answer": "up" },
+        { "answer": "to" },
+        { "answer": "450" }
+    ],
+    "words": ["fry", "bringing", "first", "up", "the", "then", "to", "I'm", "heat", "minutes,", "I'm", "10", "450", "and", "the", "after", "So", "out,", "taking"]
+},
+
+{
+    "id": 21,
+    "audio": "",
+    "sentence": "Lấy mật ong cay quét lên thịt ba chỉ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "take" },
+        { "answer": "this" },
+        { "answer": "hot" },
+        { "answer": "honey" },
+        { "answer": "and" },
+        { "answer": "brush" },
+        { "answer": "it" },
+        { "answer": "right" },
+        { "answer": "onto" },
+        { "answer": "the" },
+        { "answer": "pork" },
+        { "answer": "belly" }
+    ],
+    "words": ["take", "right", "and", "onto", "belly", "honey", "brush", "this", "And", "hot", "the", "it", "pork"]
+},
+
+{
+    "id": 22,
+    "audio": "",
+    "sentence": "Bạn nên vắt hết nước trong quả chanh.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "you" },
+        { "answer": "really" },
+        { "answer": "want" },
+        { "answer": "to" },
+        { "answer": "get" },
+        { "answer": "everything" },
+        { "answer": "out" },
+        { "answer": "of" },
+        { "answer": "your" },
+        { "answer": "lemon" }
+    ],
+    "words": ["get", "everything", "lemon", "of", "your", "out", "And", "you", "want", "really", "to"]
+},
+
+{
+    "id": 23,
+    "audio": "",
+    "sentence": "Trộn đều để nó phân tán trong nước.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You're" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "mix" },
+        { "answer": "everything" },
+        { "answer": "together" },
+        { "answer": "so" },
+        { "answer": "that" },
+        { "answer": "it" },
+        { "answer": "can" },
+        { "answer": "really" },
+        { "answer": "spread" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "water" }
+    ],
+    "words": ["mix", "together", "going", "everything", "in", "so", "it", "the", "can", "to", "that", "really", "You're", "spread", "water"]
+},
+
+{
+    "id": 24,
+    "audio": "",
+    "sentence": "Quan trọng là không chỉ uống nước mà còn ăn luôn phần bên trong.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "most" },
+        { "answer": "important" },
+        { "answer": "part" },
+        { "answer": "is" },
+        { "answer": "to" },
+        { "answer": "not" },
+        { "answer": "only" },
+        { "answer": "drink" },
+        { "answer": "the" },
+        { "answer": "water," },
+        { "answer": "but" },
+        { "answer": "also" },
+        { "answer": "to" },
+        { "answer": "eat" },
+        { "answer": "everything" },
+        { "answer": "that's" },
+        { "answer": "inside" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "water" }
+    ],
+    "words": ["important", "only", "to", "is", "most", "but", "inside", "the", "eat", "of", "everything", "drink", "The", "water", "also", "not", "water,", "part", "the", "to", "that's"]
+},
+
+{
+    "id": 25,
+    "audio": "",
+    "sentence": "Tôi vừa đi bộ 3 tiếng ngoài công viên về và đang đói cồn cào.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "just" },
+        { "answer": "came" },
+        { "answer": "back" },
+        { "answer": "from" },
+        { "answer": "a" },
+        { "answer": "3" },
+        { "answer": "hour" },
+        { "answer": "walk" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "park" },
+        { "answer": "and" },
+        { "answer": "I'm" },
+        { "answer": "ravenous" }
+    ],
+    "words": ["I", "back", "a", "3", "hour", "the", "in", "came", "and", "park", "just", "from", "I'm", "walk", "ravenous"]
+},
+
+{
+    "id": 26,
+    "audio": "",
+    "sentence": "Nếu không có cái này thì tôi đã ăn hết hộp đồ ngọt kia rồi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "If" },
+        { "answer": "this" },
+        { "answer": "wasn't" },
+        { "answer": "here" },
+        { "answer": "I" },
+        { "answer": "would" },
+        { "answer": "have" },
+        { "answer": "tucked" },
+        { "answer": "into" },
+        { "answer": "that" },
+        { "answer": "sweet" },
+        { "answer": "box" },
+        { "answer": "by" },
+        { "answer": "now" }
+    ],
+    "words": ["that", "wasn't", "would", "If", "into", "I", "this", "box", "have", "here", "sweet", "tucked", "now", "by"]
+},
+
+{
+    "id": 27,
+    "audio": "",
+    "sentence": "Tôi cứ nghĩ về việc về nhà sẽ ăn gì.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "thinking" },
+        { "answer": "what" },
+        { "answer": "can" },
+        { "answer": "i" },
+        { "answer": "munch" },
+        { "answer": "on" },
+        { "answer": "as" },
+        { "answer": "soon" },
+        { "answer": "as" },
+        { "answer": "I" },
+        { "answer": "get" },
+        { "answer": "home" }
+    ],
+    "words": ["get", "thinking", "home", "on", "was", "what", "I", "I", "as", "soon", "can", "as", "munch", "i"]
+},
+
+{
+    "id": 28,
+    "audio": "",
+    "sentence": "Tôi uống rất nhiều nước rồi, giờ cần năng lượng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "I" },
+        { "answer": "drank" },
+        { "answer": "loads" },
+        { "answer": "of" },
+        { "answer": "water," },
+        { "answer": "I" },
+        { "answer": "need" },
+        { "answer": "fuel" }
+    ],
+    "words": ["I", "need", "fuel", "I", "of", "loads", "And", "water,", "drank"]
+},
+
+{
+    "id": 29,
+    "audio": "",
+    "sentence": "Hầu như ai bị EDS tôi điều trị cũng ngủ giống nhau.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Pretty" },
+        { "answer": "much" },
+        { "answer": "everybody" },
+        { "answer": "that" },
+        { "answer": "I" },
+        { "answer": "treat" },
+        { "answer": "with" },
+        { "answer": "EDS" },
+        { "answer": "sleeps" },
+        { "answer": "the" },
+        { "answer": "same" },
+        { "answer": "way" }
+    ],
+    "words": ["sleeps", "the", "that", "I", "way", "everybody", "treat", "much", "Pretty", "same", "EDS", "with"]
+},
+
+{
+    "id": 30,
+    "audio": "",
+    "sentence": "Họ thường nằm sấp, đầu vặn sang một bên và co một chân lên.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "usually" },
+        { "answer": "what" },
+        { "answer": "I" },
+        { "answer": "hear" },
+        { "answer": "is" },
+        { "answer": "they" },
+        { "answer": "lay" },
+        { "answer": "on" },
+        { "answer": "their" },
+        { "answer": "belly," },
+        { "answer": "but" },
+        { "answer": "the" },
+        { "answer": "head" },
+        { "answer": "twisted" },
+        { "answer": "and" },
+        { "answer": "the" },
+        { "answer": "leg" },
+        { "answer": "up" }
+    ],
+    "words": ["is", "they", "I", "usually", "their", "what", "hear", "lay", "but", "and", "twisted", "leg", "on", "the", "up", "the", "head", "And", "belly,"]
+},
+
+{
+    "id": 31,
+    "audio": "",
+    "sentence": "Dùng gối ôm dài kẹp giữa chân và trước ngực.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You" },
+        { "answer": "get" },
+        { "answer": "a" },
+        { "answer": "nice" },
+        { "answer": "long" },
+        { "answer": "body" },
+        { "answer": "pillow" },
+        { "answer": "in" },
+        { "answer": "between" },
+        { "answer": "your" },
+        { "answer": "legs," },
+        { "answer": "in" },
+        { "answer": "front" },
+        { "answer": "of" },
+        { "answer": "your" },
+        { "answer": "chest" }
+    ],
+    "words": ["a", "in", "in", "pillow", "front", "chest", "body", "nice", "long", "You", "your", "get", "of", "your", "legs,", "between"]
+},
+
+{
+    "id": 32,
+    "audio": "",
+    "sentence": "Như vậy cổ bạn sẽ ở vị trí trung lập.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "So" },
+        { "answer": "now" },
+        { "answer": "we" },
+        { "answer": "have" },
+        { "answer": "your" },
+        { "answer": "neck" },
+        { "answer": "neutral" }
+    ],
+    "words": ["So", "your", "neck", "we", "neutral", "now", "have"]
+},
+
+{
+    "id": 33,
+    "audio": "",
+    "sentence": "Và bạn sẽ ít đau hơn khi thức dậy.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "you're" },
+        { "answer": "gonna" },
+        { "answer": "wake" },
+        { "answer": "up" },
+        { "answer": "in" },
+        { "answer": "so" },
+        { "answer": "much" },
+        { "answer": "less" },
+        { "answer": "pain" }
+    ],
+    "words": ["wake", "you're", "so", "less", "in", "much", "And", "gonna", "pain", "up"]
+},
+
+{
+    "id": 34,
+    "audio": "",
+    "sentence": "Tôi thêm chút nước để làm loãng sốt.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "just" },
+        { "answer": "added" },
+        { "answer": "a" },
+        { "answer": "little" },
+        { "answer": "bit" },
+        { "answer": "more" },
+        { "answer": "water" },
+        { "answer": "and" },
+        { "answer": "loosen" },
+        { "answer": "up" },
+        { "answer": "the" },
+        { "answer": "sauce" }
+    ],
+    "words": ["more", "just", "I", "sauce", "and", "loosen", "up", "a", "bit", "water", "little", "added", "the"]
+},
+
+{
+    "id": 35,
+    "audio": "",
+    "sentence": "Và bạn còn được bố mẹ nấu ăn mỗi tối.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "you" },
+        { "answer": "were" },
+        { "answer": "also" },
+        { "answer": "getting" },
+        { "answer": "fed" },
+        { "answer": "by" },
+        { "answer": "your" },
+        { "answer": "parents" },
+        { "answer": "every" },
+        { "answer": "single" },
+        { "answer": "night" },
+        { "answer": "for" },
+        { "answer": "dinner" }
+    ],
+    "words": ["for", "getting", "dinner", "single", "also", "parents", "fed", "every", "your", "were", "And", "night", "by", "you"]
+},
+
+{
+    "id": 36,
+    "audio": "",
+    "sentence": "Nó có vị hơi khô đúng như tôi muốn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It" },
+        { "answer": "has" },
+        { "answer": "that" },
+        { "answer": "dry" },
+        { "answer": "edged" },
+        { "answer": "flavor" },
+        { "answer": "that" },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "going" },
+        { "answer": "for" }
+    ],
+    "words": ["was", "I", "has", "It", "that", "dry", "going", "flavor", "that", "for", "edged"]
+},
+
+{
+    "id": 37,
+    "audio": "",
+    "sentence": "Tôi phải húp để không bị bỏng lưỡi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "have" },
+        { "answer": "to" },
+        { "answer": "slurp" },
+        { "answer": "it" },
+        { "answer": "so" },
+        { "answer": "I" },
+        { "answer": "don't" },
+        { "answer": "burn" },
+        { "answer": "my" },
+        { "answer": "tongue" }
+    ],
+    "words": ["to", "don't", "slurp", "my", "have", "it", "burn", "tongue", "I", "so", "I"]
+},
+
+{
+    "id": 38,
+    "audio": "",
+    "sentence": "Bạn đứng nhón chân rồi thả xuống.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You're" },
+        { "answer": "gonna" },
+        { "answer": "stand" },
+        { "answer": "on" },
+        { "answer": "your" },
+        { "answer": "tiptoes" },
+        { "answer": "and" },
+        { "answer": "then" },
+        { "answer": "drop" },
+        { "answer": "down" }
+    ],
+    "words": ["stand", "tiptoes", "You're", "your", "and", "drop", "on", "then", "down", "gonna"]
+},
+
+{
+    "id": 39,
+    "audio": "",
+    "sentence": "Nó kích thích hệ bạch huyết và đẩy máu lên não.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It" },
+        { "answer": "boosts" },
+        { "answer": "your" },
+        { "answer": "lymphatic" },
+        { "answer": "system" },
+        { "answer": "and" },
+        { "answer": "forces" },
+        { "answer": "blood" },
+        { "answer": "back" },
+        { "answer": "up" },
+        { "answer": "to" },
+        { "answer": "your" },
+        { "answer": "brain" }
+    ],
+    "words": ["your", "and", "blood", "up", "brain", "back", "It", "boosts", "your", "forces", "to", "system", "lymphatic"]
+},
+
+{
+    "id": 40,
+    "audio": "",
+    "sentence": "Muốn biết bí quyết lau sàn sạch của tôi không?<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Want" },
+        { "answer": "to" },
+        { "answer": "know" },
+        { "answer": "my" },
+        { "answer": "secret" },
+        { "answer": "to" },
+        { "answer": "clean" },
+        { "answer": "floors?" }
+    ],
+    "words": ["Want", "know", "secret", "my", "clean", "floors?", "to", "to"]
+},
+
+{
+    "id": 41,
+    "audio": "",
+    "sentence": "Hỗn hợp tôi thích là nước sôi, viên giặt Tide và chút thuốc tẩy.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "My" },
+        { "answer": "favorite" },
+        { "answer": "concoction" },
+        { "answer": "is" },
+        { "answer": "boiling" },
+        { "answer": "water," },
+        { "answer": "a" },
+        { "answer": "Tide" },
+        { "answer": "pod," },
+        { "answer": "and" },
+        { "answer": "a" },
+        { "answer": "little" },
+        { "answer": "bit" },
+        { "answer": "of" },
+        { "answer": "bleach" }
+    ],
+    "words": ["of", "bit", "My", "and", "little", "bleach", "favorite", "boiling", "is", "pod,", "Tide", "concoction", "a", "a", "water,"]
+},
+
+{
+    "id": 42,
+    "audio": "",
+    "sentence": "Sau đó tôi để yên khoảng 30 phút đến 1 tiếng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "then" },
+        { "answer": "I" },
+        { "answer": "let" },
+        { "answer": "it" },
+        { "answer": "sit" },
+        { "answer": "for" },
+        { "answer": "about" },
+        { "answer": "30" },
+        { "answer": "minutes" },
+        { "answer": "to" },
+        { "answer": "an" },
+        { "answer": "hour" }
+    ],
+    "words": ["And", "30", "I", "sit", "for", "it", "minutes", "let", "hour", "to", "about", "then", "an"]
+},
+
+{
+    "id": 43,
+    "audio": "",
+    "sentence": "Tôi cũng khử trùng cả cán cây lau.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "also" },
+        { "answer": "like" },
+        { "answer": "to" },
+        { "answer": "disinfect" },
+        { "answer": "the" },
+        { "answer": "mop" },
+        { "answer": "stick" },
+        { "answer": "as" },
+        { "answer": "well" }
+    ],
+    "words": ["mop", "as", "stick", "to", "I", "also", "disinfect", "well", "the", "like"]
+},
+
+{
+    "id": 44,
+    "audio": "",
+    "sentence": "Tôi vắt cây lau như máy giặt.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "like" },
+        { "answer": "to" },
+        { "answer": "mimic" },
+        { "answer": "the" },
+        { "answer": "washing" },
+        { "answer": "machine" },
+        { "answer": "and" },
+        { "answer": "wring" },
+        { "answer": "out" },
+        { "answer": "the" },
+        { "answer": "mop" },
+        { "answer": "head" }
+    ],
+    "words": ["machine", "wring", "the", "mop", "washing", "and", "I", "to", "mimic", "the", "out", "head", "like"]
+},
+
+{
+    "id": 45,
+    "audio": "",
+    "sentence": "Đây là món rau tôi hay làm nhất.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "This" },
+        { "answer": "is" },
+        { "answer": "my" },
+        { "answer": "go" },
+        { "answer": "to" },
+        { "answer": "veggie" },
+        { "answer": "recipe" }
+    ],
+    "words": ["to", "recipe", "go", "This", "my", "veggie", "is"]
+},
+
+{
+    "id": 46,
+    "audio": "",
+    "sentence": "Rắc tỏi đều lên.<br>___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Sprinkle" },
+        { "answer": "our" },
+        { "answer": "garlic" },
+        { "answer": "pieces" },
+        { "answer": "throughout" }
+    ],
+    "words": ["throughout", "pieces", "garlic", "our", "Sprinkle"]
+},
+
+{
+    "id": 47,
+    "audio": "",
+    "sentence": "Có thể thêm vỏ chanh bào.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You" },
+        { "answer": "can" },
+        { "answer": "also" },
+        { "answer": "add" },
+        { "answer": "in" },
+        { "answer": "some" },
+        { "answer": "lemon" },
+        { "answer": "zest" }
+    ],
+    "words": ["some", "add", "zest", "lemon", "in", "can", "You", "also"]
+},
+
+{
+    "id": 48,
+    "audio": "",
+    "sentence": "Cách tốt để ăn nhiều rau.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Great" },
+        { "answer": "way" },
+        { "answer": "to" },
+        { "answer": "get" },
+        { "answer": "your" },
+        { "answer": "greens" },
+        { "answer": "in" }
+    ],
+    "words": ["to", "greens", "your", "way", "Great", "get", "in"]
+},
+
+{
+    "id": 49,
+    "audio": "",
+    "sentence": "Kéo đầu gối về phía ngực rồi hạ xuống.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You're" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "drive" },
+        { "answer": "those" },
+        { "answer": "knees" },
+        { "answer": "towards" },
+        { "answer": "your" },
+        { "answer": "chest" },
+        { "answer": "and" },
+        { "answer": "back" },
+        { "answer": "down" }
+    ],
+    "words": ["knees", "and", "You're", "back", "down", "chest", "drive", "towards", "going", "those", "your", "to"]
+},
+
+{
+    "id": 50,
+    "audio": "",
+    "sentence": "Đầu gối kéo sát vào rồi thả ra.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Knees" },
+        { "answer": "are" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "to" },
+        { "answer": "all" },
+        { "answer": "the" },
+        { "answer": "way" },
+        { "answer": "in" },
+        { "answer": "and" },
+        { "answer": "back" }
+    ],
+    "words": ["to", "and", "in", "Knees", "back", "to", "all", "are", "going", "way", "the"]
+},
+
+{
+    "id": 51,
+    "audio": "",
+    "sentence": "Bắt đầu với một lon Dr Pepper lạnh.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "We're" },
+        { "answer": "gonna" },
+        { "answer": "start" },
+        { "answer": "off" },
+        { "answer": "with" },
+        { "answer": "an" },
+        { "answer": "ice" },
+        { "answer": "cold" },
+        { "answer": "Dr" },
+        { "answer": "Pepper" }
+    ],
+    "words": ["off", "an", "Dr", "cold", "with", "We're", "Pepper", "gonna", "ice", "start"]
+},
+
+{
+    "id": 52,
+    "audio": "",
+    "sentence": "Đá không tan làm loãng nước.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "ice" },
+        { "answer": "doesn't" },
+        { "answer": "melt" },
+        { "answer": "and" },
+        { "answer": "dilute" },
+        { "answer": "the" },
+        { "answer": "drink" }
+    ],
+    "words": ["melt", "The", "doesn't", "ice", "and", "the", "dilute", "drink"]
+},
+
+{
+    "id": 53,
+    "audio": "",
+    "sentence": "Tôi rất háo hức vì muốn thử cái này lâu rồi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "So" },
+        { "answer": "excited" },
+        { "answer": "because" },
+        { "answer": "I've" },
+        { "answer": "been" },
+        { "answer": "wanting" },
+        { "answer": "to" },
+        { "answer": "try" },
+        { "answer": "this" },
+        { "answer": "for" },
+        { "answer": "so" },
+        { "answer": "long" },
+        { "answer": "now" }
+    ],
+    "words": ["because", "try", "so", "for", "this", "wanting", "excited", "I've", "long", "So", "been", "to", "now"]
+},
+
+{
+    "id": 54,
+    "audio": "",
+    "sentence": "Nó không có nhiều bột lắm.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Like," },
+        { "answer": "it" },
+        { "answer": "doesn't" },
+        { "answer": "have" },
+        { "answer": "a" },
+        { "answer": "lot" },
+        { "answer": "of" },
+        { "answer": "dough" },
+        { "answer": "going" },
+        { "answer": "on" }
+    ],
+    "words": ["doesn't", "Like,", "of", "lot", "have", "going", "on", "dough", "it", "a"]
+},
+
+{
+    "id": 55,
+    "audio": "",
+    "sentence": "Đẩy người lên, cụp xương cụt và cúi cằm vào.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "We're" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "be" },
+        { "answer": "pushing" },
+        { "answer": "up" },
+        { "answer": "against" },
+        { "answer": "the" },
+        { "answer": "ground" },
+        { "answer": "and" },
+        { "answer": "tucking" },
+        { "answer": "your" },
+        { "answer": "tailbone" },
+        { "answer": "in" },
+        { "answer": "and" },
+        { "answer": "tucking" },
+        { "answer": "your" },
+        { "answer": "chin" },
+        { "answer": "in" }
+    ],
+    "words": ["your", "and", "be", "and", "to", "pushing", "tucking", "in", "your", "chin", "the", "up", "ground", "We're", "against", "going", "tucking", "tailbone", "in"]
+},
+
+{
+    "id": 56,
+    "audio": "",
+    "sentence": "ưỡn mông ra và nhìn lên.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You're" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "stick" },
+        { "answer": "the" },
+        { "answer": "butt" },
+        { "answer": "out" },
+        { "answer": "and" },
+        { "answer": "look" },
+        { "answer": "up" }
+    ],
+    "words": ["to", "out", "going", "stick", "and", "You're", "butt", "up", "the", "look"]
+},
+
+{
+    "id": 57,
+    "audio": "",
+    "sentence": "Rồi di chuyển qua lại.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "you're" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "kind" },
+        { "answer": "of" },
+        { "answer": "go" },
+        { "answer": "back" },
+        { "answer": "and" },
+        { "answer": "forth" },
+        { "answer": "there" }
+    ],
+    "words": ["you're", "going", "of", "and", "And", "go", "there", "kind", "to", "back", "forth"]
+},
+
+{
+    "id": 58,
+    "audio": "",
+    "sentence": "Không thể có nhà sạch nếu dùng dụng cụ bẩn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You" },
+        { "answer": "cannot" },
+        { "answer": "have" },
+        { "answer": "a" },
+        { "answer": "clean" },
+        { "answer": "home" },
+        { "answer": "if" },
+        { "answer": "you're" },
+        { "answer": "cleaning" },
+        { "answer": "with" },
+        { "answer": "dirty" },
+        { "answer": "tools" }
+    ],
+    "words": ["cleaning", "cannot", "dirty", "clean", "with", "have", "tools", "a", "You", "home", "if", "you're"]
+},
+
+{
+    "id": 59,
+    "audio": "",
+    "sentence": "Bạn chỉ đang làm bẩn lan ra thôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You're" },
+        { "answer": "just" },
+        { "answer": "gonna" },
+        { "answer": "end" },
+        { "answer": "up" },
+        { "answer": "spreading" },
+        { "answer": "around" },
+        { "answer": "all" },
+        { "answer": "that" },
+        { "answer": "bad" },
+        { "answer": "mojo" }
+    ],
+    "words": ["You're", "up", "mojo", "bad", "that", "end", "spreading", "around", "gonna", "all", "just"]
+},
+
+{
+    "id": 60,
+    "audio": "",
+    "sentence": "Mọi thứ có thể chán, nhưng hãy cố tận hưởng quá trình.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Everything" },
+        { "answer": "is" },
+        { "answer": "a" },
+        { "answer": "drag," },
+        { "answer": "but" },
+        { "answer": "try" },
+        { "answer": "to" },
+        { "answer": "find" },
+        { "answer": "enjoyment" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "process" }
+    ],
+    "words": ["Everything", "the", "to", "in", "drag,", "process", "try", "a", "but", "enjoyment", "find", "is"]
+},
+
+{
+    "id": 61,
+    "audio": "",
+    "sentence": "Băm 2–3 muỗng hành tím.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Mince" },
+        { "answer": "about" },
+        { "answer": "two" },
+        { "answer": "to" },
+        { "answer": "three" },
+        { "answer": "tablespoons" },
+        { "answer": "of" },
+        { "answer": "shallots" }
+    ],
+    "words": ["Mince", "two", "about", "to", "tablespoons", "three", "of", "shallots"]
+},
+
+{
+    "id": 62,
+    "audio": "",
+    "sentence": "Sau 4 phút, vớt trứng cút ra ngâm nước đá.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "After" },
+        { "answer": "four" },
+        { "answer": "minutes," },
+        { "answer": "take" },
+        { "answer": "out" },
+        { "answer": "the" },
+        { "answer": "quail" },
+        { "answer": "eggs" },
+        { "answer": "and" },
+        { "answer": "shock" },
+        { "answer": "it" },
+        { "answer": "in" },
+        { "answer": "ice" },
+        { "answer": "water" }
+    ],
+    "words": ["take", "water", "quail", "four", "the", "and", "ice", "shock", "minutes,", "After", "out", "it", "in", "eggs"]
+},
+
+{
+    "id": 63,
+    "audio": "",
+    "sentence": "Trang trí bằng hành lá và ớt hiểm.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Garnish" },
+        { "answer": "with" },
+        { "answer": "green" },
+        { "answer": "onions" },
+        { "answer": "and" },
+        { "answer": "Bird's" },
+        { "answer": "eye" },
+        { "answer": "chili" }
+    ],
+    "words": ["chili", "and", "onions", "with", "green", "Garnish", "eye", "Bird's"]
+},
+
+{
+    "id": 64,
+    "audio": "",
+    "sentence": "Hôm nay dọn tủ và chân tường.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Today" },
+        { "answer": "we're" },
+        { "answer": "tackling" },
+        { "answer": "the" },
+        { "answer": "cabinets" },
+        { "answer": "and" },
+        { "answer": "the" },
+        { "answer": "baseboards" }
+    ],
+    "words": ["baseboards", "cabinets", "tackling", "the", "and", "the", "we're", "Today"]
+},
+
+{
+    "id": 65,
+    "audio": "",
+    "sentence": "Tôi hơi phân vân dùng sản phẩm nào.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "a" },
+        { "answer": "little" },
+        { "answer": "unsure" },
+        { "answer": "of" },
+        { "answer": "which" },
+        { "answer": "product" },
+        { "answer": "I" },
+        { "answer": "wanted" },
+        { "answer": "to" },
+        { "answer": "use" }
+    ],
+    "words": ["of", "to", "wanted", "I", "a", "was", "which", "little", "product", "I", "unsure", "use"]
+},
+
+{
+    "id": 66,
+    "audio": "",
+    "sentence": "Cuối cùng tôi chọn dung dịch mùi chanh Fabuloso này.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "then" },
+        { "answer": "I" },
+        { "answer": "settled" },
+        { "answer": "on" },
+        { "answer": "this" },
+        { "answer": "lemon" },
+        { "answer": "fabuloso" }
+    ],
+    "words": ["on", "But", "fabuloso", "then", "I", "this", "lemon", "settled"]
+},
+
+{
+    "id": 67,
+    "audio": "",
+    "sentence": "Vì dạo này tôi mê mùi thơm sạch.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Because" },
+        { "answer": "I've" },
+        { "answer": "been" },
+        { "answer": "obsessing" },
+        { "answer": "over" },
+        { "answer": "the" },
+        { "answer": "fresh" },
+        { "answer": "scent" },
+        { "answer": "lately" }
+    ],
+    "words": ["scent", "over", "I've", "lately", "obsessing", "fresh", "the", "been", "Because"]
+},
+
+{
+    "id": 68,
+    "audio": "",
+    "sentence": "Tôi sẽ dùng cây lau khô Swiffer.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Anyways," },
+        { "answer": "I" },
+        { "answer": "am" },
+        { "answer": "gonna" },
+        { "answer": "be" },
+        { "answer": "using" },
+        { "answer": "my" },
+        { "answer": "Swiffer" },
+        { "answer": "dry" },
+        { "answer": "mop" },
+        { "answer": "for" },
+        { "answer": "this" }
+    ],
+    "words": ["my", "using", "Anyways,", "Swiffer", "I", "for", "gonna", "am", "be", "dry", "mop", "this"]
+},
+
+{
+    "id": 69,
+    "audio": "",
+    "sentence": "Vì tôi biết đây là một trong những việc mà bạn thực sự phải đứng dậy và ép mình làm.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "As" },
+        { "answer": "I" },
+        { "answer": "know" },
+        { "answer": "these" },
+        { "answer": "are" },
+        { "answer": "one" },
+        { "answer": "of" },
+        { "answer": "those" },
+        { "answer": "tasks" },
+        { "answer": "that" },
+        { "answer": "you" },
+        { "answer": "really" },
+        { "answer": "have" },
+        { "answer": "to" },
+        { "answer": "get" },
+        { "answer": "up" },
+        { "answer": "and" },
+        { "answer": "force" },
+        { "answer": "yourself" },
+        { "answer": "to" },
+        { "answer": "do" }
+    ],
+    "words": ["these", "As", "and", "to", "have", "get", "up", "yourself", "know", "those", "you", "tasks", "one", "are", "really", "do", "force", "of", "to", "I", "that"]
+},
+
+{
+    "id": 70,
+    "audio": "",
+    "sentence": "Và cũng không tốn nhiều công sức.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "it" },
+        { "answer": "didn't" },
+        { "answer": "take" },
+        { "answer": "much" },
+        { "answer": "elbow" },
+        { "answer": "grease" },
+        { "answer": "either" }
+    ],
+    "words": ["grease", "either", "it", "take", "much", "didn't", "And", "elbow"]
+},
+
+{
+    "id": 71,
+    "audio": "",
+    "sentence": "Đậy lại và nấu liu riu 10 phút.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Cover" },
+        { "answer": "and" },
+        { "answer": "let" },
+        { "answer": "it" },
+        { "answer": "simmer" },
+        { "answer": "for" },
+        { "answer": "10" },
+        { "answer": "minutes" }
+    ],
+    "words": ["it", "simmer", "for", "and", "let", "10", "minutes", "Cover"]
+},
+
+{
+    "id": 72,
+    "audio": "",
+    "sentence": "Trong lúc chờ, đánh 2 quả trứng và nêm gia vị.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "So" },
+        { "answer": "while" },
+        { "answer": "we" },
+        { "answer": "wait," },
+        { "answer": "we're" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "whisk" },
+        { "answer": "up" },
+        { "answer": "two" },
+        { "answer": "eggs" },
+        { "answer": "and" },
+        { "answer": "season" },
+        { "answer": "it" }
+    ],
+    "words": ["season", "going", "we", "So", "eggs", "to", "whisk", "up", "we're", "two", "and", "wait,", "it", "while"]
+},
+
+{
+    "id": 73,
+    "audio": "",
+    "sentence": "Máy giặt xong thì lấy đồ ra phơi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "After" },
+        { "answer": "the" },
+        { "answer": "washing" },
+        { "answer": "machine" },
+        { "answer": "is" },
+        { "answer": "done," },
+        { "answer": "remember" },
+        { "answer": "to" },
+        { "answer": "remove" },
+        { "answer": "your" },
+        { "answer": "clothes" },
+        { "answer": "and" },
+        { "answer": "to" },
+        { "answer": "dry" },
+        { "answer": "them" },
+        { "answer": "safely" }
+    ],
+    "words": ["remove", "After", "remember", "to", "clothes", "to", "machine", "done,", "and", "safely", "the", "washing", "your", "is", "dry", "them"]
+},
+
+{
+    "id": 74,
+    "audio": "",
+    "sentence": "Tôi chảy nước miếng rồi.<br>___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "already" },
+        { "answer": "salivating" }
+    ],
+    "words": ["I'm", "already", "salivating"]
+},
+
+{
+    "id": 75,
+    "audio": "",
+    "sentence": "Giờ thêm prosciutto.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Okay," },
+        { "answer": "now" },
+        { "answer": "I'm" },
+        { "answer": "gonna" },
+        { "answer": "go" },
+        { "answer": "in" },
+        { "answer": "with" },
+        { "answer": "prosciutto" }
+    ],
+    "words": ["Okay,", "gonna", "go", "I'm", "prosciutto", "now", "in", "with"]
+},
+
+{
+    "id": 76,
+    "audio": "",
+    "sentence": "Thường chúng tôi thích cong nhẹ, nhưng hôm nay chúng tôi làm thẳng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "We" },
+        { "answer": "love" },
+        { "answer": "a" },
+        { "answer": "little" },
+        { "answer": "curve" },
+        { "answer": "usually," },
+        { "answer": "but" },
+        { "answer": "we'll" },
+        { "answer": "go" },
+        { "answer": "for" },
+        { "answer": "the" },
+        { "answer": "straight" },
+        { "answer": "today" }
+    ],
+    "words": ["today", "love", "We", "a", "little", "usually,", "the", "curve", "we'll", "straight", "go", "but", "for"]
+},
+
+{
+    "id": 77,
+    "audio": "",
+    "sentence": "Chọn đầu nào đây?<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Okay," },
+        { "answer": "which" },
+        { "answer": "end" },
+        { "answer": "do" },
+        { "answer": "I" },
+        { "answer": "want" },
+        { "answer": "on?" }
+    ],
+    "words": ["end", "which", "do", "on?", "Okay,", "want", "I"]
+},
+
+{
+    "id": 78,
+    "audio": "",
+    "sentence": "Tôi muốn nghỉ ăn nhẹ chút.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "wanted" },
+        { "answer": "to" },
+        { "answer": "take" },
+        { "answer": "a" },
+        { "answer": "break" },
+        { "answer": "and" },
+        { "answer": "do" },
+        { "answer": "a" },
+        { "answer": "little" },
+        { "answer": "snacky" },
+        { "answer": "snack" }
+    ],
+    "words": ["to", "take", "a", "snack", "I", "a", "do", "snacky", "little", "and", "wanted", "break"]
+},
+
+{
+    "id": 79,
+    "audio": "",
+    "sentence": "Tôi cũng không còn ăn liên tục cả ngày nữa.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "I" },
+        { "answer": "also" },
+        { "answer": "don't" },
+        { "answer": "eat" },
+        { "answer": "constantly" },
+        { "answer": "throughout" },
+        { "answer": "the" },
+        { "answer": "day" },
+        { "answer": "anymore" }
+    ],
+    "words": ["also", "throughout", "eat", "constantly", "And", "anymore", "day", "don't", "the", "I"]
+},
+
+{
+    "id": 80,
+    "audio": "",
+    "sentence": "Chúng ta có nghĩ ăn quá nhiều là vấn đề không?<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Have" },
+        { "answer": "we" },
+        { "answer": "considered" },
+        { "answer": "that" },
+        { "answer": "eating" },
+        { "answer": "too" },
+        { "answer": "much" },
+        { "answer": "might" },
+        { "answer": "be" },
+        { "answer": "part" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "problem?" }
+    ],
+    "words": ["the", "might", "of", "eating", "part", "much", "that", "problem?", "we", "too", "Have", "be", "considered"]
+},
+
+{
+    "id": 81,
+    "audio": "",
+    "sentence": "Chúng thật tệ nhưng đã được tút tát!<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "They've" },
+        { "answer": "seen" },
+        { "answer": "better" },
+        { "answer": "days" },
+        { "answer": "but" },
+        { "answer": "they've" },
+        { "answer": "come" },
+        { "answer": "up" },
+        { "answer": "a" },
+        { "answer": "treat!" }
+    ],
+    "words": ["up", "seen", "they've", "come", "They've", "days", "a", "but", "treat!", "better"]
+},
+
+{
+    "id": 82,
+    "audio": "",
+    "sentence": "Tôi làm sốt chấm riêng, giờ chấm ăn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I've" },
+        { "answer": "made" },
+        { "answer": "my" },
+        { "answer": "own" },
+        { "answer": "dip" },
+        { "answer": "so" },
+        { "answer": "I'm" },
+        { "answer": "just" },
+        { "answer": "gonna" },
+        { "answer": "soak" },
+        { "answer": "that" },
+        { "answer": "in" }
+    ],
+    "words": ["so", "my", "soak", "just", "made", "own", "that", "dip", "in", "I'm", "gonna", "I've"]
+},
+
+{
+    "id": 83,
+    "audio": "",
+    "sentence": "Tôi cắt đôi cái này để kiểm tra chín chưa.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "This" },
+        { "answer": "one" },
+        { "answer": "I" },
+        { "answer": "cut" },
+        { "answer": "in" },
+        { "answer": "half" },
+        { "answer": "because" },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "testing" },
+        { "answer": "whether" },
+        { "answer": "or" },
+        { "answer": "not" },
+        { "answer": "it" },
+        { "answer": "was" },
+        { "answer": "cooked" }
+    ],
+    "words": ["it", "I", "whether", "or", "was", "in", "This", "cooked", "half", "cut", "one", "I", "not", "testing", "because", "was"]
+},
+
+{
+    "id": 84,
+    "audio": "",
+    "sentence": "Tôi đang đeo kính vì phải bỏ lens 24h trước khi khám laser.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "in" },
+        { "answer": "my" },
+        { "answer": "glasses" },
+        { "answer": "right" },
+        { "answer": "now" },
+        { "answer": "because" },
+        { "answer": "I" },
+        { "answer": "have" },
+        { "answer": "to" },
+        { "answer": "not" },
+        { "answer": "wear" },
+        { "answer": "contact" },
+        { "answer": "lenses" },
+        { "answer": "for" },
+        { "answer": "24" },
+        { "answer": "hours" },
+        { "answer": "for" },
+        { "answer": "my" },
+        { "answer": "laser" },
+        { "answer": "consultation" },
+        { "answer": "tomorrow" }
+    ],
+    "words": ["have", "tomorrow", "for", "because", "laser", "I", "24", "right", "to", "I'm", "now", "not", "hours", "wear", "glasses", "in", "my", "contact", "for", "my", "lenses", "consultation"]
+},
+
+{
+    "id": 85,
+    "audio": "",
+    "sentence": "Nhưng chỗ khám cuối cùng này anh ta khám rất kỹ, anh ta muốn an toàn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "this" },
+        { "answer": "last" },
+        { "answer": "place" },
+        { "answer": "he" },
+        { "answer": "was" },
+        { "answer": "like" },
+        { "answer": "quite" },
+        { "answer": "thorough" },
+        { "answer": "and" },
+        { "answer": "he" },
+        { "answer": "was" },
+        { "answer": "like" },
+        { "answer": "he'd" },
+        { "answer": "rather" },
+        { "answer": "be" },
+        { "answer": "safe" }
+    ],
+    "words": ["was", "rather", "and", "safe", "he'd", "place", "last", "be", "thorough", "he", "he", "was", "like", "But", "like", "this", "quite"]
+},
+
+{
+    "id": 86,
+    "audio": "",
+    "sentence": "Tiếp theo dùng miếng bọt biển.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "next" },
+        { "answer": "thing" },
+        { "answer": "is" },
+        { "answer": "to" },
+        { "answer": "move" },
+        { "answer": "on" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "sponge" }
+    ],
+    "words": ["The", "the", "on", "is", "to", "thing", "sponge", "move", "to", "next"]
+},
+
+{
+    "id": 87,
+    "audio": "",
+    "sentence": "Thêm nước rửa chén vào bọt biển.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "going" },
+        { "answer": "to" },
+        { "answer": "add" },
+        { "answer": "some" },
+        { "answer": "washing" },
+        { "answer": "up" },
+        { "answer": "liquid" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "sponge" }
+    ],
+    "words": ["sponge", "add", "going", "to", "the", "liquid", "washing", "I'm", "to", "some", "up"]
+},
+
+{
+    "id": 88,
+    "audio": "",
+    "sentence": "Khi nấu xong, thêm 2 cốc nước dashi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "After" },
+        { "answer": "it" },
+        { "answer": "gets" },
+        { "answer": "cooked" },
+        { "answer": "down," },
+        { "answer": "add" },
+        { "answer": "two" },
+        { "answer": "cups" },
+        { "answer": "of" },
+        { "answer": "dashi" }
+    ],
+    "words": ["of", "cups", "dashi", "gets", "down,", "add", "After", "two", "it", "cooked"]
+},
+
+{
+    "id": 89,
+    "audio": "",
+    "sentence": "Khi sôi thì cho viên cà ri.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "So" },
+        { "answer": "once" },
+        { "answer": "this" },
+        { "answer": "comes" },
+        { "answer": "to" },
+        { "answer": "a" },
+        { "answer": "boil," },
+        { "answer": "add" },
+        { "answer": "in" },
+        { "answer": "your" },
+        { "answer": "curry" },
+        { "answer": "cube" }
+    ],
+    "words": ["curry", "cube", "to", "once", "in", "a", "this", "add", "your", "comes", "So", "boil,"]
+},
+
+{
+    "id": 90,
+    "audio": "",
+    "sentence": "Tôi thích dọn dẹp nhà cửa vào thứ Sáu nếu có thể vì như vậy tôi có thể dành phần còn lại của cuối tuần để thư giãn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "like" },
+        { "answer": "to" },
+        { "answer": "do" },
+        { "answer": "my" },
+        { "answer": "cleaning" },
+        { "answer": "resets" },
+        { "answer": "on" },
+        { "answer": "Fridays" },
+        { "answer": "if" },
+        { "answer": "possible" },
+        { "answer": "because" },
+        { "answer": "that" },
+        { "answer": "means" },
+        { "answer": "I" },
+        { "answer": "get" },
+        { "answer": "to" },
+        { "answer": "spend" },
+        { "answer": "the" },
+        { "answer": "rest" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "weekend" },
+        { "answer": "relaxing" }
+    ],
+    "words": ["get", "the", "relaxing", "to", "possible", "Fridays", "to", "on", "like", "I", "of", "my", "means", "cleaning", "that", "resets", "I", "rest", "if", "do", "spend", "weekend", "the", "because"]
+},
+
+{
+    "id": 91,
+    "audio": "",
+    "sentence": "Khi còn nhỏ, tôi nhớ mẹ tôi luôn dọn dẹp một khu vực nhỏ trong nhà trước khi đi làm vào buổi sáng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "When" },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "growing" },
+        { "answer": "up," },
+        { "answer": "I" },
+        { "answer": "remember" },
+        { "answer": "my" },
+        { "answer": "mom" },
+        { "answer": "would" },
+        { "answer": "always" },
+        { "answer": "spot" },
+        { "answer": "clean" },
+        { "answer": "one" },
+        { "answer": "area" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "house" },
+        { "answer": "before" },
+        { "answer": "she" },
+        { "answer": "went" },
+        { "answer": "to" },
+        { "answer": "work" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "mornings" }
+    ],
+    "words": ["went", "my", "mom", "the", "would", "clean", "I", "spot", "in", "remember", "of", "to", "before", "I", "was", "work", "she", "When", "area", "one", "the", "always", "house", "growing", "up,", "mornings"]
+},
+
+{
+    "id": 92,
+    "audio": "",
+    "sentence": "Đó giống như sự kết hợp của hai điều tuyệt vời nhất.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It's" },
+        { "answer": "like" },
+        { "answer": "the" },
+        { "answer": "two" },
+        { "answer": "best" },
+        { "answer": "things" },
+        { "answer": "ever" },
+        { "answer": "combined" }
+    ],
+    "words": ["two", "like", "the", "It's", "ever", "things", "best", "combined"]
+},
+
+{
+    "id": 93,
+    "audio": "",
+    "sentence": "Vì vậy, tôi sẽ kết thúc ở đây.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "So" },
+        { "answer": "I'm" },
+        { "answer": "gonna" },
+        { "answer": "cap" },
+        { "answer": "it" },
+        { "answer": "off" },
+        { "answer": "at" },
+        { "answer": "here" }
+    ],
+    "words": ["cap", "it", "off", "gonna", "So", "at", "here", "I'm"]
+},
+
+{
+    "id": 94,
+    "audio": "",
+    "sentence": "Thành thật mà nói, không chỉ vào ban đêm, chiếc quạt này hoạt động 24/7 và đã như vậy trong 3 năm qua.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Honestly" },
+        { "answer": "it's" },
+        { "answer": "not" },
+        { "answer": "just" },
+        { "answer": "at" },
+        { "answer": "night," },
+        { "answer": "this" },
+        { "answer": "fan" },
+        { "answer": "is" },
+        { "answer": "on" },
+        { "answer": "24/7" },
+        { "answer": "and" },
+        { "answer": "has" },
+        { "answer": "been" },
+        { "answer": "for" },
+        { "answer": "the" },
+        { "answer": "past" },
+        { "answer": "3" },
+        { "answer": "years" }
+    ],
+    "words": ["past", "for", "fan", "3", "is", "Honestly", "been", "this", "just", "the", "has", "on", "night,", "at", "and", "24/7", "not", "years", "it's"]
+},
+
+{
+    "id": 95,
+    "audio": "",
+    "sentence": "Nó thu gom một lượng lông mèo khổng lồ cũng như bụi bẩn và một số chất dính màu nâu rất khó lau chùi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It" },
+        { "answer": "collects" },
+        { "answer": "the" },
+        { "answer": "most" },
+        { "answer": "insane" },
+        { "answer": "amount" },
+        { "answer": "of" },
+        { "answer": "cat" },
+        { "answer": "hair" },
+        { "answer": "as" },
+        { "answer": "well" },
+        { "answer": "as" },
+        { "answer": "dust" },
+        { "answer": "and" },
+        { "answer": "some" },
+        { "answer": "really" },
+        { "answer": "sticky" },
+        { "answer": "brown" },
+        { "answer": "stuff" },
+        { "answer": "that" },
+        { "answer": "would" },
+        { "answer": "just" },
+        { "answer": "not" },
+        { "answer": "come" },
+        { "answer": "off" }
+    ],
+    "words": ["It", "would", "hair", "sticky", "and", "off", "the", "some", "just", "amount", "dust", "of", "not", "come", "well", "collects", "really", "cat", "brown", "insane", "most", "stuff", "as", "as", "that"]
+},
+
+{
+    "id": 96,
+    "audio": "",
+    "sentence": "Thông thường, mỗi khi tôi lau chùi nó, tôi đều lau lại bằng khăn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Usually" },
+        { "answer": "whenever" },
+        { "answer": "I" },
+        { "answer": "do" },
+        { "answer": "clean" },
+        { "answer": "this," },
+        { "answer": "I" },
+        { "answer": "wipe" },
+        { "answer": "it" },
+        { "answer": "down" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "cloth" }
+    ],
+    "words": ["do", "this,", "clean", "it", "I", "whenever", "a", "I", "down", "Usually", "wipe", "cloth", "with"]
+},
+
+{
+    "id": 97,
+    "audio": "",
+    "sentence": "Vì nó thêm một lượng gia vị và cảm giác tê tê hoàn hảo cho lưỡi tôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Because" },
+        { "answer": "it" },
+        { "answer": "added" },
+        { "answer": "the" },
+        { "answer": "perfect" },
+        { "answer": "amount" },
+        { "answer": "of" },
+        { "answer": "spice" },
+        { "answer": "and" },
+        { "answer": "tingles" },
+        { "answer": "to" },
+        { "answer": "my" },
+        { "answer": "tongue" }
+    ],
+    "words": ["of", "perfect", "spice", "tongue", "tingles", "amount", "my", "added", "and", "to", "it", "Because", "the"]
+},
+
+{
+    "id": 98,
+    "audio": "",
+    "sentence": "Kiểu như, tôi bị mù tạm thời vài giây, tôi không hề nói đùa đâu.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Like," },
+        { "answer": "I" },
+        { "answer": "went" },
+        { "answer": "blind" },
+        { "answer": "for" },
+        { "answer": "a" },
+        { "answer": "couple" },
+        { "answer": "of" },
+        { "answer": "seconds," },
+        { "answer": "I'm" },
+        { "answer": "not" },
+        { "answer": "even" },
+        { "answer": "joking" }
+    ],
+    "words": ["I'm", "for", "went", "blind", "Like,", "seconds,", "couple", "a", "joking", "I", "even", "of", "not"]
+},
+
+{
+    "id": 99,
+    "audio": "",
+    "sentence": "Sau khi lấy lại bình tĩnh, chỉ còn lại giấm đỏ, nó thêm một chút vị chua, nhưng có lẽ đó là sự kết hợp tôi ít thích nhất.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "After" },
+        { "answer": "I" },
+        { "answer": "collected" },
+        { "answer": "myself," },
+        { "answer": "there" },
+        { "answer": "was" },
+        { "answer": "just" },
+        { "answer": "red" },
+        { "answer": "vinegar" },
+        { "answer": "left" },
+        { "answer": "which" },
+        { "answer": "added" },
+        { "answer": "a" },
+        { "answer": "little" },
+        { "answer": "acidity," },
+        { "answer": "but" },
+        { "answer": "it" },
+        { "answer": "was" },
+        { "answer": "probably" },
+        { "answer": "my" },
+        { "answer": "least" },
+        { "answer": "favorite" },
+        { "answer": "pairing" }
+    ],
+    "words": ["which", "vinegar", "collected", "my", "added", "was", "red", "was", "it", "least", "favorite", "little", "I", "pairing", "a", "probably", "just", "myself,", "there", "After", "left", "acidity,", "but"]
+},
+
+{
+    "id": 100,
+    "audio": "",
+    "sentence": "Chỉ vì nó không thêm nhiều hương vị so với chanh hoặc cải ngựa.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Just" },
+        { "answer": "because" },
+        { "answer": "it" },
+        { "answer": "didn't" },
+        { "answer": "add" },
+        { "answer": "as" },
+        { "answer": "much" },
+        { "answer": "compared" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "lemon" },
+        { "answer": "or" },
+        { "answer": "horseradish" }
+    ],
+    "words": ["it", "compared", "because", "horseradish", "the", "or", "add", "as", "Just", "lemon", "much", "didn't", "to"]
+},
+
+{
+    "id": 101,
+    "audio": "",
+    "sentence": "Lấy vỉ nướng ra và để sang một bên.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Remove" },
+        { "answer": "the" },
+        { "answer": "grate" },
+        { "answer": "and" },
+        { "answer": "set" },
+        { "answer": "them" },
+        { "answer": "aside" }
+    ],
+    "words": ["and", "Remove", "set", "grate", "them", "the", "aside"]
+},
+
+{
+    "id": 102,
+    "audio": "",
+    "sentence": "Nhìn xem mọi thứ bong ra dễ dàng như thế nào.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Just" },
+        { "answer": "look" },
+        { "answer": "at" },
+        { "answer": "how" },
+        { "answer": "everything" },
+        { "answer": "lifts" },
+        { "answer": "right" },
+        { "answer": "up" }
+    ],
+    "words": ["look", "at", "everything", "Just", "up", "how", "right", "lifts"]
+},
+
+{
+    "id": 103,
+    "audio": "",
+    "sentence": "Nhìn xem mọi thứ bám dính ra sao.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Just" },
+        { "answer": "look" },
+        { "answer": "at" },
+        { "answer": "how" },
+        { "answer": "everything" },
+        { "answer": "is" },
+        { "answer": "so" },
+        { "answer": "caked" },
+        { "answer": "on" }
+    ],
+    "words": ["so", "caked", "everything", "at", "is", "how", "Just", "look", "on"]
+},
+
+{
+    "id": 104,
+    "audio": "",
+    "sentence": "Hôm nay thời tiết thật tệ.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Today" },
+        { "answer": "the" },
+        { "answer": "weather" },
+        { "answer": "was" },
+        { "answer": "so" },
+        { "answer": "gross" },
+        { "answer": "out" }
+    ],
+    "words": ["was", "Today", "the", "out", "weather", "gross", "so"]
+},
+
+{
+    "id": 105,
+    "audio": "",
+    "sentence": "Tôi mang túi đến phòng tập thể dục nhưng tất nhiên tôi phải trải khăn lên.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "took" },
+        { "answer": "my" },
+        { "answer": "bag" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "gym" },
+        { "answer": "but" },
+        { "answer": "of" },
+        { "answer": "course" },
+        { "answer": "I" },
+        { "answer": "had" },
+        { "answer": "to" },
+        { "answer": "lay" },
+        { "answer": "down" },
+        { "answer": "a" },
+        { "answer": "towel" },
+        { "answer": "for" },
+        { "answer": "it" }
+    ],
+    "words": ["but", "gym", "of", "to", "a", "for", "towel", "I", "to", "took", "I", "bag", "lay", "my", "course", "had", "the", "down", "it"]
+},
+
+{
+    "id": 106,
+    "audio": "",
+    "sentence": "Tôi cần tắm rửa toàn thân.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "needed" },
+        { "answer": "to" },
+        { "answer": "take" },
+        { "answer": "an" },
+        { "answer": "everything" },
+        { "answer": "shower" }
+    ],
+    "words": ["an", "I", "everything", "to", "shower", "take", "needed"]
+},
+
+{
+    "id": 107,
+    "audio": "",
+    "sentence": "Nhưng sau đó tôi kết thúc buổi tối của mình với một chiếc bánh cupcake nhung đỏ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "then" },
+        { "answer": "I" },
+        { "answer": "finished" },
+        { "answer": "my" },
+        { "answer": "night" },
+        { "answer": "off" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "red" },
+        { "answer": "velvet" },
+        { "answer": "cupcake" }
+    ],
+    "words": ["then", "finished", "with", "I", "off", "a", "red", "cupcake", "my", "velvet", "But", "night"]
+},
+
+{
+    "id": 108,
+    "audio": "",
+    "sentence": "Tôi quá mệt mỏi với việc phụ nữ cứ soi mói lẫn nhau.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "so" },
+        { "answer": "sick" },
+        { "answer": "and" },
+        { "answer": "tired" },
+        { "answer": "of" },
+        { "answer": "women" },
+        { "answer": "policing" },
+        { "answer": "other" },
+        { "answer": "women" }
+    ],
+    "words": ["sick", "of", "and", "so", "I'm", "women", "women", "tired", "other", "policing"]
+},
+
+{
+    "id": 109,
+    "audio": "",
+    "sentence": "Hôm trước, tôi đang lướt Reels và tôi bắt gặp một bà mẹ đang khoe khoang về việc cô ấy lấy lại vóc dáng sau bốn tháng sinh con.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "other" },
+        { "answer": "day," },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "scrolling" },
+        { "answer": "on" },
+        { "answer": "reels" },
+        { "answer": "and" },
+        { "answer": "I" },
+        { "answer": "came" },
+        { "answer": "across" },
+        { "answer": "this" },
+        { "answer": "mom" },
+        { "answer": "who" },
+        { "answer": "was" },
+        { "answer": "flexing" },
+        { "answer": "how" },
+        { "answer": "she" },
+        { "answer": "got" },
+        { "answer": "into" },
+        { "answer": "shape" },
+        { "answer": "four" },
+        { "answer": "months" },
+        { "answer": "postpartum" }
+    ],
+    "words": ["mom", "flexing", "other", "she", "on", "I", "across", "was", "into", "four", "this", "shape", "got", "how", "The", "I", "reels", "who", "months", "came", "and", "postpartum", "scrolling", "day,", "was"]
+},
+
+{
+    "id": 110,
+    "audio": "",
+    "sentence": "Tại sao chúng ta lại mong đợi và ép buộc người khác phải chiều theo những nỗi bất an của chúng ta với tư cách là phụ nữ?<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Why" },
+        { "answer": "do" },
+        { "answer": "we" },
+        { "answer": "expect" },
+        { "answer": "and" },
+        { "answer": "force" },
+        { "answer": "people" },
+        { "answer": "to" },
+        { "answer": "pander" },
+        { "answer": "to" },
+        { "answer": "our" },
+        { "answer": "insecurities" },
+        { "answer": "as" },
+        { "answer": "women?" }
+    ],
+    "words": ["we", "do", "and", "as", "force", "to", "Why", "to", "pander", "insecurities", "people", "expect", "women?", "our"]
+},
+
+{
+    "id": 111,
+    "audio": "",
+    "sentence": "Tôi chưa bao giờ khó chịu hay bị xúc phạm bởi một người phụ nữ tự mô tả mình là xinh đẹp.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "have" },
+        { "answer": "never" },
+        { "answer": "once" },
+        { "answer": "been" },
+        { "answer": "upset" },
+        { "answer": "or" },
+        { "answer": "offended" },
+        { "answer": "by" },
+        { "answer": "a" },
+        { "answer": "woman" },
+        { "answer": "describing" },
+        { "answer": "herself" },
+        { "answer": "as" },
+        { "answer": "beautiful" }
+    ],
+    "words": ["been", "herself", "describing", "woman", "as", "never", "I", "have", "a", "beautiful", "once", "offended", "by", "upset", "or"]
+},
+
+{
+    "id": 112,
+    "audio": "",
+    "sentence": "Tôi chưa bao giờ cảm thấy bị xúc phạm hay thậm chí kỳ lạ chút nào nếu một người phụ nữ mô tả cơ thể mình là gầy khi ở cạnh tôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "have" },
+        { "answer": "never" },
+        { "answer": "once" },
+        { "answer": "felt" },
+        { "answer": "offended" },
+        { "answer": "or" },
+        { "answer": "even" },
+        { "answer": "weird" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "slightest" },
+        { "answer": "if" },
+        { "answer": "a" },
+        { "answer": "woman" },
+        { "answer": "describes" },
+        { "answer": "her" },
+        { "answer": "body" },
+        { "answer": "as" },
+        { "answer": "skinny" },
+        { "answer": "around" },
+        { "answer": "me" }
+    ],
+    "words": ["slightest", "around", "me", "felt", "woman", "her", "in", "the", "a", "I", "or", "skinny", "even", "describes", "have", "body", "as", "never", "offended", "weird", "if", "once"]
+},
+
+{
+    "id": 113,
+    "audio": "",
+    "sentence": "Nếu, cầu Chúa phù hộ, tôi có con, liệu tôi có nghĩ rằng cơ thể mình sẽ trở lại như cũ trong vòng bốn tháng không?<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "If," },
+        { "answer": "god" },
+        { "answer": "willing," },
+        { "answer": "I" },
+        { "answer": "ever" },
+        { "answer": "have" },
+        { "answer": "kids," },
+        { "answer": "do" },
+        { "answer": "I" },
+        { "answer": "think" },
+        { "answer": "my" },
+        { "answer": "body" },
+        { "answer": "will" },
+        { "answer": "snap" },
+        { "answer": "back" },
+        { "answer": "in" },
+        { "answer": "four" },
+        { "answer": "months?" }
+    ],
+    "words": ["will", "god", "willing,", "in", "think", "I", "kids,", "If,", "ever", "months?", "I", "my", "snap", "have", "body", "four", "do", "back"]
+},
+
+{
+    "id": 114,
+    "audio": "",
+    "sentence": "Sự tầm thường không phải là nguồn cảm hứng.<br>___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Mediocrity" },
+        { "answer": "is" },
+        { "answer": "not" },
+        { "answer": "inspirational" }
+    ],
+    "words": ["Mediocrity", "not", "is", "inspirational"]
+},
+
+{
+    "id": 115,
+    "audio": "",
+    "sentence": "Việc bạn khó chịu khi nghĩ rằng, giả sử, một cô gái khác sẽ hấp dẫn đàn ông hơn bạn là cực kỳ trọng nam khinh nữ và kỳ thị phụ nữ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You" },
+        { "answer": "getting" },
+        { "answer": "upset" },
+        { "answer": "that" },
+        { "answer": "you" },
+        { "answer": "think," },
+        { "answer": "hypothetically," },
+        { "answer": "another" },
+        { "answer": "girl" },
+        { "answer": "will" },
+        { "answer": "be" },
+        { "answer": "more" },
+        { "answer": "desirable" },
+        { "answer": "to" },
+        { "answer": "men" },
+        { "answer": "than" },
+        { "answer": "you" },
+        { "answer": "is" },
+        { "answer": "extremely" },
+        { "answer": "male" },
+        { "answer": "centered" },
+        { "answer": "and" },
+        { "answer": "misogynistic" }
+    ],
+    "words": ["misogynistic", "to", "You", "than", "extremely", "more", "upset", "male", "another", "you", "desirable", "centered", "you", "think,", "hypothetically,", "be", "men", "will", "is", "girl", "and", "that", "getting"]
+},
+
+{
+    "id": 116,
+    "audio": "",
+    "sentence": "Tôi nghĩ điều đó có liên quan rất nhiều đến cách bạn lớn lên.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "think" },
+        { "answer": "that" },
+        { "answer": "has" },
+        { "answer": "a" },
+        { "answer": "lot" },
+        { "answer": "to" },
+        { "answer": "do" },
+        { "answer": "with" },
+        { "answer": "the" },
+        { "answer": "way" },
+        { "answer": "in" },
+        { "answer": "which" },
+        { "answer": "you" },
+        { "answer": "grew" },
+        { "answer": "up" }
+    ],
+    "words": ["up", "do", "think", "you", "grew", "has", "that", "in", "I", "to", "lot", "with", "way", "a", "which", "the"]
+},
+
+{
+    "id": 117,
+    "audio": "",
+    "sentence": "Đó thực sự là khả năng nhìn nhận mọi khía cạnh của một vấn đề và đóng vai trò người phản biện của bạn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It's" },
+        { "answer": "really" },
+        { "answer": "your" },
+        { "answer": "ability" },
+        { "answer": "to" },
+        { "answer": "see" },
+        { "answer": "all" },
+        { "answer": "sides" },
+        { "answer": "of" },
+        { "answer": "an" },
+        { "answer": "argument" },
+        { "answer": "and" },
+        { "answer": "play" },
+        { "answer": "devil's" },
+        { "answer": "advocate" }
+    ],
+    "words": ["your", "to", "It's", "devil's", "and", "sides", "of", "ability", "an", "play", "argument", "see", "really", "all", "advocate"]
+},
+
+{
+    "id": 118,
+    "audio": "",
+    "sentence": "Vấn đề lớn là nếu ai đó trình bày ý kiến ​​của họ, phản ứng ngay lập tức của bạn là phản bác lại bằng ý kiến ​​của mình.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Such" },
+        { "answer": "a" },
+        { "answer": "problem" },
+        { "answer": "that" },
+        { "answer": "if" },
+        { "answer": "someone" },
+        { "answer": "presents" },
+        { "answer": "to" },
+        { "answer": "you" },
+        { "answer": "their" },
+        { "answer": "idea," },
+        { "answer": "your" },
+        { "answer": "immediate" },
+        { "answer": "response" },
+        { "answer": "is" },
+        { "answer": "to" },
+        { "answer": "combat" },
+        { "answer": "it" },
+        { "answer": "with" },
+        { "answer": "yours" }
+    ],
+    "words": ["with", "you", "that", "combat", "their", "to", "your", "if", "is", "Such", "idea,", "someone", "it", "a", "problem", "response", "presents", "yours", "immediate", "to"]
+},
+
+{
+    "id": 119,
+    "audio": "",
+    "sentence": "Càng lớn tuổi, tôi càng nhận ra rằng rất hiếm khi mọi thứ thực sự chỉ có trắng và đen.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "older" },
+        { "answer": "I" },
+        { "answer": "get," },
+        { "answer": "the" },
+        { "answer": "more" },
+        { "answer": "I" },
+        { "answer": "realise" },
+        { "answer": "that" },
+        { "answer": "very" },
+        { "answer": "very" },
+        { "answer": "rarely" },
+        { "answer": "are" },
+        { "answer": "things" },
+        { "answer": "truly" },
+        { "answer": "black" },
+        { "answer": "and" },
+        { "answer": "white" }
+    ],
+    "words": ["I", "black", "truly", "very", "more", "realise", "things", "white", "are", "that", "very", "and", "rarely", "I", "older", "the", "get,", "The"]
+},
+
+{
+    "id": 120,
+    "audio": "",
+    "sentence": "Tôi sợ những gì người khác sẽ nghĩ và cách họ nhìn nhận tôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "scared" },
+        { "answer": "of" },
+        { "answer": "what" },
+        { "answer": "other" },
+        { "answer": "people" },
+        { "answer": "would" },
+        { "answer": "think" },
+        { "answer": "and" },
+        { "answer": "how" },
+        { "answer": "they" },
+        { "answer": "would" },
+        { "answer": "perceive" },
+        { "answer": "me" }
+    ],
+    "words": ["other", "me", "of", "they", "scared", "was", "would", "I", "people", "perceive", "would", "how", "and", "what", "think"]
+},
+
+{
+    "id": 121,
+    "audio": "",
+    "sentence": "Tôi đã không thực sự làm bất cứ điều gì bởi vì tôi đã để cho những quyết định và quá trình ra quyết định của mình bị ảnh hưởng chủ yếu bởi những gì người khác nghĩ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "would" },
+        { "answer": "not" },
+        { "answer": "literally" },
+        { "answer": "do" },
+        { "answer": "anything" },
+        { "answer": "because" },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "literally" },
+        { "answer": "allowing" },
+        { "answer": "those" },
+        { "answer": "decisions" },
+        { "answer": "and" },
+        { "answer": "that" },
+        { "answer": "decision" },
+        { "answer": "making" },
+        { "answer": "to" },
+        { "answer": "be" },
+        { "answer": "primarily" },
+        { "answer": "influenced" },
+        { "answer": "by" },
+        { "answer": "what" },
+        { "answer": "other" },
+        { "answer": "people" },
+        { "answer": "would" },
+        { "answer": "think" }
+    ],
+    "words": ["primarily", "would", "by", "allowing", "think", "those", "be", "decisions", "other", "people", "not", "because", "I", "literally", "what", "do", "I", "was", "influenced", "making", "to", "decision", "would", "anything", "literally", "that", "and"]
+},
+
+{
+    "id": 122,
+    "audio": "",
+    "sentence": "Bây giờ nhìn lại, tôi cảm thấy điều duy nhất thực sự giúp tôi loại bỏ tất cả những nhận thức đó chính là liệu pháp tiếp xúc liên tục.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Feel" },
+        { "answer": "like" },
+        { "answer": "looking" },
+        { "answer": "back" },
+        { "answer": "now," },
+        { "answer": "the" },
+        { "answer": "only" },
+        { "answer": "thing" },
+        { "answer": "that" },
+        { "answer": "has," },
+        { "answer": "like," },
+        { "answer": "genuinely" },
+        { "answer": "helped" },
+        { "answer": "me" },
+        { "answer": "so" },
+        { "answer": "much" },
+        { "answer": "with" },
+        { "answer": "kind" },
+        { "answer": "of" },
+        { "answer": "cutting" },
+        { "answer": "out" },
+        { "answer": "all" },
+        { "answer": "that" },
+        { "answer": "perception" },
+        { "answer": "is" },
+        { "answer": "just" },
+        { "answer": "continuous" },
+        { "answer": "exposure" },
+        { "answer": "therapy" }
+    ],
+    "words": ["back", "so", "that", "me", "just", "all", "like,", "genuinely", "continuous", "perception", "the", "has,", "Feel", "like", "with", "out", "cutting", "is", "much", "kind", "only", "exposure", "that", "now,", "therapy", "looking", "helped", "of", "thing"]
+},
+
+{
+    "id": 123,
+    "audio": "",
+    "sentence": "Tôi chỉ tập trung vào những việc mình có thể hoàn thành trong một ngày đến nỗi tôi hầu như không nghĩ đến chuyện đó.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "just" },
+        { "answer": "so" },
+        { "answer": "focused" },
+        { "answer": "on" },
+        { "answer": "what" },
+        { "answer": "I'm" },
+        { "answer": "able" },
+        { "answer": "to" },
+        { "answer": "get" },
+        { "answer": "done" },
+        { "answer": "for" },
+        { "answer": "me" },
+        { "answer": "on" },
+        { "answer": "a" },
+        { "answer": "given" },
+        { "answer": "day" },
+        { "answer": "that" },
+        { "answer": "I" },
+        { "answer": "just," },
+        { "answer": "like," },
+        { "answer": "don't" },
+        { "answer": "even" },
+        { "answer": "think" },
+        { "answer": "about" },
+        { "answer": "it" }
+    ],
+    "words": ["on", "I'm", "for", "given", "get", "I", "think", "to", "I'm", "just,", "able", "about", "that", "don't", "on", "what", "even", "just", "focused", "done", "like,", "a", "day", "so", "me", "it"]
+},
+
+{
+    "id": 124,
+    "audio": "",
+    "sentence": "Và tôi nghĩ rằng rất nhiều khía cạnh trong cuộc sống của họ có mối liên hệ mật thiết với những điều gây ra sự cô đơn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "I" },
+        { "answer": "just" },
+        { "answer": "think" },
+        { "answer": "so" },
+        { "answer": "much" },
+        { "answer": "of" },
+        { "answer": "their" },
+        { "answer": "lives" },
+        { "answer": "are" },
+        { "answer": "just" },
+        { "answer": "strongly" },
+        { "answer": "correlated" },
+        { "answer": "to" },
+        { "answer": "things" },
+        { "answer": "that" },
+        { "answer": "cause" },
+        { "answer": "the" },
+        { "answer": "loneliness" }
+    ],
+    "words": ["cause", "correlated", "strongly", "just", "so", "And", "think", "to", "are", "things", "of", "I", "just", "the", "their", "loneliness", "much", "lives", "that"]
+},
+
+{
+    "id": 125,
+    "audio": "",
+    "sentence": "Tôi không biết đây là vấn đề của riêng tôi hay chỉ là cách tôi được nuôi dạy về mặt văn hóa, nhưng tôi không bao giờ có thể hình dung được một lời tạm biệt kiểu Ireland.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "don't" },
+        { "answer": "know" },
+        { "answer": "if" },
+        { "answer": "this" },
+        { "answer": "is" },
+        { "answer": "a" },
+        { "answer": "me" },
+        { "answer": "thing" },
+        { "answer": "or" },
+        { "answer": "just" },
+        { "answer": "the" },
+        { "answer": "way" },
+        { "answer": "that" },
+        { "answer": "maybe" },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "raised" },
+        { "answer": "culturally," },
+        { "answer": "but" },
+        { "answer": "I" },
+        { "answer": "could" },
+        { "answer": "never" },
+        { "answer": "fathom" },
+        { "answer": "an" },
+        { "answer": "Irish" },
+        { "answer": "goodbye" }
+    ],
+    "words": ["I", "just", "an", "me", "I", "maybe", "fathom", "I", "thing", "is", "way", "raised", "Irish", "culturally,", "or", "if", "that", "don't", "know", "a", "could", "this", "but", "was", "goodbye", "the", "never"]
+},
+
+{
+    "id": 126,
+    "audio": "",
+    "sentence": "Nếu tôi biến mất khỏi một bữa tiệc hay một buổi tụ tập, chắc chắn sẽ có người gọi 911.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "If" },
+        { "answer": "I" },
+        { "answer": "disappeared" },
+        { "answer": "from" },
+        { "answer": "a" },
+        { "answer": "party" },
+        { "answer": "or" },
+        { "answer": "a" },
+        { "answer": "gathering," },
+        { "answer": "you" },
+        { "answer": "best" },
+        { "answer": "believe" },
+        { "answer": "someone" },
+        { "answer": "would" },
+        { "answer": "call" },
+        { "answer": "911" }
+    ],
+    "words": ["would", "gathering,", "believe", "I", "or", "someone", "best", "911", "If", "a", "call", "from", "you", "a", "disappeared", "party"]
+},
+
+{
+    "id": 127,
+    "audio": "",
+    "sentence": "Họ sẽ không thể sống yên ổn nếu có chuyện gì không ổn xảy ra và họ không làm gì cả, nên họ sẽ đi tìm tôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Like," },
+        { "answer": "they" },
+        { "answer": "would" },
+        { "answer": "never" },
+        { "answer": "live" },
+        { "answer": "with" },
+        { "answer": "themselves" },
+        { "answer": "if" },
+        { "answer": "something" },
+        { "answer": "went" },
+        { "answer": "wrong," },
+        { "answer": "and" },
+        { "answer": "they" },
+        { "answer": "never" },
+        { "answer": "did" },
+        { "answer": "anything" },
+        { "answer": "about" },
+        { "answer": "it," },
+        { "answer": "so" },
+        { "answer": "they" },
+        { "answer": "would" },
+        { "answer": "be" },
+        { "answer": "searching" },
+        { "answer": "for" },
+        { "answer": "me" }
+    ],
+    "words": ["about", "they", "with", "would", "themselves", "would", "for", "it,", "did", "never", "be", "they", "Like,", "and", "if", "went", "they", "so", "anything", "me", "never", "wrong,", "searching", "something", "live"]
+},
+
+{
+    "id": 128,
+    "audio": "",
+    "sentence": "Và chắc chắn sẽ có người bình luận kiểu như, ôi, chuyện đó không nghiêm trọng đến thế đâu, hoặc, chuyện đó thật là kỳ quặc.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "there's" },
+        { "answer": "probably" },
+        { "answer": "inevitably" },
+        { "answer": "gonna" },
+        { "answer": "be" },
+        { "answer": "someone" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "comments" },
+        { "answer": "going" },
+        { "answer": "like," },
+        { "answer": "oh," },
+        { "answer": "it's" },
+        { "answer": "not" },
+        { "answer": "that" },
+        { "answer": "serious," },
+        { "answer": "or," },
+        { "answer": "that's" },
+        { "answer": "so" },
+        { "answer": "gay" }
+    ],
+    "words": ["gay", "oh,", "that", "not", "And", "the", "like,", "or,", "in", "it's", "there's", "probably", "so", "that's", "comments", "someone", "gonna", "inevitably", "serious,", "going", "be"]
+},
+
+{
+    "id": 129,
+    "audio": "",
+    "sentence": "Nhưng thực sự, tôi cảm thấy điều này ảnh hưởng đến rất nhiều khía cạnh của cuộc sống, bao gồm cả sự hài lòng về cuộc sống, sự bình yên trong tâm hồn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "literally," },
+        { "answer": "I" },
+        { "answer": "feel" },
+        { "answer": "like" },
+        { "answer": "this" },
+        { "answer": "extends" },
+        { "answer": "into" },
+        { "answer": "so" },
+        { "answer": "many" },
+        { "answer": "aspects" },
+        { "answer": "of" },
+        { "answer": "life," },
+        { "answer": "including" },
+        { "answer": "life" },
+        { "answer": "satisfaction," },
+        { "answer": "peace" },
+        { "answer": "of" },
+        { "answer": "mind" }
+    ],
+    "words": ["mind", "literally,", "this", "feel", "aspects", "peace", "like", "of", "life", "many", "I", "But", "so", "extends", "into", "satisfaction,", "of", "life,", "including"]
+},
+
+{
+    "id": 130,
+    "audio": "",
+    "sentence": "Tôi đã thất nghiệp được bốn tuần rồi và tôi nhận thấy điều này khoảng hai tuần sau đó.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I've" },
+        { "answer": "been" },
+        { "answer": "unemployed" },
+        { "answer": "for" },
+        { "answer": "four" },
+        { "answer": "weeks" },
+        { "answer": "now" },
+        { "answer": "and" },
+        { "answer": "I" },
+        { "answer": "noticed" },
+        { "answer": "this" },
+        { "answer": "about" },
+        { "answer": "two" },
+        { "answer": "weeks" },
+        { "answer": "in" }
+    ],
+    "words": ["unemployed", "noticed", "I've", "been", "weeks", "for", "I", "in", "weeks", "this", "four", "two", "about", "now", "and"]
+},
+
+{
+    "id": 131,
+    "audio": "",
+    "sentence": "Không có gì có thể chữa khỏi những cơn đau nhức dai dẳng ở vai và lưng tôi cho đến khi tôi bị sa thải.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Nothing" },
+        { "answer": "ever" },
+        { "answer": "fixed" },
+        { "answer": "the" },
+        { "answer": "permanent" },
+        { "answer": "knots" },
+        { "answer": "that" },
+        { "answer": "I" },
+        { "answer": "had" },
+        { "answer": "in" },
+        { "answer": "my" },
+        { "answer": "shoulder" },
+        { "answer": "and" },
+        { "answer": "back" },
+        { "answer": "until" },
+        { "answer": "I" },
+        { "answer": "got" },
+        { "answer": "laid" },
+        { "answer": "off" }
+    ],
+    "words": ["I", "knots", "off", "got", "and", "back", "that", "I", "had", "until", "in", "my", "fixed", "permanent", "shoulder", "laid", "ever", "the", "Nothing"]
+},
+
+{
+    "id": 132,
+    "audio": "",
+    "sentence": "Ai mà ngờ việc không phải ngồi trước bàn làm việc hơn 8 tiếng mỗi ngày, 5 ngày một tuần với tư thế co quắp như con tôm lại có thể chữa khỏi chứng đau lưng của tôi?<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Who" },
+        { "answer": "woulda" },
+        { "answer": "thunk" },
+        { "answer": "not" },
+        { "answer": "spending" },
+        { "answer": "8+" },
+        { "answer": "hours" },
+        { "answer": "a" },
+        { "answer": "day," },
+        { "answer": "5" },
+        { "answer": "days" },
+        { "answer": "a" },
+        { "answer": "week" },
+        { "answer": "sat" },
+        { "answer": "in" },
+        { "answer": "front" },
+        { "answer": "of" },
+        { "answer": "a" },
+        { "answer": "desk" },
+        { "answer": "with" },
+        { "answer": "the" },
+        { "answer": "posture" },
+        { "answer": "of" },
+        { "answer": "a" },
+        { "answer": "shrimp" },
+        { "answer": "would" },
+        { "answer": "fix" },
+        { "answer": "my" },
+        { "answer": "back" },
+        { "answer": "issues?" }
+    ],
+    "words": ["issues?", "back", "my", "days", "5", "the", "a", "desk", "with", "in", "8+", "of", "not", "week", "sat", "front", "Who", "of", "fix", "thunk", "a", "shrimp", "would", "posture", "a", "day,", "hours", "a", "spending", "woulda"]
+},
+
+{
+    "id": 133,
+    "audio": "",
+    "sentence": "Tôi hoàn toàn không ngờ tới điều này, nhưng đây thực sự là lần đầu tiên trong đời tôi không bị đau lưng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Not" },
+        { "answer": "something" },
+        { "answer": "I" },
+        { "answer": "expected" },
+        { "answer": "whatsoever," },
+        { "answer": "but" },
+        { "answer": "this" },
+        { "answer": "is" },
+        { "answer": "literally" },
+        { "answer": "the" },
+        { "answer": "first" },
+        { "answer": "time" },
+        { "answer": "in" },
+        { "answer": "my" },
+        { "answer": "entire" },
+        { "answer": "life" },
+        { "answer": "I've" },
+        { "answer": "not" },
+        { "answer": "had" },
+        { "answer": "back" },
+        { "answer": "pain" }
+    ],
+    "words": ["something", "this", "I've", "back", "expected", "is", "in", "pain", "whatsoever,", "my", "first", "life", "Not", "I", "the", "entire", "but", "not", "literally", "time", "had"]
+},
+
+{
+    "id": 134,
+    "audio": "",
+    "sentence": "Tôi xin lỗi, nhưng bài toán không tính được và logic ở đây không hợp lý.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I'm" },
+        { "answer": "sorry," },
+        { "answer": "but" },
+        { "answer": "the" },
+        { "answer": "math" },
+        { "answer": "ain't" },
+        { "answer": "math" },
+        { "answer": "and" },
+        { "answer": "the" },
+        { "answer": "logic" },
+        { "answer": "does" },
+        { "answer": "not" },
+        { "answer": "make" },
+        { "answer": "sense" },
+        { "answer": "here" }
+    ],
+    "words": ["the", "math", "sense", "does", "math", "but", "make", "the", "and", "sorry,", "not", "ain't", "here", "I'm", "logic"]
+},
+
+{
+    "id": 135,
+    "audio": "",
+    "sentence": "Có lẽ vì tôi chưa bao giờ rơi vào trạng thái cuồng tín tôn giáo, nhưng đơn giản là tôi không thể hiểu nổi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Maybe" },
+        { "answer": "it's" },
+        { "answer": "because" },
+        { "answer": "I've" },
+        { "answer": "never" },
+        { "answer": "been" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "state" },
+        { "answer": "of" },
+        { "answer": "religious" },
+        { "answer": "psychosis," },
+        { "answer": "but" },
+        { "answer": "it" },
+        { "answer": "simply" },
+        { "answer": "just" },
+        { "answer": "does" },
+        { "answer": "not" },
+        { "answer": "compute" },
+        { "answer": "in" },
+        { "answer": "my" },
+        { "answer": "head" }
+    ],
+    "words": ["just", "I've", "state", "because", "it's", "not", "of", "does", "Maybe", "psychosis,", "my", "the", "been", "in", "in", "but", "never", "compute", "head", "religious", "it", "simply"]
+},
+
+{
+    "id": 136,
+    "audio": "",
+    "sentence": "Ví dụ, bạn sẽ nghĩ rằng nếu bạn phản đối phá thai, bạn nên đợi đến khi kết hôn hoặc sống độc thân cho đến khi tìm được, nói một cách nôm na, người ấy.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Like," },
+        { "answer": "you" },
+        { "answer": "would" },
+        { "answer": "think" },
+        { "answer": "that" },
+        { "answer": "if" },
+        { "answer": "you're" },
+        { "answer": "against" },
+        { "answer": "abortion" },
+        { "answer": "you" },
+        { "answer": "would" },
+        { "answer": "either" },
+        { "answer": "wait" },
+        { "answer": "until" },
+        { "answer": "marriage" },
+        { "answer": "or" },
+        { "answer": "just" },
+        { "answer": "stay" },
+        { "answer": "celibate" },
+        { "answer": "until" },
+        { "answer": "you" },
+        { "answer": "find," },
+        { "answer": "quote" },
+        { "answer": "unquote" },
+        { "answer": "the" },
+        { "answer": "one" }
+    ],
+    "words": ["stay", "until", "would", "abortion", "if", "quote", "or", "think", "wait", "just", "the", "that", "unquote", "against", "Like,", "would", "marriage", "you", "celibate", "you", "either", "until", "you're", "find,", "you", "one"]
+},
+
+{
+    "id": 137,
+    "audio": "",
+    "sentence": "Và nhìn này, tôi thích nói xấu người khác với bạn thân của mình, và tôi thích tranh luận mãi về một vấn đề đã cũ với bạn thân của mình.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "look," },
+        { "answer": "I" },
+        { "answer": "love" },
+        { "answer": "talking" },
+        { "answer": "shit" },
+        { "answer": "with" },
+        { "answer": "my" },
+        { "answer": "best" },
+        { "answer": "friends," },
+        { "answer": "and" },
+        { "answer": "I" },
+        { "answer": "love" },
+        { "answer": "beating" },
+        { "answer": "a" },
+        { "answer": "dead" },
+        { "answer": "horse" },
+        { "answer": "with" },
+        { "answer": "my" },
+        { "answer": "best" },
+        { "answer": "friends" }
+    ],
+    "words": ["look,", "a", "best", "beating", "dead", "I", "love", "with", "friends", "love", "friends,", "And", "horse", "I", "my", "and", "talking", "my", "best", "shit", "with"]
+},
+
+{
+    "id": 138,
+    "audio": "",
+    "sentence": "Này, không có cảm giác nào giải tỏa hơn, xác nhận hơn, tạo dựng tình đồng đội hơn là nói xấu người mình ghét với đồng nghiệp.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Bitch," },
+        { "answer": "there" },
+        { "answer": "is" },
+        { "answer": "no" },
+        { "answer": "feeling" },
+        { "answer": "more" },
+        { "answer": "cathartic," },
+        { "answer": "more" },
+        { "answer": "validating," },
+        { "answer": "more" },
+        { "answer": "comradery" },
+        { "answer": "inducing" },
+        { "answer": "than" },
+        { "answer": "talking" },
+        { "answer": "shit" },
+        { "answer": "about" },
+        { "answer": "someone" },
+        { "answer": "you" },
+        { "answer": "hate" },
+        { "answer": "with" },
+        { "answer": "fellow" },
+        { "answer": "colleagues" }
+    ],
+    "words": ["cathartic,", "hate", "comradery", "feeling", "with", "colleagues", "is", "no", "fellow", "shit", "you", "someone", "about", "talking", "validating,", "more", "inducing", "more", "there", "more", "Bitch,", "than"]
+},
+
+{
+    "id": 139,
+    "audio": "",
+    "sentence": "Tôi thích mấy con quỷ đó, tôi thích những cô gái xấu tính, đanh đá, hay tỏ vẻ ta đây, nhưng miễn là bạn cứ giữ nguyên bản chất đó thì không sao.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Like" },
+        { "answer": "I" },
+        { "answer": "love" },
+        { "answer": "bitches," },
+        { "answer": "I" },
+        { "answer": "love" },
+        { "answer": "mean," },
+        { "answer": "bitchy," },
+        { "answer": "attitudey" },
+        { "answer": "girls," },
+        { "answer": "but" },
+        { "answer": "as" },
+        { "answer": "long" },
+        { "answer": "as" },
+        { "answer": "you're" },
+        { "answer": "just" },
+        { "answer": "true" },
+        { "answer": "to" },
+        { "answer": "that" },
+        { "answer": "essence," },
+        { "answer": "we're" },
+        { "answer": "good" }
+    ],
+    "words": ["just", "girls,", "you're", "that", "we're", "I", "good", "mean,", "as", "love", "Like", "to", "I", "love", "bitches,", "bitchy,", "attitudey", "true", "as", "long", "but", "essence,"]
+},
+
+{
+    "id": 140,
+    "audio": "",
+    "sentence": "Tôi thà bạn đanh đá trước mặt tôi còn hơn là nói xấu sau lưng tôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Like" },
+        { "answer": "I" },
+        { "answer": "rather" },
+        { "answer": "you" },
+        { "answer": "be" },
+        { "answer": "bitchy" },
+        { "answer": "to" },
+        { "answer": "my" },
+        { "answer": "face" },
+        { "answer": "than" },
+        { "answer": "you" },
+        { "answer": "talking" },
+        { "answer": "shit" },
+        { "answer": "behind" },
+        { "answer": "my" },
+        { "answer": "back" }
+    ],
+    "words": ["talking", "you", "my", "face", "my", "you", "Like", "than", "I", "behind", "back", "be", "rather", "to", "shit", "bitchy"]
+},
+
+{
+    "id": 141,
+    "audio": "",
+    "sentence": "Nếu bạn chất chứa quá nhiều thù hận trong lòng, bạn sẽ phải kéo cả người khác xuống, ngay cả khi người đó đã cư xử thấp kém rồi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "You" },
+        { "answer": "have" },
+        { "answer": "so" },
+        { "answer": "much" },
+        { "answer": "hatred" },
+        { "answer": "in" },
+        { "answer": "your" },
+        { "answer": "heart" },
+        { "answer": "that" },
+        { "answer": "you" },
+        { "answer": "must" },
+        { "answer": "also" },
+        { "answer": "then" },
+        { "answer": "pull" },
+        { "answer": "down" },
+        { "answer": "another" },
+        { "answer": "girl," },
+        { "answer": "even" },
+        { "answer": "if" },
+        { "answer": "she" },
+        { "answer": "is" },
+        { "answer": "already" },
+        { "answer": "going" },
+        { "answer": "low" }
+    ],
+    "words": ["girl,", "heart", "have", "then", "pull", "much", "that", "your", "down", "another", "she", "hatred", "must", "You", "so", "already", "in", "is", "going", "also", "even", "you", "low", "if"]
+}
     ]
 }
