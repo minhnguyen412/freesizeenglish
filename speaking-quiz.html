@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Writing Quiz - Practice Mode</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black:        #1a1a1a;
+  --red:          #ea3324;
+  --red-dark:     #b71c1c;
+  --red-light:    #ffd5d5;
+  --red-pale:     #fff5f5;
+  --cream:        #fffef5;
+  --white:        #ffffff;
+  --yellow:       #ffd84d;
+  --yellow-pale:  #fffbe6;
+  --orange-pale:  #feefdb;
+  --orange:       #fa9f33;
+  --blue-pale:    #d8ebff;
+  --blue:         #1e86fb;
+  --sky-pale:     #eaf8ff;
+  --green:        #4caf50;
+  --green-pale:   #f0fff0;
+  --green-dark:   #2e7d32;
+  --pink:         #ffadc5;
+  --pink-pale:    #fff2f6;
+  --border:       2.5px solid var(--black);
+  --border-thick: 3px solid var(--black);
+  --shadow-sm:    3px 3px 0 var(--black);
+  --shadow-md:    4px 4px 0 var(--black);
+  --shadow-lg:    6px 6px 0 var(--black);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Fredoka', sans-serif; font-weight: 500;
+  background: var(--cream); color: var(--black);
+  min-height: 100vh; display: flex; flex-direction: column;
+  overflow-x: hidden;
+}
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 22px 22px; pointer-events: none; z-index: 0;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--red); border-bottom: var(--border-thick);
+  padding: 0 50px; height: 66px;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 100;
+}
+header h1 { font-weight: 700; font-size: 1.7rem; color: white; letter-spacing: 0.05em; text-shadow: 2px 2px 0 rgba(0,0,0,0.2); }
+.homepage-link { text-decoration: none; color: inherit; }
+.menu-toggle { display: none; font-size: 24px; background: none; border: none; color: white; cursor: pointer; }
+nav ul { list-style: none; display: flex; gap: 8px; align-items: center; }
+nav ul li a {
+  text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.95rem;
+  background: var(--white); border: var(--border); border-radius: 50px;
+  padding: 6px 18px; display: inline-block; box-shadow: var(--shadow-sm);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+
+/* ── MAIN LAYOUT ── */
+.container {
+  display: flex; gap: 26px; padding: 36px 56px 100px;
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  position: relative; z-index: 1; flex: 1;
+  justify-content: center;
+}
+.main-col { flex: 1; display: flex; flex-direction: column; gap: 22px; min-width: 0; max-width: 800px; }
+
+/* ── CARDS ── */
+.card { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 26px; }
+.card-title {
+  display: inline-block; font-weight: 700; font-size: 1rem;
+  background: var(--red); color: white; border: var(--border); border-radius: 50px;
+  padding: 5px 20px; box-shadow: var(--shadow-sm); margin-bottom: 18px; letter-spacing: 0.05em;
+}
+.card-title.yellow { background: var(--yellow); color: var(--black); }
+.card-title.blue   { background: var(--blue);   color: white; }
+.card-title.green  { background: var(--green);  color: white; }
+
+/* ── SETUP CARD ── */
+.setup-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  margin-bottom: 20px;
+}
+.form-group {
+  display: flex; flex-direction: column; gap: 8px;
+}
+.form-group label {
+  font-weight: 700; font-size: 0.95rem; color: var(--black);
+}
+.form-group select,
+.form-group input {
+  font-family: 'Fredoka', sans-serif; font-weight: 600;
+  padding: 10px 14px; border: var(--border); border-radius: 12px;
+  font-size: 0.95rem; background: var(--white);
+  transition: box-shadow 0.15s;
+}
+.form-group select:focus,
+.form-group input:focus {
+  outline: none; box-shadow: var(--shadow-md);
+}
+
+.setup-actions {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;
+}
+.setup-actions button {
+  font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem;
+  padding: 12px 28px; border: var(--border-thick); border-radius: 50px;
+  cursor: pointer; transition: transform 0.12s, box-shadow 0.12s;
+  box-shadow: var(--shadow-md);
+}
+.btn-start { background: var(--green); color: white; }
+.btn-reset { background: var(--yellow); color: var(--black); }
+.setup-actions button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
+
+/* ── QUIZ CONTAINER ── */
+.qcontainer { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 28px 26px; display: none; }
+.qcontainer.active { display: block; }
+
+.quiz-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.quiz-title { display: inline-block; font-weight: 700; font-size: 1.15rem; background: var(--yellow); border: var(--border-thick); border-radius: 50px; padding: 8px 24px; box-shadow: var(--shadow-sm); }
+
+.quiz-progress-wrap { background: #eee; border: var(--border); border-radius: 50px; height: 10px; margin-bottom: 6px; overflow: hidden; }
+.quiz-progress-fill { height: 100%; background: var(--red); border-radius: 50px; transition: width 0.35s ease; }
+.quiz-counter { font-family: 'Quicksand', sans-serif; font-size: 0.82rem; font-weight: 700; color: #888; margin-bottom: 14px; }
+
+/* ── SENTENCE ── */
+.sentence {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px;
+  font-family: 'Quicksand', sans-serif; font-size: 1.2rem; font-weight: 600; line-height: 2.4;
+  margin-bottom: 16px; background: var(--red-pale); border: var(--border); border-radius: 14px; padding: 16px 18px;
+}
+
+/* ── BLANK ── */
+.blank {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 52px; height: 34px; padding: 0 10px;
+  border: 2.5px dashed #bbb; border-radius: 10px;
+  background: transparent; color: #999;
+  font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 0.95rem;
+  vertical-align: middle; margin: 0 3px;
+  transition: min-width 0.12s ease, border-color 0.15s, background 0.15s;
+  white-space: nowrap; overflow: hidden;
+}
+.blank.filled {
+  background: var(--sky-pale); border: var(--border); border-style: solid;
+  color: var(--black); padding: 0 10px; cursor: pointer;
+}
+.blank.filled:hover { background: #c8ecff; }
+.blank.reveal-correct {
+  background: var(--green-pale); border-color: var(--green-dark) !important;
+  border-style: solid; color: var(--green-dark); cursor: default;
+}
+.blank.reveal-wrong {
+  background: var(--pink-pale); border-color: #e53935 !important;
+  border-style: solid; color: #c0392b; cursor: default;
+}
+
+/* ── OPTIONS ── */
+.options { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; justify-content: flex-start; }
+.word {
+  font-family: 'Quicksand', sans-serif; font-weight: 800; font-size: 0.95rem;
+  padding: 8px 16px; background: var(--white); color: var(--black);
+  border: var(--border-thick); border-radius: 12px;
+  box-shadow: 0 4px 0 var(--black); cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  user-select: none; white-space: nowrap; -webkit-tap-highlight-color: transparent;
+}
+.word:active:not(.used):not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 var(--black); }
+.word:hover:not(.used):not(:disabled)  { transform: translateY(-2px); box-shadow: 0 6px 0 var(--black); background: var(--yellow-pale); }
+.word.used    { visibility: hidden; pointer-events: none; }
+.word:disabled { opacity: 0.35; pointer-events: none; }
+.word.correct-reveal   { background: var(--green-pale); border-color: var(--green-dark); }
+.word.incorrect-reveal { background: var(--pink-pale);  border-color: #e53935; }
+
+/* ── RESULT BAR ── */
+.result-bar { display: none; border: var(--border-thick); border-radius: 16px; padding: 14px 18px; margin-bottom: 14px; font-weight: 700; font-size: 1rem; align-items: center; gap: 10px; }
+.result-bar.correct   { background: var(--green-pale); border-color: var(--green-dark); color: var(--green-dark); }
+.result-bar.incorrect { background: var(--pink-pale);  border-color: #e53935;           color: #c0392b; }
+
+.quiz-actions { display: none; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+.quiz-actions button { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem; padding: 10px 26px; border: var(--border-thick); border-radius: 50px; box-shadow: var(--shadow-sm); cursor: pointer; transition: transform 0.12s, box-shadow 0.12s; }
+.quiz-actions button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+.btn-next   { background: var(--green);    color: white; }
+.btn-retry  { background: var(--red);      color: white; }
+.btn-finish { background: var(--yellow);   color: var(--black); }
+.btn-exit   { background: var(--black);    color: white; }
+
+/* ── SCORE SUMMARY ── */
+.score-summary { display: none; text-align: center; padding: 20px 0 8px; }
+.score-circle { width: 110px; height: 110px; border-radius: 50%; border: var(--border-thick); margin: 0 auto 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); font-weight: 700; }
+.score-circle .score-num   { font-size: 2rem; line-height: 1; }
+.score-circle .score-label { font-size: 0.8rem; color: #666; }
+.score-summary h2 { font-size: 1.3rem; margin-bottom: 6px; }
+.score-summary p  { color: #666; font-size: 0.95rem; margin-bottom: 18px; font-family: 'Quicksand', sans-serif; }
+.score-summary-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+.score-summary-actions button { font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: 1rem; padding: 10px 26px; border: var(--border-thick); border-radius: 50px; box-shadow: var(--shadow-sm); cursor: pointer; transition: transform 0.12s, box-shadow 0.12s; }
+.score-summary-actions button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md); }
+
+/* ── FOOTER ── */
+footer { background: var(--black); color: rgba(255,255,255,0.65); padding: 28px 50px; text-align: center; position: relative; z-index: 1; }
+footer .brand { font-weight: 700; color: var(--red-light); font-size: 1.2rem; margin-bottom: 4px; }
+footer p { font-size: 0.9rem; font-weight: 500; }
+footer .social-icons { margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+footer .social-icons a { text-decoration: none; color: var(--black); font-weight: 700; font-size: 0.88rem; background: var(--red-light); border: var(--border); border-radius: 50px; padding: 5px 16px; box-shadow: var(--shadow-sm); transition: transform 0.12s; }
+footer .social-icons a:hover { transform: translate(-1px,-2px); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  header { padding: 0 16px; }
+  .menu-toggle { display: block; }
+  nav { display: none; position: absolute; top: 66px; left: 0; right: 0; background: var(--red); border-bottom: var(--border); padding: 12px 0; flex-direction: column; z-index: 99; }
+  nav.show { display: flex; }
+  nav ul { flex-direction: column; align-items: center; gap: 8px; padding: 6px 0; }
+  .container { padding: 14px 14px 80px; gap: 16px; }
+  .card { padding: 18px 16px; }
+  .setup-grid { grid-template-columns: 1fr; }
+  .sentence { font-size: 1.05rem; padding: 12px 14px; line-height: 2.2; }
+  .blank  { height: 30px; font-size: 0.85rem; min-width: 40px; }
+  .word   { font-size: 0.88rem; padding: 7px 13px; }
+  footer { padding: 24px 16px; }
+}
+@media (max-width: 480px) {
+  header h1 { font-size: 1.3rem; }
+  .sentence { font-size: 0.95rem; }
+  .word { font-size: 0.82rem; padding: 6px 11px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1><a href="index.html" class="homepage-link">FREESIZE ENGLISH</a></h1>
+  <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <nav>
+    <ul>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="shop.html">Shop</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="main-col">
+
+    <!-- SETUP CARD -->
+    <div class="card" id="setup-card">
+      <div class="card-title">⚙️ Quiz Setup</div>
+      <div class="setup-grid">
+        <div class="form-group">
+          <label for="sort-order">📋 Sort Order:</label>
+          <select id="sort-order">
+            <option value="show-all">Show All Questions</option>
+            <option value="small-to-large">Small to Large (1 → Last)</option>
+            <option value="large-to-small">Large to Small (Last → 1)</option>
+            <option value="random">Random Order</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="question-count">❓ Number of Questions:</label>
+          <input type="number" id="question-count" min="1" value="10" placeholder="Enter number">
+        </div>
+      </div>
+
+      <div class="setup-actions">
+        <button class="btn-start" id="start-button">▶ Start Quiz</button>
+        <button class="btn-reset" id="reset-button">↻ Reset</button>
+      </div>
+    </div>
+
+    <!-- QUIZ CONTAINER -->
+    <div class="qcontainer" id="quiz-container">
+      <div class="quiz-header">
+        <span class="quiz-title">🎯 Let's Practice!</span>
+        <button class="btn-exit" id="exit-button">Exit Quiz</button>
+      </div>
+      
+      <div class="quiz-counter" id="quiz-counter"></div>
+      <div class="quiz-progress-wrap" id="quiz-progress-wrap">
+        <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+      </div>
+      
+      <div class="sentence" id="sentence"></div>
+      <div class="options"  id="options"></div>
+      <div class="result-bar" id="result-bar"></div>
+      <div class="quiz-actions" id="quiz-actions"></div>
+      
+      <div class="score-summary" id="score-summary">
+        <div class="score-circle" id="score-circle">
+          <span class="score-num" id="score-num">0/0</span>
+          <span class="score-label">correct</span>
+        </div>
+        <h2 id="score-title">Quiz Complete!</h2>
+        <p  id="score-msg"></p>
+        <div class="score-summary-actions">
+          <button class="btn-retry" id="restart-btn">▶ Try Again</button>
+          <button class="btn-exit" id="back-setup-btn">⟲ Back to Setup</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p class="brand">FREESIZE ENGLISH</p>
+  <p>Learn English through images and videos</p>
+  <div class="social-icons">
+    <a href="#">Facebook</a><a href="#">YouTube</a>
+    <a href="#">TikTok</a><a href="#">Instagram</a>
+  </div>
+</footer>
+
+<script>
+// ════════════════════════════════════════════════════════════════
+// SOUND EFFECTS
+// ════════════════════════════════════════════════════════════════
+const SFX = {
+  click:     new Audio('assets/click.mp3'),
+  correct:   new Audio('assets/correct.mp3'),
+  incorrect: new Audio('assets/incorrect.mp3'),
+  victory:   new Audio('assets/victory.mp3'),
+};
+
+function play(k) {
+  try {
+    SFX[k].currentTime = 0;
+    SFX[k].play().catch(() => {});
+  } catch(e) {}
+}
+
+// ════════════════════════════════════════════════════════════════
+// UTILITY FUNCTIONS
+// ════════════════════════════════════════════════════════════════
+function isImg(s) {
+  return /\.(jpe?g|png|gif|webp|bmp|svg)$/i.test(String(s || ''));
+}
+
+function wordHTML(w) {
+  return isImg(w)
+    ? `<img src="${w}" alt="" style="height:40px;border-radius:6px;">`
+    : String(w);
+}
+
+function qs(sel) {
+  return document.querySelector(sel);
+}
+
+function qsa(sel) {
+  return document.querySelectorAll(sel);
+}
+
+// ════════════════════════════════════════════════════════════════
+// QUIZ STATE
+// ════════════════════════════════════════════════════════════════
+let allQuestions = [];      // Tất cả câu hỏi từ JSON
+let questions = [];         // Câu hỏi được lọc + sắp xếp
+let curIdx = 0;
+let scoreCorrect = 0;
+let slots = [];
+let revealed = false;
+
+const setupCard = qs('#setup-card');
+const quizContainer = qs('#quiz-container');
+const sortOrderSelect = qs('#sort-order');
+const questionCountInput = qs('#question-count');
+const startBtn = qs('#start-button');
+const resetBtn = qs('#reset-button');
+const exitBtn = qs('#exit-button');
+const sentenceEl = qs('#sentence');
+const optionsEl = qs('#options');
+const resultBar = qs('#result-bar');
+const actionsEl = qs('#quiz-actions');
+const progWrap = qs('#quiz-progress-wrap');
+const progFill = qs('#quiz-progress-fill');
+const counterEl = qs('#quiz-counter');
+const summaryEl = qs('#score-summary');
+const scoreNumEl = qs('#score-num');
+const scoreTitleEl = qs('#score-title');
+const scoreMsgEl = qs('#score-msg');
+const scoreCircle = qs('#score-circle');
+const restartBtn = qs('#restart-btn');
+const backSetupBtn = qs('#back-setup-btn');
+
+// ════════════════════════════════════════════════════════════════
+// LOAD DATA
+// ════════════════════════════════════════════════════════════════
+async function loadAllQuestions() {
+  try {
+    const response = await fetch('data/S-quiz-1.json');
+    allQuestions = await response.json();
+    if (!Array.isArray(allQuestions)) {
+      allQuestions = allQuestions.questions || [];
+    }
+    console.log(`📚 Loaded ${allQuestions.length} questions`);
+    return allQuestions;
+  } catch(err) {
+    console.error('Error loading questions:', err);
+    // Fallback data
+    allQuestions = [
+      { id:1, sentence:'She ___ to school every day.',     blanks:[{answer:'goes'}],  words:['goes','go','went','gone'] },
+      { id:2, sentence:'The report ___ three main ideas.', blanks:[{answer:'covers'}], words:['covers','cover','covered','has'] },
+      { id:3, sentence:'___ the graph shows, sales ___.',  blanks:[{answer:'As'},{answer:'rose'}], words:['As','Since','rose','fall','While','dropped'] },
+    ];
+    return allQuestions;
+  }
+}
+
+// ════════════════════════════════════════════════════════════════
+// FILTER & SORT QUESTIONS
+// ════════════════════════════════════════════════════════════════
+function filterAndSortQuestions(sortOrder, count) {
+  let filtered = [...allQuestions];
+  const maxCount = Math.min(count, filtered.length);
+
+  // Áp dụng sắp xếp
+  if (sortOrder === 'small-to-large') {
+    filtered.sort((a, b) => (a.id || 0) - (b.id || 0));
+    return filtered.slice(0, maxCount);
+  }
+
+  if (sortOrder === 'large-to-small') {
+    filtered.sort((a, b) => (b.id || 0) - (a.id || 0));
+    return filtered.slice(0, maxCount);
+  }
+
+  if (sortOrder === 'random') {
+    filtered.sort(() => Math.random() - 0.5);
+    return filtered.slice(0, maxCount);
+  }
+
+  // show-all: trả về tất cả
+  return filtered;
+}
+
+// ════════════════════════════════════════════════════════════════
+// START QUIZ
+// ════════════════════════════════════════════════════════════════
+startBtn.addEventListener('click', async () => {
+  const sortOrder = sortOrderSelect.value;
+  const countInput = parseInt(questionCountInput.value) || 10;
+
+  if (allQuestions.length === 0) {
+    await loadAllQuestions();
+  }
+
+  questions = filterAndSortQuestions(sortOrder, countInput);
+
+  if (questions.length === 0) {
+    alert('❌ No questions available!');
+    return;
+  }
+
+  curIdx = 0;
+  scoreCorrect = 0;
+  setupCard.style.display = 'none';
+  quizContainer.classList.add('active');
+  summaryEl.style.display = 'none';
+  showQ();
+});
+
+// ════════════════════════════════════════════════════════════════
+// SHOW QUESTION
+// ════════════════════════════════════════════════════════════════
+function showQ() {
+  if (curIdx >= questions.length) {
+    showSummary();
+    return;
+  }
+
+  const q = questions[curIdx];
+  revealed = false;
+  slots = (q.blanks || []).map(() => null);
+
+  // Update progress
+  progFill.style.width = (curIdx / questions.length * 100) + '%';
+  counterEl.textContent = `Question ${curIdx + 1} / ${questions.length}`;
+
+  // Render sentence with blanks
+  let sentRaw = Array.isArray(q.sentence)
+    ? q.sentence.map(t =>
+        isImg(t)
+          ? `<img src="${t}" alt="" style="height:44px;border-radius:8px;vertical-align:middle;">`
+          : String(t)
+      ).join(' ')
+    : String(q.sentence || '');
+
+  let bi = 0;
+  sentenceEl.innerHTML = sentRaw.replace(/___/g, () => `<span class="blank" data-bi="${bi++}"></span>`);
+  sentenceEl.querySelectorAll('.blank').forEach(el => {
+    el.addEventListener('click', () => returnWord(el));
+  });
+
+  // Render word options
+  const words = [...(q.words || [])].sort(() => Math.random() - 0.5);
+  optionsEl.innerHTML = '';
+  words.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'word';
+    btn.dataset.word = String(w);
+    btn.innerHTML = wordHTML(w);
+    btn.addEventListener('click', () => pickWord(btn));
+    optionsEl.appendChild(btn);
+  });
+
+  resultBar.className = 'result-bar';
+  resultBar.style.display = 'none';
+  actionsEl.innerHTML = '';
+  actionsEl.style.display = 'none';
+}
+
+// ════════════════════════════════════════════════════════════════
+// PICK WORD
+// ════════════════════════════════════════════════════════════════
+function pickWord(btn) {
+  if (revealed || btn.classList.contains('used')) return;
+
+  const emptyBi = slots.findIndex(s => s === null);
+  if (emptyBi === -1) return;
+
+  play('click');
+
+  // Measure word width
+  const wordW = Math.ceil(btn.getBoundingClientRect().width);
+
+  btn.classList.add('used');
+  const blankEl = sentenceEl.querySelector(`[data-bi="${emptyBi}"]`);
+  if (!blankEl) return;
+
+  blankEl.innerHTML = wordHTML(btn.dataset.word);
+  blankEl.classList.add('filled');
+  blankEl.dataset.word = btn.dataset.word;
+  blankEl.style.minWidth = wordW + 'px';
+
+  slots[emptyBi] = { optBtn: btn, word: btn.dataset.word };
+
+  if (slots.every(s => s !== null)) {
+    setTimeout(() => checkAnswers(questions[curIdx]), 120);
+  }
+}
+
+// ════════════════════════════════════════════════════════════════
+// RETURN WORD
+// ════════════════════════════════════════════════════════════════
+function returnWord(blankEl) {
+  if (revealed) return;
+
+  const bi = parseInt(blankEl.dataset.bi);
+  const slot = slots[bi];
+  if (!slot) return;
+
+  play('click');
+
+  slot.optBtn.classList.remove('used');
+  blankEl.innerHTML = '';
+  blankEl.className = 'blank';
+  blankEl.setAttribute('data-bi', String(bi));
+  blankEl.removeAttribute('data-word');
+  blankEl.style.minWidth = '';
+  slots[bi] = null;
+  blankEl.addEventListener('click', () => returnWord(blankEl));
+}
+
+// ════════════════════════════════════════════════════════════════
+// CHECK ANSWERS
+// ════════════════════════════════════════════════════════════════
+function checkAnswers(q) {
+  if (revealed) return;
+
+  revealed = true;
+  const blanks = q.blanks || [];
+  let allRight = true;
+
+  blanks.forEach((b, i) => {
+    const given = slots[i]?.word;
+    const ok = String(given) === String(b.answer);
+
+    if (!ok) allRight = false;
+
+    const blankEl = sentenceEl.querySelector(`[data-bi="${i}"]`);
+    if (blankEl) {
+      blankEl.classList.add(ok ? 'reveal-correct' : 'reveal-wrong');
+    }
+  });
+
+  optionsEl.querySelectorAll('.word').forEach(btn => {
+    btn.disabled = true;
+    const isAns = blanks.some(b => String(b.answer) === btn.dataset.word);
+    const wasUsed = slots.some(s => s && s.optBtn === btn);
+
+    if (wasUsed && isAns) btn.classList.add('correct-reveal');
+    if (wasUsed && !isAns) btn.classList.add('incorrect-reveal');
+    if (!wasUsed && isAns) btn.classList.add('correct-reveal');
+  });
+
+  if (allRight) {
+    scoreCorrect++;
+    play('correct');
+    showResultBar(true, '✅ Correct!');
+    showActionBtn(curIdx === questions.length - 1 ? 'finish' : 'next');
+  } else {
+    play('incorrect');
+    showResultBar(false, `❌ Correct: ${blanks.map(b => b.answer).join(' / ')}`);
+    showActionBtn('retry');
+  }
+}
+
+// ════════════════════════════════════════════════════════════════
+// SHOW RESULT BAR
+// ════════════════════════════════════════════════════════════════
+function showResultBar(ok, msg) {
+  resultBar.className = `result-bar ${ok ? 'correct' : 'incorrect'}`;
+  resultBar.textContent = msg;
+  resultBar.style.display = 'flex';
+}
+
+// ════════════════════════════════════════════════════════════════
+// SHOW ACTION BUTTONS
+// ════════════════════════════════════════════════════════════════
+function showActionBtn(type) {
+  actionsEl.innerHTML = '';
+  actionsEl.style.display = 'flex';
+
+  const btn = document.createElement('button');
+
+  if (type === 'next') {
+    btn.className = 'btn-next';
+    btn.textContent = 'Continue →';
+    btn.addEventListener('click', () => {
+      curIdx++;
+      showQ();
+    });
+  }
+
+  if (type === 'finish') {
+    btn.className = 'btn-finish';
+    btn.textContent = 'See Results 🏆';
+    btn.addEventListener('click', showSummary);
+  }
+
+  if (type === 'retry') {
+    btn.className = 'btn-retry';
+    btn.textContent = 'Try Again 🔄';
+    btn.addEventListener('click', () => showQ());
+  }
+
+  actionsEl.appendChild(btn);
+}
+
+// ════════════════════════════════════════════════════════════════
+// SHOW SUMMARY
+// ════════════════════════════════════════════════════════════════
+function showSummary() {
+  sentenceEl.style.display = 'none';
+  optionsEl.style.display = 'none';
+  resultBar.style.display = 'none';
+  actionsEl.style.display = 'none';
+  progWrap.style.display = 'none';
+  counterEl.style.display = 'none';
+
+  play('victory');
+  progFill.style.width = '100%';
+
+  const total = questions.length;
+  const pct = total ? Math.round((scoreCorrect / total) * 100) : 0;
+
+  scoreNumEl.textContent = `${scoreCorrect}/${total}`;
+
+  if (pct >= 80) {
+    scoreCircle.style.cssText = `background:var(--green-pale);border-color:var(--green);${scoreCircle.getAttribute('style')}`;
+    scoreTitleEl.textContent = '🎉 Excellent!';
+    scoreMsgEl.textContent = `You got ${scoreCorrect}/${total} correct (${pct}%). Amazing work!`;
+  } else if (pct >= 50) {
+    scoreCircle.style.cssText = `background:var(--yellow-pale);border-color:var(--yellow);${scoreCircle.getAttribute('style')}`;
+    scoreTitleEl.textContent = '👍 Good effort!';
+    scoreMsgEl.textContent = `You got ${scoreCorrect}/${total} correct (${pct}%). Keep going!`;
+  } else {
+    scoreCircle.style.cssText = `background:var(--pink-pale);border-color:var(--pink);${scoreCircle.getAttribute('style')}`;
+    scoreTitleEl.textContent = '💪 Keep practising!';
+    scoreMsgEl.textContent = `You got ${scoreCorrect}/${total} correct (${pct}%). Try again!`;
+  }
+
+  summaryEl.style.display = 'block';
+}
+
+// ════════════════════════════════════════════════════════════════
+// EVENT LISTENERS
+// ════════════════════════════════════════════════════════════════
+resetBtn.addEventListener('click', () => {
+  sortOrderSelect.value = 'show-all';
+  questionCountInput.value = 10;
+});
+
+exitBtn.addEventListener('click', () => {
+  if (confirm('Are you sure? Your progress will be lost.')) {
+    quizContainer.classList.remove('active');
+    setupCard.style.display = 'block';
+    summaryEl.style.display = 'none';
+    sentenceEl.style.display = 'none';
+    optionsEl.style.display = 'none';
+    resultBar.style.display = 'none';
+    actionsEl.style.display = 'none';
+  }
+});
+
+restartBtn.addEventListener('click', () => {
+  summaryEl.style.display = 'none';
+  curIdx = 0;
+  scoreCorrect = 0;
+  showQ();
+});
+
+backSetupBtn.addEventListener('click', () => {
+  quizContainer.classList.remove('active');
+  setupCard.style.display = 'block';
+  summaryEl.style.display = 'none';
+});
+
+// Mobile menu toggle
+qs('.menu-toggle')?.addEventListener('click', function () {
+  const nav = qs('nav');
+  nav.classList.toggle('show');
+  this.innerHTML = nav.classList.contains('show') ? '&#10005;' : '&#9776;';
+});
+
+// ════════════════════════════════════════════════════════════════
+// LOAD QUESTIONS ON PAGE LOAD
+// ════════════════════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  loadAllQuestions();
+});
+</script>
+
+</body>
+</html>
