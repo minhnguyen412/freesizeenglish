@@ -1053,51 +1053,55 @@ async function loadSidebarList() {
 // ANSWER KEY (COLLAPSIBLE)
 // ════════════════════════════════════════════════════════════════
 async function loadAnswerKey() {
-  // Load allQuestions nếu chưa có
-  if (allQuestions.length === 0) {
-    await loadAllQuestions();
-  }
-
   const answerKeyToggle = qs('#answer-key-toggle');
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
-  // Xóa event listener cũ nếu có
-  answerKeyToggle.removeEventListener('click', toggleAnswerKey);
-  answerKeyToggle.addEventListener('click', toggleAnswerKey);
-
-  function toggleAnswerKey() {
+  // Toggle collapse/expand
+  answerKeyToggle.addEventListener('click', () => {
     const isOpen = answerKeyContent.style.display !== 'none';
     answerKeyContent.style.display = isOpen ? 'none' : 'block';
     answerKeyToggle.classList.toggle('open');
-  }
-
-  // Render answer key từ tất cả questions
-  answerKeyList.innerHTML = '';
-  allQuestions.forEach((q, idx) => {
-    const blanks = q.blanks || [];
-    const answers = blanks.map(b => b.answer).join(' / ');
-    const sentence = Array.isArray(q.sentence) 
-      ? q.sentence.join(' ') 
-      : q.sentence;
-
-    const item = document.createElement('div');
-    item.className = 'answer-key-item';
-    item.innerHTML = `
-      <div class="answer-key-item-q">Q${idx + 1}: ${sentence}</div>
-      <div class="answer-key-item-a">✓ Answer: <strong>${answers}</strong></div>
-    `;
-    answerKeyList.appendChild(item);
   });
+
+  // Load JSON riêng cho answer key
+  try {
+    const response = await fetch('data/S-quiz-1.json');
+    let allData = await response.json();
+    if (!Array.isArray(allData)) {
+      allData = allData.questions || [];
+    }
+
+    answerKeyList.innerHTML = '';
+    allData.forEach((q, idx) => {
+      const blanks = q.blanks || [];
+      const answers = blanks.map(b => b.answer).join(' / ');
+      const sentence = Array.isArray(q.sentence) 
+        ? q.sentence.join(' ') 
+        : q.sentence;
+
+      const item = document.createElement('div');
+      item.className = 'answer-key-item';
+      item.innerHTML = `
+        <div class="answer-key-item-q">Q${idx + 1}: ${sentence}</div>
+        <div class="answer-key-item-a">✓ Answer: <strong>${answers}</strong></div>
+      `;
+      answerKeyList.appendChild(item);
+    });
+
+    console.log(`✅ Answer key loaded: ${allData.length} questions`);
+  } catch(err) {
+    console.error('Error loading answer key:', err);
+    answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load</div>`;
+  }
 }
 // ════════════════════════════════════════════════════════════════
 // CALL ON PAGE LOAD
 // ════════════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
-  loadAllQuestions().then(() => {
-    loadAnswerKey();
-    loadSidebarList();
-  });
+  loadAllQuestions();
+  loadSidebarList();
+  loadAnswerKey();  // Load answer key ngay
 });
 </script>
 
