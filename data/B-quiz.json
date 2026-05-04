@@ -1,0 +1,295 @@
+{
+    "questions": [
+{
+    "id": 1,
+    "audio": "",
+    "sentence": "Vào ngày cuối cùng của năm lớp 10, tôi bị một cây gậy bóng chày đánh vào mặt.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "On" },
+        { "answer": "the" },
+        { "answer": "final" },
+        { "answer": "day" },
+        { "answer": "of" },
+        { "answer": "my" },
+        { "answer": "sophomore" },
+        { "answer": "year" },
+        { "answer": "of" },
+        { "answer": "high" },
+        { "answer": "school," },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "hit" },
+        { "answer": "in" },
+        { "answer": "the" },
+        { "answer": "face" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "baseball" },
+        { "answer": "bat" }
+    ],
+    "words": ["in", "bat", "I", "hit", "of", "high", "the", "year", "face", "my", "of", "baseball", "the", "sophomore", "was", "day", "On", "final", "school,", "with", "a"]
+},
+
+{
+    "id": 2,
+    "audio": "",
+    "sentence": "Khi bạn cùng lớp vung gậy hết sức, cây gậy tuột khỏi tay cậu ta và bay về phía tôi trước khi đập thẳng vào giữa hai mắt.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "As" },
+        { "answer": "my" },
+        { "answer": "classmate" },
+        { "answer": "took" },
+        { "answer": "a" },
+        { "answer": "full" },
+        { "answer": "swing," },
+        { "answer": "the" },
+        { "answer": "bat" },
+        { "answer": "slipped" },
+        { "answer": "out" },
+        { "answer": "of" },
+        { "answer": "his" },
+        { "answer": "hands" },
+        { "answer": "and" },
+        { "answer": "came" },
+        { "answer": "flying" },
+        { "answer": "toward" },
+        { "answer": "me" },
+        { "answer": "before" },
+        { "answer": "striking" },
+        { "answer": "me" },
+        { "answer": "directly" },
+        { "answer": "between" },
+        { "answer": "the" },
+        { "answer": "eyes" }
+    ],
+    "words": ["eyes", "my", "me", "his", "classmate", "a", "of", "took", "out", "swing,", "flying", "striking", "toward", "the", "and", "slipped", "came", "As", "full", "hands", "the", "me", "directly", "between", "bat", "before"]
+},
+
+{
+    "id": 3,
+    "audio": "",
+    "sentence": "Tôi không nhớ gì về khoảnh khắc va chạm đó.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "have" },
+        { "answer": "no" },
+        { "answer": "memory" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "moment" },
+        { "answer": "of" },
+        { "answer": "impact" }
+    ],
+    "words": ["no", "impact", "moment", "of", "memory", "of", "the", "I", "have"]
+},
+
+{
+    "id": 4,
+    "audio": "",
+    "sentence": "Cây gậy đập vào mặt tôi với lực mạnh đến nỗi làm vỡ mũi tôi thành hình chữ U méo mó.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "bat" },
+        { "answer": "smashed" },
+        { "answer": "into" },
+        { "answer": "my" },
+        { "answer": "face" },
+        { "answer": "with" },
+        { "answer": "such" },
+        { "answer": "force" },
+        { "answer": "that" },
+        { "answer": "it" },
+        { "answer": "crushed" },
+        { "answer": "my" },
+        { "answer": "nose" },
+        { "answer": "into" },
+        { "answer": "a" },
+        { "answer": "distorted" },
+        { "answer": "U-shape" }
+    ],
+    "words": ["distorted", "U-shape", "my", "force", "my", "smashed", "that", "with", "it", "such", "into", "a", "crushed", "The", "nose", "face", "into", "bat"]
+},
+
+{
+    "id": 5,
+    "audio": "",
+    "sentence": "Cú va chạm khiến mô mềm trong não tôi đập mạnh vào bên trong hộp sọ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "collision" },
+        { "answer": "sent" },
+        { "answer": "the" },
+        { "answer": "soft" },
+        { "answer": "tissue" },
+        { "answer": "of" },
+        { "answer": "my" },
+        { "answer": "brain" },
+        { "answer": "slamming" },
+        { "answer": "into" },
+        { "answer": "the" },
+        { "answer": "inside" },
+        { "answer": "of" },
+        { "answer": "my" },
+        { "answer": "skull" }
+    ],
+    "words": ["of", "the", "my", "brain", "soft", "the", "The", "inside", "slamming", "my", "tissue", "of", "into", "sent", "collision", "skull"]
+},
+
+{
+    "id": 6,
+    "audio": "",
+    "sentence": "Ngay lập tức, một làn sóng sưng tấy lan khắp đầu tôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Immediately," },
+        { "answer": "a" },
+        { "answer": "wave" },
+        { "answer": "of" },
+        { "answer": "swelling" },
+        { "answer": "surged" },
+        { "answer": "throughout" },
+        { "answer": "my" },
+        { "answer": "head" }
+    ],
+    "words": ["my", "surged", "Immediately,", "a", "throughout", "swelling", "head", "of", "wave"]
+},
+
+{
+    "id": 7,
+    "audio": "",
+    "sentence": "Chỉ trong tích tắc, tôi bị gãy mũi, nứt sọ nhiều chỗ và vỡ hai hốc mắt.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "In" },
+        { "answer": "a" },
+        { "answer": "fraction" },
+        { "answer": "of" },
+        { "answer": "a" },
+        { "answer": "second," },
+        { "answer": "I" },
+        { "answer": "had" },
+        { "answer": "a" },
+        { "answer": "broken" },
+        { "answer": "nose," },
+        { "answer": "multiple" },
+        { "answer": "skull" },
+        { "answer": "fractures," },
+        { "answer": "and" },
+        { "answer": "two" },
+        { "answer": "shattered" },
+        { "answer": "eye" },
+        { "answer": "sockets" }
+    ],
+    "words": ["fraction", "two", "sockets", "multiple", "In", "a", "I", "a", "had", "second,", "skull", "broken", "a", "shattered", "fractures,", "and", "of", "eye", "nose,"]
+},
+
+{
+    "id": 8,
+    "audio": "",
+    "sentence": "Khi mở mắt ra, tôi thấy mọi người đang nhìn chằm chằm vào tôi và chạy đến giúp đỡ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "When" },
+        { "answer": "I" },
+        { "answer": "opened" },
+        { "answer": "my" },
+        { "answer": "eyes," },
+        { "answer": "I" },
+        { "answer": "saw" },
+        { "answer": "people" },
+        { "answer": "staring" },
+        { "answer": "at" },
+        { "answer": "me" },
+        { "answer": "and" },
+        { "answer": "running" },
+        { "answer": "over" },
+        { "answer": "to" },
+        { "answer": "help" }
+    ],
+    "words": ["help", "When", "at", "over", "my", "and", "opened", "I", "eyes,", "running", "staring", "I", "to", "people", "me", "saw"]
+},
+
+{
+    "id": 9,
+    "audio": "",
+    "sentence": "Một bạn cùng lớp cởi áo đang mặc trên người ra và đưa cho tôi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "One" },
+        { "answer": "of" },
+        { "answer": "my" },
+        { "answer": "classmate" },
+        { "answer": "took" },
+        { "answer": "the" },
+        { "answer": "shirt" },
+        { "answer": "of" },
+        { "answer": "his" },
+        { "answer": "back" },
+        { "answer": "and" },
+        { "answer": "handed" },
+        { "answer": "it" },
+        { "answer": "to" },
+        { "answer": "me" }
+    ],
+    "words": ["shirt", "my", "to", "took", "back", "his", "handed", "of", "classmate", "it", "and", "me", "the", "of", "One"]
+},
+
+{
+    "id": 10,
+    "audio": "",
+    "sentence": "Tôi không biết mình bị thương nghiêm trọng đến mức nào.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "unaware" },
+        { "answer": "of" },
+        { "answer": "how" },
+        { "answer": "seriously" },
+        { "answer": "I" },
+        { "answer": "had" },
+        { "answer": "been" },
+        { "answer": "injured" }
+    ],
+    "words": ["of", "injured", "had", "I", "I", "been", "was", "how", "unaware", "seriously"]
+},
+
+{
+    "id": 11,
+    "audio": "",
+    "sentence": "Thầy giáo vòng tay qua vai tôi và chúng tôi bắt đầu đi bộ một quãng đường dài đến phòng y tế.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "My" },
+        { "answer": "teacher" },
+        { "answer": "looped" },
+        { "answer": "his" },
+        { "answer": "arm" },
+        { "answer": "around" },
+        { "answer": "my" },
+        { "answer": "shoulder" },
+        { "answer": "and" },
+        { "answer": "we" },
+        { "answer": "began" },
+        { "answer": "the" },
+        { "answer": "long" },
+        { "answer": "walk" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "nurse's" },
+        { "answer": "office" }
+    ],
+    "words": ["my", "his", "shoulder", "began", "teacher", "looped", "the", "walk", "long", "around", "arm", "and", "nurse's", "My", "the", "to", "office", "we"]
+},
+
+{
+    "id": 12,
+    "audio": "",
+    "sentence": "Chúng tôi đi chậm rãi và cẩn thận.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "We" },
+        { "answer": "took" },
+        { "answer": "our" },
+        { "answer": "time" },
+        { "answer": "and" },
+        { "answer": "walked" },
+        { "answer": "slowly" }
+    ],
+    "words": ["and", "We", "our", "slowly", "walked", "took", "time"]
+},
+]
+}
