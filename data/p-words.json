@@ -513,51 +513,51 @@
     },
     {
         "id": "65",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672820/%E6%88%91_zxd8tf.png",
-        "character": "我",
-        "meaning": "I; me",
-        "pinyin": "wǒ",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673289/%E6%88%91_mcexui.mp3"
+        "imageSrc": "",
+        "character": "the sixth most common",
+        "meaning": "Ranking at number six in frequency compared to others",
+        "pinyin": "the 6th most frequent / the sixth in order of occurrence",
+        "audioSrc": ""
     },
     {
         "id": "66",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672815/%E5%9B%9E_hwrdue.png",
-        "character": "回",
-        "meaning": "to go back to",
-        "pinyin": "huí",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673257/%E5%9B%9E_osv0va.mp3"
+        "imageSrc": "",
+        "character": "projected to",
+        "meaning": "Estimated or predicted to happen in the future",
+        "pinyin": "expected to / forecasted to",
+        "audioSrc": ""
     },
     {
         "id": "67",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672817/%E5%AD%A6%E6%A0%A1_efvsfl.png",
-        "character": "学校",
-        "meaning": "School",
-        "pinyin": "xuéxiào",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673273/%E5%AD%A6%E6%A0%A1_dynqtx.mp3"
+        "imageSrc": "",
+        "character": "if no changes are made",
+        "meaning": "If the current situation continues without any changes",
+        "pinyin": "unless anything changes / if things stay the same",
+        "audioSrc": ""
     },
     {
         "id": "68",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672811/%E5%86%8D%E8%A7%81_yf8qp5.png",
-        "character": "再见",
-        "meaning": "Goodbye",
-        "pinyin": "zàijiàn",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673236/%E5%86%8D%E8%A7%81_vmcsdu.mp3"
+        "imageSrc": "",
+        "character": "The leading cause of",
+        "meaning": "The main or most important reason for something",
+        "pinyin": "the primary cause of / the biggest cause of",
+        "audioSrc": ""
     },
     {
         "id": "69",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672818/%E5%AF%B9%E4%B8%8D%E8%B5%B7-%E6%B2%A1%E5%85%B3%E7%B3%BB_xwqhtn.png",
-        "character": "对不起",
-        "meaning": "I'm sorry; Excuse me",
-        "pinyin": "duì bu qǐ",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673279/%E5%AF%B9%E4%B8%8D%E8%B5%B7_yemi5c.mp3"
+        "imageSrc": "",
+        "character": "accounted for",
+        "meaning": "To form or make up a part of something",
+        "pinyin": "made up / represented",
+        "audioSrc": ""
     },
     {
         "id": "70",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672818/%E5%AF%B9%E4%B8%8D%E8%B5%B7-%E6%B2%A1%E5%85%B3%E7%B3%BB_xwqhtn.png",
-        "character": "没关系",
-        "meaning": "Male",
-        "pinyin": "méi guānxi",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673316/%E6%B2%A1%E5%85%B3%E7%B3%BB_xnvmzt.mp3"
+        "imageSrc": "",
+        "character": "That’s expected to",
+        "meaning": "That is likely or predicted to happen",
+        "pinyin": "That will probably / That is likely to",
+        "audioSrc": ""
     },
     {
         "id": "71",
