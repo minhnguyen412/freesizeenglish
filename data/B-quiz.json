@@ -572,7 +572,248 @@
         { "answer": "ventilator" }
     ],
     "words": ["was", "a", "medically", "seizure,", "another", "placed", "and", "I", "coma", "on", "ventilator", "After", "a", "into", "put", "induced", "yet"]
-}
-        
+},
+{
+    "id": 22,
+    "audio": "",
+    "sentence": "Khi ngày dần chuyển sang đêm, một loạt máy móc đã giữ cho tôi sống.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "As" },
+        { "answer": "day" },
+        { "answer": "faded" },
+        { "answer": "into" },
+        { "answer": "night," },
+        { "answer": "a" },
+        { "answer": "series" },
+        { "answer": "of" },
+        { "answer": "machines" },
+        { "answer": "kept" },
+        { "answer": "me" },
+        { "answer": "alive" }
+    ],
+    "words": ["day", "into", "of", "night,", "faded", "machines", "alive", "a", "As", "me", "series", "kept"]
+},
+
+{
+    "id": 23,
+    "audio": "",
+    "sentence": "Cha mẹ tôi ngủ không yên trên chiếc nệm bệnh viện - lúc thì họ gục xuống vì mệt mỏi, lúc thì lại tỉnh táo vì lo lắng.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "My" },
+        { "answer": "parents" },
+        { "answer": "slept" },
+        { "answer": "restlessly" },
+        { "answer": "on" },
+        { "answer": "a" },
+        { "answer": "hospital" },
+        { "answer": "mattress" },
+        { "answer": "-" },
+        { "answer": "one" },
+        { "answer": "moment" },
+        { "answer": "they" },
+        { "answer": "would" },
+        { "answer": "collapse" },
+        { "answer": "from" },
+        { "answer": "fatigue," },
+        { "answer": "the" },
+        { "answer": "next" },
+        { "answer": "they" },
+        { "answer": "would" },
+        { "answer": "be" },
+        { "answer": "wide" },
+        { "answer": "awake" },
+        { "answer": "with" },
+        { "answer": "worry" }
+    ],
+    "words": ["wide", "next", "would", "one", "would", "be", "a", "they", "restlessly", "My", "they", "awake", "moment", "on", "mattress", "worry", "-", "fatigue,", "slept", "hospital", "from", "collapse", "parents", "with", "the"]
+},
+
+{
+    "id": 24,
+    "audio": "",
+    "sentence": "May mắn thay, đến sáng hôm sau, nhịp thở của tôi đã hồi phục đến mức các bác sĩ cảm thấy thoải mái để cho tôi tỉnh lại sau cơn hôn mê.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Mercifully," },
+        { "answer": "by" },
+        { "answer": "the" },
+        { "answer": "next" },
+        { "answer": "morning" },
+        { "answer": "my" },
+        { "answer": "breathing" },
+        { "answer": "had" },
+        { "answer": "rebounded" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "point" },
+        { "answer": "where" },
+        { "answer": "the" },
+        { "answer": "doctors" },
+        { "answer": "felt" },
+        { "answer": "comfortable" },
+        { "answer": "releasing" },
+        { "answer": "me" },
+        { "answer": "from" },
+        { "answer": "the" },
+        { "answer": "coma" }
+    ],
+    "words": ["releasing", "the", "by", "rebounded", "me", "coma", "morning", "where", "point", "doctors", "comfortable", "the", "to", "had", "from", "the", "breathing", "the", "felt", "next", "my", "Mercifully,"]
+},
+
+{
+    "id": 25,
+    "audio": "",
+    "sentence": "Để kiểm tra, một y tá yêu cầu tôi xì mũi và ngửi hộp nước ép táo.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "As" },
+        { "answer": "a" },
+        { "answer": "test," },
+        { "answer": "a" },
+        { "answer": "nurse" },
+        { "answer": "asked" },
+        { "answer": "me" },
+        { "answer": "to" },
+        { "answer": "blow" },
+        { "answer": "my" },
+        { "answer": "nose" },
+        { "answer": "and" },
+        { "answer": "sniff" },
+        { "answer": "an" },
+        { "answer": "apple" },
+        { "answer": "juice" },
+        { "answer": "box" }
+    ],
+    "words": ["a", "juice", "an", "sniff", "and", "box", "blow", "As", "me", "my", "asked", "nurse", "to", "nose", "apple", "a", "test,"]
+},
+
+{
+    "id": 26,
+    "audio": "",
+    "sentence": "Nhãn cầu của tôi lồi ra khỏi hốc mắt, được giữ một cách bấp bênh bởi mí mắt và dây thần kinh thị giác nối mắt với não.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "My" },
+        { "answer": "eyeball" },
+        { "answer": "bulged" },
+        { "answer": "out" },
+        { "answer": "of" },
+        { "answer": "the" },
+        { "answer": "socket," },
+        { "answer": "held" },
+        { "answer": "precariously" },
+        { "answer": "in" },
+        { "answer": "place" },
+        { "answer": "by" },
+        { "answer": "my" },
+        { "answer": "eyelid" },
+        { "answer": "and" },
+        { "answer": "the" },
+        { "answer": "optic" },
+        { "answer": "nerve" },
+        { "answer": "attaching" },
+        { "answer": "my" },
+        { "answer": "eye" },
+        { "answer": "to" },
+        { "answer": "my" },
+        { "answer": "brain" }
+    ],
+    "words": ["nerve", "held", "my", "by", "eye", "attaching", "place", "my", "eyelid", "socket,", "precariously", "and", "out", "of", "My", "the", "optic", "the", "bulged", "in", "to", "eyeball", "brain", "my"]
+},
+
+{
+    "id": 27,
+    "audio": "",
+    "sentence": "Bác sĩ nhãn khoa nói rằng mắt tôi sẽ từ từ trở lại vị trí cũ khi không khí thoát ra, nhưng rất khó để biết điều này sẽ mất bao lâu.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "The" },
+        { "answer": "ophthalmologist" },
+        { "answer": "said" },
+        { "answer": "my" },
+        { "answer": "eye" },
+        { "answer": "would" },
+        { "answer": "gradually" },
+        { "answer": "slide" },
+        { "answer": "back" },
+        { "answer": "into" },
+        { "answer": "place" },
+        { "answer": "as" },
+        { "answer": "the" },
+        { "answer": "air" },
+        { "answer": "seeped" },
+        { "answer": "out," },
+        { "answer": "but" },
+        { "answer": "it" },
+        { "answer": "was" },
+        { "answer": "hard" },
+        { "answer": "to" },
+        { "answer": "tell" },
+        { "answer": "how" },
+        { "answer": "long" },
+        { "answer": "this" },
+        { "answer": "would" },
+        { "answer": "take" }
+    ],
+    "words": ["seeped", "hard", "the", "slide", "into", "out,", "would", "tell", "The", "but", "gradually", "to", "would", "back", "air", "how", "place", "this", "take", "was", "as", "said", "long", "it", "my", "ophthalmologist", "eye"]
+},
+
+{
+    "id": 28,
+    "audio": "",
+    "sentence": "Tôi trông như thể vừa trải qua một trận đấu quyền anh.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "looked" },
+        { "answer": "like" },
+        { "answer": "I" },
+        { "answer": "had" },
+        { "answer": "been" },
+        { "answer": "on" },
+        { "answer": "the" },
+        { "answer": "wrong" },
+        { "answer": "end" },
+        { "answer": "of" },
+        { "answer": "a" },
+        { "answer": "boxing" },
+        { "answer": "match" }
+    ],
+    "words": ["like", "boxing", "been", "match", "wrong", "had", "the", "of", "end", "on", "I", "looked", "I", "a"]
+},
+
+{
+    "id": 29,
+    "audio": "",
+    "sentence": "Cảm giác như mọi thứ trong cuộc sống của tôi đều bị đình trệ.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "It" },
+        { "answer": "felt" },
+        { "answer": "like" },
+        { "answer": "everything" },
+        { "answer": "in" },
+        { "answer": "my" },
+        { "answer": "life" },
+        { "answer": "was" },
+        { "answer": "on" },
+        { "answer": "pause" }
+    ],
+    "words": ["like", "pause", "in", "life", "everything", "felt", "was", "on", "It", "my"]
+},
+
+{
+    "id": 30,
+    "audio": "",
+    "sentence": "Tôi quyết tâm không để chấn thương đánh gục mình.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "determined" },
+        { "answer": "not" },
+        { "answer": "to" },
+        { "answer": "let" },
+        { "answer": "my" },
+        { "answer": "injury" },
+        { "answer": "get" },
+        { "answer": "me" },
+        { "answer": "down" }
+    ],
+    "words": ["get", "not", "determined", "to", "me", "my", "I", "let", "injury", "down", "was"]
+}        
 ]
 }
