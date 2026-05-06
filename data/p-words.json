@@ -561,99 +561,99 @@
     },
     {
         "id": "71",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672830/%E8%BF%99_cwz8nm.png",
-        "character": "这",
-        "meaning": "This",
-        "pinyin": "zhè",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673349/%E8%BF%99_oz7twd.mp3"
+        "imageSrc": "",
+        "character": "the rally",
+        "meaning": "A period when prices (especially stocks) increase quickly; a strong upward movement in the market",
+        "pinyin": "",
+        "audioSrc": "The stock market rally continued this week."
     },
     {
         "id": "72",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672823/%E6%98%AF_x3pk8j.png",
-        "character": "是",
-        "meaning": "to be - am, are, is...",
-        "pinyin": "shì",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673309/%E6%98%AF_nuysgd.mp3"
+        "imageSrc": "",
+        "character": "is set to",
+        "meaning": "Very likely or expected to happen soon; is about to / is expected to",
+        "pinyin": "The company is set to launch a new product.",
+        "audioSrc": ""
     },
     {
         "id": "73",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672827/%E8%80%81%E5%B8%88_yp4q3u.png",
-        "character": "老师",
-        "meaning": "Teacher",
-        "pinyin": "lǎoshī",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673331/%E8%80%81%E5%B8%88_uml35p.mp3"
+        "imageSrc": "",
+        "character": "scour",
+        "meaning": "To search very carefully and thoroughly; search everywhere / look intensely",
+        "pinyin": "They scoured the internet for information.",
+        "audioSrc": ""
     },
     {
         "id": "74",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672820/%E6%82%A8_ndcupj.png",
-        "character": "您",
-        "meaning": "You - honorific",
-        "pinyin": "nín",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673288/%E6%82%A8_p8k1sj.mp3"
+        "imageSrc": "",
+        "character": "commentary",
+        "meaning": "Opinions or explanations about an event or situation - analysis / remarks / discussion",
+        "pinyin": "The article includes expert commentary on the market.",
+        "audioSrc": ""
     },
     {
         "id": "75",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672829/%E8%AF%B7_ow5lc2.gif",
-        "character": "请",
-        "meaning": "Please",
-        "pinyin": "qǐng",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673343/%E8%AF%B7_gfbu7q.mp3"
+        "imageSrc": "",
+        "character": "outperform",
+        "meaning": "To do better than something or someone else - perform better than / exceed",
+        "pinyin": "The company outperformed its competitors.",
+        "audioSrc": ""
     },
     {
         "id": "76",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672831/%E8%BF%9B_yvpsep.png",
-        "character": "进",
-        "meaning": "to enter; to come in",
-        "pinyin": "jìn",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673352/%E8%BF%9B_ldhyvd.mp3"
+        "imageSrc": "",
+        "character": "blazing (growth/results)",
+        "meaning": "Extremely fast and strong; rapid / explosive / very strong",
+        "pinyin": "The company reported blazing growth this year.",
+        "audioSrc": ""
     },
     {
         "id": "77",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672815/%E5%9D%90_v3qgxh.png",
-        "character": "坐",
-        "meaning": "to sit",
-        "pinyin": "zuò",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673260/%E5%9D%90_of9mvo.mp3"
+        "imageSrc": "",
+        "character": "beating Wall Street estimates",
+        "meaning": "Performing better than what financial analysts predicted; exceeding expectations / doing better than forecasts",
+        "pinyin": "The firm reported profits beating Wall Street estimates.",
+        "audioSrc": ""
     },
     {
         "id": "78",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672814/%E5%96%9D_ohxgv5.png",
-        "character": "喝",
-        "meaning": "to drink",
-        "pinyin": "hē",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673255/%E5%96%9D_d7eazr.mp3"
+        "imageSrc": "",
+        "character": "For its second quarter ended July",
+        "meaning": "Refers to financial results for a three-month period that finished in July; in the quarter that ended in July",
+        "pinyin": "For its second quarter ended July, the company reported strong growth.",
+        "audioSrc": ""
     },
     {
         "id": "79",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672827/%E8%8C%B6_wqnz2r.png",
-        "character": "茶",
-        "meaning": "Tea",
-        "pinyin": "chá",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673336/%E8%8C%B6_qjl60i.mp3"
+        "imageSrc": "",
+        "character": "rose 53.2% to $46.02 billion",
+        "meaning": "Increased by 53.2%, reaching a total of $46.02 billion.",
+        "pinyin": "grew by 53.2% to reach…",
+        "audioSrc": ""
     },
     {
         "id": "80",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672829/%E8%B0%A2%E8%B0%A2-%E4%B8%8D%E5%AE%A2%E6%B0%94_tztr7m.png",
-        "character": "谢谢",
-        "meaning": "to thank",
-        "pinyin": "xièxie",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673346/%E8%B0%A2%E8%B0%A2_ktl3xf.mp3"
+        "imageSrc": "",
+        "character": "a far cry from",
+        "meaning": "Very different from something; completely different from / nowhere near",
+        "pinyin": "This result is a far cry from last year’s loss.",
+        "audioSrc": ""
     },
     {
         "id": "81",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672818/%E5%AE%A2%E6%B0%94_bafdxn.png",
-        "character": "客气",
-        "meaning": "Polite; courteous",
-        "pinyin": "kèqi",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673274/%E5%AE%A2%E6%B0%94_n00npd.mp3"
+        "imageSrc": "",
+        "character": "Gross margin",
+        "meaning": "The difference between revenue and cost of goods sold, shown as a percentage; profit margin before expenses",
+        "pinyin": "The company’s gross margin improved this quarter.",
+        "audioSrc": ""
     },
     {
         "id": "82",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672818/%E5%B7%A5%E4%BD%9C_vym8um.png",
-        "character": "工作",
-        "meaning": "Work; to work",
-        "pinyin": "gōngzuò",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673280/%E5%B7%A5%E4%BD%9C_dhayvb.mp3"
+        "imageSrc": "",
+        "character": "eye-popping",
+        "meaning": "Extremely surprising or impressive; shocking / astonishing",
+        "pinyin": "They reported eye-popping profits.",
+        "audioSrc": ""
     },
     {
         "id": "83",
