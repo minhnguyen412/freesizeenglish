@@ -657,67 +657,67 @@
     },
     {
         "id": "83",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672830/%E8%BA%AB%E4%BD%93_gyl84l.png",
-        "character": "身体",
-        "meaning": "Health; body",
-        "pinyin": "shēntǐ",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673348/%E8%BA%AB%E4%BD%93_psl9ep.mp3"
+        "imageSrc": "",
+        "character": "entails",
+        "meaning": "To involve or include something as a necessary part; involves / requires",
+        "pinyin": "The job entails working long hours.",
+        "audioSrc": ""
     },
     {
         "id": "84",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672812/%E5%8D%81_esobvq.png",
-        "character": "十",
-        "meaning": "Ten",
-        "pinyin": "shí",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673240/%E5%8D%81_rc0f0d.mp3"
+        "imageSrc": "",
+        "character": "really has",
+        "meaning": "Used to strongly emphasize that something truly exists or is true; truly has / definitely has",
+        "pinyin": "This experience really has changed me.",
+        "audioSrc": ""
     },
     {
         "id": "85",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672820/%E6%97%A5_azc7sw.png",
-        "character": "日",
-        "meaning": "Sun; day",
-        "pinyin": "rì",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673292/%E6%97%A5_hlr1cn.mp3"
+        "imageSrc": "",
+        "character": "to measure both",
+        "meaning": "To evaluate or calculate two things together; to assess both / to examine both",
+        "pinyin": "The study aimed to measure both sleep quality and stress levels.",
+        "audioSrc": ""
     },
     {
         "id": "86",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672825/%E7%8E%8B_srbudo.png",
-        "character": "王",
-        "meaning": "Wang - a family name of Chinese",
-        "pinyin": "Wáng",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673321/%E7%8E%8B_q6phj3.mp3"
+        "imageSrc": "",
+        "character": "an average 7-year follow-up",
+        "meaning": "a follow-up period lasting around 7 years",
+        "pinyin": "The study included an average 7-year follow-up.",
+        "audioSrc": ""
     },
     {
         "id": "87",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672829/%E8%AF%B7%E9%97%AE_o1exei.gif",
-        "character": "请问",
-        "meaning": "Excuse me",
-        "pinyin": "qǐngwèn",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673344/%E8%AF%B7%E9%97%AE_xlo4e6.mp3"
+        "imageSrc": "",
+        "character": "associated 172 diseases with poor sleep patterns",
+        "meaning": "Found a connection between 172 diseases and unhealthy sleeping habits; linked 172 diseases to poor sleep",
+        "pinyin": "Researchers associated heart disease with poor sleep patterns.",
+        "audioSrc": ""
     },
     {
         "id": "88",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672832/%E9%97%AE_dtqubo.png",
-        "character": "问",
-        "meaning": "to ask; to enquire",
-        "pinyin": "wèn",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673361/%E9%97%AE_sq4hfp.mp3"
+        "imageSrc": "",
+        "character": "irregular bedtimes",
+        "meaning": "Going to bed at different times instead of a consistent schedule; inconsistent sleeping times",
+        "pinyin": "Irregular bedtimes can affect sleep quality.",
+        "audioSrc": ""
     },
     {
         "id": "89",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672830/%E8%B4%B5%E5%A7%93_pve03x.png",
-        "character": "贵姓",
-        "meaning": "May I know your name?",
-        "pinyin": "guìxìng",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673347/%E8%B4%B5%E5%A7%93_z9hejd.mp3"
+        "imageSrc": "",
+        "character": "off-circadian rhythms",
+        "meaning": "Body clock patterns that are not aligned normally; disrupted body-clock rhythms / abnormal sleep cycles",
+        "pinyin": "Night shifts can lead to off-circadian rhythms.",
+        "audioSrc": ""
     },
     {
         "id": "90",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672817/%E5%A7%93_ekh31y.png",
-        "character": "姓",
-        "meaning": "Family name",
-        "pinyin": "xìng",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673270/%E5%A7%93_if5dig.mp3"
+        "imageSrc": "",
+        "character": "traceable to",
+        "meaning": "Able to be connected back to a particular cause or origin; linked back to / caused by",
+        "pinyin": "Many health problems are traceable to stress.",
+        "audioSrc": ""
     },
     {
         "id": "91",
