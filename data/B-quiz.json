@@ -814,6 +814,168 @@
         { "answer": "down" }
     ],
     "words": ["get", "not", "determined", "to", "me", "my", "I", "let", "injury", "down", "was"]
-}        
+},
+{
+    "id": 31,
+    "audio": "",
+    "sentence": "Nhưng cũng có không ít lúc tôi cảm thấy chán nản và choáng ngợp.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "there" },
+        { "answer": "were" },
+        { "answer": "more" },
+        { "answer": "than" },
+        { "answer": "a" },
+        { "answer": "few" },
+        { "answer": "moments" },
+        { "answer": "when" },
+        { "answer": "I" },
+        { "answer": "felt" },
+        { "answer": "depressed" },
+        { "answer": "and" },
+        { "answer": "overwhelmed" }
+    ],
+    "words": ["there", "felt", "depressed", "more", "when", "few", "and", "a", "than", "were", "overwhelmed", "But", "I", "moments"]
+},
+
+{
+    "id": 32,
+    "audio": "",
+    "sentence": "Tôi nhận ra một cách đau đớn rằng mình còn phải đi một chặng đường dài khi trở lại sân bóng chày một năm sau đó.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "became" },
+        { "answer": "painfully" },
+        { "answer": "aware" },
+        { "answer": "of" },
+        { "answer": "how" },
+        { "answer": "far" },
+        { "answer": "I" },
+        { "answer": "had" },
+        { "answer": "to" },
+        { "answer": "go" },
+        { "answer": "when" },
+        { "answer": "I" },
+        { "answer": "returned" },
+        { "answer": "to" },
+        { "answer": "the" },
+        { "answer": "baseball" },
+        { "answer": "field" },
+        { "answer": "one" },
+        { "answer": "year" },
+        { "answer": "later" }
+    ],
+    "words": ["aware", "field", "go", "I", "became", "I", "of", "painfully", "returned", "the", "later", "to", "far", "had", "one", "baseball", "to", "year", "when", "I", "how"]
+},
+
+{
+    "id": 33,
+    "audio": "",
+    "sentence": "Sau nhiều tháng phục hồi chức năng, điều tôi muốn hơn bất cứ điều gì là được trở lại sân đấu.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "After" },
+        { "answer": "months" },
+        { "answer": "of" },
+        { "answer": "rehabilitation," },
+        { "answer": "what" },
+        { "answer": "I" },
+        { "answer": "wanted" },
+        { "answer": "more" },
+        { "answer": "than" },
+        { "answer": "anything" },
+        { "answer": "was" },
+        { "answer": "to" },
+        { "answer": "get" },
+        { "answer": "back" },
+        { "answer": "on" },
+        { "answer": "the" },
+        { "answer": "field" }
+    ],
+    "words": ["to", "get", "I", "was", "than", "After", "field", "on", "rehabilitation,", "of", "wanted", "more", "anything", "the", "back", "months", "what"]
+},
+
+{
+    "id": 34,
+    "audio": "",
+    "sentence": "Khi mùa giải bắt đầu, tôi là học sinh lớp 11 duy nhất bị loại khỏi đội bóng chày chính thức.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "When" },
+        { "answer": "the" },
+        { "answer": "season" },
+        { "answer": "rolled" },
+        { "answer": "around," },
+        { "answer": "I" },
+        { "answer": "was" },
+        { "answer": "the" },
+        { "answer": "only" },
+        { "answer": "junior" },
+        { "answer": "to" },
+        { "answer": "be" },
+        { "answer": "cut" },
+        { "answer": "from" },
+        { "answer": "the" },
+        { "answer": "varsity" },
+        { "answer": "baseball" },
+        { "answer": "team" }
+    ],
+    "words": ["junior", "the", "When", "cut", "I", "varsity", "from", "around,", "season", "only", "rolled", "was", "be", "baseball", "team", "the", "to", "the"]
+},
+
+{
+    "id": 35,
+    "audio": "",
+    "sentence": "Tôi ngồi trong xe và khóc khi lướt qua các kênh radio, tuyệt vọng tìm kiếm một bài hát có thể khiến tôi cảm thấy khá hơn.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "sat" },
+        { "answer": "in" },
+        { "answer": "my" },
+        { "answer": "car" },
+        { "answer": "and" },
+        { "answer": "cried" },
+        { "answer": "as" },
+        { "answer": "I" },
+        { "answer": "flipped" },
+        { "answer": "through" },
+        { "answer": "the" },
+        { "answer": "radio," },
+        { "answer": "desperately" },
+        { "answer": "searching" },
+        { "answer": "for" },
+        { "answer": "a" },
+        { "answer": "song" },
+        { "answer": "that" },
+        { "answer": "would" },
+        { "answer": "make" },
+        { "answer": "me" },
+        { "answer": "feel" },
+        { "answer": "better" }
+    ],
+    "words": ["searching", "and", "the", "for", "would", "sat", "cried", "song", "make", "better", "I", "that", "I", "feel", "in", "car", "flipped", "a", "desperately", "as", "through", "radio,", "my", "me"]
+},
+
+{
+    "id": 36,
+    "audio": "",
+    "sentence": "Mặc dù sự nghiệp trung học của tôi không mấy nổi bật, tôi vẫn tin rằng mình có thể trở thành một cầu thủ giỏi.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Despite" },
+        { "answer": "my" },
+        { "answer": "lackluster" },
+        { "answer": "high" },
+        { "answer": "school" },
+        { "answer": "career," },
+        { "answer": "I" },
+        { "answer": "still" },
+        { "answer": "believed" },
+        { "answer": "I" },
+        { "answer": "could" },
+        { "answer": "become" },
+        { "answer": "a" },
+        { "answer": "great" },
+        { "answer": "player" }
+    ],
+    "words": ["I", "believed", "school", "high", "lackluster", "I", "career,", "great", "a", "Despite", "become", "my", "player", "could", "still"]
+}
 ]
 }
