@@ -721,67 +721,67 @@
     },
     {
         "id": "91",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672813/%E5%8F%AB_bg2tz1.png",
-        "character": "叫",
-        "meaning": "to call; to name",
-        "pinyin": "jiào",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673246/%E5%8F%AB_oxmi4q.mp3"
+        "imageSrc": "",
+        "character": "are more than twice as likely to",
+        "meaning": "Have a probability that is over two times higher; are much more likely to / have over double the chance to",
+        "pinyin": "Smokers are more than twice as likely to develop lung disease.",
+        "audioSrc": ""
     },
     {
         "id": "92",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672814/%E5%90%8D%E5%AD%97_lij4yw.gif",
-        "character": "名字",
-        "meaning": "Name",
-        "pinyin": "míngzi",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673248/%E5%90%8D%E5%AD%97_nmd07q.mp3"
+        "imageSrc": "",
+        "character": "more than four times as likely to",
+        "meaning": "Have a probability that is over four times higher; have over four times the chance to",
+        "pinyin": "Teenagers with poor sleep are more than four times as likely to experience anxiety.",
+        "audioSrc": ""
     },
     {
         "id": "93",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672814/%E5%93%AA_j3bq2j.png",
-        "character": "哪",
-        "meaning": "Which; where",
-        "pinyin": "nǎ",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673252/%E5%93%AA_nab18b.mp3"
+        "imageSrc": "",
+        "character": "had increased by almost",
+        "meaning": "Had grown by nearly a certain amount; had risen by nearly / had gone up by almost",
+        "pinyin": "The number had increased by almost 30%.",
+        "audioSrc": ""
     },
     {
         "id": "94",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672815/%E5%9B%BD_fca15m.png",
+        "imageSrc": "",
         "character": "国",
         "meaning": "Country; Nationality",
         "pinyin": "guó",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673258/%E5%9B%BD_eqmzlt.mp3"
+        "audioSrc": ""
     },
     {
         "id": "95",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672808/%E4%B8%AD%E5%9B%BD_epnq01.png",
-        "character": "中国",
-        "meaning": "China",
-        "pinyin": "zhōngguó",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673160/%E4%B8%AD%E5%9B%BD_ipqsgt.mp3"
+        "imageSrc": "",
+        "character": "in the 40–49 age band",
+        "meaning": "In the age group between 40 and 49 years old; among people aged 40–49",
+        "pinyin": "The condition is common in the 40–49 age band.",
+        "audioSrc": ""
     },
     {
         "id": "96",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672819/%E5%BE%B7%E5%9B%BD_f2kloi.png",
-        "character": "德国",
-        "meaning": "Germany",
-        "pinyin": "déguó",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673283/%E5%BE%B7%E5%9B%BD_h3cg2y.mp3"
+        "imageSrc": "",
+        "character": "are still very much lower in",
+        "meaning": "Remain significantly lower in a particular group or area; are still far lower in / remain much lower in",
+        "pinyin": "Rates are still very much lower in rural areas.",
+        "audioSrc": ""
     },
     {
         "id": "97",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672810/%E4%BF%84%E5%9B%BD_m560gt.png",
-        "character": "俄国",
-        "meaning": "Russia",
-        "pinyin": "éguó",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673175/%E4%BF%84%E5%9B%BD_nq1p9a.mp3"
+        "imageSrc": "",
+        "character": "highlight the need for",
+        "meaning": "Show or emphasize that something is necessary; emphasize the importance of / show the need for",
+        "pinyin": "The results highlight the need for better healthcare.",
+        "audioSrc": ""
     },
     {
         "id": "98",
-        "imageSrc": "https://res.cloudinary.com/dndwvsqib/image/upload/v1734672824/%E6%B3%95%E5%9B%BD_wpez7g.png",
-        "character": "法国",
-        "meaning": "France",
-        "pinyin": "fǎguó",
-        "audioSrc": "https://res.cloudinary.com/dndwvsqib/video/upload/v1734673317/%E6%B3%95%E5%9B%BD_aka8fv.mp3"
+        "imageSrc": "",
+        "character": "targeted awareness and interventions",
+        "meaning": "Specific efforts to increase understanding and take action toward a particular group or issue; focused education and actions / specific awareness campaigns and support measures",
+        "pinyin": "The study recommends targeted awareness and interventions for young adults.",
+        "audioSrc": ""
     },
     {
         "id": "99",
