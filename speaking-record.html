@@ -835,7 +835,8 @@ const sttOutput = qs('#sttOutput');
 const answerDisplay = qs('#answerDisplay');
 const targetAnswer = qs('#targetAnswer');
 const nextBtn = qs('#nextBtn');
-
+const resetBtn = qs('#resetBtn');
+const skipBtn = qs('#skipBtn');
 const sentenceDisplay = qs('#sentence-display');
 const speakCounter = qs('#speakCounter');
 
@@ -1030,14 +1031,13 @@ nextBtn.addEventListener('click', () => {
   speakIdx++;
   showSpeakingQ();
 });
-const skipBtn = qs('#skipBtn');
+
 
 skipBtn.addEventListener('click', () => {
   speakIdx++;
   showSpeakingQ();
 });
-// ← Thêm đoạn này ở đây (khai báo resetBtn TRƯỚC khi dùng)
-const resetBtn = qs('#resetBtn');
+
 resetBtn.addEventListener('click', () => {
   if (confirm('Reset and go back to setup?')) {
     setupCard.style.display = 'block';
