@@ -770,10 +770,10 @@ async function loadAnswerKey() {
   console.log('Loading answer key...'); // ← Debug
 
   answerKeyToggle.addEventListener('click', () => {
-    const isOpen = answerKeyContent.style.display !== 'none';
-    answerKeyContent.style.display = isOpen ? 'none' : 'block';
-    answerKeyToggle.classList.toggle('open');
-  });
+  const isOpen = answerKeyContent.style.display === 'block';
+  answerKeyContent.style.display = isOpen ? 'none' : 'block';
+  answerKeyToggle.classList.toggle('open');
+});
 
   try {
     const response = await fetch('data/S-quiz-1.json');
