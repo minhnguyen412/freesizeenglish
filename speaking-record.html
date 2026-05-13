@@ -835,7 +835,7 @@ const sttOutput = qs('#sttOutput');
 const answerDisplay = qs('#answerDisplay');
 const targetAnswer = qs('#targetAnswer');
 const nextBtn = qs('#nextBtn');
-const resetBtn = qs('#resetBtn');
+
 const skipBtn = qs('#skipBtn');
 const sentenceDisplay = qs('#sentence-display');
 const speakCounter = qs('#speakCounter');
@@ -1038,13 +1038,7 @@ skipBtn.addEventListener('click', () => {
   showSpeakingQ();
 });
 
-resetBtn.addEventListener('click', () => {
-  if (confirm('Reset and go back to setup?')) {
-    setupCard.style.display = 'block';
-    speakIdx = 0;
-    resetRecorder();
-  }
-});
+
 // ════════════════════════════════════════════════════════════════
 // SETUP EVENT LISTENERS
 // ════════════════════════════════════════════════════════════════
