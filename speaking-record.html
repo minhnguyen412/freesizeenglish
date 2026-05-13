@@ -780,52 +780,7 @@ async function loadSidebarList() {
     sidebarList.innerHTML = `<li style="padding:12px 16px;color:#999;font-size:0.9rem;">Failed to load</li>`;
   }
 }
-// ════════════════════════════════════════════════════════════════
-// ANSWER KEY (COLLAPSIBLE)
-// ════════════════════════════════════════════════════════════════
-async function loadAnswerKey() {
-  const answerKeyToggle = qs('#answer-key-toggle');
-  const answerKeyContent = qs('#answer-key-content');
-  const answerKeyList = qs('#answer-key-list');
 
-  // Toggle collapse/expand
-  answerKeyToggle.addEventListener('click', () => {
-    const isOpen = answerKeyContent.style.display !== 'none';
-    answerKeyContent.style.display = isOpen ? 'none' : 'block';
-    answerKeyToggle.classList.toggle('open');
-  });
-
-  // Load JSON riêng cho answer key
-  try {
-    const response = await fetch('data/S-quiz-1.json');
-    let allData = await response.json();
-    if (!Array.isArray(allData)) {
-      allData = allData.questions || [];
-    }
-
-    answerKeyList.innerHTML = '';
-    allData.forEach((q, idx) => {
-      const blanks = q.blanks || [];
-      const answers = blanks.map(b => b.answer).join(' / ');
-      const sentence = Array.isArray(q.sentence) 
-        ? q.sentence.join(' ') 
-        : q.sentence;
-
-      const item = document.createElement('div');
-      item.className = 'answer-key-item';
-      item.innerHTML = `
-        <div class="answer-key-item-q">Q${idx + 1}: ${sentence}</div>
-        <div class="answer-key-item-a">✓ Answer: <strong>${answers}</strong></div>
-      `;
-      answerKeyList.appendChild(item);
-    });
-
-    console.log(`✅ Answer key loaded: ${allData.length} questions`);
-  } catch(err) {
-    console.error('Error loading answer key:', err);
-    answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load</div>`;
-  }
-}
 // ════════════════════════════════════════════════════════════════
 // CALL ON PAGE LOAD
 // ════════════════════════════════════════════════════════════════
@@ -1092,6 +1047,52 @@ startBtn.addEventListener('click', async () => {
 resetSetupBtn.addEventListener('click', () => {
   location.reload();  // Reload page như F5
 });
+// ════════════════════════════════════════════════════════════════
+// ANSWER KEY (COLLAPSIBLE)
+// ════════════════════════════════════════════════════════════════
+async function loadAnswerKey() {
+  const answerKeyToggle = qs('#answer-key-toggle');
+  const answerKeyContent = qs('#answer-key-content');
+  const answerKeyList = qs('#answer-key-list');
+
+  // Toggle collapse/expand
+  answerKeyToggle.addEventListener('click', () => {
+    const isOpen = answerKeyContent.style.display !== 'none';
+    answerKeyContent.style.display = isOpen ? 'none' : 'block';
+    answerKeyToggle.classList.toggle('open');
+  });
+
+  // Load JSON riêng cho answer key
+  try {
+    const response = await fetch('data/S-quiz-1.json');
+    let allData = await response.json();
+    if (!Array.isArray(allData)) {
+      allData = allData.questions || [];
+    }
+
+    answerKeyList.innerHTML = '';
+    allData.forEach((q, idx) => {
+      const blanks = q.blanks || [];
+      const answers = blanks.map(b => b.answer).join(' / ');
+      const sentence = Array.isArray(q.sentence) 
+        ? q.sentence.join(' ') 
+        : q.sentence;
+
+      const item = document.createElement('div');
+      item.className = 'answer-key-item';
+      item.innerHTML = `
+        <div class="answer-key-item-q">Q${idx + 1}: ${sentence}</div>
+        <div class="answer-key-item-a">✓ Answer: <strong>${answers}</strong></div>
+      `;
+      answerKeyList.appendChild(item);
+    });
+
+    console.log(`✅ Answer key loaded: ${allData.length} questions`);
+  } catch(err) {
+    console.error('Error loading answer key:', err);
+    answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load</div>`;
+  }
+}
 // ── INIT ON PAGE LOAD ──
 document.addEventListener('DOMContentLoaded', async () => {
   await loadAllQuestions();
