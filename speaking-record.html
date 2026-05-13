@@ -767,6 +767,8 @@ async function loadAnswerKey() {
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
+  console.log('Loading answer key...'); // ← Debug
+
   answerKeyToggle.addEventListener('click', () => {
     const isOpen = answerKeyContent.style.display !== 'none';
     answerKeyContent.style.display = isOpen ? 'none' : 'block';
@@ -777,7 +779,6 @@ async function loadAnswerKey() {
     const response = await fetch('data/S-quiz-1.json');
     let allData = await response.json();
     
-    // ← Thêm check này
     if (!Array.isArray(allData)) {
       allData = allData.questions || [];
     }
@@ -800,7 +801,7 @@ async function loadAnswerKey() {
       answerKeyList.appendChild(item);
     });
 
-    console.log(`✅ Answer key loaded: ${allData.length} questions`);
+    console.log(`✅ Answer key loaded: ${allData.length} questions`); // ← Debug
   } catch(err) {
     console.error('Error loading answer key:', err);
     answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load — check data/S-quiz-1.json</div>`;
