@@ -769,16 +769,6 @@ async function loadAnswerKey() {
 
   console.log('Loading answer key...'); // ← Debug
 
-  answerKeyToggle.addEventListener('click', () => {
-  if (answerKeyContent.style.display === 'none' || answerKeyContent.style.display === '') {
-    answerKeyContent.style.display = 'block';
-    answerKeyToggle.classList.add('open');
-  } else {
-    answerKeyContent.style.display = 'none';
-    answerKeyToggle.classList.remove('open');
-  }
-});
-
   try {
     const response = await fetch('data/S-quiz-1.json');
     let allData = await response.json();
@@ -786,7 +776,10 @@ async function loadAnswerKey() {
     if (!Array.isArray(allData)) {
       allData = allData.questions || [];
     }
-    if (!allData.length) throw new Error('No data');
+
+    if (!allData.length) {
+      allData = allQuestions;
+    }
 
     answerKeyList.innerHTML = '';
     allData.forEach((q, idx) => {
@@ -805,10 +798,10 @@ async function loadAnswerKey() {
       answerKeyList.appendChild(item);
     });
 
-    console.log(`✅ Answer key loaded: ${allData.length} questions`); // ← Debug
+    console.log(`✅ Answer key loaded: ${allData.length} questions`);
   } catch(err) {
     console.error('Error loading answer key:', err);
-    answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load — check data/S-quiz-1.json</div>`;
+    answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load</div>`;
   }
 }
 // ════════════════════════════════════════════════════════════════
