@@ -767,7 +767,7 @@ async function loadAnswerKey() {
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
-  console.log('Loading answer key...'); // ← Debug
+  console.log('Loading answer key...'); 
 
   try {
     const response = await fetch('data/S-quiz-1.json');
@@ -803,6 +803,24 @@ async function loadAnswerKey() {
     console.error('Error loading answer key:', err);
     answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load</div>`;
   }
+
+  // EVENT LISTENER - ADD NGAY CUỐI
+  setTimeout(() => {
+    const btn = qs('#answer-key-toggle');
+    const content = qs('#answer-key-content');
+    if (btn && content) {
+      btn.addEventListener('click', () => {
+        console.log('Toggle clicked!');
+        if (content.style.display === 'none' || content.style.display === '') {
+          content.style.display = 'block';
+          btn.classList.add('open');
+        } else {
+          content.style.display = 'none';
+          btn.classList.remove('open');
+        }
+      });
+    }
+  }, 100);
 }
 // ════════════════════════════════════════════════════════════════
 // CALL ON PAGE LOAD
