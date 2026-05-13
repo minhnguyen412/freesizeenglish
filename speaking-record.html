@@ -788,18 +788,19 @@ async function loadAnswerKey() {
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
-  console.log('Loading answer key...'); 
+  // Toggle collapse/expand
+  answerKeyToggle.addEventListener('click', () => {
+    const isOpen = answerKeyContent.style.display !== 'none';
+    answerKeyContent.style.display = isOpen ? 'none' : 'block';
+    answerKeyToggle.classList.toggle('open');
+  });
 
+  // Load JSON riêng cho answer key
   try {
     const response = await fetch('data/S-quiz-1.json');
     let allData = await response.json();
-    
     if (!Array.isArray(allData)) {
       allData = allData.questions || [];
-    }
-
-    if (!allData.length) {
-      allData = allQuestions;
     }
 
     answerKeyList.innerHTML = '';
@@ -814,7 +815,7 @@ async function loadAnswerKey() {
       item.className = 'answer-key-item';
       item.innerHTML = `
         <div class="answer-key-item-q">Q${idx + 1}: ${sentence}</div>
-        <div class="answer-key-item-a">✓ ${answers}</div>
+        <div class="answer-key-item-a">✓ Answer: <strong>${answers}</strong></div>
       `;
       answerKeyList.appendChild(item);
     });
@@ -824,25 +825,6 @@ async function loadAnswerKey() {
     console.error('Error loading answer key:', err);
     answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load</div>`;
   }
-
-  // EVENT LISTENER - ADD NGAY CUỐI
-  setTimeout(() => {
-    const btn = qs('#answer-key-toggle');
-    const content = qs('#answer-key-content');
-    if (btn && content) {
-      btn.addEventListener('click', () => {
-        console.log('Toggle clicked!');
-        content.classList.toggle('show');
-        btn.classList.toggle('open');
-
-        // Update icon
-        const icon = btn.querySelector('.toggle-icon');
-        if (icon) {
-          icon.textContent = content.classList.contains('show') ? '▲' : '▼';
-        }
-      });
-    }
-  }, 100);
 }
 // ════════════════════════════════════════════════════════════════
 // CALL ON PAGE LOAD
