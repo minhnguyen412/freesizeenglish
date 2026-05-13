@@ -1036,6 +1036,8 @@ skipBtn.addEventListener('click', () => {
   speakIdx++;
   showSpeakingQ();
 });
+// ← Thêm đoạn này ở đây (khai báo resetBtn TRƯỚC khi dùng)
+const resetBtn = qs('#resetBtn');
 resetBtn.addEventListener('click', () => {
   if (confirm('Reset and go back to setup?')) {
     setupCard.style.display = 'block';
