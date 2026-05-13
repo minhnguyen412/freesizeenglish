@@ -1042,9 +1042,7 @@ const exitBtn = qs('#exitBtn');
 
 exitBtn.addEventListener('click', () => {
   if (confirm('Exit speaking practice? Your progress will be lost.')) {
-    setupCard.style.display = 'block';
-    speakIdx = 0;
-    resetRecorder();
+    location.reload();  // ← Thêm dòng này để F5 trang
   }
 });
 
