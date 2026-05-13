@@ -528,10 +528,11 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
       "></div>
     </div>
 
-    <!-- ACTIONS -->
-    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-  <button class="btn-next" id="skipBtn" style="display: none;">⊘ Skip →</button>
-  <button class="btn-next" id="nextBtn" style="display: none;">Next →</button>
+   <!-- ACTIONS -->
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <button class="btn-next" id="skipBtn" style="display: none;">⊘ Skip</button>
+  <button class="btn-next" id="nextBtn" style="display: none;">✓ Next</button>
+  <button class="btn-exit" id="exitBtn">Exit to Setup</button>
 </div>
 
     <!-- COUNTER -->
@@ -884,7 +885,7 @@ function showSpeakingQ() {
   nextBtn.style.display = 'none';
   sttOutput.textContent = 'Speech-to-text appears here...';
   sttOutput.style.color = 'var(--muted)';
-  
+  skipBtn.style.display = 'block';  // ← Thêm dòng này
   speakCounter.textContent = `Question ${speakIdx + 1} / ${speakQuestions.length}`;
 }
 
@@ -1024,7 +1025,7 @@ function showAnswer() {
   targetAnswer.textContent = answers;
   answerDisplay.style.display = 'block';
   nextBtn.style.display = 'block';
-  skipBtn.style.display = 'block';  // ← Thêm dòng này
+  
 }
 
 nextBtn.addEventListener('click', () => {
@@ -1037,7 +1038,15 @@ skipBtn.addEventListener('click', () => {
   speakIdx++;
   showSpeakingQ();
 });
+const exitBtn = qs('#exitBtn');
 
+exitBtn.addEventListener('click', () => {
+  if (confirm('Exit speaking practice? Your progress will be lost.')) {
+    setupCard.style.display = 'block';
+    speakIdx = 0;
+    resetRecorder();
+  }
+});
 
 // ════════════════════════════════════════════════════════════════
 // SETUP EVENT LISTENERS
