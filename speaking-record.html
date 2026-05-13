@@ -448,9 +448,31 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
 
 <div class="container">
   <div class="main-col">
+    <!-- SETUP CARD -->
+<div class="card" id="setup-card">
+  <div class="card-title">⚙️ Speaking Setup</div>
+  <div class="setup-grid">
+    <div class="form-group">
+      <label for="sort-order">📋 Sort Order:</label>
+      <select id="sort-order">
+        <option value="show-all">Show All Questions</option>
+        <option value="small-to-large">Small to Large (1 → Last)</option>
+        <option value="large-to-small">Large to Small (Last → 1)</option>
+        <option value="random">Random Order</option>
+      </select>
+    </div>
 
-    
+    <div class="form-group">
+      <label for="question-count">❓ Number of Questions:</label>
+      <input type="number" id="question-count" min="1" value="10" placeholder="Enter number">
+    </div>
+  </div>
 
+  <div class="setup-actions">
+    <button class="btn-start" id="start-button">▶ Start Speaking</button>
+    <button class="btn-reset" id="reset-button">↻ Reset</button>
+  </div>
+</div>
     <!-- SPEAKING PRACTICE CONTAINER -->
 <div class="qcontainer active" id="speaking-container">
   <div class="card">
@@ -818,22 +840,29 @@ const speakCounter = qs('#speakCounter');
 
 let speakIdx = 0;
 let speakQuestions = [];
-
+// ════════════════════════════════════════════════════════════════
+// SETUP VARIABLES
+// ════════════════════════════════════════════════════════════════
+const setupCard = qs('#setup-card');
+const sortOrderSelect = qs('#sort-order');
+const questionCountInput = qs('#question-count');
+const startBtn = qs('#start-button');
+const resetSetupBtn = qs('#reset-button');
 // ── LOAD QUESTIONS & INIT ──
 async function initSpeaking() {
   if (allQuestions.length === 0) {
     await loadAllQuestions();
   }
-  speakQuestions = allQuestions.slice(0, 10); // Lấy 10 câu đầu
-  speakIdx = 0;
-  showSpeakingQ();
+  // Không khởi động ngay, chờ user click "Start Speaking"
+  console.log('✅ Questions loaded, waiting for user to click "Start Speaking"');
 }
 
 function showSpeakingQ() {
   if (speakIdx >= speakQuestions.length) {
     alert('✅ Hoàn thành tất cả câu hỏi!');
+    // Quay lại setup
+    setupCard.style.display = 'block';
     speakIdx = 0;
-    showSpeakingQ();
     return;
   }
 
@@ -1001,13 +1030,41 @@ nextBtn.addEventListener('click', () => {
 });
 
 resetBtn.addEventListener('click', () => {
-  if (confirm('Reset all progress?')) {
+  if (confirm('Reset and go back to setup?')) {
+    setupCard.style.display = 'block';
     speakIdx = 0;
     resetRecorder();
-    showSpeakingQ();
   }
 });
+// ════════════════════════════════════════════════════════════════
+// SETUP EVENT LISTENERS
+// ════════════════════════════════════════════════════════════════
+startBtn.addEventListener('click', async () => {
+  const sortOrder = sortOrderSelect.value;
+  const countInput = parseInt(questionCountInput.value) || 10;
 
+  if (allQuestions.length === 0) {
+    await loadAllQuestions();
+  }
+
+  // Áp dụng filter + sort
+  speakQuestions = filterAndSortQuestions(sortOrder, countInput);
+
+  if (speakQuestions.length === 0) {
+    alert('❌ No questions available!');
+    return;
+  }
+
+  // Ẩn setup card, khởi động speaking practice
+  setupCard.style.display = 'none';
+  speakIdx = 0;
+  showSpeakingQ();
+});
+
+resetSetupBtn.addEventListener('click', () => {
+  sortOrderSelect.value = 'show-all';
+  questionCountInput.value = 10;
+});
 // ── INIT ON PAGE LOAD ──
 document.addEventListener('DOMContentLoaded', async () => {
   await loadAllQuestions();
