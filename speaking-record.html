@@ -124,7 +124,7 @@ nav ul li a:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-md
 .setup-actions button:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-lg); }
 
 /* ── QUIZ CONTAINER ── */
-.qcontainer { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 28px 26px; display: none; }
+.qcontainer { background: var(--white); border: var(--border-thick); border-radius: 22px; box-shadow: var(--shadow-md); padding: 28px 26px; display: block; }
 .qcontainer.active { display: block; }
 
 .quiz-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -474,7 +474,7 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   </div>
 </div>
     <!-- SPEAKING PRACTICE CONTAINER -->
-<div class="qcontainer active" id="speaking-container">
+<div class="qcontainer" id="speaking-container">
   <div class="card">
     <div class="card-title">🎤 Speaking Practice</div>
     
@@ -530,9 +530,9 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
 
     <!-- ACTIONS -->
     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-      <button class="btn-next" id="nextBtn" style="display: none;">Next →</button>
-      <button class="btn-exit" id="resetBtn">Reset</button>
-    </div>
+  <button class="btn-next" id="skipBtn" style="display: none;">⊘ Skip →</button>
+  <button class="btn-next" id="nextBtn" style="display: none;">Next →</button>
+</div>
 
     <!-- COUNTER -->
     <div id="speakCounter" style="
@@ -768,20 +768,21 @@ async function loadAnswerKey() {
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
-  // Toggle collapse/expand
   answerKeyToggle.addEventListener('click', () => {
     const isOpen = answerKeyContent.style.display !== 'none';
     answerKeyContent.style.display = isOpen ? 'none' : 'block';
     answerKeyToggle.classList.toggle('open');
   });
 
-  // Load JSON riêng cho answer key
   try {
     const response = await fetch('data/S-quiz-1.json');
     let allData = await response.json();
+    
+    // ← Thêm check này
     if (!Array.isArray(allData)) {
       allData = allData.questions || [];
     }
+    if (!allData.length) throw new Error('No data');
 
     answerKeyList.innerHTML = '';
     allData.forEach((q, idx) => {
@@ -795,7 +796,7 @@ async function loadAnswerKey() {
       item.className = 'answer-key-item';
       item.innerHTML = `
         <div class="answer-key-item-q">Q${idx + 1}: ${sentence}</div>
-        <div class="answer-key-item-a">✓ Answer: <strong>${answers}</strong></div>
+        <div class="answer-key-item-a">✓ ${answers}</div>
       `;
       answerKeyList.appendChild(item);
     });
@@ -803,7 +804,7 @@ async function loadAnswerKey() {
     console.log(`✅ Answer key loaded: ${allData.length} questions`);
   } catch(err) {
     console.error('Error loading answer key:', err);
-    answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load</div>`;
+    answerKeyList.innerHTML = `<div style="padding:12px;color:#999;">Failed to load — check data/S-quiz-1.json</div>`;
   }
 }
 // ════════════════════════════════════════════════════════════════
@@ -834,7 +835,7 @@ const sttOutput = qs('#sttOutput');
 const answerDisplay = qs('#answerDisplay');
 const targetAnswer = qs('#targetAnswer');
 const nextBtn = qs('#nextBtn');
-const resetBtn = qs('#resetBtn');
+
 const sentenceDisplay = qs('#sentence-display');
 const speakCounter = qs('#speakCounter');
 
@@ -1022,13 +1023,19 @@ function showAnswer() {
   targetAnswer.textContent = answers;
   answerDisplay.style.display = 'block';
   nextBtn.style.display = 'block';
+  skipBtn.style.display = 'block';  // ← Thêm dòng này
 }
 
 nextBtn.addEventListener('click', () => {
   speakIdx++;
   showSpeakingQ();
 });
+const skipBtn = qs('#skipBtn');
 
+skipBtn.addEventListener('click', () => {
+  speakIdx++;
+  showSpeakingQ();
+});
 resetBtn.addEventListener('click', () => {
   if (confirm('Reset and go back to setup?')) {
     setupCard.style.display = 'block';
@@ -1062,8 +1069,7 @@ startBtn.addEventListener('click', async () => {
 });
 
 resetSetupBtn.addEventListener('click', () => {
-  sortOrderSelect.value = 'show-all';
-  questionCountInput.value = 10;
+  location.reload();  // Reload page như F5
 });
 // ── INIT ON PAGE LOAD ──
 document.addEventListener('DOMContentLoaded', async () => {
