@@ -414,13 +414,11 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   margin-top: 16px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-out, opacity 0.3s;
-  opacity: 0;
+  transition: max-height 0.3s ease-out;
 }
 
 .answer-key-content.show {
-  max-height: 2000px;
-  opacity: 1;
+  max-height: 3000px;
 }
 
 .answer-key-item {
@@ -447,7 +445,10 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   background: var(--black);
   color: white;
 }
-
+  @keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
 </style>
 </head>
 <body>
