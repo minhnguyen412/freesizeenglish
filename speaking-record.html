@@ -386,7 +386,11 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   border-radius: 12px;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.12s, box-shadow 0.12s;
+  transition: transform 0.12s, box-shadow 0.12s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .answer-key-toggle:hover {
@@ -398,8 +402,25 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
   background: var(--red);
 }
 
+.answer-key-toggle .toggle-icon {
+  transition: transform 0.3s;
+}
+
+.answer-key-toggle.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
 .answer-key-content {
   margin-top: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.3s;
+  opacity: 0;
+}
+
+.answer-key-content.show {
+  max-height: 2000px;
+  opacity: 1;
 }
 
 .answer-key-item {
@@ -547,9 +568,9 @@ footer .social-icons a:hover { transform: translate(-1px,-2px); }
 </div>
     <div class="answer-key-section" id="answer-key-section">
   <button class="answer-key-toggle" id="answer-key-toggle">
-    📋 Show All Answers (Collapsible)
+    📋 Show All Answers <span class="toggle-icon">▼</span>
   </button>
-  <div class="answer-key-content" id="answer-key-content" style="display:none;">
+  <div class="answer-key-content" id="answer-key-content">
     <div id="answer-key-list"></div>
   </div>
 </div>
@@ -811,12 +832,13 @@ async function loadAnswerKey() {
     if (btn && content) {
       btn.addEventListener('click', () => {
         console.log('Toggle clicked!');
-        if (content.style.display === 'none' || content.style.display === '') {
-          content.style.display = 'block';
-          btn.classList.add('open');
-        } else {
-          content.style.display = 'none';
-          btn.classList.remove('open');
+        content.classList.toggle('show');
+        btn.classList.toggle('open');
+
+        // Update icon
+        const icon = btn.querySelector('.toggle-icon');
+        if (icon) {
+          icon.textContent = content.classList.contains('show') ? '▲' : '▼';
         }
       });
     }
