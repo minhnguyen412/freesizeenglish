@@ -752,7 +752,7 @@ async function loadSidebarList() {
   if (!sidebarList) return;
 
   try {
-    const response = await fetch('data/thumb-wrtitng-2.json');
+    const response = await fetch('data/thumb-writing-2.json');
     const items = await response.json();
 
     if (!items.length) {
