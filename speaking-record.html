@@ -1048,23 +1048,29 @@ resetSetupBtn.addEventListener('click', () => {
 // ════════════════════════════════════════════════════════════════
 // ANSWER KEY (COLLAPSIBLE)
 // ════════════════════════════════════════════════════════════════
-async function loadAnswerKey() {
+  let answerKeyInitialized = false;  // ← Thêm flag này
+  async function loadAnswerKey() {
   const answerKeyToggle = qs('#answer-key-toggle');
   const answerKeyContent = qs('#answer-key-content');
   const answerKeyList = qs('#answer-key-list');
 
-  // Toggle collapse/expand
-  answerKeyToggle.addEventListener('click', () => {
-    console.log('Toggle clicked!');
-    answerKeyContent.classList.toggle('show');
-    answerKeyToggle.classList.toggle('open');
+  // Reset state
+  answerKeyContent.classList.remove('show');
+  answerKeyToggle.classList.remove('open');
 
-    // Update icon
-    const icon = answerKeyToggle.querySelector('.toggle-icon');
-    if (icon) {
-      icon.textContent = answerKeyContent.classList.contains('show') ? '▲' : '▼';
-    }
-  });
+  // Chỉ gắn event listener ĐỘT NHẤ
+  if (!answerKeyInitialized) {
+    answerKeyToggle.addEventListener('click', () => {
+      answerKeyContent.classList.toggle('show');
+      answerKeyToggle.classList.toggle('open');
+      
+      const icon = answerKeyToggle.querySelector('.toggle-icon');
+      if (icon) {
+        icon.textContent = answerKeyContent.classList.contains('show') ? '▲' : '▼';
+      }
+    });
+    answerKeyInitialized = true;
+  }
 
   // Load JSON riêng cho answer key
   try {
