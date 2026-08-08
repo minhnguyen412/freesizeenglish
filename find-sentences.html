@@ -682,14 +682,6 @@
                     showWordCard(word);
                 });
             });
-
-            // Add event listeners for descriptions
-            document.querySelectorAll('.toggle-description').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    toggleDescription(this);
-                });
-            });
         }
 
         function showWordCard(word) {
