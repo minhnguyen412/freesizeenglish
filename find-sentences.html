@@ -571,18 +571,33 @@
         // Load data from JSON file (if available)
         async function loadData() {
             try {
-                // Try to load from a data.json file
+                // Load passage-sentence.json
                 const response = await fetch('data/passage-sentence.json');
                 if (response.ok) {
                     allSentences = await response.json();
                 }
+                
+                // Load book-sentence.json và thêm vào
+                const bookResponse = await fetch('data/book-sentence.json');
+                if (bookResponse.ok) {
+                    const bookSentences = await bookResponse.json();
+                    allSentences = allSentences.concat(bookSentences);
+                }
+                
                 // Load p-words.json
                 const wordsResponse = await fetch('data/p-words.json');
                 if (wordsResponse.ok) {
                     wordsData = await wordsResponse.json();
                 }
+                
+                // Load b-words.json và thêm vào
+                const bWordsResponse = await fetch('data/b-words.json');
+                if (bWordsResponse.ok) {
+                    const bWords = await bWordsResponse.json();
+                    wordsData = wordsData.concat(bWords);
+                }
             } catch (error) {
-                console.log('Using sample data. To use your own data, create a data.json file.');
+                console.log('Using sample data. To use your own data, create data files.');
             }
         }
 
