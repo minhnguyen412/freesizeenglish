@@ -468,6 +468,7 @@
 
         let allSentences = [...sampleData];
         let currentResults = [];
+        let wordsData = [];
 
         // Hàm bỏ dấu tiếng Việt để tìm kiếm chính xác hơn
         function removeVietnameseTones(str) {
@@ -480,9 +481,14 @@
         async function loadData() {
             try {
                 // Try to load from a data.json file
-                const response = await fetch('data.json');
+                const response = await fetch('data/passage-sentence.json');
                 if (response.ok) {
                     allSentences = await response.json();
+                }
+                // Load p-words.json
+                const wordsResponse = await fetch('data/p-words.json');
+                if (wordsResponse.ok) {
+                    wordsData = await wordsResponse.json();
                 }
             } catch (error) {
                 console.log('Using sample data. To use your own data, create a data.json file.');
