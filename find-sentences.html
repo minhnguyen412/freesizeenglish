@@ -351,6 +351,84 @@
                 transition: none !important;
             }
         }
+
+        /* Modal for word details */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .word-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .word-card-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .word-card-close:hover {
+            color: #1a202c;
+        }
+
+        .word-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 12px;
+            word-break: break-word;
+        }
+
+        .word-card .pinyin {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .word-card .meaning {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .word-card .image-container {
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .word-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            max-height: 250px;
+        }
     </style>
 </head>
 <body>
@@ -399,6 +477,19 @@
         </div>
 
         <div class="results-list" id="resultsList"></div>
+    </div>
+
+    <!-- Modal for word details -->
+    <div class="modal-overlay" id="wordModal">
+        <div class="word-card">
+            <button class="word-card-close" onclick="closeWordModal()">✕</button>
+            <h3 id="wordTitle"></h3>
+            <p class="pinyin" id="wordPinyin"></p>
+            <p class="meaning" id="wordMeaning"></p>
+            <div class="image-container" id="wordImageContainer" style="display: none;">
+                <img id="wordImage" alt="Word illustration">
+            </div>
+        </div>
     </div>
 
     <script>
@@ -583,6 +674,15 @@
                 `;
             }).join('');
 
+            // Add event listeners for highlights
+            document.querySelectorAll('.sentence-item h2 span.highlight').forEach(span => {
+                span.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const word = this.textContent.trim();
+                    showWordCard(word);
+                });
+            });
+
             // Add event listeners for descriptions
             document.querySelectorAll('.toggle-description').forEach(btn => {
                 btn.addEventListener('click', function(e) {
@@ -591,6 +691,42 @@
                 });
             });
         }
+
+        function showWordCard(word) {
+            // Tìm từ trong wordsData
+            const wordData = wordsData.find(w => 
+                w.character.toLowerCase() === word.toLowerCase()
+            );
+
+            if (wordData) {
+                document.getElementById('wordTitle').textContent = wordData.character;
+                document.getElementById('wordPinyin').textContent = wordData.pinyin || '';
+                document.getElementById('wordMeaning').textContent = wordData.meaning || '';
+                
+                // Hiển thị ảnh nếu có
+                const imageContainer = document.getElementById('wordImageContainer');
+                if (wordData.imageSrc) {
+                    document.getElementById('wordImage').src = wordData.imageSrc;
+                    imageContainer.style.display = 'block';
+                } else {
+                    imageContainer.style.display = 'none';
+                }
+
+                document.getElementById('wordModal').classList.add('active');
+            }
+        }
+
+        function closeWordModal() {
+            document.getElementById('wordModal').classList.remove('active');
+        }
+
+        // Close modal khi click outside
+        document.addEventListener('click', (e) => {
+            const modal = document.getElementById('wordModal');
+            if (e.target === modal) {
+                closeWordModal();
+            }
+        });
 
         function toggleDescription(button) {
             const item = button.closest('.sentence-item');
