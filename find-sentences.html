@@ -502,6 +502,9 @@
                 if (response.ok) {
                     const data = await response.json();
                     allSentences = allSentences.concat(data.map(item => ({...item, type: 'sentence'})));
+                    console.log('✓ Loaded passage-sentence.json:', data.length, 'items');
+                } else {
+                    console.log('✗ passage-sentence.json not found (Status:', response.status + ')');
                 }
                 
                 // Load book-sentence.json
@@ -509,6 +512,9 @@
                 if (bookResponse.ok) {
                     const data = await bookResponse.json();
                     allSentences = allSentences.concat(data.map(item => ({...item, type: 'sentence'})));
+                    console.log('✓ Loaded book-sentence.json:', data.length, 'items');
+                } else {
+                    console.log('✗ book-sentence.json not found (Status:', bookResponse.status + ')');
                 }
                 
                 // Load B-quiz.json
@@ -516,6 +522,9 @@
                 if (bQuizResponse.ok) {
                     const data = await bQuizResponse.json();
                     quizItems = quizItems.concat(data.map(item => ({...item, source: 'B-quiz', type: 'quiz'})));
+                    console.log('✓ Loaded B-quiz.json:', data.length, 'items');
+                } else {
+                    console.log('✗ B-quiz.json not found (Status:', bQuizResponse.status + ')');
                 }
                 
                 // Load S-quiz-1.json
@@ -523,8 +532,15 @@
                 if (sQuizResponse.ok) {
                     const data = await sQuizResponse.json();
                     quizItems = quizItems.concat(data.map(item => ({...item, source: 'S-quiz-1', type: 'quiz'})));
+                    console.log('✓ Loaded S-quiz-1.json:', data.length, 'items');
+                } else {
+                    console.log('✗ S-quiz-1.json not found (Status:', sQuizResponse.status + ')');
                 }
+                
+                console.log('Total sentences:', allSentences.length);
+                console.log('Total quiz items:', quizItems.length);
             } catch (error) {
+                console.error('Error loading data:', error);
                 console.log('Using sample data. To use your own data, create data files.');
             }
         }
