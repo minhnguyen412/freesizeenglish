@@ -265,6 +265,50 @@
             margin-bottom: 8px;
         }
 
+        .source-badge {
+            display: inline-block;
+            background: #c7d2e8;
+            color: #1a5490;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .blanks-display {
+            background: #f0f4f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 12px;
+            border-left: 3px solid #10b981;
+        }
+
+        .blanks-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #047857;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .blanks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 8px;
+        }
+
+        .blank-item {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1f2937;
+            border: 1px solid #e5e7eb;
+        }
+
         .no-results {
             text-align: center;
             padding: 60px 20px;
@@ -343,6 +387,10 @@
             .sentence-item h2 {
                 font-size: 1rem;
             }
+
+            .blanks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -350,84 +398,6 @@
                 animation: none !important;
                 transition: none !important;
             }
-        }
-
-        /* Modal for word details */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .word-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            position: relative;
-            animation: slideUp 0.3s ease-out;
-        }
-
-        .word-card-close {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .word-card-close:hover {
-            color: #1a202c;
-        }
-
-        .word-card h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #1a202c;
-            margin-bottom: 12px;
-            word-break: break-word;
-        }
-
-        .word-card .pinyin {
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 16px;
-            font-style: italic;
-        }
-
-        .word-card .meaning {
-            font-size: 0.95rem;
-            color: #475569;
-            line-height: 1.8;
-            margin-bottom: 12px;
-        }
-
-        .word-card .image-container {
-            margin-top: 16px;
-            text-align: center;
-        }
-
-        .word-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            max-height: 250px;
         }
     </style>
 </head>
@@ -464,6 +434,12 @@
                 </div>
                 <div class="option-group">
                     <label>
+                        <input type="checkbox" id="searchBlanks" checked>
+                        Search Blanks
+                    </label>
+                </div>
+                <div class="option-group">
+                    <label>
                         <input type="checkbox" id="caseSensitive">
                         Case Sensitive
                     </label>
@@ -479,21 +455,8 @@
         <div class="results-list" id="resultsList"></div>
     </div>
 
-    <!-- Modal for word details -->
-    <div class="modal-overlay" id="wordModal">
-        <div class="word-card">
-            <button class="word-card-close" onclick="closeWordModal()">✕</button>
-            <h3 id="wordTitle"></h3>
-            <p class="pinyin" id="wordPinyin"></p>
-            <p class="meaning" id="wordMeaning"></p>
-            <div class="image-container" id="wordImageContainer" style="display: none;">
-                <img id="wordImage" alt="Word illustration">
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Sample data - In production, this would be loaded from a JSON file
+        // Sample data for regular sentences
         const sampleData = [
             {
                 "id": 171,
@@ -515,86 +478,51 @@
                     "finally results in"
                 ],
                 "description": "ði ˈoʊvərˌloʊd ʌv aɪˈdiəz rɪˈzʌlts ɪn ən ˌɪnəˈbɪlɪti tu meɪk ə ʧɔɪs, ænd ˈfaɪnəli rɪˈzʌlts ɪn ˌdɪˈsaɪdɪŋ nɑt tu pərˈsu ˈɛni ʌv ðɛm æt ɔl.<br>Sự quá tải ý tưởng dẫn đến việc không thể đưa ra lựa chọn, và cuối cùng dẫn đến việc quyết định không theo đuổi bất kỳ ý tưởng nào cả.",
-                "audioSrc": ""
-            },
-            {
-                "id": 172,
-                "title": "Opportunity lies in the place where the complaints are.",
-                "segments": [
-                    "Opportunity ",
-                    "lies in ",
-                    "the place ",
-                    "where ",
-                    "the complaints are",
-                    "."
-                ],
-                "highlight": [
-                    "lies in",
-                    "complaints"
-                ],
-                "description": "ˌɑpərˈtunəti laɪz ɪn ðə pleɪs wɛr ðə kəmˈpleɪnts ɑr.<br>Cơ hội nằm ở nơi mà những lời phàn nàn xuất hiện.",
-                "audioSrc": ""
-            },
-            {
-                "id": 173,
-                "title": "Success is not final, failure is not fatal.",
-                "segments": [
-                    "Success ",
-                    "is not ",
-                    "final, ",
-                    "failure ",
-                    "is not ",
-                    "fatal",
-                    "."
-                ],
-                "highlight": [
-                    "is not",
-                    "Success",
-                    "failure"
-                ],
-                "description": "səkˈsɛs ɪz nɑt ˈfaɪnəl, ˈfeɪljər ɪz nɑt ˈfeɪtəl.<br>Thành công không phải là điểm kết thúc, thất bại không phải là tuyệt vọng.",
-                "audioSrc": ""
+                "audioSrc": "",
+                "type": "sentence"
             }
         ];
 
         let allSentences = [...sampleData];
+        let quizItems = [];
         let currentResults = [];
-        let wordsData = [];
 
-        // Hàm bỏ dấu tiếng Việt để tìm kiếm chính xác hơn
+        // Remove Vietnamese tones for better search
         function removeVietnameseTones(str) {
             return str.normalize('NFD')
                 .replace(/[\u0300-\u036f]/g, '')
                 .toLowerCase();
         }
 
-        // Load data from JSON file (if available)
+        // Load data from JSON files
         async function loadData() {
             try {
                 // Load passage-sentence.json
                 const response = await fetch('data/passage-sentence.json');
                 if (response.ok) {
-                    allSentences = await response.json();
+                    const data = await response.json();
+                    allSentences = allSentences.concat(data.map(item => ({...item, type: 'sentence'})));
                 }
                 
-                // Load book-sentence.json và thêm vào
+                // Load book-sentence.json
                 const bookResponse = await fetch('data/book-sentence.json');
                 if (bookResponse.ok) {
-                    const bookSentences = await bookResponse.json();
-                    allSentences = allSentences.concat(bookSentences);
+                    const data = await bookResponse.json();
+                    allSentences = allSentences.concat(data.map(item => ({...item, type: 'sentence'})));
                 }
                 
-                // Load p-words.json
-                const wordsResponse = await fetch('data/p-words.json');
-                if (wordsResponse.ok) {
-                    wordsData = await wordsResponse.json();
+                // Load B-quiz.json
+                const bQuizResponse = await fetch('data/B-quiz.json');
+                if (bQuizResponse.ok) {
+                    const data = await bQuizResponse.json();
+                    quizItems = quizItems.concat(data.map(item => ({...item, source: 'B-quiz', type: 'quiz'})));
                 }
                 
-                // Load b-words.json và thêm vào
-                const bWordsResponse = await fetch('data/b-words.json');
-                if (bWordsResponse.ok) {
-                    const bWords = await bWordsResponse.json();
-                    wordsData = wordsData.concat(bWords);
+                // Load S-quiz-1.json
+                const sQuizResponse = await fetch('data/S-quiz-1.json');
+                if (sQuizResponse.ok) {
+                    const data = await sQuizResponse.json();
+                    quizItems = quizItems.concat(data.map(item => ({...item, source: 'S-quiz-1', type: 'quiz'})));
                 }
             } catch (error) {
                 console.log('Using sample data. To use your own data, create data files.');
@@ -611,13 +539,16 @@
 
             const searchTitle = document.getElementById('searchTitle').checked;
             const searchDescription = document.getElementById('searchDescription').checked;
+            const searchBlanks = document.getElementById('searchBlanks').checked;
             const caseSensitive = document.getElementById('caseSensitive').checked;
 
-            // Hỗ trợ tìm kiếm tiếng Việt: chuẩn bị cả version bỏ dấu
             let term = caseSensitive ? searchTerm : searchTerm.toLowerCase();
             let termNoTones = removeVietnameseTones(searchTerm.toLowerCase());
 
-            currentResults = allSentences.filter(sentence => {
+            currentResults = [];
+
+            // Search in regular sentences
+            const sentenceResults = allSentences.filter(sentence => {
                 let found = false;
 
                 if (searchTitle) {
@@ -640,6 +571,38 @@
 
                 return found;
             });
+
+            currentResults = currentResults.concat(sentenceResults);
+
+            // Search in quiz items
+            const quizResults = quizItems.filter(quiz => {
+                let found = false;
+
+                // Search in sentence
+                const sentenceText = caseSensitive ? quiz.sentence : quiz.sentence.toLowerCase();
+                const sentenceNoTones = removeVietnameseTones(sentenceText);
+                
+                if (sentenceText.includes(term) || sentenceNoTones.includes(termNoTones)) {
+                    found = true;
+                }
+
+                // Search in blanks (answers)
+                if (searchBlanks && !found && quiz.blanks) {
+                    for (let blank of quiz.blanks) {
+                        const answerText = caseSensitive ? blank.answer : blank.answer.toLowerCase();
+                        const answerNoTones = removeVietnameseTones(answerText);
+                        
+                        if (answerText.includes(term) || answerNoTones.includes(termNoTones)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+
+                return found;
+            });
+
+            currentResults = currentResults.concat(quizResults);
 
             displayResults();
         }
@@ -664,76 +627,57 @@
             resultsInfo.style.display = 'flex';
 
             resultsList.innerHTML = currentResults.map((item, index) => {
-                const highlightSet = new Set(
-                    (item.highlight || []).map(h => h.trim())
-                );
+                if (item.type === 'quiz') {
+                    // Display for quiz items
+                    const blanksList = item.blanks.map(blank => 
+                        `<div class="blank-item">${escapeHtml(blank.answer)}</div>`
+                    ).join('');
 
-                const segmentsHTML = (item.segments || []).map(segment => {
-                    const isHighlighted = highlightSet.has(segment.trim());
-                    const className = isHighlighted ? 'highlight' : '';
-                    return `<span class="${className}">${escapeHtml(segment)}</span>`;
-                }).join('');
+                    const sentenceHTML = item.sentence.replace(/<br>/g, '<br>');
 
-                const descriptionHTML = item.description.replace(/\\n/g, '<br>');
-
-                return `
-                    <div class="sentence-item">
-                        <div class="sentence-id">ID: ${item.id}</div>
-                        <div class="sentence-row">
-                            <button class="audio-btn" onclick="playAudio('${escapeHtml(item.audioSrc)}', '${escapeHtml(item.title)}')" title="Listen">☊</button>
-                            <button class="toggle-description" onclick="toggleDescription(this)" title="Toggle description">⬇️</button>
+                    return `
+                        <div class="sentence-item">
+                            <div class="sentence-id">ID: ${item.id}<span class="source-badge">${escapeHtml(item.source)}</span></div>
+                            <div class="sentence-row">
+                                <button class="audio-btn" onclick="playAudio('${escapeHtml(item.audio)}', '${escapeHtml(item.sentence)}')" title="Listen">☊</button>
+                            </div>
+                            <h2>${sentenceHTML}</h2>
+                            <div class="blanks-display">
+                                <div class="blanks-title">Answers</div>
+                                <div class="blanks-grid">
+                                    ${blanksList}
+                                </div>
+                            </div>
                         </div>
-                        <h2>${segmentsHTML}</h2>
-                        <p class="description" style="display: none;">${descriptionHTML}</p>
-                    </div>
-                `;
-            }).join('');
-
-            // Add event listeners for highlights
-            document.querySelectorAll('.sentence-item h2 span.highlight').forEach(span => {
-                span.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const word = this.textContent.trim();
-                    showWordCard(word);
-                });
-            });
-        }
-
-        function showWordCard(word) {
-            // Tìm từ trong wordsData
-            const wordData = wordsData.find(w => 
-                w.character.toLowerCase() === word.toLowerCase()
-            );
-
-            if (wordData) {
-                document.getElementById('wordTitle').textContent = wordData.character;
-                document.getElementById('wordPinyin').textContent = wordData.pinyin || '';
-                document.getElementById('wordMeaning').textContent = wordData.meaning || '';
-                
-                // Hiển thị ảnh nếu có
-                const imageContainer = document.getElementById('wordImageContainer');
-                if (wordData.imageSrc) {
-                    document.getElementById('wordImage').src = wordData.imageSrc;
-                    imageContainer.style.display = 'block';
+                    `;
                 } else {
-                    imageContainer.style.display = 'none';
+                    // Display for regular sentences
+                    const highlightSet = new Set(
+                        (item.highlight || []).map(h => h.trim())
+                    );
+
+                    const segmentsHTML = (item.segments || []).map(segment => {
+                        const isHighlighted = highlightSet.has(segment.trim());
+                        const className = isHighlighted ? 'highlight' : '';
+                        return `<span class="${className}">${escapeHtml(segment)}</span>`;
+                    }).join('');
+
+                    const descriptionHTML = item.description.replace(/\\n/g, '<br>');
+
+                    return `
+                        <div class="sentence-item">
+                            <div class="sentence-id">ID: ${item.id}</div>
+                            <div class="sentence-row">
+                                <button class="audio-btn" onclick="playAudio('${escapeHtml(item.audioSrc)}', '${escapeHtml(item.title)}')" title="Listen">☊</button>
+                                <button class="toggle-description" onclick="toggleDescription(this)" title="Toggle description">⬇️</button>
+                            </div>
+                            <h2>${segmentsHTML}</h2>
+                            <p class="description" style="display: none;">${descriptionHTML}</p>
+                        </div>
+                    `;
                 }
-
-                document.getElementById('wordModal').classList.add('active');
-            }
+            }).join('');
         }
-
-        function closeWordModal() {
-            document.getElementById('wordModal').classList.remove('active');
-        }
-
-        // Close modal khi click outside
-        document.addEventListener('click', (e) => {
-            const modal = document.getElementById('wordModal');
-            if (e.target === modal) {
-                closeWordModal();
-            }
-        });
 
         function toggleDescription(button) {
             const item = button.closest('.sentence-item');
