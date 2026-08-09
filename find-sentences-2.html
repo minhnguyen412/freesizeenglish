@@ -340,22 +340,25 @@
                 return;
             }
 
+            // Split search term into words
+            const searchWords = searchTerm.split(/\s+/).filter(word => word.length > 0);
+
             currentResults = allData.filter(question => {
                 let matched = false;
 
-                // Check in answers - EXACT match only
-                for (let blank of question.blanks) {
-                    const answerLower = blank.answer.toLowerCase();
-                    if (answerLower.includes(searchTerm)) {
-                        matched = true;
-                        break;
-                    }
+                // Check in answers - ALL search words must be found
+                const answerTexts = question.blanks.map(b => b.answer.toLowerCase()).join(' ');
+                const answerMatches = searchWords.every(word => answerTexts.includes(word));
+                
+                if (answerMatches) {
+                    matched = true;
                 }
 
-                // Check in sentence - EXACT match only (case-insensitive)
+                // Check in sentence - ALL search words must be found
                 if (!matched) {
                     const sentenceLower = question.sentence.toLowerCase();
-                    if (sentenceLower.includes(searchTerm)) {
+                    const sentenceMatches = searchWords.every(word => sentenceLower.includes(word));
+                    if (sentenceMatches) {
                         matched = true;
                     }
                 }
