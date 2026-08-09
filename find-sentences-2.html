@@ -340,7 +340,7 @@
                 return;
             }
 
-            // Build search terms including normalized Vietnamese and English translations
+            // Build search terms
             const searchTerms = new Set([searchTerm]);
             searchTerms.add(normalizeVietnamese(searchTerm));
             
@@ -351,40 +351,36 @@
             }
 
             currentResults = allData.filter(question => {
-                let matchScore = 0;
-                let maxScore = 0;
+                let matched = false;
 
-                // Check in answers - MOST IMPORTANT (weight: 100)
+                // Check in answers - EXACT or CONTAIN (for phrases)
                 for (let blank of question.blanks) {
-                    const answerLower = blank.answer.toLowerCase();
+                    const answerLower = blank.answer.toLowerCase().replace(/[.,;:<>()]/g, '');
                     for (let term of searchTerms) {
-                        // Exact word match in answers
+                        // Exact match
                         if (answerLower === term) {
-                            matchScore += 100;
-                            maxScore += 100;
+                            matched = true;
+                            break;
                         }
-                        // Partial match in answers (only if word is long enough)
-                        else if (term.length >= 3 && answerLower.includes(term)) {
-                            matchScore += 50;
-                            maxScore += 100;
+                        // For longer search terms (phrases), allow contains
+                        if (term.length >= 4 && answerLower.includes(term)) {
+                            matched = true;
+                            break;
                         }
                     }
+                    if (matched) break;
                 }
 
-                // Check in sentence - SECONDARY (weight: 30)
-                if (matchScore === 0) { // Only if no answer match
+                // Check in sentence - PHRASE match (for Vietnamese phrases like "lâu rồi")
+                if (!matched) {
                     const sentenceLower = question.sentence.toLowerCase();
                     const sentenceNormalized = normalizeVietnamese(question.sentence);
-                    const sentenceWords = sentenceLower.split(/\s+/);
                     
                     for (let term of searchTerms) {
-                        // Exact word match in sentence
-                        for (let word of sentenceWords) {
-                            const cleanWord = word.replace(/[.,;:<>()]/g, '').toLowerCase();
-                            if (cleanWord === term) {
-                                matchScore += 30;
-                                maxScore += 30;
-                            }
+                        // Exact phrase match in sentence
+                        if (sentenceLower.includes(term) || sentenceNormalized.includes(term)) {
+                            matched = true;
+                            break;
                         }
                     }
                 }
@@ -392,32 +388,7 @@
                 // Filter by quiz source
                 const filterMatch = currentFilter === 'all' || question.quizSource === currentFilter;
 
-                // Return only if has meaningful match (at least 30 points)
-                return matchScore >= 30 && filterMatch;
-            });
-
-            // Sort by relevance (highest score first)
-            currentResults.sort((a, b) => {
-                let scoreA = 0, scoreB = 0;
-
-                // Calculate scores for sorting
-                for (let blank of a.blanks) {
-                    const answerLower = blank.answer.toLowerCase();
-                    for (let term of new Set([searchTerm])) {
-                        if (answerLower === term) scoreA += 100;
-                        else if (searchTerm.length >= 3 && answerLower.includes(term)) scoreA += 50;
-                    }
-                }
-
-                for (let blank of b.blanks) {
-                    const answerLower = blank.answer.toLowerCase();
-                    for (let term of new Set([searchTerm])) {
-                        if (answerLower === term) scoreB += 100;
-                        else if (searchTerm.length >= 3 && answerLower.includes(term)) scoreB += 50;
-                    }
-                }
-
-                return scoreB - scoreA;
+                return matched && filterMatch;
             });
 
             displayResults();
@@ -455,20 +426,35 @@
 
         function getFullSentence(question) {
             let result = question.sentence;
-            const blankLine = '___ ';
             const blankRegex = /___ /g;
             
             let blankIndex = 0;
-            result = result.replace(blankRegex, () => {
+            let lastIndex = 0;
+            let newResult = '';
+            let match;
+            
+            // Reset regex
+            blankRegex.lastIndex = 0;
+            
+            while ((match = blankRegex.exec(result)) !== null) {
+                // Add text before blank
+                newResult += result.substring(lastIndex, match.index);
+                
                 if (blankIndex < question.blanks.length) {
                     const answer = question.blanks[blankIndex].answer;
+                    newResult += `<strong style="color: #2e7d32; background: #c8e6c9; padding: 2px 4px; border-radius: 2px;">${escapeHtml(answer)}</strong> `;
                     blankIndex++;
-                    return `<strong style="color: #2e7d32; background: #c8e6c9; padding: 2px 4px; border-radius: 2px;">${escapeHtml(answer)}</strong> `;
+                } else {
+                    newResult += match[0]; // Keep the blank if no answer
                 }
-                return blankLine;
-            });
-
-            return result.replace(/<br>/g, '<br>');
+                
+                lastIndex = match.index + match[0].length;
+            }
+            
+            // Add remaining text
+            newResult += result.substring(lastIndex);
+            
+            return newResult.replace(/<br>/g, '<br>');
         }
 
         function filterByQuiz(quiz) {
