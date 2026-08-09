@@ -494,13 +494,30 @@
                 .toLowerCase();
         }
 
+        // Helper function to normalize data (handle both array and object structures)
+        function normalizeData(data) {
+            if (Array.isArray(data)) {
+                return data;
+            } else if (data && typeof data === 'object') {
+                // Try common object structure patterns
+                if (Array.isArray(data.items)) return data.items;
+                if (Array.isArray(data.data)) return data.data;
+                if (Array.isArray(data.sentences)) return data.sentences;
+                if (Array.isArray(data.quizzes)) return data.quizzes;
+                // If it's a single object, wrap it in array
+                return [data];
+            }
+            return [];
+        }
+
         // Load data from JSON files
         async function loadData() {
             try {
                 // Load passage-sentence.json
                 const response = await fetch('data/passage-sentence.json');
                 if (response.ok) {
-                    const data = await response.json();
+                    const rawData = await response.json();
+                    const data = normalizeData(rawData);
                     allSentences = allSentences.concat(data.map(item => ({...item, type: 'sentence'})));
                     console.log('✓ Loaded passage-sentence.json:', data.length, 'items');
                 } else {
@@ -510,7 +527,8 @@
                 // Load book-sentence.json
                 const bookResponse = await fetch('data/book-sentence.json');
                 if (bookResponse.ok) {
-                    const data = await bookResponse.json();
+                    const rawData = await bookResponse.json();
+                    const data = normalizeData(rawData);
                     allSentences = allSentences.concat(data.map(item => ({...item, type: 'sentence'})));
                     console.log('✓ Loaded book-sentence.json:', data.length, 'items');
                 } else {
@@ -520,7 +538,8 @@
                 // Load B-quiz.json
                 const bQuizResponse = await fetch('data/B-quiz.json');
                 if (bQuizResponse.ok) {
-                    const data = await bQuizResponse.json();
+                    const rawData = await bQuizResponse.json();
+                    const data = normalizeData(rawData);
                     quizItems = quizItems.concat(data.map(item => ({...item, source: 'B-quiz', type: 'quiz'})));
                     console.log('✓ Loaded B-quiz.json:', data.length, 'items');
                 } else {
@@ -530,7 +549,8 @@
                 // Load S-quiz-1.json
                 const sQuizResponse = await fetch('data/S-quiz-1.json');
                 if (sQuizResponse.ok) {
-                    const data = await sQuizResponse.json();
+                    const rawData = await sQuizResponse.json();
+                    const data = normalizeData(rawData);
                     quizItems = quizItems.concat(data.map(item => ({...item, source: 'S-quiz-1', type: 'quiz'})));
                     console.log('✓ Loaded S-quiz-1.json:', data.length, 'items');
                 } else {
