@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Search - Find Questions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .search-section {
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        .filter-section {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 15px;
+            background: #f0f0f0;
+            color: #333;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        #resultsInfo {
+            display: none;
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .results-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .result-item {
+            background: #f9f9f9;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .result-item:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .item-header:hover {
+            color: #667eea;
+        }
+
+        .quiz-source {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #667eea;
+            color: white;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .quiz-source.b-quiz {
+            background: #764ba2;
+        }
+
+        .question-id {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+
+        .description {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .description.show {
+            display: block;
+        }
+
+        .sentence-section {
+            margin-bottom: 15px;
+        }
+
+        .sentence-label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sentence-text {
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 6px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .full-sentence {
+            background: #e8f5e9;
+            padding: 12px;
+            border-radius: 6px;
+            line-height: 1.6;
+            color: #2e7d32;
+            margin-top: 8px;
+        }
+
+        .answers-section {
+            margin-top: 15px;
+        }
+
+        .answers-label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .answers-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .answer-tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            border: 1px solid #90caf9;
+        }
+
+        .audio-btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .audio-btn:hover {
+            background: #ff5252;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #999;
+            padding: 40px 20px;
+            font-size: 18px;
+        }
+
+        .highlight {
+            background: yellow;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .filter-section {
+                flex-direction: column;
+            }
+
+            .filter-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Quiz Search</h1>
+        <p style="text-align: center; color: #999; margin-bottom: 20px;">Search by question, Vietnamese, or English keywords</p>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Enter keyword (Tiếng Việt or English)..."
+                    autocomplete="off"
+                >
+                <button onclick="performSearch()">Search</button>
+                <button onclick="clearSearch()" style="background: #999;">Clear</button>
+            </div>
+
+            <div class="filter-section">
+                <button class="filter-btn active" onclick="filterByQuiz('all')">All</button>
+                <button class="filter-btn" onclick="filterByQuiz('S-quiz-1')">S-quiz-1</button>
+                <button class="filter-btn" onclick="filterByQuiz('B-quiz')">B-quiz</button>
+            </div>
+        </div>
+
+        <div id="resultsInfo"></div>
+        <div id="resultsList" class="results-list"></div>
+    </div>
+
+    <script>
+        let allData = [];
+        let currentResults = [];
+        let currentFilter = 'all';
+
+        // Vietnamese to English translation mapping (common words)
+        const vietnameseToEnglish = {
+            'ngày': 'day',
+            'cuối cùng': 'final',
+            'năm': 'year',
+            'lớp': 'class',
+            'tôi': 'i',
+            'bị': 'was',
+            'cây': 'tree',
+            'gậy': 'stick',
+            'bóng chày': 'baseball',
+            'đánh': 'hit',
+            'mặt': 'face',
+            'vào': 'on',
+            'cái': 'a',
+            'trong': 'in',
+            'học': 'school',
+            'trung học': 'high school',
+            'năm hai': 'sophomore',
+            'lớp hai': 'sophomore',
+            'với': 'with',
+            'của': 'of',
+            'cơ': 'or',
+            'và': 'and',
+            'là': 'is',
+            'được': 'be',
+            'có': 'have',
+            'này': 'this',
+            'khi': 'when',
+            'nơi': 'place',
+            'điều': 'thing',
+            'sự': 'a'
+        };
+
+        // Normalize Vietnamese text (remove diacritics for better matching)
+        function normalizeVietnamese(text) {
+            const map = {
+                'à|á|ả|ã|ạ|ă|ằ|ắ|ẳ|ẵ|ặ|â|ầ|ấ|ẩ|ẫ|ậ': 'a',
+                'đ': 'd',
+                'è|é|ẻ|ẽ|ẹ|ê|ề|ế|ể|ễ|ệ': 'e',
+                'ì|í|ỉ|ĩ|ị': 'i',
+                'ò|ó|ỏ|õ|ọ|ô|ồ|ố|ổ|ỗ|ộ|ơ|ờ|ớ|ở|ỡ|ợ': 'o',
+                'ù|ú|ủ|ũ|ụ|ư|ừ|ứ|ử|ữ|ự': 'u',
+                'ỳ|ý|ỷ|ỹ|ỵ': 'y',
+                'ç': 'c'
+            };
+            
+            let result = text.toLowerCase();
+            Object.keys(map).forEach(key => {
+                result = result.replace(new RegExp(key, 'g'), map[key]);
+            });
+            return result;
+        }
+
+        // Get English translations for Vietnamese keywords
+        function getEnglishTranslations(vietnameseTerm) {
+            const normalized = normalizeVietnamese(vietnameseTerm);
+            const translations = [];
+            
+            Object.keys(vietnameseToEnglish).forEach(vn => {
+                if (normalizeVietnamese(vn).includes(normalized) || 
+                    normalized.includes(normalizeVietnamese(vn))) {
+                    translations.push(vietnameseToEnglish[vn]);
+                }
+            });
+            
+            return translations;
+        }
+
+        async function loadData() {
+            try {
+                console.log('Loading data...');
+                
+                // Load S-quiz-1.json
+                const response1 = await fetch('data/S-quiz-1.json');
+                const data1 = await response1.json();
+                
+                // Load B-quiz.json
+                const response2 = await fetch('data/B-quiz.json');
+                const data2 = await response2.json();
+
+                // Combine data with quiz source info
+                allData = [
+                    ...data1.questions.map(q => ({ ...q, quizSource: 'S-quiz-1' })),
+                    ...data2.questions.map(q => ({ ...q, quizSource: 'B-quiz' }))
+                ];
+
+                console.log('Data loaded successfully:', allData.length, 'questions');
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('resultsList').innerHTML = 
+                    '<div class="no-results">❌ Error loading data. Please check JSON files.</div>';
+            }
+        }
+
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            
+            if (!searchTerm) {
+                document.getElementById('resultsList').innerHTML = 
+                    '<div class="no-results">Please enter a keyword to search (Vietnamese or English)</div>';
+                document.getElementById('resultsInfo').style.display = 'none';
+                return;
+            }
+
+            // Build search terms including normalized Vietnamese and English translations
+            const searchTerms = new Set([searchTerm]);
+            searchTerms.add(normalizeVietnamese(searchTerm));
+            
+            // Add English translations if searching Vietnamese
+            if (/[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđç]/i.test(searchTerm)) {
+                const englishTerms = getEnglishTranslations(searchTerm);
+                englishTerms.forEach(term => searchTerms.add(term));
+            }
+
+            currentResults = allData.filter(question => {
+                let matched = false;
+
+                // Check in sentence (both original and normalized)
+                const sentenceLower = question.sentence.toLowerCase();
+                const sentenceNormalized = normalizeVietnamese(question.sentence);
+                
+                for (let term of searchTerms) {
+                    if (sentenceLower.includes(term) || sentenceNormalized.includes(term)) {
+                        matched = true;
+                        break;
+                    }
+                }
+
+                // Check in answers
+                if (!matched) {
+                    for (let blank of question.blanks) {
+                        const answerLower = blank.answer.toLowerCase();
+                        for (let term of searchTerms) {
+                            if (answerLower.includes(term)) {
+                                matched = true;
+                                break;
+                            }
+                        }
+                        if (matched) break;
+                    }
+                }
+
+                // Filter by quiz source
+                const filterMatch = currentFilter === 'all' || question.quizSource === currentFilter;
+
+                return matched && filterMatch;
+            });
+
+            displayResults();
+        }
+
+        function displayResults() {
+            const resultsList = document.getElementById('resultsList');
+            const resultsInfo = document.getElementById('resultsInfo');
+
+            if (currentResults.length === 0) {
+                resultsList.innerHTML = '<div class="no-results">No matching results found</div>';
+                resultsInfo.style.display = 'none';
+                return;
+            }
+
+            resultsInfo.textContent = `Found ${currentResults.length} result${currentResults.length !== 1 ? 's' : ''}`;
+            resultsInfo.style.display = 'block';
+
+            resultsList.innerHTML = currentResults.map((question, index) => `
+                <div class="result-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <div style="flex: 1;">
+                            <span class="quiz-source ${question.quizSource === 'B-quiz' ? 'b-quiz' : ''}">
+                                ${question.quizSource}
+                            </span>
+                            <span class="question-id">Question #${question.id}</span>
+                        </div>
+                        <button class="toggle-btn">⬇️</button>
+                    </div>
+                    <div class="description">
+                        <div class="sentence-section">
+                            <div class="sentence-label">
+                                📝 Vietnamese Sentence:
+                                ${question.audio ? `<button class="audio-btn" onclick="playAudio('${escapeHtml(question.audio)}', 'Question ${question.id}')">🔊 Listen</button>` : ''}
+                            </div>
+                            <div class="sentence-text">${question.sentence}</div>
+                        </div>
+
+                        <div class="sentence-section">
+                            <div class="sentence-label">✅ Complete Sentence (English):</div>
+                            <div class="full-sentence">${getFullSentence(question)}</div>
+                        </div>
+
+                        <div class="answers-section">
+                            <div class="answers-label">📋 Fill-in-the-blank Words (${question.blanks.length} words):</div>
+                            <div class="answers-grid">
+                                ${question.blanks.map((blank, idx) => 
+                                    `<div class="answer-tag">${escapeHtml(blank.answer)}</div>`
+                                ).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getFullSentence(question) {
+            let result = question.sentence;
+            const blankLine = '___ ';
+            const blankRegex = /___ /g;
+            
+            let blankIndex = 0;
+            result = result.replace(blankRegex, () => {
+                if (blankIndex < question.blanks.length) {
+                    const answer = question.blanks[blankIndex].answer;
+                    blankIndex++;
+                    return `<strong style="color: #2e7d32; background: #c8e6c9; padding: 2px 4px; border-radius: 2px;">${escapeHtml(answer)}</strong> `;
+                }
+                return blankLine;
+            });
+
+            return result.replace(/<br>/g, '<br>');
+        }
+
+        function toggleDescription(header) {
+            const item = header.closest('.result-item');
+            const description = item.querySelector('.description');
+            const button = header.querySelector('.toggle-btn');
+
+            description.classList.toggle('show');
+            
+            if (description.classList.contains('show')) {
+                button.textContent = '⬆️';
+            } else {
+                button.textContent = '⬇️';
+            }
+        }
+
+        function filterByQuiz(quiz) {
+            currentFilter = quiz;
+            
+            // Update button styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Re-perform search with new filter
+            performSearch();
+        }
+
+        function playAudio(audioSrc, title) {
+            if (audioSrc && audioSrc.trim()) {
+                const audio = new Audio(audioSrc);
+                audio.play().catch(err => {
+                    console.error('Error playing audio:', err);
+                    alert('Could not play audio file');
+                });
+            } else {
+                // Use Web Speech API for TTS
+                const utterance = new SpeechSynthesisUtterance(title);
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('resultsList').innerHTML = '';
+            document.getElementById('resultsInfo').style.display = 'none';
+            currentResults = [];
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Allow Enter key to search
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Load data on page load
+        window.addEventListener('load', () => {
+            loadData();
+        });
+
+        // Set initial message
+        window.addEventListener('load', () => {
+            const resultsList = document.getElementById('resultsList');
+            resultsList.innerHTML = '<div class="no-results">Enter a keyword to search (Vietnamese or English)</div>';
+        });
+    </script>
+</body>
+</html>
