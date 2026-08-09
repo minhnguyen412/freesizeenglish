@@ -227,7 +227,7 @@
         let currentResults = [];
         let currentFilter = 'all';
 
-        // Vietnamese to English translation mapping (common words)
+        // Translations (kept for reference but not used in search)
         const vietnameseToEnglish = {
             'ngày': 'day',
             'cuối cùng': 'final',
@@ -332,7 +332,7 @@
                 return;
             }
 
-            // Reject very short or meaningless searches
+            // Reject very short searches
             if (searchTerm.length < 2) {
                 document.getElementById('resultsList').innerHTML = 
                     '<div class="no-results">Please enter at least 2 characters</div>';
@@ -340,48 +340,23 @@
                 return;
             }
 
-            // Build search terms
-            const searchTerms = new Set([searchTerm]);
-            searchTerms.add(normalizeVietnamese(searchTerm));
-            
-            // Add English translations if searching Vietnamese
-            if (/[àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđç]/i.test(searchTerm)) {
-                const englishTerms = getEnglishTranslations(searchTerm);
-                englishTerms.forEach(term => searchTerms.add(term));
-            }
-
             currentResults = allData.filter(question => {
                 let matched = false;
 
-                // Check in answers - EXACT or CONTAIN (for phrases)
+                // Check in answers - EXACT match only
                 for (let blank of question.blanks) {
-                    const answerLower = blank.answer.toLowerCase().replace(/[.,;:<>()]/g, '');
-                    for (let term of searchTerms) {
-                        // Exact match
-                        if (answerLower === term) {
-                            matched = true;
-                            break;
-                        }
-                        // For longer search terms (phrases), allow contains
-                        if (term.length >= 4 && answerLower.includes(term)) {
-                            matched = true;
-                            break;
-                        }
+                    const answerLower = blank.answer.toLowerCase();
+                    if (answerLower.includes(searchTerm)) {
+                        matched = true;
+                        break;
                     }
-                    if (matched) break;
                 }
 
-                // Check in sentence - PHRASE match (for Vietnamese phrases like "lâu rồi")
+                // Check in sentence - EXACT match only (case-insensitive)
                 if (!matched) {
                     const sentenceLower = question.sentence.toLowerCase();
-                    const sentenceNormalized = normalizeVietnamese(question.sentence);
-                    
-                    for (let term of searchTerms) {
-                        // Exact phrase match in sentence
-                        if (sentenceLower.includes(term) || sentenceNormalized.includes(term)) {
-                            matched = true;
-                            break;
-                        }
+                    if (sentenceLower.includes(searchTerm)) {
+                        matched = true;
                     }
                 }
 
@@ -426,35 +401,31 @@
 
         function getFullSentence(question) {
             let result = question.sentence;
-            const blankRegex = /___ /g;
             
+            // Replace both "___ " and "___" (with or without space)
             let blankIndex = 0;
-            let lastIndex = 0;
-            let newResult = '';
-            let match;
             
-            // Reset regex
-            blankRegex.lastIndex = 0;
-            
-            while ((match = blankRegex.exec(result)) !== null) {
-                // Add text before blank
-                newResult += result.substring(lastIndex, match.index);
-                
+            // First replace all "___ " (with space)
+            result = result.replace(/___ /g, () => {
                 if (blankIndex < question.blanks.length) {
                     const answer = question.blanks[blankIndex].answer;
-                    newResult += `<strong style="color: #2e7d32; background: #c8e6c9; padding: 2px 4px; border-radius: 2px;">${escapeHtml(answer)}</strong> `;
                     blankIndex++;
-                } else {
-                    newResult += match[0]; // Keep the blank if no answer
+                    return `<strong style="color: #2e7d32; background: #c8e6c9; padding: 2px 4px; border-radius: 2px;">${escapeHtml(answer)}</strong> `;
                 }
-                
-                lastIndex = match.index + match[0].length;
-            }
+                return '___ ';
+            });
             
-            // Add remaining text
-            newResult += result.substring(lastIndex);
+            // Then replace remaining "___" (without space) at end or in middle
+            result = result.replace(/___/g, () => {
+                if (blankIndex < question.blanks.length) {
+                    const answer = question.blanks[blankIndex].answer;
+                    blankIndex++;
+                    return `<strong style="color: #2e7d32; background: #c8e6c9; padding: 2px 4px; border-radius: 2px;">${escapeHtml(answer)}</strong>`;
+                }
+                return '___';
+            });
             
-            return newResult.replace(/<br>/g, '<br>');
+            return result.replace(/<br>/g, '<br>');
         }
 
         function filterByQuiz(quiz) {
