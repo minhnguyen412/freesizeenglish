@@ -3243,6 +3243,363 @@
         { "answer": "low" }
     ],
     "words": ["girl,", "heart", "have", "then", "pull", "much", "that", "your", "down", "another", "she", "hatred", "must", "You", "so", "already", "in", "is", "going", "also", "even", "you", "low", "if"]
+},
+        {
+    "id": 142,
+    "audio": "",
+    "sentence": "Đây là một ngày không có lịch học của mình tại SMU.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Here's" },
+        { "answer": "another" },
+        { "answer": "day" },
+        { "answer": "in" },
+        { "answer": "my" },
+        { "answer": "life" },
+        { "answer": "at" },
+        { "answer": "SMU" },
+        { "answer": "with" },
+        { "answer": "no" },
+        { "answer": "classes" }
+    ],
+    "words": ["SMU", "day", "my", "with", "Here's", "another", "at", "no", "life", "in", "classes"]
+},
+
+{
+    "id": 143,
+    "audio": "",
+    "sentence": "Hôm nay là thứ Sáu nên mình cũng không có quá nhiều việc phải làm.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "Today" },
+        { "answer": "was" },
+        { "answer": "Friday," },
+        { "answer": "so" },
+        { "answer": "I" },
+        { "answer": "didn't" },
+        { "answer": "really" },
+        { "answer": "have" },
+        { "answer": "that" },
+        { "answer": "much" },
+        { "answer": "to" },
+        { "answer": "do" }
+    ],
+    "words": ["Today", "do", "to", "was", "so", "Friday,", "didn't", "really", "have", "that", "I", "much"]
+},
+
+{
+    "id": 144,
+    "audio": "",
+    "sentence": "Mình cần giặt ga trải giường nên đã tranh thủ làm việc đó, rồi chuẩn bị đi làm.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "did" },
+        { "answer": "have" },
+        { "answer": "to" },
+        { "answer": "wash" },
+        { "answer": "the" },
+        { "answer": "sheets" },
+        { "answer": "on" },
+        { "answer": "my" },
+        { "answer": "bed," },
+        { "answer": "so" },
+        { "answer": "I" },
+        { "answer": "did" },
+        { "answer": "that," },
+        { "answer": "and" },
+        { "answer": "then" },
+        { "answer": "I" },
+        { "answer": "got" },
+        { "answer": "ready" },
+        { "answer": "to" },
+        { "answer": "go" },
+        { "answer": "work," },
+        { "answer": "girl" }
+    ],
+    "words": ["on", "I", "did", "bed,", "have", "ready", "got", "to", "to", "wash", "did", "then", "I", "girl", "that,", "work,", "the", "my", "sheets", "I", "go", "so", "and"]
+},
+
+{
+    "id": 145,
+    "audio": "",
+    "sentence": "Nhưng trước tiên, mình phải mang kính đi sửa đã.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "first" },
+        { "answer": "I" },
+        { "answer": "had" },
+        { "answer": "to" },
+        { "answer": "take" },
+        { "answer": "my" },
+        { "answer": "glasses" },
+        { "answer": "to" },
+        { "answer": "get" },
+        { "answer": "fixed" }
+    ],
+    "words": ["But", "to", "my", "to", "first", "I", "glasses", "had", "take", "fixed", "get"]
+},
+
+{
+    "id": 146,
+    "audio": "",
+    "sentence": "Chẳng hiểu sao kính lại bị hỏng nữa, nhưng giờ thì sửa xong rồi, dùng tốt lắm.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "don't" },
+        { "answer": "even" },
+        { "answer": "know" },
+        { "answer": "how" },
+        { "answer": "they" },
+        { "answer": "broke," },
+        { "answer": "but" },
+        { "answer": "here" },
+        { "answer": "they" },
+        { "answer": "are" },
+        { "answer": "They're" },
+        { "answer": "fixed" },
+        { "answer": "They're" },
+        { "answer": "good" }
+    ],
+    "words": ["broke,", "fixed", "they", "how", "even", "here", "know", "are", "They're", "don't", "but", "they", "They're", "I", "good"]
+},
+
+{
+    "id": 147,
+    "audio": "",
+    "sentence": "Sau đó, mình ghé Equinox để đi bộ một chút – đây là lần đầu tiên mình đi tập lại sau cả tuần đấy.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "then" },
+        { "answer": "I" },
+        { "answer": "headed" },
+        { "answer": "to" },
+        { "answer": "Equinox" },
+        { "answer": "to" },
+        { "answer": "go" },
+        { "answer": "for" },
+        { "answer": "a" },
+        { "answer": "walk" },
+        { "answer": "First" },
+        { "answer": "time" },
+        { "answer": "in," },
+        { "answer": "like," },
+        { "answer": "a" },
+        { "answer": "week" }
+    ],
+    "words": ["I", "for", "a", "go", "time", "headed", "walk", "First", "a", "Equinox", "week", "to", "like,", "to", "And", "in,", "then"]
+},
+
+{
+    "id": 148,
+    "audio": "",
+    "sentence": "Zuzu cũng đến đó nên tụi mình gặp nhau rồi cùng tập, xong xuôi thì ghé quán Kilo để thử cà phê.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "Zuzu" },
+        { "answer": "came" },
+        { "answer": "here," },
+        { "answer": "so" },
+        { "answer": "we" },
+        { "answer": "met" },
+        { "answer": "up" },
+        { "answer": "and" },
+        { "answer": "did" },
+        { "answer": "that," },
+        { "answer": "and" },
+        { "answer": "then" },
+        { "answer": "we" },
+        { "answer": "went" },
+        { "answer": "to" },
+        { "answer": "kilo" },
+        { "answer": "to" },
+        { "answer": "try" },
+        { "answer": "their" },
+        { "answer": "coffee" }
+    ],
+    "words": ["met", "went", "and", "we", "up", "did", "coffee", "came", "so", "their", "and", "try", "to", "then", "here,", "kilo", "we", "Zuzu", "And", "to", "that,"]
+},
+
+{
+    "id": 149,
+    "audio": "",
+    "sentence": "Mình nghe nhiều lời khen về quán này lắm.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I've" },
+        { "answer": "heard" },
+        { "answer": "so" },
+        { "answer": "many" },
+        { "answer": "good" },
+        { "answer": "things" },
+        { "answer": "about" },
+        { "answer": "this" },
+        { "answer": "place" }
+    ],
+    "words": ["many", "so", "place", "things", "this", "I've", "about", "heard", "good"]
+},
+
+{
+    "id": 150,
+    "audio": "",
+    "sentence": "Cách họ pha chế cứ như đang làm thí nghiệm trong phòng lab vậy, ấn tượng thật sự.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "They" },
+        { "answer": "literally" },
+        { "answer": "were" },
+        { "answer": "working" },
+        { "answer": "like" },
+        { "answer": "a" },
+        { "answer": "lab" },
+        { "answer": "It" },
+        { "answer": "was" },
+        { "answer": "crazy" }
+    ],
+    "words": ["crazy", "like", "They", "were", "lab", "working", "a", "was", "It", "literally"]
+},
+
+{
+    "id": 151,
+    "audio": "",
+    "sentence": "Cả hai đứa đều gọi món latte sữa nướng, vị ngon tuyệt.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "we" },
+        { "answer": "both" },
+        { "answer": "got" },
+        { "answer": "the" },
+        { "answer": "toasted" },
+        { "answer": "milk" },
+        { "answer": "latte" },
+        { "answer": "It" },
+        { "answer": "was" },
+        { "answer": "good" }
+    ],
+    "words": ["got", "But", "we", "toasted", "latte", "was", "good", "milk", "the", "It", "both"]
+},
+
+{
+    "id": 152,
+    "audio": "",
+    "sentence": "Về nhà, mình tranh thủ làm việc và đặt vé máy bay, rồi mở mấy gói quà từ nhãn hàng cùng vài món đồ mình đã đặt mua.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "then" },
+        { "answer": "we" },
+        { "answer": "got" },
+        { "answer": "home," },
+        { "answer": "did" },
+        { "answer": "some" },
+        { "answer": "work" },
+        { "answer": "and" },
+        { "answer": "book" },
+        { "answer": "some" },
+        { "answer": "flights," },
+        { "answer": "and" },
+        { "answer": "I" },
+        { "answer": "opened" },
+        { "answer": "some" },
+        { "answer": "PR" },
+        { "answer": "packages" },
+        { "answer": "and" },
+        { "answer": "some" },
+        { "answer": "stuff" },
+        { "answer": "that" },
+        { "answer": "I" },
+        { "answer": "ordered" }
+    ],
+    "words": ["we", "I", "PR", "some", "and", "did", "stuff", "opened", "book", "that", "and", "some", "ordered", "packages", "flights,", "and", "work", "I", "some", "some", "And", "home,", "then", "got"]
+},
+
+{
+    "id": 153,
+    "audio": "",
+    "sentence": "Mình chưa từng dùng chăn của hãng Lola bao giờ, và họ đã gửi tặng mình chiếc này.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "But" },
+        { "answer": "I've" },
+        { "answer": "never" },
+        { "answer": "had" },
+        { "answer": "a" },
+        { "answer": "Lola" },
+        { "answer": "blanket," },
+        { "answer": "and" },
+        { "answer": "they" },
+        { "answer": "sent" },
+        { "answer": "me" },
+        { "answer": "this" },
+        { "answer": "one" }
+    ],
+    "words": ["Lola", "this", "But", "they", "I've", "blanket,", "sent", "never", "had", "one", "a", "me", "and"]
+},
+
+{
+    "id": 154,
+    "audio": "",
+    "sentence": "Bình thường mình hay đắp cả đống chăn khi ngủ nên rất hào hứng khi có thêm chiếc này.<br>___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "I" },
+        { "answer": "sleep" },
+        { "answer": "with" },
+        { "answer": "a" },
+        { "answer": "million" },
+        { "answer": "blankets," },
+        { "answer": "so" },
+        { "answer": "I'm" },
+        { "answer": "so" },
+        { "answer": "excited" },
+        { "answer": "to" },
+        { "answer": "add" },
+        { "answer": "it" }
+    ],
+    "words": ["sleep", "a", "add", "blankets,", "with", "I", "million", "I'm", "it", "to", "so", "so", "excited"]
+},
+
+{
+    "id": 155,
+    "audio": "",
+    "sentence": "Sau đó, mình tắm rửa và chuẩn bị ra ngoài.<br>___ ___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "I" },
+        { "answer": "showered" },
+        { "answer": "and" },
+        { "answer": "got" },
+        { "answer": "ready" },
+        { "answer": "to" },
+        { "answer": "go" },
+        { "answer": "out" }
+    ],
+    "words": ["out", "and", "showered", "And", "I", "ready", "got", "to", "go"]
+},
+
+{
+    "id": 156,
+    "audio": "",
+    "sentence": "Rồi mình đi gặp bạn bè.<br>___ ___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "And" },
+        { "answer": "then" },
+        { "answer": "I" },
+        { "answer": "met" },
+        { "answer": "up" },
+        { "answer": "with" },
+        { "answer": "my" },
+        { "answer": "friends" }
+    ],
+    "words": ["I", "up", "then", "with", "met", "friends", "my", "And"]
+},
+
+{
+    "id": 157,
+    "audio": "",
+    "sentence": "Tụi mình đã có một buổi tối tuyệt vời nhất từ ​​trước đến nay.<br>___ ___ ___ ___ ___ ___ ___",
+    "blanks": [
+        { "answer": "We" },
+        { "answer": "actually" },
+        { "answer": "had" },
+        { "answer": "the" },
+        { "answer": "best" },
+        { "answer": "night" },
+        { "answer": "ever" }
+    ],
+    "words": ["ever", "best", "night", "We", "the", "had", "actually"]
 }
     ]
 }
