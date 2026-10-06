@@ -176,7 +176,7 @@ async function openQuizModal() {
   }
 
   try {
-    const res = await fetch('data/speaking-data.json');
+    const res = await fetch('data/speaking-data-1.json');
     if (!res.ok) throw new Error('Cannot load quiz data');
     const data = await res.json();
     const allLessons = Array.isArray(data) ? data : Object.values(data);
