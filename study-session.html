@@ -176,7 +176,7 @@ async function openQuizModal() {
   }
 
   try {
-    const res = await fetch('data/speaking-data-1.json');
+    const res = await fetch('data/speaking-data.json');
     if (!res.ok) throw new Error('Cannot load quiz data');
     const data = await res.json();
     const allLessons = Array.isArray(data) ? data : Object.values(data);
@@ -203,7 +203,9 @@ async function openQuizModal() {
 function closeQuizModal() {
   if (isRecording) stopRecording();
   document.getElementById('quizModal').classList.remove('active');
-  currentQuizData = null;
+  currentLesson = null;
+  currentQuizzes = [];
+  currentQuizIndex = 0;
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -517,7 +519,7 @@ async function main() {
   }
 
   try {
-    const res = await fetch('data/speaking-data-1.json');
+    const res = await fetch('data/speaking-data.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const json = await res.json();
     let sessions = Array.isArray(json) ? json : Object.values(json);
