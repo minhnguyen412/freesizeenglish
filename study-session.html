@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREESIZE ENGLISH — Study Session</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:#1a1a1a;--red:#e63030;--red-dark:#b71c1c;--red-light:#ffd5d5;--red-pale:#fff5f5;
+    --cream:#fffef5;--white:#ffffff;--yellow:#ffd84d;--yellow-pale:#fffbe6;
+    --sky:#72c8f0;--sky-pale:#eaf8ff;--green:#4caf50;--green-pale:#f0fff0;--green-dark:#2e7d32;
+    --purple:#7c3aed;--purple-pale:#f3f0ff;--purple-light:#e9d5ff;
+    --muted:#888;
+    --border:2.5px solid var(--black);--border-thick:3px solid var(--black);
+    --shadow-sm:3px 3px 0 var(--black);--shadow-md:4px 4px 0 var(--black);--shadow-lg:6px 6px 0 var(--black);
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Fredoka',sans-serif;font-weight:500;background:var(--cream);color:var(--black);min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,.04) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;z-index:0}
+  header{background:var(--red);border-bottom:var(--border-thick);padding:0 50px;height:66px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+  .logo{font-weight:700;font-size:1.65rem;color:white;letter-spacing:.05em;text-shadow:2px 2px 0 rgba(0,0,0,.25);text-decoration:none}
+  #app{position:relative;z-index:1}
+  .page-grid{display:grid;grid-template-columns:340px 1fr;gap:26px;padding:36px 56px 100px;max-width:1300px;margin:0 auto;align-items:start}
+  .video-col{position:sticky;top:88px;display:flex;flex-direction:column;gap:14px}
+  .video-card{background:var(--black);border:var(--border-thick);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;width:100%}
+  .video-card iframe{width:100%;height:100%;border:none;display:block}
+  .video-placeholder{background:var(--white);border:var(--border-thick);border-radius:20px;box-shadow:var(--shadow-md);aspect-ratio:9/16;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-family:'Quicksand',sans-serif;font-weight:600;font-size:.95rem;text-align:center;padding:24px}
+  .video-placeholder .big-emoji{font-size:3.5rem}
+  .video-link-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red-light);border:var(--border);border-radius:50px;padding:10px 20px;font-weight:700;font-size:.9rem;box-shadow:var(--shadow-sm);text-decoration:none;color:var(--black);transition:transform .12s,box-shadow .12s}
+  .video-link-btn:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+  .video-meta-card{background:var(--red);border:var(--border-thick);border-radius:16px;box-shadow:var(--shadow-md);padding:14px 16px;color:white;text-align:center}
+  .video-meta-card .session-id{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.8rem;background:rgba(255,255,255,.18);border-radius:8px;padding:5px 10px;word-break:break-all;margin-bottom:10px}
+  .stat-row{display:flex;gap:8px}
+  .stat-box{flex:1;background:rgba(255,255,255,.18);border-radius:10px;padding:8px 6px;text-align:center;border:1.5px solid rgba(255,255,255,.25)}
+  .stat-box .num{font-size:1.3rem;font-weight:700}
+  .stat-box .lbl{font-size:.68rem;opacity:.82}
+  .content-col{display:flex;flex-direction:column;gap:20px}
+  .card{background:var(--white);border:var(--border-thick);border-radius:22px;box-shadow:var(--shadow-md);padding:24px;animation:fadeUp .38s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+  .card-title{display:inline-block;font-weight:700;font-size:.95rem;background:var(--red);color:white;border:var(--border);border-radius:50px;padding:5px 20px;box-shadow:var(--shadow-sm);margin-bottom:16px}
+  .card-title.yellow{background:var(--yellow);color:var(--black)}
+  .date-pill{font-family:'Quicksand',sans-serif;font-size:.75rem;font-weight:700;background:var(--yellow-pale);border:var(--border);border-radius:50px;padding:3px 12px;box-shadow:var(--shadow-sm);display:inline-block;margin-bottom:16px;margin-left:8px}
+  .transcript-body{font-family:'Quicksand',sans-serif;font-size:1rem;font-weight:600;line-height:1.85;color:#333;background:var(--red-pale);border:var(--border);border-radius:14px;padding:16px 18px;max-height:260px;overflow-y:auto;white-space:pre-wrap}
+  .transcript-body::-webkit-scrollbar{width:5px}
+  .transcript-body::-webkit-scrollbar-thumb{background:var(--red-light);border-radius:3px}
+
+  /* ── MODAL ── */
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center;padding:20px}
+  .modal.active{display:flex}
+  .modal-content{background:var(--white);border:var(--border-thick);border-radius:20px;box-shadow:var(--shadow-lg);padding:28px;max-width:700px;width:100%;max-height:90vh;overflow-y:auto}
+  .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px}
+  .modal-title{font-weight:700;font-size:1.3rem;background:var(--yellow);border:var(--border);border-radius:50px;padding:8px 24px;box-shadow:var(--shadow-sm)}
+  .modal-close{font-size:1.8rem;cursor:pointer;background:none;border:none;color:var(--black);transition:transform .12s}
+  .modal-close:hover{transform:scale(1.2)}
+
+  /* ── STEP 1: ARRANGE ── */
+  .arrange-section{display:none}
+  .arrange-section.active{display:block}
+  .sentence-preview{font-family:'Quicksand',sans-serif;font-size:1rem;font-weight:600;line-height:1.8;background:var(--red-pale);border:var(--border);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+  .words-container{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px;justify-content:flex-start}
+  .word-btn{font-family:'Quicksand',sans-serif;font-weight:700;font-size:.95rem;padding:8px 16px;background:var(--white);border:var(--border-thick);border-radius:12px;box-shadow:0 4px 0 var(--black);cursor:pointer;transition:transform .1s,box-shadow .1s;user-select:none;white-space:nowrap}
+  .word-btn:hover:not(.used){transform:translateY(-2px);box-shadow:0 6px 0 var(--black);background:var(--yellow-pale)}
+  .word-btn.used{opacity:.2;pointer-events:none}
+  .blank-space{display:inline-flex;align-items:center;justify-content:center;min-width:50px;height:32px;border:2.5px dashed #999;border-radius:8px;background:transparent;color:#999;margin:2px;padding:0 8px;font-weight:700;font-size:.9rem}
+  .blank-space.filled{background:var(--sky-pale);border:var(--border-thick);border-style:solid;color:var(--black);cursor:pointer}
+
+  /* ── STEP 2: RECORD ── */
+  .record-section{display:none}
+  .record-section.active{display:block}
+  .record-title{font-weight:700;font-size:1.1rem;margin-bottom:12px}
+  .sentence-to-read{font-family:'Quicksand',sans-serif;font-size:1.05rem;font-weight:600;line-height:1.8;background:var(--green-pale);border:var(--border);border-radius:12px;padding:14px 16px;margin-bottom:16px}
+  .recorder-box{background:var(--red-pale);border:var(--border);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+  .rec-controls{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+  .rec-dot{width:12px;height:12px;border-radius:50%;background:var(--muted);border:var(--border);flex-shrink:0}
+  .rec-dot.active{background:var(--red);animation:blink 1s ease-in-out infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+  .rec-timer{font-family:'Quicksand',sans-serif;font-weight:700;font-size:1.1rem;min-width:50px}
+  .rec-btn{font-family:'Fredoka',sans-serif;font-weight:700;font-size:.95rem;padding:9px 20px;border:var(--border-thick);border-radius:50px;box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .12s,box-shadow .12s;white-space:nowrap;background:var(--white);color:var(--black)}
+  .rec-btn:hover:not(:disabled){transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+  .rec-btn:disabled{opacity:.4;pointer-events:none}
+  .rec-btn.red{background:var(--red);color:white}
+  .stt-box{font-family:'Quicksand',sans-serif;font-weight:600;font-size:.9rem;line-height:1.7;color:var(--muted);background:var(--white);border:var(--border);border-radius:10px;padding:11px 14px;min-height:52px;white-space:pre-wrap;word-break:break-word}
+
+  /* ── MODAL BUTTONS ── */
+  .modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;justify-content:flex-end}
+  .modal-actions button{font-family:'Fredoka',sans-serif;font-weight:700;font-size:.95rem;padding:10px 26px;border:var(--border-thick);border-radius:50px;box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .12s,box-shadow .12s}
+  .modal-actions button:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md)}
+  .btn-green{background:var(--green);color:white}
+  .btn-yellow{background:var(--yellow);color:var(--black)}
+  .btn-black{background:var(--black);color:white}
+
+  footer{background:var(--black);color:rgba(255,255,255,.6);padding:28px 50px;text-align:center;position:relative;z-index:1}
+  footer .brand{font-weight:700;color:var(--red-light);font-size:1.2rem;margin-bottom:4px}
+  footer p{font-size:.9rem}
+  @media(max-width:900px){.page-grid{grid-template-columns:1fr;padding:20px 20px 80px}.video-col{position:static}.video-card,.video-placeholder{max-width:320px;margin:0 auto}}
+  @media(max-width:600px){header{padding:0 16px}.video-card,.video-placeholder{max-width:100%}.card{padding:16px}.page-grid{padding:14px 14px 60px;gap:16px}.modal-content{padding:16px}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="index.html">🔴 FREESIZE ENGLISH</a></header>
+<div id="app"></div>
+<footer><p class="brand">FREESIZE ENGLISH</p><p>Your personal English study archive</p></footer>
+
+<!-- QUIZ MODAL -->
+<div class="modal" id="quizModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="modal-title">🎯 Practice Quiz</div>
+      <button class="modal-close" onclick="closeQuizModal()">✕</button>
+    </div>
+
+    <!-- STEP 1: ARRANGE -->
+    <div class="arrange-section" id="arrangeSection">
+      <div style="margin-bottom:12px;font-weight:700;color:var(--muted);font-size:.9rem;">STEP 1: Arrange words to complete the sentence</div>
+      <div class="sentence-preview" id="sentencePreview"></div>
+      <div class="words-container" id="wordsContainer"></div>
+      <div class="modal-actions">
+        <button class="btn-green" id="checkArrangeBtn">✓ Check Answer</button>
+        <button class="btn-black" onclick="closeQuizModal()">✕ Close</button>
+      </div>
+    </div>
+
+    <!-- STEP 2: RECORD -->
+    <div class="record-section" id="recordSection">
+      <div style="margin-bottom:12px;font-weight:700;color:var(--muted);font-size:.9rem;">STEP 2: Record your pronunciation</div>
+      <div class="sentence-to-read" id="sentenceToRead"></div>
+      <div class="recorder-box">
+        <div class="rec-controls">
+          <div class="rec-dot" id="recDot"></div>
+          <div class="rec-timer" id="recTimer">00:00</div>
+          <button class="rec-btn red" id="recStartBtn">● REC</button>
+          <button class="rec-btn" id="recStopBtn" disabled>■ Stop</button>
+        </div>
+        <div class="stt-box" id="sttOutput">Speech-to-text appears here...</div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-green" id="nextQuizBtn">→ Next Question</button>
+        <button class="btn-black" onclick="closeQuizModal()">✕ Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════════════════
+// UTILS
+// ════════════════════════════════════════════════════════════════
+function getParam(k){return new URLSearchParams(window.location.search).get(k)}
+function fmtDate(iso){if(!iso)return'—';try{return new Date(iso).toLocaleString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})}catch{return iso}}
+function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+// ════════════════════════════════════════════════════════════════
+// MODAL STATE
+// ════════════════════════════════════════════════════════════════
+let currentLesson = null;
+let currentQuizzes = [];
+let currentQuizIndex = 0;
+let arrangementSlots = [];
+let mediaRecorder = null;
+let isRecording = false;
+let recSecs = 0;
+let timerInterval = null;
+let currentSTT = '';
+let speechRec = null;
+
+// ════════════════════════════════════════════════════════════════
+// OPEN/CLOSE QUIZ MODAL
+// ════════════════════════════════════════════════════════════════
+async function openQuizModal() {
+  const id = getParam('id');
+  if (!id) {
+    alert('No session ID found');
+    return;
+  }
+
+  try {
+    const res = await fetch('data/speaking-data.json');
+    if (!res.ok) throw new Error('Cannot load quiz data');
+    const data = await res.json();
+    const allLessons = Array.isArray(data) ? data : Object.values(data);
+    
+    const lesson = allLessons.find(l => String(l.id) === String(id));
+    if (!lesson) throw new Error('Lesson not found');
+
+    currentLesson = lesson;
+    currentQuizzes = lesson.quizzes || [];
+    currentQuizIndex = 0;
+
+    if (currentQuizzes.length === 0) {
+      alert('❌ No quizzes found in this lesson');
+      return;
+    }
+
+    document.getElementById('quizModal').classList.add('active');
+    showArrangeStep();
+  } catch(err) {
+    alert('❌ Error loading quiz: ' + err.message);
+  }
+}
+
+function closeQuizModal() {
+  if (isRecording) stopRecording();
+  document.getElementById('quizModal').classList.remove('active');
+  currentQuizData = null;
+}
+
+// ════════════════════════════════════════════════════════════════
+// STEP 1: ARRANGE
+// ════════════════════════════════════════════════════════════════
+function showArrangeStep() {
+  if (!currentQuizzes || currentQuizIndex >= currentQuizzes.length) return;
+
+  const currentQuiz = currentQuizzes[currentQuizIndex];
+  document.getElementById('arrangeSection').classList.add('active');
+  document.getElementById('recordSection').classList.remove('active');
+
+  const sentence = currentQuiz.sentence || '';
+  const blanks = currentQuiz.blanks || [];
+  const words = (currentQuiz.words || []).slice().sort(() => Math.random() - 0.5);
+
+  // Display quiz number
+  const stepText = document.querySelector('#arrangeSection > div:first-child');
+  if (stepText) {
+    stepText.textContent = `STEP 1: Arrange words (Question ${currentQuizIndex + 1}/${currentQuizzes.length})`;
+  }
+
+  // Display sentence with blanks
+  let sentenceHTML = sentence.replace(/___ /g, '<span class="blank-space" data-bi=""></span> ');
+  document.getElementById('sentencePreview').innerHTML = sentenceHTML;
+
+  // Display word buttons
+  const wordsContainer = document.getElementById('wordsContainer');
+  wordsContainer.innerHTML = '';
+  words.forEach((word, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'word-btn';
+    btn.textContent = word;
+    btn.dataset.idx = idx;
+    btn.onclick = () => selectWord(btn, word, blanks);
+    wordsContainer.appendChild(btn);
+  });
+
+  arrangementSlots = new Array(blanks.length).fill(null);
+}
+
+function selectWord(btn, word, blanks) {
+  if (btn.classList.contains('used')) return;
+
+  const emptyIdx = arrangementSlots.findIndex(s => s === null);
+  if (emptyIdx === -1) return;
+
+  btn.classList.add('used');
+  const blanks_els = document.querySelectorAll('.blank-space');
+  const blankEl = blanks_els[emptyIdx];
+  
+  blankEl.textContent = word;
+  blankEl.classList.add('filled');
+  blankEl.dataset.word = word;
+  blankEl.onclick = () => removeWord(blankEl, btn, emptyIdx);
+
+  arrangementSlots[emptyIdx] = { btn, word };
+
+  if (arrangementSlots.every(s => s !== null)) {
+    document.getElementById('checkArrangeBtn').style.opacity = '1';
+  }
+}
+
+function removeWord(blankEl, btn, idx) {
+  btn.classList.remove('used');
+  blankEl.textContent = '';
+  blankEl.className = 'blank-space';
+  blankEl.removeAttribute('data-word');
+  blankEl.onclick = null;
+  arrangementSlots[idx] = null;
+}
+
+document.getElementById('checkArrangeBtn')?.addEventListener('click', () => {
+  if (!currentQuizzes || currentQuizIndex >= currentQuizzes.length) return;
+  
+  const currentQuiz = currentQuizzes[currentQuizIndex];
+  const blanks = currentQuiz.blanks || [];
+  let allCorrect = true;
+
+  arrangementSlots.forEach((slot, i) => {
+    if (!slot) {
+      allCorrect = false;
+      return;
+    }
+    if (String(slot.word) !== String(blanks[i].answer)) {
+      allCorrect = false;
+    }
+  });
+
+  if (allCorrect) {
+    alert('✅ Correct! Moving to recording step...');
+    showRecordStep();
+  } else {
+    alert('❌ Some words are incorrect. Try again!');
+  }
+});
+
+// ════════════════════════════════════════════════════════════════
+// STEP 2: RECORD
+// ════════════════════════════════════════════════════════════════
+function showRecordStep() {
+  if (!currentQuizzes || currentQuizIndex >= currentQuizzes.length) return;
+
+  const currentQuiz = currentQuizzes[currentQuizIndex];
+  document.getElementById('arrangeSection').classList.remove('active');
+  document.getElementById('recordSection').classList.add('active');
+
+  // Update step text
+  const stepText = document.querySelector('#recordSection > div:first-child');
+  if (stepText) {
+    stepText.textContent = `STEP 2: Record your pronunciation (Question ${currentQuizIndex + 1}/${currentQuizzes.length})`;
+  }
+
+  const sentence = currentQuiz.sentence || '';
+  document.getElementById('sentenceToRead').textContent = sentence;
+
+  resetRecorder();
+}
+
+function resetRecorder() {
+  if (isRecording) stopRecording();
+  recSecs = 0;
+  currentSTT = '';
+  document.getElementById('recTimer').textContent = '00:00';
+  document.getElementById('sttOutput').textContent = 'Speech-to-text appears here...';
+  document.getElementById('sttOutput').style.color = 'var(--muted)';
+  document.getElementById('recDot').classList.remove('active');
+  document.getElementById('recStartBtn').disabled = false;
+  document.getElementById('recStopBtn').disabled = true;
+}
+
+document.getElementById('recStartBtn')?.addEventListener('click', async () => {
+  if (!isRecording) {
+    await startRecording();
+  }
+});
+
+document.getElementById('recStopBtn')?.addEventListener('click', () => {
+  stopRecording();
+});
+
+async function startRecording() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const mimeType = getSupportedMimeType();
+    mediaRecorder = mimeType 
+      ? new MediaRecorder(stream, { mimeType }) 
+      : new MediaRecorder(stream);
+
+    mediaRecorder.ondataavailable = () => {};
+    mediaRecorder.start();
+
+    isRecording = true;
+    document.getElementById('recDot').classList.add('active');
+    document.getElementById('recStartBtn').disabled = true;
+    document.getElementById('recStopBtn').disabled = false;
+
+    recSecs = 0;
+    timerInterval = setInterval(() => {
+      recSecs++;
+      const m = String(Math.floor(recSecs / 60)).padStart(2, '0');
+      const s = String(recSecs % 60).padStart(2, '0');
+      document.getElementById('recTimer').textContent = `${m}:${s}`;
+    }, 1000);
+
+    startSTT();
+  } catch(err) {
+    alert('❌ Microphone error: ' + err.message);
+  }
+}
+
+function stopRecording() {
+  if (!mediaRecorder) return;
+
+  mediaRecorder.stop();
+  mediaRecorder.stream.getTracks().forEach(t => t.stop());
+
+  isRecording = false;
+  clearInterval(timerInterval);
+  document.getElementById('recDot').classList.remove('active');
+  document.getElementById('recStartBtn').disabled = false;
+  document.getElementById('recStopBtn').disabled = true;
+
+  if (speechRec) {
+    speechRec.stop();
+    speechRec = null;
+  }
+}
+
+function getSupportedMimeType() {
+  const types = ['audio/mp4', 'audio/webm;codecs=opus', 'audio/webm', 'audio/ogg;codecs=opus', 'audio/ogg'];
+  for (const t of types) {
+    if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(t)) return t;
+  }
+  return '';
+}
+
+function startSTT() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) {
+    document.getElementById('sttOutput').textContent = 'STT not supported — use Chrome/Edge';
+    return;
+  }
+
+  speechRec = new SR();
+  speechRec.continuous = true;
+  speechRec.interimResults = true;
+  speechRec.lang = 'en-US';
+
+  let finalText = '';
+
+  speechRec.onresult = (e) => {
+    let interim = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      if (e.results[i].isFinal) {
+        finalText += e.results[i][0].transcript + ' ';
+      } else {
+        interim += e.results[i][0].transcript;
+      }
+    }
+    currentSTT = finalText + interim;
+    document.getElementById('sttOutput').textContent = currentSTT || '...listening';
+    document.getElementById('sttOutput').style.color = 'var(--black)';
+  };
+
+  speechRec.onerror = (e) => {
+    if (e.error !== 'no-speech') {
+      document.getElementById('sttOutput').textContent = 'STT error: ' + e.error;
+      document.getElementById('sttOutput').style.color = '#c00';
+    }
+  };
+
+  speechRec.start();
+}
+
+document.getElementById('nextQuizBtn')?.addEventListener('click', () => {
+  stopRecording();
+  
+  currentQuizIndex++;
+  
+  if (currentQuizIndex >= currentQuizzes.length) {
+    alert('🎉 Congratulations! You completed all quizzes in this lesson!');
+    closeQuizModal();
+  } else {
+    // Show next quiz
+    showArrangeStep();
+  }
+});
+
+// ════════════════════════════════════════════════════════════════
+// RENDER PAGE
+// ════════════════════════════════════════════════════════════════
+function renderPage(raw) {
+  const d = raw;
+  document.title = `${d.id||'Session'} — Freesize English`;
+
+  const videoColHTML = buildVideoColHTML(buildVideo(d.videoUrl));
+  const transcriptHTML = d.transcript && d.transcript.trim()
+    ? `<div class="transcript-body">${esc(d.transcript)}</div>`
+    : `<div style="text-align:center;color:var(--muted);padding:20px;font-family:'Quicksand',sans-serif;">No transcript saved.</div>`;
+
+  document.getElementById('app').innerHTML = `
+    <div class="page-grid">
+      <div class="video-col">${videoColHTML}</div>
+      <div class="content-col">
+        <div class="card" style="animation-delay:0s">
+          <div class="card-title">📝 Transcript</div>
+          <span class="date-pill">📅 ${fmtDate(d.createdAt)}</span>
+          ${transcriptHTML}
+        </div>
+
+        <div class="card" style="animation-delay:.07s">
+          <div class="card-title yellow">🎯 Practice Quiz</div>
+          <button id="openQuizBtn" style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:1rem;padding:12px 28px;border:var(--border-thick);border-radius:50px;background:var(--green);color:white;box-shadow:var(--shadow-md);cursor:pointer;transition:transform .12s,box-shadow .12s" onclick="openQuizModal()">▶ Start Quiz</button>
+        </div>
+      </div>
+    </div>`;
+}
+
+function buildVideo(url) {
+  if (!url || !url.trim()) return null;
+  const yt = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?]+)/);
+  if (yt) return { type: 'youtube', iframe: `https://www.youtube.com/embed/${yt[1]}?rel=0`, link: url, label: '↗ Open on YouTube' };
+  if (url.includes('tiktok.com')) return { type: 'tiktok', vid: extractTikTokId(url), link: url, label: '↗ Watch on TikTok' };
+  return { type: 'generic', iframe: url, link: url, label: '↗ Open link' };
+}
+
+function extractTikTokId(url) {
+  const m = url.match(/\/video\/(\d+)/);
+  return m ? m[1] : null;
+}
+
+function buildVideoColHTML(vid) {
+  if (!vid) return `<div class="video-placeholder"><span class="big-emoji">🎬</span><span>No video URL</span></div>`;
+  if (vid.type === 'youtube') return `<div class="video-card"><iframe src="${esc(vid.iframe)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
+  if (vid.type === 'tiktok') {
+    if (!vid.vid) return `<div class="video-placeholder"><span class="big-emoji">🎵</span><span>Can't extract TikTok ID</span></div>`;
+    return `<div style="border:var(--border-thick);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:9/16;background:#111"><iframe src="https://www.tiktok.com/embed/v2/${vid.vid}" allow="autoplay; encrypted-media; fullscreen" allowfullscreen loading="lazy" scrolling="no" style="width:100%;height:100%;border:none;display:block;"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">↗ Watch on TikTok</a>`;
+  }
+  return `<div class="video-card"><iframe src="${esc(vid.iframe)}" allowfullscreen loading="lazy"></iframe></div><a class="video-link-btn" href="${esc(vid.link)}" target="_blank" rel="noopener">${esc(vid.label)}</a>`;
+}
+
+// ════════════════════════════════════════════════════════════════
+// MAIN
+// ════════════════════════════════════════════════════════════════
+async function main() {
+  const id = getParam('id');
+  if (!id) {
+    document.getElementById('app').innerHTML = '<div style="padding:40px;text-align:center;color:#999;font-family:Quicksand">No session ID provided</div>';
+    return;
+  }
+
+  try {
+    const res = await fetch('data/speaking-data-1.json');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    let sessions = Array.isArray(json) ? json : Object.values(json);
+
+    const session = sessions.find(s => String(s.id) === String(id));
+    if (!session) throw new Error(`Session "${id}" not found`);
+    
+    renderPage(session);
+  } catch(err) {
+    document.getElementById('app').innerHTML = `<div style="padding:40px;text-align:center"><div style="font-size:2rem;margin-bottom:16px">😕</div><h2>Error</h2><p>${esc(err.message)}</p><p style="font-size:.9rem;color:#999;margin-top:10px">Make sure <code>data/speaking-data.json</code> exists.</p></div>`;
+  }
+}
+
+main();
+</script>
+</body>
+</html>
