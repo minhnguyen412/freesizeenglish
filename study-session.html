@@ -228,8 +228,11 @@ function showArrangeStep() {
     stepText.textContent = `STEP 1: Arrange words (Question ${currentQuizIndex + 1}/${currentQuizzes.length})`;
   }
 
-  // Display sentence with blanks
-  let sentenceHTML = sentence.replace(/___ /g, '<span class="blank-space" data-bi=""></span> ');
+  // Display sentence with blanks - GÁN DATA-BLANK-INDEX
+  let blankIndex = 0;
+  let sentenceHTML = sentence.replace(/___ /g, () => {
+    return `<span class="blank-space" data-blank-index="${blankIndex++}"></span> `;
+  });
   document.getElementById('sentencePreview').innerHTML = sentenceHTML;
 
   // Display word buttons
@@ -254,8 +257,15 @@ function selectWord(btn, word, blanks) {
   if (emptyIdx === -1) return;
 
   btn.classList.add('used');
-  const blanks_els = document.querySelectorAll('.blank-space');
-  const blankEl = blanks_els[emptyIdx];
+  
+  // TÌM BLANK CHÍNH XÁC DỰA VÀO DATA-BLANK-INDEX
+  const blankEl = document.querySelector(`[data-blank-index="${emptyIdx}"]`);
+  
+  if (!blankEl) {
+    console.error(`Blank element at index ${emptyIdx} not found`);
+    btn.classList.remove('used'); // Hoàn lại nút
+    return;
+  }
   
   blankEl.textContent = word;
   blankEl.classList.add('filled');
@@ -273,11 +283,11 @@ function removeWord(blankEl, btn, idx) {
   btn.classList.remove('used');
   blankEl.textContent = '';
   blankEl.className = 'blank-space';
+  blankEl.setAttribute('data-blank-index', idx); // Giữ lại data-blank-index
   blankEl.removeAttribute('data-word');
   blankEl.onclick = null;
   arrangementSlots[idx] = null;
 }
-
 document.getElementById('checkArrangeBtn')?.addEventListener('click', () => {
   if (!currentQuizzes || currentQuizIndex >= currentQuizzes.length) return;
   
