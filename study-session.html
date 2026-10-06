@@ -230,9 +230,9 @@ function showArrangeStep() {
 
   // Display sentence with blanks - GÁN DATA-BLANK-INDEX
   let blankIndex = 0;
-  let sentenceHTML = sentence.replace(/___ /g, () => {
-    return `<span class="blank-space" data-blank-index="${blankIndex++}"></span> `;
-  });
+let sentenceHTML = sentence.replace(/___/g, () => {
+  return `<span class="blank-space" data-blank-index="${blankIndex++}"></span>`;
+});
   document.getElementById('sentencePreview').innerHTML = sentenceHTML;
 
   // Display word buttons
