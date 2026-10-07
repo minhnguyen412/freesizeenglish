@@ -379,7 +379,7 @@ function showRecordStep() {
   showOnly('recordSection');
   document.getElementById('recordLabel').textContent =
     `STEP 2: Record your pronunciation (Question ${currentQuizIndex + 1}/${currentQuizzes.length})`;
-  document.getElementById('sentenceToRead').textContent = currentQuiz.sentence || '';
+  document.getElementById('sentenceToRead').textContent = getEnglishSentence(currentQuiz);
 
   resetRecorder();
 }
@@ -549,7 +549,15 @@ function finishSTT() {
   renderSTT();
   showResult();
 }
-
+// Ghép câu tiếng Anh hoàn chỉnh từ các đáp án (answer chips)
+function getEnglishSentence(quiz) {
+  const blanks = quiz.blanks || [];
+  let i = 0;
+  return (quiz.sentence || '').replace(/___/g, () => {
+    const ans = blanks[i++];
+    return ans ? ans.answer : '___';
+  });
+}
 // ── Grading ──
 function normWord(w) {
   return String(w).toLowerCase().replace(/’/g, "'").replace(/[^a-z0-9']/g, '');
@@ -599,7 +607,7 @@ function showResult() {
     return;
   }
 
-  const origTokens = (quiz.sentence || '').split(/\s+/).filter(Boolean);
+  const origTokens = getEnglishSentence(quiz).split(/\s+/).filter(Boolean);
   const targetItems = origTokens
     .map(t => ({ text: t, norm: normWord(t) }))
     .filter(x => x.norm !== '');
