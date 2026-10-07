@@ -551,12 +551,10 @@ function finishSTT() {
 }
 // Ghép câu tiếng Anh hoàn chỉnh từ các đáp án (answer chips)
 function getEnglishSentence(quiz) {
-  const blanks = quiz.blanks || [];
-  let i = 0;
-  return (quiz.sentence || '').replace(/___/g, () => {
-    const ans = blanks[i++];
-    return ans ? ans.answer : '___';
-  });
+  return (quiz.blanks || [])
+    .map(b => String(b.answer).trim())
+    .filter(Boolean)
+    .join(' ');
 }
 // ── Grading ──
 function normWord(w) {
