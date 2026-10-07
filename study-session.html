@@ -379,7 +379,7 @@ function showRecordStep() {
   showOnly('recordSection');
   document.getElementById('recordLabel').textContent =
     `STEP 2: Record your pronunciation (Question ${currentQuizIndex + 1}/${currentQuizzes.length})`;
-  document.getElementById('sentenceToRead').textContent = getEnglishSentence(currentQuiz);
+  document.getElementById('sentenceToRead').textContent = currentQuiz.sentence || '';
 
   resetRecorder();
 }
